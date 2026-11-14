@@ -1,5 +1,6 @@
 import PublicNavbar from "../components/PublicNavbar.jsx";
 import LegacyPageContent from "../components/LegacyPageContent.jsx";
+import CourseCategoryFilters from "../components/CourseCategoryFilters.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 
@@ -552,15 +553,15 @@ export default function LegacyPage_index() {
 
 <div className="courses" id="courses">
 <div className="containerCource">
-<h6 className="courseHeader">
+<h2 className="courseHeader">
 Explore <span className="cc-highlight">Our Course Categories</span>
-</h6>
+</h2>
 <div className="coursesSectionDetails">
-<p className="courseDetails">Choose your career discipline. DizitalAdda offers online tech courses across India covering Digital Marketing, AI &amp; GenAI, Data Science, Machine Learning, and Cyber Security — each with industry certifications, live projects, and 100% placement assistance for every level from beginner to expert.</p>
-<img className="RightArrow" src="./arrow_icon.svg" alt="" loading="lazy" decoding="async" />
+<p className="courseDetails">Explore career-focused courses in Digital Marketing, AI, Data Science, and Cyber Security.</p>
 </div>
+<CourseCategoryFilters />
 {/*  Digital Marketing Courses Section  */}
-<div className="category-section">
+<div className="category-section" data-course-category="digital-marketing">
 <h2 className="category-title firstTitle"> <span className="cc-highlight"> Digital Marketing</span> Courses</h2>
 <div className="swiper digital-marketing-swiper swiper-initialized swiper-horizontal">
 <div className="swiper-wrapper" style={{"transform":"translate3d(0px, 0px, 0px)"}}>
@@ -667,7 +668,7 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 </div>
 </div>
 {/*  AI & Data Science Courses Section  */}
-<div className="category-section">
+<div className="category-section" data-course-category="ai-data-science">
 <h2 className="category-title"><span className="cc-highlight"> AI</span> and <span className="cc-highlight">Data Science</span> Courses</h2>
 <div className="swiper ai-data-science-swiper swiper-initialized swiper-horizontal">
 <div className="swiper-wrapper" style={{"transform":"translate3d(0px, 0px, 0px)"}}>
@@ -894,7 +895,7 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 </div>
 </div>
 {/*  Cyber Security Courses Section  */}
-<div className="category-section">
+<div className="category-section" data-course-category="cyber-security">
 <h2 className="category-title"><span className="cc-highlight"> Cyber Security </span> Courses</h2>
 <div className="swiper cyber-security-swiper swiper-initialized swiper-horizontal">
 <div className="swiper-wrapper" style={{"transform":"translate3d(0px, 0px, 0px)"}}>
