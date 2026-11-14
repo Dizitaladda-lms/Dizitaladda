@@ -213,3 +213,8 @@ body {
 .da-course-description{font-size:15px}
 .da-course-skills li{font-size:13px}
 .da-course-actions{margin-top:auto}
+.da-hero-chips{min-width:230px}
+.da-hero-highlight{display:flex;min-width:230px;min-height:54px;align-items:center;gap:10px;animation:da-hero-highlight-in .32s ease both}
+.da-hero-highlight-dot{width:9px;height:9px;flex:0 0 9px;border-radius:50%;background:#6d28d9;box-shadow:0 0 0 4px rgba(109,40,217,.12)}
+@keyframes da-hero-highlight-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.da-hero-highlight{animation:none}}
