@@ -63,7 +63,6 @@ export default function PublicNavbar() {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedDomain, setSelectedDomain] = useState(0);
-  const [selectedTerm, setSelectedTerm] = useState("short");
   const [isMobileViewport, setIsMobileViewport] = useState(false);
   const navRef = useRef(null);
   const mobileTriggerRef = useRef(null);
@@ -154,8 +153,6 @@ export default function PublicNavbar() {
   };
 
   const activeGroup = courseGroups[selectedDomain];
-  const activeTerm = courseTerms.find((term) => term.id === selectedTerm);
-  const visibleCourses = activeGroup.courses.filter((course) => course.terms.includes(selectedTerm));
 
   return (
     <>
@@ -202,22 +199,28 @@ export default function PublicNavbar() {
                 <section className="site-course-panel" id="course-domain-panel" role="tabpanel" aria-labelledby={`course-domain-tab-${selectedDomain}`} key={selectedDomain}>
                   <div className="site-course-panel-heading">
                     <h2>{activeGroup.title}</h2>
-                    <p>{visibleCourses.length} courses · {activeTerm.duration}</p>
+                    <p>Explore courses by duration</p>
                   </div>
-                  <div className="site-course-terms" role="group" aria-label="Filter courses by duration">
-                    {courseTerms.map((term) => (
-                      <button key={term.id} type="button" aria-pressed={selectedTerm === term.id} className={selectedTerm === term.id ? "is-selected" : ""} onClick={() => setSelectedTerm(term.id)}>
-                        {term.label}<small>{term.duration}</small>
-                      </button>
-                    ))}
+                  <div className="site-course-term-columns">
+                    {courseTerms.map((term) => {
+                      const termCourses = activeGroup.courses.filter((course) => course.terms.includes(term.id));
+                      return (
+                        <section className="site-course-term-column" key={term.id}>
+                          <header className="site-course-term-heading">
+                            <span className="site-term-indicator" aria-hidden="true" />
+                            <div><h3>{term.label}</h3><p>{termCourses.length} courses - {term.duration}</p></div>
+                          </header>
+                          {termCourses.length > 0 ? (
+                            <div className="site-course-list">
+                              {termCourses.map(({ title, href }) => (
+                                <a className="site-course-link" href={href} key={href}><span>{title}</span><span className="site-course-arrow" aria-hidden="true">&rsaquo;</span></a>
+                              ))}
+                            </div>
+                          ) : <p className="site-course-empty">No courses available.</p>}
+                        </section>
+                      );
+                    })}
                   </div>
-                  {visibleCourses.length > 0 ? (
-                    <div className="site-course-list">
-                      {visibleCourses.map(({ title, href }) => (
-                        <a className="site-course-link" href={href} key={href}><span>{title}</span><span className="site-course-arrow" aria-hidden="true">&rsaquo;</span></a>
-                      ))}
-                    </div>
-                  ) : <p className="site-course-empty">No courses listed for this duration in this domain.</p>}
                 </section>
                 <div className="site-course-footer">
                   <p>Not sure which course fits you? Our counsellors will guide you.</p>

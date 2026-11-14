@@ -72,10 +72,23 @@ body {
 .site-student-menu a small{color:#7b7f89;font-size:12px;font-weight:400;line-height:1.4}
 .site-nav .site-student-dropdown .site-student-menu a:hover{background:#f3eff8}
 @media(max-width:1023px){.site-nav .site-student-dropdown .site-student-menu{position:static;display:none;grid-template-columns:1fr;gap:3px;width:100%;padding:6px 0 10px;border:0;border-radius:0;box-shadow:none;opacity:1;visibility:visible;transform:none}.site-nav .site-student-dropdown.is-open .site-student-menu{display:grid}.site-nav .site-student-dropdown .site-student-menu a{min-height:58px;padding:9px 10px}}
-.site-course-terms{display:flex;gap:8px;margin:0 0 12px}
-.site-course-terms button{display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:3px;min-width:0;padding:8px 10px;border:1px solid #e5e3eb;border-radius:7px;color:#3f4654;background:#fff;font:inherit;font-size:12px;font-weight:600;text-align:left;cursor:pointer;transition:border-color .15s ease,background .15s ease,color .15s ease}
-.site-course-terms button small{color:#777b87;font-size:11px;font-weight:400}
-.site-course-terms button:hover,.site-course-terms button.is-selected{border-color:#6a1b9a;color:#1b2a6b;background:#f7f3fa}
-.site-course-terms button:focus-visible{outline:2px solid #6a1b9a;outline-offset:2px}
 .site-course-empty{padding:14px 10px;border-radius:6px;color:#777b87;background:#f8f7fb;font-size:13px}
-@media(max-width:1023px){.site-course-terms{gap:6px;margin-bottom:8px}.site-course-terms button{align-items:center;padding:8px 4px;font-size:11px;text-align:center}.site-course-terms button small{font-size:10px}}
+/* Keep the logo at the left and begin the navigation group around the center. */
+.site-nav .site-links{flex:0 1 auto;width:auto;margin-left:auto}
+/* Wide course panel: domain navigation on the left, duration columns on the right. */
+.site-nav .site-course-menu{position:fixed;top:90px;left:50%;width:min(1360px,calc(100vw - 48px));max-height:calc(100vh - 104px);grid-template-columns:260px minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;transform:translate(-50%,8px)}
+.site-nav .site-dropdown.is-open .site-course-menu{transform:translate(-50%,0)}
+.site-nav .site-course-menu:before{width:260px}
+.site-nav .site-course-tabs{grid-column:1;grid-row:1}
+.site-nav .site-course-panel{grid-column:2;grid-row:1;padding:24px 26px 20px}
+.site-course-term-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.site-course-term-heading{display:flex;align-items:center;gap:12px;min-height:52px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #e5e7eb}
+.site-course-term-heading h3{margin:0;color:#1b2a6b;font-size:15px;font-weight:650;line-height:1.3}
+.site-course-term-heading p{margin:4px 0 0;color:#777b87;font-size:11px}
+.site-term-indicator{position:relative;display:block;flex:0 0 30px;width:30px;height:30px;border:5px solid #e9eaf0;border-top-color:#6a1b9a;border-right-color:#b7e84a;border-radius:50%}
+.site-course-term-column:nth-child(2) .site-term-indicator{border-top-color:#19c89a;border-right-color:#9ce548}
+.site-course-term-column:nth-child(3) .site-term-indicator{border-top-color:#b7e84a;border-right-color:#e9eaf0}
+.site-course-term-column .site-course-list{grid-template-columns:1fr;gap:6px}
+.site-course-term-column .site-course-link{align-items:flex-start;min-height:40px;padding:9px 6px}
+.site-course-term-column .site-course-empty{margin:10px 0}
+@media(max-width:1023px){.site-nav .site-course-menu{position:static;top:auto;left:auto;width:100%;max-height:none;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto;transform:none}.site-nav .site-dropdown.is-open .site-course-menu{transform:none}.site-nav .site-course-menu:before{display:none}.site-nav .site-course-panel{grid-column:1;grid-row:2;padding:12px 0 16px}.site-course-term-columns{grid-template-columns:1fr;gap:14px}.site-course-term-heading{min-height:42px;margin:0 0 6px;padding-bottom:7px}.site-course-term-heading h3{font-size:14px}.site-term-indicator{flex-basis:26px;width:26px;height:26px;border-width:4px}.site-course-term-column .site-course-list{grid-template-columns:1fr;gap:0}.site-course-term-column .site-course-link{min-height:38px;padding:8px 5px}.site-course-term-column .site-course-empty{margin:5px 0}.site-nav .site-course-footer{grid-column:1;grid-row:3}}
