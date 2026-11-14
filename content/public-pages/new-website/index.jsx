@@ -1,0 +1,452 @@
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+
+export const pageMetadata = {"title":"DizitalAdda - Best Digital Marketing Institute in Delhi NCR","description":""};
+
+export default function LegacyPage_new_website_index() {
+  return (
+    <>
+      <PublicNavbar />
+      <LegacyPageContent>
+        
+    
+<meta charSet="UTF-8" />
+
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    
+<script src="https://cdn.tailwindcss.com" />
+
+
+
+    
+<main>
+
+        {/* Start Navigation Bar Section */}
+        <header className="text-gray-600 body-font">
+          <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span className="ml-3 text-xl">Tailblocks</span>
+            </a>
+            <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400\tflex flex-wrap items-center text-base justify-center">
+              <a className="mr-5 hover:text-gray-900">First Link</a>
+              <a className="mr-5 hover:text-gray-900">Second Link</a>
+              <a className="mr-5 hover:text-gray-900">Third Link</a>
+              <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+            </nav>
+            <div className="inline-flex items-center">
+                <div className="me-9">info@dizitaladda.com</div><div>+918810606010</div>
+            </div>
+          </div>
+        </header>
+        {/* End Navigation Bar Section */}
+
+        {/* Start Hero Section */}
+        <section className="text-gray-600 body-font">
+          <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+                <br className="hidden lg:inline-block" />readymade gluten
+              </h1>
+              <p className="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+              <div className="flex justify-center">
+                <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+              </div>
+            </div>
+            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+              <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
+            </div>
+          </div>
+        </section>
+        {/* End Hero Section */}
+
+        {/* Start Anout Us Section */}
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto flex flex-wrap">
+            <div className="flex flex-col text-center w-full mb-20">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">About Us</h1>
+            </div>
+            <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+              <div className="w-full sm:p-4 px-4 mb-6">
+                <h1 className="title-font font-medium text-xl mb-2 text-gray-900">Moon hashtag pop-up try-hard offal truffaut</h1>
+                <div className="leading-relaxed">Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter. Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter. Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter. Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.</div>
+              </div>
+            </div>
+            <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+              <img className="object-cover object-center w-full h-full" src="https://dummyimage.com/600x300" alt="stats" />
+            </div>
+          </div>
+        </section>
+        {/* End Anout Us Section */}
+
+        {/* Start Course Section */}
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-col text-center w-full mb-20">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">Courses</h1>
+            </div>
+            <div className="flex flex-wrap -m-4">
+              <div className="p-4 md:w-1/3">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                  <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/720x400" alt="blog" />
+                  <div className="p-6">
+                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3 text-center">The Catalyzer</h1>
+                    <p className="leading-relaxed mb-3 text-center">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <div className="text-center">
+                      <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 btn text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                  <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/721x401" alt="blog" />
+                  <div className="p-6">
+                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3 text-center">The Catalyzer</h1>
+                    <p className="leading-relaxed mb-3 text-center">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <div className="text-center">
+                      <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 btn text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                  <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/722x402" alt="blog" />
+                  <div className="p-6">
+                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3 text-center">The Catalyzer</h1>
+                    <p className="leading-relaxed mb-3 text-center">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <div className="text-center">
+                      <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 btn text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* End Course Section */}
+
+        {/* Start Certificates Section */}
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-col text-center w-full mb-20">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">Certificates</h1>
+            </div>
+            <div className="flex flex-wrap -m-4">
+              <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                <a className="block relative h-48 rounded overflow-hidden">
+                  <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263" />
+                </a>
+              </div>
+              <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                <a className="block relative h-48 rounded overflow-hidden">
+                  <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263" />
+                </a>
+              </div>
+              <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                <a className="block relative h-48 rounded overflow-hidden">
+                  <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263" />
+                </a>
+              </div>
+              <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                <a className="block relative h-48 rounded overflow-hidden">
+                  <img alt="ecommerce" className="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* End Certificates Section */}
+        
+        {/* Start Testimonials Section */}
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 pt-24 mx-auto">
+            <div className="flex flex-col text-center w-full mb-20">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">Testimonials</h1>
+            </div>
+            <div className="flex flex-wrap -m-4">
+              <div className="p-4 md:w-1/3">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                  <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/720x400" alt="blog" />
+                  <div className="p-6">
+                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3 text-center">The Catalyzer</h1>
+                    <p className="leading-relaxed mb-3 text-center">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <div className="text-center">
+                      <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 btn text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                  <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/721x401" alt="blog" />
+                  <div className="p-6">
+                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3 text-center">The Catalyzer</h1>
+                    <p className="leading-relaxed mb-3 text-center">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <div className="text-center">
+                      <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 btn text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3">
+                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                  <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/722x402" alt="blog" />
+                  <div className="p-6">
+                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3 text-center">The Catalyzer</h1>
+                    <p className="leading-relaxed mb-3 text-center">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+                    <div className="text-center">
+                      <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 btn text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* End Testimonials Section */}
+
+        {/* Start Hired At Section */}
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 pt-9 mx-auto">
+            <div className="flex flex-wrap -m-2">
+              <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
+                <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" className="w-20 h-20 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x100" />
+                  <div className="flex-grow">
+                    <h2 className="text-gray-900 title-font font-medium">Holden Caulfield</h2>
+                    <p className="text-gray-500">UI Designer</p>
+                    <img alt="team" className="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x100" />
+                  </div>
+                </div>
+              </div>
+              <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
+                <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" className="w-20 h-20 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x100" />
+                  <div className="flex-grow">
+                    <h2 className="text-gray-900 title-font font-medium">Holden Caulfield</h2>
+                    <p className="text-gray-500">UI Designer</p>
+                    <img alt="team" className="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x100" />
+                  </div>
+                </div>
+              </div>
+              <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
+                <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" className="w-20 h-20 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x100" />
+                  <div className="flex-grow">
+                    <h2 className="text-gray-900 title-font font-medium">Holden Caulfield</h2>
+                    <p className="text-gray-500">UI Designer</p>
+                    <img alt="team" className="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x100" />
+                  </div>
+                </div>
+              </div>
+              <div className="p-2 lg:w-1/4 md:w-1/2 w-full">
+                <div className="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                  <img alt="team" className="w-20 h-20 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x100" />
+                  <div className="flex-grow">
+                    <h2 className="text-gray-900 title-font font-medium">Holden Caulfield</h2>
+                    <p className="text-gray-500">UI Designer</p>
+                    <img alt="team" className="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x100" />
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div></section>
+        {/* End Hired At Section */}
+
+        {/* Start FAQ Section */}
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto flex flex-wrap">
+            <div className="flex flex-col text-center w-full">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">FAQs</h1>
+            </div>
+            <div className="-mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+                <div id="accordion-open" className="space-y-4">
+
+                    <h2 id="accordion-open-heading-1 border">
+                      <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-target="#accordion-open-body-1">
+                        Is there a Figma file available?
+                        <svg className="w-3 h-3 rotate-180 shrink-0" fill="none" viewBox="0 0 10 6" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5L5 1 1 5"></path>
+                        </svg>
+                      </button>
+                    <div id="accordion-open-body-1" className="hidden p-5 border border-gray-200 dark:border-gray-700">
+                      <p className="text-gray-500 dark:text-gray-400">Flowbite is first conceptualized...</p>
+                    </div>
+                    </h2>
+                    <h2 id="accordion-open-heading-2 border">
+                      <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-target="#accordion-open-body-2">
+                        Is there a Figma file available?
+                        <svg className="w-3 h-3 rotate-180 shrink-0" fill="none" viewBox="0 0 10 6" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5L5 1 1 5"></path>
+                        </svg>
+                      </button>
+                    <div id="accordion-open-body-2" className="hidden p-5 border border-gray-200 dark:border-gray-700">
+                      <p className="text-gray-500 dark:text-gray-400">Flowbite is first conceptualized...</p>
+                    </div>
+                    </h2>
+                    <h2 id="accordion-open-heading-3 border">
+                      <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-target="#accordion-open-body-3">
+                        Is there a Figma file available?
+                        <svg className="w-3 h-3 rotate-180 shrink-0" fill="none" viewBox="0 0 10 6" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5L5 1 1 5"></path>
+                        </svg>
+                      </button>
+                    <div id="accordion-open-body-3" className="hidden p-5 border border-gray-200 dark:border-gray-700">
+                      <p className="text-gray-500 dark:text-gray-400">Flowbite is first conceptualized...</p>
+                    </div>
+                    </h2>
+                    <h2 id="accordion-open-heading-4 border">
+                      <button type="button" className="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-target="#accordion-open-body-4">
+                        Is there a Figma file available?
+                        <svg className="w-3 h-3 rotate-180 shrink-0" fill="none" viewBox="0 0 10 6" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5L5 1 1 5"></path>
+                        </svg>
+                      </button>
+                    <div id="accordion-open-body-4" className="hidden p-5 border border-gray-200 dark:border-gray-700">
+                      <p className="text-gray-500 dark:text-gray-400">Flowbite is first conceptualized...</p>
+                    </div>
+                    </h2>
+                    
+                 </div>
+
+            </div>
+            {/* Feedback */}
+            <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+              <div className="container px-5 py-12 mx-auto flex">
+                <div className="bg-white flex flex-col md:ml-auto p-8 relative rounded-lg shadow-md w-full z-10">
+                  <p className="leading-relaxed mb-5 text-gray-600 text-center">Fill the form to know more</p>
+                  <div className="relative mb-4">
+                    <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
+                    <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                  </div>
+                  <div className="relative mb-4">
+                    <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
+                    <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                  </div>
+                  <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* End FAQ Section */}
+
+        {/* Start Footer Section */}
+        <footer className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-wrap md:text-left text-center order-first">
+              <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                <h1 className="font-medium mb-3 text-3xl text-gray-900 title-font tracking-widest">DizitalAdda</h1>
+              </div>
+              <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                <nav className="list-none mb-10">
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                  </li>
+                </nav>
+              </div>
+              <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                <nav className="list-none mb-10">
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                  </li>
+                </nav>
+              </div>
+              <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                <nav className="list-none mb-10">
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                  </li>
+                  <li>
+                    <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                  </li>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gray-100">
+            <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+              <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span className="ml-3 text-xl">Tailblocks</span>
+              </a>
+              <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2020 Tailblocks —
+                <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+              </p>
+              <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a className="text-gray-500">
+                  <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a className="ml-3 text-gray-500">
+                  <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                  </svg>
+                </a>
+                <a className="ml-3 text-gray-500">
+                  <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+                </a>
+                <a className="ml-3 text-gray-500">
+                  <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className="w-5 h-5" viewBox="0 0 24 24">
+                    <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </footer>
+        {/* End Footer Section */}
+        
+    </main>
+
+
+<script src="/common-lead-form.js" defer="" />
+
+
+      </LegacyPageContent>
+    </>
+  );
+}

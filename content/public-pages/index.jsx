@@ -1,0 +1,2371 @@
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+
+export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
+
+export default function LegacyPage_index() {
+  return (
+    <>
+      <PublicNavbar />
+      <LegacyPageContent>
+        
+
+{/*  Character Set  */}
+
+
+<meta charSet="UTF-8" />
+
+
+{/*  Viewport Settings for Responsive Design  */}
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+{/*  Favicon  */}
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
+
+
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48x48.png" />
+
+
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96x96.png" />
+
+
+{/*  ═══ Performance: DNS Prefetch & Preconnect ══  */}
+
+
+{/*  Google Tag Manager  */}
+
+
+<link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
+
+
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+
+{/*  Google Fonts  */}
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+
+
+{/*  Swiper CDN  */}
+
+
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
+
+
+{/*  Lottie animation host  */}
+
+
+<link rel="dns-prefetch" href="https://lottie.host" />
+
+
+<link rel="dns-prefetch" href="https://unpkg.com" />
+
+
+{/*  YouTube thumbnails (student video testimonials)  */}
+
+
+<link rel="dns-prefetch" href="https://i.ytimg.com" />
+
+
+{/*  Razorpay  */}
+
+
+<link rel="dns-prefetch" href="https://checkout.razorpay.com" />
+
+
+{/*  ═══ MAIN CSS ═══
+     Loaded normally so the page never "jumps" while loading (better Core Web Vitals / CLS).  */}
+
+
+<link rel="stylesheet" href="./homeStyle.css" />
+
+
+{/*  Gallery + FAQ CSS are for the bottom of the page, so they load without blocking the top.  */}
+
+
+<link rel="stylesheet" href="./images/gallery-section.css" media="all" />
+
+
+<link rel="stylesheet" href="./images/faq-section.css" media="all" />
+
+
+<noscript>
+<link rel="stylesheet" href="./images/gallery-section.css" />
+<link rel="stylesheet" href="./images/faq-section.css" />
+</noscript>
+
+
+{/*  blog section css (inline — no extra HTTP request)  */}
+
+
+<style dangerouslySetInnerHTML={{__html:"\r\n.latest-blogs-section {\r\nposition: relative;\r\noverflow: hidden;\r\npadding: 80px 20px;\r\n}\r\n.latest-blogs-inner {\r\nposition: relative;\r\nz-index: 1;\r\nmax-width: 1240px;\r\nmargin: 0 auto;\r\n}\r\n.latest-blogs-header {\r\ntext-align: center;\r\nmax-width: 820px;\r\nmargin: 0 auto 40px;\r\nposition: relative;\r\nz-index: 2;\r\n}\r\n.latest-blogs-header h2 {\r\nmargin: 0;\r\ncolor: #fff;\r\nfont-size: clamp(2rem, 4vw, 3rem);\r\n}\r\n.latest-blogs-header p {\r\nmargin: 16px auto 0;\r\ncolor: rgba(255, 255, 255, 0.82);\r\nline-height: 1.8;\r\nfont-size: 1rem;\r\n}\r\n.latest-blogs-subtitle {\r\nmax-width: 720px;\r\n}\r\n.latest-blogs-grid {\r\ndisplay: grid;\r\ngrid-template-columns: repeat(3, minmax(0, 1fr));\r\ngap: 24px;\r\n}\r\n.latest-blog-card {\r\ndisplay: flex;\r\nflex-direction: column;\r\nmin-height: 100%;\r\nborder-radius: 28px;\r\noverflow: hidden;\r\nbackground: #ffffff;\r\nborder: 1px solid rgba(17, 24, 39, 0.08);\r\nbox-shadow: 0 22px 50px rgba(15, 23, 42, 0.12);\r\n}\r\n.latest-blog-image-wrap {\r\ndisplay: block;\r\naspect-ratio: 16 / 10;\r\noverflow: hidden;\r\nbackground: #eef2ff;\r\n}\r\n.latest-blog-image {\r\nwidth: 100%;\r\nheight: 100%;\r\nobject-fit: contain;\r\ntransition: transform 0.35s ease;\r\n}\r\n.latest-blog-card:hover .latest-blog-image {\r\ntransform: scale(1.04);\r\n}\r\n.latest-blog-content {\r\ndisplay: flex;\r\nflex-direction: column;\r\nflex-grow: 1;\r\npadding: 24px;\r\n}\r\n.latest-blog-meta {\r\ndisplay: flex;\r\njustify-content: space-between;\r\nalign-items: center;\r\ngap: 12px;\r\nmargin-bottom: 18px;\r\nfont-size: 12px;\r\ncolor: #6b7280;\r\n}\r\n.latest-blog-meta span:first-child {\r\npadding: 7px 12px;\r\nborder-radius: 999px;\r\nbackground: #f3e8ff;\r\ncolor: #560090;\r\nfont-weight: 700;\r\nletter-spacing: 0.08em;\r\ntext-transform: uppercase;\r\n}\r\n.latest-blog-card h3 {\r\nmargin: 0 0 14px;\r\ncolor: #111827;\r\nfont-size: 1.35rem;\r\nline-height: 1.45;\r\n}\r\n.latest-blog-card h3 a {\r\ncolor: inherit;\r\ntext-decoration: none;\r\n}\r\n.latest-blog-card h3 a:hover {\r\ncolor: #560090;\r\n}\r\n.latest-blog-card p {\r\nmargin: 0;\r\ncolor: #4b5563;\r\nline-height: 1.8;\r\nflex-grow: 1;\r\n}\r\n.latest-blog-link {\r\ndisplay: inline-flex;\r\nalign-items: center;\r\ngap: 10px;\r\nmargin-top: 22px;\r\ncolor: #560090;\r\nfont-weight: 700;\r\ntext-decoration: none;\r\n}\r\n.latest-blog-link:hover {\r\ncolor: #9900ff;\r\n}\r\n.latest-blogs-cta {\r\ndisplay: flex;\r\njustify-content: center;\r\nmargin-top: 32px;\r\n}\r\n.latest-blogs-cta a {\r\ndisplay: inline-flex;\r\nalign-items: center;\r\njustify-content: center;\r\ntext-decoration: none;\r\nfont-weight: 600;\r\n}\r\n.latest-blogs-cta a:hover {\r\ntext-decoration: none;\r\n}\r\n/* \"View All Blogs\" button */\r\n.cc-btn {\r\ndisplay: inline-flex;\r\nalign-items: center;\r\njustify-content: center;\r\ngap: 8px;\r\npadding: 14px 36px;\r\nborder-radius: 999px;\r\nbackground: linear-gradient(135deg, #9900ff, #cc22e0);\r\ncolor: #ffffff;\r\nfont-size: 1rem;\r\nfont-weight: 700;\r\nfont-family: inherit;\r\nborder: none;\r\ncursor: pointer;\r\nletter-spacing: 0.04em;\r\nbox-shadow: 0 6px 24px rgba(153, 0, 255, 0.35);\r\ntransition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;\r\nwhite-space: nowrap;\r\n}\r\n.cc-btn:hover {\r\nbackground: linear-gradient(135deg, #cc22e0, #9900ff);\r\nbox-shadow: 0 8px 32px rgba(153, 0, 255, 0.55);\r\ntransform: translateY(-2px);\r\n}\r\n.cc-btn:active {\r\ntransform: translateY(0);\r\nbox-shadow: 0 4px 14px rgba(153, 0, 255, 0.3);\r\n}\r\n@media (max-width: 991px) {\r\n.latest-blogs-grid {\r\ngrid-template-columns: 1fr;\r\n}\r\n}\r\n\r\n/* ═══════════════════════════════════════════════════════════\r\n   COMPACT MODERN COURSE CARDS — Redesigned v2\r\n   ═══════════════════════════════════════════════════════════ */\r\n.courseCard {\r\n    position: relative;\r\n    display: flex;\r\n    flex-direction: column;\r\n    background: #ffffff;\r\n    border-radius: 16px;\r\n    overflow: hidden;\r\n    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.07);\r\n    border: 1px solid rgba(17, 24, 39, 0.06);\r\n    transition: transform 0.35s ease, box-shadow 0.35s ease;\r\n    height: 100%;\r\n}\r\n.courseCard:hover {\r\n    transform: translateY(-5px);\r\n    box-shadow: 0 16px 36px rgba(153, 0, 255, 0.15);\r\n}\r\n\r\n/* Compact Image wrapper */\r\n.courseCard-image-wrap {\r\n    position: relative;\r\n    aspect-ratio: 16 / 9;\r\n    overflow: hidden;\r\n    background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);\r\n}\r\n.courseCard-image-wrap img {\r\n    width: 100%;\r\n    height: 100%;\r\n    object-fit: cover;\r\n    transition: transform 0.5s ease;\r\n    display: block;\r\n}\r\n.courseCard:hover .courseCard-image-wrap img {\r\n    transform: scale(1.05);\r\n}\r\n\r\n/* ★ HIGHLIGHTED DURATION TAG — Top-Left Featured Badge */\r\n.course-duration-badge {\r\n    position: absolute;\r\n    top: 12px;\r\n    right: 50px;\r\n    z-index: 3;\r\n    display: inline-flex;\r\n    align-items: center;\r\n    gap: 6px;\r\n    background: black;\r\n    color: #ffffff;\r\n    font-weight: 800;\r\n    font-size: 0.82rem;\r\n    padding: 7px 14px;\r\n    border-radius: 999px;\r\n    letter-spacing: 0.4px;\r\n    box-shadow: 0 6px 16px rgba(153, 0, 255, 0.45);\r\n    text-transform: uppercase;\r\n    border: 2px solid rgba(255, 255, 255, 0.25);\r\n}\r\n.course-duration-badge::before {\r\n    content: '';\r\n    width: 6px;\r\n    height: 6px;\r\n    border-radius: 50%;\r\n    background: #fff;\r\n    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);\r\n    animation: pulseDot 1.8s ease-in-out infinite;\r\n}\r\n@keyframes pulseDot {\r\n    0%, 100% { opacity: 1; transform: scale(1); }\r\n    50% { opacity: 0.7; transform: scale(1.3); }\r\n}\r\n\r\n/* Compact Content Container */\r\n.dataContainerCouses {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex-grow: 1;\r\n    padding: 16px 16px 14px;\r\n    gap: 10px;\r\n}\r\n.dataContainerCouses h2 {\r\n    margin: 0;\r\n    color: #111827;\r\n    font-size: 1.02rem;\r\n    font-weight: 700;\r\n    line-height: 1.3;\r\n    letter-spacing: -0.01em;\r\n}\r\n.dataContainerCouses ul {\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style: none;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 6px;\r\n    flex-grow: 1;\r\n}\r\n.dataContainerCouses ul li {\r\n    position: relative;\r\n    padding-left: 20px;\r\n    color: #4b5563;\r\n    font-size: 0.78rem;\r\n    line-height: 1.45;\r\n}\r\n.dataContainerCouses ul li::before {\r\n    content: '';\r\n    position: absolute;\r\n    left: 0;\r\n    top: 3px;\r\n    width: 13px;\r\n    height: 13px;\r\n    background: linear-gradient(135deg, #9900FF, #cc22e0);\r\n    border-radius: 50%;\r\n    -webkit-mask: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'><path fill-rule='evenodd' d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z' clip-rule='evenodd'/></svg>\") center/contain no-repeat;\r\n    mask: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'><path fill-rule='evenodd' d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z' clip-rule='evenodd'/></svg>\") center/contain no-repeat;\r\n}\r\n\r\n/* Course card footer buttons */\r\n.tags-bottom-row {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    gap: 10px;\r\n    padding-top: 12px;\r\n    margin-top: auto;\r\n    border-top: 1px solid rgba(17, 24, 39, 0.07);\r\n}\r\n\r\n.tags-bottom-actions {\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 10px;\r\n}\r\n\r\n.dataContainerCouses .read-more-btn {\r\n    display: inline-flex;\r\n    align-items: center;\r\n    gap: 4px;\r\n    color: #560090;\r\n    font-weight: 600;\r\n    font-size: 0.78rem;\r\n    text-decoration: none;\r\n    transition: color 0.2s ease;\r\n}\r\n.dataContainerCouses .read-more-btn::after {\r\n    content: '→';\r\n    transition: transform 0.2s ease;\r\n}\r\n.dataContainerCouses .read-more-btn:hover { color: #9900ff; }\r\n.dataContainerCouses .read-more-btn:hover::after { transform: translateX(3px); }\r\n\r\n.dataContainerCouses .enrollNowBtn {\r\n    display: inline-flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    padding: 8px 16px;\r\n    background: linear-gradient(135deg, #9900ff 0%, #cc22e0 100%);\r\n    color: #ffffff !important;\r\n    font-weight: 700;\r\n    font-size: 0.75rem;\r\n    border-radius: 999px;\r\n    text-decoration: none;\r\n    letter-spacing: 0.5px;\r\n    box-shadow: 0 4px 10px rgba(153, 0, 255, 0.28);\r\n    transition: transform 0.2s ease, box-shadow 0.2s ease;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n.dataContainerCouses .enrollNowBtn:hover {\r\n    transform: translateY(-2px);\r\n    box-shadow: 0 8px 18px rgba(153, 0, 255, 0.45);\r\n}\r\n\r\n/* ═══ SPEED: light YouTube player ═══\r\n   Shows a thumbnail first. The real YouTube player only loads when someone clicks Play. */\r\n.yt-lite { cursor: pointer; background: #000; }\r\n.yt-lite img,\r\n.yt-lite iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border: 0; display: block; }\r\n.yt-play {\r\n    /* Centered without \"transform\", so other button styles on the site can't push it sideways */\r\n    position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto;\r\n    width: 68px; height: 48px; padding: 0; border: 0; border-radius: 12px; cursor: pointer;\r\n    background: #ff0000; box-shadow: 0 6px 18px rgba(0,0,0,.35);\r\n    transform: none !important; transition: background .2s ease;\r\n}\r\n.yt-play::before {\r\n    content: ''; position: absolute; top: 0; bottom: 0; left: 4px; right: 0; margin: auto;\r\n    width: 0; height: 0;\r\n    border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #fff;\r\n}\r\n.yt-lite:hover .yt-play,\r\n.yt-play:hover,\r\n.yt-play:focus { background: #cc0000; transform: none !important; }\r\n\r\n/* ═══ SPEED: browser skips drawing these sections until you scroll near them ═══ */\r\n.reviews-section,\r\n.gallerySection,\r\n.latest-blogs-section,\r\n.faqs {\r\n    content-visibility: auto;\r\n    contain-intrinsic-size: auto 900px;\r\n}\r\n\r\n@media (max-width: 600px) {\r\n    .dataContainerCouses { padding: 14px; }\r\n    .dataContainerCouses h2 { font-size: 0.95rem; }\r\n    .tags-bottom-row { flex-direction: column; align-items: stretch; gap: 8px; }\r\n    .tags-bottom-actions { justify-content: space-between; }\r\n    .dataContainerCouses .enrollNowBtn { flex: 1; }\r\n}\r\n"}} />
+
+
+<meta name="google-site-verification" content="Ck3SpLKyjQPxFiu_GCAr_eom_2Vct0gZsNGJPzxu_L0" />
+
+
+{/*  Rel Canonical URL  */}
+
+
+<link rel="canonical" href="https://dizitaladda.com" />
+
+
+{/*  Swiper CSS — loaded async (non-blocking)  */}
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" />
+
+
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /></noscript>
+
+
+
+{/*  ===== PAGE TITLE / DESCRIPTION / KEYWORDS =====  */}
+
+
+
+
+<meta name="description" content="DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support." />
+
+
+<meta name="keywords" content="best digital marketing institute, delhi digital marketing institute, delhi institute of digital marketing, dizitaladda, dizital adda,digital marketing and ai courses, ai and cyber security courses, digital marketing, ai and cyber security training, free demo class digital marketing" />
+
+
+
+{/*  Author of the Page  */}
+
+
+<meta name="author" content="Team DizitalAdda" />
+
+
+<meta name="Publisher" content="Team DizitalAdda" />
+
+
+<meta name="copyright" content="DizitalAdda" />
+
+
+{/*  Robots Meta Tag  */}
+
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+
+
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+
+{/*  ===== OPEN GRAPH =====  */}
+
+
+<meta property="og:locale" content="en_IN" />
+
+
+<meta property="og:type" content="website" />
+
+
+<meta property="og:site_name" content="DizitalAdda" />
+
+
+<meta property="og:title" content="Best Digital Marketing Institute | AI & Data Science Courses" />
+
+
+<meta property="og:description" content="DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support." />
+
+
+<meta property="og:url" content="https://dizitaladda.com/" />
+
+
+<meta property="og:image" content="https://dizitaladda.com/images/digital-marketing-institute.webp" />
+
+
+<meta property="og:image:secure_url" content="https://dizitaladda.com/images/digital-marketing-institute.webp" />
+
+
+<meta property="og:image:type" content="image/webp" />
+
+
+<meta property="og:image:width" content="1200" />
+
+
+<meta property="og:image:height" content="630" />
+
+
+<meta property="og:image:alt" content="DizitalAdda – Digital Marketing, AI & Data Science Institute in Delhi" />
+
+
+
+{/*  ===== TWITTER CARD =====  */}
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<meta name="twitter:site" content="@dizitaladda" />
+
+
+<meta name="twitter:title" content="Best Digital Marketing Institute | AI & Data Science Courses" />
+
+
+<meta name="twitter:description" content="DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support." />
+
+
+<meta name="twitter:image" content="https://dizitaladda.com/images/digital-marketing-institute.webp" />
+
+
+<meta name="twitter:image:alt" content="DizitalAdda – Digital Marketing, AI & Data Science Institute in Delhi" />
+
+
+
+{/*  ===== SCHEMA (JSON-LD) =====  */}
+
+
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html:"\r\n{\r\n  \"@context\": \"https://schema.org\",\r\n  \"@type\": \"EducationalOrganization\",\r\n  \"@id\": \"https://dizitaladda.com/#organization\",\r\n  \"name\": \"DizitalAdda\",\r\n  \"alternateName\": [\r\n    \"Dizital Adda\",\r\n    \"DA DigitalAdda Innovations Pvt. Ltd.\"\r\n  ],\r\n  \"url\": \"https://dizitaladda.com\",\r\n  \"logo\": {\r\n    \"@type\": \"ImageObject\",\r\n    \"url\": \"https://dizitaladda.com/assets/img/logo.webp\",\r\n    \"width\": 250,\r\n    \"height\": 60\r\n  },\r\n  \"image\": \"https://dizitaladda.com/images/digital-marketing-institute.webp\",\r\n  \"description\": \"DizitalAdda is a Delhi digital marketing institute teaching SEO, paid ads, AI, data science, machine learning and cyber security with live projects, small batches of up to 15 students and placement support. Trusted by 25,000+ students since 2009.\",\r\n  \"foundingDate\": \"2009\",\r\n  \"slogan\": \"Your Skill Partner in Digital Marketing, Finance and Tech Education\",\r\n  \"email\": \"info@dizitaladda.com\",\r\n  \"telephone\": \"+91-8810606010\",\r\n  \"address\": {\r\n    \"@type\": \"PostalAddress\",\r\n    \"streetAddress\": \"2nd Floor, Spacetime Management Pvt Ltd Design House, Greater Kailash II\",\r\n    \"addressLocality\": \"New Delhi\",\r\n    \"addressRegion\": \"Delhi\",\r\n    \"postalCode\": \"110048\",\r\n    \"addressCountry\": \"IN\"\r\n  },\r\n  \"areaServed\": {\r\n    \"@type\": \"Country\",\r\n    \"name\": \"India\"\r\n  },\r\n  \"contactPoint\": {\r\n    \"@type\": \"ContactPoint\",\r\n    \"telephone\": \"+91-8810606010\",\r\n    \"contactType\": \"admissions\",\r\n    \"email\": \"info@dizitaladda.com\",\r\n    \"availableLanguage\": [\r\n      \"English\",\r\n      \"Hindi\"\r\n    ]\r\n  },\r\n  \"numberOfEmployees\": {\r\n    \"@type\": \"QuantitativeValue\",\r\n    \"value\": 50\r\n  },\r\n  \"knowsAbout\": [\r\n    \"Digital Marketing\",\r\n    \"SEO\",\r\n    \"Google Ads\",\r\n    \"Meta Ads\",\r\n    \"Generative AI\",\r\n    \"Data Science\",\r\n    \"Machine Learning\",\r\n    \"Data Analytics\",\r\n    \"Cyber Security\",\r\n    \"Ethical Hacking\"\r\n  ],\r\n  \"founder\": {\r\n    \"@type\": \"Person\",\r\n    \"@id\": \"https://dizitaladda.com/#founder\",\r\n    \"name\": \"Gulshan Kumar\",\r\n    \"honorificPrefix\": \"Dr.\",\r\n    \"jobTitle\": \"Founder & Head Trainer\",\r\n    \"url\": \"https://dizitaladda.com/about-us\",\r\n    \"description\": \"Dr. Gulshan Kumar is the Founder and Head Trainer at DizitalAdda with 10+ years of experience in Digital Marketing and Data Science.\",\r\n    \"knowsAbout\": [\r\n      \"Digital Marketing\",\r\n      \"Data Science\",\r\n      \"Search Engine Optimisation\",\r\n      \"Content Marketing\",\r\n      \"Marketing Strategy\",\r\n      \"AI in Marketing\"\r\n    ],\r\n    \"award\": [\r\n      \"Indian Icon Award by Dr. Kiran Bedi\",\r\n      \"Bharat Business Award by Ashneer Grover\",\r\n      \"Excellence Award by The Hotel School\"\r\n    ]\r\n  },\r\n  \"aggregateRating\": {\r\n    \"@type\": \"AggregateRating\",\r\n    \"ratingValue\": \"4.9\",\r\n    \"reviewCount\": \"1043\",\r\n    \"bestRating\": \"5\",\r\n    \"worstRating\": \"1\"\r\n  },\r\n  \"review\": [\r\n    {\r\n      \"@type\": \"Review\",\r\n      \"author\": {\r\n        \"@type\": \"Person\",\r\n        \"name\": \"Abhinav Sharma\"\r\n      },\r\n      \"reviewBody\": \"I enrolled in the Advanced Digital Marketing Course to improve my skills, and the practical training was honestly better than I expected. The live projects helped me understand real industry work.\",\r\n      \"reviewRating\": {\r\n        \"@type\": \"Rating\",\r\n        \"ratingValue\": \"5\",\r\n        \"bestRating\": \"5\"\r\n      },\r\n      \"itemReviewed\": {\r\n        \"@id\": \"https://dizitaladda.com/#organization\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Review\",\r\n      \"author\": {\r\n        \"@type\": \"Person\",\r\n        \"name\": \"Shiv Kalra\"\r\n      },\r\n      \"reviewBody\": \"The Expert Digital Marketing Course completely changed my career direction. I joined as a college student with zero practical knowledge, and now I confidently manage SEO and Google Ads projects for clients.\",\r\n      \"reviewRating\": {\r\n        \"@type\": \"Rating\",\r\n        \"ratingValue\": \"5\",\r\n        \"bestRating\": \"5\"\r\n      },\r\n      \"itemReviewed\": {\r\n        \"@id\": \"https://dizitaladda.com/#organization\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Review\",\r\n      \"author\": {\r\n        \"@type\": \"Person\",\r\n        \"name\": \"Tulika Biswas\"\r\n      },\r\n      \"reviewBody\": \"As a working professional, I needed a course that was practical and updated with current trends. The Digital Marketing Course for Professionals helped me switch my career successfully.\",\r\n      \"reviewRating\": {\r\n        \"@type\": \"Rating\",\r\n        \"ratingValue\": \"5\",\r\n        \"bestRating\": \"5\"\r\n      },\r\n      \"itemReviewed\": {\r\n        \"@id\": \"https://dizitaladda.com/#organization\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Review\",\r\n      \"author\": {\r\n        \"@type\": \"Person\",\r\n        \"name\": \"Harvinder Singh\"\r\n      },\r\n      \"reviewBody\": \"The trainers explained everything in a very simple way, even advanced SEO and paid ads. I started freelancing within a few months after completing the course.\",\r\n      \"reviewRating\": {\r\n        \"@type\": \"Rating\",\r\n        \"ratingValue\": \"5\",\r\n        \"bestRating\": \"5\"\r\n      },\r\n      \"itemReviewed\": {\r\n        \"@id\": \"https://dizitaladda.com/#organization\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Review\",\r\n      \"author\": {\r\n        \"@type\": \"Person\",\r\n        \"name\": \"Neha Singh\"\r\n      },\r\n      \"reviewBody\": \"What I liked most was the focus on real projects instead of only theory. We worked on live campaigns and learned tools that companies actually use.\",\r\n      \"reviewRating\": {\r\n        \"@type\": \"Rating\",\r\n        \"ratingValue\": \"5\",\r\n        \"bestRating\": \"5\"\r\n      },\r\n      \"itemReviewed\": {\r\n        \"@id\": \"https://dizitaladda.com/#organization\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Review\",\r\n      \"author\": {\r\n        \"@type\": \"Person\",\r\n        \"name\": \"Kajal\"\r\n      },\r\n      \"reviewBody\": \"The practical assignments and live website projects helped me understand how digital marketing actually works in companies and agencies.\",\r\n      \"reviewRating\": {\r\n        \"@type\": \"Rating\",\r\n        \"ratingValue\": \"5\",\r\n        \"bestRating\": \"5\"\r\n      },\r\n      \"itemReviewed\": {\r\n        \"@id\": \"https://dizitaladda.com/#organization\"\r\n      }\r\n    }\r\n  ],\r\n  \"sameAs\": [\r\n    \"https://www.facebook.com/dizitaladda01\",\r\n    \"https://x.com/dizitaladda\",\r\n    \"https://www.instagram.com/official_dizital_adda/\",\r\n    \"https://www.youtube.com/@DizitalAdda\",\r\n    \"https://www.linkedin.com/company/dizitaladda/\",\r\n    \"https://in.pinterest.com/dizitaladda01/\",\r\n    \"https://www.tumblr.com/dizitaladda12\"\r\n  ]\r\n}\r\n"}} />
+
+
+
+{/*  ===== SCHEMA (JSON-LD) =====  */}
+
+
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html:"\r\n{\r\n  \"@context\": \"https://schema.org\",\r\n  \"@type\": \"LocalBusiness\",\r\n  \"@id\": \"https://dizitaladda.com/#localbusiness\",\r\n  \"name\": \"DizitalAdda Digital Marketing Institute\",\r\n  \"parentOrganization\": {\r\n    \"@id\": \"https://dizitaladda.com/#organization\"\r\n  },\r\n  \"image\": \"https://dizitaladda.com/images/digital-marketing-institute.webp\",\r\n  \"url\": \"https://dizitaladda.com\",\r\n  \"telephone\": \"+91-8810606010\",\r\n  \"email\": \"info@dizitaladda.com\",\r\n  \"priceRange\": \"₹25,000 - ₹1,35,000\",\r\n  \"currenciesAccepted\": \"INR\",\r\n  \"paymentAccepted\": \"Cash, Credit Card, Debit Card, UPI, Bank Transfer\",\r\n  \"address\": {\r\n    \"@type\": \"PostalAddress\",\r\n    \"streetAddress\": \"2nd Floor, Spacetime Management Pvt Ltd Design House, Greater Kailash II\",\r\n    \"addressLocality\": \"New Delhi\",\r\n    \"addressRegion\": \"Delhi\",\r\n    \"postalCode\": \"110048\",\r\n    \"addressCountry\": \"IN\"\r\n  },\r\n  \"geo\": {\r\n    \"@type\": \"GeoCoordinates\",\r\n    \"latitude\": 28.541963,\r\n    \"longitude\": 77.240722\r\n  },\r\n  \"hasMap\": \"https://maps.app.goo.gl/yaZeHLJBfKYHdMPJ7\",\r\n  \"openingHoursSpecification\": [\r\n    {\r\n      \"@type\": \"OpeningHoursSpecification\",\r\n      \"dayOfWeek\": [\r\n        \"Monday\",\r\n        \"Tuesday\",\r\n        \"Wednesday\",\r\n        \"Thursday\",\r\n        \"Friday\",\r\n        \"Saturday\",\r\n        \"Sunday\"\r\n      ],\r\n      \"opens\": \"08:00\",\r\n      \"closes\": \"19:00\"\r\n    }\r\n  ],\r\n  \"sameAs\": [\r\n    \"https://www.facebook.com/dizitaladda01\",\r\n    \"https://www.instagram.com/official_dizital_adda/\",\r\n    \"https://www.youtube.com/@DizitalAdda\",\r\n    \"https://www.linkedin.com/company/dizitaladda/\",\r\n    \"https://x.com/dizitaladda\"\r\n  ]\r\n}\r\n"}} />
+
+
+
+{/*  ===== SCHEMA (JSON-LD) =====  */}
+
+
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html:"\r\n{\r\n  \"@context\": \"https://schema.org\",\r\n  \"@type\": \"BreadcrumbList\",\r\n  \"itemListElement\": [\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 1,\r\n      \"name\": \"Home\",\r\n      \"item\": \"https://dizitaladda.com/\"\r\n    }\r\n  ],\r\n  \"@id\": \"https://dizitaladda.com/#breadcrumb\"\r\n}\r\n"}} />
+
+
+
+{/*  ===== SCHEMA (JSON-LD) =====  */}
+
+
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html:"\r\n[\r\n  {\r\n    \"@context\": \"https://schema.org\",\r\n    \"@type\": \"WebSite\",\r\n    \"@id\": \"https://dizitaladda.com/#website\",\r\n    \"name\": \"DizitalAdda\",\r\n    \"url\": \"https://dizitaladda.com\",\r\n    \"description\": \"Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security with live projects, small batches and placement support.\",\r\n    \"inLanguage\": \"en-IN\",\r\n    \"publisher\": {\r\n      \"@id\": \"https://dizitaladda.com/#organization\"\r\n    },\r\n    \"potentialAction\": {\r\n      \"@type\": \"SearchAction\",\r\n      \"target\": {\r\n        \"@type\": \"EntryPoint\",\r\n        \"urlTemplate\": \"https://dizitaladda.com/?s={search_term_string}\"\r\n      },\r\n      \"query-input\": \"required name=search_term_string\"\r\n    }\r\n  },\r\n  {\r\n    \"@context\": \"https://schema.org\",\r\n    \"@type\": \"WebPage\",\r\n    \"@id\": \"https://dizitaladda.com/#webpage\",\r\n    \"url\": \"https://dizitaladda.com\",\r\n    \"name\": \"Best Digital Marketing Institute | AI & Data Science Courses\",\r\n    \"description\": \"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support.\",\r\n    \"isPartOf\": {\r\n      \"@id\": \"https://dizitaladda.com/#website\"\r\n    },\r\n    \"about\": {\r\n      \"@id\": \"https://dizitaladda.com/#organization\"\r\n    },\r\n    \"speakable\": {\r\n      \"@type\": \"SpeakableSpecification\",\r\n      \"cssSelector\": [\r\n        \".homeBanner h1\",\r\n        \".homeBanner p\",\r\n        \".dataSection h6\",\r\n        \".cert-title\",\r\n        \".faqs .faq summary\",\r\n        \".introDataContainer li\"\r\n      ]\r\n    },\r\n    \"primaryImageOfPage\": {\r\n      \"@type\": \"ImageObject\",\r\n      \"url\": \"https://dizitaladda.com/images/digital-marketing-institute.webp\",\r\n      \"width\": 1200,\r\n      \"height\": 630\r\n    },\r\n    \"breadcrumb\": {\r\n      \"@id\": \"https://dizitaladda.com/#breadcrumb\"\r\n    },\r\n    \"inLanguage\": \"en-IN\",\r\n    \"dateModified\": \"2026-10-09\"\r\n  }\r\n]\r\n"}} />
+
+
+
+{/*  ===== SCHEMA (JSON-LD) =====  */}
+
+
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html:"\r\n{\r\n  \"@context\": \"https://schema.org\",\r\n  \"@type\": \"FAQPage\",\r\n  \"@id\": \"https://dizitaladda.com/#faq\",\r\n  \"mainEntity\": [\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"What is digital marketing & why is it important in 2026?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Digital marketing means promoting brands through search, social media, ads, and email instead of TV or print. It's important because most buying decisions today start with an online search, so brands without a digital presence lose customers to competitors.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Is a digital marketing course worth it in 2026?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Yes, it's one of the most in-demand, low-entry skills right now. Every business needs online visibility, so trained marketers stay employable across industries.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Best digital marketing institute in Delhi with placement?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"DizitalAdda offers practical, hands-on training with placement support in Delhi. Other well-known names include IIDE and Digital Vidya and DIDM, but hands-on project work matters more than brand name.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Fee of digital marketing course in Delhi?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Fees usually range from ₹25,000 to ₹1,35,000+. The exact cost depends on course level, duration, and whether placement support is included.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"How many months to learn digital marketing?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Most job-ready courses take 3–6 months, while an Expert-level course with 1-year certification offers deeper, more advanced training. Basic skills can be picked up faster, but real mastery comes with hands-on practice afterward.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Best certification for digital marketing?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Google Ads, Google Analytics, and Meta Blueprint are the most recognized free certifications. Pairing these with an institute certificate that includes live project work makes a stronger profile.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Digital Marketing Course for working professionals?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Yes, most institutes including DizitalAdda run weekend or evening batches. This lets professionals learn without leaving their job.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Average salary for a digital marketer in Delhi?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Freshers typically earn ₹3.5–4.5 LPA. With 3–5 years of experience, this rises to ₹7–14 LPA.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Which skill pays most — SEO, PPC, or SMM?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"PPC and SEO tend to pay the highest since both directly drive measurable ROI. Social media marketing also pays well in 2026 and is growing fast, especially for those skilled in reels, influencer marketing, and paid social ads.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Highest salary for a digital marketer in Delhi?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Senior roles like Digital Marketing Head or Performance Marketing Lead can reach ₹25–40 LPA+. This level needs 8-10+ years of experience and proven campaign results.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Can course fees be paid in installments?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Yes, most institutes including DizitalAdda offer EMI or installment options. Always confirm the number of installments and any extra charges before enrolling.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Does DizitalAdda offer online and offline courses?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Yes, both formats are available. Students can choose in-person classroom training or live online sessions based on convenience.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"What courses does DizitalAdda offer?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"DizitalAdda offers Digital Marketing courses (Beginners, Advanced, Expert, and Working Professionals batches), along with AI, Data Science/Data Analytics, and Cyber Security courses — covering both foundational and advanced, career-focused training.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Does DizitalAdda also provide a 3-year master course with college partnerships?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Yes, DizitalAdda offers a 3-year master's course in digital marketing, delivered through partnerships with selected colleges.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"What is ethical hacking, and how is it different from cyber security in 2026?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Ethical hacking is the practice of legally testing systems by simulating attacks to find security weaknesses before real hackers do. Cyber security is the broader field covering all defense measures, tools, and policies used to protect systems — ethical hacking is one offensive skill within it, not the whole field.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"What is the average salary of an ethical hacker in India in 2026 (fresher vs experienced)?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Freshers typically earn ₹3.5–6 LPA, especially with a CEH certification and some hands-on lab or project work. Experienced professionals (5+ years) with certifications like OSCP earn ₹15–30 LPA, and senior red-team leads can cross ₹40 LPA.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Is a machine learning or AI course worth it in 2026 for a career switch?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Yes, ML/AI remains one of the highest-demand skill areas in 2026 as companies embed AI across products and operations. It suits career switchers with some logical/analytical or coding background, though expect a real learning curve if coming from a non-technical field.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"Does DizitalAdda also offer Data Analytics, Data Science, and Machine Learning courses?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Yes, DizitalAdda offers Data Analytics, Data Science, and Machine Learning courses alongside its digital marketing programs. These courses include practical, project-based training with placement support, available in both online and offline formats.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"What is the difference between data analytics and data science?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Data analytics focuses on examining existing data to find patterns and answer specific business questions. Data science is broader — it includes analytics plus building predictive models, machine learning, and working with unstructured data to solve more complex, forward-looking problems.\"\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"Question\",\r\n      \"name\": \"What AI tools are used in digital marketing in 2026?\",\r\n      \"acceptedAnswer\": {\r\n        \"@type\": \"Answer\",\r\n        \"text\": \"Common tools include ChatGPT and Jasper for content, Surfer SEO and Semrush AI for SEO, Canva and Adobe Firefly for design, Google Performance Max and Meta Advantage+ for ad bidding, and HubSpot or Mailchimp AI for email personalization.\"\r\n      }\r\n    }\r\n  ]\r\n}\r\n"}} />
+
+
+
+{/*  ===== SCHEMA (JSON-LD) =====  */}
+
+
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html:"\r\n{\r\n  \"@context\": \"https://schema.org\",\r\n  \"@type\": \"ItemList\",\r\n  \"@id\": \"https://dizitaladda.com/#courses\",\r\n  \"name\": \"DizitalAdda Courses\",\r\n  \"description\": \"Job-oriented courses in Digital Marketing, AI, Data Science and Cyber Security with placement support\",\r\n  \"url\": \"https://dizitaladda.com\",\r\n  \"numberOfItems\": 18,\r\n  \"itemListElement\": [\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 1,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Expert in Digital Marketing\",\r\n        \"description\": \"A 12-month expert-level digital marketing programme covering SEO, Google Ads, Meta Ads, AI tools and real industry campaigns, ideal for beginners, business owners and freelancers.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Expert\",\r\n        \"timeRequired\": \"P12M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P12M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"95000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 2,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Advanced Digital Marketing\",\r\n        \"description\": \"A 6-month advanced digital marketing course covering SEO, SEM, PPC and social media with hands-on industry tool training, designed for learners upgrading their basic marketing skills.\",\r\n        \"url\": \"https://dizitaladda.com/courses/advanced-digital-marketing-course\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Advanced\",\r\n        \"timeRequired\": \"P6M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P6M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"50000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/advanced-digital-marketing-course\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 3,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Digital Marketing for Professionals\",\r\n        \"description\": \"A 4-month digital marketing course for working professionals and freelancers covering SEO, Google Ads, Meta Ads and analytics through real brand campaigns.\",\r\n        \"url\": \"https://dizitaladda.com/courses/digital-marketing-for-professional\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Intermediate\",\r\n        \"timeRequired\": \"P4M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P4M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"30000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/digital-marketing-for-professional\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 4,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Digital Marketing for Beginners\",\r\n        \"description\": \"A 3-month beginner-friendly digital marketing course covering SEO, Google Ads, social media and content basics with hands-on training and career placement support.\",\r\n        \"url\": \"https://dizitaladda.com/courses/digital-marketing-for-beginners\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Beginner\",\r\n        \"timeRequired\": \"P3M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P3M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"25000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/digital-marketing-for-beginners\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 5,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Diploma in GenAI & Prompt Engineering\",\r\n        \"description\": \"A 12-month diploma covering ReAct, LangGraph, Multi-Agent AI systems and enterprise-grade GenAI solution architecture.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-genai-and-prompt-engineering\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Expert\",\r\n        \"timeRequired\": \"P12M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P12M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"95000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/diploma-in-genai-and-prompt-engineering\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 6,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Diploma in Data Analytics\",\r\n        \"description\": \"A 12-month diploma covering data storytelling, dashboards, predictive models and domain-specific analytics across finance, health and marketing, with real-world projects.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-data-analytics-and-ai\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Expert\",\r\n        \"timeRequired\": \"P12M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P12M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"95000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/diploma-in-data-analytics-and-ai\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 7,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Diploma in Machine Learning & AI\",\r\n        \"description\": \"A 12-month diploma covering supervised learning, neural networks, MLOps and end-to-end deployment of real-world ML models, including capstone projects and interview preparation.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Expert\",\r\n        \"timeRequired\": \"P12M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P12M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"95000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 8,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Diploma in Data Science & AI\",\r\n        \"description\": \"A 12-month diploma covering ML pipelines, deep learning, NLP and data engineering across the full AI workflow.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-data-science-and-ai\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Expert\",\r\n        \"timeRequired\": \"P12M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P12M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"95000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/diploma-in-data-science-and-ai\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 9,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Advanced Certification in GenAI & Prompt Engineering\",\r\n        \"description\": \"A 6-month advanced certification covering GPT-4, RAG, LangChain and Vector Databases for building AI chatbots, smart assistants and real GenAI applications.\",\r\n        \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-genai-and-prompt-engineering\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Advanced\",\r\n        \"timeRequired\": \"P6M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P6M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"50000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-genai-and-prompt-engineering\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 10,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Advanced Certification in Data Analytics and AI\",\r\n        \"description\": \"A 6-month advanced certification covering Excel, SQL, Python, Power BI and Tableau for data-driven business decision making.\",\r\n        \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-data-analytics-and-ai\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Advanced\",\r\n        \"timeRequired\": \"P6M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P6M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"50000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-data-analytics-and-ai\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 11,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Advanced Certification in Machine Learning & AI\",\r\n        \"description\": \"A 6-month advanced certification covering Python, scikit-learn and TensorFlow for building, training and deploying real-world AI applications.\",\r\n        \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-machine-learning-and-ai\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Advanced\",\r\n        \"timeRequired\": \"P6M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P6M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"50000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-machine-learning-and-ai\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 12,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Advanced Certification in Data Science & AI\",\r\n        \"description\": \"A 6-month advanced certification covering Python, machine learning, statistics and real-world AI use cases.\",\r\n        \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-data-science-and-ai\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Advanced\",\r\n        \"timeRequired\": \"P6M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P6M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"50000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-data-science-and-ai\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 13,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Certification in Data Analytics and AI\",\r\n        \"description\": \"A 3-month certification covering Python, Excel, SQL and Power BI for data cleaning, dashboards and AI-driven insights.\",\r\n        \"url\": \"https://dizitaladda.com/courses/certification-in-data-analytics-and-ai\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Beginner\",\r\n        \"timeRequired\": \"P3M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P3M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"30000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/certification-in-data-analytics-and-ai\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 14,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Foundation in Cyber Security and Ethical Hacking\",\r\n        \"description\": \"A 4-month foundation course covering the cyber world, networking, Linux and real-world cyber attacks for beginners.\",\r\n        \"url\": \"https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Intermediate\",\r\n        \"timeRequired\": \"P4M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P4M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"30000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 15,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Advanced Certification in Cyber Security and Ethical Hacking\",\r\n        \"description\": \"A 6-month advanced certification covering Python, ethical hacking and digital and cyber forensics with a certified capstone project.\",\r\n        \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Advanced\",\r\n        \"timeRequired\": \"P6M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P6M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"50000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 16,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Expert Training in Cyber Security and Ethical Hacking\",\r\n        \"description\": \"A 12-month expert programme covering VAPT, web and mobile penetration testing with complete career guidance including resume, LinkedIn and GitHub development.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Expert\",\r\n        \"timeRequired\": \"P12M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P12M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"95000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 17,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Certification in Digital Forensic and Cyber Investigation\",\r\n        \"description\": \"A 4-month certification covering digital forensics and cyber investigation techniques through real-world projects and a capstone project.\",\r\n        \"url\": \"https://dizitaladda.com/courses/certification-in-digital-forensic-and-cyber-investigation\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Intermediate\",\r\n        \"timeRequired\": \"P4M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P4M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"30000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/certification-in-digital-forensic-and-cyber-investigation\"\r\n        }\r\n      }\r\n    },\r\n    {\r\n      \"@type\": \"ListItem\",\r\n      \"position\": 18,\r\n      \"item\": {\r\n        \"@type\": \"Course\",\r\n        \"name\": \"Expert Training in Bug Bounty\",\r\n        \"description\": \"A 4-month expert programme covering bug bounty hunting on HackerOne and Bugcrowd, OWASP Top 10 vulnerabilities and legal lab practice for building a public bug bounty portfolio.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-traning-in-bug-bounty\",\r\n        \"provider\": {\r\n          \"@id\": \"https://dizitaladda.com/#organization\"\r\n        },\r\n        \"educationalLevel\": \"Intermediate\",\r\n        \"timeRequired\": \"P4M\",\r\n        \"hasCourseInstance\": {\r\n          \"@type\": \"CourseInstance\",\r\n          \"courseMode\": [\r\n            \"onsite\",\r\n            \"online\"\r\n          ],\r\n          \"courseWorkload\": \"P4M\"\r\n        },\r\n        \"inLanguage\": \"en-IN\",\r\n        \"offers\": {\r\n          \"@type\": \"Offer\",\r\n          \"price\": \"30000\",\r\n          \"priceCurrency\": \"INR\",\r\n          \"availability\": \"https://schema.org/InStock\",\r\n          \"url\": \"https://dizitaladda.com/courses/expert-traning-in-bug-bounty\"\r\n        }\r\n      }\r\n    }\r\n  ]\r\n}\r\n"}} />
+
+
+
+
+{/*  ===== SCHEMA (JSON-LD) =====  */}
+
+
+<script type="application/ld+json" dangerouslySetInnerHTML={{__html:"\r\n[\r\n  {\r\n    \"@context\": \"https://schema.org\",\r\n    \"@type\": \"HowTo\",\r\n    \"name\": \"How to Start a Career in Digital Marketing in India\",\r\n    \"description\": \"A step-by-step guide to launching a digital marketing career in India, from choosing the right course to landing your first job.\",\r\n    \"totalTime\": \"P4M\",\r\n    \"estimatedCost\": {\r\n      \"@type\": \"MonetaryAmount\",\r\n      \"currency\": \"INR\",\r\n      \"value\": \"25000\"\r\n    },\r\n    \"step\": [\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 1,\r\n        \"name\": \"Understand digital marketing fundamentals\",\r\n        \"text\": \"Learn what digital marketing covers — SEO, Google Ads, Meta Ads, Social Media, Email Marketing, Content Writing, and Analytics. Identify which specialisation matches your interest and career goal.\",\r\n        \"url\": \"https://dizitaladda.com/courses/digital-marketing-for-beginners\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 2,\r\n        \"name\": \"Choose the right course level\",\r\n        \"text\": \"Beginners with no marketing background should start with a 3-month beginner course. Working professionals switching careers should choose a 4-month professionals course. Those targeting agency or senior roles should consider a 6-12 month advanced or expert programme.\",\r\n        \"url\": \"https://dizitaladda.com/courses/digital-marketing-for-beginners\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 3,\r\n        \"name\": \"Earn Google and Meta certifications\",\r\n        \"text\": \"Complete Google Ads certification on Google Skillshop and Meta Blueprint certification during your course. These are free, globally recognised credentials that most employers look for in entry-level roles.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 4,\r\n        \"name\": \"Build a portfolio with live projects\",\r\n        \"text\": \"Run real campaigns on Google Ads and Meta Ads. Publish SEO-optimised blog posts. Build a WordPress website. Create GA4 reports. Recruiters look for evidence of hands-on work, not just certificates.\",\r\n        \"url\": \"https://dizitaladda.com/courses/advanced-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 5,\r\n        \"name\": \"Optimise your resume and LinkedIn profile\",\r\n        \"text\": \"Use keywords like SEO Executive, Performance Marketer, or PPC Specialist depending on your chosen track. Add campaign results with metrics — CTR, ROAS, organic traffic growth.\",\r\n        \"url\": \"https://dizitaladda.com/courses/digital-marketing-for-beginners\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 6,\r\n        \"name\": \"Apply for internships or entry-level roles\",\r\n        \"text\": \"Apply to digital marketing agencies, e-commerce companies, and startups. Entry-level roles include Social Media Executive, SEO Executive, PPC Executive, and Content Writer. Starting salary range: ₹2.5-5 LPA in India.\",\r\n        \"url\": \"https://dizitaladda.com/courses/digital-marketing-for-beginners\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"@context\": \"https://schema.org\",\r\n    \"@type\": \"HowTo\",\r\n    \"name\": \"How to Learn SEO and Rank on Google in 2026\",\r\n    \"description\": \"A practical step-by-step guide to learning Search Engine Optimisation and improving a website's Google ranking in 2026.\",\r\n    \"totalTime\": \"P3M\",\r\n    \"step\": [\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 1,\r\n        \"name\": \"Learn how search engines work\",\r\n        \"text\": \"Understand how Google crawls, indexes, and ranks pages. Study ranking factors: content quality, backlinks, page experience, and Core Web Vitals.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 2,\r\n        \"name\": \"Do keyword research\",\r\n        \"text\": \"Use Google Search Console, Google Keyword Planner, and Semrush to find keywords your target audience searches for. Focus on long-tail keywords with clear intent. In 2026, also optimise for conversational queries used in AI search engines.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 3,\r\n        \"name\": \"Optimise on-page elements\",\r\n        \"text\": \"Write keyword-rich title tags under 60 characters, meta descriptions under 160 characters, and H1 headings. Structure content with H2 and H3 subheadings. Include the target keyword naturally in the first 100 words, image alt text, and URL slug.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 4,\r\n        \"name\": \"Fix technical SEO issues\",\r\n        \"text\": \"Run a site audit using Screaming Frog or Semrush. Fix broken links, duplicate content, missing meta tags, slow page speed, and mobile usability issues. Improve Core Web Vitals: LCP, CLS, and INP.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 5,\r\n        \"name\": \"Build backlinks through content and outreach\",\r\n        \"text\": \"Create high-quality, shareable content. Reach out to relevant blogs for guest posts. List your business in authoritative directories. Quality backlinks from trusted domains increase domain authority.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 6,\r\n        \"name\": \"Optimise for AI search engines — AEO and LLMO\",\r\n        \"text\": \"Structure content with clear question-and-answer formatting. Use FAQPage and HowTo schema. Write concise factual answers in the first paragraph.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 7,\r\n        \"name\": \"Track rankings and iterate\",\r\n        \"text\": \"Monitor keyword rankings in Google Search Console and Semrush. Analyse which pages get impressions but low clicks and improve their title tags. Update existing content regularly.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"@context\": \"https://schema.org\",\r\n    \"@type\": \"HowTo\",\r\n    \"name\": \"How to Run Google Ads: Step-by-Step Guide for Beginners\",\r\n    \"description\": \"Learn how to create and run your first Google Ads Search campaign, from account setup to measuring results.\",\r\n    \"totalTime\": \"PT2H\",\r\n    \"estimatedCost\": {\r\n      \"@type\": \"MonetaryAmount\",\r\n      \"currency\": \"INR\",\r\n      \"value\": \"500\"\r\n    },\r\n    \"step\": [\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 1,\r\n        \"name\": \"Create a Google Ads account\",\r\n        \"text\": \"Go to ads.google.com and sign in with your Google account. Select your billing country and time zone. Set up a billing method — credit card, debit card, or UPI for India.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 2,\r\n        \"name\": \"Choose your campaign objective\",\r\n        \"text\": \"Select your goal: Sales, Leads, Website traffic, or Brand awareness. For most new advertisers, Leads or Website traffic is the right starting point. Choose Search as the campaign type.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 3,\r\n        \"name\": \"Set your budget and bidding strategy\",\r\n        \"text\": \"Set a daily budget — start with ₹300-500 per day for testing. Choose Maximise clicks as a beginner, or Target CPA once you have enough conversion data.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 4,\r\n        \"name\": \"Research and add keywords\",\r\n        \"text\": \"Use Google Keyword Planner to find keywords your audience searches for. Add a mix of exact, phrase, and broad match keywords. Add negative keywords to exclude irrelevant searches.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 5,\r\n        \"name\": \"Write your ads\",\r\n        \"text\": \"Create Responsive Search Ads with up to 15 headlines and 4 descriptions. Include your primary keyword in several headlines. Add a clear call to action in descriptions.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 6,\r\n        \"name\": \"Set up conversion tracking\",\r\n        \"text\": \"Install Google Tag Manager on your website. Create a conversion action in Google Ads for form submissions or calls. Without conversion tracking you cannot see which keywords generate leads.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 7,\r\n        \"name\": \"Monitor and optimise weekly\",\r\n        \"text\": \"Check the Search Terms report to find irrelevant queries and add them as negatives. Pause keywords with high spend and zero conversions. Review campaigns at least weekly.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"@context\": \"https://schema.org\",\r\n    \"@type\": \"HowTo\",\r\n    \"name\": \"How to Become an Ethical Hacker in India\",\r\n    \"description\": \"A step-by-step roadmap to starting a career in ethical hacking and cyber security in India, from foundational skills to certifications.\",\r\n    \"totalTime\": \"P12M\",\r\n    \"step\": [\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 1,\r\n        \"name\": \"Build networking and OS fundamentals\",\r\n        \"text\": \"Learn how TCP/IP, DNS, HTTP, and firewalls work. Get comfortable with Linux, widely used in security work. Study subnetting, routing, VLANs, and packet analysis with Wireshark.\",\r\n        \"url\": \"https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 2,\r\n        \"name\": \"Learn Python for security scripting\",\r\n        \"text\": \"Python is widely used for automation and security tooling. Focus on file handling, socket programming, web scraping, and working with APIs. Libraries like Scapy and Requests are common.\",\r\n        \"url\": \"https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 3,\r\n        \"name\": \"Study common attack types and vulnerabilities\",\r\n        \"text\": \"Study the OWASP Top 10 web vulnerabilities: injection, cross-site scripting, broken authentication, IDOR, and SSRF. Understand social engineering, phishing, and password attacks.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 4,\r\n        \"name\": \"Practice on legal lab environments\",\r\n        \"text\": \"Use platforms like TryHackMe, Hack The Box, and DVWA to practice legally. Set up a local lab using VirtualBox with Kali Linux. Never test real systems without written authorisation.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 5,\r\n        \"name\": \"Learn penetration testing methodology\",\r\n        \"text\": \"Study the phases of penetration testing: Reconnaissance, Scanning, Gaining Access, Maintaining Access, and Reporting. Learn tools like Nmap, Metasploit, Burp Suite, and Nikto.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 6,\r\n        \"name\": \"Earn cyber security certifications\",\r\n        \"text\": \"Target certifications recognised in India: CEH, CompTIA Security+, eJPT for beginners, and OSCP for advanced practitioners.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 7,\r\n        \"name\": \"Participate in bug bounty programmes\",\r\n        \"text\": \"Register on HackerOne, Bugcrowd, and Indian government bug bounty portals. Start with beginner-friendly programmes and build a public portfolio.\",\r\n        \"url\": \"https://dizitaladda.com/courses/expert-traning-in-bug-bounty\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"@context\": \"https://schema.org\",\r\n    \"@type\": \"HowTo\",\r\n    \"name\": \"How to Learn Data Science from Scratch: A Complete Roadmap for 2026\",\r\n    \"description\": \"A step-by-step roadmap to learning data science in India, from Python basics to machine learning and job placement.\",\r\n    \"totalTime\": \"P12M\",\r\n    \"step\": [\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 1,\r\n        \"name\": \"Learn Python programming\",\r\n        \"text\": \"Python is the primary language of data science. Master variables, loops, functions, and file handling. Then learn NumPy, Pandas, Matplotlib, and Seaborn.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-data-science-and-ai\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 2,\r\n        \"name\": \"Study statistics and probability\",\r\n        \"text\": \"Study descriptive statistics, probability distributions, hypothesis testing, correlation, and regression. Statistics is the foundation that makes machine learning results meaningful.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-data-science-and-ai\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 3,\r\n        \"name\": \"Learn SQL for data querying\",\r\n        \"text\": \"Learn SELECT, WHERE, GROUP BY, JOIN, and subqueries. Practice on real datasets using MySQL or PostgreSQL. SQL is a core hiring requirement for most data roles.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-data-analytics-and-ai\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 4,\r\n        \"name\": \"Master machine learning fundamentals\",\r\n        \"text\": \"Learn core ML algorithms using Scikit-learn: linear regression, logistic regression, decision trees, random forests, and k-means clustering. Evaluate models using train-test split and cross-validation.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 5,\r\n        \"name\": \"Learn deep learning and NLP\",\r\n        \"text\": \"Study neural networks using TensorFlow or PyTorch. Build image classifiers with CNNs and text models using Transformers. Learn tokenisation, sentiment analysis, and named entity recognition.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-data-science-and-ai\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 6,\r\n        \"name\": \"Build end-to-end data science projects\",\r\n        \"text\": \"Complete 3-5 projects covering data collection, cleaning, EDA, modelling, evaluation, and deployment. Good ideas include churn prediction, fraud detection, and demand forecasting. Host projects on GitHub.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-data-science-and-ai\"\r\n      },\r\n      {\r\n        \"@type\": \"HowToStep\",\r\n        \"position\": 7,\r\n        \"name\": \"Apply for data science roles in India\",\r\n        \"text\": \"Target roles including Junior Data Scientist, ML Engineer, Data Analyst, and AI Engineer. Entry-level salaries vary by company, skills, and city.\",\r\n        \"url\": \"https://dizitaladda.com/courses/diploma-in-data-science-and-ai\"\r\n      }\r\n    ]\r\n  }\r\n]\r\n"}} />
+
+ 
+
+ 
+
+{/*  Google Tag Manager  */}
+
+
+<script dangerouslySetInnerHTML={{__html:"(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\r\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\r\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,'script','dataLayer','GTM-PGGBWWTQ');"}} />
+
+
+{/*  End Google Tag Manager  */}
+
+
+
+
+
+
+{/*  Google Tag Manager (noscript)  */}
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGGBWWTQ" height="0" width="0" style={{"display":"none","visibility":"hidden"}}></iframe></noscript>
+
+
+{/*  End Google Tag Manager (noscript)  */}
+
+
+<head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96x96.png" />
+    <script src="/common-lead-form.js" defer="" />
+</head>
+
+
+<style dangerouslySetInnerHTML={{__html:"\r\n    *{\r\n    padding: 0;\r\n    margin: 0;\r\n    box-sizing: border-box;\r\n}\r\n@font-face {\r\n  font-family: 'Poppins';\r\n  font-style: normal;\r\n  font-display: swap;\r\n  font-weight: 400;\r\n  src: url(https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.woff) format('woff');\r\n  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;\r\n}\r\n.navbar{\r\n    width: 100%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    position: fixed;\r\n    z-index: 500000;\r\n    font-family: Poppins, sans-serif;\r\n    margin: 0 !important;\r\n    padding:0 !important;\r\n}\r\n.gulshanSirAlignment {\r\n    display: flex;\r\n    justify-content:flex-end;\r\n    align-items: center;\r\n    flex-wrap: wrap; /* allow items to wrap into multiple rows */\r\n    gap: 10px; /* optional spacing between items */\r\n}\r\n\r\n.gulshanSirAlignment a {\r\n    text-align: right;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.top{\r\n    background-color: white;\r\n    width: 100%;\r\n    margin: auto;\r\n    display: grid;\r\n    grid-template-columns: 450px 1fr;\r\n    box-shadow: 0 4px 8px -4px rgba(75, 24, 100, 0.1);\r\n        padding: 10px 20px;\r\n        z-index: 2000000;\r\n}\r\n\r\n/* Search Input Styles */\r\n.searchInput {\r\n    height: 35px;\r\n    border: 1.5px solid #b087c9;\r\n    border-radius: 5px;\r\n    padding: 10px;\r\n    margin: 0 10px;\r\n}\r\n\r\n.searchInput::placeholder {\r\n    font-size: 12px;\r\n    font-weight: 500;\r\n    color: #4b1864;\r\n}\r\n\r\n/* Search input hover effect */\r\n.searchInput:hover, .searchInput:focus {\r\n    border-color: #6b2d8a;\r\n    box-shadow: 0 0 8px rgba(75, 24, 100, 0.1);\r\n    transform: translateY(-1px);\r\n    outline: none;\r\n}\r\n\r\n/* Search Overlay Styles */\r\n.search-overlay {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: white;\r\n    z-index: 1000000;\r\n    display: none;\r\n    flex-direction: column;\r\n    opacity: 0;\r\n    transform: translateY(-20px);\r\n    transition: all 0.3s ease;\r\n}\r\n\r\n.search-overlay.active {\r\n    display: flex;\r\n    opacity: 1;\r\n    transform: translateY(0);\r\n}\r\n\r\n.search-header {\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #e0e0e0;\r\n    background-color: white;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.back-button {\r\n    background: none;\r\n    border: none;\r\n    padding: 10px;\r\n    margin-right: 15px;\r\n    cursor: pointer;\r\n    border-radius: 50%;\r\n    color: #4b1864;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    transition: background-color 0.3s ease;\r\n}\r\n\r\n.back-button:hover {\r\n    background-color: #f0f0f0;\r\n}\r\n\r\n.search-overlay-input {\r\n    flex: 1;\r\n    border: none;\r\n    outline: none;\r\n    font-size: 18px;\r\n    padding: 15px;\r\n    background-color: #f8f9fa;\r\n    border-radius: 12px;\r\n    color: #333;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.search-overlay-input::placeholder {\r\n    color: #666;\r\n}\r\n\r\n.search-content {\r\n    flex: 1;\r\n    padding: 30px 20px;\r\n    overflow-y: auto;\r\n}\r\n\r\n.search-suggestions h3,\r\n.search-results h3 {\r\n    color: #4b1864;\r\n    margin-bottom: 20px;\r\n    font-size: 16px;\r\n    font-weight: 600;\r\n}\r\n\r\n.suggestion-tags {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    gap: 12px;\r\n}\r\n\r\n.suggestion-tag {\r\n    background-color: #f0f0f0;\r\n    padding: 10px 16px;\r\n    border-radius: 20px;\r\n    color: #4b1864;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    border: 1px solid transparent;\r\n}\r\n\r\n.suggestion-tag:hover {\r\n    background-color: #4b1864;\r\n    color: white;\r\n    transform: translateY(-2px);\r\n    box-shadow: 0 4px 12px rgba(75, 24, 100, 0.2);\r\n}\r\n\r\n.results-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 15px;\r\n}\r\n\r\n.search-result-item {\r\n    padding: 15px;\r\n    border: 1px solid #e0e0e0;\r\n    border-radius: 8px;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    opacity: 0;\r\n    animation: fadeInUp 0.5s ease forwards;\r\n}\r\n\r\n.search-result-item:nth-child(1) { animation-delay: 0.1s; }\r\n.search-result-item:nth-child(2) { animation-delay: 0.2s; }\r\n.search-result-item:nth-child(3) { animation-delay: 0.3s; }\r\n.search-result-item:nth-child(4) { animation-delay: 0.4s; }\r\n.search-result-item:nth-child(5) { animation-delay: 0.5s; }\r\n\r\n.search-result-item:hover {\r\n    border-color: #4b1864;\r\n    transform: translateY(-2px);\r\n    box-shadow: 0 4px 12px rgba(75, 24, 100, 0.1);\r\n}\r\n\r\n.search-result-title {\r\n    font-weight: 600;\r\n    color: #4b1864;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.search-result-description {\r\n    color: #666;\r\n    font-size: 14px;\r\n    line-height: 1.4;\r\n}\r\n\r\n.search-result-tags {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    gap: 8px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.search-result-tag {\r\n    background-color: #f0f0f0;\r\n    padding: 4px 8px;\r\n    border-radius: 12px;\r\n    font-size: 12px;\r\n    color: #4b1864;\r\n}\r\n\r\n.no-results {\r\n    text-align: center;\r\n    padding: 40px 20px;\r\n    color: #666;\r\n}\r\n\r\n.no-results p:first-child {\r\n    font-size: 18px;\r\n    font-weight: 600;\r\n    color: #4b1864;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n/* Course Dropdown Overlay Styles */\r\n.course-dropdown-overlay {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: white;\r\n    z-index: 1000000;\r\n    display: none;\r\n    flex-direction: column;\r\n    opacity: 0;\r\n    transform: translateY(-20px);\r\n    transition: all 0.3s ease;\r\n}\r\n\r\n.course-dropdown-overlay.active {\r\n    display: flex;\r\n    opacity: 1;\r\n    transform: translateY(0);\r\n}\r\n\r\n.course-dropdown-header {\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 15px 20px;\r\n    border-bottom: 1px solid #e0e0e0;\r\n    background-color: white;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.dropdown-back-button {\r\n    background: none;\r\n    border: none;\r\n    padding: 8px;\r\n    margin-right: 15px;\r\n    cursor: pointer;\r\n    border-radius: 50%;\r\n    color: #4b1864;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    transition: background-color 0.3s ease;\r\n}\r\n\r\n.dropdown-back-button:hover {\r\n    background-color: #f0f0f0;\r\n}\r\n\r\n.dropdown-title {\r\n    font-size: 24px;\r\n    font-weight: 600;\r\n    color: #4b1864;\r\n    margin: 0;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.course-dropdown-content {\r\n    flex: 1;\r\n    display: flex;\r\n    height: calc(100vh - 80px);\r\n}\r\n\r\n.course-sidebar-nav {\r\n    width: 350px;\r\n    background-color: #f8f9fa;\r\n    padding: 20px;\r\n    border-right: 1px solid #e0e0e0;\r\n    overflow-y: auto;\r\n}\r\n\r\n.course-levels {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 8px;\r\n}\r\n\r\n.course-level-item {\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 12px 16px;\r\n    border-radius: 8px;\r\n    background-color: white;\r\n    border: 2px solid transparent;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.course-level-item:hover {\r\n    border-color: #4b1864;\r\n    transform: translateY(-1px);\r\n    box-shadow: 0 2px 8px rgba(75, 24, 100, 0.15);\r\n}\r\n\r\n.course-level-item.active {\r\n    border-color: #4b1864;\r\n    background-color: #f0f0f0;\r\n    transform: translateY(-1px);\r\n    box-shadow: 0 2px 8px rgba(75, 24, 100, 0.15);\r\n}\r\n.course-level-item.active .level-icon{\r\n    filter: brightness(1.2) saturate(5);\r\n}\r\n.level-icon {\r\n    font-size: 20px;\r\n    margin-right: 12px;\r\n    width: 32px;\r\n    height: 32px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    border-radius: 50%;\r\n    background-color: #f8f9fa;\r\n}\r\n\r\n.level-info h4 {\r\n    font-size: 14px;\r\n    font-weight: 600;\r\n    color: #4b1864;\r\n    margin: 0 0 2px 0;\r\n}\r\n\r\n.level-info p {\r\n    font-size: 11px;\r\n    color: #666;\r\n    margin: 0;\r\n}\r\n\r\n.course-details {\r\n    flex: 1;\r\n    padding: 20px;\r\n    overflow-y: auto;\r\n    background-color: #f8f9fa;\r\n}\r\n\r\n.course-details-content {\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n}\r\n\r\n.course-grid {\r\n    display: grid;\r\n    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));\r\n    gap: 15px;\r\n}\r\n\r\n.course-card-nav {\r\n    background-color: white;\r\n    border-radius: 8px;\r\n    padding: 14px;\r\n    border: 1px solid #e0e0e0;\r\n    transition: all 0.3s ease;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);\r\n}\r\n\r\n.course-card-nav:hover {\r\n    transform: translateY(-2px);\r\n    box-shadow: 0 4px 12px rgba(75, 24, 100, 0.1);\r\n}\r\n\r\n.course-card-nav h3 {\r\n    font-size: 14px;\r\n    font-weight: 600;\r\n    color: #4b1864;\r\n    margin-bottom: 8px;\r\n    line-height: 1.3;\r\n}\r\n\r\n.course-duration {\r\n    color: #666;\r\n    font-size: 12px;\r\n    margin-bottom: 0;\r\n}\r\n\r\n/* Animation keyframes */\r\n@keyframes fadeInUp {\r\n    from {\r\n        opacity: 0;\r\n        transform: translateY(20px);\r\n    }\r\n    to {\r\n        opacity: 1;\r\n        transform: translateY(0);\r\n    }\r\n}\r\n\r\n/* Responsive Design */\r\n@media (max-width: 768px) {\r\n    .course-sidebar-nav {\r\n        width: 100%;\r\n        border-right: none;\r\n        border-bottom: 1px solid #e0e0e0;\r\n    }\r\n    \r\n    .course-dropdown-content {\r\n        flex-direction: column;\r\n        height: auto;\r\n    }\r\n    \r\n    .course-details {\r\n        padding: 15px;\r\n    }\r\n    \r\n    .course-grid {\r\n        grid-template-columns: 1fr;\r\n    }\r\n    \r\n    .search-overlay-input {\r\n        font-size: 16px;\r\n        padding: 12px;\r\n    }\r\n    \r\n    .search-content {\r\n        padding: 20px 15px;\r\n    }\r\n}\r\n\r\n@media (max-width: 480px) {\r\n    .dropdown-title {\r\n        font-size: 20px;\r\n    }\r\n    \r\n    .course-level-item {\r\n        padding: 10px 12px;\r\n    }\r\n    \r\n    .level-icon {\r\n        font-size: 18px;\r\n        width: 28px;\r\n        height: 28px;\r\n    }\r\n    \r\n    .suggestion-tags {\r\n        gap: 8px;\r\n    }\r\n    \r\n    .suggestion-tag {\r\n        padding: 8px 12px;\r\n        font-size: 12px;\r\n    }\r\n}\r\n.spacer{\r\n    content: \"\";\r\n    height: 130px;\r\n}\r\n.bottom {\r\n    display: flex;\r\n    background-color: white;\r\nwidth: 100%;\r\nmargin: auto;\r\n        padding:15px 20px 10px 20px;\r\n        justify-content: center;\r\n        box-shadow: 0 4px 8px -4px rgba(75, 24, 100, 0.1);  \r\n}\r\n.bottom.is-hidden {\r\n    transform: translateY(-100%);\r\n    opacity: 0;\r\n    pointer-events: none;\r\n}\r\n.bottom a{\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100px;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    text-decoration: none;\r\n    height: 40px;\r\n\r\n    margin: 0 20px;\r\n\r\n}\r\n.bottom img{\r\n    height: 20px;\r\n        width: 20px;\r\n    object-fit: contain;\r\n}\r\n.bottom span{\r\n    font-size: 9px;\r\n    text-decoration: none;\r\n    font-weight: 500;\r\n    color: #4b1864;\r\n    text-align: center;\r\n    white-space: nowrap;\r\n}\r\n\r\n.navbar .logo{\r\nwidth: 220px;\r\n    filter: contrast(180%);\r\n    filter: brightness(120%);\r\n}\r\n.imageAndButtonContainerForMobile{\r\n    width: 100%;\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n.imageAndButtonContainerForMobile a{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n.otherContainer{\r\n    margin-left: auto;\r\n    width: 100%;\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    align-items: center;    \r\n}\r\n.otherContainer a{\r\n    text-decoration: none;\r\n    color: #4b1864;\r\n    padding-left: 20px;\r\n    font-size: 12px;\r\n    font-weight: 500;\r\n}\r\n.otherContainer button{\r\n    border: none;\r\n    border-radius: 5px;\r\n    padding: 10px;\r\n    background-color: transparent;\r\n        font-size: 12px;\r\n    font-weight: 500;\r\n        color: #4b1864;\r\n    border: 1.5px solid #b087c9;\r\n    height: 35px;\r\n    margin-left: 20px;\r\n    width: 160px;\r\n}\r\n.freeCourseButton {\r\n    display: inline-flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    border-radius: 5px;\r\n    padding: 0 10px;\r\n    background-color: transparent;\r\n    font-size: 12px;\r\n    font-weight: 500;\r\n    color: #4b1864;\r\n    border: 1.5px solid #b087c9;\r\n    height: 35px;\r\n    margin-left: 20px;\r\n    width: 160px;\r\n    text-decoration: none;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    box-sizing: border-box;\r\n}\r\n.freeCourseButton:hover {\r\n    transform: translateY(-2px);\r\n    box-shadow: 0 4px 12px rgba(75, 24, 100, 0.2);\r\n    color: #4b1864;\r\n}\r\n.searchInput{\r\n    height: 35px;\r\n    border: 1.5px solid #b087c9;\r\n    border-radius: 5px;\r\n    padding: 10px;\r\n    margin: 0 10px;\r\n}\r\n.searchInput::placeholder{\r\n    font-size: 12px;\r\n    font-weight: 500;\r\n    color: #4b1864;\r\n}\r\n\r\n/* Hover animations for all elements */\r\na, button {\r\n    transition: all 0.3s ease;\r\n    cursor: pointer;\r\n}\r\n\r\nbutton:hover {\r\n    transform: translateY(-2px);\r\n    box-shadow: 0 4px 12px rgba(75, 24, 100, 0.2);\r\n}\r\n\r\n/* Specific hover effects for bottom navigation links */\r\n.bottom a:hover {\r\n    transform: translateY(-3px) scale(1.05);\r\n}\r\n\r\n.bottom a:hover img {\r\n    filter: brightness(1.2) saturate(5);\r\n    transition: filter 0.3s ease;\r\n}\r\n\r\n.bottom a:hover span {\r\n    color: #6b2d8a;\r\n    font-weight: 600;\r\n}\r\n\r\n/* Specific hover effects for other container links */\r\n.otherContainer a:hover {\r\n    color: #6b2d8a;\r\n    transform: translateY(-1px);\r\n}\r\n\r\n/* Specific hover effects for buttons */\r\n.otherContainer button:hover {\r\n        background-color: #6b2d8a;\r\n    color: white;\r\n    border-color: #6b2d8a;\r\n    transform: translateY(-2px) scale(1.02);\r\n}\r\n\r\n/* Search input hover effect */\r\n.searchInput:hover, .searchInput:focus {\r\n    border-color: #6b2d8a;\r\n    box-shadow: 0 0 8px rgba(75, 24, 100, 0.1);\r\n    transform: translateY(-1px);\r\n    outline: none;\r\n}\r\n\r\n/* Search Overlay Styles */\r\n.search-overlay {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: white;\r\n    z-index: 1000000;\r\n    display: none;\r\n    flex-direction: column;\r\n    opacity: 0;\r\n    transform: translateY(-20px);\r\n    transition: all 0.3s ease;\r\n}\r\n\r\n.search-overlay.active {\r\n    display: flex;\r\n}\r\n\r\n.search-header {\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 20px;\r\n    border-bottom: 1px solid #e0e0e0;\r\n    background-color: white;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.back-button {\r\n    background: none;\r\n    border: none;\r\n    padding: 10px;\r\n    margin-right: 15px;\r\n    cursor: pointer;\r\n    border-radius: 50%;\r\n    color: #4b1864;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    transition: background-color 0.3s ease;\r\n}\r\n\r\n.back-button:hover {\r\n    background-color: #f0f0f0;\r\n}\r\n\r\n.search-overlay-input {\r\n    flex: 1;\r\n    border: none;\r\n    outline: none;\r\n    font-size: 18px;\r\n    padding: 15px;\r\n    background-color: #f8f9fa;\r\n    border-radius: 12px;\r\n    color: #333;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n\r\n.search-overlay-input::placeholder {\r\n    color: #666;\r\n}\r\n\r\n.search-content {\r\n    flex: 1;\r\n    padding: 30px 20px;\r\n    overflow-y: auto;\r\n}\r\n\r\n.search-suggestions h3,\r\n.search-results h3 {\r\n    color: #4b1864;\r\n    margin-bottom: 20px;\r\n    font-size: 16px;\r\n    font-weight: 600;\r\n}\r\n\r\n.suggestion-tags {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    gap: 12px;\r\n}\r\n\r\n.suggestion-tag {\r\n    background-color: #f0f0f0;\r\n    padding: 10px 16px;\r\n    border-radius: 20px;\r\n    color: #4b1864;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    border: 1px solid transparent;\r\n}\r\n\r\n.suggestion-tag:hover {\r\n    background-color: #4b1864;\r\n    color: white;\r\n    transform: translateY(-2px);\r\n    box-shadow: 0 4px 12px rgba(75, 24, 100, 0.2);\r\n}\r\n\r\n.results-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 15px;\r\n}\r\n\r\n.search-result-item {\r\n    padding: 15px;\r\n    border: 1px solid #e0e0e0;\r\n    border-radius: 8px;\r\n    cursor: pointer;\r\n    transition: all 0.3s ease;\r\n    opacity: 0;\r\n    animation: fadeInUp 0.5s ease forwards;\r\n}\r\n\r\n.search-result-item:nth-child(1) { animation-delay: 0.1s; }\r\n.search-result-item:nth-child(2) { animation-delay: 0.2s; }\r\n.search-result-item:nth-child(3) { animation-delay: 0.3s; }\r\n.search-result-item:nth-child(4) { animation-delay: 0.4s; }\r\n.search-result-item:nth-child(5) { animation-delay: 0.5s; }\r\n\r\n.search-result-item:hover {\r\n    border-color: #4b1864;\r\n    transform: translateY(-2px);\r\n    box-shadow: 0 4px 12px rgba(75, 24, 100, 0.1);\r\n}\r\n\r\n.search-result-title {\r\n    font-weight: 600;\r\n    color: #4b1864;\r\n    margin-bottom: 5px;\r\n}\r\n\r\n.search-result-description {\r\n    color: #666;\r\n    font-size: 14px;\r\n    line-height: 1.4;\r\n}\r\n\r\n.search-result-tags {\r\n    display: flex;\r\n    gap: 8px;\r\n    margin-top: 10px;\r\n}\r\n\r\n.search-result-tag {\r\n    background-color: #f0f0f0;\r\n    padding: 4px 8px;\r\n    border-radius: 12px;\r\n    font-size: 12px;\r\n    color: #4b1864;\r\n}\r\n\r\n/* Mobile responsive */\r\n@media (max-width: 768px) {\r\n    .search-header {\r\n        padding: 15px;\r\n    }\r\n    \r\n    .search-overlay-input {\r\n        font-size: 16px;\r\n        padding: 12px;\r\n    }\r\n    \r\n    .search-content {\r\n        padding: 20px 15px;\r\n    }\r\n    \r\n    .suggestion-tags {\r\n        gap: 8px;\r\n    }\r\n    \r\n    .suggestion-tag {\r\n        padding: 8px 12px;\r\n        font-size: 13px;\r\n    }\r\n}\r\n\r\n/* Animation for search result items */\r\n@keyframes fadeInUp {\r\n    from {\r\n        opacity: 0;\r\n        transform: translateY(20px);\r\n    }\r\n    to {\r\n        opacity: 1;\r\n        transform: translateY(0);\r\n    }\r\n}\r\n\r\n/* No results styling */\r\n.no-results {\r\n    text-align: center;\r\n    padding: 40px 20px;\r\n    color: #666;\r\n}\r\n\r\n.no-results p:first-child {\r\n    font-weight: 600;\r\n    color: #4b1864;\r\n    margin-bottom: 10px;\r\n    font-size: 16px;\r\n}\r\n\r\n.no-results p:last-child {\r\n    font-size: 14px;\r\n    line-height: 1.5;\r\n}\r\n\r\n/* Enhanced search overlay animation */\r\n.search-overlay {\r\n    opacity: 0;\r\n    transform: translateY(-20px);\r\n    transition: all 0.3s ease;\r\n}\r\n\r\n.search-overlay.active {\r\n    opacity: 1;\r\n    transform: translateY(0);\r\n}\r\n\r\n@media(max-width:1221px){\r\n    .otherContainer a{\r\ndisplay: none;\r\n}\r\n}\r\n@media(max-width:634px){\r\n.bottom {\r\n  overflow-x: auto; /* or scroll */\r\n  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */\r\n  scrollbar-width: none; /* Firefox */\r\n  -ms-overflow-style: none;  /* IE and Edge */\r\n  justify-content: flex-start;\r\n  padding: 15px 10px 10px 10px;\r\n}\r\n\r\n/* Hide scrollbar in WebKit-based browsers (Chrome, Safari) */\r\n.bottom::-webkit-scrollbar {\r\n  display: none;\r\n}\r\n.bottom a{\r\n    width: 60px;\r\n}\r\n.top{\r\n    grid-template-columns: 1fr;\r\n}\r\n.otherContainer{\r\n    display: none;\r\n}\r\n.imageAndButtonContainerForMobile{\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n.searchInput{\r\n    margin: 0;\r\n    margin-left: 10px;\r\n    width: 100%;\r\n}\r\n}\r\n@media(max-width:356px){\r\n    .navbar .logo{\r\nwidth: 180px;\r\n}\r\n}\r\n\r\n/* ===== Payment Popup Styles ===== */\r\n.payment-overlay {\r\n    position: fixed;\r\n    inset: 0;\r\n    background: rgba(20, 4, 32, 0.65);\r\n    backdrop-filter: blur(6px);\r\n    -webkit-backdrop-filter: blur(6px);\r\n    z-index: 9999999;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    opacity: 0;\r\n    pointer-events: none;\r\n    transition: opacity 0.3s ease;\r\n    font-family: 'Poppins', sans-serif;\r\n}\r\n.payment-overlay.active {\r\n    opacity: 1;\r\n    pointer-events: all;\r\n}\r\n.payment-modal {\r\n    background: #fff;\r\n    border-radius: 20px;\r\n    padding: 36px 32px 28px;\r\n    width: 90%;\r\n    max-width: 420px;\r\n    box-shadow: 0 24px 60px rgba(75, 24, 100, 0.25);\r\n    position: relative;\r\n    transform: translateY(24px) scale(0.96);\r\n    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;\r\n    opacity: 0;\r\n    border-top: 5px solid #4b1864;\r\n}\r\n.payment-overlay.active .payment-modal {\r\n    transform: translateY(0) scale(1);\r\n    opacity: 1;\r\n}\r\n.payment-modal-close {\r\n    position: absolute;\r\n    top: 14px;\r\n    right: 16px;\r\n    background: none;\r\n    border: none;\r\n    cursor: pointer;\r\n    color: #9b7ab5;\r\n    font-size: 22px;\r\n    line-height: 1;\r\n    padding: 4px 8px;\r\n    border-radius: 50%;\r\n    transition: background 0.2s, color 0.2s, transform 0.2s;\r\n    box-shadow: none !important;\r\n}\r\n.payment-modal-close:hover {\r\n    background: #f3e8ff;\r\n    color: #4b1864;\r\n    transform: rotate(90deg) scale(1.1) !important;\r\n    box-shadow: none !important;\r\n}\r\n.payment-modal-header {\r\n    text-align: center;\r\n    margin-bottom: 8px;\r\n}\r\n.payment-modal-header .pm-icon {\r\n    font-size: 36px;\r\n    margin-bottom: 6px;\r\n    display: block;\r\n}\r\n.payment-modal-header h2 {\r\n    font-size: 20px;\r\n    font-weight: 700;\r\n    color: #4b1864;\r\n    margin: 0 0 4px;\r\n}\r\n.payment-modal-header p {\r\n    font-size: 13px;\r\n    color: #888;\r\n    margin: 0;\r\n}\r\n.payment-divider {\r\n    height: 1px;\r\n    background: linear-gradient(90deg, transparent, #dcc6f0, transparent);\r\n    margin: 20px 0;\r\n}\r\n.payment-options {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 14px;\r\n}\r\n.payment-option-btn {\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 16px;\r\n    padding: 16px 20px;\r\n    border-radius: 14px;\r\n    border: 2px solid #e8d8f5;\r\n    background: #fdf9ff;\r\n    cursor: pointer;\r\n    transition: all 0.25s ease;\r\n    text-align: left;\r\n    width: 100%;\r\n    box-shadow: none !important;\r\n}\r\n.payment-option-btn:hover {\r\n    border-color: #4b1864;\r\n    background: #f5eaff;\r\n    transform: translateY(-3px) !important;\r\n    box-shadow: 0 8px 24px rgba(75, 24, 100, 0.15) !important;\r\n}\r\n.payment-option-btn .po-logo {\r\n    width: 52px;\r\n    height: 34px;\r\n    object-fit: contain;\r\n    flex-shrink: 0;\r\n    border-radius: 6px;\r\n}\r\n.po-text .po-name {\r\n    font-size: 15px;\r\n    font-weight: 700;\r\n    color: #4b1864;\r\n    display: block;\r\n    margin-bottom: 2px;\r\n}\r\n.po-text .po-desc {\r\n    font-size: 11px;\r\n    color: #888;\r\n    display: block;\r\n}\r\n.po-arrow {\r\n    margin-left: auto;\r\n    color: #b087c9;\r\n    font-size: 18px;\r\n    transition: transform 0.2s, color 0.2s;\r\n}\r\n.payment-option-btn:hover .po-arrow {\r\n    transform: translateX(4px);\r\n    color: #4b1864;\r\n}\r\n.payment-modal-footer {\r\n    text-align: center;\r\n    margin-top: 18px;\r\n    font-size: 11px;\r\n    color: #bbb;\r\n}\r\n.payment-modal-footer span {\r\n    margin: 0 4px;\r\n}\r\n"}} />
+
+    
+<style dangerouslySetInnerHTML={{__html:"\n.site-nav,.site-nav *{box-sizing:border-box}.site-nav{position:fixed;inset:0 0 auto;z-index:100000;background:#fff;box-shadow:0 2px 14px #32104712;border-bottom:1px solid #eee;font-family:inherit;color:#351345}.site-nav-inner{max-width:1440px;min-height:82px;margin:auto;padding:12px 28px;display:flex;align-items:center;gap:34px}.site-brand{display:flex;align-items:center;flex:0 0 auto}.site-brand img{display:block;width:220px;height:auto}.site-links{display:flex;align-items:center;gap:32px;margin-left:8px;flex:1}.site-links>details:first-child{margin-right:auto}.site-nav a,.site-nav summary{color:#4b1864;text-decoration:none;font-size:16px;font-weight:500;cursor:pointer}.site-nav a:hover,.site-nav summary:hover{color:#8b26ba}.site-nav details{position:relative}.site-nav summary{list-style:none;display:flex;align-items:center;gap:8px;padding:12px 0}.site-nav summary::-webkit-details-marker{display:none}.site-links>a,.site-links>details>summary{display:flex;align-items:center;min-height:48px;padding:11px 17px;border:1px solid #e6d5ef;border-radius:12px;background:#fff;font-weight:700;line-height:1.2;transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease,color .18s ease}.site-links>a:hover,.site-links>details>summary:hover,.site-links>details[open]>summary{background:#f8f1fc;border-color:#bd8bd4;box-shadow:0 4px 12px #4b186414;color:#6d1a98}.site-links>a:focus-visible,.site-links>details>summary:focus-visible{outline:3px solid #c995e3;outline-offset:2px}.site-course-group h3{font-weight:700}.site-course-link{font-weight:500!important}.site-more-menu a{font-size:14px!important;font-weight:600!important}.site-nav summary:after{content:\"\";width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}.site-course-menu{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-30%);width:min(900px,calc(100vw - 40px));max-height:75vh;overflow:auto;padding:24px;background:#fff;border:1px solid #eadcf2;border-radius:14px;box-shadow:0 18px 45px #29103824;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}.site-course-group h3{margin:0 0 12px;color:#7623a4;font-size:15px}.site-course-link{display:block;padding:8px 0;border-bottom:1px solid #f1ebf4;font-size:14px!important;line-height:1.4}.site-more-menu{position:absolute;right:0;top:calc(100% + 4px);min-width:190px;padding:8px;background:white;border:1px solid #eadcf2;border-radius:10px;box-shadow:0 12px 30px #29103820}.site-more-menu a{display:block;padding:11px 12px;border-radius:6px}.site-more-menu a:hover{background:#f8f0fc}.site-nav-spacer{height:82px}.site-menu-button{display:none}\n@media(max-width:760px){.site-nav-inner{min-height:70px;padding:10px 16px;gap:16px}.site-brand img{width:180px}.site-menu-button{display:block;margin-left:auto;border:1px solid #eadcf2;border-radius:8px;background:#fff;color:#4b1864;font-size:15px;padding:9px 12px}.site-links{display:none;position:absolute;left:0;right:0;top:100%;margin:0;padding:12px 18px 20px;background:white;box-shadow:0 12px 20px #32104712;align-items:stretch;gap:4px;flex-direction:column}.site-nav.site-nav-open .site-links{display:flex}.site-links details{width:100%}.site-nav summary{padding:13px 4px}.site-course-menu{position:static;transform:none;width:100%;max-height:55vh;padding:12px;grid-template-columns:1fr;gap:12px;box-shadow:none}.site-more-menu{position:static;box-shadow:none}.site-nav-spacer{height:70px}}\n/* Navigation styling inspired by the reference header */\n.site-nav-inner{min-height:90px;padding:12px 30px}.site-nav-spacer{height:90px}.site-brand img{width:220px}.site-links>a,.site-links>details>summary{border:0;border-radius:0;background:transparent;box-shadow:none;min-height:48px;padding:12px 14px;color:#282828;font-size:17px;font-weight:600}.site-links>a:hover,.site-links>details>summary:hover,.site-links>details[open]>summary{border:0;background:transparent;box-shadow:none;color:#7429b5}.site-links>details:first-child>summary{min-height:52px;padding:14px 22px;border:0;border-radius:999px;background:linear-gradient(110deg,#2865d7 0%,#652fc1 58%,#a728a5 100%);color:#fff;font-weight:700;box-shadow:0 3px 8px #702bb53d}.site-links>details:first-child>summary:hover,.site-links>details:first-child[open]>summary{background:linear-gradient(110deg,#1e55bd 0%,#5722a9 58%,#90208d 100%);color:#fff}.site-links>details:first-child>summary:after{border-color:#fff}.site-links>a:focus-visible,.site-links>details>summary:focus-visible{outline:3px solid #c995e3;outline-offset:3px;border-radius:8px}\n@media(max-width:760px){.site-nav-inner{min-height:70px;padding:10px 16px}.site-nav-spacer{height:70px}.site-links>a,.site-links>details>summary{min-height:46px;padding:11px 12px;font-size:16px}.site-links>details:first-child>summary{min-height:48px;padding:12px 18px}}"}} />
+
+
+
+{/*  Search Overlay  */}
+
+
+<div className="search-overlay" id="searchOverlay">
+    <div className="search-header">
+        <button className="back-button" id="backButton">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+            </svg>
+        </button>
+        <input type="search" className="search-overlay-input" placeholder="Search courses, topics, skills..." id="searchOverlayInput" />
+    </div>
+    
+    <div className="search-content">
+        <div className="search-suggestions" id="searchSuggestions">
+            <h3>Popular Searches</h3>
+            <div className="suggestion-tags">
+                <span className="suggestion-tag">Digital Marketing</span>
+                <span className="suggestion-tag">AI</span>
+                                <span className="suggestion-tag">Data Science</span>
+                <span className="suggestion-tag">Machine Learning</span>
+                <span className="suggestion-tag">Data Analytics</span>
+                <span className="suggestion-tag">SEO</span>
+                <span className="suggestion-tag">Social Media Marketing</span>
+                <span className="suggestion-tag">Python</span>
+                <span className="suggestion-tag">JavaScript</span>
+            </div>
+        </div>
+        
+        <div className="search-results" id="searchResults" style={{"display":"none"}}>
+            <h3>Search Results</h3>
+            <div className="results-container" id="resultsContainer">
+                {/*  Search results will be populated here  */}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{/*  Course Dropdown Overlay  */}
+
+
+<div className="course-dropdown-overlay" id="courseDropdownOverlay">
+    <div className="course-dropdown-header">
+        <button className="dropdown-back-button" id="dropdownBackButton">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+            </svg>
+        </button>
+        <h2 className="dropdown-title">Choose Your Course Level</h2>
+    </div>
+    
+    <div className="course-dropdown-content">
+        <div className="course-sidebar-nav">
+            <div className="course-levels">
+                <div className="course-level-item" data-level="expert">
+                    <div className="level-icon">
+<svg width="17.914774mm" height="29.959976mm" viewBox="0 0 17.914774 29.959977" version="1.1" id="svg1" xml_space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns_svg="http://www.w3.org/2000/svg"><defs id="defs1"></defs><g id="g20" transform="matrix(0.98272262,0,0,0.95120571,77.249706,-54.389851)"><path style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"0.630801","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"0"}} id="path17" d="m 64.970189,68.958954 a 3.3404701,3.3876307 0 0 1 -3.331216,3.387618 3.3404701,3.3876307 0 0 1 -3.349673,-3.368849 3.3404701,3.3876307 0 0 1 3.312658,-3.406283 3.3404701,3.3876307 0 0 1 3.368026,3.349977 l -3.340265,0.03754 z" transform="matrix(-0.01210944,0.99992668,-0.99993447,-0.01144812,0,0)"></path><path style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"0"}} d="m -70.556445,61.326884 c 0,0 0.249522,5.022631 -1.377444,6.185377 -1.626966,1.162747 5.039602,0.477885 5.039602,0.477885 0,0 -2.31756,-0.07825 -2.008961,-6.701835 0.3086,-6.623585 -1.653197,0.03857 -1.653197,0.03857 z" id="path18"></path><path style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="m -72.118251,71.894824 -1.953355,-5.042968 9.194479,-0.02293 -2.210772,5.089541 z" id="path19"></path><rect style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"0.991797","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} id="rect19" width="10.251307" height="1.5516844" x="-74.699249" y="71.884712"></rect><path style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="m -72.262998,73.479073 c 0,0 0.09354,8.559306 -0.841897,9.822155 -0.935445,1.262848 8.231899,0.888672 7.998039,0.280633 -0.23386,-0.608037 -1.683798,-0.935443 -1.590254,-10.196333 z" id="path20"></path><rect style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1.02663","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} id="rect19-1" width="13.648417" height="2.1424642" x="-76.356232" y="83.482819"></rect><rect style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1.12316","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} id="rect19-1-6" width="17.106569" height="2.0459309" x="-78.046265" y="86.069237"></rect></g></svg>
+</div>
+                    <div className="level-info">
+                        <h4>Expert</h4>
+                        <p>12 Months Course</p>
+                    </div>
+                </div>                
+                <div className="course-level-item active" data-level="advance">
+                    <div className="level-icon">
+<svg width="20.556976mm" height="29.348276mm" viewBox="0 0 20.556976 29.348277" version="1.1" id="svg1" sodipodi_docname="g25.svg" xml_space="preserve" inkscape_version="1.3.2 (091e20e, 2023-11-25, custom)" xmlns_inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns_sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns_svg="http://www.w3.org/2000/svg"><sodipodi_namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape_showpageshadow="2" inkscape_pageopacity="0.0" inkscape_pagecheckerboard="0" inkscape_deskcolor="#d1d1d1" inkscape_document-units="mm" inkscape_zoom="1.6210645" inkscape_cx="-135.7133" inkscape_cy="64.772255" inkscape_window-width="1920" inkscape_window-height="986" inkscape_window-x="-11" inkscape_window-y="-11" inkscape_window-maximized="1" inkscape_current-layer="svg1"></sodipodi_namedview><defs id="defs1"></defs><g id="g27" transform="translate(41.764712,-36.211624)"><path style={{"fill":"#400e58","fillOpacity":"1","stroke":"#400e58","strokeWidth":"0.937463","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="m -37.24657,37.181933 h 10.899093 l -3.892533,11.287171 h 8.563574 l -9.134577,16.622362 2.919747,-11.448184 h -12.780735 z" id="path10"></path><path style={{"fill":"#000000","fillOpacity":"1","stroke":"#400e58","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"0"}} d="m -37.692085,36.711624 -3.572641,17.366456 12.769029,-0.01524 -2.784076,10.995283 5.315905,-13.051043 -12.579797,0.230823 3.329066,-15.525654 z" id="path11" sodipodi_nodetypes="cccccccc"></path></g></svg>
+</div>
+                    <div className="level-info">
+                        <h4>Advanced</h4>
+                        <p>6 Months Course</p>
+                    </div>
+                </div>
+                <div className="course-level-item" data-level="beginner">
+                    <div className="level-icon">
+<svg width="15.075291mm" height="29.134268mm" viewBox="0 0 15.075291 29.134268" version="1.1" id="svg1" xml_space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns_svg="http://www.w3.org/2000/svg"><defs id="defs1"></defs><g id="g30" transform="translate(128.52583,-110.12104)"><rect style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1.44546","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"0"}} id="rect9" width="13.62983" height="14.22943" x="-127.8031" y="110.84377"></rect><path style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1.72515","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"0"}} d="m -122.97741,133.63036 4.65524,-0.15429 -2.5127,4.91677 z" id="path26"></path><path style={{"fill":"#400e58","fillOpacity":"0","stroke":"#000000","strokeWidth":"1.03509","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none"}} d="m -127.18693,111.46066 v 13.33204 h 12.77684 l -6.28369,13.51469 -6.49315,-13.51469" id="path9"></path></g></svg>
+
+</div>
+                    <div className="level-info">
+                        <h4>Beginner</h4>
+                        <p>3-4 Months Course</p>
+                    </div>
+                </div>
+                <div className="course-level-item" data-level="short">
+                    <div className="level-icon">
+<svg width="28.070923mm" height="28.03536mm" viewBox="0 0 28.070923 28.035361" version="1.1" id="svg1" sodipodi_docname="g25.svg" xml_space="preserve" inkscape_version="1.3.2 (091e20e, 2023-11-25, custom)" xmlns_inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns_sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns_svg="http://www.w3.org/2000/svg"><sodipodi_namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape_showpageshadow="2" inkscape_pageopacity="0.0" inkscape_pagecheckerboard="0" inkscape_deskcolor="#d1d1d1" inkscape_document-units="mm" inkscape_zoom="1.6210645" inkscape_cx="-135.7133" inkscape_cy="64.772255" inkscape_window-width="1920" inkscape_window-height="986" inkscape_window-x="-11" inkscape_window-y="-11" inkscape_window-maximized="1" inkscape_current-layer="svg1"></sodipodi_namedview><defs id="defs1"></defs><g id="g29" transform="translate(25.582467,-38.683722)" inkscape_export-filename="small.png" inkscape_export-xdpi="96" inkscape_export-ydpi="96"><g style={{"fill":"#400e58","fillOpacity":"1"}} id="g28" transform="matrix(1.338023,0,0,1.3470121,-25.484544,31.148538)"><path d="m 10.406,7.75 v 7.063 c 0,0.313 0.125,0.594 0.344,0.844 0.188,0.219 0.5,0.344 0.844,0.344 h 7.031 c 1,0 1.25,-0.531 0.531,-1.25 L 16.937,12.47 20.625,8.782 c 0.094,-0.125 0.188,-0.281 0.188,-0.438 0,-0.157 -0.094,-0.281 -0.188,-0.406 L 18.469,5.782 c -0.125,-0.125 -0.25,-0.188 -0.438,-0.188 -0.156,0 -0.313,0.063 -0.438,0.188 l -3.719,3.719 -2.219,-2.25 c -0.719,-0.719 -1.25,-0.469 -1.25,0.5 z m -10.25,16.313 2.188,2.156 c 0.125,0.094 0.25,0.188 0.438,0.188 0.156,0 0.281,-0.094 0.406,-0.188 l 3.719,-3.719 2.25,2.219 c 0.719,0.719 1.25,0.5 1.25,-0.469 v -7.063 c 0,-0.594 -0.5,-1.188 -1.188,-1.188 H 2.188 c -1,0 -1.281,0.531 -0.563,1.25 l 2.25,2.25 -3.719,3.688 C 0.062,23.312 0,23.5 0,23.656 c 0,0.156 0.063,0.281 0.156,0.406 z" id="path1-7" style={{"fill":"#400e58","fillOpacity":"1"}}></path></g><path style={{"fill":"#400e58","fillOpacity":"0","stroke":"#000000","strokeWidth":"1.21777","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="m -22.478135,63.486921 c 0,0 -3.155951,0.03396 -2.369596,-0.816314 l 4.884539,-5.281601 -3.599282,-3.623462 c 0,0 -0.586972,-0.797651 1.372353,-0.797651 1.959325,0 9.395711,0.201338 9.395711,0.201338 0,0 0.627847,0.192304 0.681368,1.835659" id="path28" sodipodi_nodetypes="csccscc"></path><path style={{"fill":"#400e58","fillOpacity":"0","stroke":"#000000","strokeWidth":"1.22038","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="m -3.2467749,42.506317 c 0,0 5.8445781,-0.719483 5.05099,0.127456 l -4.9600765,5.293527 3.60610968,3.632132 c 0,0 0.58808392,0.79956 -1.37495616,0.79956 -1.96304252,0 -9.14845112,-0.0029 -9.14845112,-0.0029 0,0 -0.861488,-0.390802 -0.915111,-2.038094" id="path28-2" sodipodi_nodetypes="csccscc"></path></g></svg>
+</div>
+                    <div className="level-info">
+                        <h4>Short Course</h4>
+                        <p>1 Month Course</p>
+                    </div>
+                </div>
+                <div className="course-level-item" data-level="free">
+                    <div className="level-icon">
+
+<svg width="18.76746mm" height="29.45035mm" viewBox="0 0 18.76746 29.45035" version="1.1" id="svg1" xml_space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns_svg="http://www.w3.org/2000/svg"><defs id="defs1"></defs><g id="g26" transform="matrix(1.0021794,0,0,0.92214191,103.95223,-50.802285)"><rect style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} id="rect20" width="16.837982" height="21.328102" x="-103.1794" y="65.200401"></rect><path style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="M -94.900728,65.340716 V 86.528509" id="path21"></path><path style={{"fill":"#400e58","fillOpacity":"1","stroke":"#000000","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="m -103.22617,76.098314 h 16.837977" id="path22"></path><path style={{"fill":"#400e58","fillOpacity":"0","stroke":"#000000","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="m -96.397436,64.919767 c 0,0 -7.390004,-5.472343 -4.864304,-8.559306 2.525697,-3.086962 4.864304,8.559306 4.864304,8.559306 z" id="path23"></path><path style={{"fill":"#400e58","fillOpacity":"0","stroke":"#000000","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="m -95.929713,65.247173 c 0,0 -0.795129,-10.196333 2.666013,-9.635067 3.461139,0.561266 -2.666013,9.635067 -2.666013,9.635067 z" id="path24"></path><path style={{"fill":"#400e58","fillOpacity":"0","stroke":"#000000","strokeWidth":"1","strokeLinecap":"round","strokeLinejoin":"round","strokeMiterlimit":"30","strokeDasharray":"none","strokeOpacity":"1"}} d="m -95.882943,65.481032 c 0,0 3.928864,-4.303037 6.969053,-2.993416 3.040193,1.309619 3.414369,-0.748355 3.414369,-0.748355" id="path25"></path></g></svg>
+</div>
+                    <div className="level-info">
+                        <h4>Free</h4>
+                        <p>Free Courses</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div className="course-details">
+            <div className="course-details-content" id="courseDetailsContent">
+                {/*  Course details will be populated by JavaScript  */}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\n// Search functionality\r\ndocument.addEventListener('DOMContentLoaded', function() {\r\n    const searchInput = document.getElementById('searchInput');\r\n    const searchOverlay = document.getElementById('searchOverlay');\r\n    const searchOverlayInput = document.getElementById('searchOverlayInput');\r\n    const backButton = document.getElementById('backButton');\r\n    const searchSuggestions = document.getElementById('searchSuggestions');\r\n    const searchResults = document.getElementById('searchResults');\r\n    const resultsContainer = document.getElementById('resultsContainer');\r\n    const suggestionTags = document.querySelectorAll('.suggestion-tag');\r\n\r\n    // Sample course data for search functionality\r\n   const courses = [\r\n    {\r\n        title: \"Expert in Digital Marketing\",\r\n        description: \"Master digital marketing with 70+ modules, 60+ AI tools, and 12 months of comprehensive training.\",\r\n        tags: [\"Digital Marketing\", \"SEO\", \"AI Tools\", \"Expert Level\", \"12 Months\", \"Placement Support\"],\r\n        skills: [\r\n            \"Digital Marketing Strategy\", \"Search Engine Optimization (SEO)\", \"Search Engine Marketing (SEM)\",\r\n            \"Content Marketing\", \"Social Media Marketing\", \"Email Marketing\", \"Video Marketing\",\r\n            \"Pay-Per-Click (PPC)\", \"Google Ads\", \"Analytics\", \"Data Analysis\", \"Conversion Rate Optimization (CRO)\",\r\n            \"AI for Marketing\", \"Marketing Automation\", \"Web Analytics\", \"Google Analytics\", \"WordPress\",\r\n            \"E-commerce Marketing\", \"Mobile Marketing\", \"Affiliate Marketing\", \"Branding\", \"Lead Generation\",\r\n            \"Marketing Funnels\", \"Campaign Management\", \"Copywriting\", \"Market Research\", \"Competitive Analysis\",\r\n            \"Reporting\", \"Critical Thinking\", \"Communication\", \"Marketing Tools\", \"AI Tools\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/expert-digital-marketing-course\"\r\n    },\r\n    {\r\n        title: \"Expert Training In Cyber Security and Ethical Hacking\",\r\n        description: \"Comprehensive 12-month expert training in cybersecurity and ethical hacking with hands-on labs and real-world scenarios.\",\r\n        tags: [\"Cyber Security\", \"Ethical Hacking\", \"Network Security\", \"Expert Level\", \"12 Months\", \"Placement Support\"],\r\n        skills: [\r\n            \"Cybersecurity\", \"Ethical Hacking\", \"Penetration Testing\", \"Network Security\", \"Information Security\",\r\n            \"Vulnerability Assessment\", \"Risk Management\", \"Incident Response\", \"Malware Analysis\",\r\n            \"Cryptography\", \"Security Protocols\", \"Firewalls\", \"Intrusion Detection Systems (IDS)\",\r\n            \"Virtual Private Networks (VPN)\", \"Operating Systems (Linux, Windows)\", \"Programming (Python, Bash)\",\r\n            \"Web Application Security\", \"Cloud Security\", \"Security Auditing\", \"Digital Forensics (foundational)\",\r\n            \"Cyber Investigations (foundational)\", \"Security Information and Event Management (SIEM)\",\r\n            \"Security Operations Center (SOC)\", \"Compliance\", \"Threat Intelligence\", \"Authentication\",\r\n            \"Authorization\", \"Access Control\", \"System Hardening\", \"Social Engineering\", \"Security Tools\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking\"\r\n    },\r\n    {\r\n        title: \"Diploma in Gen AI & Prompt Engineering\",\r\n        description: \"Gain mastery in Generative AI and prompt engineering through this 12-month expert diploma course.\",\r\n        tags: [\"Generative AI\", \"Prompt Engineering\", \"AI Tools\", \"12 Months\", \"Diploma\", \"Expert Level\"],\r\n        skills: [\r\n            \"Generative AI\", \"Prompt Engineering\", \"Large Language Models (LLMs)\", \"Natural Language Processing (NLP)\",\r\n            \"AI Model Training\", \"AI Application Development\", \"Deep Learning\", \"Neural Networks\",\r\n            \"AI Ethics\", \"AI Tools\", \"AI Paradigms\", \"Model Fine-tuning\", \"Data Preprocessing for AI\",\r\n            \"Machine Learning Fundamentals\", \"Python Programming\", \"TensorFlow\", \"PyTorch\", \"OpenAI API\",\r\n            \"AI Architecture\", \"Creative AI\", \"Content Generation (Text, Image, Code)\", \"Dialogue Systems\",\r\n            \"AI Solutions\", \"AI Strategy\", \"Problem Solving with AI\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/diploma-in-genai-and-prompt-engineering\"\r\n    },\r\n    {\r\n        title: \"Diploma In Machine Learning and AI\",\r\n        description: \"Master machine learning algorithms and AI technologies with this intensive 12-month diploma course.\",\r\n        tags: [\"Machine Learning\", \"AI\", \"Deep Learning\", \"Expert Level\", \"12 Months\", \"Placement Support\"],\r\n        skills: [\r\n            \"Machine Learning\", \"Artificial Intelligence\", \"Deep Learning\", \"Neural Networks\", \"Supervised Learning\",\r\n            \"Unsupervised Learning\", \"Reinforcement Learning\", \"Predictive Modeling\", \"Algorithm Development\",\r\n            \"Data Preprocessing\", \"Feature Engineering\", \"Model Evaluation\", \"Statistical Modeling\",\r\n            \"Python Programming\", \"R Programming\", \"Scikit-learn\", \"TensorFlow\", \"Keras\", \"PyTorch\", \"Jupyter Notebook\",\r\n            \"Data Visualization\", \"Big Data Concepts\", \"Linear Algebra\", \"Calculus\", \"Probability\", \"Statistics\",\r\n            \"Computer Vision\", \"Natural Language Processing (NLP)\", \"Data Structures\", \"Algorithm Design\",\r\n            \"Problem Solving\", \"Mathematical Foundations for AI\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai-course\"\r\n    },\r\n    {\r\n        title: \"Diploma In Data Science and AI\",\r\n        description: \"Unlock the power of data with this 12-month expert-level diploma in Data Science and AI.\",\r\n        tags: [\"Data Science\", \"AI\", \"Statistics\", \"12 Months\", \"Diploma\", \"Expert Level\"],\r\n        skills: [\r\n            \"Data Science\", \"Artificial Intelligence\", \"Data Analysis\", \"Statistical Analysis\", \"Machine Learning\",\r\n            \"Deep Learning\", \"Data Mining\", \"Data Wrangling\", \"Data Cleaning\", \"Data Visualization\",\r\n            \"Predictive Analytics\", \"Descriptive Analytics\", \"Prescriptive Analytics\", \"SQL\", \"Python Programming\",\r\n            \"R Programming\", \"Pandas\", \"NumPy\", \"Matplotlib\", \"Seaborn\", \"Scikit-learn\", \"TensorFlow\", \"Keras\",\r\n            \"Big Data Technologies (Hadoop, Spark)\", \"Cloud Platforms (AWS, Azure, GCP)\", \"Database Management\",\r\n            \"Experiment Design\", \"Hypothesis Testing\", \"A/B Testing\", \"Problem Solving\", \"Critical Thinking\", \"Communication\", \"Data Governance\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/diploma-in-data-science-and-ai-course\"\r\n    },\r\n    {\r\n        title: \"Diploma In Data Analytics And AI\",\r\n        description: \"12-month expert diploma to build proficiency in data analytics and artificial intelligence tools.\",\r\n        tags: [\"Data Analytics\", \"AI\", \"Big Data\", \"12 Months\", \"Diploma\", \"Expert Level\"],\r\n        skills: [\r\n            \"Data Analytics\", \"Artificial Intelligence\", \"Business Intelligence (BI)\", \"Data Interpretation\",\r\n            \"Data Visualization\", \"Statistical Analysis\", \"Predictive Modeling\", \"SQL\", \"Excel (Advanced)\",\r\n            \"Python Programming\", \"R Programming\", \"Tableau\", \"Power BI\", \"Data Storytelling\",\r\n            \"Reporting\", \"Dashboard Creation\", \"ETL (Extract, Transform, Load)\", \"Database Management\",\r\n            \"Big Data Fundamentals\", \"Cloud Analytics\", \"Data Warehousing\", \"Market Research Analysis\",\r\n            \"Customer Segmentation\", \"Problem Solving\", \"Critical Thinking\", \"Communication\", \"Data Governance\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/diploma-in-data-analytics-course\"\r\n    },\r\n    {\r\n        title: \"Advanced Digital Marketing Course\",\r\n        description: \"Advanced 6-month program with 60 modules and 54+ AI tools for experienced marketers.\",\r\n        tags: [\"Digital Marketing\", \"SEO\", \"AI Tools\", \"Advanced\", \"6 Months\", \"Certification\"],\r\n        skills: [\r\n            \"Advanced Digital Marketing\", \"SEO Strategy (Technical SEO, Off-page SEO)\", \"Advanced SEM\",\r\n            \"Content Strategy\", \"Advanced Social Media Marketing\", \"Email Marketing Automation\",\r\n            \"Marketing Analytics (Deep Dive)\", \"AI in Marketing\", \"Programmatic Advertising\",\r\n            \"Growth Hacking\", \"Conversion Funnel Optimization\", \"A/B Testing\", \"Multichannel Marketing\",\r\n            \"Customer Relationship Management (CRM) for Marketing\", \"Lead Nurturing\", \"Marketing Automation Platforms\",\r\n            \"Webmaster Tools\", \"Google Search Console\", \"Google Tag Manager\", \"Advanced Reporting\",\r\n            \"Attribution Modeling\", \"Marketing Budgeting\", \"Team Leadership (Marketing)\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/advance-digital-marketing-course\"\r\n    },\r\n    {\r\n        title: \"Advanced Certification in Cyber Security and Ethical Hacking\",\r\n        description: \"Advanced 6-month certification course focusing on cybersecurity and ethical hacking.\",\r\n        tags: [\"Cyber Security\", \"Ethical Hacking\", \"Advanced\", \"6 Months\", \"Certification\"],\r\n        skills: [\r\n            \"Advanced Cybersecurity\", \"Advanced Ethical Hacking\", \"Penetration Testing (Web, Mobile, Network)\",\r\n            \"Vulnerability Management\", \"Red Teaming\", \"Blue Teaming\", \"Digital Forensics (Advanced)\",\r\n            \"Reverse Engineering (Malware)\", \"Advanced Network Defense\", \"Security Information and Event Management (SIEM)\",\r\n            \"Endpoint Detection and Response (EDR)\", \"Cloud Security (Advanced)\", \"IoT Security\",\r\n            \"DevSecOps\", \"Security Architecture\", \"Cryptography (Advanced)\", \"Threat Hunting\",\r\n            \"Incident Response Planning\", \"Security Audits\", \"Compliance Frameworks (NIST, ISO 27001)\",\r\n            \"Risk Assessment Methodologies\", \"Security Operations\", \"Scripting for Security (Python, PowerShell)\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking\"\r\n    },\r\n    {\r\n        title: \"Advanced Certification In Gen AI & Prompt Engineering\",\r\n        description: \"6-month advanced program in Generative AI and Prompt Engineering for AI professionals.\",\r\n        tags: [\"Generative AI\", \"Prompt Engineering\", \"AI Tools\", \"Advanced\", \"6 Months\", \"Certification\"],\r\n        skills: [\r\n            \"Advanced Generative AI\", \"Complex Prompt Engineering\", \"LLM Customization\", \"Fine-tuning LLMs\",\r\n            \"Reinforcement Learning from Human Feedback (RLHF)\", \"Model Deployment\", \"AI Model Governance\",\r\n            \"AI Model Evaluation\", \"Bias Detection in AI\", \"Responsible AI\", \"AI System Design\",\r\n            \"Generative Adversarial Networks (GANs)\", \"Variational Autoencoders (VAEs)\", \"Transformers\",\r\n            \"Multi-modal AI\", \"Synthetic Data Generation\", \"AI for Content Creation (Advanced)\",\r\n            \"API Integration for AI\", \"Cloud AI Services\", \"Scalability of AI Models\", \"Ethical Considerations in Gen AI\",\r\n            \"AI Research Methodologies\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/advanced-certification-in-genai-and-prompt-engineering\"\r\n    },\r\n    {\r\n        title: \"Advanced Certification In Machine Learning and AI\",\r\n        description: \"Deep dive into ML algorithms and AI tools with this 6-month advanced certification course.\",\r\n        tags: [\"Machine Learning\", \"AI\", \"Neural Networks\", \"Advanced\", \"6 Months\", \"Certification\"],\r\n        skills: [\r\n            \"Advanced Machine Learning\", \"Advanced AI\", \"Deep Learning Architectures (CNNs, RNNs, LSTMs, Transformers)\",\r\n            \"Neural Network Design\", \"Model Optimization\", \"Hyperparameter Tuning\", \"Ensemble Methods\",\r\n            \"Reinforcement Learning (Advanced)\", \"Transfer Learning\", \"Computer Vision (Advanced)\",\r\n            \"Natural Language Processing (Advanced)\", \"Speech Recognition\", \"Time Series Analysis (ML)\",\r\n            \"Big Data for ML\", \"Distributed Machine Learning\", \"GPU Computing\", \"MLOps\", \"Model Interpretability\",\r\n            \"Ethical AI\", \"Advanced Python Libraries (PyTorch, TensorFlow, Keras)\", \"Algorithm Implementation\",\r\n            \"Research Skills (AI/ML)\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/advanced-certification-in-machine-learning-and-ai\"\r\n    },\r\n    {\r\n        title: \"Advanced Certification In Data Science and AI\",\r\n        description: \"Advanced data science certification with 6-months training in AI, statistics, and data handling.\",\r\n        tags: [\"Data Science\", \"AI\", \"Advanced\", \"6 Months\", \"Certification\"],\r\n        skills: [\r\n            \"Advanced Data Science\", \"Advanced AI\", \"Big Data Analytics\", \"Statistical Modeling (Advanced)\",\r\n            \"Machine Learning Engineering\", \"Deep Learning Applications\", \"Data Architecture\",\r\n            \"Data Governance\", \"Data Ethics\", \"Cloud Data Platforms\", \"Data Warehousing (Advanced)\",\r\n            \"ETL Pipelines (Advanced)\", \"Data Product Development\", \"A/B Testing (Advanced)\",\r\n            \"Experimental Design\", \"Advanced SQL\", \"NoSQL Databases\", \"Spark\", \"Kafka\", \"Data Lakes\",\r\n            \"Data Storytelling (Advanced)\", \"Stakeholder Communication\", \"Predictive Analytics (Complex Models)\",\r\n            \"Prescriptive Analytics\", \"Optimization Techniques\", \"Data Privacy\", \"Data Security\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/advanced-certification-in-data-science-and-ai\"\r\n    },\r\n    {\r\n        title: \"Advanced Certification In Data Analytics And AI\",\r\n        description: \"Learn advanced data analytics and AI applications in this 6-month certification course.\",\r\n        tags: [\"Data Analytics\", \"AI\", \"Business Intelligence\", \"Advanced\", \"6 Months\", \"Certification\"],\r\n        skills: [\r\n            \"Advanced Data Analytics\", \"AI for Business Analytics\", \"Business Intelligence (Advanced)\",\r\n            \"Predictive Modeling for Business\", \"Prescriptive Analytics\", \"Data Mining (Advanced)\",\r\n            \"Dashboards and Reporting (Complex)\", \"Data Visualization (Advanced Tools like D3.js)\",\r\n            \"Statistical Process Control\", \"Operational Analytics\", \"Financial Analytics\", \"Marketing Analytics\",\r\n            \"Customer Analytics\", \"Supply Chain Analytics\", \"SQL (Advanced)\", \"Python for Data Analytics\",\r\n            \"R for Data Analytics\", \"Power BI (Advanced)\", \"Tableau (Advanced)\", \"Data Warehousing\",\r\n            \"Cloud Analytics Platforms\", \"Big Data Tools (for analytics)\", \"Data Quality Management\",\r\n            \"Performance Measurement\", \"Strategic Analysis\", \"Decision Support Systems\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/advanced-certification-in-data-analytics-and-ai\"\r\n    },\r\n    {\r\n        title: \"Digital Marketing for Professionals\",\r\n        description: \"4-month course designed for working professionals with industry-ready digital marketing training.\",\r\n        tags: [\"Digital Marketing\", \"Working Professionals\", \"4 Months\", \"Certification\", \"Weekend Batches\"],\r\n        skills: [\r\n            \"Digital Marketing\", \"SEO Fundamentals\", \"Social Media Marketing\", \"Content Marketing\",\r\n            \"Email Marketing\", \"Google Ads (PPC)\", \"Website Analytics\", \"Basic AI Tools for Marketing\",\r\n            \"Marketing Strategy\", \"Campaign Execution\", \"Digital Advertising\", \"Online Branding\",\r\n            \"Lead Generation Basics\", \"Customer Engagement\", \"Market Trends\", \"Digital Tools\",\r\n            \"Time Management\", \"Project Management (Marketing)\", \"Professional Communication\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/digital-marketing-for-professional\"\r\n    },\r\n    {\r\n        title: \"Foundation in Cyber Security and Ethical Hacking\",\r\n        description: \"Introductory course in cybersecurity and ethical hacking designed for beginners over 4 months.\",\r\n        tags: [\"Cyber Security\", \"Ethical Hacking\", \"Beginner\", \"4 Months\", \"Certification\"],\r\n        skills: [\r\n            \"Cybersecurity Fundamentals\", \"Ethical Hacking Basics\", \"Network Basics\", \"Operating System Basics\",\r\n            \"Security Threats and Vulnerabilities\", \"Basic Cryptography\", \"Cyber Hygiene\", \"Security Best Practices\",\r\n            \"Password Management\", \"Phishing Awareness\", \"Malware Recognition\", \"Basic Linux Commands\",\r\n            \"Security Awareness\", \"Digital Literacy\", \"Basic Penetration Testing Concepts\", \"Security Tools (Intro)\",\r\n            \"Cyber Laws (Basic Overview)\", \"Risk Awareness\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking\"\r\n    },\r\n    {\r\n        title: \"Certification in Digital Forensic and Cyber Investigation\",\r\n        description: \"4-month program focused on digital forensic skills and cybercrime investigation.\",\r\n        tags: [\"Digital Forensics\", \"Cyber Investigation\", \"Cyber Security\", \"4 Months\", \"Certification\"],\r\n        skills: [\r\n            \"Digital Forensics\", \"Cyber Investigation\", \"Cybercrime Analysis\", \"Evidence Collection\",\r\n            \"Data Recovery\", \"Forensic Imaging\", \"Chain of Custody\", \"Legal Aspects of Forensics\",\r\n            \"Operating System Forensics (Windows, Linux, macOS)\", \"Network Forensics\", \"Mobile Device Forensics\",\r\n            \"Cloud Forensics (Basic)\", \"Malware Forensics (Basic)\", \"Incident Response (Forensic Perspective)\",\r\n            \"Forensic Tools (e.g., EnCase, FTK, Autopsy, Wireshark)\", \"Report Writing (Forensic)\",\r\n            \"Courtroom Testimony (Foundational)\", \"Cyber Law\", \"Security Incident Analysis\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/certification-in-digital-forensic-and-cyber-investigation\"\r\n    },\r\n    {\r\n        title: \"Expert Traning in Bug Bounty\",\r\n        description: \"Practical 4-month training in bug bounty and vulnerability detection techniques.\",\r\n        tags: [\"Bug Bounty\", \"Cyber Security\", \"Hacking\", \"4 Months\", \"Certification\"],\r\n        skills: [\r\n            \"Bug Bounty Hunting\", \"Vulnerability Discovery\", \"Web Application Hacking\", \"Mobile Application Hacking\",\r\n            \"Network Hacking\", \"Penetration Testing (Bug Bounty Focus)\", \"OWASP Top 10\", \"SQL Injection\",\r\n            \"Cross-Site Scripting (XSS)\", \"CSRF\", \"Authentication Bypass\", \"API Security\", \"Reconnaissance\",\r\n            \"Vulnerability Reporting\", \"Exploitation Techniques\", \"Burp Suite\", \"Nmap\", \"Metasploit (basic)\",\r\n            \"Linux/Unix Proficiency\", \"HTTP/HTTPS Protocols\", \"JavaScript\", \"Python Scripting (for hacking)\",\r\n            \"Ethical Hacking Methodologies\", \"Problem Solving (Vulnerability)\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/expert-traning-in-bug-bounty\"\r\n    },\r\n    {\r\n        title: \"Digital Marketing for Beginners\",\r\n        description: \"Perfect starting point with 30 modules and 40+ AI tools for beginners.\",\r\n        tags: [\"Digital Marketing\", \"Beginner\", \"3 Months\", \"Starter\", \"AI Tools\", \"Certification\"],\r\n        skills: [\r\n            \"Digital Marketing Introduction\", \"Basic SEO\", \"Social Media Fundamentals\", \"Content Creation Basics\",\r\n            \"Email Marketing Basics\", \"Website Basics\", \"Introduction to AI Tools for Marketing\",\r\n            \"Online Advertising Basics\", \"Digital Presence\", \"Brand Awareness\", \"Audience Identification\",\r\n            \"Marketing Terms\", \"Online Research\", \"Introductory Analytics\", \"Digital Trends (Basic)\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/digital-marketing-for-beginners\"\r\n    },\r\n    {\r\n        title: \"Certification In Data Analytics And AI\",\r\n        description: \"3-month certification in data analytics and artificial intelligence with essential tools.\",\r\n        tags: [\"Data Analytics\", \"AI\", \"Certification\", \"Beginner\", \"3 Months\"],\r\n        skills: [\r\n            \"Data Analytics Fundamentals\", \"Introduction to AI\", \"Data Collection\", \"Data Cleaning (Basic)\",\r\n            \"Data Organization\", \"Basic Statistical Concepts\", \"Data Interpretation\", \"Basic Data Visualization\",\r\n            \"Excel (Intermediate)\", \"SQL (Basic)\", \"Introduction to Business Intelligence Tools\",\r\n            \"Data-Driven Decision Making (Basic)\", \"Problem Identification\", \"Critical Thinking (Basic)\",\r\n            \"AI Concepts (e.g., what is AI, types of AI)\", \"Data Ethics (Basic)\"\r\n        ],\r\n        url: \"https://dizitaladda.com/courses/certification-in-data-analytics-and-ai\"\r\n    }\r\n];\r\n\r\n\r\n    // Open search overlay\r\n    function openSearchOverlay() {\r\n        searchOverlay.classList.add('active');\r\n        searchOverlayInput.focus();\r\n        document.body.style.overflow = 'hidden';\r\n    }\r\n\r\n    // Close search overlay\r\n    function closeSearchOverlay() {\r\n        searchOverlay.classList.remove('active');\r\n        searchOverlayInput.value = '';\r\n        document.body.style.overflow = 'auto';\r\n        searchResults.style.display = 'none';\r\n        searchSuggestions.style.display = 'block';\r\n    }\r\n\r\n    // Search function\r\n    function performSearch(query) {\r\n        if (!query.trim()) {\r\n            searchResults.style.display = 'none';\r\n            searchSuggestions.style.display = 'block';\r\n            return;\r\n        }\r\n\r\n        const filteredCourses = courses.filter(course => \r\n            course.title.toLowerCase().includes(query.toLowerCase()) ||\r\n            course.description.toLowerCase().includes(query.toLowerCase()) ||\r\n            course.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())) ||\r\n            (course.skills && course.skills.some(skill => skill.toLowerCase().includes(query.toLowerCase())))\r\n        );\r\n\r\n        displaySearchResults(filteredCourses, query);\r\n    }\r\n\r\n    // Escape HTML to prevent HTML injection (OWASP A03: Injection)\r\n    function escapeHtml(str) {\r\n        return String(str)\r\n            .replace(/&/g, '&amp;')\r\n            .replace(/</g, '&lt;')\r\n            .replace(/>/g, '&gt;')\r\n            .replace(/\"/g, '&quot;')\r\n            .replace(/'/g, '&#039;');\r\n    }\r\n\r\n    // Display search results\r\n    function displaySearchResults(results, query) {\r\n        searchSuggestions.style.display = 'none';\r\n        searchResults.style.display = 'block';\r\n        \r\n        if (results.length === 0) {\r\n            resultsContainer.innerHTML = `\r\n                <div class=\"no-results\">\r\n                    <p>No results found for \"${escapeHtml(query)}\"</p>\r\n                    <p>Try searching for something else or check out our popular courses above.</p>\r\n                </div>\r\n            `;\r\n            return;\r\n        }\r\n\r\n        resultsContainer.innerHTML = results.map(course => `\r\n            <div class=\"search-result-item\" onclick=\"window.open('${course.url}', '_blank')\">\r\n                <div class=\"search-result-title\">${course.title}</div>\r\n                <div class=\"search-result-description\">${course.description}</div>\r\n                <div class=\"search-result-tags\">\r\n                    ${course.tags.map(tag => `<span class=\"search-result-tag\">${tag}</span>`).join('')}\r\n                </div>\r\n            </div>\r\n        `).join('');\r\n    }\r\n\r\n    // Event listeners\r\n    if (searchInput) {\r\n        searchInput.addEventListener('click', openSearchOverlay);\r\n        searchInput.addEventListener('focus', openSearchOverlay);\r\n    }\r\n    \r\n    if (backButton) {\r\n        backButton.addEventListener('click', closeSearchOverlay);\r\n    }\r\n    \r\n    // Close overlay when clicking outside\r\n    if (searchOverlay) {\r\n        searchOverlay.addEventListener('click', function(e) {\r\n            if (e.target === searchOverlay) {\r\n                closeSearchOverlay();\r\n            }\r\n        });\r\n    }\r\n\r\n    // Search input handler\r\n    if (searchOverlayInput) {\r\n        searchOverlayInput.addEventListener('input', function() {\r\n            const query = this.value;\r\n            performSearch(query);\r\n        });\r\n    }\r\n\r\n    // Suggestion tag click handlers\r\n    suggestionTags.forEach(tag => {\r\n        tag.addEventListener('click', function() {\r\n            const query = this.textContent;\r\n            if (searchOverlayInput) {\r\n                searchOverlayInput.value = query;\r\n                performSearch(query);\r\n            }\r\n        });\r\n    });\r\n\r\n    // Keyboard shortcuts\r\n    document.addEventListener('keydown', function(e) {\r\n        // Escape key to close overlay\r\n        if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('active')) {\r\n            closeSearchOverlay();\r\n        }\r\n        \r\n        // Ctrl/Cmd + K to open search\r\n        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {\r\n            e.preventDefault();\r\n            openSearchOverlay();\r\n        }\r\n    });\r\n\r\n    // Course Dropdown functionality\r\n    const courseDropdownOverlay = document.getElementById('courseDropdownOverlay');\r\n    const dropdownBackButton = document.getElementById('dropdownBackButton');\r\n    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');\r\n    const courseLevelItems = document.querySelectorAll('.course-level-item');\r\n    const courseDetailsContent = document.getElementById('courseDetailsContent');\r\n\r\n    // Course data for different levels\r\n   const courseData = {\r\n    expert: {\r\n        title: \"Expert Level Courses (12 Months)\",\r\n        courses: [\r\n            {\r\n                title: \"Expert in Digital Marketing\",\r\n                description: \"Comprehensive 12-month expert program. Complete mastery of digital marketing.\", // Placeholder\r\n                features: [\"12 Months\", \"Expert Level\", \"Placement Support\"], // Placeholder, add more based on actual course details\r\n                originalPrice: \"₹1,35,000\",\r\n                discountedPrice: \"₹95,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/expert-digital-marketing-course\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Expert+in+Digital+Marketing+Course\"\r\n            },\r\n            {\r\n                title: \"Expert Training In Cyber Security and Ethical Hacking\",\r\n                description: \"Comprehensive 12-month expert program for cybersecurity.\", // Placeholder\r\n                features: [\"12 Months\", \"Expert Level\", \"Placement Support\"], // Placeholder\r\n                originalPrice: \"₹1,35,000\",\r\n                discountedPrice: \"₹95,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Expert+Training+In+Cyber+Security+and+Ethical+Hacking+Course\"\r\n            },\r\n            {\r\n                title: \"Diploma in Gen AI & Prompt Engineering\",\r\n                description: \"12-month diploma program in Generative AI and Prompt Engineering.\", // Placeholder\r\n                features: [\"12 Months\", \"Expert Level\", \"Placement Support\"], // Placeholder\r\n                originalPrice: \"₹1,35,000\",\r\n                discountedPrice: \"₹95,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/diploma-in-genai-and-prompt-engineering-course\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Diploma+in+Gen+AI+%26+Prompt+Engineering+Course\"\r\n            },\r\n            {\r\n                title: \"Diploma In Machine Learning and AI\",\r\n                description: \"12-month diploma program in Machine Learning and AI.\", // Placeholder\r\n                features: [\"12 Months\", \"Expert Level\", \"Placement Support\"], // Placeholder\r\n                originalPrice: \"₹1,35,000\",\r\n                discountedPrice: \"₹95,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai-course\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Diploma+In+Machine+Learning+and+AI+Course\"\r\n            },\r\n            {\r\n                title: \"Diploma In Data Science and AI\",\r\n                description: \"12-month diploma program in Data Science and AI.\", // Placeholder\r\n                features: [\"12 Months\", \"Expert Level\", \"Placement Support\"], // Placeholder\r\n                originalPrice: \"₹1,35,000\",\r\n                discountedPrice: \"₹95,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/diploma-in-data-science-and-ai-course\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Diploma+In+Data+Science+and+AI+Course\"\r\n            },\r\n            {\r\n                title: \"Diploma In Data Analytics And AI\",\r\n                description: \"12-month diploma program in Data Analytics and AI.\", // Placeholder\r\n                features: [\"12 Months\", \"Expert Level\", \"Placement Support\"], // Placeholder\r\n                originalPrice: \"₹1,35,000\",\r\n                discountedPrice: \"₹95,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/diploma-in-data-analytics-course\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Diploma+In+Data+Analytics+And+AI+Course\"\r\n            }\r\n        ]\r\n    },\r\n    advance: {\r\n        title: \"Advanced Level Courses (6-11 Months)\",\r\n        courses: [\r\n            {\r\n                title: \"Advanced Digital Marketing Course\",\r\n                description: \"Master advanced digital marketing strategies. Perfect for experienced marketers looking to enhance their skills.\", // Placeholder\r\n                features: [\"6 Months\", \"Expert Trainers\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹60,000\",\r\n                discountedPrice: \"₹45,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/advance-digital-marketing-course\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Advanced+Digital+Marketing+Course\"\r\n            },\r\n            {\r\n                title: \"Advanced Certification in Cyber Security and Ethical Hacking\",\r\n                description: \"Advanced certification for cybersecurity and ethical hacking.\", // Placeholder\r\n                features: [\"6 Months\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹60,000\",\r\n                discountedPrice: \"₹45,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Advanced+Certification+in+Cyber+Security+and+Ethical+Hacking+Course\"\r\n            },\r\n            {\r\n                title: \"Advanced Certification In Gen AI & Prompt Engineering\",\r\n                description: \"Advanced certification in Generative AI and Prompt Engineering.\", // Placeholder\r\n                features: [\"6 Months\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹60,000\",\r\n                discountedPrice: \"₹45,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/advanced-certification-in-genai-and-prompt-engineering\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Advanced+Certification+In+Gen+AI+%26+Prompt+Engineering+Course\"\r\n            },\r\n            {\r\n                title: \"Advanced Certification In Machine Learning and AI\",\r\n                description: \"Advanced certification in Machine Learning and AI.\", // Placeholder\r\n                features: [\"6 Months\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹60,000\",\r\n                discountedPrice: \"₹45,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/advanced-certification-in-machine-learning-and-ai\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Advanced+Certification+In+Machine+Learning+and+AI+Course\"\r\n            },\r\n            {\r\n                title: \"Advanced Certification In Data Science and AI\",\r\n                description: \"Advanced certification in Data Science and AI.\", // Placeholder\r\n                features: [\"6 Months\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹60,000\",\r\n                discountedPrice: \"₹45,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/advanced-certification-in-data-science-and-ai\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Advanced+Certification+In+Data+Science+and+AI+Course\"\r\n            },\r\n            {\r\n                title: \"Advanced Certification In Data Analytics And AI\",\r\n                description: \"Advanced certification in Data Analytics and AI.\", // Placeholder\r\n                features: [\"6 Months\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹60,000\",\r\n                discountedPrice: \"₹45,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/advanced-certification-in-data-analytics-and-ai\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Advanced+Certification+In+Data+Analytics+And+AI+Course\"\r\n            }\r\n        ]\r\n    },\r\n    beginner: {\r\n        title: \"Beginner Level Courses (3-5 Months)\",\r\n        courses: [\r\n            {\r\n                title: \"Digital Marketing for Professionals\",\r\n                description: \"4-month course designed for working professionals.\", // Placeholder\r\n                features: [\"4 Months\", \"Weekend Batches\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹40,000\",\r\n                discountedPrice: \"₹30,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/digital-marketing-for-professional\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Digital+Marketing+For+Professional+Course\"\r\n            },\r\n            {\r\n                title: \"Foundation in Cyber Security and Ethical Hacking\",\r\n                description: \"4-month foundation course in cybersecurity.\", // Placeholder\r\n                features: [\"4 Months\", \"Beginner Friendly\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹40,000\",\r\n                discountedPrice: \"₹30,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Foundation+in+Cyber+Security+and+Ethical+Hacking+Course\"\r\n            },\r\n            {\r\n                title: \"Certification in Digital Forensic and Cyber Investigation\",\r\n                description: \"4-month certification in Digital Forensic and Cyber Investigation.\", // Placeholder\r\n                features: [\"4 Months\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹50,000\",\r\n                discountedPrice: \"₹35,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/certification-in-digital-forensic-and-cyber-investigation\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Certification+in+Digital+Forensic+and+Cyber+Investigation+Course\"\r\n            },\r\n            {\r\n                title: \"Expert Traning in Bug Bounty\",\r\n                description: \"4-month expert training in Bug Bounty.\", // Placeholder\r\n                features: [\"4 Months\", \"Practical\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹50,000\",\r\n                discountedPrice: \"₹35,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/expert-traning-in-bug-bounty\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Expert+Traning+in+Bug+Bounty+Course\"\r\n            },\r\n            {\r\n                title: \"Digital Marketing for Beginners\",\r\n                description: \"Perfect starting point for digital marketing beginners.\", // Placeholder\r\n                features: [\"3 Months\", \"Beginner Friendly\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹30,000\",\r\n                discountedPrice: \"₹25,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/digital-marketing-for-beginners\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Digital+Marketing+For+Beginners+Course\"\r\n            },\r\n            {\r\n                title: \"Certification In Data Analytics And AI\",\r\n                description: \"3-month certification in Data Analytics and AI.\", // Placeholder\r\n                features: [\"3 Months\", \"Certification\"], // Placeholder\r\n                originalPrice: \"₹30,000\",\r\n                discountedPrice: \"₹25,000\", // Placeholder\r\n                enrollUrl: \"https://dizitaladda.com/courses/certification-in-data-analytics-and-ai\",\r\n                whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Certification+In+Data+Analytics+And+AI+Course\"\r\n            }\r\n        ]\r\n    },\r\n    short: {\r\n        title: \"Short Term Courses (1-2 Months)\",\r\n        courses: [\r\n            // No specific courses from your provided list fell clearly into 1-2 months with price/duration.\r\n            // Keeping the original short courses if they are relevant, or you can add new ones.\r\n            // Example if you had a 1-month course:\r\n            // {\r\n            //     title: \"Digital Marketing Fundamentals\",\r\n            //     description: \"Quick 1-month course covering essential digital marketing concepts.\",\r\n            //     features: [\"1 Month\", \"Quick Learning\", \"Certificate\"],\r\n            //     originalPrice: \"₹15,000\",\r\n            //     discountedPrice: \"₹10,000\",\r\n            //     enrollUrl: \"#\", // or a specific URL\r\n            //     whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Short+Digital+Marketing+Course\"\r\n            // }\r\n        ]\r\n    },\r\n    free: {\r\n  title: \"Free Digital Marketing, Cybersecurity & AI Basics Courses\",\r\n  courses: [\r\n    // ---------------- DIGITAL MARKETING BASICS ----------------\r\n    {\r\n      title: \"Getting into the Basics of SEO\",\r\n      description: \"Learn how to optimize websites for better search engine ranking.\",\r\n      features: [\"3 Modules\", \"SEO Basics\", \"Free\", \"Beginner\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+SEO+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+SEO+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Graphic Designing\",\r\n      description: \"Get started with graphic design using free tools to create simple designs.\",\r\n      features: [\"3 Modules\", \"Design Tools\", \"Free\", \"Creative\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Graphic+Designing+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Graphic+Designing+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Email Marketing\",\r\n      description: \"Learn to create simple and effective email campaigns for beginners.\",\r\n      features: [\"3 Modules\", \"Email Tools\", \"Free\", \"Beginner Friendly\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Email+Marketing+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Email+Marketing+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Google Ads\",\r\n      description: \"Understand the fundamentals of Google Ads and paid marketing campaigns.\",\r\n      features: [\"3 Modules\", \"Ad Campaigns\", \"Free\", \"Beginner\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Google+Ads+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Google+Ads+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Influencer Marketing\",\r\n      description: \"Learn how brands use influencers and how to start influencer collaborations.\",\r\n      features: [\"3 Modules\", \"Collaboration Skills\", \"Free\", \"Beginner\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Influencer+Marketing+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Influencer+Marketing+Course\"\r\n    },\r\n\r\n    // ---------------- CYBERSECURITY & ETHICAL HACKING BASICS ----------------\r\n    {\r\n      title: \"Getting into the Basics of Cybersecurity\",\r\n      description: \"Understand key concepts of staying safe online and protecting data.\",\r\n      features: [\"3 Modules\", \"Cyber Safety\", \"Free\", \"Beginner Friendly\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Cybersecurity+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Cybersecurity+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Ethical Hacking\",\r\n      description: \"Learn the fundamentals of ethical hacking and penetration testing.\",\r\n      features: [\"3 Modules\", \"Hacking Basics\", \"Free\", \"Beginner Friendly\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Ethical+Hacking+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Ethical+Hacking+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Network Security\",\r\n      description: \"Learn how networks work and simple techniques to secure them.\",\r\n      features: [\"3 Modules\", \"Networking\", \"Free\", \"Beginner\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Network+Security+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Network+Security+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Web Application Security\",\r\n      description: \"Introduction to securing websites and preventing common cyber attacks.\",\r\n      features: [\"3 Modules\", \"Web Security\", \"Free\", \"Beginner\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Web+Security+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Web+Security+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Cloud Security\",\r\n      description: \"Get started with protecting data and apps on cloud platforms.\",\r\n      features: [\"3 Modules\", \"Cloud Safety\", \"Free\", \"Beginner\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Cloud+Security+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Cloud+Security+Course\"\r\n    },\r\n\r\n    // ---------------- ARTIFICIAL INTELLIGENCE BASICS ----------------\r\n    {\r\n      title: \"Getting into the Basics of Artificial Intelligence\",\r\n      description: \"Learn what AI is, how it works, and its real-world applications.\",\r\n      features: [\"3 Modules\", \"AI Concepts\", \"Free\", \"Beginner\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Artificial+Intelligence+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Artificial+Intelligence+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Machine Learning\",\r\n      description: \"Get introduced to the core ideas of machine learning and simple models.\",\r\n      features: [\"3 Modules\", \"ML Concepts\", \"Free\", \"Beginner Friendly\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Machine+Learning+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Machine+Learning+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Natural Language Processing\",\r\n      description: \"Understand how AI processes human language and chatbots work.\",\r\n      features: [\"3 Modules\", \"NLP Basics\", \"Free\", \"Beginner\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+NLP+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+NLP+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Computer Vision\",\r\n      description: \"Learn how machines see and interpret images using AI.\",\r\n      features: [\"3 Modules\", \"Vision Basics\", \"Free\", \"Beginner Friendly\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Computer+Vision+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Computer+Vision+Course\"\r\n    },\r\n    {\r\n      title: \"Getting into the Basics of Generative AI\",\r\n      description: \"Discover how AI creates images, text, and videos using models like GPT.\",\r\n      features: [\"3 Modules\", \"GenAI Intro\", \"Free\", \"Beginner\", \"Certificate\"],\r\n      originalPrice: \"Free\",\r\n      discountedPrice: \"Free\",\r\n      enrollUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Generative+AI+Course\",\r\n      whatsappUrl: \"https://wa.me/918810606010?text=Hi%2C+I+am+interested+in+the+Basics+of+Generative+AI+Course\"\r\n    }\r\n  ]\r\n}\r\n\r\n};\r\n\r\n    // Open course dropdown\r\n    function openCourseDropdown(activeLevel = 'advance') {\r\n        if (courseDropdownOverlay) {\r\n            courseDropdownOverlay.classList.add('active');\r\n            document.body.style.overflow = 'hidden';\r\n            \r\n            // Set active level\r\n            courseLevelItems.forEach(item => {\r\n                item.classList.remove('active');\r\n                if (item.dataset.level === activeLevel) {\r\n                    item.classList.add('active');\r\n                }\r\n            });\r\n            \r\n            // Load course details\r\n            loadCourseDetails(activeLevel);\r\n        }\r\n    }\r\n\r\n    // Close course dropdown\r\n    function closeCourseDropdown() {\r\n        if (courseDropdownOverlay) {\r\n            courseDropdownOverlay.classList.remove('active');\r\n            document.body.style.overflow = 'auto';\r\n        }\r\n    }\r\n\r\n    // Load course details\r\n    function loadCourseDetails(level) {\r\n        const data = courseData[level];\r\n        if (!data || !courseDetailsContent) return;\r\n\r\n        const coursesHTML = data.courses.map(course => `\r\n            <div class=\"course-card-nav\" onclick=\"window.open('${course.enrollUrl}', '_blank')\" style=\"cursor: pointer;\">\r\n                <h3>${course.title}</h3>\r\n                <div class=\"course-duration\">${course.features.find(f => f.includes('Month') || f.includes('Free')) || course.features[2] || 'Duration varies'}</div>\r\n            </div>\r\n        `).join('');\r\n\r\n        courseDetailsContent.innerHTML = `\r\n            <div class=\"course-grid\">\r\n                ${coursesHTML}\r\n            </div>\r\n        `;\r\n    }\r\n\r\n    // Event listeners for dropdown triggers\r\n    dropdownTriggers.forEach(trigger => {\r\n        trigger.addEventListener('click', function(e) {\r\n            e.preventDefault();\r\n            const courseLevel = this.dataset.course;\r\n            openCourseDropdown(courseLevel);\r\n        });\r\n    });\r\n\r\n    // Back button\r\n    if (dropdownBackButton) {\r\n        dropdownBackButton.addEventListener('click', closeCourseDropdown);\r\n    }\r\n\r\n    // Close dropdown when clicking outside\r\n    if (courseDropdownOverlay) {\r\n        courseDropdownOverlay.addEventListener('click', function(e) {\r\n            if (e.target === courseDropdownOverlay) {\r\n                closeCourseDropdown();\r\n            }\r\n        });\r\n    }\r\n\r\n    // Course level switching\r\n    courseLevelItems.forEach(item => {\r\n        item.addEventListener('click', function() {\r\n            const level = this.dataset.level;\r\n            \r\n            // Update active state\r\n            courseLevelItems.forEach(levelItem => {\r\n                levelItem.classList.remove('active');\r\n            });\r\n            this.classList.add('active');\r\n            \r\n            // Load course details\r\n            loadCourseDetails(level);\r\n        });\r\n    });\r\n\r\n    // Keyboard shortcuts for dropdown\r\n    document.addEventListener('keydown', function(e) {\r\n        if (e.key === 'Escape' && courseDropdownOverlay && courseDropdownOverlay.classList.contains('active')) {\r\n            closeCourseDropdown();\r\n        }\r\n    });\r\n});\r\n  // ===== Payment Popup Logic =====\r\n  function openPaymentPopup() {\r\n    const overlay = document.getElementById('paymentOverlay');\r\n    if (overlay) {\r\n      overlay.classList.add('active');\r\n      document.body.style.overflow = 'hidden';\r\n    }\r\n  }\r\n\r\n  function closePaymentPopup() {\r\n    const overlay = document.getElementById('paymentOverlay');\r\n    if (overlay) {\r\n      overlay.classList.remove('active');\r\n      document.body.style.overflow = '';\r\n    }\r\n  }\r\n\r\n  function redirectToPayment(gateway) {\r\n    closePaymentPopup();\r\n    if (gateway === 'razorpay') {\r\n      window.location.href = 'https://dizitaladda.com/enroll?gateway=razorpay';\r\n    } else if (gateway === 'payu') {\r\n      window.location.href = 'https://dizitaladda.com/enroll-upay.php';\r\n    }\r\n  }\r\n\r\n  // Close on overlay background click\r\n  document.addEventListener('DOMContentLoaded', function () {\r\n    const overlay = document.getElementById('paymentOverlay');\r\n    const closeBtn = document.getElementById('paymentModalClose');\r\n    if (overlay) {\r\n      overlay.addEventListener('click', function (e) {\r\n        if (e.target === overlay) closePaymentPopup();\r\n      });\r\n    }\r\n    if (closeBtn) {\r\n      closeBtn.addEventListener('click', closePaymentPopup);\r\n    }\r\n    // Close on Escape key\r\n    document.addEventListener('keydown', function (e) {\r\n      if (e.key === 'Escape') closePaymentPopup();\r\n    });\r\n  });\r\n\r\n    const bottomNavigation = document.querySelector('.bottom');\r\n    if (bottomNavigation) {\r\n        const updateBottomNavigation = () => {\r\n            bottomNavigation.classList.toggle('is-hidden', window.scrollY > 10);\r\n        };\r\n\r\n        window.addEventListener('scroll', updateBottomNavigation, { passive: true });\r\n        updateBottomNavigation();\r\n    }\r\n"}} />
+
+
+<style dangerouslySetInnerHTML={{__html:"\r\n.popup {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 16px;\r\n  background: rgba(10, 10, 20, 0.9); /* dark overlay */\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  overflow-y: auto;\r\n  z-index: 99999999;\r\n}\r\n\r\n/* Popup container */\r\n.popup-content {\r\n  display: grid;\r\n  grid-template-columns: minmax(260px, 1fr) minmax(320px, 360px);\r\n  max-width: 720px;\r\n  width: 100%;\r\n  min-height: 460px;\r\n  background: #111827; /* dark card */\r\n  border-radius: 12px;\r\n  overflow: hidden;\r\n  box-shadow: 0 8px 30px rgba(0,0,0,0.6);\r\n  color: #fff;\r\n  position: relative;\r\n}\r\n\r\n/* Left image */\r\n.popup-image {\r\n  background: #1f2937;\r\n  min-width: 0;\r\n}\r\n.popup-image img {\r\n  display: block;\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n\r\n}\r\n\r\n/* Right form */\r\n.popup-form {\r\n  min-width: 0;\r\n  padding: 32px 28px 28px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n}\r\n.popup-form h2 {\r\n  font-size: 26px;\r\n  line-height: 1.1;\r\n  margin-bottom: 10px;\r\n  padding-right: 48px;\r\n  color: #a855f7; /* purple accent */\r\n}\r\n.popup-form p {\r\n  margin-bottom: 18px;\r\n  color: #d1d5db;\r\n}\r\n.popup-form form {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  gap: 14px;\r\n  width: 100%;\r\n}\r\n.popup-form input,\r\n.popup-form select,\r\n.popup-form button {\r\n  box-sizing: border-box;\r\n  width: 100%;\r\n}\r\n.popup-form input,\r\n.popup-form select {\r\n  padding: 12px;\r\n  border: 1px solid #374151;\r\n  border-radius: 8px;\r\n  background: #1f2937;\r\n  color: #fff;\r\n}\r\n.popup-form input::placeholder {\r\n  color: #9ca3af;\r\n}\r\n.popup-status {\r\n  min-height: 20px;\r\n  font-size: 14px;\r\n  color: #d1d5db;\r\n}\r\n.popup-status.is-error {\r\n  color: #fca5a5;\r\n}\r\n.popup-status.is-success {\r\n  color: #86efac;\r\n}\r\n.popup-form button {\r\n  width: 100%;\r\n  padding: 12px;\r\n  background: linear-gradient(135deg, #7e22ce, #9333ea);\r\n  border: none;\r\n  border-radius: 8px;\r\n  color: #fff;\r\n  font-weight: 600;\r\n  cursor: pointer;\r\n  transition:   transform 0.2s, background 0.3s;\r\n}\r\n\r\n.popup-form button:hover {\r\n  transform: scale(1.05);\r\n  background: linear-gradient(135deg, #9333ea, #a855f7);\r\n}\r\n.popup-form button:disabled {\r\n  cursor: not-allowed;\r\n  opacity: 0.7;\r\n  transform: none;\r\n}\r\n\r\n/* Close button */\r\n.close {\r\n  position: absolute;\r\n  top: 16px;\r\n  right: 16px;\r\n  font-size: 32px;\r\n  color: #fff;\r\n  cursor: pointer;\r\n  line-height: 1;\r\n  z-index: 2;\r\n}\r\n\r\n/* Responsive */\r\n@media (max-width: 768px) {\r\n  .popup {\r\n    padding: 12px;\r\n  }\r\n  .popup-content{\r\n    grid-template-columns: 1fr;\r\n    width: min(360px, calc(100vw - 24px));\r\n    min-height: 0;\r\n  }\r\n\r\n.popup-image {\r\n  display: none;\r\n}\r\n\r\n/* Right form */\r\n.popup-form {\r\n  padding: 24px 20px 22px;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.popup-form h2 {\r\n  font-size: 22px;\r\n  padding-right: 40px;\r\n}\r\n\r\n.close {\r\n  top: 14px;\r\n  right: 14px;\r\n  font-size: 28px;\r\n}\r\n}\r\n.hidden {\r\n  display: none;\r\n}\r\n\r\n"}} />
+
+
+<div id="courseInfoPopup" className="popup hidden">
+  <div className="popup-content">
+    {/*  Left: Image  */}
+    <div className="popup-image">
+      {/*  Speed: this photo now loads only when the popup opens (it was 169 KB on every page load)  */}
+      <img src="https://dizitaladda.com/pexels-rdne-7821934.jpg" alt="Students learning digital marketing at DizitalAdda" width="360" height="460" loading="lazy" decoding="async" />
+    </div>
+
+    {/*  Right: Form  */}
+    <div className="popup-form">
+      <span id="courseInfoPopupClose" className="close">×</span>
+      <h2>Get Course Information</h2>
+      <p>Fill out the form to receive our brochure and details.</p>
+
+      <form method="POST" id="courseInfoPopupForm" noValidate={true} data-static-lead-bound="1">
+              <input type="text" name="Name" placeholder="Enter Your Name..." autoComplete="name" />
+              <input type="tel" name="Number" placeholder="Enter Your Number..." autoComplete="tel" required={true} />
+              <input type="email" name="Email" placeholder="Enter Your Email..." autoComplete="email" required={true} />
+        <select name="Course" required={true}>
+          <option value="">Select Courses</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+          <option value="Generative AI">Generative AI</option>
+          <option value="Machine Learning">Machine Learning</option>
+          <option value="Data Analytics">Data Analytics</option>
+          <option value="Data Science">Data Science</option>
+          <option value="Cyber Security">Cyber Security and Ethical Hacking</option>
+        </select>
+        <div id="courseInfoPopupStatus" className="popup-status" aria-live="polite"></div>
+        <button type="submit">Enquire Now</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  const popup = document.getElementById('courseInfoPopup');\r\n  const enquiryForm = document.getElementById('courseInfoPopupForm');\r\n  const closePopup = document.getElementById('courseInfoPopupClose');\r\n  const statusEl = document.getElementById('courseInfoPopupStatus');\r\n\r\n  if (!popup || !enquiryForm || !closePopup) {\r\n    return;\r\n  }\r\n\r\n  const setStatus = (message, type = '') => {\r\n    if (!statusEl) {\r\n      return;\r\n    }\r\n    statusEl.textContent = message;\r\n    statusEl.className = 'popup-status';\r\n    if (type) {\r\n      statusEl.classList.add(type);\r\n    }\r\n  };\r\n\r\n  const showPopup = () => popup.classList.remove('hidden');\r\n  const hidePopup = () => popup.classList.add('hidden');\r\n\r\n  const notifyBrowser = (title, body) => {\r\n    if (typeof window.showBrowserNotification === 'function') {\r\n      window.showBrowserNotification(title, body);\r\n      return;\r\n    }\r\n\r\n    if (!('Notification' in window)) {\r\n      return;\r\n    }\r\n\r\n    const fire = () => new Notification(title, { body, icon: '/assets/img/logo.png' });\r\n\r\n    if (Notification.permission === 'granted') {\r\n      fire();\r\n    } else if (Notification.permission !== 'denied') {\r\n      Notification.requestPermission().then(permission => {\r\n        if (permission === 'granted') {\r\n          fire();\r\n        }\r\n      });\r\n    }\r\n  };\r\n\r\n  const getTimestamp = () => new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });\r\n\r\n  if (!sessionStorage.getItem('popupShown')) {\r\n      setTimeout(() => {\r\n        showPopup();\r\n        sessionStorage.setItem('popupShown', 'true');\r\n      }, 30000);\r\n  }\r\n\r\n  const scriptURL = '/api/forms/book-demo';\r\n\r\n  enquiryForm.addEventListener('submit', function (e) {\r\n    e.preventDefault();\r\n\r\n    const form = new FormData(this);\r\n    const phone = String(form.get('Number') || '').replace(/\\D/g, '');\r\n\r\n    if (!this.checkValidity()) {\r\n      this.reportValidity();\r\n      return;\r\n    }\r\n\r\n    if (phone.length < 10) {\r\n      setStatus('Please enter a valid phone number.', 'is-error');\r\n      return;\r\n    }\r\n\r\n    const payload = {\r\n      sheet: 'Locations Hero Form',\r\n      timestamp: getTimestamp(),\r\n      name: String(form.get('Name') || '').trim(),\r\n      phone: String(form.get('Number') || '').trim(),\r\n      email: String(form.get('Email') || '').trim(),\r\n      course: String(form.get('Course') || '').trim(),\r\n      mode: '',\r\n      date: '',\r\n      message: '',\r\n      source: window.location.href\r\n    };\r\n\r\n    const submitBtn = this.querySelector('button[type=\"submit\"]');\r\n    submitBtn.disabled = true;\r\n    submitBtn.textContent = 'Submitting...';\r\n    setStatus('');\r\n\r\n    fetch(scriptURL, {\r\n      method: 'POST',\r\n      mode: 'no-cors',\r\n      headers: {\r\n        'Content-Type': 'text/plain;charset=utf-8'\r\n      },\r\n      body: JSON.stringify(payload)\r\n    })\r\n      .then(() => {\r\n        window.dataLayer = window.dataLayer || [];\r\n        window.dataLayer.push({\r\n          event: 'popup_form_submitted',\r\n          form_name: 'popup_enquiry',\r\n          selected_course: payload.course\r\n        });\r\n\r\n        setStatus('Thank you! We will contact you shortly.', 'is-success');\r\n        notifyBrowser('AI Submitted', 'Popup enquiry submitted successfully.');\r\n        alert(\"Thanks! We'll send you the brochure.\");\r\n        enquiryForm.reset();\r\n        hidePopup();\r\n      })\r\n      .catch(error => {\r\n        console.error(\"Submission failed:\", error);\r\n        setStatus('Error submitting form. Please try again.', 'is-error');\r\n        alert(\"Error submitting form. Please try again.\");\r\n      })\r\n      .finally(() => {\r\n        submitBtn.disabled = false;\r\n        submitBtn.textContent = 'Enquire Now';\r\n      });\r\n  });\r\n\r\n  // Close popup\r\n  closePopup.addEventListener('click', (e) => {\r\n    e.preventDefault();\r\n    hidePopup();\r\n  });\r\n});\r\n\r\n"}} />
+<nav className="LinkNav">
+<a href="https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Digital+Marketing+Courses" className="navLinks">
+<img src="./social.png" alt="Chat with DizitalAdda on WhatsApp" loading="lazy" />
+</a>
+<a href="tel:+918810606010" className="navLinks phoneA">
+<img src="./phonefinal.png" alt="Call DizitalAdda" loading="lazy" />
+</a>
+<a className="imgLink formToggle">
+<img className="linksImg" src="./form.png" alt="Send an enquiry" loading="lazy" />
+</a>
+</nav>
+
+
+<div className="formContainer">
+<form method="POST" id="contactForm">
+<button id="closeForm" className="formCardClose" type="button" aria-label="Close enquiry form">×</button>
+<div className="formCardVisual" aria-hidden="true">
+<img src="https://dizitaladda.com/pexels-rdne-7821934.jpg" alt="Course counselling" loading="lazy" />
+</div>
+<div className="formCardBody">
+<h6>Get Course Information</h6>
+<p className="formCardCopy">Fill out the form to receive our brochure and details.</p>
+<div className="containerFormFields">
+<input type="text" name="Name" placeholder="Enter Your Name..." autoComplete="name" />
+<input type="tel" name="Number" placeholder="Enter Your Number..." autoComplete="tel" required={true} />
+<input type="email" name="Email" placeholder="Enter Your Email..." autoComplete="email" required={true} />
+<select name="Course" required={true}>
+<option value="">Select Courses</option>
+<option value="Digital Marketing">Digital Marketing</option>
+<option value="Generative AI">Generative AI</option>
+<option value="Machine Learning">Machine Learning</option>
+<option value="Data Analytics">Data Analytics</option>
+<option value="Data Science">Data Science</option>
+<option value="Cyber Security">Cyber Security and Ethical Hacking</option>
+</select>
+<div className="checkboxSection">
+<input className="checkboxInput" type="checkbox" id="marketUpdates" />
+<label htmlFor="marketUpdates">I want to know what's latest in market</label>
+</div>
+<button className="submitButton" type="submit">Enquire Now</button>
+</div>
+</div>
+</form>
+</div>
+
+
+<main className="homeBanner">
+<div className="homeContainer">
+<div className="swiperSlide">
+<div className="contentLeft">
+<div className="expertContent">
+<span>Trusted By 25000+ Students Since 2009.</span>
+</div>
+<span className="lookUpBuddy">100% Placement assistance</span>
+{/* <h1>India's Best <span class="cc-highlight"> Digital Marketing Institute </span> & <span class="cc-highlight"> — AI Courses, Data Science Training</span> </h1> */}
+<h1>India's Best <span className="cc-highlight">Digital Marketing Institute</span> | <span className="cc-highlight">AI, Data Science &amp; Cyber Security</span> Courses</h1>
+<p>DizitalAdda is a skill training institute offering career-focused programs in Digital Marketing, Generative AI &amp; Prompt Engineering, Machine Learning &amp; AI, Data Science &amp; Analytics, and Cyber Security &amp; Ethical Hacking. Since 2009, the institute has trained 25,000+ students through industry-led classes, live projects, internships, and placement support with 250+ hiring partners. Courses are designed for students, graduates, and working professionals seeking practical, job-ready skills.</p>
+<span className="feelings">Join Us and be a part of Our Growing Team - Your Future is our priority</span>
+<div className="buttonContainer">
+<a className="button-animated glitch-link formToggle" data-value="READ MORE">READ MORE</a>
+<a href="#courses" className="button-animated glitch-link" data-value="OUR COURSES">OUR COURSES</a>
+</div>
+</div>
+<div className="contentRight">
+<dotlottie-wc className="displayRight" src="https://lottie.host/15082311-74ea-418e-ba8c-6f004e4da81b/s6hDyEJtIl.lottie" alt="lottie host" style={{"width":"100%","height":"100%","zIndex":"100"}} speed="1" autoPlay={true} loop={true}></dotlottie-wc>
+</div>
+<img className="imageBanner" src="./graphicsHome2.svg" alt="DizitalAdda digital marketing, AI and data science training" fetchPriority="high" decoding="async" />
+</div>
+</div>
+</main>
+
+
+<div className="courses" id="courses">
+<div className="containerCource">
+<h6 className="courseHeader">
+Explore <span className="cc-highlight">Our Course Categories</span>
+</h6>
+<div className="coursesSectionDetails">
+<p className="courseDetails">Choose your career discipline. DizitalAdda offers online tech courses across India covering Digital Marketing, AI &amp; GenAI, Data Science, Machine Learning, and Cyber Security — each with industry certifications, live projects, and 100% placement assistance for every level from beginner to expert.</p>
+<img className="RightArrow" src="./arrow_icon.svg" alt="" loading="lazy" decoding="async" />
+</div>
+{/*  Digital Marketing Courses Section  */}
+<div className="category-section">
+<h2 className="category-title firstTitle"> <span className="cc-highlight"> Digital Marketing</span> Courses</h2>
+<div className="swiper digital-marketing-swiper swiper-initialized swiper-horizontal">
+<div className="swiper-wrapper" style={{"transform":"translate3d(0px, 0px, 0px)"}}>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/expert-digital-marketing-course">
+<div className="courseCard-image-wrap">
+<img src="./coursecard/expert in Digital Marketing Course.webp" alt="Expert in Digital Marketing" title="expert in digital marketing" loading="lazy" />
+<span className="course-duration-badge">12 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Expert in Digital Marketing</h2>
+<ul>
+<li>Master SEO, Google Ads, and social media strategies</li>
+<li>Work on real campaigns and industry-based projects</li>
+<li>Ideal for beginners, business owners &amp; freelancers</li>
+<li>Learn fast, market smart, and grow your online brand</li>
+<li>Quick, practical, and tool-driven learning sessions</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/expert-digital-marketing-course">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Digital Marketing">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/advanced-digital-marketing-course">
+<div className="courseCard-image-wrap">
+<img src="./coursecard/advanced Digital Marketing Course.webp" alt="Advanced Digital Marketing course" title="advance-digital-marketing-course" loading="lazy" />
+<span className="course-duration-badge">6 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Advanced Digital Marketing</h2>
+<ul>
+<li>Master SEO, SEM, PPC &amp; social media with real projects</li>
+<li>Gain hands‑on experience using top industry tools</li>
+<li>Perfect for learners upgrading basic marketing skills</li>
+<li>Learn fast, market smart, and grow with expert guidance</li>
+<li>Practical, certification‑driven training over 6 months</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/advanced-digital-marketing-course">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Digital Marketing">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/digital-marketing-for-professional">
+<div className="courseCard-image-wrap">
+<img src="./coursecard/digital Marketing For Professionals.webp" alt="Digital Marketing for Professionals Course" title="digital marketing for professionals" loading="lazy" />
+<span className="course-duration-badge">4 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Digital Marketing for Professionals</h2>
+<ul>
+<li>Master SEO, Google &amp; Meta Ads plus analytics tools</li>
+<li>Work on real brands and live marketing campaigns</li>
+<li>Perfect for working pros, freelancers &amp; service providers</li>
+<li>Learn fast, market strategically, and boost your career</li>
+<li>Practical, tool-driven training over four months</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/digital-marketing-for-professional">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Digital Marketing">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/digital-marketing-for-beginners">
+<div className="courseCard-image-wrap">
+<img src="./coursecard/digital Marketing for Beginners.webp" alt="Digital Marketing for Beginners course" title="digital marketing for beginners course" loading="lazy" />
+<span className="course-duration-badge">3 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Digital Marketing for Beginners</h2>
+<ul>
+<li>Learn SEO, Google Ads, social media &amp; content basics</li>
+<li>Work on live campaigns and practical tool usage</li>
+<li>Perfect for freshers, small business owners &amp; newbies</li>
+<li>Learn fast, market smart, and build a strong foundation</li>
+<li>Quick, hands-on training with career placement support</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/digital-marketing-for-beginners">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Digital Marketing">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-pagination"></div>
+<div className="swiper-button-next"></div>
+<div className="swiper-button-prev"></div>
+</div>
+</div>
+{/*  AI & Data Science Courses Section  */}
+<div className="category-section">
+<h2 className="category-title"><span className="cc-highlight"> AI</span> and <span className="cc-highlight">Data Science</span> Courses</h2>
+<div className="swiper ai-data-science-swiper swiper-initialized swiper-horizontal">
+<div className="swiper-wrapper" style={{"transform":"translate3d(0px, 0px, 0px)"}}>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/diploma-in-genai-and-prompt-engineering">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/diploma_in_generative_Ai_and_prompt_engineering.webp" alt="diploma in GenAI & Prompt Engineering" title="diploma in GenAI & Prompt Engineering" loading="lazy" />
+<span className="course-duration-badge">12 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Diploma in GenAI &amp; Prompt Engineering</h2>
+<ul>
+<li>Master ReAct, LangGraph &amp; Multi-Agent AI systems</li>
+<li>Learn to architect autonomous GenAI solutions</li>
+<li>Deploy enterprise-grade AI with confidence</li>
+<li>Orchestrate intelligent agents across use cases</li>
+<li>Become the AI architect top companies want to hire</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/diploma-in-genai-and-prompt-engineering">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Generative AI">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/diploma-in-data-analytics-and-ai">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/diploma_in_data_analytics.webp" alt="diploma in Data Analytics & AI" title="diploma in Data Analytics" loading="lazy" />
+<span className="course-duration-badge">12 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Diploma in Data Analytics</h2>
+<ul>
+<li>Master data storytelling, dashboards &amp; predictive models</li>
+<li>Work on domain-specific analytics: finance, health &amp; marketing</li>
+<li>Build real-world projects with hands-on training</li>
+<li>Become a job-ready Data Analyst with a standout portfolio</li>
+<li>Learn by doing — no fluff, just results</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/diploma-in-data-analytics-and-ai">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Data Analytics">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Diploma_machine_learing.webp" alt="diploma-in-machine-learning-&-ai" title="diploma-in-machine-learning-&-ai" loading="lazy" />
+<span className="course-duration-badge">12 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Diploma in Machine Learning &amp; AI</h2>
+<ul>
+<li>Master supervised learning, neural networks &amp; MLOps</li>
+<li>Build &amp; deploy real-world ML models end-to-end</li>
+<li>Work on capstone projects that showcase your expertise</li>
+<li>Get industry-ready for core AI &amp; ML roles</li>
+<li>Includes interview prep &amp; career support</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Machine Learning">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/diploma-in-data-science-and-ai">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/diploma_in_data_science_Ai.webp" alt="diploma-in-data-science-and-ai" title="diploma-in-data-science-and-ai" loading="lazy" />
+<span className="course-duration-badge">12 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Diploma in Data Science &amp; AI</h2>
+<ul>
+<li>Master ML pipelines, deep learning, NLP &amp; data engineering</li>
+<li>Build real-world projects across the full AI workflow</li>
+<li>Graduate with a job-winning portfolio</li>
+<li>Get hands-on skills to land top-tier data &amp; AI roles</li>
+<li>Designed for future data scientists, ML engineers &amp; AI pros</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/diploma-in-data-science-and-ai">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Data Science">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/advanced-certification-in-genai-and-prompt-engineering">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Advance_Certification_in_Gen_ai_and_prompt_engineering.webp" alt="Advanced Certification in gen ai and prompt engineering" title="advanced Certification in gen AI and Promt engineering" loading="lazy" />
+<span className="course-duration-badge">6 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Advanced Certification in GenAI &amp; Prompt Engineering</h2>
+<ul>
+<li>Build AI chatbots, smart assistants &amp; real GenAI apps</li>
+<li>Learn GPT-4, RAG, LangChain &amp; Vector DBs</li>
+<li>Hands-on learning with live, job-ready projects</li>
+<li>Create a standout portfolio that speaks for you</li>
+<li>Fast learning, smarter building — no coding needed!</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/advanced-certification-in-genai-and-prompt-engineering">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Generative AI">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/advanced-certification-in-data-analytics-and-ai">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Advance_certification_in_Data_Analystics_andAi.webp" alt="advanced-certification-in-data-analytics-and-ai" title="advanced-certification-in-data-analytics-and-ai" loading="lazy" />
+<span className="course-duration-badge">6 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Advanced Certification in Data Analytics and AI</h2>
+<ul>
+<li>Master Excel, SQL, Python, Power BI &amp; Tableau</li>
+<li>Analyze data to drive smarter business decisions</li>
+<li>Ideal for beginners &amp; career upskillers</li>
+<li>Get job-ready for data-driven roles</li>
+<li>Build real-world projects to showcase your skills</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/advanced-certification-in-data-analytics-and-ai">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Data Analytics">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/advanced-certification-in-machine-learning-and-ai">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Advance_certification_in_machine_learning_and_Ai.webp" alt="advanced-certification-in-machine-learning-and-ai" title="advanced-certification-in-machine-learning-and-ai" loading="lazy" />
+<span className="course-duration-badge">6 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Advanced Certification in Machine Learning &amp; AI</h2>
+<ul>
+<li>Build &amp; train ML models with Python, scikit-learn &amp; TensorFlow</li>
+<li>Deploy real-world AI applications end-to-end</li>
+<li>Solve real business challenges with hands-on projects</li>
+<li>Perfect for aspiring AI engineers &amp; tech professionals</li>
+<li>Create a portfolio that proves you're ML-ready</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/advanced-certification-in-machine-learning-and-ai">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Machine Learning">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/advanced-certification-in-data-science-and-ai">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Advance_cerfication_in_data_science_and_ai.webp" alt="advanced-certification-in-data-science-and-ai" title="advanced-certification-in-data-science-and-ai" loading="lazy" />
+<span className="course-duration-badge">6 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Advanced Certification in Data Science &amp; AI</h2>
+<ul>
+<li>Learn Python, ML, statistics &amp; real-world AI use cases</li>
+<li>Build a strong foundation in data science essentials</li>
+<li>Perfect for aspiring data scientists, analysts &amp; tech PMs</li>
+<li>Work on hands-on projects to apply your skills</li>
+<li>Get job-ready in just 6 months</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/advanced-certification-in-data-science-and-ai">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Data Science">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/certification-in-data-analytics-and-ai">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Certification_in_data_analytics_and_ai.webp" alt="certification-in-data-analytics-and-ai" title="certification-in-data-analytics-and-ai" loading="lazy" />
+<span className="course-duration-badge">3 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Certification in Data Analytics and AI</h2>
+<ul>
+<li>Learn Python, Excel, SQL &amp; Power BI for analysis</li>
+<li>Explore data cleaning, dashboards &amp; AI basics</li>
+<li>Perfect for freshers, analysts &amp; career switchers</li>
+<li>Build smart insights with tools used in real jobs</li>
+<li>Quick, practical, and project-based training</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/certification-in-data-analytics-and-ai">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Data Analytics">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-pagination"></div>
+<div className="swiper-button-next"></div>
+<div className="swiper-button-prev"></div>
+</div>
+</div>
+{/*  Cyber Security Courses Section  */}
+<div className="category-section">
+<h2 className="category-title"><span className="cc-highlight"> Cyber Security </span> Courses</h2>
+<div className="swiper cyber-security-swiper swiper-initialized swiper-horizontal">
+<div className="swiper-wrapper" style={{"transform":"translate3d(0px, 0px, 0px)"}}>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Foundation in Cyber Security and Ethical Hacking.webp" alt="Foundation in Cyber Security and Ethical Hacking Course" title="Foundation in Cyber Security and Ethical Hacking" loading="lazy" decoding="async" />
+<span className="course-duration-badge">4 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Foundation in Cyber Security and Ethical Hacking</h2>
+<ul>
+<li>Explore Cyber World, Networking &amp; Linux</li>
+<li>Dive into real-world cyber attacks in just 30 days</li>
+<li>Perfect for beginners, cyber enthusiasts &amp; whoever wants to protect their data present online</li>
+<li>Learn fast, build smart, and ride the Cyber wave</li>
+<li>Quick, practical, and hands-on learning</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Cyber Security">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Advanced Certification in Cyber Security and Ethical Hacking.webp" alt="advanced-certification-in-cyber-security-and-ethical-hacking" title="advanced-certification-in-cyber-security-and-ethical-hacking" loading="lazy" decoding="async" />
+<span className="course-duration-badge">6 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Advanced Certification in Cyber Security and Ethical Hacking</h2>
+<ul>
+<li>Explore Python, Ethical Hacking &amp; Digital, Cyber Forensics</li>
+<li>Dive into real-world Cyber Security use cases</li>
+<li>Perfect for Hacking Enthusiasts, Students &amp; Learners</li>
+<li>Learn fast, build smart, and grow with expert guidance</li>
+<li>Certified training with Capstone Project</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Cyber Security">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Expert Training in Cyber Security and Ethical Hacking.webp" alt="expert-training-in-cyber-security-and-ethical-hacking" title="expert-training-in-cyber-security-and-ethical-hacking" loading="lazy" decoding="async" />
+<span className="course-duration-badge">12 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Expert Training In Cyber Security and Ethical Hacking</h2>
+<ul>
+<li>Explore VAPT, WebPT, Mobile PT and much more</li>
+<li>Perfect for career enthusiasts in the field of Cyber Security &amp; Ethical Hacking</li>
+<li>Learn industry relevant skills with expert mentors</li>
+<li>Complete Career Guidance with resume, LinkedIn and GitHub Development</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Cyber Security">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/certification-in-digital-forensic-and-cyber-investigation">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Certiication in Digital Forensic and Cyber Investigation.webp" alt="certification-in-digital-forensic-and-cyber-investigation" title="certification-in-digital-forensic-and-cyber-investigation" loading="lazy" decoding="async" />
+<span className="course-duration-badge">4 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Certification in Digital Forensic and Cyber Investigation</h2>
+<ul>
+<li>Master Digital Forensics &amp; Cyber Forensics</li>
+<li>Dive into real-world projects of cyber world</li>
+<li>Perfect for investigators and Cyber Enthusiasts</li>
+<li>Learn fast and Develop the skills</li>
+<li>Quick, practical and packed up with capstone project</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/certification-in-digital-forensic-and-cyber-investigation">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Cyber Security">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-slide">
+<div className="courseCard" data-url="https://dizitaladda.com/courses/expert-traning-in-bug-bounty">
+<div className="courseCard-image-wrap">
+<img src="./imagesCards/Expert Training in Bug Bounty.webp" alt="expert-Training-in-bug-bounty" title="expert-Training-in-bug-bounty" loading="lazy" decoding="async" />
+<span className="course-duration-badge">4 Months</span>
+</div>
+<div className="dataContainerCouses">
+<h2>Expert Training in Bug Bounty</h2>
+<ul>
+<li>Learn bug bounty hunting on HackerOne &amp; Bugcrowd platforms</li>
+<li>Master OWASP Top 10 vulnerabilities and real-world exploitation</li>
+<li>Practice on legal lab environments — TryHackMe &amp; Hack The Box</li>
+<li>Submit valid vulnerability reports and earn bounty rewards</li>
+<li>Build a public bug bounty portfolio recognised by top companies</li>
+</ul>
+<div className="tags-bottom-row">
+<div className="tags-bottom-actions">
+<a className="read-more-btn" href="https://dizitaladda.com/courses/expert-traning-in-bug-bounty">Details</a>
+<a className="buttonEnquiry enrollNowBtn" href="javascript:void(0)" data-course="Cyber Security">ENROLL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="swiper-pagination"></div>
+<div className="swiper-button-next"></div>
+<div className="swiper-button-prev"></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div className="introductionSection">
+<img src="./graphic21.svg" className="graphicINtro" alt="" loading="lazy" decoding="async" />
+<div className="containerIntro">
+<div className="graphicsSection">
+<img className="graphicTopImage" src="./psuedo2.webp" alt="Live classroom training at DizitalAdda Delhi" loading="lazy" decoding="async" />
+<img className="graphicBottomImage" src="./images/pexels-nicole-berro-991141-2393793.webp" alt="Student studying digital marketing" loading="lazy" decoding="async" />
+</div>
+<div className="dataSection">
+<img className="graphics1" src="./arrow_icon.svg" alt="" loading="lazy" decoding="async" />
+<h6>Why<span className="cc-highlight"> DizitalAdda is India's Most Trusted</span> Career Program</h6>
+<div className="dataCards">
+<div className="dataCard slide-up-section">
+<div className="iconDiv">
+<img className="iconDivIcons" src="./user-icon-svgrepo-com.svg" alt="" loading="lazy" decoding="async" />
+</div>
+<div className="dataDiv">
+<h2>AI-Integrated Curriculum Across All Courses</h2>
+<p>Every program includes hands-on training in 60+ AI tools, including ChatGPT, Google Gemini, Perplexity, and DALL·E, helping students build industry-ready AI skills.</p>
+</div>
+</div>
+<div className="dataCard slide-up-section">
+<div className="iconDiv">
+<img className="iconDivIcons" src="./AnalysisIcon.svg" alt="" loading="lazy" decoding="async" />
+</div>
+<div className="dataDiv">
+<h2>Maximum 15 Students Per Batch</h2>
+<p>Small batch sizes ensure personalised mentoring, one-on-one guidance, and dedicated career support for every student.</p>
+</div>
+</div>
+<div className="dataCard slide-up-section">
+<div className="iconDiv">
+<img className="iconDivIcons" src="./Scholar_icon.svg" alt="" loading="lazy" decoding="async" />
+</div>
+<div className="dataDiv">
+<h2>10 Live Brand Campaign Projects Per Student</h2>
+<p>From SEO and Google Ads to GenAI and Ethical Hacking, every student completes 10 live projects to build a recruiter-ready portfolio.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section className="talk-section">
+<div className="talk-container">
+<div className="talk-image">
+<img src="/dizitaladda.webp" alt="DizitalAdda institute campus in Greater Kailash, New Delhi" loading="lazy" decoding="async" />
+</div>
+<div className="talk-content">
+<h2>Talk to Us in Person</h2>
+<p>We’d love to meet you! Visit our center to get personalized guidance or reach out to us on WhatsApp for quick info.</p>
+<div className="talk-buttons">
+<a href="https://www.google.com/maps/place/Dizitaladda/@28.541963,77.2381471,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce1b8032e0e7f:0x8d8484c29620d0c0!8m2!3d28.541963!4d77.240722!16s%2Fg%2F11ts443c61?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" className="btn btn-primary">Visit Us</a>
+<a href="https://wa.me/918810606010?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20visiting%20DizitalAdda%20in%20person.%20Can%20you%20share%20the%20address%20and%20timings%3F\r\n" target="_blank" rel="noopener" className="btn btn-secondary">More Info</a>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="refer-earn" className="refer-earn-section">
+<div className="refer-wrapper">
+{/*  Left Content  */}
+<div className="refer-left">
+<h2>Refer a Friend to Any Course — Earn Rewards on Every Enrolment</h2>
+<p>DizitalAdda's Refer &amp; Earn program rewards students and alumni for referring new learners to any of our career-focused courses, including Digital Marketing, AI, Data Science, Machine Learning, and Cyber Security. Earn cashback, discounts, or exclusive rewards on every successful enrolment, with no limit on referrals. Simply share your referral, and start earning as more learners join through your network.</p>
+<div className="refer-buttons">
+<a href="https://wa.me/918810606010?text=Hi%2C%20I%20want%20to%20refer%20Someone.%0A%0AName%3A%20[Friend%20Name]%0AContact%3A%20[Phone%20Number]%0ACourse%20Interested%3A%20[Course%20Name]" className="btn refer-btn">Refer and Earn</a>
+<a href="https://wa.me/918810606010?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Refer%20and%20Earn%20program%20at%20DizitalAdda.%20How%20can%20I%20refer%20my%20friends%20and%20what%20rewards%20do%20I%20get%3F" className="btn track-btn">More Info</a>
+</div>
+</div>
+{/*  Right Image  */}
+<div id="animation-placeholder" style={{"width":"300px","height":"300px"}}>
+<noscript>
+<img src="/static-banner.svg" width="300" height="300" alt="Refer and earn program" loading="lazy" style={{"objectFit":"contain"}} />
+</noscript>
+</div>
+</div>
+
+</section>
+
+
+<section className="career-outcome dark-theme">
+<h2>Build Skills That Companies Are Looking For</h2>
+<p>DizitalAdda's career-focused courses are aligned with the skill requirements of leading technology, marketing, analytics, and cybersecurity employers. Graduates from Digital Marketing, Generative AI, Data Science, Machine Learning, Data Analytics, and Cyber Security programs receive placement support through a network of 250+ hiring partners, including companies such as Flipkart, Myntra, Nykaa, HiveMinds, Coursera, Zouk, and Sleepy Owl.
+</p>
+<div className="company-logo-grid">
+<img src="./images/TCS-logo-white.svg" alt="TCS" loading="lazy" decoding="async" />
+<img src="./images/wipro-svgrepo-com.svg" alt="Wipro" loading="lazy" decoding="async" />
+<img src="./images/google-2015-logo-svgrepo-com.svg" alt="Google" loading="lazy" decoding="async" />
+<img src="./images/microsoft-logo-svgrepo-com.svg" alt="Microsoft" loading="lazy" decoding="async" />
+<img src="./images/infosys-svgrepo-com.svg" alt="Infosys" loading="lazy" decoding="async" />
+</div>
+<p className="disclaimer">
+*Companies mentioned are examples of industry relevance. Logos shown for aspirational and educational purposes only.
+</p>
+</section>
+
+
+{/*  Certification Section  */}
+
+
+<section className="cert-section bg-aurora">
+<div className="aurora-blob aurora-blob-1"></div>
+<div className="aurora-blob aurora-blob-2"></div>
+<div className="aurora-blob aurora-blob-3"></div>
+<div className="cert-inner">
+{/*  Left: Text Content  */}
+<div className="cert-content">
+<p className="cert-eyebrow">Digital Marketing Certification</p>
+<h2 className="cert-title">Dizitaladda's <span className="cc-highlight">Digital Marketing Course</span><br />in India Helps You <span className="cc-highlight">Get Hired!</span></h2>
+<div className="cert-underline"></div>
+<h3 className="cert-sub-heading">About Dizitaladda's <span className="cc-highlight">Certification</span></h3>
+<p className="cert-para">DizitalAdda's <strong>Digital Marketing Certification</strong> is awarded after completing India's most comprehensive 12-month digital marketing programme — and it is recognised across the industry because it comes with a verified portfolio of real campaign results, not just a score on a test. Unlike generic online certificates, this credential is backed by live project evidence that every recruiter can verify.</p>
+<p className="cert-para">The certification covers every core digital marketing skill: SEO, Paid Marketing, Google Ads, Meta Ads, Social Media Marketing, Content Writing, Email Automation, Analytics, and AI tools in marketing. Your certification portfolio includes 10+ credentials — from DizitalAdda, Google, Meta Blueprint, HubSpot, Semrush, Skill India, and Digital India — each tied to a specific module you completed and a skill you demonstrated on a live campaign.</p>
+<p className="cert-para">This is not just another line on your CV — it is your launchpad to roles paying ₹4.5–10.05 LPA at companies like Flipkart, Growisto, Myntra, Nykaa, and 250+ more. DizitalAdda graduates have a <strong>97% placement rate</strong> — because this certification tells recruiters exactly what you can deliver.</p>
+</div>
+{/*  Right: Certificate Carousel  */}
+<div className="cert-carousel-wrap">
+<div className="cert-carousel" id="certCarousel">
+<div className="cert-slide active">
+<img src="courses/images/certificates/1.webp" alt="Certificate 1" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/2.webp" alt="Certificate 2" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/3.webp" alt="Certificate 3" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/4.webp" alt="Certificate 4" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/5.webp" alt="Certificate 5" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/6.webp" alt="Certificate 6" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/7.jpeg" alt="Certificate 7" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/8.jpeg" alt="Certificate 8" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/9.jpeg" alt="Certificate 9" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/10.jpeg" alt="Certificate 10" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/11.jpeg" alt="Certificate 11" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/12.jpeg" alt="Certificate 12" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/13.jpeg" alt="Certificate 13" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/14.jpeg" alt="Certificate 14" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/15.jpeg" alt="Certificate 15" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/16.jpeg" alt="Certificate 16" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/17.jpeg" alt="Certificate 17" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/18.jpeg" alt="Certificate 18" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/19.jpeg" alt="Certificate 19" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/20.jpeg" alt="Certificate 20" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/21.jpeg" alt="Certificate 21" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/22.jpeg" alt="Certificate 22" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/23.jpeg" alt="Certificate 23" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/certificates/24.jpeg" alt="Certificate 24" className="cert-img" loading="lazy" />
+</div>
+</div>{/*  /.cert-carousel  */}
+</div>{/*  /.cert-carousel-wrap  */}
+</div>{/*  /.cert-inner  */}
+</section>
+{/*  /.cert-section  */}
+
+
+{/*  Meet Our Mentors Section  */}
+
+
+<section className="mentors-section bg-mesh">
+<div className="mentors-inner">
+<div className="mentors-header">
+<p className="mentors-eyebrow">Learn From The Best</p>
+<h2 className="mentors-title">Learn From an Industry<br /><span className="cc-highlight">Expert</span> Mentors</h2>
+<p className="mentors-subtitle">At DizitalAdda, every trainer across our digital marketing certification courses, AI courses, data science training programmes, machine learning certification tracks, and ethical hacking training labs is a full-time industry professional — not a freelance educator or retired academic. Your instructors run live Google and Meta Ads campaigns, deploy production AI models, conduct real penetration tests, and analyse live data pipelines every day. What they teach on Monday reflects what the industry demanded last week.</p>
+</div>
+<div className="mentors-carousel-wrap">
+<div className="mentors-track" id="mentorsTrack">
+<div className="mentor-card">
+<div className="mentor-avatar-wrap">
+<img src="courses/images/trainer/Gulshan.png" alt="Dr. Gulshan Kumar" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
+<div className="mentor-avatar-ring"></div>
+</div>
+<div className="mentor-role">Founder &amp; Head Trainer • Digital Marketing • Foundation Classes</div>
+<h3 className="mentor-name">Dr. Gulshan Kumar</h3>
+<p className="mentor-exp"><strong>10+ years of experience in Digital Marketing and Data Science</strong></p>
+<p className="mentor-desc">Dr. Gulshan Kumar is the Training Head with over 10 years of experience in digital marketing and data science. He specializes in building strong fundamentals for students and has expertise in marketing strategies and content writing. His teaching approach is simple, practical, and beginner-friendly.</p>
+<div className="mentor-tags">
+<span>Digital Marketing </span><span>Data Science</span><span>Marketing Strategy</span>
+</div>
+</div>
+<div className="mentor-card">
+<div className="mentor-avatar-wrap">
+<img src="courses/images/trainer/Ram.png" alt="Mr. Ram kumar" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
+<div className="mentor-avatar-ring" style={{"borderColor":"#06b6d4"}}></div>
+</div>
+<div className="mentor-role">Lead Trainer – WordPress Website • Affiliate Marketing • E-commerce Marketing</div>
+<h3 className="mentor-name">Mr. Ram kumar</h3>
+<p className="mentor-exp"><strong>12+ years of experience in Web Development and Affiliate Marketing</strong></p>
+<p className="mentor-desc">Mr. Ram Kumar is a Lead Trainer with over 12 years of experience in web development and affiliate marketing. He has strong expertise in building WordPress and e-commerce websites and helps students learn through real projects and practical training.</p>
+<div className="mentor-tags">
+<span>Wordpress Website</span><span>E-commerce Website</span><span>Affiliate Marketing</span><span>Bootstrap</span>
+</div>
+</div>
+<div className="mentor-card">
+<div className="mentor-avatar-wrap">
+<img src="courses/images/trainer/Saurabh.png" alt="Mr. Saurabh kumar" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
+<div className="mentor-avatar-ring" style={{"borderColor":"#10b981"}}></div>
+</div>
+<div className="mentor-role">Trainer – Performance Marketing • Paid Ads • Media Buying</div>
+<h3 className="mentor-name">Mr. Saurabh kumar</h3>
+<p className="mentor-exp"><strong>15+ years of experience in Performance Marketing and Paid Advertising</strong></p>
+<p className="mentor-desc">Mr. Saurabh Kumar is a highly experienced trainer with 15+ years in performance marketing. He has managed large-scale advertising campaigns, including platforms like Jio Hotstar and LinkedIn Ads, with over ₹10 crore ad spend experience. He focuses on real campaign strategies and ROI-driven marketing.</p>
+<div className="mentor-tags">
+<span>Performance Marketing</span><span>Google Ads</span><span>Meta Ads</span><span>LinkedIn Ads</span><span>Media Buying</span><span>Campaign Optimization</span>
+</div>
+</div>
+<div className="mentor-card">
+<div className="mentor-avatar-wrap">
+<img src="courses/images/trainer/shagun.png" alt="Miss. Shagun Srivastav" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
+<div className="mentor-avatar-ring" style={{"borderColor":"#f59e0b"}}></div>
+</div>
+<div className="mentor-role">Trainer – Data Science • AI • Automation</div>
+<h3 className="mentor-name">Miss. Shagun Srivastav</h3>
+<p className="mentor-exp"><strong>7+ years of experience in Data Science and AI Technologies</strong></p>
+<p className="mentor-desc">Miss Shagun Srivastava is a data science and AI trainer with 7+ years of experience. She teaches data analytics, generative AI, and automation tools. Her focus is on helping students understand real-world applications of AI and build practical skills.</p>
+<div className="mentor-tags">
+<span>Data Science</span><span>Data Analytics</span><span>Generative AI</span><span>AI Automation</span><span>AI Agents</span>
+</div>
+</div>
+<div className="mentor-card">
+<div className="mentor-avatar-wrap">
+<img src="courses/images/trainer/Ravi.png" alt="Mr. Ravi kumar" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
+<div className="mentor-avatar-ring" style={{"borderColor":"#3b82f6"}}></div>
+</div>
+<div className="mentor-role">Trainer • SEO Specialist • Keyword Research • Analytics</div>
+<h3 className="mentor-name">Mr. Ravi kumar</h3>
+<p className="mentor-exp"><strong>7+ years of experience in Search Engine Optimization</strong></p>
+<p className="mentor-desc">Mr. Ravi Kumar is an SEO trainer with 7+ years of experience in search engine optimization. He specializes in keyword research, website optimization, and analytics tools. He helps students understand how to rank websites and improve online visibility.</p>
+<div className="mentor-tags">
+<span>SEO</span><span>Keyword Research</span><span>Google Analytics</span><span>Search Console</span>
+</div>
+</div>
+<div className="mentor-card">
+<div className="mentor-avatar-wrap">
+<img src="courses/images/trainer/Kaushal.png" alt="Mr. Kaushal" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
+<div className="mentor-avatar-ring" style={{"borderColor":"#ef4444"}}></div>
+</div>
+<div className="mentor-role">Trainer – Local SEO • Google Business Profile • Paid Ads</div>
+<h3 className="mentor-name">Mr. Kaushal</h3>
+<p className="mentor-exp"><strong>5+ years of experience in Local Marketing and Paid Advertising</strong></p>
+<p className="mentor-desc">Mr. Kaushal is a trainer with 5+ years of experience in local SEO and paid marketing. He specializes in Google Business Profile optimization, local search ads, and data scraping techniques to generate leads for businesses.</p>
+<div className="mentor-tags">
+<span>Google Business Profile (GBP)</span><span>Data Scraping</span><span>Meta Ads</span><span>Local Search Ads</span>
+</div>
+</div>
+<div className="mentor-card">
+<div className="mentor-avatar-wrap">
+<img src="courses/images/trainer/deepanshu.jpeg" alt="Mr. Deepanshu soni" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
+<div className="mentor-avatar-ring" style={{"borderColor":"#14b8a6"}}></div>
+</div>
+<div className="mentor-role">Trainer – Data Analytics • Web Development</div>
+<h3 className="mentor-name">Mr. Deepanshu soni</h3>
+<p className="mentor-exp"><strong>5+ years of experience in Data Analytics and Web Development</strong></p>
+<p className="mentor-desc">Mr. Deepanshu Soni is a trainer with 5+ years of experience in data analytics and web development. He teaches both frontend and backend technologies and helps students build full projects using modern tools and frameworks.</p>
+<div className="mentor-tags">
+<span>SQL</span><span>Python</span><span>Power BI</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+</div>
+</div>
+<div className="mentor-card">
+<div className="mentor-avatar-wrap">
+<img src="courses/images/trainer/Govind.png" alt="Mr. Govind Bisht" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
+<div className="mentor-avatar-ring" style={{"borderColor":"#8b5cf6"}}></div>
+</div>
+<div className="mentor-role">Trainer – Search AI • SEO • AI Optimization</div>
+<h3 className="mentor-name">Mr. Govind Bisht</h3>
+<p className="mentor-exp"><strong>3+ years of experience in Search AI and SEO</strong></p>
+<p className="mentor-desc">Mr. Govind Bisht is a trainer specializing in Search AI and modern SEO techniques. He focuses on AI-powered search strategies, including AI Overviews, AEO, GEO, and LLM optimization, helping students understand the future of search engines.</p>
+<div className="mentor-tags">
+<span>Search AI</span><span>SEO</span><span>AI Overviews</span><span>AEO</span><span>GEO</span><span>LLMO</span>
+</div>
+</div>
+</div>{/*  /.mentors-track  */}
+</div>{/*  /.mentors-carousel-wrap  */}
+<div className="mentors-carousel-controls">
+<button className="mentors-carousel-btn" id="mentorsPrevBtn" aria-label="Previous mentor" type="button">‹</button>
+<div className="mentors-dots" id="mentorsDots"></div>
+<button className="mentors-carousel-btn" id="mentorsNextBtn" aria-label="Next mentor" type="button">›</button>
+</div>
+</div>{/*  /.mentors-inner  */}
+</section>
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\n(function(){\r\nvar track = document.getElementById('mentorsTrack');\r\nvar prevBtn = document.getElementById('mentorsPrevBtn');\r\nvar nextBtn = document.getElementById('mentorsNextBtn');\r\nvar dotsWrap = document.getElementById('mentorsDots');\r\nif (!track) return;\r\nvar cards = track.querySelectorAll('.mentor-card');\r\nvar totalCards = cards.length;\r\nvar currentIndex = 0;\r\nfunction visibleCount() {\r\nvar w = window.innerWidth;\r\nif (w >= 1100) return 4;\r\nif (w >= 700) return 2;\r\nreturn 1;\r\n}\r\nfunction buildDots() {\r\ndotsWrap.innerHTML = '';\r\nvar pages = Math.ceil(totalCards / visibleCount());\r\nfor (var i = 0; i < pages; i++) {\r\nvar btn = document.createElement('button');\r\nbtn.className = 'mentors-dot' + (i === 0 ? ' active' : '');\r\nbtn.setAttribute('aria-label', 'Go to page ' + (i + 1));\r\nbtn.dataset.page = i;\r\nbtn.addEventListener('click', function(){\r\ngoTo(+this.dataset.page * visibleCount());\r\nrestartAuto();\r\n});\r\ndotsWrap.appendChild(btn);\r\n}\r\n}\r\nfunction updateDots() {\r\nvar vc = visibleCount();\r\nvar activePage = Math.round(currentIndex / vc);\r\nvar allDots = dotsWrap.querySelectorAll('.mentors-dot');\r\nallDots.forEach(function(d, i){\r\nd.classList.toggle('active', i === activePage);\r\n});\r\n}\r\nfunction goTo(index) {\r\nvar vc = visibleCount();\r\nvar maxIndex = totalCards - vc;\r\ncurrentIndex = Math.max(0, Math.min(index, maxIndex));\r\nvar gap = 24;\r\nvar offset = currentIndex * (cards[0].offsetWidth + gap);\r\ntrack.style.transform = 'translateX(-' + offset + 'px)';\r\nprevBtn.disabled = (currentIndex === 0);\r\nnextBtn.disabled = (currentIndex >= totalCards - vc);\r\nupdateDots();\r\n}\r\nprevBtn.addEventListener('click', function(){\r\ngoTo(currentIndex - visibleCount());\r\nrestartAuto();\r\n});\r\nnextBtn.addEventListener('click', function(){\r\ngoTo(currentIndex + visibleCount());\r\nrestartAuto();\r\n});\r\nvar autoTimer = null;\r\nfunction restartAuto() {\r\nif (autoTimer) clearInterval(autoTimer);\r\nif (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;\r\nautoTimer = setInterval(function() {\r\nvar vc = visibleCount();\r\nvar next = currentIndex + vc;\r\nif (next >= totalCards) next = 0;\r\ngoTo(next);\r\n}, 3500);\r\n}\r\ntrack.addEventListener('mouseenter', function(){ if (autoTimer) clearInterval(autoTimer); });\r\ntrack.addEventListener('mouseleave', restartAuto);\r\ntrack.addEventListener('touchstart', function(){ if (autoTimer) clearInterval(autoTimer); }, { passive: true });\r\ntrack.addEventListener('touchend', restartAuto, { passive: true });\r\nwindow.addEventListener('resize', function(){\r\nbuildDots();\r\ngoTo(0);\r\nrestartAuto();\r\n});\r\nbuildDots();\r\ngoTo(0);\r\nrestartAuto();\r\n})();\r\n"}} />
+
+
+{/*  HD video thumbnails: tries the sharpest picture first.
+     1st: full-HD portrait picture (for YouTube Shorts)
+     2nd: HD 1280px picture
+     3rd: normal picture (always exists, used only as a backup)  */}
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\nfunction ytNextThumb(img) {\r\nvar order = ['oar2', 'maxresdefault', 'sddefault', 'hqdefault'];\r\nvar now = order.indexOf(img.src.split('/').pop().replace('.jpg', ''));\r\nif (now < order.length - 1) {\r\nimg.src = img.src.replace(order[now] + '.jpg', order[now + 1] + '.jpg');\r\n}\r\n}\r\nfunction ytCheckThumb(img) {\r\n/* YouTube sometimes sends a tiny grey picture instead of an error */\r\nif (img.naturalWidth > 0 && img.naturalWidth < 200) { ytNextThumb(img); }\r\n}\r\n"}} />
+
+
+{/*  Students Testimonials Section  */}
+
+
+<section className="testimonials-section bg-aurora" id="testimonials">
+<div className="aurora-blob aurora-blob-1"></div>
+<div className="aurora-blob aurora-blob-2"></div>
+<div className="aurora-blob aurora-blob-3"></div>
+<div className="testimonials-inner">
+<div className="testimonials-header">
+<p className="testimonials-eyebrow">Real Stories</p>
+<h2 className="testimonials-title">Students <span className="cc-highlight">Testimonials</span></h2>
+<div className="testimonials-underline"></div>
+</div>
+{/*  Videos Carousel  */}
+<div className="testimonials-carousel-wrapper">
+<div className="testimonials-track" id="testimonialsTrack">
+<div className="testimonial-card">
+<div className="testimonial-video-wrap yt-lite" data-id="KFWyifEYWyU" data-title="Student Testimonial 1">
+<img src="https://i.ytimg.com/vi/KFWyifEYWyU/oar2.jpg" data-legacy-onerror={"ytNextThumb(this)"} data-legacy-onload={"ytCheckThumb(this)"} alt="DizitalAdda student testimonial 1 video" loading="lazy" decoding="async" width="1080" height="1920" />
+<button className="yt-play" type="button" aria-label="Play Student Testimonial 1"></button>
+</div>
+</div>
+<div className="testimonial-card">
+<div className="testimonial-video-wrap yt-lite" data-id="5Ky9myAg6a8" data-title="Student Testimonial 2">
+<img src="https://i.ytimg.com/vi/5Ky9myAg6a8/oar2.jpg" data-legacy-onerror={"ytNextThumb(this)"} data-legacy-onload={"ytCheckThumb(this)"} alt="DizitalAdda student testimonial 2 video" loading="lazy" decoding="async" width="1080" height="1920" />
+<button className="yt-play" type="button" aria-label="Play Student Testimonial 2"></button>
+</div>
+</div>
+<div className="testimonial-card">
+<div className="testimonial-video-wrap yt-lite" data-id="0Y0wxv9Hrvc" data-title="Student Testimonial 3">
+<img src="https://i.ytimg.com/vi/0Y0wxv9Hrvc/oar2.jpg" data-legacy-onerror={"ytNextThumb(this)"} data-legacy-onload={"ytCheckThumb(this)"} alt="DizitalAdda student testimonial 3 video" loading="lazy" decoding="async" width="1080" height="1920" />
+<button className="yt-play" type="button" aria-label="Play Student Testimonial 3"></button>
+</div>
+</div>
+<div className="testimonial-card">
+<div className="testimonial-video-wrap yt-lite" data-id="93nJRCQduxg" data-title="Student Testimonial 4">
+<img src="https://i.ytimg.com/vi/93nJRCQduxg/oar2.jpg" data-legacy-onerror={"ytNextThumb(this)"} data-legacy-onload={"ytCheckThumb(this)"} alt="DizitalAdda student testimonial 4 video" loading="lazy" decoding="async" width="1080" height="1920" />
+<button className="yt-play" type="button" aria-label="Play Student Testimonial 4"></button>
+</div>
+</div>
+<div className="testimonial-card">
+<div className="testimonial-video-wrap yt-lite" data-id="EdZT-if9tFU" data-title="Student Testimonial 5">
+<img src="https://i.ytimg.com/vi/EdZT-if9tFU/oar2.jpg" data-legacy-onerror={"ytNextThumb(this)"} data-legacy-onload={"ytCheckThumb(this)"} alt="DizitalAdda student testimonial 5 video" loading="lazy" decoding="async" width="1080" height="1920" />
+<button className="yt-play" type="button" aria-label="Play Student Testimonial 5"></button>
+</div>
+</div>
+<div className="testimonial-card">
+<div className="testimonial-video-wrap yt-lite" data-id="gu8znBBgSvw" data-title="Student Testimonial 6">
+<img src="https://i.ytimg.com/vi/gu8znBBgSvw/oar2.jpg" data-legacy-onerror={"ytNextThumb(this)"} data-legacy-onload={"ytCheckThumb(this)"} alt="DizitalAdda student testimonial 6 video" loading="lazy" decoding="async" width="1080" height="1920" />
+<button className="yt-play" type="button" aria-label="Play Student Testimonial 6"></button>
+</div>
+</div>
+<div className="testimonial-card">
+<div className="testimonial-video-wrap yt-lite" data-id="PbKg7zUPGoc" data-title="Student Testimonial 7">
+<img src="https://i.ytimg.com/vi/PbKg7zUPGoc/oar2.jpg" data-legacy-onerror={"ytNextThumb(this)"} data-legacy-onload={"ytCheckThumb(this)"} alt="DizitalAdda student testimonial 7 video" loading="lazy" decoding="async" width="1080" height="1920" />
+<button className="yt-play" type="button" aria-label="Play Student Testimonial 7"></button>
+</div>
+</div>
+<div className="testimonial-card">
+<div className="testimonial-video-wrap yt-lite" data-id="z4vwrPjR2PA" data-title="Student Testimonial 8">
+<img src="https://i.ytimg.com/vi/z4vwrPjR2PA/oar2.jpg" data-legacy-onerror={"ytNextThumb(this)"} data-legacy-onload={"ytCheckThumb(this)"} alt="DizitalAdda student testimonial 8 video" loading="lazy" decoding="async" width="1080" height="1920" />
+<button className="yt-play" type="button" aria-label="Play Student Testimonial 8"></button>
+</div>
+</div>
+</div>{/*  /.testimonials-track  */}
+</div>{/*  /.testimonials-carousel-wrapper  */}
+<div className="testimonials-carousel-controls">
+<button className="testimonials-btn" id="testimonialsPrevBtn" aria-label="Previous" type="button">‹</button>
+<div className="testimonials-dots" id="testimonialsDots"></div>
+<button className="testimonials-btn" id="testimonialsNextBtn" aria-label="Next" type="button">›</button>
+</div>
+</div>{/*  /.testimonials-inner  */}
+</section>
+{/*  /.testimonials-section  */}
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\n(function(){\r\nvar track    = document.getElementById('testimonialsTrack');\r\nvar prevBtn  = document.getElementById('testimonialsPrevBtn');\r\nvar nextBtn  = document.getElementById('testimonialsNextBtn');\r\nvar dotsWrap = document.getElementById('testimonialsDots');\r\nif (!track) return;\r\nvar cards = track.querySelectorAll('.testimonial-card');\r\nvar total = cards.length;\r\nvar current = 0;\r\nvar gap = 20;\r\nfunction visibleCount() {\r\nvar w = window.innerWidth;\r\nif (w >= 1100) return 4;\r\nif (w >= 700)  return 2;\r\nreturn 1;\r\n}\r\nfunction buildDots() {\r\ndotsWrap.innerHTML = '';\r\nvar pages = Math.ceil(total / visibleCount());\r\nfor (var i = 0; i < pages; i++) {\r\nvar btn = document.createElement('button');\r\nbtn.className = 'testimonials-dot' + (i === 0 ? ' active' : '');\r\nbtn.setAttribute('aria-label', 'Page ' + (i + 1));\r\nbtn.dataset.page = i;\r\nbtn.addEventListener('click', function(){ goTo(+this.dataset.page * visibleCount()); });\r\ndotsWrap.appendChild(btn);\r\n}\r\n}\r\nfunction updateDots() {\r\nvar activePage = Math.round(current / visibleCount());\r\ndotsWrap.querySelectorAll('.testimonials-dot').forEach(function(d, i){\r\nd.classList.toggle('active', i === activePage);\r\n});\r\n}\r\nfunction goTo(index) {\r\nvar vc = visibleCount();\r\nvar max = total - vc;\r\ncurrent = Math.max(0, Math.min(index, max));\r\nvar cardW = cards[0].offsetWidth + gap;\r\ntrack.style.transform = 'translateX(-' + (current * cardW) + 'px)';\r\nprevBtn.disabled = current === 0;\r\nnextBtn.disabled = current >= total - vc;\r\nupdateDots();\r\n}\r\nprevBtn.addEventListener('click', function(){ goTo(current - visibleCount()); });\r\nnextBtn.addEventListener('click', function(){ goTo(current + visibleCount()); });\r\nwindow.addEventListener('resize', function(){ buildDots(); goTo(0); });\r\nbuildDots();\r\ngoTo(0);\r\n/* SPEED: light YouTube player.\r\n   Click a thumbnail -> the real video loads and plays.\r\n   Any other video that was playing goes back to its thumbnail (so only one plays at a time). */\r\nfunction resetVideo(wrap) {\r\nvar id = wrap.getAttribute('data-id');\r\nvar title = wrap.getAttribute('data-title');\r\nwrap.innerHTML = '<img src=\"https://i.ytimg.com/vi/' + id + '/oar2.jpg\" onerror=\"ytNextThumb(this)\" onload=\"ytCheckThumb(this)\" alt=\"DizitalAdda ' + title.toLowerCase() + ' video\" loading=\"lazy\" decoding=\"async\" width=\"1080\" height=\"1920\">' +\r\n'<button class=\"yt-play\" type=\"button\" aria-label=\"Play ' + title + '\"></button>';\r\nwrap.classList.remove('is-playing');\r\n}\r\ntrack.querySelectorAll('.yt-lite').forEach(function (wrap) {\r\nwrap.addEventListener('click', function () {\r\nif (wrap.classList.contains('is-playing')) return;\r\ntrack.querySelectorAll('.yt-lite.is-playing').forEach(resetVideo);\r\nvar id = wrap.getAttribute('data-id');\r\nwrap.innerHTML = '<iframe src=\"https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0\" title=\"' + wrap.getAttribute('data-title') + '\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>';\r\nwrap.classList.add('is-playing');\r\n});\r\n});\r\n/* Moving the slider stops the playing video */\r\nprevBtn.addEventListener('click', function(){ track.querySelectorAll('.yt-lite.is-playing').forEach(resetVideo); });\r\nnextBtn.addEventListener('click', function(){ track.querySelectorAll('.yt-lite.is-playing').forEach(resetVideo); });\r\n})();\r\n"}} />
+
+
+{/*  Student Reviews Carousel Section  */}
+
+
+<section className="reviews-section bg-mesh">
+<div className="reviews-inner">
+<div className="reviews-header">
+<p className="reviews-eyebrow">What Students Say</p>
+<h2 className="reviews-title">Student <span className="cc-highlight">Reviews</span></h2>
+<div className="reviews-underline"></div>
+</div>
+<div className="reviews-carousel-outer">
+<button className="reviews-btn reviews-btn-prev" id="reviewsPrev">←</button>
+<div className="reviews-carousel-wrapper">
+<div className="reviews-track" id="reviewsTrack">
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"I enrolled in the Advanced Digital Marketing Course to improve my skills, and the practical training was honestly better than I expected. The live projects helped me understand real industry work."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Abhinav.webp" alt="Abhinav Sharma" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Abhinav Sharma</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"The Expert Digital Marketing Course completely changed my career direction. I joined as a college student with zero practical knowledge, and now I confidently manage SEO and Google Ads projects for clients."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Shiv.webp" alt="Shiv Kalra" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Shiv kalra</strong>
+<span>Expert Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"As a working professional, I needed a course that was practical and updated with current trends. The Digital Marketing Course for Professionals helped me switch my career successfully."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Tulika.webp" alt="Tulika Biswas" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Tulika Biswas</strong>
+<span>Digital Marketing Course for Professionals</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"The trainers explained everything in a very simple way, even advanced SEO and paid ads. I started freelancing within a few months after completing the course."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Harvinder.webp" alt="Harvinder Singh" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Harvinder Singh</strong>
+<span>Expert Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★</div>
+<p className="review-text">"The AI marketing tools and automation sessions were my favorite part. I now save a lot of time while managing social media and ad campaigns for clients."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Harsh.webp" alt="Harsh Kanojia" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Harsh kanojia</strong>
+<span>Expert Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"What I liked most was the focus on real projects instead of only theory. We worked on live campaigns and learned tools that companies actually use."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Neha.webp" alt="Neha Singh" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Neha Singh</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★</div>
+<p className="review-text">"The AI marketing tools and automation sessions were my favorite part. I now save a lot of time while managing social media and ad campaigns for clients."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Gopal.webp" alt="Gopal Darlami" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Gopal Darlami</strong>
+<span>Expert Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"The learning environment was friendly and motivating. Even beginners could understand SEO, Meta Ads, and analytics without feeling overwhelmed."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Jitesh.webp" alt="Jitesh" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Jitesh</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"I was already working in sales but wanted to move into digital marketing. This course helped me build confidence and land a better job role."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Purav.webp" alt="Purav Singh" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Purav Singh</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"The practical assignments and live website projects helped me understand how digital marketing actually works in companies and agencies."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Kajal.webp" alt="Kajal" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Kajal</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★</div>
+<p className="review-text">"I appreciated that the trainers always shared current industry strategies instead of outdated concepts. The classes felt modern and very career-focused."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Payal.webp" alt="Payal" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Payal</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★</div>
+<p className="review-text">"The mentors were supportive throughout the course and even guided me during interviews. That personal support made a huge difference for me."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Shardha.webp" alt="Shradha Bansal" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Shradha Bansal</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"I joined after my graduation and got internship opportunities very quickly because of the portfolio and practical work we completed during training."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Tannu.webp" alt="Tannu" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Tannu</strong>
+<span>Expert Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★</div>
+<p className="review-text">"The trainers focused a lot on practical learning. We didn't just watch presentations — we actually created campaigns, optimized websites, and analyzed performance."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Kavya.webp" alt="Kavya Negi" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Kavya Negi</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"I joined the Expert Digital Marketing Course after watching a few webinars from DizitalAdda, and the practical exposure was honestly impressive. The SEO and performance marketing sessions helped me understand how agencies work in real life."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Vikas.webp" alt="Vikas" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Vikas</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"What made this course different for me was the practical learning. Instead of only theory, we worked on live websites, keyword research, and real ad campaigns."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Rohnit.webp" alt="Rohnit" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Rohnit</strong>
+<span>Expert Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"The Advanced Digital Marketing Course gave me hands-on experience with Google Ads, Meta Ads, and AI tools. I now confidently handle campaigns for my startup business."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Amit.webp" alt="Amit" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Amit</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"I was searching for a course that actually teaches updated digital marketing skills. The AI modules, automation tools, and live project training were very useful."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Sandeep.webp" alt="Sandeep" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Sandeep</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"The trainers explained complex topics in a simple and friendly way. Even analytics and technical SEO became easy to understand after the practical sessions."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Harshita.webp" alt="Harshita Yadav" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Harshita Yadav</strong>
+<span>Expert Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★</div>
+<p className="review-text">"The course structure was very organized and industry-focused. I especially liked the real client assignments because they gave me confidence before interviews."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Chitra.webp" alt="Chitra Lalawat" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Chitra lalawat</strong>
+<span>Expert Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★</div>
+<p className="review-text">"I completed the Advanced Digital Marketing Course while finishing my college degree. The skills I learned here helped me secure an internship much faster."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Rajesh.webp" alt="Rajesh Baloni" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Rajesh Baloni</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"Before joining, I only knew social media basics. Now I can run paid ad campaigns, optimize websites for SEO, and create marketing strategies independently."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Sahil.webp" alt="Sahil Chauhan" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Sahil Chauhan</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+<div className="review-card">
+<div className="review-stars">★★★★★</div>
+<p className="review-text">"The Advanced Digital Marketing Course helped me start freelancing from home. The practical training and portfolio-building sessions gave me the confidence to take real clients."</p>
+<div className="review-author">
+<div className="review-avatar"><img src="courses/images/Students/Sapna.webp" alt="Sapna" loading="lazy" decoding="async" /></div>
+<div className="review-author-info">
+<strong>Sapna</strong>
+<span>Advanced Digital Marketing Course</span>
+</div>
+</div>
+</div>
+</div>{/*  /.reviews-track  */}
+</div>{/*  /.reviews-carousel-wrapper  */}
+<button className="reviews-btn reviews-btn-next" id="reviewsNext">→</button>
+</div>{/*  /.reviews-carousel-outer  */}
+</div>{/*  /.reviews-inner  */}
+</section>
+
+
+{/*  /.reviews-section  */}
+
+
+<section className="CardContainer bg-aurora">
+<div className="aurora-blob aurora-blob-1"></div>
+<div className="aurora-blob aurora-blob-2"></div>
+<div className="aurora-blob aurora-blob-3"></div>
+<h2>What We Have <span className="cc-highlight">Achieved?</span></h2>
+<div className="container">
+<div className="InfoContainer">
+<div className="cert-carousel-wrap">
+<div className="cert-carousel" id="achCarousel">
+<div className="cert-slide active">
+<img src="courses/images/gulshan/Gulshan.webp" alt="Dr. Gulshan Kumar" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/gulshan/aslin.webp" alt="Aslin" className="cert-img" loading="lazy" />
+</div>
+<div className="cert-slide">
+<img src="courses/images/gulshan/Kiran.webp" alt="Kiran" className="cert-img" loading="lazy" />
+</div>
+</div>
+</div>
+<script dangerouslySetInnerHTML={{__html:"\r\n(function(){\r\nvar slides  = document.querySelectorAll('#achCarousel .cert-slide');\r\nvar current = 0;\r\nvar paused  = false;\r\nfunction goTo(n){\r\nslides[current].classList.remove('active');\r\ncurrent = (n + slides.length) % slides.length;\r\nslides[current].classList.add('active');\r\n}\r\nsetInterval(function(){ if (!paused) goTo(current + 1); }, 3000);\r\nvar wrap = document.querySelector('#achCarousel').closest('.cert-carousel-wrap');\r\nif (wrap) {\r\nwrap.addEventListener('mouseenter', function(){ paused = true; });\r\nwrap.addEventListener('mouseleave', function(){ paused = false; });\r\n}\r\n})();\r\n"}} />
+<div className="introDataContainer">
+<ul>
+<li><strong>DizitalAdda has trained 25000+</strong> of students and working professionals through practical Digital Marketing and Web Development programs designed for real industry needs. With hands-on learning, live projects, and career-focused training, the institute has helped learners build successful careers in top companies, startups, agencies, and freelance industries across India.
+</li>
+<li>The institute’s contribution to skill-based education has also been recognized through prestigious industry honors, including the <strong>Indian Icon Award presented by Dr. Kiran Bedi</strong>, the <strong>Bharat Business Award presented by Ashneer Grover</strong>, and The <strong>Excellence Award by The Hotel School</strong>. These recognitions highlight DizitalAdda’s commitment to quality training, student success, and innovation in digital education.
+</li>
+<li>At DizitalAdda, students gain real-world experience by working on live campaigns, SEO projects, social media strategies, AI-powered marketing tools, and website development tasks. The focus is not only on learning concepts but also on building portfolios, improving practical skills, and preparing students for real corporate environments with confidence and industry-ready expertise.
+</li>
+</ul>
+<div className="graphicsContainer">
+<div className="circle" style={{"marginLeft":"auto"}}><img src="courses/images/award/g10.svg" alt="Award" loading="lazy" /></div>
+<div className="circle"><img src="courses/images/award/g16.svg" alt="Award" loading="lazy" /></div>
+<div className="circle"><img src="courses/images/award/g11.svg" alt="Award" loading="lazy" /></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section className="gallerySection bg-aurora">
+<div className="aurora-blob aurora-blob-1"></div>
+<div className="aurora-blob aurora-blob-2"></div>
+<div className="aurora-blob aurora-blob-3"></div>
+<div className="galleryContainer">
+<h2>A Corporate-Grade Campus for Serious <span className="cc-highlight">Career Training</span></h2>
+<div className="campus-layout">
+<div className="campus-photos">
+<div className="campus-photo-card">
+<div className="campus-photo" data-bg="./images/3.webp"></div>
+<span className="photo-label">Training Room</span>
+</div>
+<div className="campus-photo-card">
+<div className="campus-photo" data-bg="./images/4.webp"></div>
+<span className="photo-label">Study Zone</span>
+</div>
+<div className="campus-photo-card">
+<div className="campus-photo" data-bg="./images/5.webp"></div>
+<span className="photo-label">Corridor</span>
+</div>
+<div className="campus-photo-card">
+<div className="campus-photo" data-bg="./images/6.webp"></div>
+<span className="photo-label">Classroom</span>
+</div>
+<div className="campus-photo-card">
+<div className="campus-photo" data-bg="./images/IMG-20250412-WA0007.webp"></div>
+<span className="photo-label">Seminar Hall</span>
+</div>
+<div className="campus-photo-card">
+<div className="campus-photo" data-bg="./images/IMG-20250412-WA0008.webp"></div>
+<span className="photo-label">Live Session</span>
+</div>
+<div className="campus-photo-card">
+<div className="campus-photo" data-bg="./images/IMG-20250412-WA0009.webp"></div>
+<span className="photo-label">Workshop</span>
+</div>
+<div className="campus-photo-card">
+<div className="campus-photo" data-bg="./images/IMG-20250412-WA0010.webp"></div>
+<span className="photo-label">Group Activity</span>
+</div>
+<div className="campus-photo-card">
+<div className="campus-photo" data-bg="./images/1`.jpg"></div>
+<span className="photo-label">Campus Lounge</span>
+</div>
+</div>
+<div className="campus-info">
+<p className="campus-desc">DizitalAdda's Delhi-NCR campus offers a professional learning environment with live projects, 60+ industry tools, and small batches of up to 15 students, guided by mentors with 5–15 years of industry experience.</p>
+<div className="campus-features">
+<div className="campus-feature-card">
+<div className="feature-icon">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m4-4a4 4 0 100-8 4 4 0 000 8zm6 4a2 2 0 11-4 0 2 2 0 014 0zM5 16a2 2 0 114 0 2 2 0 01-4 0z"></path></svg>
+</div>
+<div className="feature-text">
+<strong>Small Batches</strong>
+<p>Maximum 15 students per batch — personalised attention across all career training programs</p>
+</div>
+</div>
+<div className="campus-feature-card">
+<div className="feature-icon">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+</div>
+<div className="feature-text">
+<strong>Corporate Setup</strong>
+<p>Training rooms, seminar hall, workshop spaces, and group activity zones</p>
+</div>
+</div>
+<div className="campus-feature-card">
+<div className="feature-icon">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m0-6l-3.5 2M12 20l3.5-2"></path></svg>
+</div>
+<div className="feature-text">
+<strong>Online/Offline</strong>
+<p>Online and offline learning available — identical curriculum, placement assistance, and project mentorship for both</p>
+</div>
+</div>
+</div>
+<div className="campus-cta-row">
+<a href="#bookDemo" className="campus-cta">Book Campus Tour</a>
+<a href="https://dizitaladda.com/gallery" className="campus-gallery-btn" target="_blank" rel="noopener">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+View Gallery
+</a>
+</div>
+<div className="campus-social">
+<div className="campus-social-icons">
+<a href="https://www.instagram.com/official_dizital_adda/" target="_blank" rel="noopener" className="campus-social-link campus-social-instagram" aria-label="Instagram">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a href="https://www.facebook.com/dizitaladda01" target="_blank" rel="noopener" className="campus-social-link campus-social-facebook" aria-label="Facebook">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a href="https://www.youtube.com/@DizitalAdda" target="_blank" rel="noopener" className="campus-social-link campus-social-youtube" aria-label="YouTube">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg>
+</a>
+<a href="https://www.linkedin.com/company/dizitaladda/" target="_blank" rel="noopener" className="campus-social-link campus-social-linkedin" aria-label="LinkedIn">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+{/*  Book Demo Section  */}
+
+
+<section className="book-demo-section bg-mesh" id="bookDemo">
+<div className="book-demo-inner">
+<div className="book-demo-header">
+<p className="book-demo-eyebrow">Free Session</p>
+<h2 className="book-demo-title">Book a <span className="cc-highlight">Free Demo</span> Class — Experience Our Career Training Programs Before You Enrol</h2>
+<div className="book-demo-underline"></div>
+<p className="book-demo-subtitle">DizitalAdda's free demo class is a 1-hour live session for your chosen course, led by the same trainer who teaches the full program. It includes personalised career counselling and is available online or at the Delhi-NCR campus.</p>
+</div>
+<div className="book-demo-layout">
+<div className="bd-calendar-panel">
+<div className="bd-cal-header">
+<span className="bd-cal-month-label" id="bdCalMonthLabel"></span>
+<div className="bd-cal-nav">
+<button id="bdCalPrev" aria-label="Previous month" type="button">‹</button>
+<button id="bdCalNext" aria-label="Next month" type="button">›</button>
+</div>
+</div>
+<div className="bd-cal-dow">
+<span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+</div>
+<div className="bd-cal-grid" id="bdCalGrid"></div>
+<div className="bd-cal-legend">
+<div className="bd-cal-legend-item"><span className="bd-legend-dot available"></span> Available</div>
+<div className="bd-cal-legend-item"><span className="bd-legend-dot today-dot"></span> Today</div>
+<div className="bd-cal-legend-item"><span className="bd-legend-dot selected-dot"></span> Selected</div>
+<div className="bd-cal-legend-item"><span className="bd-legend-dot past-dot"></span> Past (Unavailable)</div>
+</div>
+<div className="bd-selected-display" id="bdSelectedDisplay">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="currentColor" style={{"width":"16px","height":"16px","flexShrink":"0"}}><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"></path></svg>
+<span>Select a date to book your demo</span>
+</div>
+<div className="bd-info-list">
+<div className="bd-info-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z"></path></svg>
+<span>1-hour live session - actual curriculum, not a sales pitch</span>
+</div>
+<div className="bd-info-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+<span>100% free - zero obligation, zero hidden charges</span>
+</div>
+<div className="bd-info-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m4-4a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+<span>Personalized counselling after the demo session</span>
+</div>
+<div className="bd-info-item">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path></svg>
+<span>Online or Offline (Delhi/NCR) - your choice</span>
+</div>
+</div>
+</div>
+<div className="book-demo-form-wrap">
+<form className="book-demo-form" id="bookDemoForm" noValidate={true}>
+<input type="hidden" id="bd_date" name="date" />
+<div className="bdf-row">
+<div className="bdf-field">
+<label>Preferred Date <span>*</span></label>
+<div className="bd-form-date-echo" id="bdFormDateEcho">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"></path></svg>
+<span id="bdFormDateText">← Pick a date from the calendar</span>
+</div>
+</div>
+</div>
+<div className="bdf-row">
+<div className="bdf-field">
+<label htmlFor="bd_name">Full Name <span>*</span></label>
+<input type="text" id="bd_name" name="name" placeholder="Your full name" required={true} autoComplete="name" />
+</div>
+</div>
+<div className="bdf-row">
+<div className="bdf-field">
+<label htmlFor="bd_phone">Phone Number <span>*</span></label>
+<input type="tel" id="bd_phone" name="phone" placeholder="98765 43210" required={true} autoComplete="tel" pattern="[6-9][0-9]{9}" />
+</div>
+</div>
+<div className="bdf-row">
+<div className="bdf-field">
+<label htmlFor="bd_email">Email Address <span>*</span></label>
+<input type="email" id="bd_email" name="email" placeholder="you@email.com" required={true} autoComplete="email" />
+</div>
+</div>
+<div className="bdf-row two-col">
+<div className="bdf-field">
+<label htmlFor="bd_course">Course Interest <span>*</span></label>
+<select id="bd_course" name="course" required={true}>
+<option value="">Select a course</option>
+<option value="Expert Digital Marketing">Expert Digital Marketing</option>
+<option value="Advanced Digital Marketing">Advanced Digital Marketing</option>
+<option value="Professional Digital Marketing">Professional Digital Marketing</option>
+<option value="Digital Marketing Basics">Digital Marketing Basics</option>
+</select>
+</div>
+<div className="bdf-field">
+<label htmlFor="bd_mode">Preferred Mode <span>*</span></label>
+<select id="bd_mode" name="mode" required={true}>
+<option value="">Select mode</option>
+<option value="Online">Online</option>
+<option value="Offline">Offline (Delhi)</option>
+</select>
+</div>
+</div>
+<div className="bdf-row">
+<div className="bdf-field">
+<label htmlFor="bd_message">Anything you'd like us to know?</label>
+<textarea id="bd_message" name="message" placeholder="E.g. I'm a working professional looking to switch careers..." rows="3"></textarea>
+</div>
+</div>
+<button type="submit" className="bdf-submit" id="bdSubmitBtn">
+<span id="bdBtnText">Book My Free Demo</span>
+<span id="bdBtnLoader" style={{"display":"none"}}>Booking...</span>
+</button>
+<div className="bdf-status" id="bdStatus"></div>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+
+<section className="latest-blogs-section bg-aurora">
+<div className="aurora-blob aurora-blob-1"></div>
+<div className="aurora-blob aurora-blob-2"></div>
+<div className="aurora-blob aurora-blob-3"></div>
+<div className="latest-blogs-inner">
+<div className="latest-blogs-header">
+<p className="testimonials-eyebrow">From Our Blog</p>
+<h2 className="testimonials-title">Latest <span className="cc-highlight">Blog Articles</span></h2>
+<div className="testimonials-underline"></div>
+<p className="faqDetails latest-blogs-subtitle"></p>
+<style dangerouslySetInnerHTML={{__html:"\r\n/* Make latest blog section heading and subheading black */\r\n.latest-blogs-header .testimonials-eyebrow,\r\n.latest-blogs-header .testimonials-title,\r\n.latest-blogs-header .latest-blogs-subtitle {\r\ncolor: #111 !important;\r\n}\r\n"}} />
+</div>
+<div className="latest-blogs-grid">
+<article className="latest-blog-card slide-up-section">
+<div className="latest-blog-content">
+<div className="latest-blog-meta">
+<span>Digital Marketing</span>
+<span>03 Nov 2026</span>
+</div>
+<h3><a href="https://dizitaladda.com/blogs/20-digital-marketing-case-studies-to-understand-the-power-of-digital-marketing">20 Digital Marketing Case Studies to Understand the Power of Digital Marketing</a></h3>
+<p>As digital marketing continuously transforms over time, case studies act as supreme beacons of intelligence revealing effective strategies, cutting edge campaigns, and over literate approaches.</p>
+<a className="latest-blog-link" href="https://dizitaladda.com/blogs/20-digital-marketing-case-studies-to-understand-the-power-of-digital-marketing">Read More <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article className="latest-blog-card slide-up-section">
+<div className="latest-blog-content">
+<div className="latest-blog-meta">
+<span>Digital Marketing</span>
+<span>03 Nov 2026</span>
+</div>
+<h3><a href="https://dizitaladda.com/blogs/28-top-startups-in-india-2024-business-model-explained">28 Top startups in India 2024-|-Business Model Explained</a></h3>
+<p>Discover India</p>
+<a className="latest-blog-link" href="https://dizitaladda.com/blogs/28-top-startups-in-india-2024-business-model-explained">Read More <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article className="latest-blog-card slide-up-section">
+<div className="latest-blog-content">
+<div className="latest-blog-meta">
+<span>Digital Marketing</span>
+<span>03 Nov 2026</span>
+</div>
+<h3><a href="https://dizitaladda.com/blogs/5-key-elements-of-a-successful-seo-infographic">5 Key Elements of a Successful SEO Infographic: A Comprehensive Guide</a></h3>
+<p>Utilize the full power of SEO by carefully preparing a high quality infographic. Get familiar with the basis on which SEO-effective and strikingly beautiful contents are built. Create your own digital world fair project below.</p>
+<a className="latest-blog-link" href="https://dizitaladda.com/blogs/5-key-elements-of-a-successful-seo-infographic">Read More <span aria-hidden="true">→</span></a>
+</div>
+</article>
+</div>
+<div className="latest-blogs-cta">
+<a href="https://dizitaladda.com/blogs"><button className="cc-btn">View All Blogs</button></a>
+</div>
+</div>
+</section>
+
+
+<section className="faqs bg-aurora">
+<div className="aurora-blob aurora-blob-1"></div>
+<div className="aurora-blob aurora-blob-2"></div>
+<div className="aurora-blob aurora-blob-3"></div>
+<h2>Frequently <span className="cc-highlight">Asked Questions</span></h2>
+<p className="faqDetails">
+Frequently Asked Questions offers quick answers to common queries, guiding users through features and functionalities effortlessly.
+</p>
+<div className="faq-grid">
+<details className="faq slide-up-section">
+<summary>What is digital marketing &amp; why is it important in 2026?</summary>
+<p>Digital marketing means promoting brands through search, social media, ads, and email instead of TV or print. It's important because most buying decisions today start with an online search, so brands without a digital presence lose customers to competitors.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Is a digital marketing course worth it in 2026?</summary>
+<p>Yes, it's one of the most in-demand, low-entry skills right now. Every business needs online visibility, so trained marketers stay employable across industries.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Best digital marketing institute in Delhi with placement?</summary>
+<p>DizitalAdda offers practical, hands-on training with placement support in Delhi. Other well-known names include IIDE and Digital Vidya and DIDM, but hands-on project work matters more than brand name.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Fee of digital marketing course in Delhi?</summary>
+<p>Fees usually range from ₹25,000 to ₹1,35,000+. The exact cost depends on course level, duration, and whether placement support is included.</p>
+</details>
+<details className="faq slide-up-section">
+<summary> How many months to learn digital marketing?</summary>
+<p>Most job-ready courses take 3–6 months, while an Expert-level course with 1-year certification offers deeper, more advanced training. Basic skills can be picked up faster, but real mastery comes with hands-on practice afterward.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Best certification for digital marketing?</summary>
+<p>Google Ads, Google Analytics, and Meta Blueprint are the most recognized free certifications. Pairing these with an institute certificate that includes live project work makes a stronger profile.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Digital Marketing Course for working professionals?</summary>
+<p>Yes, most institutes including DizitalAdda run weekend or evening batches. This lets professionals learn without leaving their job.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Average salary for a digital marketer in Delhi?</summary>
+<p>Freshers typically earn ₹3.5–4.5 LPA. With 3–5 years of experience, this rises to ₹7–14 LPA.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Which skill pays most — SEO, PPC, or SMM?</summary>
+<p>PPC and SEO tend to pay the highest since both directly drive measurable ROI. Social media marketing also pays well in 2026 and is growing fast, especially for those skilled in reels, influencer marketing, and paid social ads.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Highest salary for a digital marketer in Delhi?</summary>
+<p>Senior roles like Digital Marketing Head or Performance Marketing Lead can reach ₹25–40 LPA+. This level needs 8-10+ years of experience and proven campaign results.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Can course fees be paid in installments?</summary>
+<p>Yes, most institutes including DizitalAdda offer EMI or installment options. Always confirm the number of installments and any extra charges before enrolling.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Does DizitalAdda offer online and offline courses?</summary>
+<p>Yes, both formats are available. Students can choose in-person classroom training or live online sessions based on convenience.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>What  courses does DizitalAdda offer?</summary>
+<p>DizitalAdda offers Digital Marketing courses (Beginners, Advanced, Expert, and Working Professionals batches), along with AI, Data Science/Data Analytics, and Cyber Security courses — covering both foundational and advanced, career-focused training.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Does DizitalAdda also provide a 3-year master course with college partnerships?</summary>
+<p>Yes, DizitalAdda offers a 3-year master's course in digital marketing, delivered through partnerships with selected colleges.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>What is ethical hacking, and how is it different from cyber security in 2026?</summary>
+<p>Ethical hacking is the practice of legally testing systems by simulating attacks to find security weaknesses before real hackers do. Cyber security is the broader field covering all defense measures, tools, and policies used to protect systems — ethical hacking is one offensive skill within it, not the whole field.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>What is the average salary of an ethical hacker in India in 2026 (fresher vs experienced)?</summary>
+<p>Freshers typically earn ₹3.5–6 LPA, especially with a CEH certification and some hands-on lab or project work. Experienced professionals (5+ years) with certifications like OSCP earn ₹15–30 LPA, and senior red-team leads can cross ₹40 LPA</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Is a machine learning or AI course worth it in 2026 for a career switch?</summary>
+<p>Yes, ML/AI remains one of the highest-demand skill areas in 2026 as companies embed AI across products and operations. It suits career switchers with some logical/analytical or coding background, though expect a real learning curve if coming from a non-technical field.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>Does DizitalAdda also offer Data Analytics, Data Science, and Machine Learning courses?</summary>
+<p>Yes, DizitalAdda offers Data Analytics, Data Science, and Machine Learning courses alongside its digital marketing programs. These courses include practical, project-based training with placement support, available in both online and offline formats.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>What is the difference between data analytics and data science?</summary>
+<p> Data analytics focuses on examining existing data to find patterns and answer specific business questions. Data science is broader — it includes analytics plus building predictive models, machine learning, and working with unstructured data to solve more complex, forward-looking problems.</p>
+</details>
+<details className="faq slide-up-section">
+<summary>What AI tools are used in digital marketing in 2026?</summary>
+<p>Common tools include ChatGPT and Jasper for content, Surfer SEO and Semrush AI for SEO, Canva and Adobe Firefly for design, Google Performance Max and Meta Advantage+ for ad bidding, and HubSpot or Mailchimp AI for email personalization. </p>
+</details>
+</div>
+</section>
+
+
+{/* book your demo script */}
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\n(function(){\r\nconst SHEET_URL = '/api/forms/book-demo';\r\nconst monthNames = [\r\n'January','February','March','April','May','June',\r\n'July','August','September','October','November','December'\r\n];\r\nconst today = new Date();\r\nlet selectedDate = null;\r\nlet viewYear  = today.getFullYear();\r\nlet viewMonth = today.getMonth();\r\nconst monthLabel = document.getElementById('bdCalMonthLabel');\r\nconst grid       = document.getElementById('bdCalGrid');\r\nconst form       = document.getElementById('bookDemoForm');\r\nif(!monthLabel || !grid || !form){\r\nconsole.warn('❌ Book Demo elements not found');\r\nreturn;\r\n}\r\nconst btnText   = document.getElementById('bdBtnText');\r\nconst btnLoader = document.getElementById('bdBtnLoader');\r\nconst submitBtn = document.getElementById('bdSubmitBtn');\r\nconst status    = document.getElementById('bdStatus');\r\nconst CAL_ICON = `\r\n<svg xmlns=\"http://www.w3.org/2000/svg\"\r\nfill=\"none\"\r\nviewBox=\"0 0 24 24\"\r\nstroke-width=\"1.8\"\r\nstroke=\"currentColor\"\r\nstyle=\"width:16px;height:16px;flex-shrink:0\">\r\n<path stroke-linecap=\"round\"\r\nstroke-linejoin=\"round\"\r\nd=\"M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5\"/>\r\n</svg>\r\n`;\r\nfunction fmtISO(d){\r\nconst y = d.getFullYear();\r\nconst m = String(d.getMonth() + 1).padStart(2,'0');\r\nconst day = String(d.getDate()).padStart(2,'0');\r\nreturn `${y}-${m}-${day}`;\r\n}\r\nfunction fmtDisplay(d){\r\nreturn d.toLocaleDateString('en-IN',{\r\nday:'numeric',\r\nmonth:'long',\r\nyear:'numeric'\r\n});\r\n}\r\nfunction sameDate(a,b){\r\nreturn (\r\na &&\r\nb &&\r\na.getFullYear() === b.getFullYear() &&\r\na.getMonth() === b.getMonth() &&\r\na.getDate() === b.getDate()\r\n);\r\n}\r\nfunction isPastDate(dateObj){\r\nconst now = new Date();\r\nnow.setHours(0,0,0,0);\r\nconst dt = new Date(\r\ndateObj.getFullYear(),\r\ndateObj.getMonth(),\r\ndateObj.getDate()\r\n);\r\nreturn dt < now;\r\n}\r\nfunction renderCalendar(){\r\nmonthLabel.textContent =\r\nmonthNames[viewMonth] + ' ' + viewYear;\r\ngrid.innerHTML = '';\r\nconst firstDay    = new Date(viewYear, viewMonth, 1);\r\nconst startDay    = firstDay.getDay();\r\nconst daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();\r\nfor(let i = 0; i < startDay; i++){\r\nconst empty = document.createElement('button');\r\nempty.type = 'button';\r\nempty.className = 'bd-cal-day empty';\r\nempty.disabled = true;\r\ngrid.appendChild(empty);\r\n}\r\nfor(let d = 1; d <= daysInMonth; d++){\r\nconst cellDate = new Date(viewYear, viewMonth, d);\r\nconst cell = document.createElement('button');\r\ncell.type = 'button';\r\ncell.className = 'bd-cal-day';\r\ncell.textContent = d;\r\nif(sameDate(cellDate, today)){\r\ncell.classList.add('today');\r\n}\r\nif(selectedDate && sameDate(cellDate, selectedDate)){\r\ncell.classList.add('selected');\r\n}\r\nif(isPastDate(cellDate)){\r\ncell.classList.add('disabled');\r\ncell.disabled = true;\r\n} else {\r\ncell.addEventListener('click', function(){\r\nselectDate(cellDate);\r\n});\r\n}\r\ngrid.appendChild(cell);\r\n}\r\n}\r\nfunction selectDate(dt){\r\nselectedDate = dt;\r\nconst hiddenDate = document.getElementById('bd_date');\r\nif(hiddenDate){\r\nhiddenDate.value = fmtISO(dt);\r\n}\r\nrenderCalendar();\r\nconst selectedDisplay =\r\ndocument.getElementById('bdSelectedDisplay');\r\nif(selectedDisplay){\r\nselectedDisplay.innerHTML =\r\nCAL_ICON +\r\n'<span>Selected: <span class=\"bd-sel-date\">' +\r\nfmtDisplay(dt) +\r\n'</span></span>';\r\n}\r\nconst echo =\r\ndocument.getElementById('bdFormDateEcho');\r\nconst text =\r\ndocument.getElementById('bdFormDateText');\r\nif(text){\r\ntext.textContent = fmtDisplay(dt);\r\n}\r\nif(echo){\r\necho.classList.add('filled');\r\n}\r\nif(status){\r\nstatus.innerHTML = '';\r\n}\r\n}\r\ndocument\r\n.getElementById('bdCalPrev')\r\n.addEventListener('click', function(){\r\nviewMonth--;\r\nif(viewMonth < 0){\r\nviewMonth = 11;\r\nviewYear--;\r\n}\r\nrenderCalendar();\r\n});\r\ndocument\r\n.getElementById('bdCalNext')\r\n.addEventListener('click', function(){\r\nviewMonth++;\r\nif(viewMonth > 11){\r\nviewMonth = 0;\r\nviewYear++;\r\n}\r\nrenderCalendar();\r\n});\r\nrenderCalendar();\r\nform.addEventListener('submit', function(e){\r\ne.preventDefault();\r\nif(!form.checkValidity()){\r\nform.reportValidity();\r\nreturn;\r\n}\r\nconst hiddenDate = document.getElementById('bd_date');\r\nif(!hiddenDate || !hiddenDate.value){\r\nif(status){\r\nstatus.innerHTML =\r\n'<span class=\"bdf-error\">Please select a date.</span>';\r\n}\r\nreturn;\r\n}\r\nif(btnText){\r\nbtnText.style.display = 'none';\r\n}\r\nif(btnLoader){\r\nbtnLoader.style.display = 'inline-block';\r\n}\r\nif(submitBtn){\r\nsubmitBtn.disabled = true;\r\n}\r\nconst fd = new FormData(form);\r\nconst payload = {\r\nname: fd.get('name') || '',\r\nphone: fd.get('phone') || '',\r\nemail: fd.get('email') || '',\r\ncourse: fd.get('course') || '',\r\nmode: fd.get('mode') || '',\r\ndate: fd.get('date') || hiddenDate.value || '',\r\nmessage: fd.get('message') || '',\r\ntimestamp: new Date().toLocaleString('en-IN',{\r\ntimeZone:'Asia/Kolkata'\r\n}),\r\nsource: window.location.href\r\n};\r\nconsole.log('📤 Sending Data:', payload);\r\nfetch(SHEET_URL, {\r\nmethod: 'POST',\r\nmode: 'no-cors',\r\nheaders: {\r\n'Content-Type': 'text/plain;charset=utf-8'\r\n},\r\nbody: JSON.stringify(payload)\r\n})\r\n.then(function(){\r\nconsole.log('✅ Submitted Successfully');\r\nif(status){\r\nstatus.innerHTML =\r\n'<span class=\"bdf-success\">Demo booked successfully. We will contact you soon.</span>';\r\n}\r\nform.reset();\r\nselectedDate = null;\r\nif(hiddenDate){\r\nhiddenDate.value = '';\r\n}\r\nconst selectedDisplay =\r\ndocument.getElementById('bdSelectedDisplay');\r\nif(selectedDisplay){\r\nselectedDisplay.innerHTML =\r\nCAL_ICON +\r\n'<span>Select a date to book your demo</span>';\r\n}\r\nconst echo =\r\ndocument.getElementById('bdFormDateEcho');\r\nif(echo){\r\necho.classList.remove('filled');\r\n}\r\nconst text =\r\ndocument.getElementById('bdFormDateText');\r\nif(text){\r\ntext.textContent = '← Pick a date from the calendar';\r\n}\r\nrenderCalendar();\r\n})\r\n.catch(function(error){\r\nconsole.error(' Submission Failed:', error);\r\nif(status){\r\nstatus.innerHTML =\r\n'<span class=\"bdf-error\">Could not submit form. Please try again.</span>';\r\n}\r\n})\r\n.finally(function(){\r\nif(btnText){\r\nbtnText.style.display = 'inline';\r\n}\r\nif(btnLoader){\r\nbtnLoader.style.display = 'none';\r\n}\r\nif(submitBtn){\r\nsubmitBtn.disabled = false;\r\n}\r\n});\r\n});\r\n})();\r\n"}} />
+
+
+{/*  ============ SPEED-OPTIMISED FOOTER (edited Oct 2026) ============
+     Font Awesome (about 270 KB) is no longer loaded for the footer.
+     The footer icons are now small built-in SVG drawings.
+     Font Awesome still loads automatically on any page that uses fa- icons elsewhere (see script at the end).
+     ================================================================  */}
+
+
+
+{/*  Customized Footer for Dizital Adda  */}
+
+
+<footer className="da-footer">
+  <div className="da-footer-container">
+    
+    {/*  Left Column: Logo and About  */}
+    <div className="da-footer-col">
+      <img src="https://dizitaladda.com/assets/img/logo.png" alt="DizitalAdda Logo" className="da-footer-logo" width="660" height="130" loading="lazy" decoding="async" />
+      <p className="da-footer-about">
+        DizitalAdda — India's Best Digital Marketing Institute (DA DigitalAdda Innovations Pvt. Ltd.) MSME &amp; ISO Certified. Delhi/NCR's top-ranked institute, trusted nationwide. We don't just teach — we build careers. Personalized mentorship, proven strategies, and hands-on training designed to drive real growth at every stage of your journey. Let's collaborate to create a future full of promise and achievement.
+
+
+      </p>
+      <div className="da-footer-badges">
+        <img src="/images/msme_logo.png" alt="MSME Certified" className="da-footer-badge-img" width="232" height="82" loading="lazy" decoding="async" />
+        <img src="/images/google_partner.png" alt="Google Partner" className="da-footer-badge-img" loading="lazy" decoding="async" />
+      </div>
+         
+    </div>
+
+    {/*  Center Column: Quick Links  */}
+    <div className="da-footer-col">
+      <h3 className="da-footer-title">Quick Links</h3>
+      <ul className="da-footer-links">
+      <li><a href="https://dizitaladda.com/"><svg className="da-li-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3L12 3z"></path></svg>Home</a></li>
+        <li><a href="https://dizitaladda.com/about-us"><svg className="da-li-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"></path></svg>About Us</a></li>
+        <li><a href="https://dizitaladda.com/contact-us"><svg className="da-li-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg>Contact</a></li>
+        <li><a href="https://dizitaladda.com/blogs"><svg className="da-li-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h12l4 4v14H4V3zm3 6v2h10V9H7zm0 4v2h10v-2H7zm0 4v2h7v-2H7z"></path></svg>Blogs</a></li>
+        <li><a href="https://dizitaladda.com/gallery" target="_blank" rel="noopener"><svg className="da-li-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 5v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2zM8.5 7A1.5 1.5 0 1 0 8.5 10 1.5 1.5 0 0 0 8.5 7zM5 17h14l-4.5-6-3.5 4.5-2.5-3L5 17z"></path></svg>Gallery</a></li>
+        <li><a href="https://dizitaladda.com/enroll"><svg className="da-li-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"></path></svg>We Accept</a></li>
+      {/*  Payment Methods  */}  
+      <li className="da-footer-payments" style={{"textAlign":"left","margin":"10px 0 0","padding":"0"}}>
+          <div className="da-payment-gateway-links">
+            <a href="https://dizitaladda.com/enroll" className="da-pay-gateway-link">Razorpay</a>
+            <a href="https://dizitaladda.com/enroll-upay.php" className="da-pay-gateway-link upay">PayU</a>
+          </div>
+        {/*  Row 1: Credit / Debit / EMI  */}
+        <a href="https://dizitaladda.com/enroll" className="da-pay-icons" title="Pay Now" style={{"justifyContent":"flex-start","gap":"5px","marginBottom":"5px"}}>
+          <span className="da-pay-badge visa" title="Visa">VISA</span>
+          <span className="da-pay-badge master" title="Mastercard">Mastercard</span>
+          <span className="da-pay-badge emi" title="EMI Available">EMI</span>
+           <span className="da-pay-badge upi">UPI</span>
+           <span className="da-pay-badge netbank">Net Banking</span>
+        </a>
+        {/*  Row 2: UPI & Wallets  */}
+        {/* <a href="https://dizitaladda.com/enroll" class="da-pay-icons" title="Pay Now" style="justify-content:flex-start;gap:5px;"> */}
+         
+        {/*   <span class="da-pay-badge rupay">RuPay</span> */}
+        {/*   <span class="da-pay-badge phonepay">PhonePe</span> */}
+        {/*   <span class="da-pay-badge paytm">Paytm</span> */}
+        {/*   <span class="da-pay-badge gpay">GPay</span> */}
+          
+        {/* </a> */}
+      </li>
+      </ul>
+    </div>
+
+    {/*  Right Column: Contact Info  */}
+    <div className="da-footer-col">
+      <h3 className="da-footer-title">Contact Us</h3>
+      <a className="da-footer-contact" href="https://maps.app.goo.gl/yaZeHLJBfKYHdMPJ7">
+        <svg className="da-footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4ab8ff"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+        2nd Floor, Spacetime Management Pvt Ltd Design House, behind Savitri Cinema Complex, Greater Kailash II, Chittaranjan Park, New Delhi, Delhi 110048
+      </a>
+      <a className="da-footer-contact" href="tel:8810606010">
+        <svg className="da-footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4ab8ff"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+        +91-8810606010
+      </a>
+      <a className="da-footer-contact" href="mailto:info@dizitaladda.com" title="Send email to DizitalAdda">
+  <svg className="da-footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#4ab8ff"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+  info@dizitaladda.com
+</a>
+         <div className="da-footer-socials">
+        <a href="https://www.facebook.com/dizitaladda01"><img src="https://img.icons8.com/ios/50/ffffff/facebook-new.png" alt="Facebook" width="30" height="30" loading="lazy" decoding="async" /></a>
+        <a href="https://www.instagram.com/official_dizital_adda/"><img src="https://img.icons8.com/ios/50/ffffff/instagram-new.png" alt="Instagram" width="30" height="30" loading="lazy" decoding="async" /></a>
+        <a href="https://www.linkedin.com/company/dizitaladda/"><img src="https://img.icons8.com/ios/50/ffffff/linkedin.png" alt="LinkedIn" width="30" height="30" loading="lazy" decoding="async" /></a>
+        <a href="https://www.youtube.com/@DizitalAdda" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/youtube-play--v1.png" alt="YouTube" width="30" height="30" loading="lazy" decoding="async" /></a>
+        <a href="https://x.com/dizitaladda" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/x.png" alt="x" width="30" height="30" loading="lazy" decoding="async" /></a>
+        <a href="https://www.tumblr.com/dizitaladda12" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/tumblr.png" alt="tumblr" width="30" height="30" loading="lazy" decoding="async" /></a>
+        <a href="https://dizitaladda01.quora.com/" target="_blank"><img src="https://img.icons8.com/ios/50/ffffff/quora.png" alt="quora" width="30" height="30" loading="lazy" decoding="async" /></a>
+        
+      </div>
+    </div>
+
+   
+    {/*  Map Column with Embedded Google Maps — DizitalAdda Color Scheme  */}
+<div className="da-footer-col">
+  <h3 className="da-footer-title">Our Location</h3>
+  
+  {/*  Embedded Google Map Container  */}
+  <div className="footer-col-map-dizital">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.9253650195633!2d77.2381470754975!3d28.541962975714306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1b8032e0e7f%3A0x8d8484c29620d0c0!2sDizitalAdda%20Digital%20Marketing%20Institute!5e0!3m2!1sen!2sin!4v1789125686505!5m2!1sen!2sin" width="600" height="450" style={{"border":"0"}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="DizitalAdda Location Map">
+    </iframe>
+  </div>
+  
+  {/*  Get Directions Button — DizitalAdda Purple & Cyan Theme  */}
+  <a href="https://maps.app.goo.gl/yaZeHLJBfKYHdMPJ7" target="_blank" rel="noopener" className="footer-directions-btn-dizital">
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M21 3 3 10.5l7.2 2.3L12.5 20 21 3z"></path></svg> Get Directions
+  </a>
+</div>
+
+  </div>
+  <div className="course-footer-links">
+  <div className="footer-section">
+    <h4 className="da-footer-title">Digital Marketing</h4>
+    <ul>
+      <li><a href="https://dizitaladda.com/courses/expert-digital-marketing-course">Expert in Digital Marketing</a></li>
+      <li><a href="https://dizitaladda.com/courses/advanced-digital-marketing-course">Advanced Digital Marketing</a></li>
+      <li><a href="https://dizitaladda.com/courses/digital-marketing-for-professional">Digital Marketing for Professionals</a></li>
+      <li><a href="https://dizitaladda.com/courses/digital-marketing-for-beginners">Digital Marketing for Beginners</a></li>
+    </ul>
+  </div>
+
+  <div className="footer-section">
+    <h4 className="da-footer-title">Cyber Security &amp; Hacking</h4>
+    <ul>
+      <li><a href="https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking">Expert Training in Cyber Security &amp; Ethical Hacking</a></li>
+      <li><a href="https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking">Advanced Cyber Security &amp; Ethical Hacking</a></li>
+      <li><a href="https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking">Foundation in Cyber Security &amp; Ethical Hacking</a></li>
+      <li><a href="https://dizitaladda.com/courses/certification-in-digital-forensic-and-cyber-investigation">Digital Forensic &amp; Cyber Investigation</a></li>
+      <li><a href="https://dizitaladda.com/courses/expert-traning-in-bug-bounty">Expert Training in Bug Bounty</a></li>
+    </ul>
+  </div>
+
+  <div className="footer-section">
+    <h4 className="da-footer-title">Generative AI</h4>
+    <ul>
+      <li><a href="https://dizitaladda.com/courses/diploma-in-genai-and-prompt-engineering">Diploma in Gen AI &amp; Prompt Engineering</a></li>
+      <li><a href="https://dizitaladda.com/courses/advanced-certification-in-genai-and-prompt-engineering">Advanced Gen AI &amp; Prompt Engineering</a></li>
+      <li><a href="https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai-course">Diploma in Machine Learning &amp; AI</a></li>
+      <li><a href="https://dizitaladda.com/courses/advanced-certification-in-machine-learning-and-ai">Advanced Machine Learning &amp; AI</a></li>
+    </ul>
+  </div>
+
+  <div className="footer-section">
+    <h4 className="da-footer-title">Data Science &amp; Analytics</h4>
+    <ul>
+      <li><a href="https://dizitaladda.com/courses/diploma-in-data-science-and-ai-course">Diploma in Data Science &amp; AI</a></li>
+      <li><a href="https://dizitaladda.com/courses/advanced-certification-in-data-science-and-ai">Advanced Data Science &amp; AI</a></li>
+      <li><a href="https://dizitaladda.com/courses/diploma-in-data-analytics-course">Diploma in Data Analytics &amp; AI</a></li>
+      <li><a href="https://dizitaladda.com/courses/advanced-certification-in-data-analytics-and-ai">Advanced Data Analytics &amp; AI</a></li>
+      <li><a href="https://dizitaladda.com/courses/certification-in-data-analytics-and-ai">Certification in Data Analytics &amp; AI</a></li>
+    </ul>
+  </div>
+</div>
+<ul className="termsPolicy">
+  <li><a href="/privacy-policy">Privacy Policy</a></li>
+  <li><a href="/terms-of-use">Terms of Use</a></li>
+  <li><a href="/refund-policy">Refund Policy</a></li>
+  <li><a href="/sitemap.xml">Xml Sitemap</a></li>
+  <li><a href="/sitemap">Sitemap</a></li>
+</ul>
+
+  <div className="da-footer-bottom">
+  <p>© <span id="da-footer-year"></span> DizitalAdda. All Rights Reserved.</p>
+</div>
+</footer>
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\n  document.getElementById('da-footer-year').textContent = new Date().getFullYear();\r\n  /* Load Font Awesome ONLY if some other part of the page still uses fa- icons */\r\n  (function () {\r\n    if (document.querySelector('[class*=\"fa-\"]') && !document.querySelector('link[href*=\"font-awesome\"]')) {\r\n      var l = document.createElement('link');\r\n      l.rel = 'stylesheet';\r\n      l.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';\r\n      document.head.appendChild(l);\r\n    }\r\n  })();\r\n"}} />
+
+
+
+<script src="/common-lead-form.js" defer="" />
+
+
+
+{/*  Footer Styles  */}
+
+
+<style dangerouslySetInnerHTML={{__html:"\r\n/* ── Auto Sitemap Footer Grid ── */\r\n.course-footer-links {\r\n    display: grid;\r\n    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 equal columns using the full width */\r\n    gap: 24px 40px;\r\n    width: 100%;\r\n    max-width: 1500px;\r\n    padding: 24px 60px 24px 40px;\r\n    border-top: 1px solid #ffffff34;\r\n    border-bottom: 1px solid #ffffff34;\r\n    margin: 10px auto;\r\n    box-sizing: border-box;\r\n}\r\n.course-footer-links ul {\r\n    list-style: none;\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\n.course-footer-links a {\r\n    text-decoration: none;\r\n    color: #ccc;\r\n    font-size: 13.5px;\r\n    transition: color 0.2s;\r\n}\r\n.course-footer-links a:hover {\r\n    color: #ff518b;\r\n}\r\n.course-footer-links li {\r\n    padding-top: 9px;\r\n}\r\n.footer-section {\r\n    min-width: 0; /* prevent grid blowout */\r\n}\r\n.termsPolicy{\r\n    width: 100%;\r\n    margin: 14px auto -10px auto;\r\n    padding: 0;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    gap: 8px 22px;\r\n    text-decoration: none;\r\n    list-style: none;\r\n}\r\n/* Keep each link on one line (e.g. \"Privacy Policy\") */\r\n.termsPolicy li{\r\n    white-space: nowrap;\r\n    margin: 0 !important;\r\n}\r\n.termsPolicy a{\r\n    color: #ccc !important;\r\n    font-size: 14px;\r\n}\r\n.termsPolicy a{\r\n    text-decoration: none;\r\n        color: #ccc;\r\n}\r\n@media(max-width:453px){\r\n    .termsPolicy{\r\n        gap: 10px 16px;\r\n    }\r\n}\r\n.termsPolicy a:hover{\r\n    color: white;\r\n}\r\n\r\n.da-payment-gateway-links{\r\n  display:flex;\r\n  gap:8px;\r\n  margin-bottom:8px;\r\n  flex-wrap:wrap;\r\n}\r\n.da-pay-gateway-link{\r\n  display:inline-flex;\r\n  align-items:center;\r\n  justify-content:center;\r\n  padding:6px 12px;\r\n  border-radius:999px;\r\n  border:1px solid rgba(74,184,255,.35);\r\n  background:rgba(74,184,255,.12);\r\n  color:#dbeafe;\r\n  font-size:12px;\r\n  font-weight:600;\r\n  text-decoration:none;\r\n}\r\n.da-pay-gateway-link:hover{\r\n  color:#fff;\r\n  border-color:rgba(74,184,255,.8);\r\n  background:rgba(74,184,255,.22);\r\n}\r\n.da-pay-gateway-link.upay{\r\n  border-color:rgba(34,197,94,.35);\r\n  background:rgba(34,197,94,.12);\r\n}\r\n.da-pay-gateway-link.upay:hover{\r\n  border-color:rgba(34,197,94,.8);\r\n  background:rgba(34,197,94,.22);\r\n}\r\n  .da-footer {\r\n      background-color: black;\r\n       background: linear-gradient(135deg, #200036, #200036,#200036, black,#200036,#200036);\r\n    color: #ccc;\r\n    padding: 50px 20px 20px;\r\n    font-family: 'Roboto', sans-serif;\r\n    border-top:1px solid #bf00ff;\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    flex-direction: column;\r\n    align-items: center;\r\n\r\n  }\r\n\r\n  .da-footer-container {\r\n    max-width: 1500px;\r\n    width: 100%;\r\n    margin: 0 auto;\r\n    display: grid;\r\n    grid-template-columns: 1fr 220px 260px 250px;\r\n    gap: 40px;\r\n    padding: 20px 60px 0px 40px;\r\n  }\r\n\r\n  .da-footer-col {\r\n      width: 70%;\r\n    flex: 1 1 250px;\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n\r\n  .da-footer-col:first-child {\r\n    width: 97%;\r\n  }\r\n\r\n  .da-footer-logo {\r\n    width: 200px;\r\n    margin-bottom: 20px;\r\n    filter: contrast(180%);\r\n    filter: brightness(140%);\r\n  }\r\n\r\n  .da-footer-about {\r\n    font-size: 15px;\r\n    line-height: 1.6;\r\n    color: #ccc;\r\n    width: 100%;\r\n  }\r\n\r\n  .da-footer-badges {\r\n    display: flex;\r\n    gap: 10px;\r\n    align-items: center;\r\n    flex-wrap: wrap;\r\n    margin-top: 14px;\r\n  }\r\n\r\n  .da-footer-badge-img {\r\n    height: 44px;\r\n    width: auto;\r\n    display: block;\r\n    border-radius: 6px;\r\n    background: #fff;\r\n    padding: 4px 8px;\r\n  }\r\n\r\n  .da-footer-title {\r\n    color: #4ab8ff;\r\n    margin-bottom: 15px;\r\n    font-size: 18px;\r\n  }\r\n\r\n  .da-footer-links {\r\n    list-style: none;\r\n    padding: 0;\r\n    margin: 0;\r\n  }\r\n\r\n  .da-footer-links li {\r\n    margin-bottom: 10px;\r\n  }\r\n\r\n  .da-footer-links a {\r\n    color: #ccc;\r\n    text-decoration: none;\r\n    transition: color 0.3s;\r\n  }\r\n\r\n  .da-footer-links a:hover {\r\n    color: #ff518b;\r\n  }\r\n\r\n  .da-footer-icon {\r\n    width: 15px;\r\n    height: 15px;\r\n    min-width: 15px;\r\n    margin-right: 8px;\r\n    margin-top: 2px;\r\n    flex-shrink: 0;\r\n  }\r\n  .da-footer-contact {\r\n    margin-bottom: 10px;\r\n    color: #ccc;\r\n    text-decoration: none;\r\n    transition: color 0.3s;\r\n    display: flex;\r\n    align-items: flex-start;\r\n    gap: 0;\r\n  }\r\n .da-footer-contact:hover {\r\n    color: #ff518b;\r\n  }\r\n  .da-footer-socials {\r\n    margin-top: 10px;\r\n    display: flex;\r\n    gap: 12px;\r\n  }\r\n\r\n  .da-footer-socials img {\r\n    width: 30px;\r\n    transition: transform 0.3s ease, filter 0.3s ease;\r\n    filter: brightness(0.8);\r\n  }\r\n\r\n  .da-footer-socials a:hover img {\r\n    transform: scale(1.2);\r\n    filter: brightness(1);\r\n    filter: saturation(120%);\r\n  }\r\n\r\n  .da-footer-bottom {\r\n    border-top: 1px solid #ffffff66;\r\n    text-align: center;\r\n    padding: 15px 0 0;\r\n    margin-top: 40px;\r\n    font-size: 14px;\r\n    color: #4ab8ff;\r\n  }\r\n@media (max-width:974px){\r\n    .da-footer-col {\r\n      width: 100%;\r\n    }\r\n    .da-footer-container {\r\n      grid-template-columns: 1fr 150px 190px 190px;\r\n      gap: 8px;\r\n    }\r\n}\r\n  @media (max-width: 768px) {\r\n    .da-footer-container {\r\n        grid-template-columns: 1fr;\r\n    }\r\n\r\n    .da-footer-col {\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n      width: 100%;\r\n      text-align: center;\r\n    }\r\n\r\n    .da-footer-socials {\r\n      justify-content: center;\r\n    }\r\n\r\n    .da-footer-badges {\r\n      justify-content: center;\r\n    }\r\n  }\r\n  /* Responsive: stack to 2 cols on small screens, 1 on mobile */\r\n  @media(max-width:900px){\r\n    .course-footer-links{\r\n        grid-template-columns: 1fr 1fr;\r\n        padding: 24px 10px;\r\n    }\r\n  }\r\n  @media(max-width:560px){\r\n    .course-footer-links{\r\n        text-align: center;\r\n    }\r\n  }\r\n  @media(max-width:380px){\r\n    .course-footer-links{\r\n        grid-template-columns: 1fr;\r\n    }\r\n  }\r\n  /* Map card column */\r\n  .da-footer-map-card {\r\n    display: flex;\r\n    flex-direction: column;\r\n    text-decoration: none;\r\n    border-radius: 12px;\r\n    overflow: hidden;\r\n    border: 1px solid #4ab8ff44;\r\n    transition: border-color 0.3s, box-shadow 0.3s;\r\n    box-shadow: 0 2px 12px #4ab8ff18;\r\n    max-width: 100%;\r\n  }\r\n  .da-footer-map-card:hover {\r\n    border-color: #4ab8ff;\r\n    box-shadow: 0 4px 20px #4ab8ff33;\r\n  }\r\n  .da-footer-map-visual {\r\n    position: relative;\r\n    width: 100%;\r\n    height: 150px;\r\n    background: #111827;\r\n    overflow: hidden;\r\n  }\r\n  /* Road lines decoration */\r\n  .da-footer-map-roads span {\r\n    display: block;\r\n    position: absolute;\r\n    background: #1e3a5f;\r\n  }\r\n  .da-footer-map-roads span:nth-child(1) {\r\n    width: 100%; height: 2px;\r\n    top: 38%; left: 0;\r\n  }\r\n  .da-footer-map-roads span:nth-child(2) {\r\n    width: 2px; height: 100%;\r\n    left: 40%; top: 0;\r\n  }\r\n  .da-footer-map-roads span:nth-child(3) {\r\n    width: 60%; height: 2px;\r\n    top: 65%; left: 0;\r\n    transform: rotate(-8deg);\r\n    transform-origin: left center;\r\n  }\r\n  .da-footer-map-pin-wrap {\r\n    position: absolute;\r\n    top: 50%; left: 50%;\r\n    transform: translate(-50%, -60%);\r\n  }\r\n  .da-footer-map-pin-img {\r\n    width: 32px;\r\n    filter: drop-shadow(0 2px 6px #ff518b88);\r\n    animation: da-pin-bounce 1.6s ease-in-out infinite;\r\n  }\r\n  @keyframes da-pin-bounce {\r\n    0%, 100% { transform: translateY(0); }\r\n    50%       { transform: translateY(-5px); }\r\n  }\r\n  .da-footer-map-label {\r\n    background: #0d1117;\r\n    color: #4ab8ff;\r\n    font-size: 12px;\r\n    font-weight: 600;\r\n    text-align: center;\r\n    padding: 7px 8px;\r\n    transition: background 0.2s, color 0.2s;\r\n  }\r\n  .da-footer-map-card:hover .da-footer-map-label {\r\n    background: #4ab8ff;\r\n    color: #fff;\r\n  }\r\n\r\n  /* ── Payment Methods Section ── */\r\n  .da-footer-payments {\r\n    text-align: center;\r\n    margin: 18px auto 5px;\r\n    width: 100%;\r\n    padding: 0 20px;\r\n  }\r\n  .da-footer-payments .da-pay-label {\r\n    color: #4ab8ff;\r\n    font-size: 12px;\r\n    font-weight: 700;\r\n    margin-bottom: 14px;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1.5px;\r\n  }\r\n  .da-pay-icons {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 14px;\r\n  }\r\n  /* Font Awesome card icons */\r\n  .da-pay-icons .fab {\r\n    font-size: 22px;\r\n    color: #888;\r\n    transition: color 0.3s, transform 0.2s;\r\n    cursor: pointer;\r\n  }\r\n  .da-pay-icons .fab:hover               { transform: scale(1.15); }\r\n  .da-pay-icons .fa-cc-visa:hover        { color: #1a1f71; }\r\n  .da-pay-icons .fa-cc-mastercard:hover  { color: #eb001b; }\r\n  .da-pay-icons .fa-cc-amex:hover        { color: #007bc1; }\r\n  .da-pay-icons .fa-cc-paypal:hover      { color: #003087; }\r\n  .da-pay-icons .fa-cc-stripe:hover      { color: #6772e5; }\r\n  .da-pay-icons .fa-cc-discover:hover    { color: #f76f20; }\r\n  /* Styled text badges for Indian payment methods */\r\n  .da-pay-badge {\r\n    display: inline-flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    padding: 3px 7px;\r\n    border-radius: 4px;\r\n    font-size: 9px;\r\n    font-weight: 800;\r\n    color: #fff;\r\n    letter-spacing: 0.5px;\r\n    transition: transform 0.2s, box-shadow 0.2s;\r\n    cursor: pointer;\r\n    box-shadow: 0 2px 6px rgba(0,0,0,0.3);\r\n  }\r\n  .da-pay-badge:hover { transform: scale(1.12); box-shadow: 0 4px 12px rgba(0,0,0,0.4); }\r\n  .da-pay-badge.upi      { background: linear-gradient(135deg, #097939, #22b95e); }\r\n  .da-pay-badge.rupay    { background: linear-gradient(135deg, #004b8d, #1a72d4); }\r\n  .da-pay-badge.phonepay { background: linear-gradient(135deg, #5f259f, #8b47d8); }\r\n  .da-pay-badge.paytm    { background: linear-gradient(135deg, #00BAF2, #0085b2); }\r\n  .da-pay-badge.gpay     { background: linear-gradient(135deg, #4285f4, #34a853); }\r\n  .da-pay-badge.netbank  { background: linear-gradient(135deg, #555, #333); }\r\n  .da-pay-badge.imps     { background: linear-gradient(135deg, #c0392b, #e74c3c); }\r\n  .da-pay-badge.neft     { background: linear-gradient(135deg, #2471a3, #3498db); }\r\n  .da-pay-badge.cash     { background: linear-gradient(135deg, #7d6608, #b7950b); }\r\n  .da-pay-badge.emi      { background: linear-gradient(135deg, #b7410e, #e74c3c); }\r\n  .da-pay-badge.visa     { background: linear-gradient(135deg, #1a1f71, #2b3bb3); }\r\n  .da-pay-badge.master   { background: linear-gradient(135deg, #eb001b, #f79e1b); }\r\n  /* Small built-in icons for Quick Links (replaces Font Awesome) */\r\n  .da-li-ico { width: 13px; height: 13px; margin-right: 6px; fill: #4ab8ff; vertical-align: -1px; flex-shrink: 0; }\r\n  .da-footer-logo, .da-footer-badge-img { height: auto; }\r\n  .da-footer-badge-img { height: 44px; width: auto; }\r\n  \r\n  \r\n  \r\n  /* ── Google Maps Embed Container — DizitalAdda Theme ── */\r\n.footer-col-map-dizital {\r\n  width: 100%;\r\n  height: 200px;\r\n  border-radius: 12px;\r\n  overflow: hidden;\r\n  border: 2px solid rgba(153, 0, 255, 0.3);\r\n  box-shadow: 0 4px 20px rgba(153, 0, 255, 0.2);\r\n  transition: all 0.3s ease;\r\n  margin-bottom: 14px;\r\n  background: #0a0e27;\r\n}\r\n \r\n.footer-col-map-dizital:hover {\r\n  border-color: rgba(153, 0, 255, 0.6);\r\n  box-shadow: 0 8px 30px rgba(153, 0, 255, 0.35);\r\n  transform: translateY(-2px);\r\n}\r\n \r\n.footer-col-map-dizital iframe {\r\n  width: 100%;\r\n  height: 100%;\r\n  border: none;\r\n  display: block;\r\n}\r\n \r\n/* ── Get Directions Button — DizitalAdda Purple & Cyan ── */\r\n.footer-directions-btn-dizital {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  gap: 8px;\r\n  padding: 12px 20px;\r\n  border-radius: 999px;\r\n  background: linear-gradient(135deg, #9900ff 0%, #cc22e0 100%);\r\n  color: #ffffff;\r\n  font-weight: 700;\r\n  font-size: 14px;\r\n  text-decoration: none;\r\n  transition: all 0.3s ease;\r\n  border: 1.5px solid rgba(153, 0, 255, 0.4);\r\n  width: 100%;\r\n  text-align: center;\r\n  box-shadow: 0 6px 20px rgba(153, 0, 255, 0.35);\r\n  letter-spacing: 0.3px;\r\n}\r\n \r\n.footer-directions-btn-dizital:hover {\r\n  background: linear-gradient(135deg, #cc22e0 0%, #9900ff 100%);\r\n  box-shadow: 0 10px 35px rgba(153, 0, 255, 0.5);\r\n  transform: translateY(-3px);\r\n  border-color: rgba(153, 0, 255, 0.8);\r\n}\r\n \r\n.footer-directions-btn-dizital:active {\r\n  transform: translateY(-1px);\r\n  box-shadow: 0 4px 15px rgba(153, 0, 255, 0.3);\r\n}\r\n \r\n.footer-directions-btn-dizital i {\r\n  font-size: 15px;\r\n  flex-shrink: 0;\r\n}\r\n \r\n/* ── Responsive Design — DizitalAdda Footer ── */\r\n@media (max-width: 768px) {\r\n  .footer-col-map-dizital {\r\n    height: 180px;\r\n    margin-bottom: 12px;\r\n  }\r\n \r\n  .footer-directions-btn-dizital {\r\n    padding: 10px 16px;\r\n    font-size: 13px;\r\n  }\r\n \r\n  .footer-directions-btn-dizital i {\r\n    font-size: 14px;\r\n  }\r\n}\r\n \r\n@media (max-width: 480px) {\r\n  .footer-col-map-dizital {\r\n    height: 150px;\r\n    border-radius: 10px;\r\n  }\r\n \r\n  .footer-directions-btn-dizital {\r\n    padding: 9px 14px;\r\n    font-size: 12px;\r\n    gap: 6px;\r\n  }\r\n \r\n  .footer-directions-btn-dizital i {\r\n    font-size: 13px;\r\n  }\r\n}\r\n \r\n/* ── Dark Theme Support — Matches DizitalAdda's Footer Background ── */\r\n@media (prefers-color-scheme: dark) {\r\n  .footer-col-map-dizital {\r\n    background: #0a0e27;\r\n  }\r\n}\r\n\r\n  /*mail to css*/\r\n.da-footer-contact[href^=\"mailto:\"] {\r\n  cursor: pointer;\r\n  transition: all 0.3s ease;\r\n}\r\n \r\n.da-footer-contact[href^=\"mailto:\"]:hover {\r\n  color: #ff518b !important;\r\n}\r\n \r\n.da-footer-contact[href^=\"mailto:\"] svg {\r\n  transition: fill 0.3s ease;\r\n}\r\n \r\n.da-footer-contact[href^=\"mailto:\"]:hover svg {\r\n  fill: #ff518b !important;\r\n  filter: drop-shadow(0 0 6px rgba(255, 81, 139, 0.4));\r\n}\r\n \r\n.da-footer-contact[href^=\"mailto:\"]:focus {\r\n  outline: 2px solid #4ab8ff;\r\n  outline-offset: 2px;\r\n  border-radius: 4px;\r\n}\r\n  \r\n"}} />
+<script src="./homeScript.js" />
+
+
+<script type="module" dangerouslySetInnerHTML={{__html:"\r\nconst observer = new IntersectionObserver((entries) => {\r\nentries.forEach(entry => {\r\nif (entry.isIntersecting) {\r\nconst lottie = document.createElement('dotlottie-wc');\r\nlottie.setAttribute('src', 'https://lottie.host/5ccd74a5-73e7-47f1-8128-c85e062fd87f/6p8SYTKJLT.lottie');\r\nlottie.setAttribute('style', 'width: 300px; height: 300px;');\r\nlottie.setAttribute('autoplay', '');\r\nlottie.setAttribute('loop', '');\r\nlottie.setAttribute('speed', '1');\r\ndocument.getElementById('animation-placeholder').appendChild(lottie);\r\nobserver.disconnect();\r\n}\r\n});\r\n});\r\nobserver.observe(document.getElementById('animation-placeholder'));\r\n"}} />
+
+
+{/*  SPEED: the animation player is heavy, so it loads 1.5 seconds AFTER the page has finished loading.
+     Visitors see the page first; the animations appear a moment later.  */}
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\nwindow.addEventListener('load', function () {\r\nsetTimeout(function () {\r\nvar s = document.createElement('script');\r\ns.type = 'module';\r\ns.src = 'https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js';\r\ndocument.body.appendChild(s);\r\n}, 1500);\r\n});\r\n"}} />
+
+
+{/*  SPEED: campus photos load only when the visitor scrolls near them.
+     To change a photo, edit the data-bg="..." path in the gallery section above.  */}
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\n(function () {\r\nvar photos = document.querySelectorAll('.campus-photo[data-bg]');\r\nfunction show(el) { el.style.backgroundImage = \"url('\" + el.getAttribute('data-bg') + \"')\"; }\r\nif (!('IntersectionObserver' in window)) { photos.forEach(show); return; }\r\nvar io = new IntersectionObserver(function (entries) {\r\nentries.forEach(function (e) {\r\nif (e.isIntersecting) { show(e.target); io.unobserve(e.target); }\r\n});\r\n}, { rootMargin: '300px' });\r\nphotos.forEach(function (el) { io.observe(el); });\r\n})();\r\n"}} />
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="" />
+
+
+{/*  Initialize Swiper  */}
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\nwindow.addEventListener(\"load\", () => {\r\nif (!document.querySelector('.mySwiper')) {\r\nreturn;\r\n}\r\nvar swiper = new Swiper(\".mySwiper\", {\r\neffect: \"coverflow\",\r\ngrabCursor: true,\r\ncenteredSlides: true,\r\nslidesPerView: \"auto\",\r\nautoplay: {\r\ndelay: 3000,\r\ndisableOnInteraction: false,\r\npauseOnMouseEnter: true,\r\n},\r\ncoverflowEffect: {\r\nrotate: 50,\r\nstretch: 0,\r\ndepth: 100,\r\nmodifier: 1,\r\nslideShadows: true,\r\n},\r\npagination: {\r\nel: \".swiper-pagination\",\r\n},\r\n});\r\n});\r\n"}} />
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\n(function () {\r\nfunction initCertCarousel() {\r\nconst carousel = document.getElementById(\"certCarousel\");\r\nif (!carousel) return;\r\nconst slides = Array.from(carousel.querySelectorAll(\".cert-slide\"));\r\nif (slides.length < 2) return;\r\nlet currentIndex = 0;\r\nlet autoplayTimer = null;\r\nconst delay = 3500;\r\nconst dotCount = 4;\r\nfunction updateCarousel(index) {\r\nslides.forEach((slide, i) => slide.classList.toggle(\"active\", i === index));\r\nconst activeDotIndex = Math.floor((index / slides.length) * dotCount);\r\ndocument.querySelectorAll(\".cert-dot\").forEach((dot, i) => dot.classList.toggle(\"active\", i === activeDotIndex));\r\n}\r\nconst wrap = carousel.closest(\".cert-carousel-wrap\");\r\nif (wrap && !wrap.querySelector(\".cert-dots\")) {\r\nconst dotsContainer = document.createElement(\"div\");\r\ndotsContainer.className = \"cert-dots\";\r\nfor (let i = 0; i < dotCount; i++) {\r\nconst dot = document.createElement(\"button\");\r\ndot.className = `cert-dot ${i === 0 ? \"active\" : \"\"}`;\r\ndot.setAttribute(\"aria-label\", `View group ${i + 1}`);\r\nconst targetIndex = Math.floor((i / dotCount) * slides.length);\r\ndot.addEventListener(\"click\", () => {\r\ncurrentIndex = targetIndex;\r\nupdateCarousel(currentIndex);\r\nresetAutoplay();\r\n});\r\ndotsContainer.appendChild(dot);\r\n}\r\nwrap.appendChild(dotsContainer);\r\n}\r\nfunction nextSlide() {\r\ncurrentIndex = (currentIndex + 1) % slides.length;\r\nupdateCarousel(currentIndex);\r\n}\r\nfunction startAutoplay() {\r\nclearInterval(autoplayTimer);\r\nautoplayTimer = setInterval(nextSlide, delay);\r\n}\r\nfunction resetAutoplay() {\r\nclearInterval(autoplayTimer);\r\nstartAutoplay();\r\n}\r\ncarousel.addEventListener(\"mouseenter\", () => clearInterval(autoplayTimer));\r\ncarousel.addEventListener(\"mouseleave\", startAutoplay);\r\nupdateCarousel(0);\r\nstartAutoplay();\r\n}\r\nif (document.readyState === \"loading\") {\r\ndocument.addEventListener(\"DOMContentLoaded\", initCertCarousel);\r\n} else {\r\ninitCertCarousel();\r\n}\r\n})();\r\n"}} />
+
+
+{/*  Razorpay direct payment — no page redirect.
+     SPEED: the Razorpay file is downloaded only when someone clicks the PAY FEE button.  */}
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\n(function () {\r\nvar btn = document.getElementById('payFeeBtn');\r\nif (!btn) { return; }\r\nfunction loadRazorpay(done) {\r\nif (window.Razorpay) { done(); return; }\r\nvar s = document.createElement('script');\r\ns.src = 'https://checkout.razorpay.com/v1/checkout.js';\r\ns.onload = done;\r\ns.onerror = function () { setPaymentButtonLoading(false); alert('Could not load payment window. Please try again.'); };\r\ndocument.head.appendChild(s);\r\n}\r\nfunction setPaymentButtonLoading(isLoading) {\r\nbtn.classList.toggle('is-loading', isLoading);\r\nbtn.disabled = isLoading;\r\nbtn.textContent = isLoading ? 'Opening Razorpay' : 'PAY FEE';\r\n}\r\nbtn.addEventListener('click', function (event) {\r\nevent.preventDefault();\r\nevent.stopPropagation();\r\nvar amount     = btn.getAttribute('data-amount');\r\nvar courseId   = btn.getAttribute('data-course-id');\r\nvar courseName = btn.getAttribute('data-course-name');\r\nsetPaymentButtonLoading(true);\r\nvar formData = new FormData();\r\nformData.append('id',          amount);\r\nformData.append('course_id',   courseId);\r\nformData.append('course_name', courseName);\r\nfetch('/panel/create-order', { method: 'POST', body: formData })\r\n.then(function (r) { return r.json(); })\r\n.then(function (data) {\r\nsetPaymentButtonLoading(false);\r\nif (data.error) {\r\nalert('Payment error: ' + data.error);\r\nreturn;\r\n}\r\nvar options = {\r\nkey:         data.key_id,\r\namount:      data.amount,\r\ncurrency:    'INR',\r\nname:        'DizitalAdda',\r\ndescription: data.course_name,\r\nimage:       'https://dizitaladda.com/assets/img/logo.webp',\r\norder_id:    data.order_id,\r\nprefill:     { email: data.stu_email || '' },\r\nnotes:       { course_name: data.course_name, course_id: data.course_id },\r\ntheme:       { color: '#1d4ed8' },\r\nhandler: function (response) {\r\nvar f = document.createElement('form');\r\nf.method = 'POST';\r\nf.action = '/panel/paymentdone.php';\r\nvar fields = {\r\nORDER_ID:             data.receipt,\r\nCUST_ID:              data.stu_email || '',\r\nTXN_AMOUNT:           data.txn_amount,\r\nCOURSE_ID:            data.course_id,\r\nPAYMENT_GATEWAY:      'razorpay',\r\nrazorpay_payment_id:  response.razorpay_payment_id || '',\r\nrazorpay_order_id:    response.razorpay_order_id   || '',\r\nrazorpay_signature:   response.razorpay_signature  || ''\r\n};\r\nObject.keys(fields).forEach(function (k) {\r\nvar i = document.createElement('input');\r\ni.type = 'hidden'; i.name = k; i.value = fields[k];\r\nf.appendChild(i);\r\n});\r\ndocument.body.appendChild(f);\r\nf.submit();\r\n},\r\nmodal: {\r\nondismiss: function () {\r\nsetPaymentButtonLoading(false);\r\n}\r\n}\r\n};\r\nloadRazorpay(function () {\r\nvar rzp = new Razorpay(options);\r\nrzp.on('payment.failed', function (response) {\r\nvar msg = 'Payment failed.';\r\nif (response && response.error && response.error.description) {\r\nmsg += ' ' + response.error.description;\r\n}\r\nalert(msg);\r\nsetPaymentButtonLoading(false);\r\n});\r\nrzp.open();\r\n});\r\n})\r\n.catch(function () {\r\nsetPaymentButtonLoading(false);\r\nalert('Could not connect to payment server. Please try again.');\r\n});\r\n});\r\n})();\r\n"}} />
+
+
+<script dangerouslySetInnerHTML={{__html:"\r\n// ENROLL NOW → open enquiry popup\r\ndocument.addEventListener('click', function(e) {\r\nvar btn = e.target.closest('.enrollNowBtn');\r\nif (!btn) return;\r\ne.preventDefault();\r\nvar popup = document.getElementById('courseInfoPopup');\r\nif (!popup) return;\r\nvar course = btn.getAttribute('data-course');\r\nif (course) {\r\nvar select = popup.querySelector('select[name=\"Course\"]');\r\nif (select) select.value = course;\r\n}\r\npopup.classList.remove('hidden');\r\ndocument.body.style.overflow = 'hidden';\r\n});\r\n"}} />
+
+
+      </LegacyPageContent>
+    </>
+  );
+}
