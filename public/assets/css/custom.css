@@ -1,0 +1,481 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+     font-family: poppins;
+}
+/*Stare Hero section */
+
+.main-text{
+    font-size: 70px;
+    font-family: sans-serif;
+    color: #acacaa;
+}
+.main-text-2{
+    text-shadow: 4px 3px #a9a9a7;
+}
+
+@media screen and (max-width: 600px) and (min-width: 0px) {.main-text-2{text-shadow: 3px 2px #a9a9a7;}}
+@media(min-width:600px){.main-text{font-size: 83px;}}
+@media(max-width:600px){.main-text{font-size: 57px;}}
+@media(max-width:500px){.main-text{font-size: 36px;}}
+@media(max-width:400px){.main-text{font-size: 27px;}}
+@media(max-width:300px){.main-text{font-size: 21px;}}
+@media(max-width:200px){.main-text{font-size: 15px;}}
+
+/*End Hero section */
+
+/*auto cara */
+.fixed-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+    
+}
+
+
+/*aboutpage*/
+.about-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+ -webkit-transform: translate(-50%, -45%);
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+    
+}
+.carousel {
+    position: relative;
+}
+/*end auto*/
+
+.formbg{
+    background-color: #afabab88;
+    backdrop-filter: blur(5px) ;
+   }
+
+   .digi-width{
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
+
+.digi-nav{
+    width: 5% !important;
+}
+
+.count{
+  color: red;
+}
+
+
+/*our achevment back ground img*/
+
+ .fact{
+    background-image: url(https://dizitaladda.com/assets/img/counter.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  /*certificate*/
+   .certificates-gallery img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .certificates-gallery img:hover {
+            transform: scale(1.1);
+            
+        }
+
+
+
+
+    .faq-section .accordion-button {
+        background-color: #563d7c;
+            color: white;
+            height: 70px;
+             font-family: Roboto, sans-serif; /* Optional: Add border to match the theme */
+    }
+
+    .faq-section .accordion-button:not(.collapsed) {
+        background-color: rgba(62, 1, 61, 1); /* Retained as is for active state */
+        color: white; /* Change text color for active state */
+    }
+
+    /*.accordion-button::after{*/
+    /*    background-image: url(https://dizitaladda.com/assets/img/white.svg) !important;*/
+    /*}*/
+    
+    .accordion-item{
+        background-color: #F7F9FC !important;
+        
+    }
+    .text-just{
+            text-align: justify !important;
+        
+    }
+    
+    
+    
+    /*start hero Section*/
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(230, 240, 255, 1), rgba(240, 240, 255, 0.8), rgba(250, 250, 255, 0.4));
+        }
+
+        .background {
+            position: relative;
+            /*width: 100vw;*/
+            overflow: hidden;
+        }
+
+        .dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            animation: float 5s infinite ease-in-out;
+        }
+
+        .dot.blue {
+            background: rgba(0, 123, 255, 0.6);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-20px) translateX(20px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .head-title.fw-bold {
+                font-size: 35px;
+            }
+    
+            /*.background {*/
+            /*    height: 100vh !important;*/
+            /*}*/
+        }
+        /*End hero Section*/
+
+.bg-secondary-blue{
+    background-color:#37155b !important;
+}
+
+.btn-gradient {
+    color: white !important;
+    background: linear-gradient(90deg, rgba(74,169,226,1) 0%, rgba(152,53,209,1) 100%);
+    border: 0px !important;
+    border-radius: 12px !important;
+}
+
+.bg-light {
+    background-color: #F7F9FC;
+}
+
+.btn-enquiry:hover{
+    background-color:transparent !important;
+    border: 1px sold yellow;
+    color:yellow !important;
+}
+
+
+/*Start hero banner section*/
+
+  /* Container to hold the images */
+.image-container {
+  position: relative;
+  width: 530px; /* Set your desired width */
+  height: 530px; /* Set your desired height */
+  overflow: hidden;
+}
+
+/* Style for the images */
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Active class to show the image */
+.image.active {
+  opacity: 1;
+}
+
+    
+/*End hero banner section*/
+
+
+
+
+
+/*Start explosion effect on marquee*/
+
+   /* Styling for marquee */
+.update {
+  /*padding-top: 10px;*/
+  /*background-color: #FFD700;*/
+  /*color: #ffffff;*/
+  font-size: 1.5em;
+  position: relative;
+}
+
+/* Confetti styling */
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  opacity: 0;
+  animation: explode 1s ease-out forwards;
+}
+
+/* Keyframes for confetti explosion effect */
+@keyframes explode {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(1);
+    opacity: 0;
+  }
+}
+
+/*End explosion effect on marquee*/
+
+
+/*course section */
+
+ .hidden {
+            display: none;
+        }
+
+
+
+ /*Custom CSS to position the modal */
+
+    .modal-dialog-custom {
+        position: fixed;
+        top: 50px;
+        right: 20px;
+        transform: none; /* Override Bootstrap centering */
+    }
+
+/*youtube iframe*/
+    .std-youtube-short-iframe{
+        width: 100%;
+        height: 300px;
+    }
+/*youtube iframe*/
+    
+     .text-gradient {
+    background: linear-gradient(132deg, #ee2c3c 14.58%, #c5135d 65.1%, #6a11b0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Start fixed small form in the right bottom corner form*/
+
+  .inquiry-form-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 320px;
+    max-width: 100%;
+    z-index: 1000;
+    display: none;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+ 
+ 
+.blinking-text {
+  position: fixed;
+  right: 80px; /* Adjust to position it left of the button */
+  bottom: 30px; /* Align with the button */
+  font-size: 16px; /* Adjust as needed */
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 15px;
+  background-color: #5b2d82; /* A complementary shade */
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: blink 1s infinite;
+  display: inline-block;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+.form-toggle {
+  position: fixed;
+  right: 20px;
+  font-size: 25px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1001;
+  color: white;
+  background-color: #37155b !important;
+}
+
+#formToggle{
+     bottom: 20px;
+}
+ 
+  #telephone-icon{
+      bottom: 90px;
+      z-index: 0;
+  }
+  
+    .whatsapp-icon{
+        z-index: 0;
+      bottom: 160px;
+      font-size: 26px;
+  }
+  
+  
+  .inquiry-form-header {
+    /*background: #007bff;*/
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+/* End fixed small form in the right bottom corner form*/
+
+/*popup card */
+   .card-content {
+            max-width: 600px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
+
+        .popup-card {
+            display: none;
+            z-index: 10;
+        }
+        
+         .close-btn {
+            position: absolute;
+            top: -6px;
+            right: 8px;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color:black;
+        }
+        /* Custom CSS for the popup */
+       
+       
+
+    .bi-pinterest{
+                font-size: 1.6rem !important;
+    }
+
+
+  .hidden {
+            display: none;
+        }
+        
+        
+        
+        
+        
+        /*next-prevbutton*/
+
+        /* Custom styling for the controls container */
+        .carousel-controls {
+            position: absolute;
+            top: -100px; /* Adjust the position of the control buttons */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px; /* Space between the buttons */
+        }
+
+        /* Style for the buttons */
+        .carousel-controls button {
+            border: none;
+            background-color: #ffc107; /* Golden yellow background */
+            color: red; /* Black text/icon color */
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-controls button:hover {
+            background-color: #e0a800; /* Darker yellow on hover */
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        /* Adjust the icons' size inside buttons */
+        .carousel-controls button span {
+            margin: 0 5px; /* Spacing for the icons */
+        }
+
+        /* Fine-tune for mobile view */
+        @media (max-width: 768px) {
+            .carousel-controls {
+                top: 5px; /* Adjust for smaller screens */
+                flex-direction: column;
+                gap: 5px; /* Reduce spacing */
+            }
+
+            .carousel-controls button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    

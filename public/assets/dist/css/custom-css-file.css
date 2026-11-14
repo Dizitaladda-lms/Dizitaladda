@@ -1,0 +1,50 @@
+.container-fluid.mt-5.second-para {
+    background:  #ecf1f5;
+}
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .card{
+            margin: 20px 0px !important;
+        }
+        
+        div#v-pills-tab {
+            margin-top: 50px;
+        }
+        
+    .achievement {
+        background-image: url(business-Image.png);
+        background-size: 100%;
+        background-attachment: fixed;
+        height: 300px;
+    }
+            
+    /*  X-Small devices (portrait phones, less than 576px) */
+    @media (max-width: 575.98px) {.d-flex {display: table-cell !important;}} 
+    
+            
+        @media (min-width: 576px) {
+            .desktop-banner{display:block;}
+            .mobile-banner{display:none;}
+          .carousel-caption {bottom: 0rem !important;}
+          }
+          
+        @media (max-width: 575px) {
+            .desktop-banner{display:none;}
+            .mobile-banner{display:block;}
+          .carousel-item > img {height: auto !important;}
+          .carousel-caption {bottom: 11rem !important;}
+          .carousel-inner {height: 340px;}
+          a.btn.btn-lg.btn-primary {font-size: x-small;}
+          }
+          
