@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing at Dizitaladda - Enroll Now!","description":"Join our expert-led 3 to 12-month digital marketing course with SEO, PPC, and social media. Get job-ready with online certification. For beginners & pros."};
 

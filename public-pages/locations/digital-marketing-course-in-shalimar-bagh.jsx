@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Shalimar Bagh, Delhi | AI & Jobs","description":"Digital marketing institute for Shalimar Bagh & Haiderpur: SEO, Google & Meta Ads, 60+ AI tools, 10 live projects, internship & placement assistance."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"A Day in the Life of a Digital Marketing Manager: Responsibilities and Skills","description":"Discover the daily tasks, responsibilities, and essential skills of a digital marketing manager. Gain insights for a successful career!"};
 

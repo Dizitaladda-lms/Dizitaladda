@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Google Analytics Blog - Digital Marketing tips, news, trends, and updates","description":"The latest Google Analytics tips, trends, and updates to improve your digital marketing strategies and track your website's performance effectively."};
 

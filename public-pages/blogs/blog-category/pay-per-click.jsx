@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Pay-Per-Click Blogs - Digital Marketing tips, news, trends, and updates","description":"Stay updated with the latest Pay-Per-Click tips, trends, news, and updates to optimize your PPC campaigns and boost your digital marketing results."};
 

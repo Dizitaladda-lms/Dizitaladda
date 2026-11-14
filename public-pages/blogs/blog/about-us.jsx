@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"About - Gamevoyant","description":"Use Gamevoyant website to find and track the best promo codes to get free in-game rewards for your favorite mobile & PC games."};
 

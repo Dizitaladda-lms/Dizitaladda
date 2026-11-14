@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Web Development Course with Live Projects – Enroll Now","description":"Master front-end and back-end skills in our Web Development Course. Learn HTML, CSS, JS, React & Node with hands-on training. Start building websites now!"};
 

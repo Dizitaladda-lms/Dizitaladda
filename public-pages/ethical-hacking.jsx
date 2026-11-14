@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Ethical Hacking Course in Delhi | Certified Training - DizitalAdda","description":"Master ethical hacking with DizitalAdda's hands-on course in Delhi/NCR. Learn penetration testing, vulnerability assessment & exploitation techniques. 120 hours, expert mentorship, job assistance."};
 

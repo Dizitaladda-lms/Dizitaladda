@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"How to Use Advanced Competitive Analysis to Outperform Rivals in Digital Marketing","description":"Learn how advanced competitive analysis can give you an edge in digital marketing. Strategies to help students understand and surpass competitors."};
 

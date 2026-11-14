@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Affiliate Marketing Blogs- Digital Marketing tips, news, trends, and updates","description":"Get the latest digital marketing tips, trends, and updates on affiliate marketing to boost your online business and maximize earnings."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Kalkaji | Data & Analytics Focus","description":"2 Magenta Line stops from Kalkaji Mandir. Master GA4, Tag Manager, Google & Meta Ads, SEO and 60+ AI tools with live projects. Ideal for IT pros."};
 

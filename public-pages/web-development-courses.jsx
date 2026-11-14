@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"AI Full Stack Web development Course Delhi | 100% Placement","description":"Learn AI-powered Full Stack Development in Delhi. MERN, React, Node.js with dedicated placement assistance. Expert mentors, live projects. Join DizitalAdda!"};
 

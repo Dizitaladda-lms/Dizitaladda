@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"The Essential Guide to the 15 Best Reputation Management Tools","description":"the top 15 online reputation management tools for 2024 to boost your brand's image, manage reviews, and build customer trust effectively."};
 

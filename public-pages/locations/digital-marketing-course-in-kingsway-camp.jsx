@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Kingsway Camp | For DU Students","description":"Build job-ready digital marketing skills alongside your DU degree: evening & weekend batches, 10 live projects, Google & Meta certifications & placement."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"How to Choose the Right Online Marketing Company in India","description":"Discover how to choose the best digital marketing agency in India for your business. Tips, strategies, and insights for success in the online market."};
 

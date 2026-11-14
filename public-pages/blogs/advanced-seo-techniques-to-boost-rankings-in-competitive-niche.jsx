@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Advanced SEO Techniques to Boost Rankings in Competitive Niches","description":"Master advanced SEO strategies to rank in competitive niches. Perfect for students aiming to boost their digital marketing skills and stand out online."};
 

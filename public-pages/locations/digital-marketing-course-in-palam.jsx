@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Palam, Delhi | Direct Metro Route","description":"Digital marketing institute for Palam, Raj Nagar & Mahavir Enclave: SEO, Google & Meta Ads, 60+ AI tools, live projects & placement assistance."};
 

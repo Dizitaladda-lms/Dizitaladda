@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Which is the Best Course After 12th Science?","description":"Explore the best courses after 12th Science, including Engineering, Medicine, and Digital Marketing. Find your passion and build a rewarding career"};
 

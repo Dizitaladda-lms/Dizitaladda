@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Machine Learning & Cloud Computing Courses - DizitalAdda","description":"Master machine learning and cloud computing with DizitalAdda. Learn deep learning, computer vision, NLP & MLOps through hands-on projects on AWS, Azure & GCP. 95% job placement rate."};
 

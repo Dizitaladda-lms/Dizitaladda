@@ -1,6 +1,6 @@
 # Dizital Adda Next.js migration
 
-The Next.js App Router lives in `app/`. Public pages use JSX components in `content/public-pages/`, with shared UI in `components/`. Static assets are served from `public/`.
+The Next.js App Router lives in `app/`. Public pages use JSX components in `public-pages/`, with shared UI in `components/`. Static assets are served from `public/`.
 
 ## Run locally
 
@@ -9,7 +9,7 @@ The Next.js App Router lives in `app/`. Public pages use JSX components in `cont
 3. Apply `database/schema.sql` and relevant auxiliary schemas for a new installation. For an existing database, apply only the required migrations: `002-blog-post-content.sql` adds blog fields and `003-inquiry-fields.sql` adds inquiry fields. Set the separate staff, school, management, affiliate, lead, test-form and scholarship DB variables to the existing databases that contain those records; the corresponding schema files are for fresh installs.
 4. Run `npm run dev`, or run `npm run build` followed by `npm start` for production.
 
-Public routes resolve through `content/public-pages/registry.js`; the legacy HTML snapshots have been removed. The retained files under `backups/` are archival copies and are not served by the app.
+Public routes resolve through `public-pages/registry.js`; the legacy HTML snapshots have been removed. The retained files under `backups/` are archival copies and are not served by the app.
 
 ## Converted routes and backend
 

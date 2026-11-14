@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Gallery | DizitalAdda — Digital Marketing Institute, Delhi","description":"Explore DizitalAdda's gallery — photos of our digital marketing training institute in Delhi, classrooms, student batches, and events."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Growth Hacker vs. Digital Marketing Specialist: Which Career is Right for You?","description":"Explore the key differences between growth hackers and digital marketing specialists to choose the best career path for your goals."};
 

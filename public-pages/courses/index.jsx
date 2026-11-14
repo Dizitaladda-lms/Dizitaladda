@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Courses with 100% career support","description":"At Dizitaladda, We are providing Best Digital Marketing Courses with 100% career support. We are affordable digital marketing training institute in Delhi.."};
 

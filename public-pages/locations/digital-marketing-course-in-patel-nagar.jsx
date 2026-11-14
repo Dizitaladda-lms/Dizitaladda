@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Course in Patel Nagar, Central Delhi","description":"Digital marketing institute for Patel Nagar & Rajinder Nagar: SEO, Google & Meta Ads, 60+ AI tools, 10 live projects, internship & placement assistance."};
 

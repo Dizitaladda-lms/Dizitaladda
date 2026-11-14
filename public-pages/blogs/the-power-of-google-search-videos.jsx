@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"the Power of Google Search Videos: A Comprehensive Guide","description":"Discover the latest insights on Google, YouTube, and digital video trends. Stay ahead in the digital realm! #Google #YouTube #Video"};
 

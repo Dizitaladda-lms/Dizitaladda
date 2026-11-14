@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Hauz Khas | Weekend Batches","description":"Weekend, evening & morning batches 3 metro stops from Hauz Khas. For DU & IIT students and professionals: live projects, 60+ AI tools, placement help."};
 

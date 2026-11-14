@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Degree in Digital Marketing — DizitalAdda","description":"Earn a 3-Year Degree in Digital Marketing with DizitalAdda's university tie-ups. AI-integrated curriculum, 100% placement assistance, live projects, and industry mentors."};
 

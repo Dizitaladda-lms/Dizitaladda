@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Course in Vasant Vihar, South Delhi","description":"Digital marketing course institute for Vasant Vihar & Basant Lok: SEO, Google & Meta Ads, 60+ AI tools, live projects, paid internship & placement."};
 

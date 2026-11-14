@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"What's Next? Best Courses for Arts Stream After 12th","description":"Wondering what to do after 12th with an Arts stream background? Here are the best courses: digital marketing at DizitalAdda, Delhi. With dedicated placement assistance.\r\n"};
 

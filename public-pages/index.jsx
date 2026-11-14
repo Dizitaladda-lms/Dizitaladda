@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 

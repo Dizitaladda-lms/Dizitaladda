@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Course Registration","description":""};
 

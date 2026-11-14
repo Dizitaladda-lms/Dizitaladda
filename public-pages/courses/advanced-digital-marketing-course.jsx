@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Advanced Digital Marketing Course in Delhi With Placement.","description":"Go beyond the basics with our advanced digital marketing course: performance marketing, analytics, automation and AI tools, with certification & Placement"};
 

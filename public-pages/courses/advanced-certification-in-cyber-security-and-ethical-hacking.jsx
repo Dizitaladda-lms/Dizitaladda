@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"6 Month Ethical Hacking Course, Delhi & Online | DizitalAdda","description":"6-month ethical hacking course with VAPT, digital forensics, Python, Linux and Gen AI labs. CEH/OSCP guidance and 100% Placement Assistance."};
 

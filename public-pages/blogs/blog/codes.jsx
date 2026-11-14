@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"PC and Mobile Games Codes","description":"Find and redeem the best mobile and PC codes for todays & Current month. Browse codes over 1000+ games. Get free in-game rewards and items with Gamevoyant."};
 

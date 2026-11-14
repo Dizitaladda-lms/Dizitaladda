@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"About DizitalAdda | Our Story, Founder & Mentors Since 2009","description":"Meet the team behind DizitalAdda: founded in 2009 by Dr. Gulshan Kumar in Greater Kailash II. 25,000+ students trained, 97% placement, 4.9★ rating."};
 

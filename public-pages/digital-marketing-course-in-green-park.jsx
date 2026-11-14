@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Green Park | Expert Trainers","description":"Learn from 8 industry practitioners in batches of 15, a short metro ride from Green Park. SEO, Google & Meta Ads, 60+ AI tools & placement help."};
 

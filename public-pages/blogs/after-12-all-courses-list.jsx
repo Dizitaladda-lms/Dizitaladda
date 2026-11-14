@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Courses to Explore After 12th: Science, Arts, or Commerce?","description":"Explore top courses after 12th in Science, Arts, or Commerce! Unlock a rewarding career with DizitalAdda’s digital marketing course and 100% placement.\r\n"};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Graphic Design & Motion Graphics Course, Delhi | DizitalAdda","description":"6-month motion graphics course in Delhi, online and offline: After Effects, kinetic typography, logo animation and Gen AI. 100% Placement Assistance."};
 

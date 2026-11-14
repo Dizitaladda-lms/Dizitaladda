@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Institute in Delhi | Digital Marketing Course","description":"Advance your career at DizitalAdda, the best digital marketing institute in Delhi, offering practical training from Executive to Manager level."};
 

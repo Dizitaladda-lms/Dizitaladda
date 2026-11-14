@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute in Model Town, North Delhi","description":"DizitalAdda: digital marketing course institute for Model Town, DU & Mukherjee Nagar. SEO, Ads, 60+ AI tools, evening batches, internship & placement."};
 

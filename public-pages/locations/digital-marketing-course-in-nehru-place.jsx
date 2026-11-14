@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Nehru Place for IT Professionals","description":"Digital marketing course institute in Nehru Place for IT staff & freshers: SEO, Google & LinkedIn Ads, 60+ AI tools, live projects, internship & placement."};
 

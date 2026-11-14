@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"SEO Blog - Digital Marketing tips, news, trends, and updates","description":"Discover the latest SEO tips, trends, and updates to enhance your website’s visibility, improve rankings, and drive more organic traffic to your site."};
 

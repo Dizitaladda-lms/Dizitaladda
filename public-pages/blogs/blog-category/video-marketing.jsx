@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Video Marketing Blog -tips, news, trends, and updates","description":"Explore the latest video marketing tips, trends, news, and updates to enhance your digital strategy and create engaging video content for your audience."};
 

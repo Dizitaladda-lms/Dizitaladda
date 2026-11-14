@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Course in Old Delhi | DizitalAdda","description":"Join DizitalAdda — best digital marketing course in Old Delhi. SEO, Google Ads, Meta Ads, 60+ AI tools, 10+ certifications, paid internship & 97% placement."};
 

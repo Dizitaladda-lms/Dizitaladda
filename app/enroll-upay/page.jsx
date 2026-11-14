@@ -1,4 +1,4 @@
-import EnrollUpayPage, { pageMetadata } from "../../content/public-pages/enroll-upay.jsx";
+import EnrollUpayPage, { pageMetadata } from "../../public-pages/enroll-upay.jsx";
 
 export const metadata = { title: pageMetadata.title, description: pageMetadata.description };
 

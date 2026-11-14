@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Nangloi | Job-Ready in 4 Months","description":"Best digital marketing course institute for Nangloi & West Delhi: SEO, Google & Meta Ads, 60+ AI tools, live projects, paid internship & placement."};
 

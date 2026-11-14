@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Course in Wazirpur, North West Delhi","description":"Digital marketing course institute for Wazirpur & Ashok Vihar: B2B leads, IndiaMART, Google & Meta Ads, SEO, 60+ AI tools, internship & placement."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Preet Vihar | Real Ad Campaigns","description":"Digital marketing course institute for Preet Vihar & East Delhi: run real Google & Meta Ads, SEO, 60+ AI tools, paid internship & placement assistance."};
 

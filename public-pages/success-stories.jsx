@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"DizitalAdda Success Stories | Student Placements & Careers","description":"See where DizitalAdda students got placed: real learners now working as SEO executives, performance marketers & social media managers. 97% placement rate."};
 

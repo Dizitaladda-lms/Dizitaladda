@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Diploma in Data Science & AI (12 Months) | DizitalAdda","description":"12-month diploma in data science: Python, SQL, statistics, ML, deep learning, PySpark, AWS, GCP, Azure and Gen AI. Domain capstone, 100% Placement Assistance."};
 

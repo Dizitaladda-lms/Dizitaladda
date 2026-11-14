@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Karol Bagh | Job & Freelance Ready","description":"Hands-on digital marketing training in Karol Bagh for students, professionals & traders: 10 live projects, 60+ AI tools, paid internship & placement help."};
 

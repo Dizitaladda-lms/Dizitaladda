@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Data Analytics Course in Delhi & Online | DizitalAdda","description":"6-month data analytics course: Excel, SQL, Python, Power BI, Tableau, statistics, ML basics and AI tools. Live projects and 100% Placement Assistance."};
 

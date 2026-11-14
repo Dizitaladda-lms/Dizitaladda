@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"3 Month Data Analytics Certification Course | DizitalAdda","description":"3-month data analytics certification course for beginners: Excel, SQL, Python, Power BI and AI tools. Live projects, ATS resume, 100% Placement Assistance."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Why Small Businesses Need Digital Marketing","description":"Discover why digital marketing is essential for small businesses. Boost growth, reach customers, and stay competitive in today's digital landscape."};
 

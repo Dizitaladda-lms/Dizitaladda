@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Content Marketing Blogs - Digital Marketing tips, news, trends, and updates","description":"Explore the latest content marketing tips, trends, and updates to enhance your digital marketing strategy and drive engagement for your business."};
 

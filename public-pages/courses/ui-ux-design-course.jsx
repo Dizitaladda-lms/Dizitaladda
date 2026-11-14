@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"UI UX Design Course in Delhi | Figma & Gen AI | DizitalAdda","description":"6-month UI UX design course in Delhi, online and offline: Figma, Adobe XD, user research, prototyping and Gen AI. Real portfolio, 100% Placement Assistance."};
 

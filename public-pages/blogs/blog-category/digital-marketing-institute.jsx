@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Blog - Digital Marketing Tips & Top Institutes for Growth","description":"Explore top digital marketing tips and leading institutes to help you grow your skills and advance your career in the digital marketing field."};
 

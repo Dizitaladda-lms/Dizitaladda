@@ -2,7 +2,7 @@ import sanitizeHtml from "sanitize-html";
 import { notFound } from "next/navigation";
 import PublicNavbar from "../../../components/PublicNavbar.jsx";
 import { getBlogDatabase } from "../../../lib/db.js";
-import { publicPageLoaders, publicPageMetadata } from "../../../content/public-pages/registry.js";
+import { publicPageLoaders, publicPageMetadata } from "../../../public-pages/registry.js";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";

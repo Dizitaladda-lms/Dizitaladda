@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Graphic Designing: My Passion & the Most Imp Part of My Life","description":" Explore the profound impact Graphic Designing in my passion, uncovering career opportunities, iconic works, and the role of design in everyday life. "};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute in Mukherjee Nagar, Delhi","description":"Digital marketing course institute for Mukherjee Nagar students & aspirants: SEO, Ads, 60+ AI tools, evening batches, paid internship & placement."};
 

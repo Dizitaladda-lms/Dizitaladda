@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Course in Vivek Vihar, East Delhi","description":"Digital marketing institute for Vivek Vihar, Jhilmil & Suraj Mal Vihar: SEO, Google & Meta Ads, 60+ AI tools, live projects & placement assistance."};
 

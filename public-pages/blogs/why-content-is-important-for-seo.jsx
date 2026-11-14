@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Why Content Is Important for SEO- DizitalAdda","description":"In the massive world of digital marketing, where our attention spans are really short and competition is sharp, eye-catchy visual content is the must-have."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"5 Key Elements of a Successful SEO Infographic: A Comprehensive Guide","description":"Utilize the full power of SEO by carefully preparing a high quality infographic. Get familiar with the basis on which SEO-effective and strikingly beautiful contents are built. Create your own digital world fair project below."};
 

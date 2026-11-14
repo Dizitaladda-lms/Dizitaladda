@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Diploma in Machine Learning & AI (12 Months) | DizitalAdda","description":"12-month diploma in machine learning: Python, XGBoost, deep learning, vision, NLP, time series, Gen AI and MLOps. 15+ projects, 100% Placement Assistance."};
 

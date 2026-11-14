@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"28 Top startups in India 2024-|-Business Model Explained","description":"Discover India's top 28 Top Startups in india 2024 | Grow your Brand in 2024 revolutionizing industries from retail to education"};
 

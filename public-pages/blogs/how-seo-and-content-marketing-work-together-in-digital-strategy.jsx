@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"How SEO and Content Marketing Work Together in Digital Strategy","description":"Learn how SEO and content marketing work together to drive effective digital strategies, attract audiences, and boost online visibility for businesses."};
 

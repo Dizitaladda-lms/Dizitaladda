@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course: Syllabus, Fees & Jobs | DizitalAdda","description":"See the full digital marketing course syllabus, modules, tools covered, fees and career options at DizitalAdda. Start with a free demo class."};
 

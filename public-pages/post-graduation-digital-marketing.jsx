@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Post Graduation in Digital Marketing — DizitalAdda","description":"Earn a 2-Year Post Graduation Degree in Digital Marketing with DizitalAdda. MBA/M.Sc. programs with AI-integrated curriculum, 100% placement assistance, and university tie-ups."};
 

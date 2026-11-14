@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Graphic Design & Video Editing Course in Delhi | DizitalAdda","description":"6-month graphic design and video editing course in Delhi, online and offline: Photoshop, Illustrator, Premiere Pro and Gen AI. 100% Placement Assistance."};
 

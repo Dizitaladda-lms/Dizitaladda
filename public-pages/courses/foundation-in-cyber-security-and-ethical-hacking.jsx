@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Cyber Security Course for Beginners (4 Months) | DizitalAdda","description":"4-month cyber security course for beginners: networking, Linux, Python, ethical hacking basics and Gen AI. No tech background needed. 100% Placement Assistance."};
 

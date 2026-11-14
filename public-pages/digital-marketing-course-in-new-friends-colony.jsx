@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in New Friends Colony, South Delhi","description":"Digital marketing institute near New Friends Colony & Sukhdev Vihar: SEO, Google & Meta Ads, 60+ AI tools, live projects & placement assistance."};
 

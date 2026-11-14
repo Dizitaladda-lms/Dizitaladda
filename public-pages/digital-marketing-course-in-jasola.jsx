@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Jasola | Career & Business Growth","description":"For Jasola professionals, clinics and business owners: learn Google Ads, LinkedIn, local SEO & 60+ AI tools, 7 Magenta Line stops from campus. Free demo."};
 

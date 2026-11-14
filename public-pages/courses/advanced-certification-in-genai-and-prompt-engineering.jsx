@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Generative AI Course in Delhi & Online | DizitalAdda","description":"6-month generative AI course: prompt engineering, ChatGPT, LangChain, RAG, Hugging Face and Gen AI for marketing. 10 projects, 100% Placement Assistance."};
 

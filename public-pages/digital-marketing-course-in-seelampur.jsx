@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Seelampur, Delhi | Sell Online","description":"Digital marketing institute for Seelampur, Jafrabad & Welcome: SEO, Google & Meta Ads, e-commerce, 60+ AI tools, live projects & placement assistance."};
 

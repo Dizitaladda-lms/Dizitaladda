@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import PublicNavbar from "../../components/PublicNavbar.jsx";
 import { getBlogDatabase } from "../../lib/db.js";
-import { publicPageLoaders } from "../../content/public-pages/registry.js";
+import { publicPageLoaders } from "../../public-pages/registry.js";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";

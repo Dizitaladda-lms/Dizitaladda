@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Understanding the Analytics Role in Digital Marketing Success","description":"Explore the vital role of analytics in digital marketing, helping students understand how data-driven insights boost campaigns and drive business growth."};
 

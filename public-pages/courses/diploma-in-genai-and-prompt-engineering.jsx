@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Diploma in Generative AI (12 Months) | DizitalAdda","description":"12-month diploma in generative AI: prompt engineering, deep learning, LLM fine-tuning, AI agents, RAG, MLOps and Gen AI marketing. 100% Placement Assistance."};
 

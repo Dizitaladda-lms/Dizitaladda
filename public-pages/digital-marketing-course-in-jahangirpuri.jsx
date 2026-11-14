@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Jahangirpuri | Start After 12th","description":"No degree needed: start a digital marketing career from Jahangirpuri after 12th. Beginner-friendly live classes, paid internship & placement help."};
 

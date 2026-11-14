@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Civil Lines | Paid Internship","description":"Build a digital marketing career from Civil Lines, North Delhi. Paid agency internship, Google & Meta certifications, AEO/GEO, evening batches. Free demo."};
 

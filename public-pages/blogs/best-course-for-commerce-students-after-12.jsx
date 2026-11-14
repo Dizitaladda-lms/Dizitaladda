@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"What is the best course for commerce students after 12?","description":"Discover the best career option for commerce students after 12th! Enroll in a Digital Marketing Course for high-demand jobs, low fees, and placement support "};
 

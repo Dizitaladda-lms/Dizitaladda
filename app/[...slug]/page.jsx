@@ -1,7 +1,7 @@
 import { getLegacyContentDatabase } from "../../lib/db.js";
 import { renderLegacyContent } from "../../lib/legacy-content.js";
 import { notFound, permanentRedirect, redirect } from "next/navigation";
-import { publicPageLoaders, publicPageMetadata } from "../../content/public-pages/registry.js";
+import { publicPageLoaders, publicPageMetadata } from "../../public-pages/registry.js";
 const aliases = new Map([
     ["panel/loginorsignup.php", "/panel/student/login"],
     ["panel/index.php", "/panel/student"],

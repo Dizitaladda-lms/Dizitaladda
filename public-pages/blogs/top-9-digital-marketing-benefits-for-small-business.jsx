@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Top 9 Digital Marketing Benefits for Small Business","description":"Discover the top 9 digital marketing benefits for small businesses, including enhanced visibility, voice search, and visual search strategies for success."};
 

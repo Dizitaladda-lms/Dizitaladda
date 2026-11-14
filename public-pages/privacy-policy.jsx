@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Privacy Policy | DA DigitalAdda Innovations Pvt. Ltd.","description":"Read the May 2026 Privacy Policy of DA DigitalAdda Innovations Pvt. Ltd. to understand how personal information is collected, used, protected, and shared."};
 

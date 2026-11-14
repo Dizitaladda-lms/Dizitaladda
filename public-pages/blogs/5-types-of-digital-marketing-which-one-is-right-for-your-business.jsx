@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"5 Digital Marketing Types: Choose the Best for ROI","description":"Explore 5 types of digital marketing strategies—SEO, PPC, SMM, email, and content marketing. Learn which fits your business for growth and success. "};
 

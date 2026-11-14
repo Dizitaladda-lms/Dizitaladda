@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Okhla, Delhi | AI & Live Projects","description":"Digital marketing institute for Okhla Industrial Area & Okhla Phase 1-3: SEO, Google & Meta Ads, 60+ AI tools, live projects & placement assistance."};
 

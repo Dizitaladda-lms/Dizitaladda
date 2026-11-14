@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Azadpur | 97% Placement Rate","description":"Job-ready digital marketing training for Azadpur & North Delhi. 250+ hiring partners, 10+ Google & Meta certifications, 60+ AI tools. Book a free demo."};
 

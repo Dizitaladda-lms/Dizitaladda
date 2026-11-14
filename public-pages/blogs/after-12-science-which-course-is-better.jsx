@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Want to Know Which Course is Best After 12th Science?","description":"Best course after 12th science? Explore digital marketing at DizitalAdda, Delhi’s top institute offering placement assistance, hands-on training, and career opportunities. "};
 

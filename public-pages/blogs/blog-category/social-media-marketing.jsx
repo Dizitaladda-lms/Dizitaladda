@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"SMM Blogs - Digital Marketing tips, news, trends, and updates","description":"Stay updated with the latest SMM tips, trends, news, and updates to boost your social media marketing strategy and drive engagement for your business."};
 

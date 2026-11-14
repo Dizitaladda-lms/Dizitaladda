@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Chandni Chowk | Online & Offline","description":"For Old Delhi traders & students: learn IndiaMART, Google Ads, Instagram & 60+ AI tools near Chandni Chowk. Live projects, placement support, free demo."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Bug Bounty Course in Delhi & Online | DizitalAdda","description":"Join DizitalAdda's 4-month bug bounty course: recon, OWASP Top 10, API & AI security, Burp Suite, live targets, report writing and 100% Placement Assistance."};
 

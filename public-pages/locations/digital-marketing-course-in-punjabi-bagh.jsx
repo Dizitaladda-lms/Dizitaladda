@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Punjabi Bagh | Social Media & Ads","description":"Digital marketing course institute for Punjabi Bagh & West Delhi: social media, Google & Meta Ads, SEO, 60+ AI tools, paid internship & placement."};
 

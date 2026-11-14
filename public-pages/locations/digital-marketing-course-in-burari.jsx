@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Burari | Beginner-Friendly & EMI","description":"Digital marketing training for Burari & North Delhi: beginner-friendly, live online or campus, SEO, Google & Meta Ads, 60+ AI tools & placement."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Diploma in Data Analytics & AI (12 Months) | DizitalAdda","description":"12-month diploma in data analytics: Excel, SQL, BigQuery, Python, Power BI, Tableau, GA4 and AI tools. Live projects, 100% Placement Assistance."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute in Mehrauli, South Delhi","description":"Digital marketing course for Mehrauli & Lado Sarai: SEO, Google & Meta Ads, 60+ AI tools, 10 live projects, paid internship & placement assistance."};
 

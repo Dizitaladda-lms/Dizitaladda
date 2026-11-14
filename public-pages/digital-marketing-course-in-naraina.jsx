@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Naraina, Delhi | B2B & AI Skills","description":"Digital marketing institute for Naraina Vihar & Naraina Industrial Area: SEO, Google Ads, IndiaMART, 60+ AI tools, live projects & placement assistance."};
 

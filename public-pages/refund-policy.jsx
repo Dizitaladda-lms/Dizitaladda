@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Refund & Cancellation Policy | DA DigitalAdda Innovations Pvt. Ltd.","description":"Read the May 2026 Refund & Cancellation Policy of DA DigitalAdda Innovations Pvt. Ltd. for payment, cancellation, refund eligibility, EMI, and dispute terms."};
 

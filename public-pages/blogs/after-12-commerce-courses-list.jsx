@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"What to Study After 12th in Commerce: Your Options","description":"Explore high-paying career options after 12th Commerce! Join DizitalAdda's Digital Marketing Course for 100% placements, freelancing, and financial success."};
 

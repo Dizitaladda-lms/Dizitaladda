@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"How a Digital Marketing Internship Can Boost Your Career","description":"Discover how a digital marketing internship builds key skills, enhances career prospects, and prepares students for a successful marketing career."};
 

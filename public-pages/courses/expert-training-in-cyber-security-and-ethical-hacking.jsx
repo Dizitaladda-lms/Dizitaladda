@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"1 Year Cyber Security Course in Delhi & Online | DizitalAdda","description":"12-month cyber security and ethical hacking course: VAPT, web, mobile & AWS security, malware, SOC and Gen AI. CEH/OSCP guidance, 100% Placement Assistance."};
 

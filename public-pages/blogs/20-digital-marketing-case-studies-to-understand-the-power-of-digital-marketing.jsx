@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"20 Digital Marketing Case Studies to Understand the Power of Digital Marketing","description":"As digital marketing continuously transforms over time, case studies act as supreme beacons of intelligence revealing effective strategies, cutting edge campaigns, and over literate approaches."};
 

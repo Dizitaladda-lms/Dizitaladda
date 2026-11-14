@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Course in Tagore Garden, West Delhi","description":"Digital marketing institute for Tagore Garden & Raghubir Nagar: SEO, Google & Meta Ads, 60+ AI tools, live projects, remote work & placement assistance."};
 

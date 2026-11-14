@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Daryaganj, Delhi | AI & Placement","description":"Digital marketing institute for Daryaganj & Old Delhi: SEO, Google & Meta Ads, 60+ AI tools, 10 live projects, paid internship & placement assistance."};
 

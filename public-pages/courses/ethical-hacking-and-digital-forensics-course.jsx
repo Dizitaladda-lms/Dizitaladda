@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Ethical Hacking & Digital Forensics Course in Delhi | DizitalAdda — 6 Months","description":"Learn Ethical Hacking, VAPT, and Digital Forensics in one job-oriented 6-month programme at DizitalAdda, South Delhi. 144 hours: Python for security, Networking, Linux, Ethical Hacking, VAPT (Metasploit, Nessus, OpenVAS), and Cyber Forensic Investigation."};
 

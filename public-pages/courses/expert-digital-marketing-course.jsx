@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Expert Digital Marketing Course with AI Tools in Delhi | DizitalAdda","description":"Build expert-level digital marketing skills with advanced strategy, performance marketing and analytics training at DizitalAdda."};
 

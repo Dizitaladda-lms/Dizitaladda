@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Web Designing Blogs- tips, news, trends, and updates","description":"Stay updated with the latest web design tips, trends, news, and updates to create user-friendly, visually appealing websites for better digital experiences"};
 

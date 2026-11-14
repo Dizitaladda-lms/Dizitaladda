@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Machine Learning Course in Delhi & Online | DizitalAdda","description":"6-month machine learning course: Python, Scikit-learn, deep learning, NLP, computer vision, Gen AI and MLOps. Deployed projects, 100% Placement Assistance."};
 

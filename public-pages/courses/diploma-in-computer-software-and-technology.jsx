@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Diploma in Computer Software & Technology | Python, Web Dev, AI | DizitalAdda","description":"Join DizitalAdda's 12-month Diploma in Computer Software & Technology — master Python, HTML/CSS, JavaScript, React, Node.js, MySQL, MongoDB & AI tools."};
 

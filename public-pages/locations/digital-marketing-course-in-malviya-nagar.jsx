@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Malviya Nagar | Mentor-Led","description":"Mentor-led digital marketing classes a short ride from Malviya Nagar: SEO, Google & Meta Ads, 60+ AI tools, live projects, paid internship & placement."};
 

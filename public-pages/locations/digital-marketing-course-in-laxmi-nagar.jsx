@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Laxmi Nagar | Side Income Skills","description":"Preparing for SSC, bank or CA exams in Laxmi Nagar? Learn digital marketing in 3–4 months and freelance part-time. Live projects, AI tools, placement help."};
 

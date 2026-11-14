@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Kashmere Gate | 4 Course Levels","description":"Pick from 4 levels, 3 to 12 months, Beginner to Expert. Easy Violet Line route from Kashmere Gate, live projects, 60+ AI tools & placement help."};
 

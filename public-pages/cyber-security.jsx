@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Ethical Hacking & Cyber Security Course in Delhi | DizitalAdda","description":"Join the best cyber security course in Delhi at DizitalAdda. Learn ethical hacking, VAPT, forensics & SOC with hands-on labs and placement support."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Google AI Essentials Course Answers (2024 August)","description":"Google has launched the new Google AI Essentials course. It is available on Coursera and We will show you Google AI Essentials Course Answers and Questions.."};
 

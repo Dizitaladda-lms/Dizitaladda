@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Data Analytics & Data Science Course with AI | DizitalAdda","description":"Master Data Analytics & Data Science with AI at DizitalAdda. Learn Python, SQL, ML, dashboards & real-world projects. Enroll now."};
 

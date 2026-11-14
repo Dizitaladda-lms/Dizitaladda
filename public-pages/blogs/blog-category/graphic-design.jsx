@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Graphic Design Blogs - Digital Marketing tips, news, trends, and updates","description":"Explore the latest graphic design tips, trends, and updates to enhance your digital marketing efforts and create impactful, visually engaging content."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"What to Study After 12th Commerce If You Hate Maths","description":"Discover the best course after 12th Commerce without Maths! Join DizitalAdda's digital marketing program for 100% placement, flexibility, and success."};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Data Science Course in Delhi & Online | DizitalAdda","description":"6-month data science course: Python, SQL, statistics, Power BI, machine learning, Gen AI and deployment. Capstone project, 100% Placement Assistance."};
 

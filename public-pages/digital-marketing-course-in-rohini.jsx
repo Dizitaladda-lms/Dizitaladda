@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Rohini | Live Online & Campus","description":"Digital marketing course institute for Rohini: live online or campus classes, SEO, Google & Meta Ads, 60+ AI tools, paid internship & placement."};
 

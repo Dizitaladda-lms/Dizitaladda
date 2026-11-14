@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Ramesh Nagar | E-commerce & AI","description":"Digital marketing institute for Ramesh Nagar & West Delhi: SEO, Google & Meta Ads, e-commerce, 60+ AI tools, live projects & placement assistance."};
 

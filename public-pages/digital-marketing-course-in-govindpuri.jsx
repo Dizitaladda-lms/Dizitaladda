@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Govindpuri | Free Demo Class","description":"Our campus is 3 metro stops from Govind Puri. Book a free demo and learn SEO, Google Ads, Meta Ads & 60+ AI tools with live projects & placement help."};
 

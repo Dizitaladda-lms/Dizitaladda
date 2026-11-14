@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Terms and Conditions - DizitalAdda Digital Marketing","description":"Review the terms and conditions for using our website. Understand content usage, user accounts, privacy, third-party links, and more at DizitalAdda."};
 

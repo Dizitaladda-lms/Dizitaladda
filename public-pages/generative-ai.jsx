@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best AI & Machine Learning Course with Placement | DizitalAdda","description":"Master AI & Machine Learning at DizitalAdda. Learn Gen AI, ML, Deep Learning, NLP & real-world projects with placement support. Enroll now."};
 

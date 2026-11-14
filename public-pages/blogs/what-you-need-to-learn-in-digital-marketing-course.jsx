@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"What you Need to Learn in Digital Marketing Course: A Complete Guide","description":"Explore key skills from a our blog what we learn in digital marketing course, including SEO, content marketing, and analytics, to enhance your marketing career!"};
 

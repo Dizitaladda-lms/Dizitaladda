@@ -1,5 +1,5 @@
-import PublicNavbar from "../../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../../components/PublicNavbar.jsx";
+import LegacyPageContent from "../../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Best Suitable Courses After 12th Commerce for Students","description":"If you’re in 12th standard and searching for the best courses to pursue after 12th, we have some of the most demanded and fruitful courses to help you with!"};
 

@@ -1,5 +1,5 @@
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import PublicNavbar from "../components/PublicNavbar.jsx";
+import LegacyPageContent from "../components/LegacyPageContent.jsx";
 
 export const pageMetadata = {"title":"Digital Marketing Course in Adarsh Nagar | Live Projects","description":"Learn SEO, Google Ads & Meta Ads near Adarsh Nagar metro with 10 live brand projects, a paid internship, 60+ AI tools and placement support. Free demo."};
 
