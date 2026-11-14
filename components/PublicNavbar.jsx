@@ -10,15 +10,15 @@ const courseGroups = [
     description: "Build creative and digital marketing skills.",
     icon: "marketing",
     courses: [
-      { title: "Digital Marketing for Beginners", href: "/courses/digital-marketing-for-beginners" },
-      { title: "Digital Marketing for Professionals", href: "/courses/digital-marketing-for-professional" },
-      { title: "Advanced Digital Marketing", href: "/courses/advanced-digital-marketing-course" },
-      { title: "Expert Digital Marketing", href: "/courses/expert-digital-marketing-course" },
-      { title: "Graphic Design & Video Editing", href: "/courses/graphic-design-and-professional-video-editing-course" },
-      { title: "Graphic Design & Motion Graphics", href: "/courses/graphic-design-and-motion-graphics" },
-      { title: "UI/UX Design", href: "/courses/ui-ux-design-course" },
-      { title: "Web Development", href: "/courses/web-development-course" },
-      { title: "Computer Software & Technology", href: "/courses/diploma-in-computer-software-and-technology" },
+      { title: "Digital Marketing for Beginners", href: "/courses/digital-marketing-for-beginners", terms: ["short"] },
+      { title: "Digital Marketing for Professionals", href: "/courses/digital-marketing-for-professional", terms: ["short"] },
+      { title: "Advanced Digital Marketing", href: "/courses/advanced-digital-marketing-course", terms: ["short", "long"] },
+      { title: "Expert Digital Marketing", href: "/courses/expert-digital-marketing-course", terms: ["long"] },
+      { title: "Graphic Design & Video Editing", href: "/courses/graphic-design-and-professional-video-editing-course", terms: ["short"] },
+      { title: "Graphic Design & Motion Graphics", href: "/courses/graphic-design-and-motion-graphics", terms: ["short"] },
+      { title: "UI/UX Design", href: "/courses/ui-ux-design-course", terms: ["short"] },
+      { title: "Web Development", href: "/courses/web-development-course", terms: ["short", "long"] },
+      { title: "Computer Software & Technology", href: "/courses/diploma-in-computer-software-and-technology", terms: ["long"] },
     ],
   },
   {
@@ -26,11 +26,11 @@ const courseGroups = [
     description: "Learn to protect systems, networks and data.",
     icon: "security",
     courses: [
-      { title: "Foundation in Cyber Security & Ethical Hacking", href: "/courses/foundation-in-cyber-security-and-ethical-hacking" },
-      { title: "Advanced Cyber Security & Ethical Hacking", href: "/courses/advanced-certification-in-cyber-security-and-ethical-hacking" },
-      { title: "Expert Cyber Security & Ethical Hacking", href: "/courses/expert-training-in-cyber-security-and-ethical-hacking" },
-      { title: "Digital Forensics & Cyber Investigation", href: "/courses/certification-in-digital-forensic-and-cyber-investigation" },
-      { title: "Bug Bounty", href: "/courses/expert-training-in-bug-bounty" },
+      { title: "Foundation in Cyber Security & Ethical Hacking", href: "/courses/foundation-in-cyber-security-and-ethical-hacking", terms: ["short"] },
+      { title: "Advanced Cyber Security & Ethical Hacking", href: "/courses/advanced-certification-in-cyber-security-and-ethical-hacking", terms: ["short"] },
+      { title: "Expert Cyber Security & Ethical Hacking", href: "/courses/expert-training-in-cyber-security-and-ethical-hacking", terms: ["long"] },
+      { title: "Digital Forensics & Cyber Investigation", href: "/courses/certification-in-digital-forensic-and-cyber-investigation", terms: ["short"] },
+      { title: "Bug Bounty", href: "/courses/expert-training-in-bug-bounty", terms: ["short"] },
     ],
   },
   {
@@ -38,17 +38,23 @@ const courseGroups = [
     description: "Turn data and AI tools into practical skills.",
     icon: "data",
     courses: [
-      { title: "Advanced Gen AI & Prompt Engineering", href: "/courses/advanced-certification-in-genai-and-prompt-engineering" },
-      { title: "Diploma in Gen AI & Prompt Engineering", href: "/courses/diploma-in-genai-and-prompt-engineering" },
-      { title: "Diploma in Machine Learning & AI", href: "/courses/diploma-in-machine-learning-and-ai" },
-      { title: "Advanced Machine Learning & AI", href: "/courses/advanced-certification-in-machine-learning-and-ai" },
-      { title: "Diploma in Data Science & AI", href: "/courses/diploma-in-data-science-and-ai" },
-      { title: "Advanced Data Science & AI", href: "/courses/advanced-certification-in-data-science-and-ai" },
-      { title: "Diploma in Data Analytics & AI", href: "/courses/diploma-in-data-analytics-and-ai" },
-      { title: "Advanced Data Analytics & AI", href: "/courses/advanced-certification-in-data-analytics-and-ai" },
-      { title: "Certification in Data Analytics & AI", href: "/courses/certification-in-data-analytics-and-ai" },
+      { title: "Advanced Gen AI & Prompt Engineering", href: "/courses/advanced-certification-in-genai-and-prompt-engineering", terms: ["short"] },
+      { title: "Diploma in Gen AI & Prompt Engineering", href: "/courses/diploma-in-genai-and-prompt-engineering", terms: ["long"] },
+      { title: "Diploma in Machine Learning & AI", href: "/courses/diploma-in-machine-learning-and-ai", terms: ["long"] },
+      { title: "Advanced Machine Learning & AI", href: "/courses/advanced-certification-in-machine-learning-and-ai", terms: ["short"] },
+      { title: "Diploma in Data Science & AI", href: "/courses/diploma-in-data-science-and-ai", terms: ["long"] },
+      { title: "Advanced Data Science & AI", href: "/courses/advanced-certification-in-data-science-and-ai", terms: ["short"] },
+      { title: "Diploma in Data Analytics & AI", href: "/courses/diploma-in-data-analytics-and-ai", terms: ["long"] },
+      { title: "Advanced Data Analytics & AI", href: "/courses/advanced-certification-in-data-analytics-and-ai", terms: ["short"] },
+      { title: "Certification in Data Analytics & AI", href: "/courses/certification-in-data-analytics-and-ai", terms: ["three-month"] },
     ],
   },
+];
+
+const courseTerms = [
+  { id: "short", label: "Short Term Course", duration: "6 Months" },
+  { id: "long", label: "Long Term Course", duration: "1 Year" },
+  { id: "three-month", label: "3 Months Course", duration: "3 Months" },
 ];
 
 
@@ -57,6 +63,7 @@ export default function PublicNavbar() {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedDomain, setSelectedDomain] = useState(0);
+  const [selectedTerm, setSelectedTerm] = useState("short");
   const [isMobileViewport, setIsMobileViewport] = useState(false);
   const navRef = useRef(null);
   const mobileTriggerRef = useRef(null);
@@ -147,6 +154,8 @@ export default function PublicNavbar() {
   };
 
   const activeGroup = courseGroups[selectedDomain];
+  const activeTerm = courseTerms.find((term) => term.id === selectedTerm);
+  const visibleCourses = activeGroup.courses.filter((course) => course.terms.includes(selectedTerm));
 
   return (
     <>
@@ -193,13 +202,22 @@ export default function PublicNavbar() {
                 <section className="site-course-panel" id="course-domain-panel" role="tabpanel" aria-labelledby={`course-domain-tab-${selectedDomain}`} key={selectedDomain}>
                   <div className="site-course-panel-heading">
                     <h2>{activeGroup.title}</h2>
-                    <p>{activeGroup.courses.length} courses in this domain</p>
+                    <p>{visibleCourses.length} courses · {activeTerm.duration}</p>
                   </div>
-                  <div className="site-course-list">
-                    {activeGroup.courses.map(({ title, href }) => (
-                      <a className="site-course-link" href={href} key={href}><span>{title}</span><span className="site-course-arrow" aria-hidden="true">&rsaquo;</span></a>
+                  <div className="site-course-terms" role="group" aria-label="Filter courses by duration">
+                    {courseTerms.map((term) => (
+                      <button key={term.id} type="button" aria-pressed={selectedTerm === term.id} className={selectedTerm === term.id ? "is-selected" : ""} onClick={() => setSelectedTerm(term.id)}>
+                        {term.label}<small>{term.duration}</small>
+                      </button>
                     ))}
                   </div>
+                  {visibleCourses.length > 0 ? (
+                    <div className="site-course-list">
+                      {visibleCourses.map(({ title, href }) => (
+                        <a className="site-course-link" href={href} key={href}><span>{title}</span><span className="site-course-arrow" aria-hidden="true">&rsaquo;</span></a>
+                      ))}
+                    </div>
+                  ) : <p className="site-course-empty">No courses listed for this duration in this domain.</p>}
                 </section>
                 <div className="site-course-footer">
                   <p>Not sure which course fits you? Our counsellors will guide you.</p>
@@ -211,12 +229,12 @@ export default function PublicNavbar() {
               <button ref={studentTriggerRef} className="site-more-trigger" type="button" aria-haspopup="menu" aria-expanded={openMenu === "student-centric"} onClick={() => toggleMenu("student-centric")}>
                 Student Centric <span className="site-chevron" aria-hidden="true" />
               </button>
-              <div className="site-more-menu" role="menu">
-                <a href="/review" role="menuitem">Student Review</a>
-                <a href="/about-us#mentorsTrack" role="menuitem">Trainer</a>
-                <a href="/digital-marketing-course-in-delhi#campus-tour" role="menuitem">Campus Tour</a>
-                <a href="/success-stories" role="menuitem">Placement Review</a>
-                <a href="/gallery" role="menuitem">Our Events</a>
+              <div className="site-more-menu site-student-menu" role="menu">
+                <a href="/review" role="menuitem"><strong>Student Review</strong><small>Real stories and feedback from our learners</small></a>
+                <a href="/about-us#mentorsTrack" role="menuitem"><strong>Trainer</strong><small>Learn from experienced industry professionals</small></a>
+                <a href="/digital-marketing-course-in-delhi#campus-tour" role="menuitem"><strong>Campus Tour</strong><small>Explore our classrooms and learning spaces</small></a>
+                <a href="/success-stories" role="menuitem"><strong>Placement Review</strong><small>See student outcomes and career journeys</small></a>
+                <a href="/gallery" role="menuitem"><strong>Our Events</strong><small>Workshops, celebrations and campus activities</small></a>
               </div>
             </div>
             <a className="site-nav-link" href="/contact-us">Contact Us</a>

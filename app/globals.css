@@ -66,3 +66,16 @@ body {
 #campus-tour{scroll-margin-top:90px}
 @media(max-width:1023px){#campus-tour{scroll-margin-top:70px}}
 .site-nav{font-family:var(--font-plus-jakarta-sans),Inter,system-ui,sans-serif}
+.site-student-dropdown .site-student-menu{left:0;right:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;width:min(560px,calc(100vw - 32px));padding:16px}
+.site-nav .site-student-dropdown .site-student-menu a{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-height:66px;padding:10px 12px;border-radius:7px}
+.site-student-menu a strong{color:#1b2a6b;font-size:15px;font-weight:600}
+.site-student-menu a small{color:#7b7f89;font-size:12px;font-weight:400;line-height:1.4}
+.site-nav .site-student-dropdown .site-student-menu a:hover{background:#f3eff8}
+@media(max-width:1023px){.site-nav .site-student-dropdown .site-student-menu{position:static;display:none;grid-template-columns:1fr;gap:3px;width:100%;padding:6px 0 10px;border:0;border-radius:0;box-shadow:none;opacity:1;visibility:visible;transform:none}.site-nav .site-student-dropdown.is-open .site-student-menu{display:grid}.site-nav .site-student-dropdown .site-student-menu a{min-height:58px;padding:9px 10px}}
+.site-course-terms{display:flex;gap:8px;margin:0 0 12px}
+.site-course-terms button{display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:3px;min-width:0;padding:8px 10px;border:1px solid #e5e3eb;border-radius:7px;color:#3f4654;background:#fff;font:inherit;font-size:12px;font-weight:600;text-align:left;cursor:pointer;transition:border-color .15s ease,background .15s ease,color .15s ease}
+.site-course-terms button small{color:#777b87;font-size:11px;font-weight:400}
+.site-course-terms button:hover,.site-course-terms button.is-selected{border-color:#6a1b9a;color:#1b2a6b;background:#f7f3fa}
+.site-course-terms button:focus-visible{outline:2px solid #6a1b9a;outline-offset:2px}
+.site-course-empty{padding:14px 10px;border-radius:6px;color:#777b87;background:#f8f7fb;font-size:13px}
+@media(max-width:1023px){.site-course-terms{gap:6px;margin-bottom:8px}.site-course-terms button{align-items:center;padding:8px 4px;font-size:11px;text-align:center}.site-course-terms button small{font-size:10px}}
