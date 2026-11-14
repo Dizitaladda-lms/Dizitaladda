@@ -2533,7 +2533,7 @@ export default function LegacyPage_digital_marketing_course_in_delhi() {
 
     <div className="cl-media-col">
       {/*  Click-to-load facade: campus-tour video only loads the YouTube player after a click  */}
-      <div className="cl-video-wrap yt-facade" data-yt-id="sLA-SZWfb0s" data-yt-title="DizitalAdda Campus Tour">
+      <div className="cl-video-wrap yt-facade" id="campus-tour" data-yt-id="sLA-SZWfb0s" data-yt-title="DizitalAdda Campus Tour">
         <img className="yt-facade-thumb" src="https://i.ytimg.com/vi/sLA-SZWfb0s/maxresdefault.jpg" width="1280" height="720" data-legacy-onerror={"this.onerror=null;this.src='https://i.ytimg.com/vi/sLA-SZWfb0s/hqdefault.jpg'"} alt="DizitalAdda Campus Tour" loading="lazy" decoding="async" />
         <button className="yt-facade-play" type="button" aria-label="Play DizitalAdda Campus Tour">►</button>
       </div>

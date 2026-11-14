@@ -62,6 +62,7 @@ export default function PublicNavbar() {
   const mobileTriggerRef = useRef(null);
   const coursesTriggerRef = useRef(null);
   const moreTriggerRef = useRef(null);
+  const studentTriggerRef = useRef(null);
   const domainTabRefs = useRef([]);
   const pathname = usePathname();
 
@@ -84,12 +85,14 @@ export default function PublicNavbar() {
       if (event.key === "Escape") {
         const mobileDrawerIsOpen = navRef.current?.querySelector(".site-links")?.classList.contains("is-mobile-open");
         const escapeFromMore = event.target.closest?.(".site-more-dropdown");
+        const escapeFromStudents = event.target.closest?.(".site-student-dropdown");
         const dropdownIsOpen = navRef.current?.querySelector(".site-dropdown.is-open");
         if (!mobileDrawerIsOpen && !dropdownIsOpen) return;
         setOpenMenu(null);
         setMobileOpen(false);
         if (mobileDrawerIsOpen) mobileTriggerRef.current?.focus();
         else if (escapeFromMore) moreTriggerRef.current?.focus();
+        else if (escapeFromStudents) studentTriggerRef.current?.focus();
         else coursesTriggerRef.current?.focus();
       }
     };
@@ -202,6 +205,18 @@ export default function PublicNavbar() {
                   <p>Not sure which course fits you? Our counsellors will guide you.</p>
                   <div><a href="/contact-us">Talk to a counsellor</a><a href="/contact-us">Book a free demo</a></div>
                 </div>
+              </div>
+            </div>
+            <div className={`site-dropdown site-student-dropdown${openMenu === "student-centric" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("student-centric")} onMouseLeave={() => setOpenMenu(null)}>
+              <button ref={studentTriggerRef} className="site-more-trigger" type="button" aria-haspopup="menu" aria-expanded={openMenu === "student-centric"} onClick={() => toggleMenu("student-centric")}>
+                Student Centric <span className="site-chevron" aria-hidden="true" />
+              </button>
+              <div className="site-more-menu" role="menu">
+                <a href="/review" role="menuitem">Student Review</a>
+                <a href="/about-us#mentorsTrack" role="menuitem">Trainer</a>
+                <a href="/digital-marketing-course-in-delhi#campus-tour" role="menuitem">Campus Tour</a>
+                <a href="/success-stories" role="menuitem">Placement Review</a>
+                <a href="/gallery" role="menuitem">Our Events</a>
               </div>
             </div>
             <a className="site-nav-link" href="/contact-us">Contact Us</a>
