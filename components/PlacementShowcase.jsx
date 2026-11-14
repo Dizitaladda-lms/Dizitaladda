@@ -1,3 +1,6 @@
+"use client";
+import { useRef } from "react";
+
 const placedStudents = [
   { name: "Ishika Kohli", role: "Digital Marketing & SEO Specialist", company: "Commbitz Ltd.", image: "/images/placements/ishika.webp" },
   { name: "Zoha Kauser", role: "Co-Founder", company: "byteblast", image: "/images/placements/zoha.webp" },
@@ -23,6 +26,17 @@ const placedStudents = [
 ];
 
 export default function PlacementShowcase() {
+  const trackRef = useRef(null);
+
+  const scrollStudents = (direction) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const card = track.querySelector(".placement-showcase-card");
+    const gap = Number.parseFloat(window.getComputedStyle(track).columnGap) || 0;
+    const step = (card?.getBoundingClientRect().width || track.clientWidth) + gap;
+    track.scrollBy({ left: step * direction, behavior: "smooth" });
+  };
+
   return (
     <section className="placement-showcase" aria-labelledby="placement-showcase-title">
       <div className="placement-showcase-inner">
@@ -31,7 +45,11 @@ export default function PlacementShowcase() {
           <h2 id="placement-showcase-title">Our Students, Placed &amp; Thriving</h2>
           <p>Meet some of the DizitalAdda graduates building their careers across the industry.</p>
         </header>
-        <div className="placement-showcase-grid">
+        <div className="placement-showcase-toolbar">
+          <button type="button" aria-label="Previous students" onClick={() => scrollStudents(-1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+          <button type="button" aria-label="Next students" onClick={() => scrollStudents(1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+        </div>
+        <div className="placement-showcase-grid" ref={trackRef} tabIndex={0} aria-label="Placed students">
           {placedStudents.map((student) => (
             <article className="placement-showcase-card" key={student.name} tabIndex={0} aria-label={`${student.name}, ${student.role} at ${student.company}`}>
               <img src={student.image} alt={student.name} loading="lazy" decoding="async" />
@@ -43,7 +61,7 @@ export default function PlacementShowcase() {
             </article>
           ))}
         </div>
-        <a className="placement-showcase-link" href="/success-stories">View all student stories <span aria-hidden="true">→</span></a>
+        <a className="placement-showcase-link" href="/success-stories">View all student stories <span aria-hidden="true">&rarr;</span></a>
       </div>
     </section>
   );

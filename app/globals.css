@@ -289,3 +289,16 @@ body {
 @media(max-width:640px){.placement-showcase{padding:58px 16px}.placement-showcase-heading{margin-bottom:26px}.placement-showcase-heading p{font-size:14px}.placement-showcase-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.placement-showcase-card{aspect-ratio:4/5}.placement-showcase-overlay{padding:15px 12px 14px}.placement-showcase-overlay h3{font-size:15px}.placement-showcase-overlay p{font-size:11px}.placement-showcase-overlay>span{font-size:10px}}
 @media(hover:none){.placement-showcase-overlay{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.placement-showcase-card>img,.placement-showcase-overlay,.placement-showcase-link{transition:none}}
+/* Single-row placement carousel; student details stay visible without interaction. */
+.placement-showcase-toolbar{display:flex;justify-content:flex-end;gap:9px;margin:0 0 14px}
+.placement-showcase-toolbar button{display:grid;width:42px;height:42px;place-items:center;border:1px solid #ded7ed;border-radius:50%;background:#fff;color:#6d28d9;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease}
+.placement-showcase-toolbar button:hover{border-color:#6d28d9;background:#6d28d9;color:#fff}
+.placement-showcase-toolbar button:focus-visible,.placement-showcase-grid:focus-visible{outline:3px solid #a78bfa;outline-offset:3px}
+.placement-showcase-toolbar svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.placement-showcase-grid{display:flex;gap:20px;overflow-x:auto;padding:2px 2px 14px;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.placement-showcase-grid::-webkit-scrollbar{display:none}
+.placement-showcase-card{flex:0 0 calc((100% - 60px)/4);aspect-ratio:4/4.65;scroll-snap-align:start}
+.placement-showcase-overlay{opacity:1;transform:none}
+.placement-showcase-card:hover>img,.placement-showcase-card:focus-visible>img{transform:scale(1.035)}
+@media(max-width:1024px){.placement-showcase-grid{gap:16px}.placement-showcase-card{flex-basis:calc((100% - 32px)/3)}}
+@media(max-width:640px){.placement-showcase-grid{gap:12px}.placement-showcase-card{flex-basis:78%;aspect-ratio:4/4.8}.placement-showcase-overlay{padding:18px 14px 16px}}
