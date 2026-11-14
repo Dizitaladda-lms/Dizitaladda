@@ -46,7 +46,7 @@ const courseGroups = [
       { title: "Advanced Data Science & AI", href: "/courses/advanced-certification-in-data-science-and-ai", terms: ["short"] },
       { title: "Diploma in Data Analytics & AI", href: "/courses/diploma-in-data-analytics-and-ai", terms: ["long"] },
       { title: "Advanced Data Analytics & AI", href: "/courses/advanced-certification-in-data-analytics-and-ai", terms: ["short"] },
-      { title: "Certification in Data Analytics & AI", href: "/courses/certification-in-data-analytics-and-ai", terms: ["three-month"] },
+      { title: "Certification in Data Analytics & AI", href: "/courses/certification-in-data-analytics-and-ai", terms: ["short"] },
     ],
   },
 ];
@@ -54,7 +54,6 @@ const courseGroups = [
 const courseTerms = [
   { id: "short", label: "Short Term Course", duration: "6 Months" },
   { id: "long", label: "Long Term Course", duration: "1 Year" },
-  { id: "three-month", label: "3 Months Course", duration: "3 Months" },
 ];
 
 

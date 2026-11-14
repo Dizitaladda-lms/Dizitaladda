@@ -92,3 +92,21 @@ body {
 .site-course-term-column .site-course-link{align-items:flex-start;min-height:40px;padding:9px 6px}
 .site-course-term-column .site-course-empty{margin:10px 0}
 @media(max-width:1023px){.site-nav .site-course-menu{position:static;top:auto;left:auto;width:100%;max-height:none;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto;transform:none}.site-nav .site-dropdown.is-open .site-course-menu{transform:none}.site-nav .site-course-menu:before{display:none}.site-nav .site-course-panel{grid-column:1;grid-row:2;padding:12px 0 16px}.site-course-term-columns{grid-template-columns:1fr;gap:14px}.site-course-term-heading{min-height:42px;margin:0 0 6px;padding-bottom:7px}.site-course-term-heading h3{font-size:14px}.site-term-indicator{flex-basis:26px;width:26px;height:26px;border-width:4px}.site-course-term-column .site-course-list{grid-template-columns:1fr;gap:0}.site-course-term-column .site-course-link{min-height:38px;padding:8px 5px}.site-course-term-column .site-course-empty{margin:5px 0}.site-nav .site-course-footer{grid-column:1;grid-row:3}}
+.site-course-term-columns{grid-template-columns:repeat(2,minmax(0,1fr))}
+.site-nav .site-course-term-column .site-course-link{font-weight:650!important}
+@media(max-width:1023px){.site-course-term-columns{grid-template-columns:1fr}}
+.site-nav .site-courses-trigger{background:#7624a4}
+.site-nav .site-courses-trigger:hover{background:#5c1c82}
+.site-nav .site-nav-link:hover,.site-nav .site-more-trigger:hover{color:#7624a4}
+.site-nav .site-domain-tab.is-selected{color:#57206f}
+.site-course-panel-heading h2,.site-course-term-heading h3{color:#57206f}
+.site-course-term-heading{border-bottom-color:#eee6f2}
+.site-term-indicator{border-top-color:#7624a4;border-right-color:#c12b8c}
+.site-course-term-column:nth-child(2) .site-term-indicator{border-top-color:#c12b8c;border-right-color:#7624a4}
+.site-course-term-column:nth-child(3) .site-term-indicator{border-top-color:#c12b8c;border-right-color:#eee6f2}
+.site-nav .site-mobile-toggle span{background:#7624a4}
+.site-nav .site-domain-icon{color:#7624a4}
+.site-nav .site-domain-tab.is-selected .site-domain-icon{color:#fff;background:#7624a4}
+.site-course-footer a{border-color:#7624a4;color:#7624a4}
+.site-course-footer a:last-child{background:#7624a4}
+.site-course-footer a:last-child:hover{background:#5c1c82}
