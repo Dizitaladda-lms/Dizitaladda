@@ -65,3 +65,4 @@ body {
 @media(max-width:1023px){.site-student-dropdown.is-open .site-more-menu{display:block}}
 #campus-tour{scroll-margin-top:90px}
 @media(max-width:1023px){#campus-tour{scroll-margin-top:70px}}
+.site-nav{font-family:var(--font-plus-jakarta-sans),Inter,system-ui,sans-serif}
