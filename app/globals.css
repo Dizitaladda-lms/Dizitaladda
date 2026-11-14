@@ -302,3 +302,10 @@ body {
 .placement-showcase-card:hover>img,.placement-showcase-card:focus-visible>img{transform:scale(1.035)}
 @media(max-width:1024px){.placement-showcase-grid{gap:16px}.placement-showcase-card{flex-basis:calc((100% - 32px)/3)}}
 @media(max-width:640px){.placement-showcase-grid{gap:12px}.placement-showcase-card{flex-basis:78%;aspect-ratio:4/4.8}.placement-showcase-overlay{padding:18px 14px 16px}}
+/* Explicit track rules win over legacy page styles. */
+#placement-students-track{display:flex!important;flex-flow:row nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;gap:20px!important;scroll-snap-type:x mandatory!important;scrollbar-width:none!important}
+#placement-students-track>.placement-showcase-card{display:block!important;flex:0 0 calc((100% - 60px)/4)!important;min-width:0!important;scroll-snap-align:start!important}
+#placement-students-track .placement-showcase-overlay{display:flex!important;opacity:1!important;transform:none!important}
+.placement-showcase-overlay{pointer-events:none}
+@media(max-width:1024px){#placement-students-track{gap:16px!important}#placement-students-track>.placement-showcase-card{flex-basis:calc((100% - 32px)/3)!important}}
+@media(max-width:640px){#placement-students-track{gap:12px!important}#placement-students-track>.placement-showcase-card{flex-basis:78%!important}}

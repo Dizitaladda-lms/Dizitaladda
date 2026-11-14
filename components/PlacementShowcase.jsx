@@ -49,7 +49,7 @@ export default function PlacementShowcase() {
           <button type="button" aria-label="Previous students" onClick={() => scrollStudents(-1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
           <button type="button" aria-label="Next students" onClick={() => scrollStudents(1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
         </div>
-        <div className="placement-showcase-grid" ref={trackRef} tabIndex={0} aria-label="Placed students">
+        <div className="placement-showcase-grid" id="placement-students-track" ref={trackRef} tabIndex={0} aria-label="Placed students">
           {placedStudents.map((student) => (
             <article className="placement-showcase-card" key={student.name} tabIndex={0} aria-label={`${student.name}, ${student.role} at ${student.company}`}>
               <img src={student.image} alt={student.name} loading="lazy" decoding="async" />
