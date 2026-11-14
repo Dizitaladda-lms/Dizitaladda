@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Add or edit courses here. Images are served locally from /public.
 const courses = [
@@ -68,7 +68,23 @@ function CourseCard({ course }) {
 export default function CourseCategoryFilters() {
   const [activeCategory, setActiveCategory] = useState("all");
   const trackRef = useRef(null);
+  const [hasEntered, setHasEntered] = useState(false);
   const visibleCourses = activeCategory === "all" ? courses : courses.filter((course) => course.category === activeCategory);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track || hasEntered) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setHasEntered(true);
+        observer.disconnect();
+      }
+    }, { threshold: 0.12 });
+
+    observer.observe(track);
+    return () => observer.disconnect();
+  }, [hasEntered]);
 
   const scrollCards = (direction) => {
     if (!trackRef.current) return;
@@ -89,12 +105,20 @@ export default function CourseCategoryFilters() {
       <div className="da-course-carousel-controls">
         <span>{activeCategory === "all" ? "Explore our career-focused courses" : courseCategories.find((category) => category.id === activeCategory)?.label}</span>
         <div>
-          <button type="button" aria-label="Previous courses" onClick={() => scrollCards(-1)}>‹</button>
-          <button type="button" aria-label="Next courses" onClick={() => scrollCards(1)}>›</button>
+          <button type="button" aria-label="Previous courses" onClick={() => scrollCards(-1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+          <button type="button" aria-label="Next courses" onClick={() => scrollCards(1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
         </div>
       </div>
       <div className="da-course-track" ref={trackRef} aria-label="Course cards">
-        {visibleCourses.map((course) => <div className="da-course-slide" key={course.title}><CourseCard course={course} /></div>)}
+        {visibleCourses.map((course, index) => (
+          <div
+            className={`da-course-slide ${hasEntered ? "is-visible" : ""}`}
+            key={course.title}
+            style={{ "--course-reveal-delay": `${index * 120}ms` }}
+          >
+            <CourseCard course={course} />
+          </div>
+        ))}
       </div>
     </div>
   );
