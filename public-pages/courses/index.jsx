@@ -1,5 +1,6 @@
 import PublicNavbar from "../../components/PublicNavbar.jsx";
 import LegacyPageContent from "../../components/LegacyPageContent.jsx";
+import CourseCategoryFilters from "../../components/CourseCategoryFilters.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Courses with 100% career support","description":"At Dizitaladda, We are providing Best Digital Marketing Courses with 100% career support. We are affordable digital marketing training institute in Delhi.."};
 
@@ -454,16 +455,16 @@ export default function LegacyPage_courses_index() {
   </div>
   <div className="courses" id="courses">
     <div className="containerCource">
-        <h6 className="courseHeader">
+        <h2 className="courseHeader">
             Explore Our Course Categories
-        </h6>
+        </h2>
         <div className="coursesSectionDetails">
-            <p className="courseDetails">Kickstart your career by choosing the right skill — Digital Marketing, AI, Data Science, or Cybersecurity — and take the first step towards your future.</p>
-            <img className="RightArrow" src="../arrow_icon.svg" alt="arrow icon" />
+            <p className="courseDetails">Explore career-focused courses in Digital Marketing, AI, Data Science, and Cyber Security.</p>
         </div>
+        <CourseCategoryFilters />
         
        {/*  Digital Marketing Courses Section  */}
-<div className="category-section">
+<div className="category-section" data-course-category="digital-marketing">
     <h2 className="category-title firstTitle">Digital Marketing Courses</h2>
     <div className="swiper digital-marketing-swiper swiper-initialized swiper-horizontal">
         <div className="swiper-wrapper" style={{"transform":"translate3d(0px, 0px, 0px)"}}>
@@ -570,7 +571,7 @@ export default function LegacyPage_courses_index() {
     </div>
 </div>
         {/*  AI & Data Science Courses Section  */}
-        <div className="category-section">
+        <div className="category-section" data-course-category="ai-data-science">
             <h2 className="category-title">AI &amp; Data Science Courses</h2>
             <div className="swiper ai-data-science-swiper swiper-initialized swiper-horizontal">
                 <div className="swiper-wrapper" style={{"transform":"translate3d(0px, 0px, 0px)"}}>
@@ -797,7 +798,7 @@ export default function LegacyPage_courses_index() {
             </div>
         </div>
         {/*  Cyber Security Courses Section  */}
-        <div className="category-section">
+        <div className="category-section" data-course-category="cyber-security">
             <h2 className="category-title">Cyber Security Courses</h2>
             <div className="swiper cyber-security-swiper swiper-initialized swiper-horizontal">
                 <div className="swiper-wrapper" style={{"transform":"translate3d(0px, 0px, 0px)"}}>

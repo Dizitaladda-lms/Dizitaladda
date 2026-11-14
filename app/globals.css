@@ -110,3 +110,17 @@ body {
 .site-course-footer a{border-color:#7624a4;color:#7624a4}
 .site-course-footer a:last-child{background:#7624a4}
 .site-course-footer a:last-child:hover{background:#5c1c82}
+.site-nav .site-nav-link{font-weight:500!important}
+.site-nav .site-more-trigger{font-weight:500!important;background:transparent!important;border:0!important;box-shadow:none!important}
+.site-nav .site-more-trigger:hover,.site-nav .site-more-trigger:active,.site-nav .site-more-trigger:focus:not(:focus-visible){background:transparent!important;box-shadow:none!important;outline:none!important}
+.site-nav .site-course-term-column .site-course-link{color:#25232a!important;font-weight:650!important}
+.site-nav .site-course-term-column .site-course-link:hover{color:#6a1b9a!important}
+.courses .containerCource .courseHeader{width:100%;margin:0 0 12px;text-align:center!important;font-size:clamp(28px,3vw,40px);line-height:1.2}
+.courses .coursesSectionDetails{display:block;width:100%;margin:0 auto 24px;text-align:center!important}
+.courses .coursesSectionDetails .courseDetails{max-width:760px;margin:0 auto;color:#5f5a65;font-size:16px;line-height:1.5;text-align:center!important}
+.course-category-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 auto 32px}
+.course-category-filters button{min-height:42px;padding:10px 18px;border:1px solid #e4d8ec;border-radius:999px;color:#4b3b53;background:#fff;font:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:color .18s ease,border-color .18s ease,background .18s ease}
+.course-category-filters button:hover,.course-category-filters button.is-active{border-color:#7624a4;color:#fff;background:#7624a4}
+.course-category-filters button:focus-visible{outline:2px solid #7624a4;outline-offset:3px}
+.courses .category-section[hidden]{display:none!important}
+@media(max-width:640px){.courses .coursesSectionDetails .courseDetails{font-size:14px}.course-category-filters{gap:8px;margin-bottom:24px}.course-category-filters button{padding:9px 13px;font-size:13px}}

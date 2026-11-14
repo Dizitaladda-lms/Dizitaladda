@@ -239,8 +239,8 @@ export default function PublicNavbar() {
                 <a href="/gallery" role="menuitem"><strong>Our Events</strong><small>Workshops, celebrations and campus activities</small></a>
               </div>
             </div>
-            <a className="site-nav-link" href="/contact-us">Contact Us</a>
             <a className="site-nav-link" href="/about-us">About Us</a>
+            <a className="site-nav-link" href="/contact-us">Contact Us</a>
             <div className={`site-dropdown site-more-dropdown${openMenu === "more" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("more")} onMouseLeave={() => setOpenMenu(null)}>
               <button ref={moreTriggerRef} className="site-more-trigger" type="button" aria-haspopup="true" aria-expanded={openMenu === "more"} onClick={() => toggleMenu("more")}>
                 More <span className="site-chevron" aria-hidden="true" />
