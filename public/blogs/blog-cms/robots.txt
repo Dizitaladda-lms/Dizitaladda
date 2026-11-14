@@ -1,0 +1,10 @@
+# Allow all other pages
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cdn-cgi/
+Disallow: /?s=
+
+
+# Sitemap location
+Sitemap: https://gamevoyant.com/sitemap.xml

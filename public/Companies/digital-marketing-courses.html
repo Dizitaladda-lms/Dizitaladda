@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Course - DizitalAdda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#0ea5e9',
+                        accent: '#f59e0b',
+                        dark: '#1f2937',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                background-position: 70% center;
+            }
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        @media (min-width: 1024px) {
+            .float-layout {
+                display: grid;
+                grid-template-columns: 0.4fr 0.6fr;
+                gap: 2rem;
+                align-items: start;
+            }
+            
+            .float-image {
+                position: sticky;
+                top: 2rem;
+            }
+        }
+        
+        /* Lead Form Styles */
+        .lead-form-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .lead-form-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.4);
+        }
+        
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+                .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Location Marquee Styles */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            margin: 40px 0;
+        }
+        
+        .marquee {
+            display: flex;
+            animation: marquee 30s linear infinite;
+            white-space: nowrap;
+        }
+        
+        .location-item {
+            display: flex;
+            align-items: center;
+            margin: 0 25px;
+        }
+        
+        .flower-dot {
+            display: inline-block;
+            margin-right: 12px;
+            position: relative;
+            width: 16px;
+            height: 16px;
+            animation: bloom 4s infinite;
+        }
+        
+        .flower-dot::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            border-radius: 50%;
+            transform: scale(0.8);
+            animation: pulse 2s infinite;
+        }
+        
+        .flower-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            background: #ff6b6b;
+            border-radius: 50%;
+        }
+        
+        .location-text {
+            font-family: var(--font-family-base);
+            font-weight: 500;
+            font-size: 18px;
+            color: #4a5568;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .location-header {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2d3748;
+            font-weight: 600;
+            font-size: 22px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .location-header::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4, #a1c4fd);
+            border-radius: 3px;
+        }
+        
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        @keyframes bloom {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(0.8);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .location-text {
+                font-size: 16px;
+            }
+            
+            .location-header {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-dark" style="font-family: var(--font-family-base)">
+    <!-- Navigation -->
+
+
+    <!-- Lead Form Section -->
+       <section class="hero-section pt-10 pb-10 px-4 text-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/20">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">Expert in Digital Marketing Course in GK II, South Delhi</h1>
+                <h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-6 text-accent">Become a Certified Digital Marketer and Land Your Dream Job in 12 months</h2>
+                <p class="text-lg md:text-xl mb-8 text-gray-200">Master the in-demand skills of modern marketing with DizitalAdda's Expert Digital Marketing Course. This comprehensive program provides hands-on training in SEO, Social Media, Google Ads, and Analytics. Guided by industry experts, you'll gain the practical, real-world experience needed to launch a successful career.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://wa.me/918810606010?text=Hi%2C+I+want+to+enquire+about+the+Digital+Marketing+Courses" class="px-8 py-4 bg-accent text-white rounded-lg text-center font-bold hover:bg-yellow-600 transition">Enroll Now</a>
+                    <a href="./digital-marketing.pdf" class="px-8 py-4 border border-white text-white rounded-lg text-center hover:bg-white/10 transition" download>Download Brochure</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-20 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Expert Digital Marketing Course in South Delhi</h1>
+            <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">Become a Certified Digital Marketer and Land Your Dream Job in 12 months with our comprehensive training program</p>
+            <a href="#lead-form" class="cta-button inline-block px-8 py-4 text-white rounded-lg font-bold text-lg">Get Details & Grab Your Discount Now!</a>
+        </div>
+    </section>
+
+    <!-- Course Highlights Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12">Why Choose Our Digital Marketing Course?</h2>
+            
+            <div class="float-layout">
+                <!-- Left side - Image -->
+                <div class="float-image mb-8 lg:mb-0">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                             alt="Students learning digital marketing" 
+                             class="rounded-2xl shadow-2xl w-full">
+                        <div class="absolute -bottom-5 -right-5 bg-white p-6 rounded-2xl shadow-xl">
+                            <div class="text-center">
+                                <div class="flex justify-center items-center text-yellow-400 text-2xl mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="font-bold text-lg">4.9/5 Rating</p>
+                                <p class="text-gray-600 text-sm">from 1,043 students</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right side - Content Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md border-l-4 border-primary">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-brain text-primary text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">AI-Integrated Curriculum</h3>
+                        </div>
+                        <p class="text-gray-600">30+ Modules, 160+ Practical Skills, & Get 7+ Certifications.</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md border-l-4 border-secondary">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-calendar-alt text-secondary text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">Flexible Learning</h3>
+                        </div>
+                        <p class="text-gray-600">12 Month, 240+ hours, Hybrid Course with Offline & Online Classes.</p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md border-l-4 border-accent">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-chalkboard-teacher text-accent text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">Industry Expert Faculty</h3>
+                        </div>
+                        <p class="text-gray-600">Learn from top industry practitioners with real-world experience.</p>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md border-l-4 border-green-500">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-building text-green-500 text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">World Class Infrastructure</h3>
+                        </div>
+                        <p class="text-gray-600">Corporate Style Campus in GK II, South Delhi with modern amenities.</p>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md border-l-4 border-purple-500">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-briefcase text-purple-500 text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">Real-World Experience</h3>
+                        </div>
+                        <p class="text-gray-600">Work with Real Brands: Practical Training, Internship & Projects.</p>
+                    </div>
+                    
+                    <!-- Card 6 -->
+                    <div class="feature-card bg-white p-6 rounded-xl shadow-md border-l-4 border-pink-500">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-handshake-angle text-pink-500 text-xl"></i>
+                            </div>
+                            <h3 class="font-bold text-lg">100% Placement Support</h3>
+                        </div>
+                        <p class="text-gray-600">Job-Ready with Portfolio & Interview Skills development.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="text-center mt-16">
+                <a href="#lead-form" class="cta-button inline-block px-8 py-4 text-white rounded-lg font-bold text-lg">Get Details & Grab Your Discount Now!</a>
+            </div>
+        </div>
+    </section>
+    <!-- Location Marquee Section -->
+    <section class="py-12 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="location-header">Locations Near You</h2>
+            <div class="marquee-container">
+                <div class="marquee">
+                    <!-- Locations will be duplicated to create seamless loop -->
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Greater Kailash II</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Saket</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Malviya Nagar</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Hauz Khas</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">South Ex</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Lajpat Nagar</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Vasant Vihar</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Moti Bagh</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">R.K. Puram</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Munirka</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Sarijini Nagar</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Defence Colony</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">New Friends Colony</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Kalkaji</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Nehru Place</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Sanjay Colony</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Okhla Phase III</span>
+                    </div>
+                    
+                    <!-- Duplicate for seamless looping -->
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Greater Kailash II</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Saket</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Malviya Nagar</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Hauz Khas</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">South Ex</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Lajpat Nagar</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Vasant Vihar</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Moti Bagh</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">R.K. Puram</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Munirka</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Sarijini Nagar</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Defence Colony</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">New Friends Colony</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Kalkaji</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Nehru Place</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Sanjay Colony</span>
+                    </div>
+                    <div class="location-item">
+                        <span class="flower-dot"></span>
+                        <span class="location-text">Okhla Phase III</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What You'll Learn</h2>
+                <p class="text-gray-600">Our comprehensive curriculum covers all aspects of digital marketing</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Search Engine Optimization</h3>
+                    <p class="text-gray-600">Master keyword research, on-page optimization, and technical SEO to rank websites higher.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="fab fa-google text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Google Ads</h3>
+                    <p class="text-gray-600">Learn to create and manage effective PPC campaigns across Google's advertising network.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Analytics</h3>
+                    <p class="text-gray-600">Measure and analyze campaign performance with Google Analytics and other tools.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-share-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Social Media Marketing</h3>
+                    <p class="text-gray-600">Develop strategies for Facebook, Instagram, LinkedIn, and other social platforms.</p>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="text-center mt-16">
+                <a href="#lead-form" class="cta-button inline-block px-8 py-4 text-white rounded-lg font-bold text-lg">Get Details & Grab Your Discount Now!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Skills Section -->
+    <section class="py-20 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Key Skills You'll Master</h2>
+                <p class="text-gray-600">Comprehensive skill development that makes you industry-ready</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-search text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">SEO Mastery</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Keyword Research & Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            On-Page & Technical SEO
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Link Building Strategies
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-secondary group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-share-nodes text-3xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Social Media Marketing</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Content Strategy & Planning
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Paid Social Advertising
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Community Management
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PPC Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-accent group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-google text-3xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Google Ads & PPC</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Campaign Setup & Optimization
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Conversion Tracking
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Budget Management
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Content Marketing -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-green-500 group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-pen-fancy text-3xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Content Marketing</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Content Strategy Development
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Blog & Article Writing
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Content Distribution
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Analytics -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-purple-500 group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line text-3xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Analytics & Reporting</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Data Analysis & Interpretation
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Performance Tracking
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            ROI Measurement
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Email Marketing -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-pink-500 group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-envelope text-3xl text-pink-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Email Marketing</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Email Campaign Creation
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            List Management
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            A/B Testing
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="text-center mt-16">
+                <a href="#lead-form" class="cta-button inline-block px-8 py-4 text-white rounded-lg font-bold text-lg">Start Your Digital Marketing Journey Today!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placements and Tools Section -->
+    <section class="py-10 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Placements Section -->
+            <div class="text-center mb-8">
+                <p class="text-primary font-semibold text-lg mb-1">Secure Your Career With DizitalAdda</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">100% Placement Support for Learners</h2>
+                
+                <!-- Company Carousel -->
+                <div class="overflow-hidden relative mb-10">
+                    <div class="company-carousel">
+                        <div class="flex animate-scroll space-x-8">
+                            <div class="company-logo"><img src="./Companies/,nsa,mns.PNG" alt="Sunhill logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/ALkjak.PNG" alt="avishkaar Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/Capture.PNG" alt="Brainwork Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/jkjk.PNG" alt="Morks Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/jslakjs.PNG" alt="I global solutions Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/kjsak.PNG" alt="Accenture Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/kjsakjs.PNG" alt="Company Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/lava.PNG" alt="LAVA Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/m,anM.PNG" alt="The Souled Store Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/MNAm.PNG" alt="Technovia Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/nsamna.PNG" alt="Fact Education Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/skja.PNG" alt="Getzkick Logo" class="h-16 object-contain" /></div>
+                            
+                            <!-- Duplicate for seamless loop -->
+                            <div class="company-logo"><img src="./Companies/,nsa,mns.PNG" alt="Sunhill logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/ALkjak.PNG" alt="avishkaar Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/Capture.PNG" alt="Brainwork Logo" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./Companies/jkjk.PNG" alt="Morks Logo" class="h-16 object-contain" /></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Tools Section -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">50+ AI Tools</h2>
+                <div class="overflow-hidden relative">
+                    <div class="ai-tools-carousel">
+                        <div class="flex animate-scroll-reverse space-x-8">
+                            <div class="company-logo"><img src="./AI TOOLS/download (3).jpeg" alt="Company Logo 3" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (7).jpeg" alt="Company Logo 7" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (8).jpeg" alt="Company Logo 8" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (9).jpeg" alt="Company Logo 9" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (10).jpeg" alt="Company Logo 10" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (11).jpeg" alt="Company Logo 11" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (12).jpeg" alt="Company Logo 12" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (51).png" alt="Company Logo 51" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (52).png" alt="Company Logo 52" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (53).png" alt="Company Logo 53" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (54).png" alt="Company Logo 54" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (55).png" alt="Company Logo 55" class="h-16 object-contain" /></div>
+                            
+                            <!-- Duplicate for seamless loop -->
+                            <div class="company-logo"><img src="./AI TOOLS/download (3).jpeg" alt="Company Logo 3" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (7).jpeg" alt="Company Logo 7" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (8).jpeg" alt="Company Logo 8" class="h-16 object-contain" /></div>
+                            <div class="company-logo"><img src="./AI TOOLS/download (9).jpeg" alt="Company Logo 9" class="h-16 object-contain" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-250px * 7));
+                }
+            }
+            
+            @keyframes scroll-reverse {
+                0% {
+                    transform: translateX(calc(-250px * 7));
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+            
+            .animate-scroll {
+                animation: scroll 40s linear infinite;
+            }
+            
+            .animate-scroll-reverse {
+                animation: scroll-reverse 40s linear infinite;
+            }
+            
+            .company-logo {
+                flex: 0 0 auto;
+                width: 200px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: white;
+                margin: 0 1rem;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            
+            .company-logo:hover {
+                transform: scale(1.05);
+            }
+            
+            .company-logo img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+            
+            .company-carousel, .ai-tools-carousel {
+                overflow: hidden;
+                position: relative;
+                padding: 1rem 0;
+            }
+            
+            .company-carousel::before,
+            .company-carousel::after,
+            .ai-tools-carousel::before,
+            .ai-tools-carousel::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 200px;
+                height: 100%;
+                z-index: 2;
+            }
+            
+            .company-carousel::before,
+            .ai-tools-carousel::before {
+                left: 0;
+                background: linear-gradient(to right, white 0%, transparent 100%);
+            }
+            
+            .company-carousel::after,
+            .ai-tools-carousel::after {
+                right: 0;
+                background: linear-gradient(to left, white 0%, transparent 100%);
+            }
+        </style>
+    </section>
+
+    <!-- Live Projects & Internship Section -->
+    <section class="py-16 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Live Projects & Internship</h2>
+                <p class="text-gray-600 text-lg">Real-world experience through hands-on projects</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- E-commerce Project -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" 
+                             alt="E-commerce Project" 
+                             class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            E-commerce
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Fashion E-commerce Growth Strategy</h3>
+                        <p class="text-gray-600 mb-4">Increased online sales by 150% through integrated digital marketing campaign</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                SEO optimization & content strategy
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Social media campaign management
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Email marketing automation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SaaS Project -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" 
+                             alt="SaaS Project" 
+                             class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            SaaS
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">B2B SaaS Lead Generation</h3>
+                        <p class="text-gray-600 mb-4">Generated 200+ qualified B2B leads through targeted campaigns</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                LinkedIn advertising campaign
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Content marketing & lead magnets
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Marketing automation setup
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Local Business Project -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1638742385167-96fc60e12f59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                             alt="Local Business Project" 
+                             class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Local Business
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Restaurant Digital Presence</h3>
+                        <p class="text-gray-600 mb-4">Boosted restaurant bookings by 80% through local SEO & social media</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Google My Business optimization
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Instagram content strategy
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                Local SEO implementation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Benefits -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-laptop-code text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Hands-on Experience</h3>
+                    <p class="text-gray-600">Work on real client projects during your internship period</p>
+                </div>
+
+                <div class="text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Industry Recognition</h3>
+                    <p class="text-gray-600">Add real projects to your portfolio for better job prospects</p>
+                </div>
+
+                <div class="text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Expert Mentorship</h3>
+                    <p class="text-gray-600">Get guidance from industry experts throughout your projects</p>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center mt-12">
+                <a href="#lead-form" class="cta-button inline-block px-8 py-4 text-white rounded-lg font-bold text-lg">Start Your Journey with Real Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Students Say</h2>
+                <p class="text-gray-600">Hear from our successful students who transformed their careers with our digital marketing course.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The hands-on training I received at DizitalAdda helped me secure a job as a Digital Marketing Executive at a leading e-commerce company."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full mr-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGluZGlhbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" 
+                                 alt="Rahul Sharma"
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Rahul Sharma</h4>
+                            <p class="text-gray-500">Digital Marketing Executive</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I started my own digital marketing agency after completing this course. The practical knowledge helped me build confidence and connect with clients."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full mr-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWFuJTIwd29tYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=100&h=100&q=80" 
+                                 alt="Priya Singh"
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Priya Singh</h4>
+                            <p class="text-gray-500">Agency Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The course curriculum is comprehensive and covers all aspects of digital marketing. The trainers provide personalized attention."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full mr-4 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1621592484082-2d05b1290d7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWFuJTIwbWFufGVufDB8fDB8fHww&auto=format&fit=crop&w=100&h=100&q=80" 
+                                 alt="Amit Verma"
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Amit Verma</h4>
+                            <p class="text-gray-500">SEO Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="text-center mt-16">
+                <a href="#lead-form" class="cta-button inline-block px-8 py-4 text-white rounded-lg font-bold text-lg">Get Details & Grab Your Discount Now!</a>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 px-4 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600">Everything you need to know about our Digital Marketing Course</p>
+            </div>
+
+            <div class="faq-container space-y-4">
+                <details class="faq-item group" open>
+                    <summary class="flex items-center justify-between p-6 bg-white rounded-xl cursor-pointer hover:shadow-md transition-all duration-300">
+                        <h3 class="text-lg font-semibold pr-4">Who is this digital marketing course for?</h3>
+                        <span class="transform group-open:rotate-180 transition-transform duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 bg-white rounded-b-xl">
+                        <p><span class="text-primary font-semibold">Answer:</span> Anyone who wants to either build a career in this field or wants to promote his/her business or services can Enrol for the digital marketing course and upskill themselves. This course is ideal for students, job seekers, entrepreneurs, freelancers, and marketing professionals who want to build their digital marketing careers.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item group">
+                    <summary class="flex items-center justify-between p-6 bg-white rounded-xl cursor-pointer hover:shadow-md transition-all duration-300">
+                        <h3 class="text-lg font-semibold pr-4">Which Digital Marketing Course is Best?</h3>
+                        <span class="transform group-open:rotate-180 transition-transform duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 bg-white rounded-b-xl">
+                        <p><span class="text-primary font-semibold">Answer:</span> When we talk about the best, so honestly, there is nothing like that because what seems best to you might not be the best for others. So, the best is different for every individual. It majorly depends on your skill level, like if you have some prior knowledge about the digital marketing field then you can go for the advanced digital marketing course and skip the foundation education but if you don't know anything, even about the basics of digital marketing then the best for you would be "digital marketing course for beginners".</p>
+                    </div>
+                </details>
+
+                <details class="faq-item group">
+                    <summary class="flex items-center justify-between p-6 bg-white rounded-xl cursor-pointer hover:shadow-md transition-all duration-300">
+                        <h3 class="text-lg font-semibold pr-4">What is the Salary of the Expert in Digital Marketing Course?</h3>
+                        <span class="transform group-open:rotate-180 transition-transform duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 bg-white rounded-b-xl">
+                        <p><span class="text-primary font-semibold">Answer:</span> After completing an Expert in Digital Marketing Course, salaries range from ₹4,00,000 to ₹12,00,000 per year, depending on the role and experience.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item group">
+                    <summary class="flex items-center justify-between p-6 bg-white rounded-xl cursor-pointer hover:shadow-md transition-all duration-300">
+                        <h3 class="text-lg font-semibold pr-4">What are the 4 Types of Digital Marketing?</h3>
+                        <span class="transform group-open:rotate-180 transition-transform duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 bg-white rounded-b-xl">
+                        <p><span class="text-primary font-semibold">Answer:</span> The four major types of digital marketing are SEO (Search Engine Optimization), SEM (Search Engine Marketing), Social Media Marketing, and Content Marketing.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item group">
+                    <summary class="flex items-center justify-between p-6 bg-white rounded-xl cursor-pointer hover:shadow-md transition-all duration-300">
+                        <h3 class="text-lg font-semibold pr-4">What skills will I gain from this digital marketing course?</h3>
+                        <span class="transform group-open:rotate-180 transition-transform duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 bg-white rounded-b-xl">
+                        <p><span class="text-primary font-semibold">Answer:</span> You'll learn SEO, Google Ads, Meta Ads, content marketing, social media strategy, web analytics (GA4), email & WhatsApp marketing, influencer marketing, and more.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item group">
+                    <summary class="flex items-center justify-between p-6 bg-white rounded-xl cursor-pointer hover:shadow-md transition-all duration-300">
+                        <h3 class="text-lg font-semibold pr-4">Do you offer a job placement assistance?</h3>
+                        <span class="transform group-open:rotate-180 transition-transform duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 bg-white rounded-b-xl">
+                        <p><span class="text-primary font-semibold">Answer:</span> Yes, we offer a dedicated placement assistance with resume building, interview prep, portfolio reviews, and job placement guidance.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item group">
+                    <summary class="flex items-center justify-between p-6 bg-white rounded-xl cursor-pointer hover:shadow-md transition-all duration-300">
+                        <h3 class="text-lg font-semibold pr-4">What tools will I use during the course?</h3>
+                        <span class="transform group-open:rotate-180 transition-transform duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 bg-white rounded-b-xl">
+                        <p><span class="text-primary font-semibold">Answer:</span> You'll work with tools like Google Analytics (GA4), WordPress, Meta Ads Manager, Google Ads, Canva, Photoshop, Mailchimp, HubSpot, and more.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <style>
+            .faq-item {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: slideUp 0.6s ease forwards;
+            }
+            
+            .faq-item:nth-child(1) { animation-delay: 0.1s; }
+            .faq-item:nth-child(2) { animation-delay: 0.2s; }
+            .faq-item:nth-child(3) { animation-delay: 0.3s; }
+            .faq-item:nth-child(4) { animation-delay: 0.4s; }
+            .faq-item:nth-child(5) { animation-delay: 0.5s; }
+            .faq-item:nth-child(6) { animation-delay: 0.6s; }
+            .faq-item:nth-child(7) { animation-delay: 0.7s; }
+            .faq-item:nth-child(8) { animation-delay: 0.8s; }
+
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .faq-item summary::-webkit-details-marker {
+                display: none;
+            }
+
+            .faq-item {
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 12px;
+                transition: all 0.3s ease;
+            }
+
+            .faq-item[open] {
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
+
+            .faq-item:hover {
+                border-color: rgba(37, 99, 235, 0.2);
+            }
+        </style>
+    </section>
+    <!-- Floating CTA Button (for mobile) -->
+    <div class="floating-cta md:hidden">
+        <a href="#lead-form" class="cta-button inline-block px-6 py-3 text-white rounded-full font-bold shadow-lg">
+            <span class="flex items-center">
+                <i class="fas fa-gift mr-2"></i>
+                Get Discount
+            </span>
+        </a>
+    </div>
+
+    <style>
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 20, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .popup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Popup container */
+        .popup-content {
+            display: flex;
+            height: fit-content;
+            max-width: 900px;
+            height: 450px;
+            background: #111827;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+            color: #fff;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .popup.show .popup-content {
+            transform: scale(1);
+        }
+
+        /* Left image */
+        .popup-image {
+            background: #1f2937;
+        }
+
+        .popup-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        /* Right form */
+        .popup-form {
+            width: 400px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .popup-form h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #a855f7;
+        }
+
+        .popup-form p {
+            margin-bottom: 20px;
+            color: #d1d5db;
+        }
+
+        .popup-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .popup-form input,
+        .popup-form select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            background: #1f2937;
+            color: #fff;
+            transition: border-color 0.3s ease;
+        }
+
+        .popup-form input:focus,
+        .popup-form select:focus {
+            border-color: #a855f7;
+            outline: none;
+        }
+
+        .popup-form input::placeholder {
+            color: #9ca3af;
+        }
+
+        .popup-form button {
+            padding: 12px;
+            background: linear-gradient(135deg, #7e22ce, #9333ea);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .popup-form button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #9333ea, #a855f7);
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .close:hover {
+            transform: rotate(90deg);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .popup-content {
+                flex-direction: column;
+                width: 90%;
+                max-width: 400px;
+                height: auto;
+            }
+
+            .popup-image {
+                display: none;
+            }
+
+            .popup-form {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    </style>
+
+    <!-- Popup Form -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <!-- Left: Image -->
+            <div class="popup-image">
+                <img src="https://dizitaladda.com/pexels-rdne-7821934.jpg" alt="Course Promo" />
+            </div>
+
+            <!-- Right: Form -->
+            <div class="popup-form">
+                <span id="closePopup" class="close">&times;</span>
+                <h2>Get Course Information</h2>
+                <p>Fill out the form to receive our brochure and details.</p>
+
+                <form method="POST" id="enquiryForm">
+                    <input type="text" name="Name" placeholder="Enter Your Name..." autocomplete="name" required>
+                    <input type="tel" name="Number" placeholder="Enter Your Number..." autocomplete="tel" required>
+                    <input type="email" name="Email" placeholder="Enter Your Email..." autocomplete="email" required>
+                    <input type="hidden" name="Course" value="Digital Marketing">
+                    <button type="submit">Enquire Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const popup = document.getElementById('popup');
+            const enquiryForm = document.getElementById('enquiryForm');
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwOdAHH3XiErN1UdBcnsB2f1jA0X49Gw-cDOhqD6jf2BAt7PJaKRGunb9BYGMZc9AGeew/exec';
+
+            // Show popup when any CTA button is clicked
+            document.querySelectorAll('a[href="#lead-form"]').forEach(cta => {
+                cta.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    popup.classList.add('show');
+                });
+            });
+
+            // Auto-show popup after 8 seconds if not shown before
+            if (!sessionStorage.getItem('popupShown')) {
+                setTimeout(() => {
+                    popup.classList.add('show');
+                    sessionStorage.setItem('popupShown', 'true');
+                }, 8000);
+            }
+
+            // Handle form submission
+            enquiryForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const submitButton = this.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Submitting...';
+
+                const form = new FormData(this);
+
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: form
+                })
+                .then(response => response.text())
+                .then(() => {
+                    alert("Thanks! We'll send you the brochure.");
+                    enquiryForm.reset();
+                    popup.classList.remove('show');
+                })
+                .catch(error => {
+                    console.error("Submission failed:", error);
+                    alert("Error submitting form");
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Enquire Now';
+                });
+            });
+
+            // Close popup handlers
+            document.getElementById('closePopup').addEventListener('click', () => {
+                popup.classList.remove('show');
+            });
+
+            // Close popup when clicking outside
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.classList.remove('show');
+                }
+            });
+
+            // Close popup with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && popup.classList.contains('show')) {
+                    popup.classList.remove('show');
+                }
+            });
+        });
+    </script>
+<script src="/common-lead-form.js" defer></script>
+</body>
+</html>

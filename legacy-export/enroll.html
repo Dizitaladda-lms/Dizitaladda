@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enroll in Selected Course | DizitalAdda</title>
+<link rel="canonical" href="https://dizitaladda.com/enroll.php">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;min-height:100vh;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);display:flex;align-items:center;justify-content:center;padding:24px}
+.card{background:#fff;border-radius:20px;width:100%;max-width:520px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.4)}
+.card-header{background:linear-gradient(135deg,#6d28d9,#9333ea);padding:32px 36px}
+.card-header h1{color:#fff;font-size:1.5rem;font-weight:800;line-height:1.3}
+.card-header p{color:rgba(255,255,255,.8);font-size:.9rem;margin-top:6px}
+.course-pill{display:inline-block;background:rgba(255,255,255,.2);color:#fff;font-size:.8rem;font-weight:600;padding:5px 14px;border-radius:20px;margin-top:12px;border:1px solid rgba(255,255,255,.3)}
+.card-body{padding:32px 36px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;color:#374151;margin-bottom:6px}
+.form-group label span{color:#ef4444}
+.form-group input{width:100%;padding:12px 16px;border:2px solid #e5e7eb;border-radius:10px;font-size:.95rem;font-family:'Inter',sans-serif;transition:border-color .2s,box-shadow .2s;outline:none;color:#111827}
+.form-group input:focus{border-color:#7c3aed;box-shadow:0 0 0 3px rgba(124,58,237,.1)}
+.form-group input[readonly]{background:#f9fafb;color:#6b7280}
+.amount-wrapper{position:relative}
+.amount-wrapper .rupee{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-weight:700;color:#374151}
+.amount-wrapper input{padding-left:30px}
+.btn-enroll{width:100%;padding:15px;background:linear-gradient(135deg,#6d28d9,#9333ea);color:#fff;font-size:1rem;font-weight:700;border:none;border-radius:12px;cursor:pointer;transition:transform .2s,box-shadow .2s;letter-spacing:.3px;margin-top:8px}
+.btn-enroll:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(109,40,217,.4)}
+.btn-enroll:disabled{opacity:.7;cursor:not-allowed;transform:none}
+.security-note{display:flex;align-items:center;gap:8px;margin-top:16px;color:#6b7280;font-size:.8rem;justify-content:center}
+.security-note svg{width:16px;height:16px;flex-shrink:0}
+.back-link{display:block;text-align:center;margin-top:16px;color:#7c3aed;font-size:.85rem;text-decoration:none;font-weight:500}
+.back-link:hover{text-decoration:underline}
+.error-msg{background:#fef2f2;color:#991b1b;border:1px solid #fecaca;border-radius:8px;padding:12px 14px;font-size:.85rem;margin-bottom:16px;display:none;line-height:1.5}
+@media(max-width:540px){.card-header,.card-body{padding:24px 20px}.card-header h1{font-size:1.25rem}}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="card-header">
+    <h1>🎓 Secure Enrollment</h1>
+    <p>Complete your details to begin your learning journey</p>
+    <span class="course-pill">📚 Selected Course</span>
+  </div>
+  <div class="card-body">
+    <div id="errorMsg" class="error-msg"></div>
+
+    <div class="form-group">
+      <label>Full Name <span>*</span></label>
+      <input type="text" id="enroll_name" placeholder="Enter your full name" required autocomplete="name">
+    </div>
+    <div class="form-group">
+      <label>Email Address <span>*</span></label>
+      <input type="email" id="enroll_email" placeholder="your@email.com" required autocomplete="email">
+    </div>
+    <div class="form-group">
+      <label>Phone Number <span>*</span></label>
+      <input type="tel" id="enroll_phone" placeholder="10-digit mobile number" maxlength="10" required autocomplete="tel">
+    </div>
+    <div class="form-group">
+      <label>Select Course <span>*</span></label>
+              <select id="enroll_course_select" required style="width:100%;padding:12px 16px;border:2px solid #e5e7eb;border-radius:10px;font-size:.95rem;font-family:'Inter',sans-serif;outline:none;color:#111827;background:#fff;transition:border-color .2s,box-shadow .2s">
+          <option value="">-- Select a Course --</option>
+          <optgroup label="Digital Marketing">
+            <option>Digital Marketing for Beginners</option>
+            <option>Digital Marketing for Professionals</option>
+            <option>Advanced Digital Marketing</option>
+            <option>Expert in Digital Marketing</option>
+          </optgroup>
+          <optgroup label="Cyber Security">
+            <option>Foundation in Cyber Security and Ethical Hacking</option>
+            <option>Advanced Cyber Security and Ethical Hacking</option>
+            <option>Expert Training in Cyber Security and Ethical Hacking</option>
+            <option>Digital Forensic and Cyber Investigation</option>
+            <option>Expert Training in Bug Bounty</option>
+          </optgroup>
+          <optgroup label="Generative AI">
+            <option>Diploma in Gen AI and Prompt Engineering</option>
+            <option>Advanced Gen AI and Prompt Engineering</option>
+            <option>Diploma in Machine Learning and AI</option>
+            <option>Advanced Machine Learning and AI</option>
+          </optgroup>
+          <optgroup label="Data Science & Analytics">
+            <option>Diploma in Data Science and AI</option>
+            <option>Advanced Data Science and AI</option>
+            <option>Diploma in Data Analytics and AI</option>
+            <option>Advanced Data Analytics and AI</option>
+            <option>Certification in Data Analytics and AI</option>
+          </optgroup>
+          <optgroup label="Web Development">
+            <option>Web Development Course</option>
+            <option>Graphic Design and Video Editing</option>
+            <option>Graphic Design and Motion Graphics</option>
+          </optgroup>
+        </select>
+          </div>
+    <div class="form-group">
+      <label>Fee Amount (₹) <span>*</span></label>
+      <div class="amount-wrapper">
+        <span class="rupee">₹</span>
+        <input type="number" id="enroll_amount" placeholder="Enter amount" min="1" max="500000" required>
+      </div>
+    </div>
+
+    <button class="btn-enroll" id="enrollBtn" type="button" onclick="startPayment()">
+      🔒 Proceed to Secure Payment
+    </button>
+
+    <div class="security-note">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      100% Secure payment powered by Razorpay
+    </div>
+    <a class="back-link" href="javascript:history.back()">← Go Back</a>
+  </div>
+</div>
+
+<!-- Hidden form posted to success page after Razorpay confirms payment -->
+<form method="post" action="/enroll-success.php" id="paySuccessForm" style="display:none">
+  <input type="hidden" name="rzp_payment_id" id="rzp_payment_id">
+  <input type="hidden" name="rzp_order_id"   id="rzp_order_id">
+  <input type="hidden" name="rzp_signature"  id="rzp_signature">
+  <input type="hidden" name="name"           id="f_name">
+  <input type="hidden" name="email"          id="f_email">
+  <input type="hidden" name="phone"          id="f_phone">
+  <input type="hidden" name="course_name"    id="f_course">
+  <input type="hidden" name="amount"         id="f_amount">
+</form>
+
+<script>
+var enrollCourseName = "Selected Course";
+// Ajax URL points to THIS file with ?ajax=order — no separate file, no redirect
+var orderUrl = window.location.pathname + '?ajax=order';
+
+function showError(msg) {
+  var el = document.getElementById('errorMsg');
+  el.textContent = msg;
+  el.style.display = 'block';
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function startPayment() {
+  var name   = document.getElementById('enroll_name').value.trim();
+  var email  = document.getElementById('enroll_email').value.trim();
+  var phone  = document.getElementById('enroll_phone').value.trim();
+  var amount = document.getElementById('enroll_amount').value.trim();
+
+  // If dropdown is shown (no pre-selected course), read from it
+  var selectEl = document.getElementById('enroll_course_select');
+  if (selectEl) {
+    enrollCourseName = selectEl.value;
+    if (!enrollCourseName) { showError('Please select a course.'); return; }
+  }
+
+  document.getElementById('errorMsg').style.display = 'none';
+
+  if (!name)                             { showError('Please enter your full name.'); return; }
+  if (!email || !email.includes('@'))    { showError('Please enter a valid email address.'); return; }
+  if (!/^[6-9][0-9]{9}$/.test(phone))   { showError('Please enter a valid 10-digit phone number.'); return; }
+  if (!amount || isNaN(amount) || +amount < 1) { showError('Please enter a valid amount.'); return; }
+
+  var btn = document.getElementById('enrollBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Creating order...';
+
+  var formData = new FormData();
+  formData.append('name',        name);
+  formData.append('email',       email);
+  formData.append('phone',       phone);
+  formData.append('course_name', enrollCourseName);
+  formData.append('amount',      amount);
+
+  fetch(orderUrl, { method: 'POST', body: formData })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.error) {
+        showError('⚠️ ' + data.error);
+        btn.disabled = false;
+        btn.textContent = '🔒 Proceed to Secure Payment';
+        return;
+      }
+
+      var rzp = new Razorpay({
+        key:         data.key_id,
+        amount:      data.amount,
+        currency:    'INR',
+        name:        'DizitalAdda',
+        description: data.course_name,
+        image:       'https://dizitaladda.com/assets/img/logo.webp',
+        order_id:    data.order_id,
+        prefill:     { name: name, email: email, contact: phone },
+        theme:       { color: '#7c3aed' },
+        handler: function(response) {
+          document.getElementById('rzp_payment_id').value = response.razorpay_payment_id || '';
+          document.getElementById('rzp_order_id').value   = response.razorpay_order_id   || '';
+          document.getElementById('rzp_signature').value  = response.razorpay_signature  || '';
+          document.getElementById('f_name').value    = name;
+          document.getElementById('f_email').value   = email;
+          document.getElementById('f_phone').value   = phone;
+          document.getElementById('f_course').value  = enrollCourseName;
+          document.getElementById('f_amount').value  = data.txn_amount;
+          document.getElementById('paySuccessForm').submit();
+        },
+        modal: {
+          ondismiss: function() {
+            btn.disabled = false;
+            btn.textContent = '🔒 Proceed to Secure Payment';
+          }
+        }
+      });
+
+      rzp.on('payment.failed', function(r) {
+        var msg = 'Payment failed.';
+        if (r && r.error && r.error.description) { msg += ' ' + r.error.description; }
+        showError(msg);
+        btn.disabled = false;
+        btn.textContent = '🔒 Proceed to Secure Payment';
+      });
+
+      rzp.open();
+    })
+    .catch(function() {
+      showError('Network error. Please check your connection and try again.');
+      btn.disabled = false;
+      btn.textContent = '🔒 Proceed to Secure Payment';
+    });
+}
+</script>
+</body>
+</html>

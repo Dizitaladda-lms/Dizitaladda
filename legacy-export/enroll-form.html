@@ -1,0 +1,103 @@
+  <form class="courseForm" id="location-form"
+    action="/api/forms/book-demo">
+    <div class="mb-3">
+  
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="name" required="" placeholder="Your Name">
+        </div>
+    </div>
+    <div class="mb-3">
+     
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="phone" placeholder="Your Phone">
+        </div>
+    </div>
+    <div class="mb-3">
+       
+        <div class="input-group mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Your Email">
+        </div>
+    </div>
+    <div class="mb-3">
+        <select class="form-select" id="course" name="course" required>
+            <option value="" disabled selected>Select Course</option>
+            <option value="Digital-Marketing-for-Professional">Digital Marketing for Professional</option>
+            <option value="expert-digital-marketing-course">Expert in digital marketing</option>
+            <option value="Advance-digital-marketing">Advance digital marketing</option>
+            <option value="Graphic-design-and-professional-Video-Editing">Graphic design &amp; professional Video
+                Editing</option>
+            <option value="Graphic-design-and-Motion-Graphics">Graphic design and Motion Graphics</option>
+            <option value="Web-Development-Course">Web Development Course </option>
+            <option value="UI/UX-Design">UI/UX Design </option>
+            <option value="Diploma-in-Computer-software-and-Technology">Diploma in Computer software and Technology
+            </option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <select class="form-select" id="classMode" name="class_mode" required>
+            <option value="" disabled selected>Class Mode</option>
+            <option value="Online">Online</option>
+            <option value="Offline">Offline</option>
+        </select>
+    </div>
+    <div id="staticSuccessMessage" class="text-success" style="display:none;">
+        submitted successfully!
+    </div>
+    <button type="submit" id="download-btn" class="btn btn-gradient border shadow color-1 fw-bold w-100">Enroll</button>
+</form>
+                           
+                           
+                           
+                           
+                             <script>
+               
+document.getElementById('location-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            validateAndSubmitForm(this, 'staticSuccessMessage');
+        });
+
+        function validateAndSubmitForm(form, successMessageId) {
+            // Get the form fields
+            const name = form.querySelector('input[name="name"]');
+            const phone = form.querySelector('input[name="phone"]');
+            const email = form.querySelector('input[name="email"]');
+            const course = form.querySelector('select[name="course"]');
+            const class_mode = form.querySelector('select[name="class_mode"]');
+
+            // Check if fields are empty or exam is not selected
+            if (name.value.trim() === '' || phone.value.trim() === ''|| email.value.trim() === '') {
+                alert('Please fill in all fields, including selecting a valid exam.');
+                return;  // Stop form submission if any field is empty or exam is not selected
+            }
+
+            // If all fields are filled, proceed with form submission
+            submitForm(form, successMessageId);
+        }
+
+        function submitForm(form, successMessageId) {
+            const formData = new FormData(form);
+            const url = form.action;
+
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+            }).then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        // Clear form fields
+                        form.reset();
+
+                        // Show success message after 1 second
+                        setTimeout(() => {
+                            document.getElementById(successMessageId).style.display = 'block';
+                        }, 1000);
+
+                        // Hide the success message after 3 seconds (optional)
+                        setTimeout(() => {
+                            document.getElementById(successMessageId).style.display = 'none';
+                        }, 4000);
+                    }
+                }).catch(error => console.error('Error!', error.message));
+        }
+       </script>
+<script src="/common-lead-form.js" defer></script>

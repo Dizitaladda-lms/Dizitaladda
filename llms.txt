@@ -1,0 +1,91 @@
+# DizitalAdda
+
+> DizitalAdda (DA DigitalAdda Innovations Pvt. Ltd.) is a career-skills training institute in Greater Kailash II, New Delhi, India. It teaches digital marketing, generative AI, data analytics, data science, machine learning, cyber security, web development and design through classroom, live-online and hybrid courses, with live projects and placement assistance.
+
+Key facts:
+
+- Brand name: DizitalAdda (sometimes written "Dizital Adda")
+- Legal entity: DA DigitalAdda Innovations Pvt. Ltd.
+- Founded: 2009
+- Campus: 2nd Floor, Spacetime Management Pvt Ltd Design House, behind Savitri Cinema Complex, Greater Kailash II, Chittaranjan Park, New Delhi, Delhi 110048, India
+- Phone / WhatsApp: +91-8810606010  
+- Email: info@dizitaladda.com
+- Study modes: classroom (Greater Kailash II campus), live online, and hybrid
+- Batch timings: morning, afternoon, evening and weekend batches
+- Payment: EMI / instalment options available
+- Fees: vary by course and level; confirm the current fee on the course page or with admissions
+- Free demo class: available online or at the campus
+
+Digital marketing is offered at four levels: Beginners (3 months), Working Professionals (4 months), Advanced (6 months) and Expert (12 months). Each course page lists its syllabus, tools, duration and mode. A complete reference with every page on the site is at https://dizitaladda.com/llms-full.txt.
+
+## Courses
+
+- [Digital Marketing for Beginners](https://dizitaladda.com/courses/digital-marketing-for-beginners): 3 months. Entry-level course for people with no prior experience.
+- [Digital Marketing for Working Professionals](https://dizitaladda.com/courses/digital-marketing-for-professional): 4 months. Part-time course with evening and weekend batches for people who are working.
+- [Advanced Digital Marketing Course](https://dizitaladda.com/courses/advanced-digital-marketing-course): 6 months (144+ hours, 60 modules). Execution-level training in paid ads, SEO, analytics and AI tools.
+- [Expert Digital Marketing Course](https://dizitaladda.com/courses/expert-digital-marketing-course): 12 months. The most comprehensive digital marketing programme, from fundamentals to strategy.
+- [Advanced Certification in Generative AI & Prompt Engineering](https://dizitaladda.com/courses/advanced-certification-in-genai-and-prompt-engineering): 6 months. Practical generative-AI and prompt-engineering skills.
+- [Diploma in Generative AI & Prompt Engineering](https://dizitaladda.com/courses/diploma-in-genai-and-prompt-engineering): 12 months. Extended generative-AI programme including model building and deployment.
+- [Certification in Data Analytics & AI](https://dizitaladda.com/courses/certification-in-data-analytics-and-ai): 3 months. Short job-focused analytics course.
+- [Advanced Certification in Data Analytics & AI](https://dizitaladda.com/courses/advanced-certification-in-data-analytics-and-ai): see course page. Intermediate data-analytics certification.
+- [Diploma in Data Analytics & AI](https://dizitaladda.com/courses/diploma-in-data-analytics-and-ai): 12 months (288 hours, hybrid). Full data-analytics stack from spreadsheets to Python.
+- [Advanced Certification in Data Science & AI](https://dizitaladda.com/courses/advanced-certification-in-data-science-and-ai): 6 months. Data science with machine learning and deployment.
+- [Diploma in Data Science & AI](https://dizitaladda.com/courses/diploma-in-data-science-and-ai): 12 months (288 hours, hybrid). Complete data-science pipeline.
+- [Advanced Certification in Machine Learning & AI](https://dizitaladda.com/courses/advanced-certification-in-machine-learning-and-ai): 6 months (144 hours). Job-ready machine learning and AI.
+- [Diploma in Machine Learning & AI](https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai): 12 months. In-depth machine learning and deep learning.
+- [Foundation in Cyber Security & Ethical Hacking](https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking): 4 months (96 hours). Beginner-friendly start in cyber security.
+- [Advanced Certification in Cyber Security & Ethical Hacking](https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking): 6 months. Vulnerability assessment, penetration testing and forensics.
+- [Expert Training in Cyber Security & Ethical Hacking](https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking): 12 months (288 hours, hybrid). Advanced, broad cyber-security programme.
+- [Certification in Digital Forensics & Cyber Investigation](https://dizitaladda.com/courses/certification-in-digital-forensic-and-cyber-investigation): 4 months (96 hours, hybrid). Digital evidence and cybercrime investigation.
+- [Digital Forensics Course](https://dizitaladda.com/courses/digital-forensics-course): 2 months. Short intensive forensics course.
+- [Diploma in Computer Software & Technology](https://dizitaladda.com/courses/diploma-in-computer-software-and-technology): 12 months. Programming and web development for beginners.
+- [Graphic Design & Motion Graphics](https://dizitaladda.com/courses/graphic-design-and-motion-graphics): 6 months. Design and animation for digital media.
+- [Graphic Design & Professional Video Editing](https://dizitaladda.com/courses/graphic-design-and-professional-video-editing-course): 6 months. Design plus video editing.
+- [UI/UX Design Course](https://dizitaladda.com/courses/ui-ux-design-course): see course page. User-interface and user-experience design.
+
+## Program overviews
+
+- [Digital marketing courses (overview)](https://dizitaladda.com/digital-marketing): All four digital marketing levels — Beginners (3 months), Professionals (4 months), Advanced (6 months) and Expert (12 months) — with syllabus, tools, fees and career options.
+- [Online digital marketing course](https://dizitaladda.com/online-digital-marketing-course): Live online classes taught in real time by trainers, with session recordings, projects, certification and placement assistance; available anywhere in India.
+- [Degree in digital marketing](https://dizitaladda.com/degree-digital-marketing): 3-year degree in digital marketing delivered with partner universities.
+- [Post-graduation in digital marketing](https://dizitaladda.com/post-graduation-digital-marketing): 2-year postgraduate (MBA / M.Sc.) programmes in digital marketing delivered with partner universities.
+- [AI and machine learning courses (overview)](https://dizitaladda.com/generative-ai): Generative AI, machine learning, deep learning and NLP courses.
+- [Data analytics and data science courses (overview)](https://dizitaladda.com/data-analytics-and-data-science): Python, SQL, machine learning and dashboard courses.
+- [Machine learning and cloud computing](https://dizitaladda.com/machine-learning-and-cloud-computing): Deep learning, computer vision, NLP and MLOps with projects on AWS, Azure and GCP.
+- [Cyber security courses (overview)](https://dizitaladda.com/cyber-security): Ethical hacking, VAPT, digital forensics and SOC training with hands-on labs.
+- [Ethical hacking course](https://dizitaladda.com/ethical-hacking): Penetration testing, vulnerability assessment and exploitation techniques (120 hours).
+- [Web development course](https://dizitaladda.com/web-development-courses): AI-assisted full-stack web development with MERN (MongoDB, Express, React, Node.js) and live projects.
+
+## About and contact
+
+- [About DizitalAdda](https://dizitaladda.com/about-us): History, founder and mentors.
+- [Student reviews](https://dizitaladda.com/review): Reviews from digital marketing students.
+- [Success stories](https://dizitaladda.com/success-stories): Where students were placed and the roles they hold.
+- [Gallery](https://dizitaladda.com/gallery): Photos of the campus, classrooms, batches and events.
+- [Careers at DizitalAdda](https://dizitaladda.com/career): Job openings at DizitalAdda.
+- [Contact](https://dizitaladda.com/contact-us): Phone, email, campus address and map.
+
+## Guides
+
+- [How long it takes to learn digital marketing](https://dizitaladda.com/blogs/how-long-does-it-take-to-learn-digital-marketing)
+- [Digital marketing salaries in India by role and experience](https://dizitaladda.com/blogs/digital-marketing-salary-in-india)
+- [Is digital marketing a good career in India?](https://dizitaladda.com/blogs/is-digital-marketing-a-good-career-in-india-2026)
+- [Digital marketing course vs MBA in marketing](https://dizitaladda.com/blogs/digital-marketing-course-vs-mba-in-marketing)
+- [Digital marketing institutes in Delhi compared](https://dizitaladda.com/blogs/best-digital-marketing-institutes-in-delhi-2026)
+- [What generative engine optimization (GEO) is](https://dizitaladda.com/blogs/what-is-geo-generative-engine-optimization-2026)
+- [AI courses after Class 12](https://dizitaladda.com/blogs/ai-courses-after-12th-2026)
+- [Data science jobs in India: demand, skills and salary](https://dizitaladda.com/blogs/data-science-jobs-in-india-2026)
+- [Cyber security salaries in India](https://dizitaladda.com/blogs/cyber-security-salary-in-india-2026)
+- [Digital marketing glossary](https://dizitaladda.com/blogs/digital-marketing-glossary-2026)
+- [AI and generative AI glossary](https://dizitaladda.com/blogs/ai-and-generative-ai-glossary-2026)
+
+## Optional
+
+- [All courses](https://dizitaladda.com/courses/)
+- [Blog](https://dizitaladda.com/blogs/): articles on digital marketing, SEO and AI search, AI and data, cyber security and career guidance
+- [Digital marketing course in Delhi](https://dizitaladda.com/digital-marketing-course-in-delhi): plus 81 area pages for Delhi NCR, listed in llms-full.txt
+- [Full reference for language models](https://dizitaladda.com/llms-full.txt)
+- [XML sitemap](https://dizitaladda.com/sitemap.xml)
+- [Privacy policy](https://dizitaladda.com/privacy-policy)
+- [Refund and cancellation policy](https://dizitaladda.com/refund-policy)
+- [Terms of use](https://dizitaladda.com/terms-of-use)

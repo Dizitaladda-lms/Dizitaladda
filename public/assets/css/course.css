@@ -1,0 +1,19 @@
+
+.cover-img{
+    position: absolute;
+    top: 0px;
+}
+
+#bg-image {
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: 100% 100% !important;
+    background-image: url(https://dizitaladda.com/assets/img/background.webp);
+}
+
+
+
+
+.hover-bg:hover{
+    background-color: #bccff5;
+}

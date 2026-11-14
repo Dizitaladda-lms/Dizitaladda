@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /panel/
+Disallow: /enroll
+Disallow: /enroll-upay.php
+Disallow: /*?s=
+
+Sitemap: https://dizitaladda.com/sitemap.xml

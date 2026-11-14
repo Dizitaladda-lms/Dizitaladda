@@ -1,0 +1,278 @@
+
+:root{
+    
+  /*--primaryColor:#0d102d;*/
+  --primaryColor:black;
+  /*#131740*/
+  --secondaryColor:#313454;
+  --thirdColor:#131740;
+  --bg-color-1:#8358ff;
+  --bg-color-2:#31344c;
+  --bg-color-3:#131740;
+  --text-color-1:#8358ff;
+  --text-color-2:#bec5cf;
+  --text-color-3:#a1a2b3;
+}
+body{
+  background-color: var(--primaryColor) !important;
+  color: #fff;
+}
+
+
+.bg-color-1{background-color: var(--bg-color-1);}
+.bg-color-2{background-color: var(--bg-color-2);}
+.bg-color-3{background-color: var(--bg-color-3);}
+.text-color-1{color: var(--text-color-1);}
+.text-color-2{color: var(--text-color-2);}
+.text-color-3{color: var(--text-color-3);}
+
+input:focus-visible{
+  border: none !important;
+}
+
+.hero-title{font-size: 3.25rem !important;}
+
+.animate-gradient {
+  animation: gradient 6s linear infinite;
+}
+
+.animate-gradient {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(270deg, #ff7356, #ff59e2 25.52%, #52ddf6 50%, #eadf4e 76.04%, #ff7356);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 100% auto;
+}
+
+/* Media for TABLETS, LAPTOPS, and LARGE screen user*/
+@media (min-width: 768px){
+  .hero-section{
+      width: 70%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+  }
+  .hero-title {
+      font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px){
+  .hero-section{
+      width: 90% !important;
+      flex: 1;
+      display: flex;
+      align-items: center;
+  }
+  .hero-title {
+      font-size: 1.6rem !important;
+  }
+  #preview{
+      width:100% !important;
+      margin-bottom:5px;
+  }
+}
+
+
+
+.bg-color-gradient {
+  background: linear-gradient(90deg, rgb(73 38 91) 0%, rgb(69 55 113) 50%, rgb(18 18 52) 100%);
+}
+
+
+.primaryColor{
+  background-color: var(--primaryColor) !important;
+}
+
+.secondaryColor{
+  background-color: var(--secondaryColor) !important;
+}
+.thirdColor{
+  background-color: var(--thirdColor) !important;
+}
+
+.post-img {
+  height: 350px;
+  width: 100%;
+}
+
+.text-green {
+  color: #10b981 !important;
+}
+
+.text-gray {
+  color: #a1a2b3 !important;
+}
+.nav-item .active{
+  background-color: var(--primaryColor) !important;
+  color: white !important;
+  border-bottom: 3px solid #fbcc12;
+  border-radius: 0px;
+}
+
+.active-tab{
+  color: #fbcc12;
+}
+.nav-link:hover{
+  color: #fff !important;
+}
+.table-secordary{
+  background-color: var(--secondaryColor);
+  border: 2px solid #363a5d;
+  border-radius: 5px;
+}
+.table-card{
+  border-radius: 10px;
+  border: 1px solid #363a5d;
+  background-color: var(--primaryColor);
+}
+.table-primary{
+  background-color: var(--secondaryColor) !important;
+  border: 1px solid #363a5d !important;
+  border-radius: 10px !important;
+}
+table, tr {
+border: 1px solid #363a5d !important;
+border-collapse: collapse;
+}
+td{
+padding: 15px;
+text-align: left;
+}
+
+th{
+background-color: #363a5d !important;
+padding: 10px;
+text-align: left;
+}
+
+.gameCard{
+width: 100%;
+--tw-border-opacity: 1;
+background-color: #131740;
+border-color: rgb(19 23 64 /0.5);
+border:2px solid #131740;
+border-radius: 20px;
+box-shadow: 0 0rem 5rem rgba(0, 0, 0, 0.3);
+
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.ql-container{
+  height: 100Px !important;
+}
+
+.active-item{
+  background-color: #5827ed;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.img-cover{
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.post-img-preview {
+  border: 2px solid #5827ed;
+  border-radius: 20px;
+  height: 300px;
+  width: 500px;
+}
+
+.btn-code{
+  background-color: #5827ed;
+  color: #fff;
+  border: none;
+}
+
+.front-top-game{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  
+}
+
+/* Contact Us page css */
+
+.submit-btn{
+  box-shadow: 2px 2px 5px 0px rgb(255 255 255 / 25%);
+  background-color: var(--bg-color-1);
+}
+.submit-btn:hover{
+  box-shadow: 3px 3px 12px 0px rgb(255 255 255 / 25%);
+  background-color: #5016f7;
+}
+
+.h-screen{
+  height: 100vh;
+}
+
+/*Contact Us*/
+
+.custom-input:focus {
+    background-color: var(--bg-color-3) !important;
+    outline-color: #6C757D;
+}
+.custom-input{
+    background-color: var(--bg-color-3) !important;
+}
+
+.custom-input, textarea{
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: #6C757D;
+}
+
+.outline-none:focus-visible {
+    outline-style: none;
+}
+
+.admin-panel{
+    height: 100vh;
+    overflow-y: scroll;
+
+}
+
+
+.table-w-100{
+    width:100% !important;
+}
+table{
+    width:100% !important;
+}
+.logo-color-1{
+    color: #fbcc12 !important;
+}
+
+.top-game-img{
+    height: 3rem;
+}
+
+.card-deck {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+
+
+
+
+/*input.w-100.border-0.rounded-4.bg-color-2.text-white:focus-visible {*/
+/*    outline-style: none;*/
+/*}*/
+
+/*#6256CA*/
+/*#86D293*/
+/*#C1E2A4*/
+/*#FDFAD9*/
+
+

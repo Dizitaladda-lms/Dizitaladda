@@ -1,0 +1,264 @@
+
+    .logo{
+        width:160px;
+    }
+    
+
+    .logo1{
+        filter: drop-shadow(2px 4px 6px black) !important;
+    }    
+    
+    .bgcolor-red {
+        background-color: red;
+    }
+    
+    .mini-img{
+        width:60px;
+    }
+    
+    .pw-100{
+        padding: 0px !important;
+    }
+    
+    .height-100{
+        height: 100vh !important;
+    }
+    
+    .bg-navv{
+        background: linear-gradient(163deg, rgba(62,1,61,1) 0%, rgba(5,2,99,0.4319852941176471) 92%) ;
+    }
+    
+    .theme-line:hover{
+        border: 2px solid #563d7c;
+    }
+    
+    .yellow-line{
+        box-shadow: rgba(104, 16, 118, 0.831) 10px 7px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 2px;
+    }
+    
+    /*highlight*/
+    .logo-container {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.bg-nav-color{
+    background: linear-gradient(163deg, rgba(62,1,61,1) 0%, rgba(5,2,99,0.4319852941176471) 92%);
+}
+
+/*.dropdown:hover .dropdown-menu {display: block;}*/
+/*.dropdown::focus .dropdown-menu {display: none;}*/
+
+/*.nav-bt:hover a,*/
+.bg-nav-color li:hover a{
+    border-radius: 9px;
+    background: linear-gradient(163deg, rgb(211 145 210) -8%, rgb(59 56 159 / 56%) 90%);
+}
+
+/* Highlight effect on hover */
+.logo-container {
+    /*background: linear-gradient(163deg, rgba(62,1,61,1) 0%, rgba(5,2,99,0.4319852941176471) 92%) !important;*/
+    background: linear-gradient(163deg, rgba(5,2,99,0.4319852941176471) 0%,  rgba(62,1,61,1)92%) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    
+}
+
+/* Optional: change the logo size or apply filters */
+.logo-container:hover .logo {
+    transform: scale(1.1) !important ;
+    filter: brightness(1.2) !important;
+}
+
+a{
+    text-decoration-line: none !important;
+} 
+    
+    /*logo end*/
+    
+    
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px;  /* Distance from the right of the screen */
+    z-index: 1000; /* Ensures the button is above other content */
+    /*animation: bounce 2s infinite;*/
+}
+
+/*@keyframes bounce {*/
+/*    0%, 20%, 50%, 80%, 100% {*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*    40% {*/
+/*        transform: translateY(-10px);*/
+/*    }*/
+/*    60% {*/
+/*        transform: translateY(-5px);*/
+/*    }*/
+/*}*/
+
+  /*whatsapp*/
+    .whatsapp-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; 
+    color: #fff;
+    border-radius: 20%;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 44px;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button a:hover {
+    background-color: #128C7E; /* Darker green on hover */
+}
+/*whats end       */
+
+/*popup*/
+
+/*0px 0px 15px 3px #713572*/
+
+
+
+/*.backblur{*/
+/*     background-color:  #f2dede88;*/
+/*    backdrop-filter: blur(1px) !important;*/
+/*}*/
+
+
+.img1{
+    
+    background-color: black;
+   
+    
+}
+
+.colr{
+    background: rgb(62,1,61);
+background: linear-gradient(163deg, rgba(62,1,61,1) 0%, rgba(5,2,99,0.4319852941176471) 92%);
+    
+}
+/*popup end*/
+
+
+/*anni*/
+.annii{
+    animation: bounc 2s infinite;
+    transition: all 0.7s;
+}
+@keyframes bounc {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.anii , .annii:hover {
+    transition: all 0.7s;
+    background: rgb(62,1,61);
+background:linear-gradient(163deg, rgba(62,1,61,1) 0%, rgba(5,2,99,0.4319852941176471) 92%);
+    animation: none;
+}
+
+.anii-2 {
+    transition: all 0.7s;
+    background: rgb(62,1,61);
+background:linear-gradient(163deg, rgba(62,1,61,1) 0%, rgba(5,2,99,0.4319852941176471) 92%);
+    animation: none;
+}
+/*anii end*/
+
+/*quick link*/
+
+.red{
+
+    
+background: linear-gradient(163deg, rgba(5,2,99,0.4319852941176471) 0%,  rgba(62,1,61,1)92%) !important;
+    
+}
+/*quick end*/
+
+ .footer {
+      
+      color: white;
+      padding: 40px 0;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ffc107;
+    }
+
+    .footer h5 {
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .footer .social-icons a {
+      margin-right: 15px;
+      color: white;
+      font-size: 18px;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ffc107;
+    }
+
+    .footer .partner img {
+      max-width: 120px;
+    }
+
+    .footer-bottom {
+      border: 1px solid #ffc107;
+         }
+
+    .btn-custom {
+      background-color: #ffc107;
+      border-color: #ffc107;
+      color: #08203D;
+      margin-right: 10px;
+    }
+
+    .btn-custom:hover {
+      background-color: #e0a800;
+      border-color: #e0a800;
+    }
+
+    .back-img {
+      background-image: url(./needformlogo.webp);
+      background-repeat: no-repeat;
+    }
+
+
+/* Ensure the dropdown menu is hidden by default */
+.dropdown-menu {
+  display: none;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.bg-marquee {
+    background: linear-gradient(163deg,  #3e013d 0%, #0502636e 92%) !important;
+}
+
+
+
+
+
+      
+
+    
