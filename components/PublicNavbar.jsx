@@ -52,8 +52,9 @@ export default function PublicNavbar() {
           <a className="site-brand" href="/" aria-label="DizitalAdda home">
             <img src="/logo.png" alt="DizitalAdda" />
           </a>
-          <details className="site-mobile-menu">
-            <summary className="site-mobile-toggle">Menu</summary>
+          <div className="site-mobile-menu">
+            <input id="public-nav-menu-toggle" className="site-menu-checkbox" type="checkbox" aria-label="Toggle navigation" />
+            <label className="site-mobile-toggle" htmlFor="public-nav-menu-toggle">Menu</label>
             <div className="site-links">
               <details>
                 <summary>Courses</summary>
@@ -78,7 +79,7 @@ export default function PublicNavbar() {
                 </div>
               </details>
             </div>
-          </details>
+          </div>
         </div>
       </nav>
       <div className="site-nav-spacer" aria-hidden="true" />
