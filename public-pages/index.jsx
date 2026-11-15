@@ -4,6 +4,7 @@ import CourseCategoryFilters from "../components/CourseCategoryFilters.jsx";
 import HeroHighlights from "../components/HeroHighlights.jsx";
 import WhyTrustSequence from "../components/WhyTrustSequence.jsx";
 import PlacementShowcase from "../components/PlacementShowcase.jsx";
+import IndustryTrainerVideos from "../components/IndustryTrainerVideos.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 
@@ -562,6 +563,7 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 <WhyTrustSequence />
 
 <PlacementShowcase />
+<IndustryTrainerVideos />
 
 
 <section id="refer-earn" className="refer-earn-section">
@@ -701,136 +703,6 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 </div>{/*  /.cert-inner  */}
 </section>
 {/*  /.cert-section  */}
-
-
-{/*  Meet Our Mentors Section  */}
-
-
-<section className="mentors-section bg-mesh">
-<div className="mentors-inner">
-<div className="mentors-header">
-<p className="mentors-eyebrow">Learn From The Best</p>
-<h2 className="mentors-title">Learn From an Industry<br /><span className="cc-highlight">Expert</span> Mentors</h2>
-<p className="mentors-subtitle">At DizitalAdda, every trainer across our digital marketing certification courses, AI courses, data science training programmes, machine learning certification tracks, and ethical hacking training labs is a full-time industry professional ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â not a freelance educator or retired academic. Your instructors run live Google and Meta Ads campaigns, deploy production AI models, conduct real penetration tests, and analyse live data pipelines every day. What they teach on Monday reflects what the industry demanded last week.</p>
-</div>
-<div className="mentors-carousel-wrap">
-<div className="mentors-track" id="mentorsTrack">
-<div className="mentor-card">
-<div className="mentor-avatar-wrap">
-<img src="courses/images/trainer/Gulshan.png" alt="Dr. Gulshan Kumar" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
-<div className="mentor-avatar-ring"></div>
-</div>
-<div className="mentor-role">Founder &amp; Head Trainer ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Digital Marketing ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Foundation Classes</div>
-<h3 className="mentor-name">Dr. Gulshan Kumar</h3>
-<p className="mentor-exp"><strong>10+ years of experience in Digital Marketing and Data Science</strong></p>
-<p className="mentor-desc">Dr. Gulshan Kumar is the Training Head with over 10 years of experience in digital marketing and data science. He specializes in building strong fundamentals for students and has expertise in marketing strategies and content writing. His teaching approach is simple, practical, and beginner-friendly.</p>
-<div className="mentor-tags">
-<span>Digital Marketing </span><span>Data Science</span><span>Marketing Strategy</span>
-</div>
-</div>
-<div className="mentor-card">
-<div className="mentor-avatar-wrap">
-<img src="courses/images/trainer/Ram.png" alt="Mr. Ram kumar" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
-<div className="mentor-avatar-ring" style={{"borderColor":"#06b6d4"}}></div>
-</div>
-<div className="mentor-role">Lead Trainer ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ WordPress Website ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Affiliate Marketing ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ E-commerce Marketing</div>
-<h3 className="mentor-name">Mr. Ram kumar</h3>
-<p className="mentor-exp"><strong>12+ years of experience in Web Development and Affiliate Marketing</strong></p>
-<p className="mentor-desc">Mr. Ram Kumar is a Lead Trainer with over 12 years of experience in web development and affiliate marketing. He has strong expertise in building WordPress and e-commerce websites and helps students learn through real projects and practical training.</p>
-<div className="mentor-tags">
-<span>Wordpress Website</span><span>E-commerce Website</span><span>Affiliate Marketing</span><span>Bootstrap</span>
-</div>
-</div>
-<div className="mentor-card">
-<div className="mentor-avatar-wrap">
-<img src="courses/images/trainer/Saurabh.png" alt="Mr. Saurabh kumar" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
-<div className="mentor-avatar-ring" style={{"borderColor":"#10b981"}}></div>
-</div>
-<div className="mentor-role">Trainer ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Performance Marketing ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Paid Ads ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Media Buying</div>
-<h3 className="mentor-name">Mr. Saurabh kumar</h3>
-<p className="mentor-exp"><strong>15+ years of experience in Performance Marketing and Paid Advertising</strong></p>
-<p className="mentor-desc">Mr. Saurabh Kumar is a highly experienced trainer with 15+ years in performance marketing. He has managed large-scale advertising campaigns, including platforms like Jio Hotstar and LinkedIn Ads, with over ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹10 crore ad spend experience. He focuses on real campaign strategies and ROI-driven marketing.</p>
-<div className="mentor-tags">
-<span>Performance Marketing</span><span>Google Ads</span><span>Meta Ads</span><span>LinkedIn Ads</span><span>Media Buying</span><span>Campaign Optimization</span>
-</div>
-</div>
-<div className="mentor-card">
-<div className="mentor-avatar-wrap">
-<img src="courses/images/trainer/shagun.png" alt="Miss. Shagun Srivastav" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
-<div className="mentor-avatar-ring" style={{"borderColor":"#f59e0b"}}></div>
-</div>
-<div className="mentor-role">Trainer ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Data Science ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ AI ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Automation</div>
-<h3 className="mentor-name">Miss. Shagun Srivastav</h3>
-<p className="mentor-exp"><strong>7+ years of experience in Data Science and AI Technologies</strong></p>
-<p className="mentor-desc">Miss Shagun Srivastava is a data science and AI trainer with 7+ years of experience. She teaches data analytics, generative AI, and automation tools. Her focus is on helping students understand real-world applications of AI and build practical skills.</p>
-<div className="mentor-tags">
-<span>Data Science</span><span>Data Analytics</span><span>Generative AI</span><span>AI Automation</span><span>AI Agents</span>
-</div>
-</div>
-<div className="mentor-card">
-<div className="mentor-avatar-wrap">
-<img src="courses/images/trainer/Ravi.png" alt="Mr. Ravi kumar" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
-<div className="mentor-avatar-ring" style={{"borderColor":"#3b82f6"}}></div>
-</div>
-<div className="mentor-role">Trainer ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ SEO Specialist ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Keyword Research ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Analytics</div>
-<h3 className="mentor-name">Mr. Ravi kumar</h3>
-<p className="mentor-exp"><strong>7+ years of experience in Search Engine Optimization</strong></p>
-<p className="mentor-desc">Mr. Ravi Kumar is an SEO trainer with 7+ years of experience in search engine optimization. He specializes in keyword research, website optimization, and analytics tools. He helps students understand how to rank websites and improve online visibility.</p>
-<div className="mentor-tags">
-<span>SEO</span><span>Keyword Research</span><span>Google Analytics</span><span>Search Console</span>
-</div>
-</div>
-<div className="mentor-card">
-<div className="mentor-avatar-wrap">
-<img src="courses/images/trainer/Kaushal.png" alt="Mr. Kaushal" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
-<div className="mentor-avatar-ring" style={{"borderColor":"#ef4444"}}></div>
-</div>
-<div className="mentor-role">Trainer ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Local SEO ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Google Business Profile ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Paid Ads</div>
-<h3 className="mentor-name">Mr. Kaushal</h3>
-<p className="mentor-exp"><strong>5+ years of experience in Local Marketing and Paid Advertising</strong></p>
-<p className="mentor-desc">Mr. Kaushal is a trainer with 5+ years of experience in local SEO and paid marketing. He specializes in Google Business Profile optimization, local search ads, and data scraping techniques to generate leads for businesses.</p>
-<div className="mentor-tags">
-<span>Google Business Profile (GBP)</span><span>Data Scraping</span><span>Meta Ads</span><span>Local Search Ads</span>
-</div>
-</div>
-<div className="mentor-card">
-<div className="mentor-avatar-wrap">
-<img src="courses/images/trainer/deepanshu.jpeg" alt="Mr. Deepanshu soni" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
-<div className="mentor-avatar-ring" style={{"borderColor":"#14b8a6"}}></div>
-</div>
-<div className="mentor-role">Trainer ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Data Analytics ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ Web Development</div>
-<h3 className="mentor-name">Mr. Deepanshu soni</h3>
-<p className="mentor-exp"><strong>5+ years of experience in Data Analytics and Web Development</strong></p>
-<p className="mentor-desc">Mr. Deepanshu Soni is a trainer with 5+ years of experience in data analytics and web development. He teaches both frontend and backend technologies and helps students build full projects using modern tools and frameworks.</p>
-<div className="mentor-tags">
-<span>SQL</span><span>Python</span><span>Power BI</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
-</div>
-</div>
-<div className="mentor-card">
-<div className="mentor-avatar-wrap">
-<img src="courses/images/trainer/Govind.png" alt="Mr. Govind Bisht" className="mentor-avatar mentor-img" loading="lazy" decoding="async" />
-<div className="mentor-avatar-ring" style={{"borderColor":"#8b5cf6"}}></div>
-</div>
-<div className="mentor-role">Trainer ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Search AI ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ SEO ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ AI Optimization</div>
-<h3 className="mentor-name">Mr. Govind Bisht</h3>
-<p className="mentor-exp"><strong>3+ years of experience in Search AI and SEO</strong></p>
-<p className="mentor-desc">Mr. Govind Bisht is a trainer specializing in Search AI and modern SEO techniques. He focuses on AI-powered search strategies, including AI Overviews, AEO, GEO, and LLM optimization, helping students understand the future of search engines.</p>
-<div className="mentor-tags">
-<span>Search AI</span><span>SEO</span><span>AI Overviews</span><span>AEO</span><span>GEO</span><span>LLMO</span>
-</div>
-</div>
-</div>{/*  /.mentors-track  */}
-</div>{/*  /.mentors-carousel-wrap  */}
-<div className="mentors-carousel-controls">
-<button className="mentors-carousel-btn" id="mentorsPrevBtn" aria-label="Previous mentor" type="button">ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹</button>
-<div className="mentors-dots" id="mentorsDots"></div>
-<button className="mentors-carousel-btn" id="mentorsNextBtn" aria-label="Next mentor" type="button">ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âº</button>
-</div>
-</div>{/*  /.mentors-inner  */}
-</section>
-
-
-<script dangerouslySetInnerHTML={{__html:"\r\n(function(){\r\nvar track = document.getElementById('mentorsTrack');\r\nvar prevBtn = document.getElementById('mentorsPrevBtn');\r\nvar nextBtn = document.getElementById('mentorsNextBtn');\r\nvar dotsWrap = document.getElementById('mentorsDots');\r\nif (!track) return;\r\nvar cards = track.querySelectorAll('.mentor-card');\r\nvar totalCards = cards.length;\r\nvar currentIndex = 0;\r\nfunction visibleCount() {\r\nvar w = window.innerWidth;\r\nif (w >= 1100) return 4;\r\nif (w >= 700) return 2;\r\nreturn 1;\r\n}\r\nfunction buildDots() {\r\ndotsWrap.innerHTML = '';\r\nvar pages = Math.ceil(totalCards / visibleCount());\r\nfor (var i = 0; i < pages; i++) {\r\nvar btn = document.createElement('button');\r\nbtn.className = 'mentors-dot' + (i === 0 ? ' active' : '');\r\nbtn.setAttribute('aria-label', 'Go to page ' + (i + 1));\r\nbtn.dataset.page = i;\r\nbtn.addEventListener('click', function(){\r\ngoTo(+this.dataset.page * visibleCount());\r\nrestartAuto();\r\n});\r\ndotsWrap.appendChild(btn);\r\n}\r\n}\r\nfunction updateDots() {\r\nvar vc = visibleCount();\r\nvar activePage = Math.round(currentIndex / vc);\r\nvar allDots = dotsWrap.querySelectorAll('.mentors-dot');\r\nallDots.forEach(function(d, i){\r\nd.classList.toggle('active', i === activePage);\r\n});\r\n}\r\nfunction goTo(index) {\r\nvar vc = visibleCount();\r\nvar maxIndex = totalCards - vc;\r\ncurrentIndex = Math.max(0, Math.min(index, maxIndex));\r\nvar gap = 24;\r\nvar offset = currentIndex * (cards[0].offsetWidth + gap);\r\ntrack.style.transform = 'translateX(-' + offset + 'px)';\r\nprevBtn.disabled = (currentIndex === 0);\r\nnextBtn.disabled = (currentIndex >= totalCards - vc);\r\nupdateDots();\r\n}\r\nprevBtn.addEventListener('click', function(){\r\ngoTo(currentIndex - visibleCount());\r\nrestartAuto();\r\n});\r\nnextBtn.addEventListener('click', function(){\r\ngoTo(currentIndex + visibleCount());\r\nrestartAuto();\r\n});\r\nvar autoTimer = null;\r\nfunction restartAuto() {\r\nif (autoTimer) clearInterval(autoTimer);\r\nif (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;\r\nautoTimer = setInterval(function() {\r\nvar vc = visibleCount();\r\nvar next = currentIndex + vc;\r\nif (next >= totalCards) next = 0;\r\ngoTo(next);\r\n}, 3500);\r\n}\r\ntrack.addEventListener('mouseenter', function(){ if (autoTimer) clearInterval(autoTimer); });\r\ntrack.addEventListener('mouseleave', restartAuto);\r\ntrack.addEventListener('touchstart', function(){ if (autoTimer) clearInterval(autoTimer); }, { passive: true });\r\ntrack.addEventListener('touchend', restartAuto, { passive: true });\r\nwindow.addEventListener('resize', function(){\r\nbuildDots();\r\ngoTo(0);\r\nrestartAuto();\r\n});\r\nbuildDots();\r\ngoTo(0);\r\nrestartAuto();\r\n})();\r\n"}} />
 
 
 {/*  HD video thumbnails: tries the sharpest picture first.
