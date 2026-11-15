@@ -161,7 +161,7 @@ body {
 .da-hero-stats>div{display:grid;gap:5px}
 .da-hero-stats strong{color:#fff;font-size:25px;font-weight:800;line-height:1.1;letter-spacing:-.025em}
 .da-hero-stats span{color:var(--da-hero-muted);font-size:12px;font-weight:500}
-.da-hero-chips{position:absolute;right:clamp(30px,8vw,126px);bottom:clamp(125px,24vh,230px);z-index:1;display:grid;gap:12px}
+.da-hero-chips{position:absolute;right:clamp(30px,8vw,126px);bottom:clamp(125px,24vh,230px);z-index:1;width:max-content;height:54px;overflow:hidden}
 .da-hero-chip{padding:13px 18px;border:1px solid rgba(255,255,255,.48);border-radius:12px;background:rgba(255,255,255,.94);box-shadow:0 12px 36px rgba(8,6,28,.22);color:#24213a;font-size:14px;font-weight:700;white-space:nowrap}
 .da-hero-chip-projects span{color:var(--da-hero-pink)}
 .da-hero-chip i{padding:0 4px;color:var(--da-hero-pink);font-style:normal}
@@ -270,31 +270,12 @@ body {
 @media(max-width:520px){.why-trust-grid{grid-template-columns:1fr}.why-trust-grid-card{display:grid;grid-template-columns:120px minmax(0,1fr);align-items:stretch}.why-trust-grid-card>img{height:100%;min-height:150px}.why-trust-grid-card>div{padding:14px}.why-trust-grid-card h3{font-size:16px}.why-trust-grid-card p{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.why-trust-sequence.is-in-view .why-trust-image-wrap,.why-trust-sequence.is-in-view .why-trust-copy,.why-trust-grid-card{animation:none}}
 
-/* Student placement photo wall */
+/* Placed students carousel */
 .placement-showcase{padding:clamp(64px,8vw,108px) clamp(18px,5vw,70px);background:#f7f5fb;color:#201a31;font-family:var(--font-plus-jakarta-sans),system-ui,sans-serif}
 .placement-showcase-inner{width:min(100%,1360px);margin:0 auto}
-.placement-showcase-heading{max-width:720px;margin:0 auto 38px;text-align:center}
-.placement-showcase-heading>span{display:inline-block;margin-bottom:10px;color:#6d28d9;font-size:12px;font-weight:750;letter-spacing:.13em;text-transform:uppercase}
+.placement-showcase-heading{max-width:800px;margin:0 auto 30px;text-align:center}
 .placement-showcase-heading h2{margin:0;color:#201a31;font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.15}
 .placement-showcase-heading p{margin:13px 0 0;color:#625b70;font-size:16px;line-height:1.6}
-.placement-showcase-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.placement-showcase-card{position:relative;aspect-ratio:4/4.65;min-width:0;overflow:hidden;border-radius:18px;background:#e7e1f0;box-shadow:0 10px 28px rgba(34,23,54,.1);isolation:isolate;outline:none}
-.placement-showcase-card>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
-.placement-showcase-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 18px 20px;background:linear-gradient(180deg,transparent 34%,rgba(16,11,34,.18) 52%,rgba(16,11,34,.93) 100%);color:#fff;opacity:0;transform:translateY(18px);transition:opacity .28s ease,transform .35s ease}
-.placement-showcase-card:hover .placement-showcase-overlay,.placement-showcase-card:focus-visible .placement-showcase-overlay{opacity:1;transform:translateY(0)}
-.placement-showcase-card:hover>img,.placement-showcase-card:focus-visible>img{transform:scale(1.045)}
-.placement-showcase-card:focus-visible{outline:3px solid #6d28d9;outline-offset:3px}
-.placement-showcase-overlay h3{margin:0;color:#fff;font-size:19px;font-weight:750;line-height:1.25}
-.placement-showcase-overlay p{margin:7px 0 5px;color:#f3eefb;font-size:13px;font-weight:550;line-height:1.4}
-.placement-showcase-overlay>span{color:#d8c8f7;font-size:12px;font-weight:650;line-height:1.35}
-.placement-showcase-link{display:flex;width:max-content;align-items:center;gap:8px;margin:30px auto 0;padding:12px 18px;border:1px solid #d9d2f0;border-radius:999px;background:#fff;color:#6d28d9;font-size:14px;font-weight:700;text-decoration:none;transition:background .18s ease,color .18s ease,border-color .18s ease}
-.placement-showcase-link:hover{border-color:#6d28d9;background:#6d28d9;color:#fff}
-.placement-showcase-link:focus-visible{outline:3px solid #a78bfa;outline-offset:4px}
-@media(max-width:1024px){.placement-showcase-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.placement-showcase-card{aspect-ratio:4/4.5}}
-@media(max-width:640px){.placement-showcase{padding:58px 16px}.placement-showcase-heading{margin-bottom:26px}.placement-showcase-heading p{font-size:14px}.placement-showcase-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.placement-showcase-card{aspect-ratio:4/5}.placement-showcase-overlay{padding:15px 12px 14px}.placement-showcase-overlay h3{font-size:15px}.placement-showcase-overlay p{font-size:11px}.placement-showcase-overlay>span{font-size:10px}}
-@media(hover:none){.placement-showcase-overlay{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){.placement-showcase-card>img,.placement-showcase-overlay,.placement-showcase-link{transition:none}}
-/* Single-row placement carousel; student details stay visible without interaction. */
 .placement-showcase-toolbar{display:flex;justify-content:flex-end;gap:9px;margin:0 0 14px}
 .placement-showcase-toolbar button{display:grid;width:42px;height:42px;place-items:center;border:1px solid #ded7ed;border-radius:50%;background:#fff;color:#6d28d9;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease}
 .placement-showcase-toolbar button:hover{border-color:#6d28d9;background:#6d28d9;color:#fff}
@@ -302,15 +283,19 @@ body {
 .placement-showcase-toolbar svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .placement-showcase-grid{display:flex;gap:20px;overflow-x:auto;padding:2px 2px 14px;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
 .placement-showcase-grid::-webkit-scrollbar{display:none}
-.placement-showcase-card{flex:0 0 calc((100% - 60px)/4);aspect-ratio:4/4.65;scroll-snap-align:start}
-.placement-showcase-overlay{opacity:1;transform:none}
-.placement-showcase-card:hover>img,.placement-showcase-card:focus-visible>img{transform:scale(1.035)}
-@media(max-width:1024px){.placement-showcase-grid{gap:16px}.placement-showcase-card{flex-basis:calc((100% - 32px)/3)}}
-@media(max-width:640px){.placement-showcase-grid{gap:12px}.placement-showcase-card{flex-basis:78%;aspect-ratio:4/4.8}.placement-showcase-overlay{padding:18px 14px 16px}}
-/* Explicit track rules win over legacy page styles. */
-#placement-students-track{display:flex!important;flex-flow:row nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;gap:20px!important;scroll-snap-type:x mandatory!important;scrollbar-width:none!important}
-#placement-students-track>.placement-showcase-card{display:block!important;flex:0 0 calc((100% - 60px)/4)!important;min-width:0!important;scroll-snap-align:start!important}
-#placement-students-track .placement-showcase-overlay{display:flex!important;opacity:1!important;transform:none!important}
-.placement-showcase-overlay{pointer-events:none}
-@media(max-width:1024px){#placement-students-track{gap:16px!important}#placement-students-track>.placement-showcase-card{flex-basis:calc((100% - 32px)/3)!important}}
-@media(max-width:640px){#placement-students-track{gap:12px!important}#placement-students-track>.placement-showcase-card{flex-basis:78%!important}}
+.placement-showcase-card{flex:0 0 280px;min-width:0;overflow:hidden;border:1px solid #e8e5ee;border-radius:18px;background:#fff;box-shadow:0 0 0 rgba(34,23,54,0);scroll-snap-align:start;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.placement-showcase-card:hover{transform:translateY(-4px);border-color:#ded7ed;box-shadow:0 12px 26px rgba(34,23,54,.12)}
+.placement-showcase-photo{display:grid;aspect-ratio:4/4.4;place-items:center;overflow:hidden;background:#f0edf5;color:#6d28d9;font-size:38px;font-weight:750;letter-spacing:.04em}
+.placement-showcase-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.placement-showcase-content{padding:18px 20px 20px}
+.placement-showcase-content h3{margin:0;color:#201a31;font-size:18px;font-weight:750;line-height:1.3}
+.placement-showcase-role{display:-webkit-box;height:40px;margin:6px 0 12px;overflow:hidden;color:#777281;font-size:14px;line-height:1.45;-webkit-box-orient:vertical;-webkit-line-clamp:2}
+.placement-showcase-content hr{height:1px;margin:0 0 12px;border:0;background:#e9e6ef}
+.placement-showcase-label{display:block;margin-bottom:8px;color:#888392;font-size:11px;font-weight:650;letter-spacing:.12em;text-transform:uppercase}
+.placement-showcase-company{display:flex;min-width:0;align-items:center;gap:10px}
+.placement-showcase-company-logo{display:grid;width:96px;height:40px;flex:0 0 96px;place-items:center;overflow:hidden;border:1px solid #e6e3eb;border-radius:10px;background:#fff;color:#6d28d9;font-size:17px;font-weight:750}
+.placement-showcase-company-logo img{display:block;width:auto;max-width:94px;height:38px;object-fit:contain}
+.placement-showcase-company-name{overflow:hidden;color:#262132;font-size:17px;font-weight:700;line-height:1.25;text-overflow:ellipsis}
+@media(max-width:640px){.placement-showcase{padding:58px 16px}.placement-showcase-heading{margin-bottom:26px}.placement-showcase-heading p{font-size:14px}.placement-showcase-grid{gap:20px}.placement-showcase-card{flex-basis:78vw;max-width:320px}}
+@media(prefers-color-scheme:dark){.placement-showcase{background:#171520;color:#f5f2fa}.placement-showcase-heading h2,.placement-showcase-content h3,.placement-showcase-company-name{color:#f5f2fa}.placement-showcase-heading p,.placement-showcase-role{color:#b4afc0}.placement-showcase-card{border-color:#393544;background:#211e2a}.placement-showcase-photo{background:#2b2736;color:#c4a8ff}.placement-showcase-content hr{background:#393544}.placement-showcase-label{color:#aaa4b5}.placement-showcase-company-logo{border-color:#494454}.placement-showcase-toolbar button{border-color:#494454;background:#211e2a;color:#c4a8ff}.placement-showcase-toolbar button:hover{border-color:#8b5cf6;background:#6d28d9;color:#fff}}
+@media(prefers-reduced-motion:reduce){.placement-showcase-card,.placement-showcase-toolbar button{transition:none}}
