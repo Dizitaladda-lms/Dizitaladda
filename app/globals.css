@@ -339,7 +339,7 @@ body {
 .industry-trainer-video-card.has-video{cursor:pointer}
 .industry-trainer-video-card:hover{transform:translateY(-3px);border-color:#cfc9e6}
 .industry-trainer-video-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:#f4f2fa}
-.industry-trainer-video-poster{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+.industry-trainer-video-poster{position:absolute;inset:5%;display:block;width:90%;height:90%;object-fit:contain;object-position:center}
 .industry-trainer-video-badge{position:absolute;top:12px;left:12px;max-width:calc(100% - 24px);overflow:hidden;padding:6px 10px;border:1px solid #e8e6f0;border-radius:999px;background:#fff;color:#1f1b2e;font-size:11px;font-weight:600;line-height:1.2;text-overflow:ellipsis;white-space:nowrap}
 .industry-trainer-video-action{position:absolute;right:12px;bottom:12px;display:grid;width:44px;height:44px;place-items:center;padding:0;border:0;border-radius:50%;background:#fff;color:#1f1b2e}
 button.industry-trainer-video-action{cursor:pointer}
