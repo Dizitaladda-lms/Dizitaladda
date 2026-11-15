@@ -285,9 +285,9 @@ body {
 /* Placed students carousel */
 .placement-showcase{width:100%;max-width:100%;padding:clamp(64px,8vw,108px) clamp(18px,5vw,70px);overflow:hidden;background:#f7f5fb;color:#201a31;font-family:var(--font-plus-jakarta-sans),system-ui,sans-serif}
 .placement-showcase-inner{width:min(100%,1360px);margin:0 auto}
-.placement-showcase-heading{max-width:800px;margin:0 auto 30px;text-align:center}
-.placement-showcase-heading h2{margin:0;color:#201a31;font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.15}
-.placement-showcase-heading p{margin:13px 0 0;color:#625b70;font-size:16px;line-height:1.6}
+.placement-showcase-heading{width:100%;max-width:960px;margin:0 auto 30px;text-align:center}
+.placement-showcase-heading h2{margin:0;color:#201a31;font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-align:center;text-wrap:balance}
+.placement-showcase-heading p{width:100%;max-width:900px;margin:13px auto 0;color:#625b70;font-size:16px;line-height:1.6;text-align:center;text-wrap:pretty}
 .placement-showcase-toolbar{display:flex;justify-content:flex-end;gap:9px;margin:0 0 14px}
 .placement-showcase-toolbar button{display:grid;width:42px;height:42px;place-items:center;border:1px solid #ded7ed;border-radius:50%;background:#fff;color:#6d28d9;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease}
 .placement-showcase-toolbar button:hover{border-color:#6d28d9;background:#6d28d9;color:#fff}
