@@ -391,5 +391,22 @@ button.student-project-video-action{cursor:pointer}
 .student-project-video-action:focus-visible,.student-project-video-close:focus-visible{outline:2px solid #6d28d9;outline-offset:3px}
 @media(max-width:900px){.student-project-videos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.student-project-videos{padding:52px 16px}.student-project-videos-grid{grid-template-columns:minmax(0,1fr)}.student-project-video-card{width:100%;max-width:440px;margin:0 auto}.student-project-video-dialog{padding:10px}.student-project-video-close{top:14px;right:14px}}
+/* Campus infrastructure photo gallery */
+.campus-infrastructure{width:100%;padding:clamp(58px,7vw,88px) clamp(18px,5vw,70px);background:#fff;color:#1f1b2e}
+.campus-infrastructure-inner{width:min(100%,1240px);margin:0 auto}
+.campus-infrastructure-heading{width:100%;max-width:900px;margin:0 auto 34px;text-align:center}
+.campus-infrastructure-heading>p{margin:0 0 10px;color:#6d28d9;font-size:13px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
+.campus-infrastructure-heading h2{margin:0;color:#1f1b2e;font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.campus-infrastructure-heading>span{display:block;width:100%;max-width:600px;margin:13px auto 0;color:#6b6880;font-size:16px;line-height:1.6;text-wrap:balance}
+.campus-infrastructure-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.campus-infrastructure-item{min-width:0;margin:0;overflow:hidden;border:1px solid #e8e6f0;border-radius:16px;background:#fff;transition:transform .2s ease,border-color .2s ease}
+.campus-infrastructure-item:hover{transform:translateY(-3px);border-color:#cfc9e6}
+.campus-infrastructure-item a{display:block;overflow:hidden;aspect-ratio:4/3;background:#f4f2fa}
+.campus-infrastructure-item img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.campus-infrastructure-item:hover img{transform:scale(1.025)}
+.campus-infrastructure-item figcaption{padding:13px 16px;color:#1f1b2e;font-size:14px;font-weight:600}
+.campus-infrastructure-item a:focus-visible{outline:3px solid #a78bfa;outline-offset:-3px}
+@media(max-width:900px){.campus-infrastructure-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+@media(max-width:560px){.campus-infrastructure{padding:52px 16px}.campus-infrastructure-gallery{grid-template-columns:1fr;gap:14px}.campus-infrastructure-item{width:100%;max-width:440px;margin:0 auto}}
 @media(prefers-color-scheme:dark){.placement-showcase{background:#171520;color:#f5f2fa}.placement-showcase-heading h2,.placement-showcase-content h3,.placement-showcase-company-name{color:#f5f2fa}.placement-showcase-heading p,.placement-showcase-role{color:#b4afc0}.placement-showcase-card{border-color:#393544;background:#211e2a}.placement-showcase-photo{background:#2b2736;color:#c4a8ff}.placement-showcase-content hr{background:#393544}.placement-showcase-label{color:#aaa4b5}.placement-showcase-company-logo{border-color:#494454}.placement-showcase-toolbar button{border-color:#494454;background:#211e2a;color:#c4a8ff}.placement-showcase-toolbar button:hover{border-color:#8b5cf6;background:#6d28d9;color:#fff}}
 @media(prefers-reduced-motion:reduce){.placement-showcase-card,.placement-showcase-toolbar button{transition:none}}
