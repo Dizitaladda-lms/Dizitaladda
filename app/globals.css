@@ -4,6 +4,18 @@ body {
   margin: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #172033;
@@ -271,7 +283,7 @@ body {
 @media(prefers-reduced-motion:reduce){.why-trust-sequence.is-in-view .why-trust-image-wrap,.why-trust-sequence.is-in-view .why-trust-copy,.why-trust-grid-card{animation:none}}
 
 /* Placed students carousel */
-.placement-showcase{padding:clamp(64px,8vw,108px) clamp(18px,5vw,70px);background:#f7f5fb;color:#201a31;font-family:var(--font-plus-jakarta-sans),system-ui,sans-serif}
+.placement-showcase{width:100%;max-width:100%;padding:clamp(64px,8vw,108px) clamp(18px,5vw,70px);overflow:hidden;background:#f7f5fb;color:#201a31;font-family:var(--font-plus-jakarta-sans),system-ui,sans-serif}
 .placement-showcase-inner{width:min(100%,1360px);margin:0 auto}
 .placement-showcase-heading{max-width:800px;margin:0 auto 30px;text-align:center}
 .placement-showcase-heading h2{margin:0;color:#201a31;font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.15}
@@ -281,9 +293,9 @@ body {
 .placement-showcase-toolbar button:hover{border-color:#6d28d9;background:#6d28d9;color:#fff}
 .placement-showcase-toolbar button:focus-visible,.placement-showcase-grid:focus-visible{outline:3px solid #a78bfa;outline-offset:3px}
 .placement-showcase-toolbar svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.placement-showcase-grid{display:flex;gap:20px;overflow-x:auto;padding:2px 2px 14px;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.placement-showcase-grid{display:flex;width:100%;min-width:0;gap:20px;overflow-x:auto;padding:2px 2px 14px;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
 .placement-showcase-grid::-webkit-scrollbar{display:none}
-.placement-showcase-card{flex:0 0 280px;min-width:0;overflow:hidden;border:1px solid #e8e5ee;border-radius:18px;background:#fff;box-shadow:0 0 0 rgba(34,23,54,0);scroll-snap-align:start;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.placement-showcase-card{flex:0 0 calc((100% - 60px)/4);min-width:0;overflow:hidden;border:1px solid #e8e5ee;border-radius:18px;background:#fff;box-shadow:0 0 0 rgba(34,23,54,0);scroll-snap-align:start;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .placement-showcase-card:hover{transform:translateY(-4px);border-color:#ded7ed;box-shadow:0 12px 26px rgba(34,23,54,.12)}
 .placement-showcase-photo{display:grid;aspect-ratio:4/4.4;place-items:center;overflow:hidden;background:#f0edf5;color:#6d28d9;font-size:38px;font-weight:750;letter-spacing:.04em}
 .placement-showcase-photo img{display:block;width:100%;height:100%;object-fit:cover}
@@ -296,6 +308,8 @@ body {
 .placement-showcase-company-logo{display:grid;width:96px;height:40px;flex:0 0 96px;place-items:center;overflow:hidden;border:1px solid #e6e3eb;border-radius:10px;background:#fff;color:#6d28d9;font-size:17px;font-weight:750}
 .placement-showcase-company-logo img{display:block;width:auto;max-width:94px;height:38px;object-fit:contain}
 .placement-showcase-company-name{overflow:hidden;color:#262132;font-size:17px;font-weight:700;line-height:1.25;text-overflow:ellipsis}
+@media(max-width:1024px){.placement-showcase-card{flex-basis:calc((100% - 40px)/3)}}
+@media(max-width:760px){.placement-showcase-card{flex-basis:calc((100% - 20px)/2)}}
 @media(max-width:640px){.placement-showcase{padding:58px 16px}.placement-showcase-heading{margin-bottom:26px}.placement-showcase-heading p{font-size:14px}.placement-showcase-grid{gap:20px}.placement-showcase-card{flex-basis:78vw;max-width:320px}}
 @media(prefers-color-scheme:dark){.placement-showcase{background:#171520;color:#f5f2fa}.placement-showcase-heading h2,.placement-showcase-content h3,.placement-showcase-company-name{color:#f5f2fa}.placement-showcase-heading p,.placement-showcase-role{color:#b4afc0}.placement-showcase-card{border-color:#393544;background:#211e2a}.placement-showcase-photo{background:#2b2736;color:#c4a8ff}.placement-showcase-content hr{background:#393544}.placement-showcase-label{color:#aaa4b5}.placement-showcase-company-logo{border-color:#494454}.placement-showcase-toolbar button{border-color:#494454;background:#211e2a;color:#c4a8ff}.placement-showcase-toolbar button:hover{border-color:#8b5cf6;background:#6d28d9;color:#fff}}
 @media(prefers-reduced-motion:reduce){.placement-showcase-card,.placement-showcase-toolbar button{transition:none}}

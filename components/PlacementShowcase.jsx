@@ -4,10 +4,10 @@ import { useRef, useState } from "react";
 
 // Add student photos and official company logo paths here when they are ready.
 const placedStudents = [
-  { name: "Ishika Kohli", role: "Digital Marketing & SEO Specialist", company: "Commbitz Ltd.", photo: "", logo: "" },
-  { name: "Zoha Kauser", role: "Co-Founder", company: "byteblast", photo: "", logo: "" },
-  { name: "Sandeep", role: "SEO Executive", company: "BrightRays", photo: "", logo: "" },
-  { name: "Kishan", role: "SEO Executive", company: "Wizcart", photo: "", logo: "" },
+  { name: "Ishika Kohli", role: "Digital Marketing & SEO Specialist", company: "Commbitz Ltd.", photo: "", logo: "https://www.google.com/s2/favicons?domain=commbitz.com&sz=128" },
+  { name: "Zoha Kauser", role: "Co-Founder", company: "byteblast", photo: "", logo: "https://www.google.com/s2/favicons?domain=byteblast.in&sz=128" },
+  { name: "Sandeep", role: "SEO Executive", company: "BrightRays", photo: "", logo: "https://www.google.com/s2/favicons?domain=brightrays.com&sz=128" },
+  { name: "Kishan", role: "SEO Executive", company: "Wizcart", photo: "", logo: "https://www.google.com/s2/favicons?domain=getwizcart.com&sz=128" },
 ];
 
 function CompanyLogo({ student }) {
@@ -52,9 +52,8 @@ export default function PlacementShowcase() {
                 <p className="placement-showcase-role">{student.role}</p>
                 <hr />
                 <span className="placement-showcase-label">Placed at</span>
-                <div className="placement-showcase-company">
+                <div className="placement-showcase-company" aria-label={`Company: ${student.company}`}>
                   <CompanyLogo student={student} />
-                  <span className="placement-showcase-company-name">{student.company}</span>
                 </div>
               </div>
             </article>
