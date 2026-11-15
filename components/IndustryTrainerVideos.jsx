@@ -22,6 +22,17 @@ export default function IndustryTrainerVideos() {
   const dialogRef = useRef(null);
   const videoRef = useRef(null);
   const playButtonRef = useRef(null);
+  const carouselRef = useRef(null);
+
+  const scrollTrainers = (direction) => {
+    const track = carouselRef.current;
+    const card = track?.querySelector(".industry-trainer-video-card");
+    if (!track || !card) return;
+
+    const gap = Number.parseFloat(window.getComputedStyle(track).columnGap) || 20;
+    const visibleCards = window.innerWidth > 900 ? 4 : window.innerWidth > 560 ? 2 : 1;
+    track.scrollBy({ left: (card.getBoundingClientRect().width + gap) * visibleCards * direction, behavior: "smooth" });
+  };
 
   const openVideo = (trainer, button) => {
     if (!trainer.videoSrc) return;
@@ -81,49 +92,59 @@ export default function IndustryTrainerVideos() {
           <h2 id="industry-trainer-videos-title">Learn with Industry Expert Trainers</h2>
           <span>Meet the experts who bring practical, real-world experience into every class.</span>
         </header>
-        <div className="industry-trainer-videos-grid">
-          {trainers.map((trainer) => (
-            <article
-              className={`industry-trainer-video-card${trainer.videoSrc ? " has-video" : ""}`}
-              key={trainer.name}
-              onClick={(event) => openVideo(trainer, event.currentTarget.querySelector(".industry-trainer-video-action"))}
-            >
-              <div className="industry-trainer-video-media">
-                <video
-                  className="industry-trainer-video-poster"
-                  preload="none"
-                  poster={trainer.poster}
-                  aria-label={`${trainer.name} trainer video poster`}
-                  tabIndex={-1}
-                />
-                <span className="industry-trainer-video-badge">
-                  {trainer.videoSrc ? trainer.experience : "Video coming soon"}
-                </span>
-                {trainer.videoSrc ? (
-                  <button
-                    className="industry-trainer-video-action"
-                    type="button"
-                    aria-label={`Play ${trainer.name}'s video`}
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      openVideo(trainer, event.currentTarget);
-                    }}
-                  >
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 10 6-10 6z" /></svg>
-                  </button>
-                ) : (
-                  <span className="industry-trainer-video-action is-unavailable" aria-hidden="true"><ClockIcon /></span>
-                )}
-              </div>
-              <div className="industry-trainer-video-copy">
-                <h3>{trainer.name}</h3>
-                <p className="industry-trainer-video-role">{trainer.role}</p>
-                <div className="industry-trainer-video-tags">
-                  {trainer.tags.map((tag) => <span key={tag}>{tag}</span>)}
+        <div className="industry-trainer-videos-controls" aria-label="Trainer carousel controls">
+          <button type="button" aria-label="Previous trainers" onClick={() => scrollTrainers(-1)}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+          </button>
+          <button type="button" aria-label="Next trainers" onClick={() => scrollTrainers(1)}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+        </div>
+        <div className="industry-trainer-videos-viewport">
+          <div className="industry-trainer-videos-track" ref={carouselRef} tabIndex={0} aria-label="Industry expert trainers">
+            {trainers.map((trainer) => (
+              <article
+                className={`industry-trainer-video-card${trainer.videoSrc ? " has-video" : ""}`}
+                key={trainer.name}
+                onClick={(event) => openVideo(trainer, event.currentTarget.querySelector(".industry-trainer-video-action"))}
+              >
+                <div className="industry-trainer-video-media">
+                  <video
+                    className="industry-trainer-video-poster"
+                    preload="none"
+                    poster={trainer.poster}
+                    aria-label={`${trainer.name} trainer video poster`}
+                    tabIndex={-1}
+                  />
+                  <span className="industry-trainer-video-badge">
+                    {trainer.videoSrc ? trainer.experience : "Video coming soon"}
+                  </span>
+                  {trainer.videoSrc ? (
+                    <button
+                      className="industry-trainer-video-action"
+                      type="button"
+                      aria-label={`Play ${trainer.name}'s video`}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        openVideo(trainer, event.currentTarget);
+                      }}
+                    >
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 10 6-10 6z" /></svg>
+                    </button>
+                  ) : (
+                    <span className="industry-trainer-video-action is-unavailable" aria-hidden="true"><ClockIcon /></span>
+                  )}
                 </div>
-              </div>
-            </article>
-          ))}
+                <div className="industry-trainer-video-copy">
+                  <h3>{trainer.name}</h3>
+                  <p className="industry-trainer-video-role">{trainer.role}</p>
+                  <div className="industry-trainer-video-tags">
+                    {trainer.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
 
