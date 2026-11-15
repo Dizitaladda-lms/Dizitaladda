@@ -1,0 +1,851 @@
+/* ==========================================================================
+   DIZITALADDA CAMPUS SECTION - CSS MODULE
+   Brand Colors: Purple (#6D28D9), Dark Navy (#1E1B3A), Pure White (#FFFFFF)
+   ========================================================================== */
+
+.campusSection {
+  --campus-purple: #6d28d9;
+  --campus-purple-hover: #5b21b6;
+  --campus-purple-light: #f5f3ff;
+  --campus-purple-subtle: #ede9fe;
+  --campus-purple-glow: rgba(109, 40, 217, 0.22);
+  --campus-navy: #1e1b3a;
+  --campus-navy-muted: #5b5777;
+  --campus-navy-light: #8e8aab;
+  --campus-border: #e8e5f2;
+  --campus-white: #ffffff;
+  --campus-whatsapp: #25d366;
+  --campus-whatsapp-hover: #20bd5a;
+  --campus-radius: 20px;
+  --campus-shadow-soft: 0 10px 30px -8px rgba(30, 27, 58, 0.08), 0 4px 12px -2px rgba(30, 27, 58, 0.04);
+  --campus-shadow-hover: 0 20px 40px -10px rgba(109, 40, 217, 0.25), 0 8px 16px -4px rgba(30, 27, 58, 0.1);
+
+  position: relative;
+  width: 100%;
+  padding: clamp(56px, 8vw, 100px) clamp(16px, 4vw, 40px);
+  background: var(--campus-white);
+  color: var(--campus-navy);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.container {
+  width: min(100%, 1240px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 5vw, 48px);
+}
+
+/* ==========================================================================
+   1. SECTION HEADER
+   ========================================================================== */
+.header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: var(--campus-purple-light);
+  border: 1px solid var(--campus-purple-subtle);
+  color: var(--campus-purple);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(109, 40, 217, 0.06);
+}
+
+.heading {
+  margin: 0;
+  color: var(--campus-navy);
+  font-size: clamp(30px, 4.5vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.subtext {
+  margin: 0;
+  color: var(--campus-navy-muted);
+  font-size: clamp(15px, 1.8vw, 18px);
+  line-height: 1.6;
+  max-width: 640px;
+  text-wrap: balance;
+}
+
+/* ==========================================================================
+   2. FACTS STRIP
+   ========================================================================== */
+.factsContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.factsTrack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 4px 2px;
+}
+
+/* Mobile horizontal scroll */
+@media (max-width: 768px) {
+  .factsTrack {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 6px 12px 14px 12px;
+    margin: 0 -12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .factsTrack::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.factPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: #ffffff;
+  border: 1.5px solid var(--campus-border);
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--campus-navy);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(30, 27, 58, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.factPill:hover {
+  transform: translateY(-2px);
+  border-color: var(--campus-purple);
+  color: var(--campus-purple);
+  box-shadow: 0 6px 18px rgba(109, 40, 217, 0.12);
+}
+
+.factIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--campus-purple);
+  width: 18px;
+  height: 18px;
+}
+
+/* ==========================================================================
+   3. VIDEO TOUR CARD & MODAL
+   ========================================================================== */
+.videoCardWrapper {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.videoCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--campus-radius);
+  overflow: hidden;
+  box-shadow: var(--campus-shadow-soft);
+  border: 1px solid var(--campus-border);
+  cursor: pointer;
+  background: var(--campus-navy);
+  outline: none;
+}
+
+.videoCard:focus-visible {
+  outline: 3px solid var(--campus-purple);
+  outline-offset: 4px;
+}
+
+.videoCardPoster {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.videoCard:hover .videoCardPoster {
+  transform: scale(1.04);
+  filter: brightness(0.9);
+}
+
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(30, 27, 58, 0.3) 0%, rgba(30, 27, 58, 0.75) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+/* Pulsing play button */
+.playButtonCore {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--campus-purple);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(109, 40, 217, 0.5);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease;
+}
+
+.videoCard:hover .playButtonCore {
+  transform: scale(1.1);
+  background: var(--campus-purple-hover);
+}
+
+.playPulseRing {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px solid rgba(109, 40, 217, 0.6);
+  animation: pulseRipple 2.2s infinite cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.playPulseRingOuter {
+  position: absolute;
+  inset: -24px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(109, 40, 217, 0.35);
+  animation: pulseRipple 2.2s infinite cubic-bezier(0.25, 1, 0.5, 1) 0.5s;
+  pointer-events: none;
+}
+
+@keyframes pulseRipple {
+  0% {
+    transform: scale(0.85);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+.playButtonLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  color: var(--campus-navy);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease;
+}
+
+.videoCard:hover .playButtonLabel {
+  transform: translateY(-2px);
+}
+
+.durationBadge {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  background: rgba(30, 27, 58, 0.85);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Video Modal */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(14, 12, 26, 0.88);
+  backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modalContent {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  background: #000000;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.videoIframeWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.videoIframeWrapper iframe,
+.videoIframeWrapper video {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.modalCloseBtn:hover {
+  transform: scale(1.1);
+  background: rgba(109, 40, 217, 0.85);
+}
+
+.modalCloseBtn:focus-visible {
+  outline: 2px solid #ffffff;
+}
+
+/* ==========================================================================
+   4. BENTO GALLERY
+   ========================================================================== */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 230px;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Bento items */
+.bentoCard {
+  position: relative;
+  border-radius: var(--campus-radius);
+  overflow: hidden;
+  box-shadow: var(--campus-shadow-soft);
+  border: 1px solid var(--campus-border);
+  background: #17142b;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+}
+
+.bentoCard:hover {
+  box-shadow: var(--campus-shadow-hover);
+  border-color: rgba(109, 40, 217, 0.4);
+}
+
+.bentoCard:focus-visible {
+  outline: 3px solid var(--campus-purple);
+  outline-offset: 3px;
+}
+
+/* Spans */
+.spanHero {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 472px;
+}
+
+.spanWide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.spanNormal {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Responsive grid layout */
+@media (max-width: 1023px) and (min-width: 640px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 230px;
+  }
+  .spanHero {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 420px;
+  }
+  .spanWide {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .spanNormal {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 639px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 175px;
+    gap: 10px;
+  }
+  .spanHero {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 320px;
+  }
+  .spanWide {
+    grid-column: span 2;
+    grid-row: span 1;
+    min-height: 180px;
+  }
+  .spanNormal {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+/* Bento Card Image & Hover */
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imageElement {
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.bentoCard:hover .imageElement {
+  transform: scale(1.08);
+  filter: brightness(0.92);
+}
+
+/* Dark gradient overlay */
+.cardGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 27, 58, 0) 30%,
+    rgba(30, 27, 58, 0.55) 65%,
+    rgba(18, 15, 38, 0.94) 100%
+  );
+  transition: opacity 0.35s ease;
+}
+
+.bentoCard:hover .cardGradient {
+  background: linear-gradient(
+    180deg,
+    rgba(30, 27, 58, 0.05) 20%,
+    rgba(30, 27, 58, 0.7) 60%,
+    rgba(14, 12, 26, 0.98) 100%
+  );
+}
+
+/* Expand Icon (Top-right pill) */
+.expandBadge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(30, 27, 58, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease;
+}
+
+.bentoCard:hover .expandBadge,
+.bentoCard:focus-visible .expandBadge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.expandBadge:hover {
+  background: var(--campus-purple);
+}
+
+/* Caption container */
+.captionArea {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: clamp(14px, 2.5vw, 24px);
+  color: #ffffff;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transform: translateY(2px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bentoCard:hover .captionArea {
+  transform: translateY(-2px);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: clamp(14px, 1.4vw, 19px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.cardCaption {
+  margin: 0;
+  font-size: clamp(12px, 1.1vw, 14px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: #e0dbf5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   5. LIGHTBOX MODAL
+   ========================================================================== */
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(12, 10, 22, 0.94);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.lightboxTopBar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px;
+  z-index: 10;
+}
+
+.counterBadge {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  backdrop-filter: blur(6px);
+}
+
+.lightboxCloseBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.lightboxCloseBtn:hover {
+  transform: scale(1.08);
+  background: rgba(109, 40, 217, 0.9);
+}
+
+.lightboxCloseBtn:focus-visible,
+.navBtn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Main Lightbox Viewport */
+.lightboxViewport {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxImageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 72vh;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.navBtn:hover {
+  transform: translateY(-50%) scale(1.1);
+  background: var(--campus-purple);
+}
+
+.prevBtn {
+  left: clamp(8px, 2vw, 24px);
+}
+
+.nextBtn {
+  right: clamp(8px, 2vw, 24px);
+}
+
+@media (max-width: 768px) {
+  .navBtn {
+    width: 42px;
+    height: 42px;
+  }
+  .lightboxViewport {
+    height: 65vh;
+  }
+}
+
+/* Bottom Caption Bar */
+.lightboxBottomBar {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  padding: 12px 16px;
+  z-index: 10;
+  color: #ffffff;
+}
+
+.lightboxTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.lightboxCaption {
+  margin: 4px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #c7c0ea;
+}
+
+/* ==========================================================================
+   6. CTA BLOCK
+   ========================================================================== */
+.ctaBanner {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 55%, #3b0764 100%);
+  color: #ffffff;
+  padding: clamp(36px, 6vw, 64px) clamp(20px, 5vw, 56px);
+  box-shadow: 0 20px 45px -10px rgba(109, 40, 217, 0.4);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Decorative background circle */
+.ctaGlow {
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  max-width: 740px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctaHeading {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(26px, 3.8vw, 40px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.ctaSubtext {
+  margin: 0;
+  color: #ede9fe;
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.6;
+  max-width: 600px;
+  text-wrap: balance;
+}
+
+.ctaButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: var(--campus-purple);
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  background: #faf8ff;
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--campus-whatsapp);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease;
+}
+
+.whatsappBtn:hover {
+  transform: translateY(-2px);
+  background: var(--campus-whatsapp-hover);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+.primaryBtn:focus-visible,
+.whatsappBtn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.trustFootnote {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ddd6fe;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   REDUCED MOTION SUPPORT (Accessibility)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .playPulseRing,
+  .playPulseRingOuter {
+    animation: none;
+  }
+  .bentoCard:hover .imageElement,
+  .videoCard:hover .videoCardPoster,
+  .bentoCard,
+  .factPill,
+  .primaryBtn,
+  .whatsappBtn {
+    transform: none !important;
+    transition: none !important;
+  }
+}

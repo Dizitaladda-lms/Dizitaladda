@@ -7,7 +7,7 @@ import PlacementShowcase from "../components/PlacementShowcase.jsx";
 import IndustryTrainerVideos from "../components/IndustryTrainerVideos.jsx";
 import HeroTrustStrip from "../components/HeroTrustStrip.jsx";
 import StudentProjectVideos from "../components/StudentProjectVideos.jsx";
-import CampusInfrastructureGallery from "../components/CampusInfrastructureGallery.jsx";
+import CampusSection from "../components/campus/CampusSection";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 
@@ -569,7 +569,7 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 <PlacementShowcase />
 <IndustryTrainerVideos />
 <StudentProjectVideos />
-<CampusInfrastructureGallery />
+<CampusSection />
 
 
 <section id="refer-earn" className="refer-earn-section">
