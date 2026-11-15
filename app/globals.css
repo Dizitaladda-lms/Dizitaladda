@@ -183,6 +183,15 @@ body {
 /* Keep the hero headline readable against legacy page-wide heading rules. */
 #dizitaladda-home-hero .da-hero-content > h1{color:#fff!important;-webkit-text-fill-color:#fff!important}
 #dizitaladda-home-hero .da-hero-gradient-text{color:transparent!important;-webkit-text-fill-color:transparent!important}
+.hero-trust-strip{width:100%;padding:24px clamp(18px,5vw,70px);border-bottom:1px solid #eeeaf5;background:#fff;color:#1f1b2e}
+.hero-trust-inner{width:min(100%,1360px);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.hero-trust-label{flex:0 0 auto;margin:0;color:#6b6880;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.hero-trust-logos{display:grid;flex:1;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:clamp(20px,4vw,56px)}
+.hero-trust-logo{display:flex;height:58px;align-items:center;justify-content:center;min-width:0}
+.hero-trust-logo img{display:block;width:auto;max-width:min(100%,170px);height:auto;max-height:54px;object-fit:contain}
+.hero-trust-logo:focus-visible{outline:2px solid #6d28d9;outline-offset:5px;border-radius:5px}
+@media(max-width:760px){.hero-trust-inner{flex-direction:column;gap:14px}.hero-trust-logos{width:100%;flex:none;gap:14px}.hero-trust-logo{height:52px}.hero-trust-logo img{max-width:140px;max-height:48px}}
+@media(max-width:440px){.hero-trust-strip{padding:20px 16px}.hero-trust-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 22px}.hero-trust-logo{height:48px}.hero-trust-logo img{max-width:130px;max-height:44px}}
 /* DizitalAdda course cards and three-at-a-time carousel */
 .courses{background:#f4f2fa!important}
 .courses .containerCource{width:min(100%,1480px);margin:0 auto;padding:clamp(30px,5vw,68px) clamp(16px,4vw,48px)}
@@ -351,5 +360,36 @@ button.industry-trainer-video-action{cursor:pointer}
 .industry-trainer-video-action:focus-visible,.industry-trainer-video-close:focus-visible{outline:2px solid #6d28d9;outline-offset:3px}
 @media(max-width:900px){.industry-trainer-video-card{flex-basis:calc((100% - 20px)/2)}}
 @media(max-width:560px){.industry-trainer-videos{padding:52px 16px}.industry-trainer-video-card{flex-basis:100%}.industry-trainer-video-dialog{padding:10px}.industry-trainer-video-close{top:14px;right:14px}}
+/* Student real-time project video showcase */
+.student-project-videos{width:100%;padding:clamp(58px,7vw,88px) clamp(18px,5vw,70px);background:#f7f5fb;color:#1f1b2e}
+.student-project-videos-inner{width:min(100%,1240px);margin:0 auto}
+.student-project-videos-heading{width:100%;max-width:900px;margin:0 auto 34px;text-align:center}
+.student-project-videos-heading>p{margin:0 0 10px;color:#6d28d9;font-size:13px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
+.student-project-videos-heading h2{margin:0;color:#1f1b2e;font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
+.student-project-videos-heading>span{display:block;width:100%;max-width:600px;margin:13px auto 0;color:#6b6880;font-size:16px;line-height:1.6;text-wrap:balance}
+.student-project-videos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.student-project-video-card{min-width:0;overflow:hidden;border:1px solid #e8e6f0;border-radius:16px;background:#fff;transition:transform .2s ease,border-color .2s ease}
+.student-project-video-card.has-video{cursor:pointer}
+.student-project-video-card:hover{transform:translateY(-3px);border-color:#cfc9e6}
+.student-project-video-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:#efedf5}
+.student-project-video-poster{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.student-project-video-badge{position:absolute;top:12px;left:12px;max-width:calc(100% - 24px);overflow:hidden;padding:6px 10px;border:1px solid #e8e6f0;border-radius:999px;background:#fff;color:#1f1b2e;font-size:11px;font-weight:600;line-height:1.2;text-overflow:ellipsis;white-space:nowrap}
+.student-project-video-action{position:absolute;right:12px;bottom:12px;display:grid;width:44px;height:44px;place-items:center;padding:0;border:0;border-radius:50%;background:#fff;color:#1f1b2e}
+button.student-project-video-action{cursor:pointer}
+.student-project-video-action svg{display:block;width:17px;height:17px;fill:currentColor}
+.student-project-video-action.is-unavailable{color:#6b6880}
+.student-project-video-action.is-unavailable svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.student-project-video-copy{padding:16px 18px 18px}
+.student-project-video-copy h3{margin:0;color:#1f1b2e;font-size:16px;font-weight:600;line-height:1.35}
+.student-project-video-copy p{margin:7px 0 0;color:#6b6880;font-size:13px;line-height:1.5}
+.student-project-video-modal-overlay{position:fixed;inset:0;z-index:200000;display:grid;place-items:center;padding:24px;background:rgba(20,17,31,.72)}
+.student-project-video-dialog{position:relative;width:min(100%,900px);padding:16px;border:1px solid #e8e6f0;border-radius:16px;background:#fff;color:#1f1b2e}
+.student-project-video-dialog:focus{outline:3px solid #a78bfa;outline-offset:3px}
+.student-project-video-dialog video{display:block;width:100%;max-height:75vh;aspect-ratio:16/9;background:#111;object-fit:contain}
+.student-project-video-dialog h2{margin:12px 48px 0 0;font-size:18px;font-weight:600}
+.student-project-video-close{position:absolute;top:22px;right:22px;z-index:1;display:grid;width:38px;height:38px;place-items:center;border:1px solid #e8e6f0;border-radius:50%;background:#fff;color:#1f1b2e;font-size:24px;line-height:1;cursor:pointer}
+.student-project-video-action:focus-visible,.student-project-video-close:focus-visible{outline:2px solid #6d28d9;outline-offset:3px}
+@media(max-width:900px){.student-project-videos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.student-project-videos{padding:52px 16px}.student-project-videos-grid{grid-template-columns:minmax(0,1fr)}.student-project-video-card{width:100%;max-width:440px;margin:0 auto}.student-project-video-dialog{padding:10px}.student-project-video-close{top:14px;right:14px}}
 @media(prefers-color-scheme:dark){.placement-showcase{background:#171520;color:#f5f2fa}.placement-showcase-heading h2,.placement-showcase-content h3,.placement-showcase-company-name{color:#f5f2fa}.placement-showcase-heading p,.placement-showcase-role{color:#b4afc0}.placement-showcase-card{border-color:#393544;background:#211e2a}.placement-showcase-photo{background:#2b2736;color:#c4a8ff}.placement-showcase-content hr{background:#393544}.placement-showcase-label{color:#aaa4b5}.placement-showcase-company-logo{border-color:#494454}.placement-showcase-toolbar button{border-color:#494454;background:#211e2a;color:#c4a8ff}.placement-showcase-toolbar button:hover{border-color:#8b5cf6;background:#6d28d9;color:#fff}}
 @media(prefers-reduced-motion:reduce){.placement-showcase-card,.placement-showcase-toolbar button{transition:none}}

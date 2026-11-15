@@ -5,6 +5,8 @@ import HeroHighlights from "../components/HeroHighlights.jsx";
 import WhyTrustSequence from "../components/WhyTrustSequence.jsx";
 import PlacementShowcase from "../components/PlacementShowcase.jsx";
 import IndustryTrainerVideos from "../components/IndustryTrainerVideos.jsx";
+import HeroTrustStrip from "../components/HeroTrustStrip.jsx";
+import StudentProjectVideos from "../components/StudentProjectVideos.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 
@@ -548,6 +550,7 @@ export default function LegacyPage_index() {
 <HeroHighlights />
 </main>
 
+<HeroTrustStrip />
 
 <div className="courses" id="courses">
 <div className="containerCource">
@@ -564,6 +567,7 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 
 <PlacementShowcase />
 <IndustryTrainerVideos />
+<StudentProjectVideos />
 
 
 <section id="refer-earn" className="refer-earn-section">
