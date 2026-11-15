@@ -70,6 +70,11 @@ body {
 .site-nav .site-student-dropdown .site-student-menu a{display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-height:66px;padding:10px 12px;border-radius:7px}
 .site-student-menu a strong{color:#1b2a6b;font-size:15px;font-weight:600}
 .site-student-menu a small{color:#7b7f89;font-size:12px;font-weight:400;line-height:1.4}
+.site-nav .site-more-dropdown .site-more-menu{min-width:290px}
+.site-nav .site-more-dropdown .site-more-menu a{display:flex;flex-direction:column;align-items:flex-start;gap:4px;white-space:normal}
+.site-more-menu a strong{color:#1b2a6b;font-size:14px;font-weight:600}
+.site-more-menu a small{color:#7b7f89;font-size:12px;font-weight:400;line-height:1.4}
+@media(max-width:1023px){.site-nav .site-more-dropdown .site-more-menu{min-width:0}.site-nav .site-more-dropdown .site-more-menu a{padding:9px 8px}}
 .site-nav .site-student-dropdown .site-student-menu a:hover{background:#f3eff8}
 @media(max-width:1023px){.site-nav .site-student-dropdown .site-student-menu{position:static;display:none;grid-template-columns:1fr;gap:3px;width:100%;padding:6px 0 10px;border:0;border-radius:0;box-shadow:none;opacity:1;visibility:visible;transform:none}.site-nav .site-student-dropdown.is-open .site-student-menu{display:grid}.site-nav .site-student-dropdown .site-student-menu a{min-height:58px;padding:9px 10px}}
 .site-course-empty{padding:14px 10px;border-radius:6px;color:#777b87;background:#f8f7fb;font-size:13px}
@@ -156,7 +161,7 @@ body {
 .da-hero-stats>div{display:grid;gap:5px}
 .da-hero-stats strong{color:#fff;font-size:25px;font-weight:800;line-height:1.1;letter-spacing:-.025em}
 .da-hero-stats span{color:var(--da-hero-muted);font-size:12px;font-weight:500}
-.da-hero-chips{position:absolute;right:clamp(30px,8vw,126px);bottom:clamp(80px,15vh,160px);z-index:1;display:grid;gap:12px}
+.da-hero-chips{position:absolute;right:clamp(30px,8vw,126px);bottom:clamp(125px,24vh,230px);z-index:1;display:grid;gap:12px}
 .da-hero-chip{padding:13px 18px;border:1px solid rgba(255,255,255,.48);border-radius:12px;background:rgba(255,255,255,.94);box-shadow:0 12px 36px rgba(8,6,28,.22);color:#24213a;font-size:14px;font-weight:700;white-space:nowrap}
 .da-hero-chip-projects span{color:var(--da-hero-pink)}
 .da-hero-chip i{padding:0 4px;color:var(--da-hero-pink);font-style:normal}
@@ -192,11 +197,10 @@ body {
 .da-course-description{margin:8px 0 16px;overflow:hidden;color:var(--course-muted);font-size:14px;line-height:1.5;text-overflow:ellipsis;white-space:nowrap}
 .da-course-skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none}
 .da-course-skills li{display:flex;min-width:0;min-height:40px;align-items:center;gap:8px;padding:8px 10px;border-radius:12px;background:var(--course-lavender);color:#34294b;font-size:12px;font-weight:550}
-.da-course-skills svg,.da-course-bullets svg{flex:0 0 auto;color:var(--course-purple)}
+.da-course-skills svg{flex:0 0 auto;color:var(--course-purple)}
 .da-course-skills li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.da-course-bullets{display:grid;gap:9px;margin:18px 0 17px;padding:0;list-style:none}
-.da-course-bullets li{display:flex;align-items:flex-start;gap:9px;color:#393347;font-size:13px;line-height:1.4}
-.da-course-bullets svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.da-course-meta{display:grid;gap:9px;margin:18px 0 17px;color:#393347;font-size:13px;line-height:1.4}
+.da-course-meta strong{color:var(--course-purple);font-weight:650}
 .da-course-actions{display:flex;gap:10px;padding-top:14px;border-top:1px solid var(--course-line)}
 .da-course-actions a{display:flex;min-height:44px;align-items:center;justify-content:center;border:1px solid #d9d2f0;border-radius:12px;color:var(--course-purple);font-size:14px;font-weight:650;text-decoration:none;transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}
 .da-course-actions a:hover{transform:translateY(-1px)}
@@ -214,10 +218,11 @@ body {
 .da-course-skills li{font-size:13px}
 .da-course-actions{margin-top:auto}
 .da-hero-chips{min-width:230px}
-.da-hero-highlight{display:flex;min-width:230px;min-height:54px;align-items:center;gap:10px;animation:da-hero-highlight-in .32s ease both}
+.da-hero-highlight{display:flex;min-width:230px;height:54px;min-height:54px;align-items:center;gap:10px;animation:none}
+.da-hero-highlight-track{display:flex;flex-direction:column;gap:12px;animation:da-hero-highlight-scroll 12s linear infinite}
 .da-hero-highlight-dot{width:9px;height:9px;flex:0 0 9px;border-radius:50%;background:#6d28d9;box-shadow:0 0 0 4px rgba(109,40,217,.12)}
-@keyframes da-hero-highlight-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){.da-hero-highlight{animation:none}}
+@keyframes da-hero-highlight-scroll{to{transform:translateY(calc(-5 * (54px + 12px)))}}
+@media(prefers-reduced-motion:reduce){.da-hero-highlight-track{animation:none}.da-hero-highlight[aria-hidden="true"]{display:none}}
 /* Let the course artwork fill the card top edge and keep card copy inset. */
 .da-course-card{padding:0}
 .da-course-image-wrap{height:200px;border-radius:19px 19px 12px 12px}

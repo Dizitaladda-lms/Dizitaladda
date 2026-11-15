@@ -246,8 +246,10 @@ export default function PublicNavbar() {
                 More <span className="site-chevron" aria-hidden="true" />
               </button>
               <div className="site-more-menu" role="menu">
-                <a href="/blogs" role="menuitem">Blogs</a>
-                <a href="/success-stories" role="menuitem">Success Stories</a>
+                <a href="/blogs" role="menuitem"><strong>Blogs</strong><small>Read practical insights on marketing, AI and technology</small></a>
+                <a href="/success-stories" role="menuitem"><strong>Success Stories</strong><small>Explore learner achievements and career journeys</small></a>
+                <a href="/terms-of-use" role="menuitem"><strong>Terms &amp; Conditions</strong><small>Review the terms for using our website and services</small></a>
+                <a href="/affiliate-program/affiliate-system/affiliate/register" role="menuitem"><strong>Refer &amp; Earn</strong><small>Join our affiliate program and earn through referrals</small></a>
               </div>
             </div>
           </div>
