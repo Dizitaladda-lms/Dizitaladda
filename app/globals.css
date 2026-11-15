@@ -313,25 +313,37 @@ body {
 @media(max-width:640px){.placement-showcase{padding:58px 16px}.placement-showcase-heading{margin-bottom:26px}.placement-showcase-heading p{font-size:14px}.placement-showcase-grid{gap:20px}.placement-showcase-card{flex-basis:78vw;max-width:320px}}
 
 /* Industry trainer video showcase */
-.industry-trainer-videos{width:100%;padding:clamp(58px,7vw,88px) clamp(18px,5vw,70px);background:#fff;color:#201a31}
+.industry-trainer-videos{width:100%;padding:clamp(58px,7vw,88px) clamp(18px,5vw,70px);background:#fff;color:#1f1b2e}
 .industry-trainer-videos-inner{width:min(100%,1360px);margin:0 auto}
-.industry-trainer-videos-heading{max-width:900px;margin:0 auto 34px;text-align:center}
+.industry-trainer-videos-heading{width:100%;max-width:900px;margin:0 auto 34px;text-align:center}
 .industry-trainer-videos-heading>p{margin:0 0 10px;color:#6d28d9;font-size:13px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
-.industry-trainer-videos-heading h2{margin:0;color:#201a31;font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-wrap:balance}
-.industry-trainer-videos-heading>span{display:block;margin:13px auto 0;color:#625b70;font-size:16px;line-height:1.6}
-.industry-trainer-videos-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
-.industry-trainer-video-card{min-width:0;overflow:hidden;border:1px solid #e8e5ee;border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(34,23,54,.06)}
-.industry-trainer-video-thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:#f0edf5}
-.industry-trainer-video-thumb img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform .25s ease}
-.industry-trainer-video-card:hover .industry-trainer-video-thumb img{transform:scale(1.04)}
-.industry-trainer-video-play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(0deg,rgba(19,13,32,.34),transparent 60%);color:#fff;text-decoration:none}
-.industry-trainer-video-play span{display:grid;width:54px;height:54px;place-items:center;padding-left:3px;border:1px solid rgba(255,255,255,.8);border-radius:50%;background:rgba(109,40,217,.92);font-size:19px;box-shadow:0 4px 18px rgba(0,0,0,.2)}
-.industry-trainer-video-pending{position:absolute;right:10px;bottom:10px;padding:6px 9px;border-radius:999px;background:rgba(32,26,49,.76);color:#fff;font-size:11px;font-weight:650}
-.industry-trainer-video-copy{padding:16px 18px 18px}
-.industry-trainer-video-copy h3{margin:0;color:#201a31;font-size:17px;font-weight:750;line-height:1.3}
-.industry-trainer-video-copy p{margin:7px 0 0;color:#777281;font-size:13px;line-height:1.45}
-@media(max-width:1000px){.industry-trainer-videos-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
-@media(max-width:720px){.industry-trainer-videos-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.industry-trainer-video-copy{padding:14px}}
-@media(max-width:440px){.industry-trainer-videos{padding:52px 16px}.industry-trainer-videos-grid{gap:12px}.industry-trainer-video-copy h3{font-size:15px}.industry-trainer-video-copy p{font-size:12px}}
+.industry-trainer-videos-heading h2{margin:0;color:#1f1b2e;font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.04em;line-height:1.15;text-align:center;text-wrap:balance}
+.industry-trainer-videos-heading>span{display:block;width:100%;max-width:600px;margin:13px auto 0;color:#6b6880;font-size:16px;line-height:1.6;text-align:center;text-wrap:balance}
+.industry-trainer-videos-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.industry-trainer-video-card{min-width:0;overflow:hidden;border:1px solid #e8e6f0;border-radius:16px;background:#fff;transition:transform .2s ease,border-color .2s ease}
+.industry-trainer-video-card.has-video{cursor:pointer}
+.industry-trainer-video-card:hover{transform:translateY(-3px);border-color:#cfc9e6}
+.industry-trainer-video-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:#f4f2fa}
+.industry-trainer-video-poster{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+.industry-trainer-video-badge{position:absolute;top:12px;left:12px;max-width:calc(100% - 24px);overflow:hidden;padding:6px 10px;border:1px solid #e8e6f0;border-radius:999px;background:#fff;color:#1f1b2e;font-size:11px;font-weight:600;line-height:1.2;text-overflow:ellipsis;white-space:nowrap}
+.industry-trainer-video-action{position:absolute;right:12px;bottom:12px;display:grid;width:44px;height:44px;place-items:center;padding:0;border:0;border-radius:50%;background:#fff;color:#1f1b2e}
+button.industry-trainer-video-action{cursor:pointer}
+.industry-trainer-video-action svg{display:block;width:17px;height:17px;fill:currentColor}
+.industry-trainer-video-action.is-unavailable{color:#6b6880}
+.industry-trainer-video-action.is-unavailable svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.industry-trainer-video-copy{padding:15px 16px 16px}
+.industry-trainer-video-copy h3{margin:0;color:#1f1b2e;font-size:16px;font-weight:500;line-height:1.35}
+.industry-trainer-video-role{margin:6px 0 10px;overflow:hidden;color:#6b6880;font-size:13px;line-height:1.4;text-overflow:ellipsis;white-space:nowrap}
+.industry-trainer-video-tags{display:flex;min-width:0;gap:6px;overflow:hidden}
+.industry-trainer-video-tags span{max-width:50%;overflow:hidden;padding:5px 8px;border-radius:999px;background:#f4f2fa;color:#6b6880;font-size:11px;line-height:1.2;text-overflow:ellipsis;white-space:nowrap}
+.industry-trainer-video-modal-overlay{position:fixed;inset:0;z-index:200000;display:grid;place-items:center;padding:24px;background:rgba(20,17,31,.72)}
+.industry-trainer-video-dialog{position:relative;width:min(100%,900px);padding:16px;border:1px solid #e8e6f0;border-radius:16px;background:#fff;color:#1f1b2e}
+.industry-trainer-video-dialog:focus{outline:3px solid #a78bfa;outline-offset:3px}
+.industry-trainer-video-dialog video{display:block;width:100%;max-height:75vh;aspect-ratio:16/9;background:#111;object-fit:contain}
+.industry-trainer-video-dialog h2{margin:12px 48px 0 0;font-size:18px;font-weight:600}
+.industry-trainer-video-close{position:absolute;top:22px;right:22px;z-index:1;display:grid;width:38px;height:38px;place-items:center;border:1px solid #e8e6f0;border-radius:50%;background:#fff;color:#1f1b2e;font-size:24px;line-height:1;cursor:pointer}
+.industry-trainer-video-action:focus-visible,.industry-trainer-video-close:focus-visible{outline:2px solid #6d28d9;outline-offset:3px}
+@media(max-width:900px){.industry-trainer-videos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.industry-trainer-videos{padding:52px 16px}.industry-trainer-videos-grid{grid-template-columns:minmax(0,1fr)}.industry-trainer-video-card{width:100%;max-width:420px;margin:0 auto}.industry-trainer-video-dialog{padding:10px}.industry-trainer-video-close{top:14px;right:14px}}
 @media(prefers-color-scheme:dark){.placement-showcase{background:#171520;color:#f5f2fa}.placement-showcase-heading h2,.placement-showcase-content h3,.placement-showcase-company-name{color:#f5f2fa}.placement-showcase-heading p,.placement-showcase-role{color:#b4afc0}.placement-showcase-card{border-color:#393544;background:#211e2a}.placement-showcase-photo{background:#2b2736;color:#c4a8ff}.placement-showcase-content hr{background:#393544}.placement-showcase-label{color:#aaa4b5}.placement-showcase-company-logo{border-color:#494454}.placement-showcase-toolbar button{border-color:#494454;background:#211e2a;color:#c4a8ff}.placement-showcase-toolbar button:hover{border-color:#8b5cf6;background:#6d28d9;color:#fff}}
 @media(prefers-reduced-motion:reduce){.placement-showcase-card,.placement-showcase-toolbar button{transition:none}}
