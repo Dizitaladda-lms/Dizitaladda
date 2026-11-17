@@ -74,6 +74,8 @@ export interface CampusCTA {
 export interface CampusSectionData {
   header: {
     badge: string;
+    titlePrefix: string;
+    titleHighlight: string;
     title: string;
     subtitle: string;
   };
@@ -90,6 +92,8 @@ export const BLUR_SHIMMER_DATA_URL =
 export const campusData: CampusSectionData = {
   header: {
     badge: "INSIDE DIZITALADDA",
+    titlePrefix: "Explore ",
+    titleHighlight: "Our Campus",
     title: "Explore Our Campus",
     subtitle:
       "Classrooms, workspaces aur learning spaces jahan students apni skills build karte hain.",

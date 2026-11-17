@@ -68,12 +68,22 @@
 
 .heading {
   margin: 0;
-  color: var(--campus-navy);
+  color: #111827;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", "Raleway", system-ui, sans-serif;
   font-size: clamp(30px, 4.5vw, 48px);
-  font-weight: 800;
+  font-weight: 850;
   line-height: 1.15;
   letter-spacing: -0.035em;
   text-wrap: balance;
+}
+
+.headingGradient {
+  background: linear-gradient(90deg, #CC22E0 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  margin-left: 0.25em;
 }
 
 .subtext {
@@ -750,17 +760,22 @@
 
 .experienceHeading {
   margin: 0;
-  color: var(--campus-navy);
+  color: #111827;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", "Raleway", system-ui, sans-serif;
   font-size: clamp(28px, 3.4vw, 42px);
-  font-weight: 800;
+  font-weight: 850;
   line-height: 1.18;
   letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
 .experienceHighlight {
-  color: var(--campus-purple);
+  background: linear-gradient(90deg, #CC22E0 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: inline-block;
+  margin-left: 0.25em;
 }
 
 .experienceList {

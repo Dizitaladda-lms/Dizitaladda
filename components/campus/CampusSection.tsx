@@ -38,7 +38,10 @@ export default function CampusSection({ data = campusData }: CampusSectionProps)
         <header className={styles.header}>
           <span className={styles.badge}>{header.badge}</span>
           <h2 id="campus-section-title" className={styles.heading}>
-            {header.title}
+            {header.titlePrefix || "Explore "}
+            <span className={styles.headingGradient}>
+              {header.titleHighlight || "Our Campus"}
+            </span>
           </h2>
           <p className={styles.subtext}>{header.subtitle}</p>
         </header>

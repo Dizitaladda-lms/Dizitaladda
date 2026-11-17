@@ -1,0 +1,477 @@
+/* ==========================================================================
+   STUDENT VIDEO REVIEWS COMPONENT - CSS MODULE
+   Brand: Purple (#6d28d9), Accent (#a855f7), Ink (#1d1538), Muted (#6f6889)
+   ========================================================================== */
+
+.section {
+  position: relative;
+  width: 100%;
+  padding: clamp(50px, 7vw, 90px) clamp(16px, 4vw, 40px);
+  background-color: #f7f3ff;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(168, 85, 247, 0.13) 0%, transparent 45%),
+    radial-gradient(circle at 88% 22%, rgba(109, 40, 217, 0.12) 0%, transparent 45%);
+  color: #1d1538;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 40px);
+}
+
+/* ==========================================================================
+   1. SECTION HEADER (Left: Heading + Subtext | Right: Stats)
+   ========================================================================== */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.headerLeft {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heading {
+  margin: 0;
+  color: #1d1538;
+  font-size: clamp(26px, 3.6vw, 38px);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+.subtext {
+  margin: 0;
+  color: #6f6889;
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.5;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 28px);
+  flex-shrink: 0;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statValue {
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 800;
+  color: #1d1538;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #6f6889;
+}
+
+.statDivider {
+  width: 1px;
+  height: 38px;
+  background: #e1d8f3;
+}
+
+/* ==========================================================================
+   2. CARDS GRID & CAROUSEL (4 desktop, 2 tablet, 1 swipe carousel mobile)
+   ========================================================================== */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  width: 100%;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e9e2f7;
+  border-radius: 22px;
+  padding: 10px;
+  box-shadow: 0 10px 25px -5px rgba(109, 40, 217, 0.08), 0 4px 10px -2px rgba(109, 40, 217, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #d8caf2;
+  box-shadow: 0 18px 36px -6px rgba(109, 40, 217, 0.16), 0 6px 14px -3px rgba(109, 40, 217, 0.06);
+}
+
+/* ==========================================================================
+   3. VIDEO AREA (9:14 aspect ratio, 15px radius, click-to-load)
+   ========================================================================== */
+.videoWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 14;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #1d1538;
+  cursor: pointer;
+  outline: none;
+}
+
+.videoWrap:focus-visible {
+  outline: 2px solid #6d28d9;
+  outline-offset: 2px;
+}
+
+.videoThumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .videoThumbnail {
+  transform: scale(1.03);
+}
+
+.glassPill {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(29, 21, 56, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.glassBar {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(29, 21, 56, 0.14);
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+.glassBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.playCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.playTriangle {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 9px solid #6d28d9;
+  margin-left: 2px;
+}
+
+.watchLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1d1538;
+  letter-spacing: -0.01em;
+}
+
+.videoDuration {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #6f6889;
+}
+
+.iframeWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.videoIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ==========================================================================
+   4. CARD BODY DETAILS (Student Name, Course, Quote, Result Badge)
+   ========================================================================== */
+.cardBody {
+  padding: 12px 6px 4px 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.studentName {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 750;
+  color: #1d1538;
+  letter-spacing: -0.01em;
+}
+
+.cardStars {
+  color: #f59e0b;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.courseName {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6f6889;
+}
+
+.quote {
+  margin: 9px 0 0 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #1d1538;
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.resultBadge {
+  margin-top: 11px;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1eafd;
+  color: #6d28d9;
+  font-size: 11.5px;
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.01em;
+}
+
+.greenDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   5. RESPONSIVE LAYOUTS & MOBILE HORIZONTAL CAROUSEL
+   ========================================================================== */
+@media (max-width: 1024px) and (min-width: 641px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .headerRight {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 8px;
+    border-top: 1px solid #e1d8f3;
+  }
+
+  /* Horizontal swipe carousel with scroll-snap */
+  .cardsGrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 12px;
+    margin: 0 -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .cardsGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    flex: 0 0 78%;
+    min-width: 250px;
+    max-width: 320px;
+    scroll-snap-align: center;
+  }
+}
+
+/* ==========================================================================
+   6. DARK MODE (prefers-color-scheme: dark)
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  .section {
+    background-color: #0f0d1b;
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(168, 85, 247, 0.16) 0%, transparent 45%),
+      radial-gradient(circle at 88% 22%, rgba(109, 40, 217, 0.18) 0%, transparent 45%);
+    color: #f3f0fa;
+  }
+
+  .heading {
+    color: #f3f0fa;
+  }
+
+  .subtext {
+    color: #9c94b8;
+  }
+
+  .statValue {
+    color: #f3f0fa;
+  }
+
+  .statLabel {
+    color: #9c94b8;
+  }
+
+  .statDivider {
+    background: #2b2347;
+  }
+
+  .card {
+    background: #18152b;
+    border-color: #2b2347;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  }
+
+  .card:hover {
+    border-color: #4b3b75;
+    box-shadow: 0 18px 36px -6px rgba(0, 0, 0, 0.55);
+  }
+
+  .glassBar {
+    background: rgba(24, 21, 43, 0.88);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  }
+
+  .playCircle {
+    background: #6d28d9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .playTriangle {
+    border-left-color: #ffffff;
+  }
+
+  .watchLabel {
+    color: #f3f0fa;
+  }
+
+  .videoDuration {
+    color: #9c94b8;
+  }
+
+  .studentName {
+    color: #f3f0fa;
+  }
+
+  .courseName {
+    color: #9c94b8;
+  }
+
+  .quote {
+    color: #ded8f3;
+  }
+
+  .resultBadge {
+    background: #251e3e;
+    color: #c4b5fd;
+  }
+}
+
+/* ==========================================================================
+   7. PREFERS-REDUCED-MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .videoThumbnail {
+    transition: none !important;
+  }
+
+  .card:hover {
+    transform: none !important;
+  }
+
+  .card:hover .videoThumbnail {
+    transform: none !important;
+  }
+}
