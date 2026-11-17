@@ -138,7 +138,7 @@ export default function Lightbox({
         onClick={handleBackdropClick}
         role="dialog"
         aria-modal="true"
-        aria-label={`Photo preview: ${currentPhoto.title}`}
+        aria-label={`Photo preview: ${currentPhoto.caption}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -216,8 +216,7 @@ export default function Lightbox({
 
         {/* Bottom Caption Bar */}
         <div className={styles.lightboxBottomBar}>
-          <h3 className={styles.lightboxTitle}>{currentPhoto.title}</h3>
-          <p className={styles.lightboxCaption}>&ldquo;{currentPhoto.emotionalCaption}&rdquo;</p>
+          <h3 className={styles.lightboxTitle}>{currentPhoto.caption}</h3>
         </div>
       </motion.div>
     </AnimatePresence>

@@ -13,12 +13,10 @@ export interface CampusFact {
 
 export interface CampusPhoto {
   id: string;
-  title: string;
-  emotionalCaption: string;
+  caption: string;
   image: string;
   alt: string;
-  span: "hero" | "wide" | "normal"; // hero = 2x2, wide = 2x1, normal = 1x1
-  priority?: boolean;
+  span: "hero" | "tall" | "wide" | "normal";
 }
 
 export interface CampusVideoTour {
@@ -118,55 +116,62 @@ export const campusData: CampusSectionData = {
     durationLabel: "0:30",
   },
 
-  // 3. Bento Gallery Images (CSS Grid Mixed Layout)
+  // 3. Bento Gallery Images (replace these URLs with campus photos)
   photos: [
     {
       id: "classroom",
-      title: "Modern classrooms",
-      emotionalCaption: "Focus karo, seekho, aur grow karo",
-      image: "/images/campus/campus1.jpg",
-      alt: "DizitalAdda modern air-conditioned classroom with smart display screens",
+      caption: "Smart classroom",
+      image:
+        "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=80",
+      alt: "Bright classroom with desks arranged for an instructor-led lesson",
       span: "hero", // 2x2 grid cell on desktop
-      priority: true, // Hero image loads with priority
     },
     {
       id: "workspace",
-      title: "Student workspaces",
-      emotionalCaption: "Live projects pe kaam, bilkul real office jaisa",
-      image: "/images/campus/campus2.jpg",
-      alt: "Collaborative student workspace mimicking real IT corporate desks",
-      span: "wide", // 2x1 grid cell on desktop
-    },
-    {
-      id: "lounge",
-      title: "Campus lounge",
-      emotionalCaption: "Break me dosto ke saath chill",
-      image: "/images/campus/campus3.jpg",
-      alt: "Spacious student relaxation and cafeteria lounge area",
+      caption: "Workspace",
+      image:
+        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80",
+      alt: "Open-plan workspace with shared desks and natural light",
       span: "normal",
     },
     {
-      id: "mentor-zone",
-      title: "Mentor zone",
-      emotionalCaption: "Doubt aaya? Mentor seedha aapke saath",
-      image: "/images/campus/campus4.jpg",
-      alt: "One-on-one personal mentorship and doubts desk",
+      id: "learning-lab",
+      caption: "Learning lab",
+      image:
+        "https://images.unsplash.com/photo-1524176741849-3a31f1e4d7b4?auto=format&fit=crop&w=1000&q=80",
+      alt: "Students learning together in a bright training room",
+      span: "tall",
+    },
+    {
+      id: "discussion-zone",
+      caption: "Discussion zone",
+      image:
+        "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=80",
+      alt: "Team collaborating around a table during a discussion",
       span: "normal",
     },
     {
-      id: "demo-room",
-      title: "Demo room",
-      emotionalCaption: "Apni demo class yahan attend karo",
-      image: "/images/campus/campus5.jpg",
-      alt: "Interactive trial and live demo session room",
+      id: "student-lounge",
+      caption: "Student lounge",
+      image:
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+      alt: "Comfortable lounge seating for students to relax between classes",
+      span: "wide",
+    },
+    {
+      id: "library-corner",
+      caption: "Library corner",
+      image:
+        "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1000&q=80",
+      alt: "Quiet library shelves and a study table",
       span: "normal",
     },
     {
-      id: "collaborative-hub",
-      title: "Discussion & Project Hub",
-      emotionalCaption: "Team ke saath brainstorm aur build karo",
-      image: "/images/campus/campus6.jpg",
-      alt: "Peer collaborative discussion hub and live workshop table",
+      id: "reception",
+      caption: "Reception",
+      image:
+        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80",
+      alt: "Welcoming reception area with a modern desk and seating",
       span: "normal",
     },
   ],

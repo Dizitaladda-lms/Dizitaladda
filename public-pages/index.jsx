@@ -8,10 +8,10 @@ import IndustryTrainerVideos from "../components/IndustryTrainerVideos.jsx";
 import HeroTrustStrip from "../components/HeroTrustStrip.jsx";
 import StudentProjectVideos from "../components/StudentProjectVideos.jsx";
 import CampusSection from "../components/campus/CampusSection";
-import StudentTestimonials from "../components/StudentTestimonials.jsx";
 import StudentReviews from "../components/StudentReviews.jsx";
 import StudentVideoReviews from "../components/StudentVideoReviews.jsx";
 import CertificatesMarquee from "../components/CertificatesMarquee.jsx";
+import AwardsShowcase from "../components/AwardsShowcase.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 
@@ -574,10 +574,10 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 <IndustryTrainerVideos />
 <StudentProjectVideos />
 <CampusSection />
-<StudentTestimonials />
 <StudentReviews />
 <StudentVideoReviews />
 <CertificatesMarquee />
+<AwardsShowcase />
 
 
 <section id="refer-earn" className="refer-earn-section">
@@ -620,45 +620,7 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 
 
 
-<section className="CardContainer bg-aurora">
-<div className="aurora-blob aurora-blob-1"></div>
-<div className="aurora-blob aurora-blob-2"></div>
-<div className="aurora-blob aurora-blob-3"></div>
-<h2>What We Have <span className="cc-highlight">Achieved?</span></h2>
-<div className="container">
-<div className="InfoContainer">
-<div className="cert-carousel-wrap">
-<div className="cert-carousel" id="achCarousel">
-<div className="cert-slide active">
-<img src="courses/images/gulshan/Gulshan.webp" alt="Dr. Gulshan Kumar" className="cert-img" loading="lazy" />
-</div>
-<div className="cert-slide">
-<img src="courses/images/gulshan/aslin.webp" alt="Aslin" className="cert-img" loading="lazy" />
-</div>
-<div className="cert-slide">
-<img src="courses/images/gulshan/Kiran.webp" alt="Kiran" className="cert-img" loading="lazy" />
-</div>
-</div>
-</div>
-<script dangerouslySetInnerHTML={{__html:"\r\n(function(){\r\nvar slides  = document.querySelectorAll('#achCarousel .cert-slide');\r\nvar current = 0;\r\nvar paused  = false;\r\nfunction goTo(n){\r\nslides[current].classList.remove('active');\r\ncurrent = (n + slides.length) % slides.length;\r\nslides[current].classList.add('active');\r\n}\r\nsetInterval(function(){ if (!paused) goTo(current + 1); }, 3000);\r\nvar wrap = document.querySelector('#achCarousel').closest('.cert-carousel-wrap');\r\nif (wrap) {\r\nwrap.addEventListener('mouseenter', function(){ paused = true; });\r\nwrap.addEventListener('mouseleave', function(){ paused = false; });\r\n}\r\n})();\r\n"}} />
-<div className="introDataContainer">
-<ul>
-<li><strong>DizitalAdda has trained 25000+</strong> of students and working professionals through practical Digital Marketing and Web Development programs designed for real industry needs. With hands-on learning, live projects, and career-focused training, the institute has helped learners build successful careers in top companies, startups, agencies, and freelance industries across India.
-</li>
-<li>The instituteÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s contribution to skill-based education has also been recognized through prestigious industry honors, including the <strong>Indian Icon Award presented by Dr. Kiran Bedi</strong>, the <strong>Bharat Business Award presented by Ashneer Grover</strong>, and The <strong>Excellence Award by The Hotel School</strong>. These recognitions highlight DizitalAddaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢s commitment to quality training, student success, and innovation in digital education.
-</li>
-<li>At DizitalAdda, students gain real-world experience by working on live campaigns, SEO projects, social media strategies, AI-powered marketing tools, and website development tasks. The focus is not only on learning concepts but also on building portfolios, improving practical skills, and preparing students for real corporate environments with confidence and industry-ready expertise.
-</li>
-</ul>
-<div className="graphicsContainer">
-<div className="circle" style={{"marginLeft":"auto"}}><img src="courses/images/award/g10.svg" alt="Award" loading="lazy" /></div>
-<div className="circle"><img src="courses/images/award/g16.svg" alt="Award" loading="lazy" /></div>
-<div className="circle"><img src="courses/images/award/g11.svg" alt="Award" loading="lazy" /></div>
-</div>
-</div>
-</div>
-</div>
-</section>
+{/* (Awards section rendered dynamically by AwardsShowcase) */}
 
 
 <section className="gallerySection bg-aurora">
