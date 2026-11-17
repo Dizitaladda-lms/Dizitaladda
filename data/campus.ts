@@ -2,7 +2,7 @@
  * DIZITALADDA - CAMPUS SECTION DATA CONFIGURATION
  * ==============================================================
  * Is file se aap campus section ki saari photos, captions, facts,
- * video tour aur CTA links aasani se customize kar sakte hain.
+ * video tour aur CTA links aasani se badal sakte hain.
  */
 
 export interface CampusFact {
@@ -34,9 +34,19 @@ export interface CampusVideoTour {
   durationLabel: string;
 }
 
+export interface CampusCTABenefit {
+  id: string;
+  iconName: "MapPin" | "User" | "Calendar" | "Sparkles";
+  text: string;
+}
+
 export interface CampusCTA {
-  heading: string;
-  subtext: string;
+  eyebrow: string;
+  heading: {
+    prefix: string;
+    highlight: string;
+  };
+  benefits: CampusCTABenefit[];
   primaryButton: {
     label: string;
     href: string;
@@ -46,7 +56,19 @@ export interface CampusCTA {
     phoneNumber: string; // e.g. "918810606010"
     prefilledMessage: string;
   };
-  trustBadge: string;
+  campusImage: {
+    src: string;
+    alt: string;
+    badge: string;
+  };
+  location: {
+    title: string;
+    address: string;
+    landmark: string;
+    timing: string;
+    mapUrl: string;
+    mapButtonLabel: string;
+  };
 }
 
 export interface CampusSectionData {
@@ -88,15 +110,11 @@ export const campusData: CampusSectionData = {
     title: "Experience the Vibe Before You Visit",
     subtitle: "Air-conditioned labs, live breakout desks aur interactive demo zones.",
     posterImage: "/images/campus/tour-poster.jpg",
-    // Aap yahan apna YouTube embed link ya local video URL daal sakte hain:
     videoUrl: "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1",
     durationLabel: "0:30",
   },
 
   // 3. Bento Gallery Images (CSS Grid Mixed Layout)
-  // - 1 Hero photo (2x2)
-  // - 1 Wide photo (2x1)
-  // - 4 Normal photos (1x1)
   photos: [
     {
       id: "classroom",
@@ -149,21 +167,53 @@ export const campusData: CampusSectionData = {
     },
   ],
 
-  // 4. Purple Gradient CTA Block
+  // 4. Two-Column Campus Experience CTA & Location Card
   cta: {
-    heading: "Photos dekh liye, ab campus khud dekho",
-    subtext:
-      "Live session attend karo, trainers se milo aur DizitalAdda ka real environment experience karo.",
+    eyebrow: "Talk to us in-person",
+    heading: {
+      prefix: "Get the DizitalAdda ",
+      highlight: "Campus Experience",
+    },
+    benefits: [
+      {
+        id: "walkin",
+        iconName: "MapPin",
+        text: "Walk into our Delhi-NCR Campus for a free 1:1 session",
+      },
+      {
+        id: "chat",
+        iconName: "User",
+        text: "Chat with an expert mentor about your career in digital & AI",
+      },
+      {
+        id: "experience",
+        iconName: "Calendar",
+        text: "Experience the campus vibe & infrastructure before you commit",
+      },
+    ],
     primaryButton: {
-      label: "Free Campus Visit Book Karo",
-      href: "#bookDemo", // Ya "/contact" ya Google Form / Calendly link
+      label: "Book Free Campus Visit",
+      href: "#bookDemo",
     },
     whatsappButton: {
-      label: "WhatsApp pe Baat Karo",
-      phoneNumber: "918810606010", // DizitalAdda official WhatsApp number
+      label: "Chat on WhatsApp",
+      phoneNumber: "918810606010",
       prefilledMessage:
-        "Hi DizitalAdda, maine campus photos dekhi aur main Free Campus Visit schedule karna chahta hoon.",
+        "Hi DizitalAdda, I would like to schedule a free in-person campus visit and career counselling session.",
     },
-    trustBadge: "Koi fees nahi, koi pressure nahi",
+    campusImage: {
+      src: "/images/campus/tour-poster.jpg",
+      alt: "DizitalAdda Delhi-NCR Campus Modern Infrastructure",
+      badge: "Delhi-NCR Campus",
+    },
+    location: {
+      title: "DizitalAdda Learning Campus",
+      address:
+        "2nd Floor, Spacetime Management Pvt Ltd Design House, behind Savitri Cinema Complex, Greater Kailash II, Chittaranjan Park, New Delhi, Delhi 110048",
+      landmark: "Near Savitri Cinema · Metro: Greater Kailash",
+      timing: "Mon – Sat: 9:00 AM – 7:00 PM",
+      mapUrl: "https://maps.app.goo.gl/yaZeHLJBfKYHdMPJ7",
+      mapButtonLabel: "View on Google Maps",
+    },
   },
 };
