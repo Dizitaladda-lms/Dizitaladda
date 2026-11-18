@@ -71,7 +71,8 @@
   margin: 14px auto 0;
   max-width: 62ch;
   color: var(--muted);
-  font-size: 17px;
+  font-size: clamp(16px, 1vw + 12px, 20px);
+  line-height: 1.6;
 }
 
 .chips {

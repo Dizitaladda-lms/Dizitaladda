@@ -9,7 +9,7 @@ export const studentVideoReviewsData = [
   {
     name: "Abhinav Sharma",
     course: "Advanced Digital Marketing",
-    quote: "Live projects aur campaigns se mujhe real agency experience mila. Sabse best practical mentorship thi.",
+    quote: "Working on live client campaigns gave me genuine agency experience. The hands-on faculty mentorship made all the difference.",
     result: "Placed at a top agency",
     videoId: "KFWyifEYWyU",
     duration: "0:45",
@@ -17,7 +17,7 @@ export const studentVideoReviewsData = [
   {
     name: "Shiv Kalra",
     course: "Expert Digital Marketing",
-    quote: "Zero knowledge se start kiya tha, aaj 6-figure client ad budgets confidently run aur scale karta hoon.",
+    quote: "I started with zero marketing knowledge. Today, I confidently manage and scale six-figure monthly advertising budgets for growth brands.",
     result: "Performance Marketer @ D2C Brand",
     videoId: "5Ky9myAg6a8",
     duration: "1:10",
@@ -25,7 +25,7 @@ export const studentVideoReviewsData = [
   {
     name: "Tulika Biswas",
     course: "Digital Marketing for Professionals",
-    quote: "Working professional ke liye flexible batch aur doubt sessions ne smooth career growth diya.",
+    quote: "As a working professional, the weekend batches and prompt 1-on-1 doubt clearing enabled a seamless career transition without interrupting my job.",
     result: "Promoted to Sr. Growth Specialist",
     videoId: "0Y0wxv9Hrvc",
     duration: "0:55",
@@ -33,7 +33,7 @@ export const studentVideoReviewsData = [
   {
     name: "Sapna Verma",
     course: "Advanced Digital Marketing",
-    quote: "Portfolio guidance aur live case studies ki wajah se mujhe international freelance clients mile.",
+    quote: "The personalized portfolio reviews and practical case studies helped me land high-paying international freelance marketing contracts.",
     result: "Full-time Freelance Marketer",
     videoId: "93nJRCQduxg",
     duration: "1:20",
@@ -66,8 +66,8 @@ export default function StudentVideoReviews({
             align="left"
             id="student-reviews-heading"
             label="Video Testimonials"
-            title="Hamare students ki apni kahani"
-            description="Real stories from students who launched and accelerated their careers with DizitalAdda."
+            title="In Our Students' Own Words"
+            description="Real stories from graduates who accelerated their careers and achieved measurable success with DizitalAdda."
             className={styles.headerLeft}
           />
 

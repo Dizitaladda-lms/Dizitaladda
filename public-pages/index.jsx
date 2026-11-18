@@ -15,7 +15,9 @@ import CertificatesMarquee from "../components/CertificatesMarquee.jsx";
 import AwardsShowcase from "../components/AwardsShowcase.jsx";
 import FeaturedInPR from "../components/FeaturedInPR.jsx";
 import BookDemoSection from "../components/BookDemoSection.jsx";
+import FAQSection from "../components/FAQSection.jsx";
 import SectionHeader from "../components/SectionHeader";
+import DoubtSupportManagement from "../components/DoubtSupportManagement.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 
@@ -640,212 +642,14 @@ export default function LegacyPage_index() {
 {/* (Awards section rendered dynamically by AwardsShowcase) */}
 
 
-<section className="gallerySection bg-aurora">
-<div className="aurora-blob aurora-blob-1"></div>
-<div className="aurora-blob aurora-blob-2"></div>
-<div className="aurora-blob aurora-blob-3"></div>
-<div className="galleryContainer">
-<SectionHeader
-  align="center"
-  label="Our Infrastructure"
-  title={<>A Corporate-Grade Campus for Serious <span className="highlight">Career Training</span></>}
-  description="Experience modern classrooms, collaborative project pods, and high-speed labs designed for practical, real-world learning."
-/>
-<div className="campus-layout">
-<div className="campus-photos">
-<div className="campus-photo-card">
-<div className="campus-photo" data-bg="./images/3.webp"></div>
-<span className="photo-label">Training Room</span>
-</div>
-<div className="campus-photo-card">
-<div className="campus-photo" data-bg="./images/4.webp"></div>
-<span className="photo-label">Study Zone</span>
-</div>
-<div className="campus-photo-card">
-<div className="campus-photo" data-bg="./images/5.webp"></div>
-<span className="photo-label">Corridor</span>
-</div>
-<div className="campus-photo-card">
-<div className="campus-photo" data-bg="./images/6.webp"></div>
-<span className="photo-label">Classroom</span>
-</div>
-<div className="campus-photo-card">
-<div className="campus-photo" data-bg="./images/IMG-20250412-WA0007.webp"></div>
-<span className="photo-label">Seminar Hall</span>
-</div>
-<div className="campus-photo-card">
-<div className="campus-photo" data-bg="./images/IMG-20250412-WA0008.webp"></div>
-<span className="photo-label">Live Session</span>
-</div>
-<div className="campus-photo-card">
-<div className="campus-photo" data-bg="./images/IMG-20250412-WA0009.webp"></div>
-<span className="photo-label">Workshop</span>
-</div>
-<div className="campus-photo-card">
-<div className="campus-photo" data-bg="./images/IMG-20250412-WA0010.webp"></div>
-<span className="photo-label">Group Activity</span>
-</div>
-<div className="campus-photo-card">
-<div className="campus-photo" data-bg="./images/1`.jpg"></div>
-<span className="photo-label">Campus Lounge</span>
-</div>
-</div>
-<div className="campus-info">
-<p className="campus-desc">DizitalAdda's Delhi-NCR campus offers a professional learning environment with live projects, 60+ industry tools, and small batches of up to 15 students, guided by mentors with 5ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ15 years of industry experience.</p>
-<div className="campus-features">
-<div className="campus-feature-card">
-<div className="feature-icon">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m4-4a4 4 0 100-8 4 4 0 000 8zm6 4a2 2 0 11-4 0 2 2 0 014 0zM5 16a2 2 0 114 0 2 2 0 01-4 0z"></path></svg>
-</div>
-<div className="feature-text">
-<strong>Small Batches</strong>
-<p>Maximum 15 students per batch ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â personalised attention across all career training programs</p>
-</div>
-</div>
-<div className="campus-feature-card">
-<div className="feature-icon">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-</div>
-<div className="feature-text">
-<strong>Corporate Setup</strong>
-<p>Training rooms, seminar hall, workshop spaces, and group activity zones</p>
-</div>
-</div>
-<div className="campus-feature-card">
-<div className="feature-icon">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m0-6l-3.5 2M12 20l3.5-2"></path></svg>
-</div>
-<div className="feature-text">
-<strong>Online/Offline</strong>
-<p>Online and offline learning available ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â identical curriculum, placement assistance, and project mentorship for both</p>
-</div>
-</div>
-</div>
-<div className="campus-cta-row">
-<a href="#bookDemo" className="campus-cta">Book Campus Tour</a>
-<a href="https://dizitaladda.com/gallery" className="campus-gallery-btn" target="_blank" rel="noopener">
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-View Gallery
-</a>
-</div>
-<div className="campus-social">
-<div className="campus-social-icons">
-<a href="https://www.instagram.com/official_dizital_adda/" target="_blank" rel="noopener" className="campus-social-link campus-social-instagram" aria-label="Instagram">
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
-</a>
-<a href="https://www.facebook.com/dizitaladda01" target="_blank" rel="noopener" className="campus-social-link campus-social-facebook" aria-label="Facebook">
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
-</a>
-<a href="https://www.youtube.com/@DizitalAdda" target="_blank" rel="noopener" className="campus-social-link campus-social-youtube" aria-label="YouTube">
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg>
-</a>
-<a href="https://www.linkedin.com/company/dizitaladda/" target="_blank" rel="noopener" className="campus-social-link campus-social-linkedin" aria-label="LinkedIn">
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+{/* Academic Management & 1-on-1 Doubt Clearing Showcase */}
+<DoubtSupportManagement />
 
 {/*  Book Demo Section (Cal.com-style 3-Column Booking)  */}
 <BookDemoSection />
 
 
-<section className="faqs bg-aurora">
-<div className="aurora-blob aurora-blob-1"></div>
-<div className="aurora-blob aurora-blob-2"></div>
-<div className="aurora-blob aurora-blob-3"></div>
-<SectionHeader
-  align="center"
-  label="Got Questions?"
-  title={<>Frequently <span className="highlight">Asked Questions</span></>}
-  description="Frequently Asked Questions offers quick answers to common queries, guiding users through features and functionalities effortlessly."
-/>
-<div className="faq-grid">
-<details className="faq slide-up-section">
-<summary>What is digital marketing &amp; why is it important in 2026?</summary>
-<p>Digital marketing means promoting brands through search, social media, ads, and email instead of TV or print. It's important because most buying decisions today start with an online search, so brands without a digital presence lose customers to competitors.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Is a digital marketing course worth it in 2026?</summary>
-<p>Yes, it's one of the most in-demand, low-entry skills right now. Every business needs online visibility, so trained marketers stay employable across industries.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Best digital marketing institute in Delhi with placement?</summary>
-<p>DizitalAdda offers practical, hands-on training with placement support in Delhi. Other well-known names include IIDE and Digital Vidya and DIDM, but hands-on project work matters more than brand name.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Fee of digital marketing course in Delhi?</summary>
-<p>Fees usually range from ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹25,000 to ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹1,35,000+. The exact cost depends on course level, duration, and whether placement support is included.</p>
-</details>
-<details className="faq slide-up-section">
-<summary> How many months to learn digital marketing?</summary>
-<p>Most job-ready courses take 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ6 months, while an Expert-level course with 1-year certification offers deeper, more advanced training. Basic skills can be picked up faster, but real mastery comes with hands-on practice afterward.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Best certification for digital marketing?</summary>
-<p>Google Ads, Google Analytics, and Meta Blueprint are the most recognized free certifications. Pairing these with an institute certificate that includes live project work makes a stronger profile.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Digital Marketing Course for working professionals?</summary>
-<p>Yes, most institutes including DizitalAdda run weekend or evening batches. This lets professionals learn without leaving their job.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Average salary for a digital marketer in Delhi?</summary>
-<p>Freshers typically earn ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹3.5ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ4.5 LPA. With 3ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ5 years of experience, this rises to ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹7ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ14 LPA.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Which skill pays most ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â SEO, PPC, or SMM?</summary>
-<p>PPC and SEO tend to pay the highest since both directly drive measurable ROI. Social media marketing also pays well in 2026 and is growing fast, especially for those skilled in reels, influencer marketing, and paid social ads.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Highest salary for a digital marketer in Delhi?</summary>
-<p>Senior roles like Digital Marketing Head or Performance Marketing Lead can reach ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹25ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ40 LPA+. This level needs 8-10+ years of experience and proven campaign results.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Can course fees be paid in installments?</summary>
-<p>Yes, most institutes including DizitalAdda offer EMI or installment options. Always confirm the number of installments and any extra charges before enrolling.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Does DizitalAdda offer online and offline courses?</summary>
-<p>Yes, both formats are available. Students can choose in-person classroom training or live online sessions based on convenience.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>What  courses does DizitalAdda offer?</summary>
-<p>DizitalAdda offers Digital Marketing courses (Beginners, Advanced, Expert, and Working Professionals batches), along with AI, Data Science/Data Analytics, and Cyber Security courses ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â covering both foundational and advanced, career-focused training.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Does DizitalAdda also provide a 3-year master course with college partnerships?</summary>
-<p>Yes, DizitalAdda offers a 3-year master's course in digital marketing, delivered through partnerships with selected colleges.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>What is ethical hacking, and how is it different from cyber security in 2026?</summary>
-<p>Ethical hacking is the practice of legally testing systems by simulating attacks to find security weaknesses before real hackers do. Cyber security is the broader field covering all defense measures, tools, and policies used to protect systems ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ethical hacking is one offensive skill within it, not the whole field.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>What is the average salary of an ethical hacker in India in 2026 (fresher vs experienced)?</summary>
-<p>Freshers typically earn ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹3.5ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ6 LPA, especially with a CEH certification and some hands-on lab or project work. Experienced professionals (5+ years) with certifications like OSCP earn ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹15ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ30 LPA, and senior red-team leads can cross ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹40 LPA</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Is a machine learning or AI course worth it in 2026 for a career switch?</summary>
-<p>Yes, ML/AI remains one of the highest-demand skill areas in 2026 as companies embed AI across products and operations. It suits career switchers with some logical/analytical or coding background, though expect a real learning curve if coming from a non-technical field.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>Does DizitalAdda also offer Data Analytics, Data Science, and Machine Learning courses?</summary>
-<p>Yes, DizitalAdda offers Data Analytics, Data Science, and Machine Learning courses alongside its digital marketing programs. These courses include practical, project-based training with placement support, available in both online and offline formats.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>What is the difference between data analytics and data science?</summary>
-<p> Data analytics focuses on examining existing data to find patterns and answer specific business questions. Data science is broader ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â it includes analytics plus building predictive models, machine learning, and working with unstructured data to solve more complex, forward-looking problems.</p>
-</details>
-<details className="faq slide-up-section">
-<summary>What AI tools are used in digital marketing in 2026?</summary>
-<p>Common tools include ChatGPT and Jasper for content, Surfer SEO and Semrush AI for SEO, Canva and Adobe Firefly for design, Google Performance Max and Meta Advantage+ for ad bidding, and HubSpot or Mailchimp AI for email personalization. </p>
-</details>
-</div>
-</section>
+<FAQSection />
 
 
 {/* book your demo script */}

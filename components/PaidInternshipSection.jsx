@@ -18,7 +18,7 @@ export const internshipVideosData = [
     videoId: "KFWyifEYWyU", // YouTube ID (e.g. https://www.youtube.com/watch?v=KFWyifEYWyU)
     videoSrc: "", // or direct MP4 URL (e.g. "/videos/internship-rohan.mp4")
     duration: "1:30",
-    quote: "Course ke 4th month mein hi paid internship start ho gayi thi! Real client ad budgets par campaigns scale karne ka confidence mila aur monthly stipend bhi mila.",
+    quote: "My paid corporate internship commenced in the 4th month of the course! Managing live client budgets gave me the skills to scale high-ROAS campaigns while earning a regular monthly stipend.",
     tags: ["Meta Ads", "Google Ads", "ROAS Scaling"],
   },
   {
@@ -32,7 +32,7 @@ export const internshipVideosData = [
     videoId: "5Ky9myAg6a8",
     videoSrc: "",
     duration: "1:45",
-    quote: "DizitalAdda ne directly partner agency mein 2 months ki paid internship arrange karwayi. Har month stipend mila aur verified experience certificate bhi mila.",
+    quote: "DizitalAdda directly arranged my 2-month paid internship with a partner agency. I gained enterprise agency experience, earned a monthly stipend, and received a verified experience letter.",
     tags: ["Technical SEO", "Keyword Research", "GA4"],
   },
   {
@@ -46,7 +46,7 @@ export const internshipVideosData = [
     videoId: "0Y0wxv9Hrvc",
     videoSrc: "",
     duration: "2:05",
-    quote: "Classroom training ke baad aakhri 2 months mein live fintech data pipelines par kaam kiya. Practical work experience aur regular stipend dono mile.",
+    quote: "Following core classroom training, I spent the final 2 months engineering live fintech data pipelines. Real industry exposure combined with a handsome monthly stipend made it totally worth it.",
     tags: ["Python", "Power BI", "SQL Analytics"],
   },
 ];
@@ -91,11 +91,11 @@ export default function PaidInternshipSection({
           label="Earn While You Learn"
           title={
             <>
-              Course ke Dauran Last 2 Months{" "}
-              <span className="highlight">Guaranteed Paid Internship</span>
+              Final 2 Months Guaranteed{" "}
+              <span className="highlight">Paid Corporate Internship</span>
             </>
           }
-          description="DizitalAdda mein course completion se pehle har learner ko last 2 months mein guaranteed paid internship milti hai — live client budgets, real agency projects aur monthly stipend ke sath."
+          description="Every career program includes a mandatory 2-month guaranteed paid internship prior to graduation — working on live client ad budgets, real agency projects, and receiving an assured monthly stipend."
         />
 
         {/* ================= 4 VALUE HIGHLIGHTS ================= */}

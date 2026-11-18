@@ -77,7 +77,7 @@ export default function AwardsShowcase({ data = awardsData }) {
           id="awards-section-title"
           label="Prestigious Recognitions"
           title={<>Awards &amp; Industry <span className="highlight">Recognitions</span></>}
-          description="DizitalAdda ki practical training, live projects model aur student placements ko Bharat ke prominent national leaders aur dignitaries ne sammanit kiya hai."
+          description="DizitalAdda's practical training pedagogy, real-time campaign model, and proven placement track record have been honored by distinguished national dignitaries and industry leaders across India."
         />
 
         {/* ================= 4-COLUMN PHOTO-FIRST GRID ================= */}
