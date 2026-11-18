@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useLayoutEffect, useRef, useState } from "react";
+import SectionHeader from "../SectionHeader";
 import { CampusPhoto } from "../../data/campus";
 import styles from "./CampusGallery.module.css";
 
@@ -100,16 +101,13 @@ export default function BentoGallery({ photos }: BentoGalleryProps) {
       className={`${styles.cgSection} cg-section`}
       aria-labelledby={titleId}
     >
-      <header className={styles.header}>
-        <p className={styles.label}>Inside DizitalAdda</p>
-        <h2 className={styles.heading} id={titleId}>
-          Explore Our Campus
-        </h2>
-        <p className={styles.subtext}>
-          Classrooms, workspaces aur learning spaces jahan students apni skills
-          build karte hain.
-        </p>
-      </header>
+      <SectionHeader
+        align="center"
+        id={titleId}
+        label="Inside DizitalAdda"
+        title="Explore Our Campus"
+        description="Classrooms, workspaces aur learning spaces jahan students apni skills build karte hain."
+      />
 
       <div
         ref={gridRef}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import SectionHeader from "./SectionHeader";
 import styles from "./BookDemoSection.module.css";
 
 const MONTH_NAMES = [
@@ -237,18 +238,13 @@ export default function BookDemoSection() {
               COLUMN 1: SESSION OVERVIEW & MODE SWITCHER (LEFT PANEL)
              ================================================================ */}
           <div className={`${styles.column} ${styles.borderRight}`}>
-            <div className={styles.eyebrow}>
-              <span className={styles.eyebrowDot} />
-              FREE SESSION
-            </div>
-
-            <h2 className={styles.heading}>
-              Book a <span className={styles.headingGradient}>Free Demo Class</span>
-            </h2>
-
-            <p className={styles.subtitle}>
-              Experience a 45-minute live walkthrough with our senior industry mentors before you enrol.
-            </p>
+            <SectionHeader
+              align="left"
+              label="FREE SESSION"
+              title={<>Book a <span className="highlight">Free Demo Class</span></>}
+              description="Experience a 45-minute live walkthrough with our senior industry mentors before you enrol."
+              className={styles.demoHeader}
+            />
 
             {/* Mode Switcher */}
             <div className={styles.modeSwitchWrapper}>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import SectionHeader from "./SectionHeader";
 import styles from "./AwardsShowcase.module.css";
 
 // 4 Modern Photo-First Award Cards Data (with distinct images)
@@ -71,16 +72,13 @@ export default function AwardsShowcase({ data = awardsData }) {
     >
       <div className={styles.container}>
         {/* ================= HEADER ================= */}
-        <header className={styles.header}>
-          <span className={styles.badge}>Prestigious Recognitions</span>
-          <h2 id="awards-section-title" className={styles.heading}>
-            Awards &amp; Industry{" "}
-            <span className={styles.headingGradient}>Recognitions</span>
-          </h2>
-          <p className={styles.subtext}>
-            DizitalAdda ki practical training, live projects model aur student placements ko Bharat ke prominent national leaders aur dignitaries ne sammanit kiya hai.
-          </p>
-        </header>
+        <SectionHeader
+          align="center"
+          id="awards-section-title"
+          label="Prestigious Recognitions"
+          title={<>Awards &amp; Industry <span className="highlight">Recognitions</span></>}
+          description="DizitalAdda ki practical training, live projects model aur student placements ko Bharat ke prominent national leaders aur dignitaries ne sammanit kiya hai."
+        />
 
         {/* ================= 4-COLUMN PHOTO-FIRST GRID ================= */}
         <div className={styles.awardsGrid} role="list">

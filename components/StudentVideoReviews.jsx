@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import SectionHeader from "./SectionHeader";
 import styles from "./StudentVideoReviews.module.css";
 
 // Editable Student Video Reviews Data Array
@@ -61,14 +62,14 @@ export default function StudentVideoReviews({
             ============================================================== */}
         <div className={styles.header}>
           {/* Left: Heading + Subtext */}
-          <div className={styles.headerLeft}>
-            <h2 id="student-reviews-heading" className={styles.heading}>
-              Hamare students ki apni kahani
-            </h2>
-            <p className={styles.subtext}>
-              Real stories from students who launched and accelerated their careers with DizitalAdda.
-            </p>
-          </div>
+          <SectionHeader
+            align="left"
+            id="student-reviews-heading"
+            label="Video Testimonials"
+            title="Hamare students ki apni kahani"
+            description="Real stories from students who launched and accelerated their careers with DizitalAdda."
+            className={styles.headerLeft}
+          />
 
           {/* Right: Stats (4.9 Rating & 1,200+ Placed) */}
           <div className={styles.headerRight}>

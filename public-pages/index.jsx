@@ -14,6 +14,7 @@ import CertificatesMarquee from "../components/CertificatesMarquee.jsx";
 import AwardsShowcase from "../components/AwardsShowcase.jsx";
 import FeaturedInPR from "../components/FeaturedInPR.jsx";
 import BookDemoSection from "../components/BookDemoSection.jsx";
+import SectionHeader from "../components/SectionHeader";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 
@@ -541,9 +542,15 @@ export default function LegacyPage_index() {
 <main className="da-hero" id="dizitaladda-home-hero">
 <div className="da-hero-grid" aria-hidden="true"></div>
 <div className="da-hero-content">
-<div className="da-hero-admissions"><span aria-hidden="true"></span>Admissions open</div>
-<h1>Learn Digital Marketing <span className="da-hero-gradient-text">by Doing</span>, Not Just Watching</h1>
-<p className="da-hero-description">Live projects, real campaigns and expert mentors at DizitalAdda, build skills that get you hired or help you grow your own business.</p>
+<SectionHeader
+  as="h1"
+  align="left"
+  dark={true}
+  label={<><span className="da-hero-pulse" aria-hidden="true"></span>Admissions open</>}
+  title={<>Learn Digital Marketing <span className="highlight">by Doing</span>, Not Just Watching</>}
+  description="Live projects, real campaigns and expert mentors at DizitalAdda, build skills that get you hired or help you grow your own business."
+  className="da-hero-section-header"
+/>
 <div className="da-hero-actions">
 <a className="da-hero-button da-hero-button-primary" href="#bookDemo">Book Free Demo Class</a>
 <a className="da-hero-button da-hero-button-secondary" href="/assets/pdfs/Digital-Marketing-Course-for-Professionals.pdf" target="_blank" rel="noreferrer">Download Brochure</a>
@@ -561,12 +568,12 @@ export default function LegacyPage_index() {
 
 <div className="courses" id="courses">
 <div className="containerCource">
-<h2 className="courseHeader">
-Explore <span className="cc-highlight">Our Course Categories</span>
-</h2>
-<div className="coursesSectionDetails">
-<p className="courseDetails">Explore career-focused courses in Digital Marketing, AI, Data Science, and Cyber Security.</p>
-</div>
+<SectionHeader
+  align="center"
+  label="Programs &amp; Certifications"
+  title={<>Explore <span className="highlight">Our Course Categories</span></>}
+  description="Explore career-focused courses in Digital Marketing, AI, Data Science, and Cyber Security."
+/>
 <CourseCategoryFilters />
 </div>
 </div>
@@ -587,8 +594,12 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 <div className="refer-wrapper">
 {/*  Left Content  */}
 <div className="refer-left">
-<h2>Refer a Friend to Any Course ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â Earn Rewards on Every Enrolment</h2>
-<p>DizitalAdda's Refer &amp; Earn program rewards students and alumni for referring new learners to any of our career-focused courses, including Digital Marketing, AI, Data Science, Machine Learning, and Cyber Security. Earn cashback, discounts, or exclusive rewards on every successful enrolment, with no limit on referrals. Simply share your referral, and start earning as more learners join through your network.</p>
+<SectionHeader
+  align="left"
+  label="Refer &amp; Earn"
+  title="Refer a Friend to Any Course — Earn Rewards on Every Enrolment"
+  description="DizitalAdda's Refer &amp; Earn program rewards students and alumni for referring new learners to any of our career-focused courses, including Digital Marketing, AI, Data Science, Machine Learning, and Cyber Security. Earn cashback, discounts, or exclusive rewards on every successful enrolment, with no limit on referrals."
+/>
 <div className="refer-buttons">
 <a href="https://wa.me/918810606010?text=Hi%2C%20I%20want%20to%20refer%20Someone.%0A%0AName%3A%20[Friend%20Name]%0AContact%3A%20[Phone%20Number]%0ACourse%20Interested%3A%20[Course%20Name]" className="btn refer-btn">Refer and Earn</a>
 <a href="https://wa.me/918810606010?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Refer%20and%20Earn%20program%20at%20DizitalAdda.%20How%20can%20I%20refer%20my%20friends%20and%20what%20rewards%20do%20I%20get%3F" className="btn track-btn">More Info</a>
@@ -606,9 +617,13 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 
 
 <section className="career-outcome dark-theme">
-<h2>Build Skills That Companies Are Looking For</h2>
-<p>DizitalAdda's career-focused courses are aligned with the skill requirements of leading technology, marketing, analytics, and cybersecurity employers. Graduates from Digital Marketing, Generative AI, Data Science, Machine Learning, Data Analytics, and Cyber Security programs receive placement support through a network of 250+ hiring partners, including companies such as Flipkart, Myntra, Nykaa, HiveMinds, Coursera, Zouk, and Sleepy Owl.
-</p>
+<SectionHeader
+  align="center"
+  dark={true}
+  label="Industry Hiring Network"
+  title="Build Skills That Companies Are Looking For"
+  description="DizitalAdda's career-focused courses are aligned with the skill requirements of leading technology, marketing, analytics, and cybersecurity employers. Graduates from Digital Marketing, Generative AI, Data Science, Machine Learning, Data Analytics, and Cyber Security programs receive placement support through a network of 250+ hiring partners, including companies such as Flipkart, Myntra, Nykaa, HiveMinds, Coursera, Zouk, and Sleepy Owl."
+/>
 <div className="company-logo-grid">
 <img src="./images/TCS-logo-white.svg" alt="TCS" loading="lazy" decoding="async" />
 <img src="./images/wipro-svgrepo-com.svg" alt="Wipro" loading="lazy" decoding="async" />
@@ -631,7 +646,12 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 <div className="aurora-blob aurora-blob-2"></div>
 <div className="aurora-blob aurora-blob-3"></div>
 <div className="galleryContainer">
-<h2>A Corporate-Grade Campus for Serious <span className="cc-highlight">Career Training</span></h2>
+<SectionHeader
+  align="center"
+  label="Our Infrastructure"
+  title={<>A Corporate-Grade Campus for Serious <span className="highlight">Career Training</span></>}
+  description="Experience modern classrooms, collaborative project pods, and high-speed labs designed for practical, real-world learning."
+/>
 <div className="campus-layout">
 <div className="campus-photos">
 <div className="campus-photo-card">
@@ -738,10 +758,12 @@ View Gallery
 <div className="aurora-blob aurora-blob-1"></div>
 <div className="aurora-blob aurora-blob-2"></div>
 <div className="aurora-blob aurora-blob-3"></div>
-<h2>Frequently <span className="cc-highlight">Asked Questions</span></h2>
-<p className="faqDetails">
-Frequently Asked Questions offers quick answers to common queries, guiding users through features and functionalities effortlessly.
-</p>
+<SectionHeader
+  align="center"
+  label="Got Questions?"
+  title={<>Frequently <span className="highlight">Asked Questions</span></>}
+  description="Frequently Asked Questions offers quick answers to common queries, guiding users through features and functionalities effortlessly."
+/>
 <div className="faq-grid">
 <details className="faq slide-up-section">
 <summary>What is digital marketing &amp; why is it important in 2026?</summary>

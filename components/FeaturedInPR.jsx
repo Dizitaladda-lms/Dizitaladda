@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import SectionHeader from "./SectionHeader";
 import styles from "./FeaturedInPR.module.css";
 
 // Media & Press Publications Data
@@ -176,14 +177,13 @@ export default function FeaturedInPR({ articles = prArticlesData }) {
     >
       <div className={styles.container}>
         {/* ================= HEADER ("Featured In") ================= */}
-        <header className={styles.header}>
-          <h2 id="featured-in-heading" className={styles.heading}>
-            Featured <span className={styles.headingHighlight}>In</span>
-          </h2>
-          <p className={styles.subtext}>
-            Leading national news publications and digital media portals covering DizitalAdda&apos;s educational milestones, career impact, and industry insights.
-          </p>
-        </header>
+        <SectionHeader
+          align="center"
+          id="featured-in-heading"
+          label="Media &amp; Press"
+          title={<>Featured <span className="highlight">In</span></>}
+          description="Leading national news publications and digital media portals covering DizitalAdda's educational milestones, career impact, and industry insights."
+        />
 
         {/* ================= 4 PR BROWSER CARDS GRID ================= */}
         <div className={styles.grid} role="list">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import SectionHeader from "./SectionHeader";
 
 const studentProjects = [
   {
@@ -78,11 +79,13 @@ export default function StudentProjectVideos() {
   return (
     <section className="student-project-videos" aria-labelledby="student-project-videos-title">
       <div className="student-project-videos-inner">
-        <header className="student-project-videos-heading">
-          <p>Learning by doing</p>
-          <h2 id="student-project-videos-title">Students Working on Real-Time Projects</h2>
-          <span>See learners collaborate, practise with industry tools, and build hands-on experience.</span>
-        </header>
+        <SectionHeader
+          align="center"
+          id="student-project-videos-title"
+          label="Learning by doing"
+          title="Students Working on Real-Time Projects"
+          description="See learners collaborate, practise with industry tools, and build hands-on experience."
+        />
         <div className="student-project-videos-grid">
           {studentProjects.map((project) => (
             <article

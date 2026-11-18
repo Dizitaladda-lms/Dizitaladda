@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import SectionHeader from "./SectionHeader";
 
 // Add student photos and official company logo paths here when they are ready.
 const placedStudents = [
@@ -33,10 +34,13 @@ export default function PlacementShowcase() {
   return (
     <section className="placement-showcase" aria-labelledby="placement-showcase-title">
       <div className="placement-showcase-inner">
-        <header className="placement-showcase-heading">
-          <h2 id="placement-showcase-title">Our Students, Placed &amp; Thriving</h2>
-          <p>Meet some of the DizitalAdda graduates building their careers across the industry.</p>
-        </header>
+        <SectionHeader
+          align="center"
+          id="placement-showcase-title"
+          label="Success Stories"
+          title="Our Students, Placed &amp; Thriving"
+          description="Meet some of the DizitalAdda graduates building their careers across the industry."
+        />
         <div className="placement-showcase-toolbar" aria-label="Carousel controls">
           <button type="button" aria-label="Previous students" onClick={() => scrollStudents(-1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
           <button type="button" aria-label="Next students" onClick={() => scrollStudents(1)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>

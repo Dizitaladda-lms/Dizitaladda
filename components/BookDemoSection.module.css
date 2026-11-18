@@ -4,7 +4,7 @@
 .sectionWrap {
   position: relative;
   width: 100%;
-  padding: 80px 20px 96px;
+  padding: 64px clamp(16px, 2.5vw, 40px) 88px;
   background: var(--cal-bg, #f8f5ff);
   font-family: inherit;
   color: var(--cal-ink, #16102b);
@@ -37,7 +37,8 @@
 
 .container {
   position: relative;
-  max-width: 1180px;
+  width: 100%;
+  max-width: 1480px;
   margin: 0 auto;
   z-index: 1;
 }
@@ -49,7 +50,8 @@
   border-radius: 24px;
   box-shadow: 0 10px 40px -10px rgba(124, 58, 237, 0.08), 0 1px 3px rgba(0, 0, 0, 0.03);
   display: grid;
-  grid-template-columns: 1.1fr 1.25fr 1.15fr;
+  grid-template-columns: 1.05fr 1.25fr 1.15fr;
+  width: 100%;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
@@ -60,7 +62,7 @@
 
 /* Column General Styling */
 .column {
-  padding: 36px 32px;
+  padding: 40px clamp(24px, 2.4vw, 42px);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -357,10 +359,14 @@
 
 .dayCell {
   aspect-ratio: 1;
+  width: 100%;
+  max-width: 42px;
+  max-height: 42px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 600;
   font-family: inherit;
   border-radius: 50%;
@@ -432,16 +438,16 @@
 .slotsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  gap: 10px;
 }
 
 .slotBtn {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 8px;
+  padding: 11px 10px;
   font-family: inherit;
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 600;
   border-radius: 10px;
   border: 1px solid #e9e2f7;
@@ -525,9 +531,9 @@
 .textInput,
 .selectInput {
   width: 100%;
-  padding: 10px 13px;
+  padding: 11px 14px;
   font-family: inherit;
-  font-size: 13.5px;
+  font-size: 14px;
   color: #1e293b;
   background: #ffffff;
   border: 1px solid #e2e8f0;
@@ -564,10 +570,10 @@
 }
 
 .phonePrefix {
-  padding: 10px 12px;
+  padding: 11px 13px;
   background: #f8fafc;
   color: #475569;
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 700;
   border-right: 1px solid #e2e8f0;
   user-select: none;
@@ -575,9 +581,9 @@
 
 .phoneInput {
   flex: 1;
-  padding: 10px 12px;
+  padding: 11px 13px;
   font-family: inherit;
-  font-size: 13.5px;
+  font-size: 14px;
   color: #1e293b;
   border: none;
   outline: none;

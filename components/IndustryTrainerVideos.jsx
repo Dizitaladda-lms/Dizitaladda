@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import SectionHeader from "./SectionHeader";
 
 const trainers = [
   { name: "Dr. Gulshan Kumar", role: "Digital marketing", tags: ["Data science", "Strategy"], experience: "10+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Gulshan.png" },
@@ -87,11 +88,13 @@ export default function IndustryTrainerVideos() {
   return (
     <section className="industry-trainer-videos" aria-labelledby="industry-trainer-videos-title">
       <div className="industry-trainer-videos-inner">
-        <header className="industry-trainer-videos-heading">
-          <p>Learn from the people doing the work</p>
-          <h2 id="industry-trainer-videos-title">Learn with Industry Expert Trainers</h2>
-          <span>Meet the experts who bring practical, real-world experience into every class.</span>
-        </header>
+        <SectionHeader
+          align="center"
+          id="industry-trainer-videos-title"
+          label="Learn from the people doing the work"
+          title="Learn with Industry Expert Trainers"
+          description="Meet the experts who bring practical, real-world experience into every class."
+        />
         <div className="industry-trainer-videos-controls" aria-label="Trainer carousel controls">
           <button type="button" aria-label="Previous trainers" onClick={() => scrollTrainers(-1)}>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>

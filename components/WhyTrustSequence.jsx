@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import SectionHeader from "./SectionHeader";
 
 // Replace each local image and copy here when the five final points are ready.
 const trustPoints = [
@@ -79,10 +80,12 @@ export default function WhyTrustSequence() {
   return (
     <section className={`why-trust-sequence ${isInView ? "is-in-view" : ""}`} id="why-dizitaladda" ref={sectionRef}>
       <div className="why-trust-inner">
-        <header className="why-trust-heading">
-          <span>Learn with confidence</span>
-          <h2>Why DizitalAdda is India&apos;s Most Trusted Career Program</h2>
-        </header>
+        <SectionHeader
+          align="center"
+          label="Learn with confidence"
+          title="Why DizitalAdda is India's Most Trusted Career Program"
+          description="A structured, hands-on learning roadmap designed to take you from foundational concepts to industry-ready mastery."
+        />
 
         {!isSkipped ? (
           <div className="why-trust-feature" key={activeIndex}>

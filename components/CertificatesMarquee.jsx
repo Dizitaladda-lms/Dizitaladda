@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import SectionHeader from "./SectionHeader";
 import styles from "./CertificatesMarquee.module.css";
 
 // Student Certifications Data List
@@ -279,13 +280,13 @@ export default function CertificatesMarquee({ certificates = defaultCertificates
     >
       <div className={styles.wrap}>
         {/* ================= HEADER ================= */}
-        <div className={styles.head}>
-          <h2 id="certifications-heading" className={styles.title}>
-            Student <span className={styles.g}>Certifications</span>
-          </h2>
-          <p className={styles.sub}>
-            After completing a course, every student receives verified certificates from Google, Meta Blueprint, HubSpot, Semrush and DizitalAdda, valid at top companies.
-          </p>
+        <SectionHeader
+          align="center"
+          id="certifications-heading"
+          label="Global Credentials"
+          title={<>Student <span className="highlight">Certifications</span></>}
+          description="After completing a course, every student receives verified certificates from Google, Meta Blueprint, HubSpot, Semrush and DizitalAdda, valid at top companies."
+        >
           <div className={styles.chips}>
             <span className={styles.chipItem}>
               <i className={styles.chipDot} aria-hidden="true" />
@@ -304,7 +305,7 @@ export default function CertificatesMarquee({ certificates = defaultCertificates
               Shareable on LinkedIn
             </span>
           </div>
-        </div>
+        </SectionHeader>
 
         {/* ================= AUTO-SCROLLING STAGE ================= */}
         <div className={styles.stage}>
