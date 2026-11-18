@@ -3,51 +3,43 @@
 import React, { useState, useEffect } from "react";
 import styles from "./AwardsShowcase.module.css";
 
-// Editable Awards and Recognitions Data
+// 4 Modern Photo-First Award Cards Data (with distinct images)
 export const awardsData = [
   {
     id: "indian-icon-award",
     image: "/assets/img/kiran-bedi.webp",
-    guestTag: "Presented by Dr. Kiran Bedi",
+    badge: "Presented by Dr. Kiran Bedi",
     title: "Indian Icon Award",
-    category: "Excellence in Practical Digital Education",
+    subtitle: "Excellence in Practical Digital Education • 2024",
     recipient: "Dr. Gulshan Kumar (Founder, DizitalAdda)",
-    presentedBy: "Dr. Kiran Bedi (First Woman IPS & Former Lt. Governor)",
-    citation: "25,000+ students ko live projects aur real skills se empower karne ke liye sammanit kiya gaya.",
-    year: "National Award 2024",
+    icon: "🏆",
   },
   {
     id: "bharat-business-award",
     image: "/assets/img/aslin grover.webp",
-    guestTag: "Presented by Ashneer Grover",
+    badge: "Presented by Ashneer Grover",
     title: "Bharat Business Award",
-    category: "Innovation in EdTech & Career Training",
+    subtitle: "Innovation in EdTech & Career Training • 2024",
     recipient: "Dr. Gulshan Kumar & DizitalAdda Team",
-    presentedBy: "Ashneer Grover (Entrepreneur & Former Shark Tank India Judge)",
-    citation: "Real agency workflows aur live client budget training model ke liye industry recognition.",
-    year: "Business Excellence 2024",
+    icon: "⭐",
   },
   {
-    id: "excellence-edtech-award",
+    id: "excellence-skill-training",
     image: "/courses/images/gulshan/Gulshan.webp",
-    guestTag: "Education Leadership Summit",
+    badge: "Education Leadership Summit",
     title: "Excellence in Skill Training",
-    category: "Best Digital Marketing Institute",
+    subtitle: "Best Digital Marketing Institute • 2023–24",
     recipient: "Dr. Gulshan Kumar (Founder, DizitalAdda)",
-    presentedBy: "The Hotel School & Education Leadership Forum",
-    citation: "97% placement track record aur industry-aligned syllabus deliver karne ke liye sammanit kiya gaya.",
-    year: "EdTech Honors 2023-24",
+    icon: "🎓",
   },
   {
-    id: "msme-skill-award",
-    image: "/locations/Award-1.webp",
-    guestTag: "National Skill Leadership",
+    id: "national-youth-employability",
+    image: "/assets/img/gulshan-kumar-award.webp",
+    badge: "National Skill Leadership",
     title: "National Youth Employability Award",
-    category: "Career Launch & Placement Support",
+    subtitle: "Career Launch & Placement Support • 2024",
     recipient: "DizitalAdda Institute",
-    presentedBy: "National Skill & MSME Development Summit",
-    citation: "Students, college dropouts aur working professionals ko high-income skills me place karane ka samman.",
-    year: "Industry Honor 2024",
+    icon: "🏅",
   },
 ];
 
@@ -90,88 +82,68 @@ export default function AwardsShowcase({ data = awardsData }) {
           </p>
         </header>
 
-        {/* ================= AWARDS CARDS GRID ================= */}
+        {/* ================= 4-COLUMN PHOTO-FIRST GRID ================= */}
         <div className={styles.awardsGrid} role="list">
           {data.map((award) => (
             <article
               key={award.id}
               className={styles.card}
-              role="listitem"
+              onClick={() => setSelectedAward(award)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setSelectedAward(award);
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label={`View award: ${award.title} (${award.badge})`}
             >
-              {/* Award Photo with Zoom Trigger */}
-              <div
-                className={styles.imageWrap}
-                onClick={() => setSelectedAward(award)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setSelectedAward(award);
-                  }
-                }}
-                tabIndex={0}
-                role="button"
-                aria-label={`View full ceremony image of ${award.title}`}
-              >
-                <span className={styles.guestPill}>{award.guestTag}</span>
-                <img
-                  src={award.image}
-                  alt={`${award.title} presented to ${award.recipient}`}
-                  className={styles.awardImage}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className={styles.zoomButton} aria-hidden="true">
-                  🔍 Click to Enlarge
-                </div>
+              {/* Full Fill Image (object-top to keep faces & heads uncropped) */}
+              <img
+                src={award.image}
+                alt={`${award.title} - ${award.badge}`}
+                className={styles.awardImage}
+                loading="lazy"
+                decoding="async"
+              />
+
+              {/* Top-Right Expand Icon Button */}
+              <div className={styles.expandButton} aria-hidden="true">
+                <svg viewBox="0 0 24 24" className={styles.expandIcon}>
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                </svg>
               </div>
 
-              {/* Card Body: Kis chiz ka award hai + Kise mila hai */}
-              <div className={styles.cardBody}>
-                {/* 1. Kis chiz ka award hai */}
-                <h3 className={styles.awardTitle}>{award.title}</h3>
-                <p className={styles.awardCategory}>{award.category}</p>
-
-                {/* 2. Kise mila hai & Kisne diya hai */}
-                <div className={styles.detailsBox}>
-                  <div className={styles.detailRow}>
-                    <span className={styles.detailLabel}>Kise Mila:</span>
-                    <span className={`${styles.detailValue} ${styles.recipientValue}`}>
-                      {award.recipient}
-                    </span>
-                  </div>
-                  <div className={styles.detailRow}>
-                    <span className={styles.detailLabel}>Kisne Diya:</span>
-                    <span className={styles.detailValue}>
-                      {award.presentedBy}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Citation */}
-                <p className={styles.citation}>{award.citation}</p>
-
-                {/* Footer Tag */}
-                <div className={styles.cardFooter}>
-                  <span className={styles.yearTag}>{award.year}</span>
-                  <span className={styles.verifiedBadge}>
-                    <span className={styles.greenDot} aria-hidden="true" />
-                    Verified Award
+              {/* Bottom 45% Gradient Overlay with 3 Minimal Elements */}
+              <div className={styles.overlay}>
+                {/* a) Top Pill Badge */}
+                <div className={styles.pillBadge}>
+                  <span className={styles.pillIcon} aria-hidden="true">
+                    {award.icon}
                   </span>
+                  <span>{award.badge}</span>
                 </div>
+
+                {/* b) Award Title */}
+                <h3 className={styles.awardTitle}>{award.title}</h3>
+
+                {/* c) 1-Line Subtitle */}
+                <p className={styles.awardSubtitle}>{award.subtitle}</p>
               </div>
             </article>
           ))}
         </div>
       </div>
 
-      {/* ================= LIGHTBOX ZOOM MODAL ================= */}
+      {/* ================= INTERACTIVE LIGHTBOX MODAL ================= */}
       {selectedAward && (
         <div
           className={styles.lightboxOverlay}
           onClick={() => setSelectedAward(null)}
           role="dialog"
           aria-modal="true"
-          aria-label="Award Ceremony Preview"
+          aria-label="Award Preview Modal"
         >
           <div
             className={styles.lightboxContent}
@@ -180,22 +152,27 @@ export default function AwardsShowcase({ data = awardsData }) {
             <button
               className={styles.lightboxClose}
               onClick={() => setSelectedAward(null)}
-              aria-label="Close award preview"
+              aria-label="Close award preview (Escape)"
               type="button"
             >
               ✕
             </button>
-            <img
-              src={selectedAward.image}
-              alt={selectedAward.title}
-              className={styles.lightboxImage}
-            />
-            <div className={styles.lightboxCaption}>
-              <h4 className={styles.lightboxTitle}>
-                {selectedAward.title} – {selectedAward.category}
-              </h4>
-              <p className={styles.lightboxSub}>
-                Presented by {selectedAward.presentedBy} to {selectedAward.recipient}
+
+            <div className={styles.lightboxImageWrap}>
+              <img
+                src={selectedAward.image}
+                alt={selectedAward.title}
+                className={styles.lightboxImage}
+              />
+            </div>
+
+            <div className={styles.lightboxDetails}>
+              <h3 className={styles.lightboxTitle}>{selectedAward.title}</h3>
+              <p className={styles.lightboxPresenter}>
+                {selectedAward.badge} • {selectedAward.subtitle}
+              </p>
+              <p className={styles.lightboxRecipient}>
+                Awarded to: {selectedAward.recipient}
               </p>
             </div>
           </div>

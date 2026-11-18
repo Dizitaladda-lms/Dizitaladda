@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { studentReviewsData } from "../data/studentReviews";
+import StudentReviewsHeader from "./StudentReviewsHeader";
 
 export default function StudentReviews() {
   const trackRef = useRef(null);
@@ -17,14 +18,8 @@ export default function StudentReviews() {
 
   return (
     <section className="reviews-section bg-mesh" id="student-reviews" aria-labelledby="student-reviews-title">
+      <StudentReviewsHeader />
       <div className="reviews-inner">
-        <div className="reviews-header">
-          <p className="reviews-eyebrow">What Students Say</p>
-          <h2 className="reviews-title" id="student-reviews-title">
-            Student <span className="cc-highlight">Reviews</span>
-          </h2>
-          <div className="reviews-underline" aria-hidden="true"></div>
-        </div>
 
         <div className="reviews-carousel-outer">
           <button

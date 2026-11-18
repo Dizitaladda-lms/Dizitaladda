@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DizitalAdda — Image & Video Master Specs Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand: #7c3aed;
+      --brand-dark: #6d28d9;
+      --accent: #cc22e0;
+      --ink: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      padding: 40px 20px 80px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #1e1035 0%, #2e0854 60%, #4c1d95 100%);
+      color: white;
+      padding: 40px 36px;
+      border-radius: 20px;
+      margin-bottom: 32px;
+      box-shadow: 0 10px 30px rgba(76, 29, 149, 0.2);
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(204, 34, 224, 0.25);
+      border: 1px solid rgba(204, 34, 224, 0.5);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #f5d0fe;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #cbd5e1;
+      font-size: 16px;
+      max-width: 780px;
+    }
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: #4c1d95;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 18px;
+      transition: all 0.2s;
+    }
+    .print-btn:hover { background: #f1f5f9; transform: translateY(-1px); }
+
+    .table-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      overflow-x: auto;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      margin-bottom: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+    th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+    }
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: middle;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #faf5ff; }
+    .ratio-pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      background: #ede9fe;
+      color: #5b21b6;
+    }
+    .dim-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: #0f172a;
+    }
+    .fmt-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+    .path-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #475569;
+      background: #f8fafc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .detail-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      padding: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    }
+    .detail-card h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #1e1b4b;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .detail-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+      font-size: 14px;
+    }
+    .detail-card li {
+      margin-bottom: 8px;
+      color: #475569;
+    }
+    .detail-card li strong {
+      color: var(--ink);
+    }
+
+    .rules-card {
+      background: #f5f3ff;
+      border: 1.5px solid #ddd6fe;
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .rules-card h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #5b21b6;
+      margin-bottom: 14px;
+    }
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .rule-item {
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #ede9fe;
+    }
+    .rule-item h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #4c1d95;
+      margin-bottom: 6px;
+    }
+    .rule-item p {
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    @media print {
+      body { padding: 0; background: white; }
+      header { box-shadow: none; border-radius: 0; }
+      .print-btn { display: none; }
+      .table-card { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Official Reference</div>
+      <h1>DizitalAdda — Image & Video Specs Guide</h1>
+      <p>Master cheat-sheet of aspect ratios, exact pixel dimensions, export formats, and safe margins for all website sections. Follow these to guarantee zero cropping, sharp retina quality, and 95+ PageSpeed score.</p>
+      <button class="print-btn" onclick="window.print()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+        Print or Save as PDF
+      </button>
+    </header>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Section</th>
+            <th>Asset Type</th>
+            <th>Aspect Ratio</th>
+            <th>Exact Dimensions</th>
+            <th>Format</th>
+            <th>Destination Folder</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1</strong></td>
+            <td><strong>Awards & Recognitions</strong></td>
+            <td>Stage Ceremony Cards</td>
+            <td><span class="ratio-pill">4:5</span></td>
+            <td><span class="dim-code">1000 × 1250 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/assets/img/</span></td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td><strong>Student Video Testimonials</strong></td>
+            <td>Shorts / Reels Covers</td>
+            <td><span class="ratio-pill">9:16</span></td>
+            <td><span class="dim-code">1080 × 1920 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">YouTube / /public/videos/</span></td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td><strong>Student Video Stories</strong></td>
+            <td>"Hamare students ki apni kahani"</td>
+            <td><span class="ratio-pill">9:14</span></td>
+            <td><span class="dim-code">720 × 1120 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">YouTube / /public/videos/</span></td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td><strong>Student Certifications</strong></td>
+            <td>Dual Certificate Preview</td>
+            <td><span class="ratio-pill">3:4 / A4</span></td>
+            <td><span class="dim-code">900 × 1170 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/courses/images/certificates/</span></td>
+          </tr>
+          <tr>
+            <td><strong>5</strong></td>
+            <td><strong>Campus 30s Video Tour</strong></td>
+            <td>Video Poster / Hero Cover</td>
+            <td><span class="ratio-pill">16:9</span></td>
+            <td><span class="dim-code">1920 × 1080 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/images/campus/tour-poster.jpg</span></td>
+          </tr>
+          <tr>
+            <td><strong>6</strong></td>
+            <td><strong>Campus Bento (Hero 2×2)</strong></td>
+            <td>Smart Classroom View</td>
+            <td><span class="ratio-pill">4:3 / 1:1</span></td>
+            <td><span class="dim-code">1200 × 900 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/images/campus/campus1.jpg</span></td>
+          </tr>
+          <tr>
+            <td><strong>7</strong></td>
+            <td><strong>Campus Bento (Wide 2×1)</strong></td>
+            <td>Workstation Lab Row</td>
+            <td><span class="ratio-pill">16:9 / 2:1</span></td>
+            <td><span class="dim-code">1200 × 600 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/images/campus/campus2.jpg</span></td>
+          </tr>
+          <tr>
+            <td><strong>8</strong></td>
+            <td><strong>Campus Bento (Normal 1×1)</strong></td>
+            <td>Lounge, Demo, Mentor Desk</td>
+            <td><span class="ratio-pill">1:1</span></td>
+            <td><span class="dim-code">800 × 800 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/images/campus/campus3..6.jpg</span></td>
+          </tr>
+          <tr>
+            <td><strong>9</strong></td>
+            <td><strong>Campus CTA Location Card</strong></td>
+            <td>GK-II Campus Entrance</td>
+            <td><span class="ratio-pill">16:10 / 4:3</span></td>
+            <td><span class="dim-code">1200 × 800 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/images/campus/</span></td>
+          </tr>
+          <tr>
+            <td><strong>10</strong></td>
+            <td><strong>Course Category Cards</strong></td>
+            <td>DM, GenAI, Cyber Security</td>
+            <td><span class="ratio-pill">16:9</span></td>
+            <td><span class="dim-code">1280 × 720 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/coursecard/ &amp; /imagesCards/</span></td>
+          </tr>
+          <tr>
+            <td><strong>11</strong></td>
+            <td><strong>Industry Trainer Videos</strong></td>
+            <td>Trainer Profile Video Cover</td>
+            <td><span class="ratio-pill">4:5</span></td>
+            <td><span class="dim-code">800 × 1000 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/courses/images/trainer/</span></td>
+          </tr>
+          <tr>
+            <td><strong>12</strong></td>
+            <td><strong>Student Project Videos</strong></td>
+            <td>Live Ad Campaign Dashboard</td>
+            <td><span class="ratio-pill">16:10</span></td>
+            <td><span class="dim-code">1280 × 800 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/assets/img/gallery/</span></td>
+          </tr>
+          <tr>
+            <td><strong>13</strong></td>
+            <td><strong>Placement Showcase</strong></td>
+            <td>Placed Student Headshot</td>
+            <td><span class="ratio-pill">4:5 (~4:4.4)</span></td>
+            <td><span class="dim-code">800 × 900 px</span></td>
+            <td><span class="fmt-badge">.webp</span></td>
+            <td><span class="path-code">/images/placements/</span></td>
+          </tr>
+          <tr>
+            <td><strong>14</strong></td>
+            <td><strong>Hiring Company Logos</strong></td>
+            <td>Recruiter Brand Logo</td>
+            <td><span class="ratio-pill">2.4:1 - 3:1</span></td>
+            <td><span class="dim-code">240 × 100 px</span></td>
+            <td><span class="fmt-badge">.svg / .png</span></td>
+            <td><span class="path-code">/images/</span></td>
+          </tr>
+          <tr>
+            <td><strong>15</strong></td>
+            <td><strong>Featured In (PR & Media)</strong></td>
+            <td>Publication Logos</td>
+            <td><span class="ratio-pill">Auto (~4:1)</span></td>
+            <td><span class="dim-code">240 × 60 px (H:40)</span></td>
+            <td><span class="fmt-badge">.svg / .png</span></td>
+            <td><span class="path-code">/assets/img/press/</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rules-card">
+      <h2>Important Guidelines for Media Production</h2>
+      <div class="rules-grid">
+        <div class="rule-item">
+          <h4>1. Always Use WebP</h4>
+          <p>Export all web photos at 82–88% quality in WebP format. Cuts load size by 65%+ without visible compression artifacts.</p>
+        </div>
+        <div class="rule-item">
+          <h4>2. Transparent Logos Only</h4>
+          <p>Company logos and accreditation badges must have clean 100% transparent backgrounds (SVG or PNG-24).</p>
+        </div>
+        <div class="rule-item">
+          <h4>3. Face Safe Area</h4>
+          <p>On 4:5, 9:14, and 9:16 portrait cards, position the subject's face within the upper 55% area with 8–10% breathing room from the top.</p>
+        </div>
+        <div class="rule-item">
+          <h4>4. Clean File Naming</h4>
+          <p>Use lowercase hyphenated names only (e.g., <code>kiran-bedi-award.webp</code>, <code>campus-classroom.webp</code>).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

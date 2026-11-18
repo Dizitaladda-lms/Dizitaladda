@@ -1,49 +1,265 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./CertificatesMarquee.module.css";
 
-// All 24 real certificates of DizitalAdda students
-const certificatesList = [
-  { id: 1, src: "/courses/images/certificates/1.webp", title: "Advanced Digital Marketing", student: "Certified Graduate" },
-  { id: 2, src: "/courses/images/certificates/2.webp", title: "Executive Digital Marketing", student: "Industry Recognized" },
-  { id: 3, src: "/courses/images/certificates/3.webp", title: "Master in Digital Marketing", student: "Agency Grade" },
-  { id: 4, src: "/courses/images/certificates/4.webp", title: "Performance Marketing & Ads", student: "Google Verified" },
-  { id: 5, src: "/courses/images/certificates/5.webp", title: "SEO & Growth Strategy", student: "Live Project Certified" },
-  { id: 6, src: "/courses/images/certificates/6.webp", title: "Social Media Specialist", student: "Meta Blueprint" },
-  { id: 7, src: "/courses/images/certificates/7.jpeg", title: "Digital Marketing Professional", student: "Certified Graduate" },
-  { id: 8, src: "/courses/images/certificates/8.jpeg", title: "Digital Marketing & Analytics", student: "Industry Recognized" },
-  { id: 9, src: "/courses/images/certificates/9.jpeg", title: "Advanced SEO & Ads", student: "Agency Grade" },
-  { id: 10, src: "/courses/images/certificates/10.jpeg", title: "Complete Digital Marketing", student: "Google Certified" },
-  { id: 11, src: "/courses/images/certificates/11.jpeg", title: "Performance Marketing Pro", student: "HubSpot Certified" },
-  { id: 12, src: "/courses/images/certificates/12.jpeg", title: "Digital Growth & Automation", student: "Live Project Certified" },
-  { id: 13, src: "/courses/images/certificates/13.jpeg", title: "Professional Certificate", student: "Certified Graduate" },
-  { id: 14, src: "/courses/images/certificates/14.jpeg", title: "Digital Marketing Specialist", student: "Industry Recognized" },
-  { id: 15, src: "/courses/images/certificates/15.jpeg", title: "Full Funnel Marketing", student: "Agency Grade" },
-  { id: 16, src: "/courses/images/certificates/16.jpeg", title: "Google Ads & Meta Ads", student: "Google Verified" },
-  { id: 17, src: "/courses/images/certificates/17.jpeg", title: "Brand & Content Strategy", student: "Semrush Certified" },
-  { id: 18, src: "/courses/images/certificates/18.jpeg", title: "Performance Marketing", student: "Live Project Certified" },
-  { id: 19, src: "/courses/images/certificates/19.jpeg", title: "Digital Marketing Diploma", student: "Skill India Aligned" },
-  { id: 20, src: "/courses/images/certificates/20.jpeg", title: "Advanced SEO Specialist", student: "Agency Grade" },
-  { id: 21, src: "/courses/images/certificates/21.jpeg", title: "Social Media & Growth", student: "Meta Blueprint" },
-  { id: 22, src: "/courses/images/certificates/22.jpeg", title: "E-Commerce Marketing", student: "Live Project Certified" },
-  { id: 23, src: "/courses/images/certificates/23.jpeg", title: "AI in Digital Marketing", student: "Certified Graduate" },
-  { id: 24, src: "/courses/images/certificates/24.jpeg", title: "Digital Marketing Masterclass", student: "Industry Recognized" },
+// Student Certifications Data List
+export const defaultCertificates = [
+  {
+    name: "Abhinav Sharma",
+    course: "Advanced Digital Marketing",
+    badge: "Certified Graduate",
+    image: "/courses/images/certificates/1.webp",
+  },
+  {
+    name: "Sonatan Saha",
+    course: "Performance Marketing Pro",
+    badge: "HubSpot Certified",
+    image: "/courses/images/certificates/2.webp",
+  },
+  {
+    name: "Arpit Verma",
+    course: "Digital Growth & Automation",
+    badge: "Live Project Certified",
+    image: "/courses/images/certificates/3.webp",
+  },
+  {
+    name: "Aryan Singh",
+    course: "Executive Digital Marketing",
+    badge: "Industry Recognized",
+    image: "/courses/images/certificates/4.webp",
+  },
+  {
+    name: "Madhu Rao",
+    course: "Expert in Digital Marketing",
+    badge: "Google Certified",
+    image: "/courses/images/certificates/5.webp",
+  },
+  {
+    name: "Chitra Nair",
+    course: "Social Media Mastery",
+    badge: "Meta Certified",
+    image: "/courses/images/certificates/6.webp",
+  },
+  {
+    name: "Sumit Bisht",
+    course: "SEO & Analytics Pro",
+    badge: "Semrush Certified",
+    image: "/courses/images/certificates/7.jpeg",
+  },
+  {
+    name: "Pooja Rawat",
+    course: "AI & Prompt Engineering",
+    badge: "Govt. Aligned",
+    image: "/courses/images/certificates/8.jpeg",
+  },
 ];
 
-// Row 1 (1 to 12) & Row 2 (13 to 24)
-const row1 = certificatesList.slice(0, 12);
-const row2 = certificatesList.slice(12, 24);
+// SVG Certificate Generator (Gold border, official seal & typography)
+function CertificateSvg({ name, course, front }) {
+  const photo = front ? (
+    <>
+      <circle cx="150" cy="92" r="26" fill="#e6d9f7" />
+      <circle cx="150" cy="86" r="10" fill="#8c6bb1" />
+      <path d="M130 112 Q150 94 170 112 L170 118 L130 118Z" fill="#8c6bb1" />
+    </>
+  ) : null;
 
-export default function CertificatesMarquee() {
+  const lines = [0, 1, 2, 3, 4].map((i) => (
+    <rect
+      key={i}
+      x="52"
+      y={front ? 200 + i * 9 : 120 + i * 10}
+      width={196 - (i % 3) * 18}
+      height="3"
+      rx="1.5"
+      fill="#cfc7dc"
+    />
+  ));
+
+  return (
+    <svg
+      viewBox="0 0 300 390"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label={`${front ? "Front" : "Back"} of certificate for ${name}`}
+      style={{ width: "100%", height: "auto", display: "block" }}
+    >
+      <rect width="300" height="390" fill="#fff" rx="6" />
+      <rect
+        x="8"
+        y="8"
+        width="284"
+        height="374"
+        fill="none"
+        stroke="#d4a437"
+        strokeWidth="5"
+        rx="4"
+      />
+      <rect
+        x="18"
+        y="18"
+        width="264"
+        height="354"
+        fill="none"
+        stroke="#e8cf86"
+        strokeWidth="1.5"
+      />
+      <text
+        x="150"
+        y="48"
+        textAnchor="middle"
+        fontSize="8"
+        fill="#7a6a9a"
+        fontFamily="Georgia, serif"
+      >
+        India&apos;s Most Recommended Digital Marketing Institute
+      </text>
+
+      {front ? (
+        <>
+          {photo}
+          <text
+            x="150"
+            y="172"
+            textAnchor="middle"
+            fontSize="15"
+            fontWeight="700"
+            fill="#241a3d"
+            fontFamily="Georgia, serif"
+          >
+            {name}
+          </text>
+          <text
+            x="150"
+            y="188"
+            textAnchor="middle"
+            fontSize="7.5"
+            fill="#7a6a9a"
+          >
+            Certificate of Completion
+          </text>
+        </>
+      ) : (
+        <>
+          <text
+            x="150"
+            y="86"
+            textAnchor="middle"
+            fontSize="26"
+            fill="#241a3d"
+            fontStyle="italic"
+            fontFamily="Georgia, serif"
+          >
+            Congratulations
+          </text>
+          <text
+            x="150"
+            y="108"
+            textAnchor="middle"
+            fontSize="9"
+            fill="#7a6a9a"
+          >
+            Dear {name.split(" ")[0]}
+          </text>
+        </>
+      )}
+
+      {lines}
+
+      {front && (
+        <text
+          x="150"
+          y="300"
+          textAnchor="middle"
+          fontSize="12.5"
+          fontWeight="700"
+          fill="#241a3d"
+          fontFamily="Georgia, serif"
+        >
+          {course}
+        </text>
+      )}
+
+      <text
+        x="150"
+        y="336"
+        textAnchor="middle"
+        fontSize="13"
+        fontWeight="800"
+        fill="#6d28d9"
+      >
+        DizitalAdda
+      </text>
+      <rect x="70" y="350" width="160" height="2" fill="#e8cf86" />
+    </svg>
+  );
+}
+
+export default function CertificatesMarquee({ certificates = defaultCertificates }) {
   const [selectedCert, setSelectedCert] = useState(null);
+  const trackRef = useRef(null);
+  const isHoveredRef = useRef(false);
+
+  // Duplicated list 3x for smooth infinite looping without jerky resets
+  const loopedList = [...certificates, ...certificates, ...certificates];
+
+  // ================= AUTO-SCROLLING LOGIC =================
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    let animId;
+    const speed = 0.85; // Speed in pixels per frame
+
+    const step = () => {
+      if (!isHoveredRef.current && track) {
+        track.scrollLeft += speed;
+        // Seamless loop when reaching 1/3 of the total content width
+        const singleSetWidth = track.scrollWidth / 3;
+        if (track.scrollLeft >= singleSetWidth * 2) {
+          track.scrollLeft -= singleSetWidth;
+        }
+      }
+      animId = requestAnimationFrame(step);
+    };
+
+    animId = requestAnimationFrame(step);
+
+    const onEnter = () => {
+      isHoveredRef.current = true;
+    };
+    const onLeave = () => {
+      isHoveredRef.current = false;
+    };
+
+    track.addEventListener("mouseenter", onEnter);
+    track.addEventListener("mouseleave", onLeave);
+    track.addEventListener("touchstart", onEnter, { passive: true });
+    track.addEventListener("touchend", onLeave, { passive: true });
+
+    return () => {
+      cancelAnimationFrame(animId);
+      track.removeEventListener("mouseenter", onEnter);
+      track.removeEventListener("mouseleave", onLeave);
+      track.removeEventListener("touchstart", onEnter);
+      track.removeEventListener("touchend", onLeave);
+    };
+  }, [certificates]);
+
+  // Prev / Next button scroll handlers
+  const handleScrollNav = (direction) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const card = track.querySelector(`.${styles.cert}`);
+    const cardWidth = card ? card.offsetWidth + 24 : 314;
+    track.scrollBy({ left: direction * cardWidth * 2, behavior: "smooth" });
+  };
 
   // Close modal on ESC key
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === "Escape") {
-        setSelectedCert(null);
-      }
+      if (e.key === "Escape") setSelectedCert(null);
     };
     if (selectedCert) {
       window.addEventListener("keydown", handleKeyDown);
@@ -57,152 +273,164 @@ export default function CertificatesMarquee() {
 
   return (
     <section
-      className={styles.section}
-      aria-labelledby="certificates-marquee-title"
+      className={styles.sec}
       id="student-certifications"
+      aria-labelledby="certifications-heading"
     >
-      <div className={styles.container}>
+      <div className={styles.wrap}>
         {/* ================= HEADER ================= */}
-        <div className={styles.header}>
-          <span className={styles.badge}>Government &amp; Industry Accredited</span>
-          <h2 id="certificates-marquee-title" className={styles.heading}>
-            Student <span className={styles.headingGradient}>Certifications</span>
+        <div className={styles.head}>
+          <h2 id="certifications-heading" className={styles.title}>
+            Student <span className={styles.g}>Certifications</span>
           </h2>
-          <p className={styles.subtext}>
-            Course complete hone ke baad har student ko Google, Meta Blueprint, HubSpot, Semrush aur DizitalAdda ke verified certificates milte hain jo top companies me valid hain.
+          <p className={styles.sub}>
+            After completing a course, every student receives verified certificates from Google, Meta Blueprint, HubSpot, Semrush and DizitalAdda, valid at top companies.
           </p>
-
-          {/* Trust Badges Strip */}
-          <div className={styles.trustStrip}>
-            <div className={styles.trustPill}>
-              <span className={styles.trustDot} />
-              <span>10+ Global Certifications</span>
-            </div>
-            <div className={styles.trustPill}>
-              <span className={styles.trustDot} />
-              <span>97% Placement Rate</span>
-            </div>
-            <div className={styles.trustPill}>
-              <span className={styles.trustDot} />
-              <span>100% Industry Verified</span>
-            </div>
-            <div className={styles.trustPill}>
-              <span className={styles.trustDot} />
-              <span>Shareable on LinkedIn</span>
-            </div>
+          <div className={styles.chips}>
+            <span className={styles.chipItem}>
+              <i className={styles.chipDot} aria-hidden="true" />
+              10+ Global Certifications
+            </span>
+            <span className={styles.chipItem}>
+              <i className={styles.chipDot} aria-hidden="true" />
+              97% Placement Rate
+            </span>
+            <span className={styles.chipItem}>
+              <i className={styles.chipDot} aria-hidden="true" />
+              100% Industry Verified
+            </span>
+            <span className={styles.chipItem}>
+              <i className={styles.chipDot} aria-hidden="true" />
+              Shareable on LinkedIn
+            </span>
           </div>
+        </div>
+
+        {/* ================= AUTO-SCROLLING STAGE ================= */}
+        <div className={styles.stage}>
+          {/* Previous Button */}
+          <button
+            className={`${styles.nav} ${styles.navLeft}`}
+            onClick={() => handleScrollNav(-1)}
+            aria-label="Previous certificates"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" className={styles.navIcon}>
+              <path d="M15 5l-7 7 7 7" />
+            </svg>
+          </button>
+
+          {/* Auto-scrolling Track */}
+          <div className={styles.track} ref={trackRef}>
+            {loopedList.map((item, index) => (
+              <button
+                key={`${item.name}-${index}`}
+                className={styles.cert}
+                onClick={() => setSelectedCert(item)}
+                type="button"
+                aria-label={`View certificate: ${item.name} · ${item.course}`}
+              >
+                {/* Overlapping Dual Certificate Pair */}
+                <div className={styles.pair}>
+                  {/* Back Layer: Congratulations Letter */}
+                  <div className={`${styles.pairLayer} ${styles.backLayer}`}>
+                    <CertificateSvg name={item.name} course={item.course} front={false} />
+                  </div>
+
+                  {/* Front Layer: Student Certificate (Image or SVG) */}
+                  <div className={`${styles.pairLayer} ${styles.frontLayer}`}>
+                    {item.image ? (
+                      <img
+                        src={item.image}
+                        alt={`Certificate of ${item.name}`}
+                        className={styles.pairImage}
+                        loading="lazy"
+                        decoding="async"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                        }}
+                      />
+                    ) : (
+                      <CertificateSvg name={item.name} course={item.course} front={true} />
+                    )}
+                  </div>
+
+                  <span className={styles.zoom}>Click to zoom</span>
+                </div>
+
+                {/* Card Meta Footer */}
+                <div className={styles.meta}>
+                  <b title={item.course}>{item.course}</b>
+                  <span className={styles.badge}>{item.badge}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {/* Next Button */}
+          <button
+            className={`${styles.nav} ${styles.navRight}`}
+            onClick={() => handleScrollNav(1)}
+            aria-label="Next certificates"
+            type="button"
+          >
+            <svg viewBox="0 0 24 24" className={styles.navIcon}>
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
 
-      {/* ================= DUAL INFINITE MARQUEE TRACKS ================= */}
-      <div className={styles.marqueeSection} aria-label="Student certificates ticker">
-        {/* ROW 1: Scrolling Left */}
-        <div className={styles.marqueeRow}>
-          <div className={styles.marqueeTrackLeft}>
-            {/* Duplicated 2x for 100% seamless infinite looping */}
-            {[...row1, ...row1].map((cert, index) => (
-              <div
-                key={`r1-${cert.id}-${index}`}
-                className={styles.card}
-                onClick={() => setSelectedCert(cert)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setSelectedCert(cert);
-                  }
-                }}
-                tabIndex={0}
-                role="button"
-                aria-label={`View full certificate: ${cert.title}`}
-              >
-                <div className={styles.imageWrap}>
-                  <img
-                    src={cert.src}
-                    alt={`DizitalAdda Student Certificate ${cert.id} - ${cert.title}`}
-                    className={styles.certImage}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className={styles.zoomBadge}>
-                    <span>🔍 View</span>
-                  </div>
-                </div>
-                <div className={styles.cardFooter}>
-                  <span className={styles.certLabel}>{cert.title}</span>
-                  <span className={styles.certTag}>{cert.student}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* ROW 2: Scrolling Right */}
-        <div className={styles.marqueeRow}>
-          <div className={styles.marqueeTrackRight}>
-            {/* Duplicated 2x for 100% seamless infinite looping */}
-            {[...row2, ...row2].map((cert, index) => (
-              <div
-                key={`r2-${cert.id}-${index}`}
-                className={styles.card}
-                onClick={() => setSelectedCert(cert)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setSelectedCert(cert);
-                  }
-                }}
-                tabIndex={0}
-                role="button"
-                aria-label={`View full certificate: ${cert.title}`}
-              >
-                <div className={styles.imageWrap}>
-                  <img
-                    src={cert.src}
-                    alt={`DizitalAdda Student Certificate ${cert.id} - ${cert.title}`}
-                    className={styles.certImage}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className={styles.zoomBadge}>
-                    <span>🔍 View</span>
-                  </div>
-                </div>
-                <div className={styles.cardFooter}>
-                  <span className={styles.certLabel}>{cert.title}</span>
-                  <span className={styles.certTag}>{cert.student}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* ================= LIGHTBOX ZOOM MODAL ================= */}
+      {/* ================= MODAL DIALOG PREVIEW ================= */}
       {selectedCert && (
         <div
-          className={styles.lightboxOverlay}
+          className={styles.dialogOverlay}
           onClick={() => setSelectedCert(null)}
           role="dialog"
           aria-modal="true"
-          aria-label="Certificate Preview"
+          aria-label="Certificate preview"
         >
           <div
-            className={styles.lightboxContent}
+            className={styles.dialogCard}
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              className={styles.lightboxClose}
-              onClick={() => setSelectedCert(null)}
-              aria-label="Close certificate preview"
-              type="button"
-            >
-              ✕
-            </button>
-            <img
-              src={selectedCert.src}
-              alt={selectedCert.title}
-              className={styles.lightboxImage}
-            />
+            <div className={styles.cap}>
+              <b>
+                {selectedCert.name} · {selectedCert.course}
+              </b>
+              <button
+                className={styles.closeBtn}
+                onClick={() => setSelectedCert(null)}
+                aria-label="Close"
+                type="button"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className={styles.big}>
+              {/* Front Certificate */}
+              <div className={styles.bigLayer}>
+                {selectedCert.image ? (
+                  <img src={selectedCert.image} alt={selectedCert.course} />
+                ) : (
+                  <CertificateSvg
+                    name={selectedCert.name}
+                    course={selectedCert.course}
+                    front={true}
+                  />
+                )}
+              </div>
+
+              {/* Back Certificate (Congratulations Letter) */}
+              <div className={styles.bigLayer}>
+                <CertificateSvg
+                  name={selectedCert.name}
+                  course={selectedCert.course}
+                  front={false}
+                />
+              </div>
+            </div>
           </div>
         </div>
       )}

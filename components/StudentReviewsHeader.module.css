@@ -1,0 +1,236 @@
+/* ==========================================================================
+   STUDENT REVIEWS HEADER - SCOPED CSS
+   All styles scoped under .srHeader
+   Theme-independent: uses font-family: inherit and CSS variables with fallbacks
+   ========================================================================== */
+
+.srHeader {
+  /* THEME CSS VARIABLES (Easily remapped to your brand in one place) */
+  --sr-grad-start: #c026d3;
+  --sr-grad-end: #7c3aed;
+  --sr-ink: #111827;
+  --sr-muted: #64748b;
+  --sr-card: #ffffff;
+  --sr-line: #e2e8f0;
+  --sr-bg: #fdfbf7;
+
+  position: relative;
+  width: 100%;
+  background-color: var(--sr-bg);
+  background-image:
+    radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--sr-grad-start) 13%, transparent) 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, color-mix(in srgb, var(--sr-grad-end) 13%, transparent) 0%, transparent 45%);
+  padding: 48px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: inherit;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Fallback for browsers without color-mix */
+@supports not (color: color-mix(in srgb, red, blue)) {
+  .srHeader {
+    background-image:
+      radial-gradient(circle at 85% 15%, rgba(192, 38, 211, 0.13) 0%, transparent 45%),
+      radial-gradient(circle at 15% 85%, rgba(124, 58, 237, 0.13) 0%, transparent 45%);
+  }
+}
+
+.srInner {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   1. LABEL CHIP (Inline-flex, sentence case, gradient dot, subtle shadow)
+   ========================================================================== */
+.srChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--sr-card);
+  border: 1px solid var(--sr-line);
+  border-radius: 9999px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sr-grad-end);
+  box-shadow: 0 2px 8px -2px rgba(17, 24, 39, 0.05);
+  line-height: 1;
+}
+
+.srChipDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sr-grad-start), var(--sr-grad-end));
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   2. HEADING (clamp(38px, 6vw, 60px), weight 800, tight tracking)
+   ========================================================================== */
+.srHeading {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(38px, 6vw, 60px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  color: var(--sr-ink);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.srHeadingHighlight {
+  background: linear-gradient(90deg, var(--sr-grad-start), var(--sr-grad-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  margin-left: 0.22em;
+}
+
+/* ==========================================================================
+   3. DECORATIVE HAND-DRAWN WAVY UNDERLINE (Inline SVG)
+   ========================================================================== */
+.srWave {
+  width: min(240px, 60%);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   4. SUBTEXT (17px, --sr-muted, centered, max-width 46ch)
+   ========================================================================== */
+.srSubtext {
+  margin: 0;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--sr-muted);
+  text-align: center;
+  max-width: 46ch;
+  text-wrap: balance;
+}
+
+/* ==========================================================================
+   5. SOCIAL PROOF ROW (Overlapping Avatars + 5 Stars + 4.9 Score)
+   ========================================================================== */
+.srProof {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.srAvatars {
+  display: flex;
+  align-items: center;
+}
+
+.srAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2.5px solid var(--sr-bg);
+  background: var(--av-bg, var(--sr-grad-end));
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -9px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  user-select: none;
+}
+
+.srAvatar:first-child {
+  margin-left: 0;
+}
+
+.srRating {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14.5px;
+  color: var(--sr-muted);
+  line-height: 1;
+}
+
+.srStars {
+  color: #f59e0b;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.srScore {
+  font-weight: 800;
+  color: var(--sr-ink);
+  font-size: 15px;
+}
+
+.srCount {
+  color: var(--sr-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   6. DARK MODE (Inherits cleanly via variables)
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  .srHeader {
+    --sr-ink: #f8fafc;
+    --sr-muted: #94a3b8;
+    --sr-card: #18152b;
+    --sr-line: #2b2347;
+    --sr-bg: #0f0d1b;
+  }
+}
+
+/* If website has a dark class on body/html */
+:global([data-theme="dark"]) .srHeader,
+:global(.dark) .srHeader {
+  --sr-ink: #f8fafc;
+  --sr-muted: #94a3b8;
+  --sr-card: #18152b;
+  --sr-line: #2b2347;
+  --sr-bg: #0f0d1b;
+}
+
+/* ==========================================================================
+   7. PREFERS-REDUCED-MOTION & RESPONSIVE
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .srHeader * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .srHeader {
+    padding-top: 36px;
+    padding-bottom: 32px;
+  }
+  .srSubtext {
+    font-size: 15.5px;
+  }
+  .srProof {
+    gap: 10px;
+  }
+}

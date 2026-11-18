@@ -1,18 +1,19 @@
 /* ==========================================================================
-   AWARDS & RECOGNITIONS SHOWCASE - CSS MODULE
-   Brand: Purple (#6d28d9), Accent (#a855f7), Dark (#111827), Muted (#6f6889)
+   AWARDS & RECOGNITIONS SHOWCASE - PHOTO-FIRST 4:5 CARD GRID
+   Strict Theme: Inherits site typography, fonts and colors
+   Background: Soft lavender/light page background intact
    ========================================================================== */
 
 .section {
   position: relative;
   width: 100%;
-  padding: clamp(56px, 8vw, 96px) clamp(16px, 4vw, 40px);
+  padding: clamp(60px, 8vw, 96px) clamp(16px, 4vw, 40px);
   background-color: #faf8fe;
   background-image:
     radial-gradient(circle at 12% 15%, rgba(168, 85, 247, 0.12) 0%, transparent 45%),
     radial-gradient(circle at 88% 85%, rgba(109, 40, 217, 0.12) 0%, transparent 45%);
   color: #1d1538;
-  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", "Raleway", system-ui, sans-serif;
+  font-family: inherit;
   overflow: hidden;
 }
 
@@ -21,7 +22,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(32px, 5vw, 48px);
+  gap: clamp(32px, 5vw, 44px);
 }
 
 /* ==========================================================================
@@ -29,7 +30,7 @@
    ========================================================================== */
 .header {
   text-align: center;
-  max-width: 820px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -56,7 +57,8 @@
 .heading {
   margin: 0;
   color: #111827;
-  font-size: clamp(28px, 4.2vw, 44px);
+  font-family: inherit;
+  font-size: clamp(30px, 4.2vw, 46px);
   font-weight: 850;
   line-height: 1.18;
   letter-spacing: -0.03em;
@@ -69,318 +71,341 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
-  margin-left: 0.25em;
+  margin-left: 0.22em;
 }
 
 .subtext {
   margin: 0;
   color: #6f6889;
+  font-family: inherit;
   font-size: clamp(15px, 1.8vw, 17px);
   line-height: 1.6;
-  max-width: 680px;
+  max-width: 660px;
   text-wrap: balance;
 }
 
 /* ==========================================================================
-   2. AWARDS GRID (4 columns desktop, 2 tablet, 1 mobile)
+   2. PHOTO-FIRST 4-COLUMN CARD GRID (Desktop 4, Tablet 2, Mobile 1)
    ========================================================================== */
 .awardsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
   width: 100%;
 }
 
+/* Card: 4:5 Aspect Ratio Portrait, 20px radius, overflow hidden */
 .card {
-  background: #ffffff;
-  border: 1px solid #ebe4f7;
-  border-radius: 20px;
-  padding: 12px;
-  box-shadow: 0 10px 25px -5px rgba(109, 40, 217, 0.08), 0 4px 10px -2px rgba(29, 21, 56, 0.03);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
   position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
   overflow: hidden;
+  background: #111827;
+  border: 1px solid rgba(109, 40, 217, 0.15);
+  box-shadow: 0 4px 20px rgba(80, 30, 140, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  outline: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  user-select: none;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: #d1bdf0;
-  box-shadow: 0 20px 40px -8px rgba(109, 40, 217, 0.18), 0 6px 16px -4px rgba(29, 21, 56, 0.06);
+  box-shadow: 0 16px 36px -6px rgba(109, 40, 217, 0.22), 0 6px 14px -2px rgba(15, 23, 42, 0.12);
+  border-color: rgba(168, 85, 247, 0.4);
 }
 
-/* Top Image Frame */
-.imageWrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #1d1538;
-  cursor: pointer;
-  outline: none;
+.card:focus-visible {
+  outline: 3px solid #7c3aed;
+  outline-offset: 3px;
 }
 
-.imageWrap:focus-visible {
-  outline: 2px solid #6d28d9;
-  outline-offset: 2px;
-}
-
+/* 100% Fill Image with Top Alignment & Zoom Transition */
 .awardImage {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card:hover .awardImage {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
-/* Top-left Dignitary Pill */
-.guestPill {
+/* Top-Right Expand Icon (Frosted Glass, appears on hover) */
+.expandButton {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(29, 21, 56, 0.72);
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.38);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: #ffffff;
-  font-size: 11px;
-  font-weight: 650;
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* Hover Zoom Button */
-.zoomButton {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: #1d1538;
-  font-size: 11.5px;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
-  transform: translateY(4px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(-4px);
+  transition: opacity 0.22s ease, transform 0.22s ease, background 0.2s ease;
+  z-index: 3;
   pointer-events: none;
 }
 
-.card:hover .zoomButton {
+.expandIcon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.card:hover .expandButton {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* ==========================================================================
-   3. CARD BODY (Kis chiz ka award hai + Kise mila hai)
+   3. BOTTOM GRADIENT OVERLAY (Only bottom 45%, top 55% stays unobstructed)
    ========================================================================== */
-.cardBody {
-  padding: 14px 6px 4px 6px;
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52%;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.94) 0%,
+    rgba(15, 23, 42, 0.62) 48%,
+    transparent 100%
+  );
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  justify-content: flex-end;
+  padding: 20px 18px;
+  z-index: 2;
+  pointer-events: none;
 }
 
-/* Kis chiz ka award hai */
-.awardTitle {
-  margin: 0;
-  font-size: 17px;
-  font-weight: 800;
-  color: #111827;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-}
-
-.awardCategory {
-  margin: 4px 0 0 0;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: #6d28d9;
-}
-
-/* Details Box: Kise mila hai aur kisne diya hai */
-.detailsBox {
-  margin-top: 12px;
-  padding: 10px 12px;
-  background: #f7f4fd;
-  border: 1px solid #eee7fb;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.detailRow {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 12.5px;
-  line-height: 1.4;
-}
-
-.detailLabel {
-  font-weight: 700;
-  color: #1d1538;
-  flex-shrink: 0;
-}
-
-.detailValue {
-  color: #4b4566;
-  font-weight: 500;
-}
-
-.recipientValue {
-  color: #6d28d9;
-  font-weight: 700;
-}
-
-/* Quote/Citation description */
-.citation {
-  margin: 10px 0 0 0;
-  font-size: 12.5px;
-  line-height: 1.5;
-  color: #6f6889;
-}
-
-/* Footer Tag */
-.cardFooter {
-  margin-top: auto;
-  padding-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid #f1ecf9;
-}
-
-.yearTag {
-  font-size: 11.5px;
-  font-weight: 700;
-  color: #6f6889;
-}
-
-.verifiedBadge {
+/* a) Compact Frosted-Glass Pill Badge */
+.pillBadge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 11.5px;
-  font-weight: 650;
-  color: #059669;
-  background: #ecfdf5;
-  padding: 2px 8px;
-  border-radius: 999px;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 7px;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.greenDot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #10b981;
+.pillIcon {
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* b) Bold White Heading (1-2 lines max) */
+.awardTitle {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(16px, 1.4vw, 19px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* c) 1-Line Subtitle in soft lavender / light-grey */
+.awardSubtitle {
+  margin: 4px 0 0 0;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #cbd5e1;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================================================
-   4. LIGHTBOX PREVIEW MODAL
+   4. INTERACTIVE LIGHTBOX MODAL (Click to Enlarge)
    ========================================================================== */
 .lightboxOverlay {
   position: fixed;
   inset: 0;
   z-index: 999999;
-  background: rgba(15, 12, 28, 0.9);
+  background: rgba(11, 8, 22, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  animation: fadeIn 0.2s ease forwards;
+  padding: clamp(16px, 3vw, 32px);
+  animation: fadeIn 0.22s ease forwards;
 }
 
 .lightboxContent {
   position: relative;
-  max-width: min(92vw, 980px);
-  max-height: 90vh;
+  max-width: min(94vw, 960px);
+  max-height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+}
+
+.lightboxImageWrap {
+  width: 100%;
+  max-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+  background: #111827;
 }
 
 .lightboxImage {
   max-width: 100%;
   max-height: 75vh;
   object-fit: contain;
-  border-radius: 14px;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
-  background: #ffffff;
-  padding: 6px;
+  display: block;
 }
 
-.lightboxCaption {
-  color: #ffffff;
+.lightboxDetails {
   text-align: center;
-  max-width: 700px;
+  color: #ffffff;
+  max-width: 680px;
 }
 
 .lightboxTitle {
-  font-size: 18px;
-  font-weight: 750;
   margin: 0;
+  font-family: inherit;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
 }
 
-.lightboxSub {
-  font-size: 13.5px;
-  color: #d1c8ec;
+.lightboxPresenter {
   margin: 4px 0 0 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c4b5fd;
+}
+
+.lightboxRecipient {
+  margin: 2px 0 0 0;
+  font-family: inherit;
+  font-size: 13px;
+  color: #94a3b8;
 }
 
 .lightboxClose {
   position: absolute;
-  top: -44px;
+  top: -46px;
   right: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #ffffff;
   font-size: 18px;
-  font-weight: 750;
-  width: 36px;
-  height: 36px;
+  font-weight: 700;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  outline: none;
 }
 
 .lightboxClose:hover {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.32);
   transform: scale(1.08);
 }
 
+.lightboxClose:focus-visible {
+  outline: 2px solid #ffffff;
+}
+
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* ==========================================================================
-   5. RESPONSIVE DESIGN
+   5. RESPONSIVE LAYOUTS
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) and (min-width: 641px) {
+  .awardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
   .awardsGrid {
     grid-template-columns: 1fr;
-  }
-  .card {
-    max-width: 440px;
+    max-width: 360px;
     margin: 0 auto;
+  }
+
+  .expandButton {
+    opacity: 1; /* Always visible on touch devices */
+    transform: translateY(0);
+  }
+
+  .lightboxClose {
+    top: -42px;
+    right: 4px;
+  }
+}
+
+/* ==========================================================================
+   6. PREFERS-REDUCED-MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .awardImage,
+  .expandButton {
+    transition: none !important;
+  }
+  .card:hover {
+    transform: none !important;
+  }
+  .card:hover .awardImage {
+    transform: none !important;
   }
 }

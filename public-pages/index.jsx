@@ -12,6 +12,8 @@ import StudentReviews from "../components/StudentReviews.jsx";
 import StudentVideoReviews from "../components/StudentVideoReviews.jsx";
 import CertificatesMarquee from "../components/CertificatesMarquee.jsx";
 import AwardsShowcase from "../components/AwardsShowcase.jsx";
+import FeaturedInPR from "../components/FeaturedInPR.jsx";
+import BookDemoSection from "../components/BookDemoSection.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 
@@ -578,6 +580,7 @@ Explore <span className="cc-highlight">Our Course Categories</span>
 <StudentVideoReviews />
 <CertificatesMarquee />
 <AwardsShowcase />
+<FeaturedInPR />
 
 
 <section id="refer-earn" className="refer-earn-section">
@@ -727,180 +730,8 @@ View Gallery
 </div>
 </section>
 
-
-{/*  Book Demo Section  */}
-
-
-<section className="book-demo-section bg-mesh" id="bookDemo">
-<div className="book-demo-inner">
-<div className="book-demo-header">
-<p className="book-demo-eyebrow">Free Session</p>
-<h2 className="book-demo-title">Book a <span className="cc-highlight">Free Demo</span> Class ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â Experience Our Career Training Programs Before You Enrol</h2>
-<div className="book-demo-underline"></div>
-<p className="book-demo-subtitle">DizitalAdda's free demo class is a 1-hour live session for your chosen course, led by the same trainer who teaches the full program. It includes personalised career counselling and is available online or at the Delhi-NCR campus.</p>
-</div>
-<div className="book-demo-layout">
-<div className="bd-calendar-panel">
-<div className="bd-cal-header">
-<span className="bd-cal-month-label" id="bdCalMonthLabel"></span>
-<div className="bd-cal-nav">
-<button id="bdCalPrev" aria-label="Previous month" type="button">ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹</button>
-<button id="bdCalNext" aria-label="Next month" type="button">ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âº</button>
-</div>
-</div>
-<div className="bd-cal-dow">
-<span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
-</div>
-<div className="bd-cal-grid" id="bdCalGrid"></div>
-<div className="bd-cal-legend">
-<div className="bd-cal-legend-item"><span className="bd-legend-dot available"></span> Available</div>
-<div className="bd-cal-legend-item"><span className="bd-legend-dot today-dot"></span> Today</div>
-<div className="bd-cal-legend-item"><span className="bd-legend-dot selected-dot"></span> Selected</div>
-<div className="bd-cal-legend-item"><span className="bd-legend-dot past-dot"></span> Past (Unavailable)</div>
-</div>
-<div className="bd-selected-display" id="bdSelectedDisplay">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="currentColor" style={{"width":"16px","height":"16px","flexShrink":"0"}}><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"></path></svg>
-<span>Select a date to book your demo</span>
-</div>
-<div className="bd-info-list">
-<div className="bd-info-item">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z"></path></svg>
-<span>1-hour live session - actual curriculum, not a sales pitch</span>
-</div>
-<div className="bd-info-item">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-<span>100% free - zero obligation, zero hidden charges</span>
-</div>
-<div className="bd-info-item">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m4-4a4 4 0 100-8 4 4 0 000 8z"></path></svg>
-<span>Personalized counselling after the demo session</span>
-</div>
-<div className="bd-info-item">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path></svg>
-<span>Online or Offline (Delhi/NCR) - your choice</span>
-</div>
-</div>
-</div>
-<div className="book-demo-form-wrap">
-<form className="book-demo-form" id="bookDemoForm" noValidate={true}>
-<input type="hidden" id="bd_date" name="date" />
-<div className="bdf-row">
-<div className="bdf-field">
-<label>Preferred Date <span>*</span></label>
-<div className="bd-form-date-echo" id="bdFormDateEcho">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.8" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"></path></svg>
-<span id="bdFormDateText">ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â Pick a date from the calendar</span>
-</div>
-</div>
-</div>
-<div className="bdf-row">
-<div className="bdf-field">
-<label htmlFor="bd_name">Full Name <span>*</span></label>
-<input type="text" id="bd_name" name="name" placeholder="Your full name" required={true} autoComplete="name" />
-</div>
-</div>
-<div className="bdf-row">
-<div className="bdf-field">
-<label htmlFor="bd_phone">Phone Number <span>*</span></label>
-<input type="tel" id="bd_phone" name="phone" placeholder="98765 43210" required={true} autoComplete="tel" pattern="[6-9][0-9]{9}" />
-</div>
-</div>
-<div className="bdf-row">
-<div className="bdf-field">
-<label htmlFor="bd_email">Email Address <span>*</span></label>
-<input type="email" id="bd_email" name="email" placeholder="you@email.com" required={true} autoComplete="email" />
-</div>
-</div>
-<div className="bdf-row two-col">
-<div className="bdf-field">
-<label htmlFor="bd_course">Course Interest <span>*</span></label>
-<select id="bd_course" name="course" required={true}>
-<option value="">Select a course</option>
-<option value="Expert Digital Marketing">Expert Digital Marketing</option>
-<option value="Advanced Digital Marketing">Advanced Digital Marketing</option>
-<option value="Professional Digital Marketing">Professional Digital Marketing</option>
-<option value="Digital Marketing Basics">Digital Marketing Basics</option>
-</select>
-</div>
-<div className="bdf-field">
-<label htmlFor="bd_mode">Preferred Mode <span>*</span></label>
-<select id="bd_mode" name="mode" required={true}>
-<option value="">Select mode</option>
-<option value="Online">Online</option>
-<option value="Offline">Offline (Delhi)</option>
-</select>
-</div>
-</div>
-<div className="bdf-row">
-<div className="bdf-field">
-<label htmlFor="bd_message">Anything you'd like us to know?</label>
-<textarea id="bd_message" name="message" placeholder="E.g. I'm a working professional looking to switch careers..." rows="3"></textarea>
-</div>
-</div>
-<button type="submit" className="bdf-submit" id="bdSubmitBtn">
-<span id="bdBtnText">Book My Free Demo</span>
-<span id="bdBtnLoader" style={{"display":"none"}}>Booking...</span>
-</button>
-<div className="bdf-status" id="bdStatus"></div>
-</form>
-</div>
-</div>
-</div>
-</section>
-
-
-<section className="latest-blogs-section bg-aurora">
-<div className="aurora-blob aurora-blob-1"></div>
-<div className="aurora-blob aurora-blob-2"></div>
-<div className="aurora-blob aurora-blob-3"></div>
-<div className="latest-blogs-inner">
-<div className="latest-blogs-header">
-<p className="testimonials-eyebrow">From Our Blog</p>
-<h2 className="testimonials-title">Latest <span className="cc-highlight">Blog Articles</span></h2>
-<div className="testimonials-underline"></div>
-<p className="faqDetails latest-blogs-subtitle"></p>
-<style dangerouslySetInnerHTML={{__html:"\r\n/* Make latest blog section heading and subheading black */\r\n.latest-blogs-header .testimonials-eyebrow,\r\n.latest-blogs-header .testimonials-title,\r\n.latest-blogs-header .latest-blogs-subtitle {\r\ncolor: #111 !important;\r\n}\r\n"}} />
-</div>
-<div className="latest-blogs-grid">
-<article className="latest-blog-card slide-up-section">
-<div className="latest-blog-content">
-<div className="latest-blog-meta">
-<span>Digital Marketing</span>
-<span>03 Nov 2026</span>
-</div>
-<h3><a href="https://dizitaladda.com/blogs/20-digital-marketing-case-studies-to-understand-the-power-of-digital-marketing">20 Digital Marketing Case Studies to Understand the Power of Digital Marketing</a></h3>
-<p>As digital marketing continuously transforms over time, case studies act as supreme beacons of intelligence revealing effective strategies, cutting edge campaigns, and over literate approaches.</p>
-<a className="latest-blog-link" href="https://dizitaladda.com/blogs/20-digital-marketing-case-studies-to-understand-the-power-of-digital-marketing">Read More <span aria-hidden="true">ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢</span></a>
-</div>
-</article>
-<article className="latest-blog-card slide-up-section">
-<div className="latest-blog-content">
-<div className="latest-blog-meta">
-<span>Digital Marketing</span>
-<span>03 Nov 2026</span>
-</div>
-<h3><a href="https://dizitaladda.com/blogs/28-top-startups-in-india-2024-business-model-explained">28 Top startups in India 2024-|-Business Model Explained</a></h3>
-<p>Discover India</p>
-<a className="latest-blog-link" href="https://dizitaladda.com/blogs/28-top-startups-in-india-2024-business-model-explained">Read More <span aria-hidden="true">ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢</span></a>
-</div>
-</article>
-<article className="latest-blog-card slide-up-section">
-<div className="latest-blog-content">
-<div className="latest-blog-meta">
-<span>Digital Marketing</span>
-<span>03 Nov 2026</span>
-</div>
-<h3><a href="https://dizitaladda.com/blogs/5-key-elements-of-a-successful-seo-infographic">5 Key Elements of a Successful SEO Infographic: A Comprehensive Guide</a></h3>
-<p>Utilize the full power of SEO by carefully preparing a high quality infographic. Get familiar with the basis on which SEO-effective and strikingly beautiful contents are built. Create your own digital world fair project below.</p>
-<a className="latest-blog-link" href="https://dizitaladda.com/blogs/5-key-elements-of-a-successful-seo-infographic">Read More <span aria-hidden="true">ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢</span></a>
-</div>
-</article>
-</div>
-<div className="latest-blogs-cta">
-<a href="https://dizitaladda.com/blogs"><button className="cc-btn">View All Blogs</button></a>
-</div>
-</div>
-</section>
+{/*  Book Demo Section (Cal.com-style 3-Column Booking)  */}
+<BookDemoSection />
 
 
 <section className="faqs bg-aurora">
