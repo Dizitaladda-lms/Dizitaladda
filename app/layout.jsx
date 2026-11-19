@@ -20,8 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={plusJakartaSans.variable}>{children}</body>
+    <html lang="en" className={plusJakartaSans.variable}>
+      <body className={`${plusJakartaSans.variable} ${plusJakartaSans.className}`}>{children}</body>
     </html>
   );
 }

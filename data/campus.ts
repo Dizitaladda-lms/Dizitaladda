@@ -138,7 +138,7 @@ export const campusData: CampusSectionData = {
       id: "learning-lab",
       caption: "Learning lab",
       image:
-        "https://images.unsplash.com/photo-1524176741849-3a31f1e4d7b4?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1000&q=80",
       alt: "Students learning together in a bright training room",
       span: "tall",
     },

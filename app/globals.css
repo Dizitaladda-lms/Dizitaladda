@@ -54,7 +54,7 @@ p {
 h1 {
   font-family: var(--font-primary);
   font-size: clamp(32px, 4vw + 12px, 56px);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.025em;
   color: var(--color-heading);
@@ -63,7 +63,7 @@ h1 {
 h2 {
   font-family: var(--font-primary);
   font-size: clamp(26px, 2.5vw + 12px, 40px);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--color-heading);
@@ -72,7 +72,7 @@ h2 {
 h3 {
   font-family: var(--font-primary);
   font-size: clamp(20px, 1.8vw + 10px, 28px);
-  font-weight: 650;
+  font-weight: 750;
   line-height: 1.3;
   letter-spacing: -0.015em;
   color: var(--color-heading);
@@ -81,7 +81,7 @@ h3 {
 h4 {
   font-family: var(--font-primary);
   font-size: clamp(17px, 1.2vw + 10px, 22px);
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.35;
   color: var(--color-heading);
 }
@@ -153,7 +153,7 @@ h6 {
   margin: 0;
   font-family: var(--font-primary);
   font-size: clamp(26px, 2.5vw + 12px, 40px);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: var(--color-heading);

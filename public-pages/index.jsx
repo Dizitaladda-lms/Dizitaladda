@@ -6,7 +6,6 @@ import WhyTrustSequence from "../components/WhyTrustSequence.jsx";
 import PlacementShowcase from "../components/PlacementShowcase.jsx";
 import IndustryTrainerVideos from "../components/IndustryTrainerVideos.jsx";
 import HeroTrustStrip from "../components/HeroTrustStrip.jsx";
-import StudentProjectVideos from "../components/StudentProjectVideos.jsx";
 import PaidInternshipSection from "../components/PaidInternshipSection.jsx";
 import CampusSection from "../components/campus/CampusSection";
 import StudentReviews from "../components/StudentReviews.jsx";
@@ -581,7 +580,6 @@ export default function LegacyPage_index() {
 
 <PlacementShowcase />
 <IndustryTrainerVideos />
-<StudentProjectVideos />
 <PaidInternshipSection />
 <CampusSection />
 <StudentReviews />

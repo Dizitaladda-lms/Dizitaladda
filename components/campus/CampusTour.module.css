@@ -1,6 +1,7 @@
 /* ==========================================================================
    CINEMATIC CAMPUS TOUR - CSS MODULE
-   Brand Colors: Purple (#7C3AED / #6D28D9), Dark Navy (#0F0C22), White (#FFFFFF)
+   Flow: Video (1918/964) -> Staggered Fly-In Grid Reveal (2.74 Aspect Ratio)
+   Brand Colors: Purple (#6D28D9 / #7C3AED), Dark Navy (#0F0C22), White (#FFFFFF)
    ========================================================================== */
 
 .tourSection {
@@ -8,74 +9,115 @@
   width: 100%;
   padding: 0;
   background: transparent;
-  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   box-sizing: border-box;
 }
 
 .container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1240px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* ── 16:9 Stage Container ── */
-.stageWrapper {
-  position: relative;
-  width: 100%;
-  max-width: 1080px;
-  aspect-ratio: 16 / 9;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #0b0918;
-  box-shadow: 0 20px 50px rgba(15, 12, 34, 0.18), 0 0 0 1px rgba(124, 58, 237, 0.15);
-  margin-top: 10px;
+/* ==========================================================================
+   UNIFIED SECTION HEADER OVERRIDES (Plus Jakarta Sans + Bold)
+   ========================================================================== */
+
+.container :global(.section-header-title) {
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 850 !important;
+  font-size: clamp(32px, 3.8vw, 46px) !important;
+  letter-spacing: -0.03em !important;
 }
 
-/* ── Video Element ── */
+.container :global(.section-header-description) {
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: clamp(16px, 1.3vw, 19px) !important;
+  color: #374151 !important;
+}
+
+.container :global(.section-header-label) {
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* ==========================================================================
+   STAGE CONTAINER
+   Video Phase Aspect-Ratio: 1918 / 964 (~1.9896)
+   Grid Phase Aspect-Ratio: 2.74 / 1
+   Smooth 0.9s aspect-ratio transition ensures seamless height change
+   ========================================================================== */
+
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1918 / 964;
+  transition: aspect-ratio 0.9s cubic-bezier(0.25, 1, 0.35, 1);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0f0c22;
+  box-shadow: 0 20px 50px rgba(15, 12, 34, 0.16), 0 0 0 1px rgba(124, 58, 237, 0.12);
+  margin-top: 14px;
+}
+
+.stageGrid {
+  aspect-ratio: 2.74 / 1;
+}
+
+/* ==========================================================================
+   1. VIDEO LAYER
+   ========================================================================== */
+
+.videoWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  background: #000000;
+}
+
+.videoFading {
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+}
+
 .videoElement {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: opacity 0.4s ease;
 }
 
-.videoFading {
-  opacity: 0;
-}
-
-/* ── Video Controls Overlay (Top Right & Bottom Right) ── */
-.videoControlsTop {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 10;
-}
-
+/* Live Badge Top-Left */
 .videoBadge {
   position: absolute;
   top: 16px;
   left: 16px;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   padding: 6px 14px;
-  background: rgba(15, 12, 34, 0.78);
+  background: rgba(15, 12, 34, 0.85);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 9999px;
   color: #ffffff;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  z-index: 10;
+  z-index: 12;
 }
 
 .liveDot {
@@ -86,175 +128,62 @@
   box-shadow: 0 0 8px #10b981;
 }
 
-.controlBtn {
+/* Video Controls Top-Right */
+.videoControlsTop {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 12;
+}
+
+.pillBtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 7px 14px;
-  background: rgba(15, 12, 34, 0.78);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 8px 16px;
+  background: rgba(15, 12, 34, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 9999px;
   color: #ffffff;
-  font-size: 13px;
-  font-weight: 600;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 750;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
   user-select: none;
 }
 
-.controlBtn:hover {
-  background: rgba(124, 58, 237, 0.9);
+.pillBtn:hover {
+  background: rgba(109, 40, 217, 0.9);
   border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-1px);
 }
 
-.controlBtn:focus-visible {
-  outline: 2px solid #a78bfa;
+.pillBtn:focus-visible {
+  outline: 2px solid #c4b5fd;
   outline-offset: 2px;
 }
 
-.controlBtn svg {
+.skipBtn {
+  background: rgba(109, 40, 217, 0.85);
+  border-color: rgba(196, 181, 253, 0.4);
+}
+
+.skipBtn:hover {
+  background: #7c3aed;
+}
+
+.btnIcon {
   width: 15px;
   height: 15px;
-  stroke: currentColor;
 }
 
-/* Play/Pause Button on Stage (Bottom Left) */
-.stagePlayPauseBtn {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(15, 12, 34, 0.82);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 12;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.stagePlayPauseBtn:hover {
-  background: var(--color-primary, #7c3aed);
-  transform: scale(1.08);
-  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.5);
-}
-
-.stagePlayPauseBtn:focus-visible {
-  outline: 2px solid #a78bfa;
-  outline-offset: 2px;
-}
-
-.stagePlayPauseBtn svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-
-/* ── Images Crossfade Container ── */
-.imagesContainer {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.slideItem {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  pointer-events: none;
-}
-
-.slideActive {
-  opacity: 1;
-  pointer-events: auto;
-  z-index: 2;
-}
-
-.slideImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1);
-  transition: transform 3.5s ease-out;
-}
-
-.slideActive .slideImage {
-  transform: scale(1.03);
-}
-
-/* Gradient Placeholder for Broken Images */
-.gradientPlaceholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: linear-gradient(135deg, #18152b 0%, #2e1065 50%, #1e1b3a 100%);
-  color: #c4b5fd;
-}
-
-.placeholderIcon {
-  width: 48px;
-  height: 48px;
-  opacity: 0.8;
-}
-
-/* ── Slide Caption / Overlay at Bottom ── */
-.slideCaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 80px 28px 24px 80px;
-  background: linear-gradient(
-    180deg,
-    rgba(11, 9, 24, 0) 0%,
-    rgba(11, 9, 24, 0.6) 45%,
-    rgba(11, 9, 24, 0.94) 100%
-  );
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  z-index: 5;
-  pointer-events: none;
-}
-
-.placeName {
-  margin: 0;
-  font-size: clamp(20px, 2.5vw, 28px);
-  font-weight: 750;
-  color: #ffffff;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.placeNote {
-  margin: 0;
-  font-size: clamp(13px, 1.2vw, 15px);
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.45;
-  max-width: 680px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-}
-
-/* ── Stage Bottom Progress Bar (3.5s timer) ── */
+/* Thin Progress Bar along the bottom of the video */
 .progressBarTrack {
   position: absolute;
   bottom: 0;
@@ -262,150 +191,302 @@
   right: 0;
   height: 4px;
   background: rgba(255, 255, 255, 0.15);
-  z-index: 20;
+  z-index: 15;
 }
 
 .progressBarFill {
   height: 100%;
-  background: linear-gradient(90deg, #9333ea 0%, #a855f7 50%, #c084fc 100%);
+  background: linear-gradient(90deg, #6d28d9 0%, #a855f7 50%, #c084fc 100%);
   box-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
-  transition: width 0.05s linear;
+  transition: width 0.1s linear;
 }
 
-/* ── Places Horizontal Navigation Strip ── */
-.stripWrapper {
+/* ==========================================================================
+   2. FINAL GRID LAYER
+   Desktop: 3 columns x 3 rows, gap 16px, columns: 2.05fr 1fr 1fr
+   ========================================================================== */
+
+.grid {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 1080px;
-  margin-top: 20px;
-  animation: fadeIn 0.4s ease forwards;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2.05fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 16px;
+  z-index: 5;
 }
 
-.placesStrip {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  overflow-x: auto;
-  padding: 8px 4px 12px 4px;
-  scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
-  -webkit-overflow-scrolling: touch;
+.gridHidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.placesStrip::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+.gridActive {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Place Chip Button */
-.placeChip {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  background: #ffffff;
-  border: 1.5px solid #ede9fe;
-  border-radius: 9999px;
-  color: #4b5563;
-  font-size: 13.5px;
-  font-weight: 600;
-  white-space: nowrap;
+/* ==========================================================================
+   STAGGERED FLY-IN REVEAL ANIMATION
+   Duration: 0.85s
+   Easing: cubic-bezier(.2, .9, .25, 1.12) (subtle bounce)
+   Delay: calc(0.5s + var(--i) * 0.24s)
+   Order: Smart classroom -> Workspace -> Discussion zone -> Learning lab ->
+          Student lounge -> Library corner -> Reception
+   ========================================================================== */
+
+.tile {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 12, 34, 0.1);
+  background: #18152b;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.04);
-  transition: all 0.22s ease;
-  flex-shrink: 0;
+  transform: translate3d(0, 0, 0);
 }
 
-.placeChip:hover {
-  border-color: rgba(124, 58, 237, 0.4);
-  color: #111827;
-  transform: translateY(-1px);
+.gridActive .tile {
+  opacity: 0;
+  animation-duration: 0.85s;
+  animation-timing-function: cubic-bezier(0.2, 0.9, 0.25, 1.12);
+  animation-delay: calc(0.5s + var(--i, 0) * 0.24s);
+  animation-fill-mode: forwards;
 }
 
-.placeChip:focus-visible {
-  outline: 2px solid var(--color-primary, #7c3aed);
-  outline-offset: 2px;
+/* Stagger fly-in from each tile's assigned side */
+.gridActive .tile[data-side="left"] {
+  animation-name: flyInFromLeft;
 }
 
-/* Active Highlighted Chip */
-.chipCurrent {
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-  border-color: #7c3aed;
-  color: #ffffff !important;
-  font-weight: 700;
-  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35);
-  transform: translateY(-1px);
+.gridActive .tile[data-side="top"] {
+  animation-name: flyInFromTop;
 }
 
-.chipDot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+.gridActive .tile[data-side="bottom"] {
+  animation-name: flyInFromBottom;
 }
 
-/* Visited / Done Chip */
-.chipDone {
-  background: #fbf9ff;
-  border-color: #ddd6fe;
-  color: #6d28d9;
+.gridActive .tile[data-side="right"] {
+  animation-name: flyInFromRight;
 }
 
-.chipCheck {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #ede9fe;
-  color: #7c3aed;
-  font-size: 11px;
-  font-weight: 800;
-}
-
-.chipLabel {
-  line-height: 1;
-}
-
-@keyframes fadeIn {
-  from {
+@keyframes flyInFromLeft {
+  0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translate3d(-100px, 0, 0) scale(0.82) rotate(-3deg);
   }
-  to {
+  100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes flyInFromTop {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -90px, 0) scale(0.82) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes flyInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 90px, 0) scale(0.82) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes flyInFromRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0) scale(0.82) rotate(3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
   }
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN & ACCESSIBILITY
+   DESKTOP GRID CELL POSITIONS (3x3 Layout)
    ========================================================================== */
 
-@media (max-width: 768px) {
-  .tourSection {
-    padding: 48px 16px;
+/* Smart classroom: col 1, rows 1-2 (bada) */
+.tileSmartClassroom {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* Workspace: col 2, row 1 */
+.tileWorkspace {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Discussion zone: col 2, row 2 */
+.tileDiscussionZone {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Learning lab: col 3, rows 1-2 (lamba) */
+.tileLearningLab {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+/* Student lounge: col 1, row 3 */
+.tileStudentLounge {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/* Library corner: col 2, row 3 */
+.tileLibraryCorner {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Reception: col 3, row 3 */
+.tileReception {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+/* ==========================================================================
+   TILE MEDIA, OVERLAY & CAPTION STYLING
+   ========================================================================== */
+
+.tileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.45s ease;
+}
+
+.tile:hover .tileImage {
+  transform: scale(1.05);
+}
+
+/* Dark Gradient Overlay (Bottom 50% Height for maximum caption contrast) */
+.tileOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(10, 8, 24, 0.94) 0%,
+    rgba(10, 8, 24, 0.62) 45%,
+    rgba(10, 8, 24, 0.18) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* White Bold Caption at Bottom-Left (Plus Jakarta Sans + Extra Bold) */
+.tileCaption {
+  position: absolute;
+  bottom: 16px;
+  left: 18px;
+  right: 18px;
+  color: #ffffff;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.9);
+  margin: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Smart classroom hero tile: larger, prominent caption */
+.tileSmartClassroom .tileCaption {
+  font-size: clamp(21px, 2.2vw, 28px);
+  font-weight: 850;
+}
+
+/* ==========================================================================
+   BROKEN IMAGE GRADIENT PLACEHOLDER
+   Zero broken icons / Zero alt text layout shifts
+   ========================================================================== */
+
+.gradientPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #1b1733 0%, #2e1065 50%, #17132e 100%);
+  color: #c4b5fd;
+}
+
+.placeholderIcon {
+  width: 42px;
+  height: 42px;
+  opacity: 0.75;
+}
+
+.placeholderText {
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ddd6fe;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (<= 760px)
+   2 columns, grid-auto-rows: 140px
+   Smart classroom: full width 2 rows
+   Learning lab: 2 rows tall
+   Reception: full width
+   Others: 1x1
+   ========================================================================== */
+
+@media (max-width: 760px) {
+  .stage {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    overflow: visible;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    margin-top: 10px;
   }
 
-  .stageWrapper {
-    border-radius: 14px;
+  .stageGrid {
+    aspect-ratio: auto !important;
   }
 
-  .slideCaption {
-    padding: 50px 16px 18px 60px;
-  }
-
-  .stagePlayPauseBtn {
-    bottom: 14px;
-    left: 14px;
-    width: 38px;
-    height: 38px;
-  }
-
-  .stagePlayPauseBtn svg {
-    width: 15px;
-    height: 15px;
+  .videoWrapper {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    aspect-ratio: 1918 / 964 !important;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 12px;
   }
 
   .videoBadge {
@@ -421,25 +502,97 @@
     gap: 6px;
   }
 
-  .controlBtn {
-    padding: 6px 10px;
-    font-size: 11.5px;
+  .pillBtn {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 
-  .placeChip {
-    padding: 8px 14px;
-    font-size: 12.5px;
+  .grid {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: auto !important;
+    grid-auto-rows: 140px !important;
+    gap: 12px !important;
+  }
+
+  /* Smart classroom: full width 2 rows */
+  .tileSmartClassroom {
+    grid-column: 1 / -1 !important;
+    grid-row: span 2 !important;
+    min-height: 220px !important;
+  }
+
+  /* Learning lab: 2 rows tall */
+  .tileLearningLab {
+    grid-column: 2 !important;
+    grid-row: span 2 !important;
+  }
+
+  /* Workspace: 1x1 (will sit in row 3, col 1 next to learning lab top half) */
+  .tileWorkspace {
+    grid-column: 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  /* Discussion zone: 1x1 (will sit in row 4, col 1 next to learning lab bottom half) */
+  .tileDiscussionZone {
+    grid-column: 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  /* Student lounge: 1x1 */
+  .tileStudentLounge {
+    grid-column: 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  /* Library corner: 1x1 */
+  .tileLibraryCorner {
+    grid-column: 2 !important;
+    grid-row: span 1 !important;
+  }
+
+  /* Reception: full width */
+  .tileReception {
+    grid-column: 1 / -1 !important;
+    grid-row: span 1 !important;
+    min-height: 140px !important;
+  }
+
+  .tileCaption {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+  }
+
+  .tileSmartClassroom .tileCaption {
+    font-size: 19px !important;
   }
 }
 
-/* Respect prefers-reduced-motion */
+/* ==========================================================================
+   REDUCED MOTION PREFERENCE
+   Disable all transitions and display grid instantly
+   ========================================================================== */
+
 @media (prefers-reduced-motion: reduce) {
-  .slideItem,
-  .slideImage,
-  .videoElement,
-  .progressBarFill,
-  .placeChip {
+  .stage,
+  .videoWrapper,
+  .tile,
+  .tileImage,
+  .progressBarFill {
     transition: none !important;
     animation: none !important;
+  }
+
+  .gridActive .tile {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
