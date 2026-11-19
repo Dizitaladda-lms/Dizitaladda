@@ -16,7 +16,6 @@ import FeaturedInPR from "../components/FeaturedInPR.jsx";
 import BookDemoSection from "../components/BookDemoSection.jsx";
 import FAQSection from "../components/FAQSection.jsx";
 import SectionHeader from "../components/SectionHeader";
-import DoubtSupportManagement from "../components/DoubtSupportManagement.jsx";
 
 export const pageMetadata = {"title":"Best Digital Marketing Institute | AI & Data Science Courses","description":"DizitalAdda is a Delhi digital marketing institute teaching SEO, ads, AI, data science and cyber security. Live projects, small batches, placement support."};
 
@@ -640,8 +639,6 @@ export default function LegacyPage_index() {
 {/* (Awards section rendered dynamically by AwardsShowcase) */}
 
 
-{/* Academic Management & 1-on-1 Doubt Clearing Showcase */}
-<DoubtSupportManagement />
 
 {/*  Book Demo Section (Cal.com-style 3-Column Booking)  */}
 <BookDemoSection />
