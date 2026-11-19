@@ -1,6 +1,7 @@
 /* ==========================================================================
    CINEMATIC CAMPUS TOUR - CSS MODULE
    Flow: Video (1918/964) -> Staggered Fly-In Grid Reveal (2.74 Aspect Ratio)
+   Layout: Gap-Free Seamless Edge-to-Edge Fill with 1px Inset White Lines
    Brand Colors: Purple (#6D28D9 / #7C3AED), Dark Navy (#0F0C22), White (#FFFFFF)
    ========================================================================== */
 
@@ -23,7 +24,7 @@
 }
 
 /* ==========================================================================
-   UNIFIED SECTION HEADER OVERRIDES (Plus Jakarta Sans + Bold)
+   SECTION HEADER (Plus Jakarta Sans + Bold)
    ========================================================================== */
 
 .container :global(.section-header-title) {
@@ -50,7 +51,8 @@
    STAGE CONTAINER
    Video Phase Aspect-Ratio: 1918 / 964 (~1.9896)
    Grid Phase Aspect-Ratio: 2.74 / 1
-   Smooth 0.9s aspect-ratio transition ensures seamless height change
+   Smooth 0.9s aspect-ratio transition prevents any abrupt height jump.
+   Wrapper is rounded (18px) with overflow: hidden and soft shadow.
    ========================================================================== */
 
 .stage {
@@ -58,10 +60,10 @@
   width: 100%;
   aspect-ratio: 1918 / 964;
   transition: aspect-ratio 0.9s cubic-bezier(0.25, 1, 0.35, 1);
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
   background: #0f0c22;
-  box-shadow: 0 20px 50px rgba(15, 12, 34, 0.16), 0 0 0 1px rgba(124, 58, 237, 0.12);
+  box-shadow: 0 20px 50px rgba(15, 12, 34, 0.16);
   margin-top: 14px;
 }
 
@@ -202,8 +204,9 @@
 }
 
 /* ==========================================================================
-   2. FINAL GRID LAYER
-   Desktop: 3 columns x 3 rows, gap 16px, columns: 2.05fr 1fr 1fr
+   2. FINAL GAP-FREE GRID LAYER
+   Desktop: 3 columns x 3 rows, gap: 0, columns: 2.05fr 1fr 1fr
+   Edge-to-edge full container coverage (Zero dark margins or blank strips)
    ========================================================================== */
 
 .grid {
@@ -214,7 +217,11 @@
   display: grid;
   grid-template-columns: 2.05fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 16px;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
   z-index: 5;
 }
 
@@ -241,12 +248,17 @@
 
 .tile {
   position: relative;
-  border-radius: 18px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0; /* Individual tiles have NO radius; only container is rounded */
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(15, 12, 34, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16); /* 1px inset crisp white separator line */
   background: #18152b;
   cursor: pointer;
   transform: translate3d(0, 0, 0);
+  box-sizing: border-box;
 }
 
 .gridActive .tile {
@@ -319,7 +331,7 @@
 }
 
 /* ==========================================================================
-   DESKTOP GRID CELL POSITIONS (3x3 Layout)
+   DESKTOP GRID CELL POSITIONS (3x3 Layout, Gap 0)
    ========================================================================== */
 
 /* Smart classroom: col 1, rows 1-2 (bada) */
@@ -369,6 +381,8 @@
    ========================================================================== */
 
 .tileImage {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -381,18 +395,17 @@
   transform: scale(1.05);
 }
 
-/* Dark Gradient Overlay (Bottom 50% Height for maximum caption contrast) */
+/* Dark Gradient Overlay (Bottom 45% Height) */
 .tileOverlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 50%;
+  height: 45%;
   background: linear-gradient(
     to top,
-    rgba(10, 8, 24, 0.94) 0%,
-    rgba(10, 8, 24, 0.62) 45%,
-    rgba(10, 8, 24, 0.18) 75%,
+    rgba(10, 8, 24, 0.9) 0%,
+    rgba(10, 8, 24, 0.45) 55%,
     transparent 100%
   );
   pointer-events: none;
@@ -408,10 +421,10 @@
   color: #ffffff;
   font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
-  font-size: clamp(17px, 1.6vw, 22px);
+  font-size: clamp(16px, 1.4vw, 21px);
   line-height: 1.25;
   letter-spacing: -0.02em;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 0.85);
   margin: 0;
   z-index: 3;
   pointer-events: none;
@@ -419,7 +432,7 @@
 
 /* Smart classroom hero tile: larger, prominent caption */
 .tileSmartClassroom .tileCaption {
-  font-size: clamp(21px, 2.2vw, 28px);
+  font-size: clamp(20px, 2.1vw, 26px);
   font-weight: 850;
 }
 
@@ -429,6 +442,8 @@
    ========================================================================== */
 
 .gradientPlaceholder {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -457,11 +472,11 @@
 
 /* ==========================================================================
    MOBILE RESPONSIVENESS (<= 760px)
-   2 columns, grid-auto-rows: 140px
-   Smart classroom: full width 2 rows
-   Learning lab: 2 rows tall
-   Reception: full width
-   Others: 1x1
+   2 columns, grid-auto-rows: 140px, gap: 0
+   Smart classroom: full width 2 rows (280px)
+   Learning lab: 2 rows tall (280px)
+   Reception: full width (140px)
+   Others: 1x1 (140px)
    ========================================================================== */
 
 @media (max-width: 760px) {
@@ -469,7 +484,7 @@
     aspect-ratio: auto !important;
     height: auto !important;
     overflow: visible;
-    border-radius: 0;
+    border-radius: 18px;
     background: transparent;
     box-shadow: none;
     margin-top: 10px;
@@ -484,7 +499,7 @@
     inset: auto !important;
     width: 100% !important;
     aspect-ratio: 1918 / 964 !important;
-    border-radius: 16px;
+    border-radius: 18px;
     overflow: hidden;
     margin-bottom: 12px;
   }
@@ -516,63 +531,71 @@
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-rows: auto !important;
     grid-auto-rows: 140px !important;
-    gap: 12px !important;
+    gap: 0 !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(15, 12, 34, 0.12) !important;
   }
 
   /* Smart classroom: full width 2 rows */
   .tileSmartClassroom {
     grid-column: 1 / -1 !important;
     grid-row: span 2 !important;
-    min-height: 220px !important;
+    height: 280px !important;
   }
 
   /* Learning lab: 2 rows tall */
   .tileLearningLab {
     grid-column: 2 !important;
     grid-row: span 2 !important;
+    height: 280px !important;
   }
 
-  /* Workspace: 1x1 (will sit in row 3, col 1 next to learning lab top half) */
+  /* Workspace: 1x1 (sits in row 3, col 1 next to learning lab top half) */
   .tileWorkspace {
     grid-column: 1 !important;
     grid-row: span 1 !important;
+    height: 140px !important;
   }
 
-  /* Discussion zone: 1x1 (will sit in row 4, col 1 next to learning lab bottom half) */
+  /* Discussion zone: 1x1 (sits in row 4, col 1 next to learning lab bottom half) */
   .tileDiscussionZone {
     grid-column: 1 !important;
     grid-row: span 1 !important;
+    height: 140px !important;
   }
 
   /* Student lounge: 1x1 */
   .tileStudentLounge {
     grid-column: 1 !important;
     grid-row: span 1 !important;
+    height: 140px !important;
   }
 
   /* Library corner: 1x1 */
   .tileLibraryCorner {
     grid-column: 2 !important;
     grid-row: span 1 !important;
+    height: 140px !important;
   }
 
   /* Reception: full width */
   .tileReception {
     grid-column: 1 / -1 !important;
     grid-row: span 1 !important;
-    min-height: 140px !important;
+    height: 140px !important;
   }
 
   .tileCaption {
-    font-size: 16px !important;
+    font-size: 15px !important;
     font-weight: 800 !important;
-    bottom: 12px;
+    bottom: 10px;
     left: 12px;
     right: 12px;
   }
 
   .tileSmartClassroom .tileCaption {
-    font-size: 19px !important;
+    font-size: 18px !important;
   }
 }
 
