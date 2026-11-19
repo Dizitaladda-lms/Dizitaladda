@@ -1,30 +1,26 @@
 import React from "react";
 import { campusData, CampusSectionData } from "../../data/campus";
-import FactsStrip from "./FactsStrip";
-import VideoTour from "./VideoTour";
-import BentoGallery from "./BentoGallery";
+import CampusTour from "./CampusTour";
 import CampusCTA from "./CampusCTA";
 import styles from "./Campus.module.css";
 
 interface CampusSectionProps {
   /**
    * Optional custom data object.
-   * Agar pass nahi karenge to yeh automatically `data/campus.ts` ka data use karega.
+   * Uses campusData by default.
    */
   data?: CampusSectionData;
 }
 
 /**
- * CampusSection (Next.js App Router Server Component)
+ * CampusSection
  * ==============================================================
- * "use client" sirf interactive child components me use kiya gaya hai:
- * - FactsStrip (Framer-motion staggered view)
- * - VideoTour (Modal open/close state & keyboard ESC)
- * - BentoGallery (Scroll-triggered pile animation)
- * - CampusCTA (Interactive WhatsApp and visit booking)
+ * Features:
+ * - Cinematic 16:9 Campus Tour (Video autoplay -> Crossfading 7 Places + Horizontal Navigation Strip)
+ * - In-person Campus Visit & Mentorship CTA
  */
 export default function CampusSection({ data = campusData }: CampusSectionProps) {
-  const { facts, videoTour, photos, cta } = data;
+  const { cta } = data;
 
   return (
     <section
@@ -33,10 +29,7 @@ export default function CampusSection({ data = campusData }: CampusSectionProps)
       id="explore-campus"
     >
       <div className={styles.container}>
-        <BentoGallery photos={photos} />
-
-        <FactsStrip facts={facts} />
-        <VideoTour videoTour={videoTour} />
+        <CampusTour />
         <CampusCTA cta={cta} />
       </div>
     </section>

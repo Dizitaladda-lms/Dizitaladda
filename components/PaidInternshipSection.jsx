@@ -98,49 +98,6 @@ export default function PaidInternshipSection({
           description="Every career program includes a mandatory 2-month guaranteed paid internship prior to graduation — working on live client ad budgets, real agency projects, and receiving an assured monthly stipend."
         />
 
-        {/* ================= 4 VALUE HIGHLIGHTS ================= */}
-        <div className={styles.valueBar}>
-          <div className={styles.valueItem}>
-            <div className={styles.valueIconWrap} aria-hidden="true">
-              💰
-            </div>
-            <div className={styles.valueText}>
-              <h4>Monthly Stipend</h4>
-              <p>Direct bank transfer every month</p>
-            </div>
-          </div>
-
-          <div className={styles.valueItem}>
-            <div className={styles.valueIconWrap} aria-hidden="true">
-              🏢
-            </div>
-            <div className={styles.valueText}>
-              <h4>Real Client Projects</h4>
-              <p>Work on live marketing & tech budgets</p>
-            </div>
-          </div>
-
-          <div className={styles.valueItem}>
-            <div className={styles.valueIconWrap} aria-hidden="true">
-              📜
-            </div>
-            <div className={styles.valueText}>
-              <h4>Experience Letter</h4>
-              <p>Official verified corporate experience</p>
-            </div>
-          </div>
-
-          <div className={styles.valueItem}>
-            <div className={styles.valueIconWrap} aria-hidden="true">
-              🎯
-            </div>
-            <div className={styles.valueText}>
-              <h4>Direct PPO Opportunity</h4>
-              <p>Top performers convert into full-time jobs</p>
-            </div>
-          </div>
-        </div>
-
         {/* ================= STUDENT INTERNSHIP VIDEOS GRID ================= */}
         <div className={styles.videoGrid} role="list">
           {videos.map((item) => (
