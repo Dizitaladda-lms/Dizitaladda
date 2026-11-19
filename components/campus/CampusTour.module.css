@@ -1,8 +1,8 @@
 /* ==========================================================================
-   CINEMATIC CAMPUS TOUR - CSS MODULE
-   Flow: Video (1918/964) -> Staggered Fly-In Grid Reveal (2.74 Aspect Ratio)
-   Layout: Gap-Free Seamless Edge-to-Edge Fill with 1px Inset White Lines
-   Brand Colors: Purple (#6D28D9 / #7C3AED), Dark Navy (#0F0C22), White (#FFFFFF)
+   CAMPUS TOUR - FULL-WIDTH BENTO IMAGE GRID (NO VIDEO)
+   Font: Plus Jakarta Sans (Bold)
+   Layout: Full-screen width bento grid (col 1: Smart Classroom 2-row hero)
+   Interactions: Smooth hover zoom (1.05), bottom-left caption with dark gradient
    ========================================================================== */
 
 .tourSection {
@@ -14,330 +14,150 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* ==========================================================================
-   SECTION HEADER (Plus Jakarta Sans + Bold)
+   CENTERED HEADER
    ========================================================================== */
 
-.container :global(.section-header-title) {
+.headerWrap {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto clamp(24px, 3.5vw, 36px);
+  padding: 0 clamp(16px, 3vw, 24px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.headerWrap :global(.section-header-title) {
   font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif !important;
   font-weight: 850 !important;
-  font-size: clamp(32px, 3.8vw, 46px) !important;
+  font-size: clamp(30px, 3.6vw, 44px) !important;
   letter-spacing: -0.03em !important;
+  line-height: 1.2 !important;
 }
 
-.container :global(.section-header-description) {
+.headerWrap :global(.section-header-description) {
   font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif !important;
   font-weight: 600 !important;
-  font-size: clamp(16px, 1.3vw, 19px) !important;
-  color: #374151 !important;
+  font-size: clamp(15px, 1.25vw, 18px) !important;
+  color: #4b5563 !important;
+  max-width: 680px;
+  margin: 10px auto 0;
+  line-height: 1.5 !important;
 }
 
-.container :global(.section-header-label) {
+.headerWrap :global(.section-header-label) {
   font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif !important;
   font-weight: 800 !important;
   letter-spacing: 0.12em !important;
-}
-
-/* ==========================================================================
-   STAGE CONTAINER
-   Video Phase Aspect-Ratio: 1918 / 964 (~1.9896)
-   Grid Phase Aspect-Ratio: 2.74 / 1
-   Smooth 0.9s aspect-ratio transition prevents any abrupt height jump.
-   Wrapper is rounded (18px) with overflow: hidden and soft shadow.
-   ========================================================================== */
-
-.stage {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1918 / 964;
-  transition: aspect-ratio 0.9s cubic-bezier(0.25, 1, 0.35, 1);
-  border-radius: 18px;
-  overflow: hidden;
-  background: #0f0c22;
-  box-shadow: 0 20px 50px rgba(15, 12, 34, 0.16);
-  margin-top: 14px;
-}
-
-.stageGrid {
-  aspect-ratio: 2.74 / 1;
-}
-
-/* ==========================================================================
-   1. VIDEO LAYER
-   ========================================================================== */
-
-.videoWrapper {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  background: #000000;
-}
-
-.videoFading {
-  opacity: 0;
-  transform: scale(0.96);
-  pointer-events: none;
-}
-
-.videoElement {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Live Badge Top-Left */
-.videoBadge {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  background: rgba(15, 12, 34, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 9999px;
-  color: #ffffff;
-  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.05em;
   text-transform: uppercase;
-  z-index: 12;
-}
-
-.liveDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 8px #10b981;
-}
-
-/* Video Controls Top-Right */
-.videoControlsTop {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 12;
-}
-
-.pillBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 8px 16px;
-  background: rgba(15, 12, 34, 0.85);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 9999px;
-  color: #ffffff;
-  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 750;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-  user-select: none;
-}
-
-.pillBtn:hover {
-  background: rgba(109, 40, 217, 0.9);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: translateY(-1px);
-}
-
-.pillBtn:focus-visible {
-  outline: 2px solid #c4b5fd;
-  outline-offset: 2px;
-}
-
-.skipBtn {
-  background: rgba(109, 40, 217, 0.85);
-  border-color: rgba(196, 181, 253, 0.4);
-}
-
-.skipBtn:hover {
-  background: #7c3aed;
-}
-
-.btnIcon {
-  width: 15px;
-  height: 15px;
-}
-
-/* Thin Progress Bar along the bottom of the video */
-.progressBarTrack {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.15);
-  z-index: 15;
-}
-
-.progressBarFill {
-  height: 100%;
-  background: linear-gradient(90deg, #6d28d9 0%, #a855f7 50%, #c084fc 100%);
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
-  transition: width 0.1s linear;
 }
 
 /* ==========================================================================
-   2. FINAL GAP-FREE GRID LAYER
-   Desktop: 3 columns x 3 rows, gap: 0, columns: 2.05fr 1fr 1fr
-   Edge-to-edge full container coverage (Zero dark margins or blank strips)
+   FULL-WIDTH GRID WRAPPER (Edge-to-Edge with tight side padding)
    ========================================================================== */
 
-.grid {
-  position: absolute;
-  inset: 0;
+.gridWrap {
   width: 100%;
-  height: 100%;
+  padding: 0 clamp(8px, 1vw, 14px);
+  box-sizing: border-box;
+}
+
+/* Desktop: 3 columns x 3 rows bento grid
+   Col 1: 2.05fr, Col 2: 1fr, Col 3: 1fr */
+.grid {
   display: grid;
   grid-template-columns: 2.05fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  gap: 0;
-  padding: 0;
-  margin: 0;
-  border-radius: 18px;
-  overflow: hidden;
-  z-index: 5;
-}
-
-.gridHidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.gridActive {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
+  gap: clamp(8px, 0.75vw, 12px);
+  width: 100%;
+  height: clamp(520px, 44vw, 700px);
+  box-sizing: border-box;
 }
 
 /* ==========================================================================
-   STAGGERED FLY-IN REVEAL ANIMATION
-   Duration: 0.85s
-   Easing: cubic-bezier(.2, .9, .25, 1.12) (subtle bounce)
-   Delay: calc(0.5s + var(--i) * 0.24s)
-   Order: Smart classroom -> Workspace -> Discussion zone -> Learning lab ->
-          Student lounge -> Library corner -> Reception
+   TILE BASE & HOVER EFFECTS
    ========================================================================== */
 
 .tile {
   position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #120e24;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(18, 14, 36, 0.08);
+  transform: translateZ(0);
+}
+
+.tileImage {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.35, 1);
+  will-change: transform;
+}
+
+.tile:hover .tileImage {
+  transform: scale(1.05);
+}
+
+/* Gradient overlay for bottom caption readability */
+.tileOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(10, 8, 24, 0.85) 0%,
+    rgba(10, 8, 24, 0.35) 45%,
+    transparent 80%
+  );
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.tile:hover .tileOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 8, 24, 0.92) 0%,
+    rgba(10, 8, 24, 0.45) 50%,
+    transparent 80%
+  );
+}
+
+/* Bottom-left Caption */
+.tileCaption {
+  position: absolute;
+  bottom: clamp(10px, 1.1vw, 16px);
+  left: clamp(12px, 1.2vw, 18px);
+  right: clamp(12px, 1.2vw, 18px);
   margin: 0;
-  padding: 0;
-  border-radius: 0; /* Individual tiles have NO radius; only container is rounded */
+  color: #ffffff;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: clamp(14px, 1.15vw, 18px);
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+  z-index: 2;
+  white-space: nowrap;
   overflow: hidden;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16); /* 1px inset crisp white separator line */
-  background: #18152b;
-  cursor: pointer;
-  transform: translate3d(0, 0, 0);
-  box-sizing: border-box;
-}
-
-.gridActive .tile {
-  opacity: 0;
-  animation-duration: 0.85s;
-  animation-timing-function: cubic-bezier(0.2, 0.9, 0.25, 1.12);
-  animation-delay: calc(0.5s + var(--i, 0) * 0.24s);
-  animation-fill-mode: forwards;
-}
-
-/* Stagger fly-in from each tile's assigned side */
-.gridActive .tile[data-side="left"] {
-  animation-name: flyInFromLeft;
-}
-
-.gridActive .tile[data-side="top"] {
-  animation-name: flyInFromTop;
-}
-
-.gridActive .tile[data-side="bottom"] {
-  animation-name: flyInFromBottom;
-}
-
-.gridActive .tile[data-side="right"] {
-  animation-name: flyInFromRight;
-}
-
-@keyframes flyInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translate3d(-100px, 0, 0) scale(0.82) rotate(-3deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
-  }
-}
-
-@keyframes flyInFromTop {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -90px, 0) scale(0.82) rotate(2deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
-  }
-}
-
-@keyframes flyInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 90px, 0) scale(0.82) rotate(-2deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
-  }
-}
-
-@keyframes flyInFromRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100px, 0, 0) scale(0.82) rotate(3deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
-  }
+  text-overflow: ellipsis;
 }
 
 /* ==========================================================================
-   DESKTOP GRID CELL POSITIONS (3x3 Layout, Gap 0)
+   DESKTOP BENTO POSITIONS (3x3 grid)
    ========================================================================== */
 
-/* Smart classroom: col 1, rows 1-2 (bada) */
+/* Smart classroom: col 1, rows 1-2 (Prominent Hero) */
 .tileSmartClassroom {
   grid-column: 1;
   grid-row: 1 / 3;
+}
+.tileSmartClassroom .tileCaption {
+  font-size: clamp(16px, 1.4vw, 22px);
+  font-weight: 800;
 }
 
 /* Workspace: col 2, row 1 */
@@ -352,7 +172,7 @@
   grid-row: 2;
 }
 
-/* Learning lab: col 3, rows 1-2 (lamba) */
+/* Learning lab: col 3, rows 1-2 (Tall) */
 .tileLearningLab {
   grid-column: 3;
   grid-row: 1 / 3;
@@ -377,245 +197,135 @@
 }
 
 /* ==========================================================================
-   TILE MEDIA, OVERLAY & CAPTION STYLING
-   ========================================================================== */
-
-.tileImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1);
-  transition: transform 0.45s ease;
-}
-
-.tile:hover .tileImage {
-  transform: scale(1.05);
-}
-
-/* Dark Gradient Overlay (Bottom 45% Height) */
-.tileOverlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 45%;
-  background: linear-gradient(
-    to top,
-    rgba(10, 8, 24, 0.9) 0%,
-    rgba(10, 8, 24, 0.45) 55%,
-    transparent 100%
-  );
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* White Bold Caption at Bottom-Left (Plus Jakarta Sans + Extra Bold) */
-.tileCaption {
-  position: absolute;
-  bottom: 16px;
-  left: 18px;
-  right: 18px;
-  color: #ffffff;
-  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
-  font-weight: 800;
-  font-size: clamp(16px, 1.4vw, 21px);
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 1px 2px rgba(0, 0, 0, 0.85);
-  margin: 0;
-  z-index: 3;
-  pointer-events: none;
-}
-
-/* Smart classroom hero tile: larger, prominent caption */
-.tileSmartClassroom .tileCaption {
-  font-size: clamp(20px, 2.1vw, 26px);
-  font-weight: 850;
-}
-
-/* ==========================================================================
-   BROKEN IMAGE GRADIENT PLACEHOLDER
-   Zero broken icons / Zero alt text layout shifts
+   FALLBACK / PLACEHOLDER (if image fails to load)
    ========================================================================== */
 
 .gradientPlaceholder {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(135deg, #2e1065 0%, #4c1d95 60%, #6d28d9 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #1b1733 0%, #2e1065 50%, #17132e 100%);
-  color: #c4b5fd;
+  gap: 8px;
+  color: #ede9fe;
 }
 
 .placeholderIcon {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   opacity: 0.75;
 }
 
 .placeholderText {
-  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 750;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #ddd6fe;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.85;
 }
 
 /* ==========================================================================
-   MOBILE RESPONSIVENESS (<= 760px)
-   2 columns, grid-auto-rows: 140px, gap: 0
-   Smart classroom: full width 2 rows (280px)
-   Learning lab: 2 rows tall (280px)
-   Reception: full width (140px)
-   Others: 1x1 (140px)
+   RESPONSIVE LAYOUTS
    ========================================================================== */
 
-@media (max-width: 760px) {
-  .stage {
-    aspect-ratio: auto !important;
-    height: auto !important;
-    overflow: visible;
-    border-radius: 18px;
-    background: transparent;
-    box-shadow: none;
-    margin-top: 10px;
-  }
-
-  .stageGrid {
-    aspect-ratio: auto !important;
-  }
-
-  .videoWrapper {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    aspect-ratio: 1918 / 964 !important;
-    border-radius: 18px;
-    overflow: hidden;
-    margin-bottom: 12px;
-  }
-
-  .videoBadge {
-    top: 12px;
-    left: 12px;
-    font-size: 11px;
-    padding: 5px 10px;
-  }
-
-  .videoControlsTop {
-    top: 12px;
-    right: 12px;
-    gap: 6px;
-  }
-
-  .pillBtn {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-
+/* Tablet (<= 991px): 2 columns
+   Smart classroom spans full width across 2 columns on top
+   Other 6 tiles form a clean 2x3 grid */
+@media (max-width: 991px) {
   .grid {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    height: auto !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: auto !important;
-    grid-auto-rows: 140px !important;
-    gap: 0 !important;
-    border-radius: 18px !important;
-    overflow: hidden !important;
-    box-shadow: 0 10px 30px rgba(15, 12, 34, 0.12) !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    gap: 10px;
   }
 
-  /* Smart classroom: full width 2 rows */
   .tileSmartClassroom {
-    grid-column: 1 / -1 !important;
-    grid-row: span 2 !important;
-    height: 280px !important;
+    grid-column: 1 / -1;
+    grid-row: auto;
+    height: clamp(240px, 32vw, 320px);
   }
 
-  /* Learning lab: 2 rows tall */
-  .tileLearningLab {
-    grid-column: 2 !important;
-    grid-row: span 2 !important;
-    height: 280px !important;
-  }
-
-  /* Workspace: 1x1 (sits in row 3, col 1 next to learning lab top half) */
-  .tileWorkspace {
-    grid-column: 1 !important;
-    grid-row: span 1 !important;
-    height: 140px !important;
-  }
-
-  /* Discussion zone: 1x1 (sits in row 4, col 1 next to learning lab bottom half) */
-  .tileDiscussionZone {
-    grid-column: 1 !important;
-    grid-row: span 1 !important;
-    height: 140px !important;
-  }
-
-  /* Student lounge: 1x1 */
-  .tileStudentLounge {
-    grid-column: 1 !important;
-    grid-row: span 1 !important;
-    height: 140px !important;
-  }
-
-  /* Library corner: 1x1 */
-  .tileLibraryCorner {
-    grid-column: 2 !important;
-    grid-row: span 1 !important;
-    height: 140px !important;
-  }
-
-  /* Reception: full width */
+  .tileWorkspace,
+  .tileDiscussionZone,
+  .tileLearningLab,
+  .tileStudentLounge,
+  .tileLibraryCorner,
   .tileReception {
-    grid-column: 1 / -1 !important;
-    grid-row: span 1 !important;
-    height: 140px !important;
+    grid-column: auto;
+    grid-row: auto;
+    height: clamp(170px, 22vw, 220px);
   }
 
   .tileCaption {
-    font-size: 15px !important;
-    font-weight: 800 !important;
-    bottom: 10px;
-    left: 12px;
-    right: 12px;
+    font-size: 15px;
   }
-
   .tileSmartClassroom .tileCaption {
-    font-size: 18px !important;
+    font-size: 18px;
   }
 }
 
-/* ==========================================================================
-   REDUCED MOTION PREFERENCE
-   Disable all transitions and display grid instantly
-   ========================================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  .stage,
-  .videoWrapper,
-  .tile,
-  .tileImage,
-  .progressBarFill {
-    transition: none !important;
-    animation: none !important;
+/* Mobile (<= 640px): 2 columns with equal row heights, tight gaps, zero overflow */
+@media (max-width: 640px) {
+  .gridWrap {
+    padding: 0 8px;
   }
 
-  .gridActive .tile {
-    opacity: 1 !important;
-    transform: none !important;
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .tile {
+    border-radius: 8px;
+  }
+
+  .tileSmartClassroom {
+    grid-column: 1 / -1;
+    height: 200px;
+  }
+
+  .tileWorkspace,
+  .tileDiscussionZone,
+  .tileLearningLab,
+  .tileStudentLounge,
+  .tileLibraryCorner,
+  .tileReception {
+    grid-column: auto;
+    height: 140px;
+  }
+
+  .tileCaption {
+    bottom: 8px;
+    left: 10px;
+    right: 10px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .tileSmartClassroom .tileCaption {
+    font-size: 15px;
+  }
+}
+
+/* Very Small Mobile (<= 380px): Single Column for comfortable viewing */
+@media (max-width: 380px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .tileSmartClassroom {
+    grid-column: 1;
+    height: 180px;
+  }
+
+  .tileWorkspace,
+  .tileDiscussionZone,
+  .tileLearningLab,
+  .tileStudentLounge,
+  .tileLibraryCorner,
+  .tileReception {
+    grid-column: 1;
+    height: 140px;
   }
 }

@@ -1,0 +1,123 @@
+/* Card Container */
+.card {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* 4:5 Portrait Video Area */
+.videoBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(76, 29, 149, 0.2);
+  background: linear-gradient(160deg, #3b2a78, #7c3aed);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.videoBox:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(76, 29, 149, 0.28);
+}
+
+.videoBox:focus-visible {
+  outline: 3px solid #7c3aed;
+  outline-offset: 3px;
+}
+
+/* Media (Poster Image or Iframe/Video) */
+.media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+}
+
+/* Click Shield for playing iframe to catch hover/click reliably */
+.clickShield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* 60px White Circular Action Button (Hidden by default, reveals on hover) */
+.actionBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.85);
+  transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+/* Hover reveal */
+.videoBox:hover .actionBtn,
+.videoBox:focus-visible .actionBtn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Text Container below video */
+.info {
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+/* Student Name: 18px bold */
+.studentName {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1530;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* Course Name: 14px, weight 500, color #6d28d9 */
+.courseName {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6d28d9;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .studentName {
+    font-size: 16px;
+  }
+  .courseName {
+    font-size: 13px;
+  }
+}

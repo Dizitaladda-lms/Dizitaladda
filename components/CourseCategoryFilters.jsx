@@ -637,56 +637,10 @@ function CourseCard({ course }) {
   );
 }
 
-// Reusable Filter Section Component (Used in both Desktop Sidebar and Mobile Drawer)
-function FilterGroup({ title, options, selectedValues, onToggle, idPrefix = "flt" }) {
-  if (!options || options.length === 0) return null;
-
-  return (
-    <div className="da-filter-group">
-      <div className="da-filter-group-title">{title}</div>
-      <div className="da-filter-options" role="group" aria-label={title}>
-        {options.map((opt) => {
-          const isChecked = selectedValues.includes(opt.value);
-          const inputId = `${idPrefix}-${title.replace(/\s+/g, "").toLowerCase()}-${opt.value.replace(/\s+/g, "").toLowerCase()}`;
-          return (
-            <label key={opt.value} htmlFor={inputId} className={`da-filter-option ${isChecked ? "is-checked" : ""}`}>
-              <span className="da-filter-checkbox-wrap">
-                <input
-                  type="checkbox"
-                  id={inputId}
-                  checked={isChecked}
-                  onChange={() => onToggle(opt.value)}
-                  className="da-filter-checkbox-native"
-                />
-                <span className="da-filter-checkbox-custom" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="3">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </span>
-                <span className="da-filter-label-text">{opt.label}</span>
-              </span>
-              <span className="da-filter-count">{opt.count}</span>
-            </label>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
 export default function CourseCategoryFilters() {
   const [activeCategory, setActiveCategory] = useState("all");
   const trackRef = useRef(null);
   const [hasEntered, setHasEntered] = useState(false);
-
-  // CHANGE 1: Multi-filter state (resets on category change)
-  const [selectedLevels, setSelectedLevels] = useState([]);
-  const [selectedDurations, setSelectedDurations] = useState([]);
-  const [selectedTools, setSelectedTools] = useState([]);
-  const [selectedCourses, setSelectedCourses] = useState([]);
-
-  // Mobile drawer open state
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   // Sync state with URL query parameters on mount & on popstate
   useEffect(() => {
@@ -695,13 +649,9 @@ export default function CourseCategoryFilters() {
     const syncFromUrl = () => {
       const params = new URLSearchParams(window.location.search);
       const catParam = params.get("category");
-      const lvlParam = params.get("level");
 
       if (catParam && courseCategories.some((c) => c.id === catParam.toLowerCase())) {
         setActiveCategory(catParam.toLowerCase());
-      }
-      if (lvlParam) {
-        setSelectedLevels([lvlParam]);
       }
     };
 
@@ -719,152 +669,23 @@ export default function CourseCategoryFilters() {
       url.searchParams.set("category", catId);
     } else {
       url.searchParams.delete("category");
-      url.searchParams.delete("level");
     }
 
     const newUrl = url.pathname + (url.search ? url.search : "") + url.hash;
     window.history.replaceState({}, "", newUrl);
   };
 
-  // Switching category: resets all filters
   const handleCategoryChange = (categoryId) => {
     setActiveCategory(categoryId);
-    setSelectedLevels([]);
-    setSelectedDurations([]);
-    setSelectedTools([]);
-    setSelectedCourses([]);
-    setIsMobileFilterOpen(false);
     trackRef.current?.scrollTo({ left: 0, behavior: "smooth" });
     updateUrl(categoryId);
   };
 
-  // Toggle filter handlers
-  const handleToggleLevel = (lvl) => {
-    setSelectedLevels((prev) =>
-      prev.includes(lvl) ? prev.filter((item) => item !== lvl) : [...prev, lvl]
-    );
-  };
-
-  const handleToggleDuration = (dur) => {
-    setSelectedDurations((prev) =>
-      prev.includes(dur) ? prev.filter((item) => item !== dur) : [...prev, dur]
-    );
-  };
-
-  const handleToggleTool = (tool) => {
-    setSelectedTools((prev) =>
-      prev.includes(tool) ? prev.filter((item) => item !== tool) : [...prev, tool]
-    );
-  };
-
-  const handleToggleCourse = (cTitle) => {
-    setSelectedCourses((prev) =>
-      prev.includes(cTitle) ? prev.filter((item) => item !== cTitle) : [...prev, cTitle]
-    );
-  };
-
-  // Clear all filters
-  const handleClearAllFilters = () => {
-    setSelectedLevels([]);
-    setSelectedDurations([]);
-    setSelectedTools([]);
-    setSelectedCourses([]);
-  };
-
-  // Total count of active filters
-  const totalActiveFilters =
-    selectedLevels.length +
-    selectedDurations.length +
-    selectedTools.length +
-    selectedCourses.length;
-
-  // Courses of the currently active category (domain)
-  const categoryCourses = useMemo(() => {
+  // All courses for active category (or all 18 courses when activeCategory is "all")
+  const visibleCourses = useMemo(() => {
     if (activeCategory === "all") return courses;
     return courses.filter((course) => course.category === activeCategory);
   }, [activeCategory]);
-
-  // Dynamically generated filter options based on categoryCourses (NOT hardcoded)
-  const levelOptions = useMemo(() => {
-    if (activeCategory === "all") return [];
-    const counts = {};
-    categoryCourses.forEach((c) => {
-      counts[c.level] = (counts[c.level] || 0) + 1;
-    });
-    return Object.keys(counts).map((lvl) => ({
-      value: lvl,
-      label: lvl,
-      count: counts[lvl],
-    }));
-  }, [categoryCourses, activeCategory]);
-
-  const durationOptions = useMemo(() => {
-    if (activeCategory === "all") return [];
-    const counts = {};
-    categoryCourses.forEach((c) => {
-      counts[c.duration] = (counts[c.duration] || 0) + 1;
-    });
-    return Object.keys(counts).map((dur) => ({
-      value: dur,
-      label: dur,
-      count: counts[dur],
-    }));
-  }, [categoryCourses, activeCategory]);
-
-  const toolOptions = useMemo(() => {
-    if (activeCategory === "all") return [];
-    const counts = {};
-    categoryCourses.forEach((c) => {
-      c.skills.forEach((s) => {
-        counts[s.label] = (counts[s.label] || 0) + 1;
-      });
-    });
-    return Object.keys(counts).map((tool) => ({
-      value: tool,
-      label: tool,
-      count: counts[tool],
-    }));
-  }, [categoryCourses, activeCategory]);
-
-  const courseTitleOptions = useMemo(() => {
-    if (activeCategory === "all") return [];
-    return categoryCourses.map((c) => ({
-      value: c.title,
-      label: c.title,
-      count: 1,
-    }));
-  }, [categoryCourses, activeCategory]);
-
-  // Multi-filter evaluation:
-  // Same category -> OR
-  // Different categories -> AND
-  const visibleCourses = useMemo(() => {
-    if (activeCategory === "all") {
-      return courses;
-    }
-
-    return categoryCourses.filter((course) => {
-      // 1. Level filter (OR)
-      if (selectedLevels.length > 0 && !selectedLevels.includes(course.level)) {
-        return false;
-      }
-      // 2. Duration filter (OR)
-      if (selectedDurations.length > 0 && !selectedDurations.includes(course.duration)) {
-        return false;
-      }
-      // 3. Tools / Topics filter (OR: course must have at least one selected tool)
-      if (selectedTools.length > 0) {
-        const hasMatchingTool = course.skills.some((s) => selectedTools.includes(s.label));
-        if (!hasMatchingTool) return false;
-      }
-      // 4. Course name filter (OR)
-      if (selectedCourses.length > 0 && !selectedCourses.includes(course.title)) {
-        return false;
-      }
-
-      return true;
-    });
-  }, [categoryCourses, activeCategory, selectedLevels, selectedDurations, selectedTools, selectedCourses]);
 
   // Entrance observer for animation
   useEffect(() => {
@@ -885,30 +706,6 @@ export default function CourseCategoryFilters() {
     return () => observer.disconnect();
   }, [hasEntered]);
 
-  // Body scroll lock on mobile drawer open
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    if (isMobileFilterOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isMobileFilterOpen]);
-
-  // Keyboard navigation: Escape key closes drawer
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape" && isMobileFilterOpen) {
-        setIsMobileFilterOpen(false);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isMobileFilterOpen]);
-
   const scrollCards = (direction) => {
     if (!trackRef.current) return;
     const card = trackRef.current.querySelector(".da-course-slide");
@@ -921,7 +718,7 @@ export default function CourseCategoryFilters() {
 
   return (
     <div className={`da-course-showcase ${isDomainSelected ? "has-domain-active" : "is-all-courses"}`}>
-      {/* 1. Top Domain Tabs (Row 1) */}
+      {/* 1. Top Domain Tabs */}
       <div className="course-category-filters" role="group" aria-label="Filter courses by domain">
         {courseCategories.map((category) => (
           <button
@@ -936,7 +733,7 @@ export default function CourseCategoryFilters() {
         ))}
       </div>
 
-      {/* When "All Courses" is selected: No sidebar, Row 2 hidden, full width cards */}
+      {/* When "All Courses" is selected: full-width carousel track */}
       {!isDomainSelected ? (
         <div className="da-all-courses-view">
           <div className="da-course-carousel-controls">
@@ -973,298 +770,23 @@ export default function CourseCategoryFilters() {
           </div>
         </div>
       ) : (
-        /* When a particular domain is selected: E-commerce 2-column layout (Sidebar + Cards) */
+        /* When a particular domain is selected: Full Width Grid (No filters sidebar, zero left gap) */
         <div className="da-domain-view-layout">
-          {/* Desktop Filter Sidebar (Sticky, Left Column) */}
-          <aside className="da-filter-sidebar" aria-label="Course Filters">
-            <div className="da-filter-sidebar-header">
-              <div className="da-filter-sidebar-title">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
-                </svg>
-                <span>Filters</span>
-                {totalActiveFilters > 0 && (
-                  <span className="da-filter-active-count-badge">{totalActiveFilters}</span>
-                )}
-              </div>
-              {totalActiveFilters > 0 && (
-                <button
-                  type="button"
-                  className="da-filter-clear-all-btn"
-                  onClick={handleClearAllFilters}
-                >
-                  Clear all
-                </button>
-              )}
-            </div>
-
-            <div className="da-filter-sidebar-body">
-              {/* 1. Level Filter */}
-              <FilterGroup
-                title="Level / Program"
-                options={levelOptions}
-                selectedValues={selectedLevels}
-                onToggle={handleToggleLevel}
-                idPrefix="dsk"
-              />
-
-              {/* 2. Duration Filter */}
-              <FilterGroup
-                title="Duration"
-                options={durationOptions}
-                selectedValues={selectedDurations}
-                onToggle={handleToggleDuration}
-                idPrefix="dsk"
-              />
-
-              {/* 3. Tools / Topics Filter */}
-              <FilterGroup
-                title="Tools & Topics"
-                options={toolOptions}
-                selectedValues={selectedTools}
-                onToggle={handleToggleTool}
-                idPrefix="dsk"
-              />
-
-              {/* 4. Course Title Filter */}
-              <FilterGroup
-                title="Specific Course"
-                options={courseTitleOptions}
-                selectedValues={selectedCourses}
-                onToggle={handleToggleCourse}
-                idPrefix="dsk"
-              />
-            </div>
-          </aside>
-
-          {/* Right Main Column (Top bar + Course Cards Grid / Empty State) */}
           <main className="da-course-main-content">
             <div className="da-course-results-bar">
               <div className="da-course-results-count">
-                Showing <strong>{visibleCourses.length}</strong> of{" "}
-                <strong>{categoryCourses.length}</strong> {activeCategoryObj?.label} courses
+                Showing <strong>{visibleCourses.length}</strong> {activeCategoryObj?.label} courses
               </div>
-
-              {/* Mobile "Filters" trigger button */}
-              <button
-                type="button"
-                className="da-mobile-filter-trigger-btn"
-                onClick={() => setIsMobileFilterOpen(true)}
-                aria-label="Open course filters"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
-                </svg>
-                <span>Filters</span>
-                {totalActiveFilters > 0 && (
-                  <span className="da-mobile-btn-badge">{totalActiveFilters}</span>
-                )}
-              </button>
             </div>
 
-            {/* Active Filter Chips with individual remove buttons */}
-            {totalActiveFilters > 0 && (
-              <div className="da-course-active-chips" role="group" aria-label="Active filters">
-                {selectedLevels.map((lvl) => (
-                  <button
-                    key={`lvl-${lvl}`}
-                    type="button"
-                    className="da-active-chip"
-                    onClick={() => handleToggleLevel(lvl)}
-                    aria-label={`Remove level filter ${lvl}`}
-                  >
-                    <span>Level: {lvl}</span>
-                    <span className="da-chip-x" aria-hidden="true">&times;</span>
-                  </button>
-                ))}
-                {selectedDurations.map((dur) => (
-                  <button
-                    key={`dur-${dur}`}
-                    type="button"
-                    className="da-active-chip"
-                    onClick={() => handleToggleDuration(dur)}
-                    aria-label={`Remove duration filter ${dur}`}
-                  >
-                    <span>Duration: {dur}</span>
-                    <span className="da-chip-x" aria-hidden="true">&times;</span>
-                  </button>
-                ))}
-                {selectedTools.map((tool) => (
-                  <button
-                    key={`tool-${tool}`}
-                    type="button"
-                    className="da-active-chip"
-                    onClick={() => handleToggleTool(tool)}
-                    aria-label={`Remove tool filter ${tool}`}
-                  >
-                    <span>{tool}</span>
-                    <span className="da-chip-x" aria-hidden="true">&times;</span>
-                  </button>
-                ))}
-                {selectedCourses.map((cTitle) => (
-                  <button
-                    key={`course-${cTitle}`}
-                    type="button"
-                    className="da-active-chip"
-                    onClick={() => handleToggleCourse(cTitle)}
-                    aria-label={`Remove course filter ${cTitle}`}
-                  >
-                    <span>{cTitle}</span>
-                    <span className="da-chip-x" aria-hidden="true">&times;</span>
-                  </button>
-                ))}
-                <button
-                  type="button"
-                  className="da-active-chip-clear"
-                  onClick={handleClearAllFilters}
-                >
-                  Clear all
-                </button>
-              </div>
-            )}
-
-            {/* Course Cards Grid or Empty State */}
-            {visibleCourses.length === 0 ? (
-              <div className="da-course-empty">
-                <div className="da-course-empty-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="30"
-                    height="30"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <circle cx="11" cy="11" r="8" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    <line x1="8" y1="11" x2="14" y2="11" />
-                  </svg>
+            <div className="da-course-grid" aria-label="Course listings">
+              {visibleCourses.map((course) => (
+                <div className="da-course-grid-item" key={course.id}>
+                  <CourseCard course={course} />
                 </div>
-                <h4>No Courses Found</h4>
-                <p>No courses match your selected filter criteria. Please reset your filters or explore other categories.</p>
-                <button type="button" onClick={handleClearAllFilters}>
-                  Reset Filters
-                </button>
-              </div>
-            ) : (
-              <div className="da-course-grid" aria-label="Course listings">
-                {visibleCourses.map((course) => (
-                  <div className="da-course-grid-item" key={course.id}>
-                    <CourseCard course={course} />
-                  </div>
-                ))}
-              </div>
-            )}
+              ))}
+            </div>
           </main>
-        </div>
-      )}
-
-      {/* Mobile Filter Drawer / Bottom Sheet */}
-      {isMobileFilterOpen && isDomainSelected && (
-        <div
-          className="da-mobile-filter-modal"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Filter courses"
-        >
-          <div
-            className="da-mobile-filter-backdrop"
-            onClick={() => setIsMobileFilterOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="da-mobile-filter-drawer">
-            <div className="da-mobile-drawer-header">
-              <div className="da-mobile-drawer-title">
-                <span>Filter Courses</span>
-                {totalActiveFilters > 0 && (
-                  <span className="da-filter-active-count-badge">{totalActiveFilters}</span>
-                )}
-              </div>
-              <button
-                type="button"
-                className="da-mobile-drawer-close"
-                onClick={() => setIsMobileFilterOpen(false)}
-                aria-label="Close filters"
-              >
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2">
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="da-mobile-drawer-body">
-              <FilterGroup
-                title="Level / Program"
-                options={levelOptions}
-                selectedValues={selectedLevels}
-                onToggle={handleToggleLevel}
-                idPrefix="mob"
-              />
-              <FilterGroup
-                title="Duration"
-                options={durationOptions}
-                selectedValues={selectedDurations}
-                onToggle={handleToggleDuration}
-                idPrefix="mob"
-              />
-              <FilterGroup
-                title="Tools & Topics"
-                options={toolOptions}
-                selectedValues={selectedTools}
-                onToggle={handleToggleTool}
-                idPrefix="mob"
-              />
-              <FilterGroup
-                title="Specific Course"
-                options={courseTitleOptions}
-                selectedValues={selectedCourses}
-                onToggle={handleToggleCourse}
-                idPrefix="mob"
-              />
-            </div>
-
-            <div className="da-mobile-drawer-footer">
-              <button
-                type="button"
-                className="da-mobile-drawer-clear"
-                onClick={handleClearAllFilters}
-                disabled={totalActiveFilters === 0}
-              >
-                Clear all
-              </button>
-              <button
-                type="button"
-                className="da-mobile-drawer-apply"
-                onClick={() => setIsMobileFilterOpen(false)}
-              >
-                Apply ({visibleCourses.length})
-              </button>
-            </div>
-          </div>
         </div>
       )}
     </div>

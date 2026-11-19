@@ -16,7 +16,7 @@ interface CampusSectionProps {
  * CampusSection
  * ==============================================================
  * Features:
- * - Cinematic 16:9 Campus Tour (Video autoplay -> Crossfading 7 Places + Horizontal Navigation Strip)
+ * - Full-width Bento Grid Campus Tour (No video, all 7 campus images at once)
  * - In-person Campus Visit & Mentorship CTA
  */
 export default function CampusSection({ data = campusData }: CampusSectionProps) {
@@ -28,8 +28,8 @@ export default function CampusSection({ data = campusData }: CampusSectionProps)
       aria-label="Explore Our Campus"
       id="explore-campus"
     >
-      <div className={styles.container}>
-        <CampusTour />
+      <CampusTour />
+      <div className={styles.ctaContainer}>
         <CampusCTA cta={cta} />
       </div>
     </section>

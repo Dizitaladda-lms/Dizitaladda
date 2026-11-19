@@ -6,7 +6,7 @@ import SectionHeader from "./SectionHeader";
 const trainers = [
   { name: "Dr. Gulshan Kumar", role: "Digital marketing", tags: ["Data science", "Strategy"], experience: "10+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Gulshan.png" },
   { name: "Mr. Ram Kumar", role: "Web development", tags: ["WordPress", "E-commerce"], experience: "12+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Ram.png" },
-  { name: "Mr. Saurabh Kumar", role: "Performance marketing", tags: ["Paid ads", "Analytics"], experience: "15+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Saurabh.png" },
+  { name: "Mr. Saurabh Kumar", role: "Performance marketing", tags: ["Paid ads", "Analytics"], experience: "15+ yrs experience", videoSrc: "", poster: "/public/TRANIER 2.JPG" },
   { name: "Miss Shagun Srivastava", role: "Data science", tags: ["Generative AI", "Automation"], experience: "7+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/shagun.png" },
   { name: "Mr. Ravi Kumar", role: "SEO specialist", tags: ["Keyword research", "Analytics"], experience: "7+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Ravi.png" },
   { name: "Mr. Kaushal", role: "Local SEO", tags: ["Paid ads", "Google Business"], experience: "5+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Kaushal.png" },

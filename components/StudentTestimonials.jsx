@@ -1,27 +1,55 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import PortraitVideoCard from "./PortraitVideoCard";
 
-const videoTestimonials = [
-  { id: "KFWyifEYWyU", title: "Student Testimonial 1" },
-  { id: "5Ky9myAg6a8", title: "Student Testimonial 2" },
-  { id: "0Y0wxv9Hrvc", title: "Student Testimonial 3" },
-  { id: "93nJRCQduxg", title: "Student Testimonial 4" },
-  { id: "EdZT-if9tFU", title: "Student Testimonial 5" },
-  { id: "gu8znBBgSvw", title: "Student Testimonial 6" },
-  { id: "PbKg7zUPGoc", title: "Student Testimonial 7" },
-  { id: "z4vwrPjR2PA", title: "Student Testimonial 8" },
+// Video Testimonials Data with student names, courses, and video IDs
+export const videoTestimonials = [
+  { id: "KFWyifEYWyU", name: "Abhinav Sharma", course: "Expert in Digital Marketing", videoId: "KFWyifEYWyU" },
+  { id: "5Ky9myAg6a8", name: "Shiv Kalra", course: "Advanced Digital Marketing", videoId: "5Ky9myAg6a8" },
+  { id: "0Y0wxv9Hrvc", name: "Tulika Biswas", course: "Digital Marketing for Professionals", videoId: "0Y0wxv9Hrvc" },
+  { id: "93nJRCQduxg", name: "Sapna Verma", course: "Digital Marketing for Beginners", videoId: "93nJRCQduxg" },
+  { id: "EdZT-if9tFU", name: "Archana Devi", course: "AI & Data Science Diploma", videoId: "EdZT-if9tFU" },
+  { id: "gu8znBBgSvw", name: "Rohit Kumar", course: "Cyber Security & Ethical Hacking", videoId: "gu8znBBgSvw" },
+  { id: "PbKg7zUPGoc", name: "Sanjana Mehra", course: "Advanced Digital Marketing", videoId: "PbKg7zUPGoc" },
+  { id: "z4vwrPjR2PA", name: "Mohit Bansal", course: "Digital Marketing for Beginners", videoId: "z4vwrPjR2PA" },
 ];
 
-export default function StudentTestimonials() {
+export default function StudentTestimonials({
+  testimonials = videoTestimonials,
+}) {
   const [playingId, setPlayingId] = useState(null);
   const trackRef = useRef(null);
+
+  const handleTogglePlay = (id) => {
+    if (playingId === id) {
+      setPlayingId(null);
+    } else {
+      setPlayingId(id);
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new CustomEvent("da-video-play", { detail: { id } }));
+      }
+    }
+  };
+
+  // Sync with global single video playback
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleGlobalPlay = (e) => {
+      if (e.detail?.id !== playingId) {
+        setPlayingId(null);
+      }
+    };
+
+    window.addEventListener("da-video-play", handleGlobalPlay);
+    return () => window.removeEventListener("da-video-play", handleGlobalPlay);
+  }, [playingId]);
 
   const scrollTrack = (direction) => {
     const track = trackRef.current;
     if (!track) return;
-    const card = track.querySelector(".testimonial-card");
-    const cardWidth = card ? card.offsetWidth + 20 : 280;
+    const cardWidth = 324; // card 300px + gap 24px
     track.scrollBy({ left: cardWidth * direction * 2, behavior: "smooth" });
   };
 
@@ -48,44 +76,26 @@ export default function StudentTestimonials() {
             overflowX: "auto",
             scrollbarWidth: "none",
             msOverflowStyle: "none",
+            padding: "8px 4px 20px",
           }}
         >
-          <div className="testimonials-track" style={{ display: "flex", gap: "20px" }}>
-            {videoTestimonials.map((item) => {
-              const isPlaying = playingId === item.id;
+          <div
+            className="testimonials-track"
+            style={{
+              display: "flex",
+              gap: "24px",
+              alignItems: "flex-start",
+            }}
+          >
+            {testimonials.map((item) => {
+              const cardId = item.id || item.videoId || item.name;
               return (
-                <div className="testimonial-card" key={item.id}>
-                  <div className={`testimonial-video-wrap ${isPlaying ? "is-playing" : ""}`}>
-                    {isPlaying ? (
-                      <iframe
-                        src={`https://www.youtube-nocookie.com/embed/${item.id}?autoplay=1&rel=0`}
-                        title={item.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        style={{ width: "100%", height: "100%", border: "none" }}
-                      />
-                    ) : (
-                      <>
-                        <img
-                          src={`https://i.ytimg.com/vi/${item.id}/oar2.jpg`}
-                          alt={`DizitalAdda ${item.title}`}
-                          loading="lazy"
-                          decoding="async"
-                          width="1080"
-                          height="1920"
-                          onError={(e) => {
-                            e.currentTarget.src = `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`;
-                          }}
-                        />
-                        <button
-                          className="yt-play"
-                          type="button"
-                          aria-label={`Play ${item.title}`}
-                          onClick={() => setPlayingId(item.id)}
-                        />
-                      </>
-                    )}
-                  </div>
+                <div key={cardId} style={{ flex: "0 0 280px", maxWidth: "300px" }}>
+                  <PortraitVideoCard
+                    item={item}
+                    isPlaying={playingId === cardId}
+                    onTogglePlay={() => handleTogglePlay(cardId)}
+                  />
                 </div>
               );
             })}
