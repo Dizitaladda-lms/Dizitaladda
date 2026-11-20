@@ -6344,6 +6344,10 @@ export default function LegacyPage_courses_expert_digital_marketing_course() {
             <div className="campus-photo" data-bg="./images/1`.jpg"></div>
             <span className="photo-label">Campus Lounge</span>
           </div>
+          <div className="campus-photo-card">
+            <div className="campus-photo" data-bg="/courses/images/live-practical-session.png"></div>
+            <span className="photo-label">Live Practical Session</span>
+          </div>
         </div>
         <div className="campus-info">
           <p className="campus-desc">Our DizitalAdda campus reflects a real corporate digital marketing environment — focused, distraction-free, and performance-driven with state-of-the-art facilities.</p>

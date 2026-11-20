@@ -29,6 +29,18 @@ export const internshipVideosData = [
     poster: "/assets/img/gallery/dizitaladda-classroom.webp",
     videoId: "0Y0wxv9Hrvc",
   },
+  {
+    id: "intern-4",
+    name: "Sapna Verma",
+    course: "Digital Marketing for Beginners",
+    videoId: "93nJRCQduxg",
+  },
+  {
+    id: "intern-5",
+    name: "Sanjana Mehra",
+    course: "Advanced Digital Marketing",
+    videoId: "PbKg7zUPGoc",
+  },
 ];
 
 export default function PaidInternshipSection({

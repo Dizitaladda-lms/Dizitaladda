@@ -171,8 +171,7 @@ export const campusData: CampusSectionData = {
     {
       id: "reception",
       caption: "Reception",
-      image:
-        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80",
+      image: "/images/campus/reception.jpg",
       alt: "Welcoming reception area with a modern desk and seating",
       span: "normal",
     },

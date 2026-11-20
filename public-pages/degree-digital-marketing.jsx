@@ -354,7 +354,7 @@ export default function LegacyPage_degree_digital_marketing() {
       </div>
       <div className="gallery-mosaic">
         <div className="gallery-item">
-          <img src="./center/IMG_4066.webp" alt="Reception" className="gallery-img" loading="lazy" />
+          <img src="/images/campus/reception.jpg" alt="Reception" className="gallery-img" loading="lazy" />
           <div className="gallery-overlay">Reception</div>
         </div>
         <div className="gallery-item">
