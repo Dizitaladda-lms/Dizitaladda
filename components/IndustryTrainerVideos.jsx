@@ -42,7 +42,7 @@ export const trainers = [
     tags: ["Keyword research", "Analytics"],
     experience: "7+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/Ravi.png",
+    poster: "/public/TRANIER 2.jpg",
   },
   {
     name: "Mr. Kaushal",

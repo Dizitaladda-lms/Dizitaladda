@@ -8,10 +8,6 @@ import { useEffect, useMemo, useRef, useState, useCallback } from "react";
  * - Digital Marketing (4 courses)
  * - AI & Data Science (9 courses)
  * - Cyber Security (5 courses)
- *
- * Each course contains:
- * - id, title, category, level, duration, months, durationPercent, mode
- * - description, image, eligibility, skills, bullets, detailsLink
  * ============================================================================
  */
 const courses = [
@@ -478,9 +474,6 @@ const courses = [
   },
 ];
 
-/**
- * Filter Categories definition
- */
 const courseCategories = [
   { id: "all", label: "All Courses" },
   { id: "digital-marketing", label: "Digital Marketing" },
@@ -488,9 +481,6 @@ const courseCategories = [
   { id: "cyber-security", label: "Cyber Security" },
 ];
 
-/**
- * Helper SVG Icons for skills
- */
 function SkillIcon({ type }) {
   const common = {
     width: 14,
@@ -537,10 +527,6 @@ function SkillIcon({ type }) {
   );
 }
 
-/**
- * Animated Duration Progress Bar
- * Progress bar width = durationPercent of the longest course (12 months = 100%)
- */
 function DurationProgressBar({ durationPercent, durationText }) {
   const percentage = typeof durationPercent === "number" ? durationPercent : 100;
   const [animatedWidth, setAnimatedWidth] = useState(0);
@@ -589,9 +575,6 @@ function DurationProgressBar({ durationPercent, durationText }) {
   );
 }
 
-/**
- * "Who Is This Course For?" (3 bullet items)
- */
 function EligibilityList({ items = [] }) {
   if (!items || items.length === 0) return null;
   return (
@@ -639,14 +622,6 @@ function EligibilityList({ items = [] }) {
   );
 }
 
-/**
- * Individual Course Card
- * - Dedicated reserved top strip for level and mode badges:
- *   (Completely eliminates overlap / cutting off thumbnail heading text)
- * - Level badge derived dynamically from course.level
- * - Bold 2-line title, Duration box with purple progress bar, 2-line description
- * - Equal height cards with vertically aligned duration boxes
- */
 function CourseCard({ course }) {
   return (
     <article className="da-course-card" aria-label={course.title}>
@@ -711,10 +686,57 @@ function CourseCard({ course }) {
 }
 
 /**
- * Main Course Category Filters & Horizontal Carousel Component
+ * Reusable Filter Group component for Level / Program and Duration
+ */
+function FilterGroup({ title, options, selectedValues, onToggle, idPrefix = "flt" }) {
+  if (!options || options.length === 0) return null;
+
+  return (
+    <div className="da-filter-group">
+      <div className="da-filter-group-title">{title}</div>
+      <div className="da-filter-options" role="group" aria-label={title}>
+        {options.map((opt) => {
+          const isChecked = selectedValues.includes(opt.value);
+          const inputId = `${idPrefix}-${title.replace(/\s+/g, "").toLowerCase()}-${opt.value.replace(/\s+/g, "").toLowerCase()}`;
+          return (
+            <label
+              key={opt.value}
+              htmlFor={inputId}
+              className={`da-filter-option ${isChecked ? "is-checked" : ""}`}
+            >
+              <span className="da-filter-checkbox-wrap">
+                <input
+                  type="checkbox"
+                  id={inputId}
+                  checked={isChecked}
+                  onChange={() => onToggle(opt.value)}
+                  className="da-filter-checkbox-native"
+                />
+                <span className="da-filter-checkbox-custom" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="3">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <span className="da-filter-label-text">{opt.label}</span>
+              </span>
+              <span className="da-filter-count">{opt.count}</span>
+            </label>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Main Course Category Filters & Interactive Showcase Component
  */
 export default function CourseCategoryFilters() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [selectedLevels, setSelectedLevels] = useState([]);
+  const [selectedDurations, setSelectedDurations] = useState([]);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+
   const trackRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -726,9 +748,13 @@ export default function CourseCategoryFilters() {
     const syncFromUrl = () => {
       const params = new URLSearchParams(window.location.search);
       const catParam = params.get("category");
+      const lvlParam = params.get("level");
 
       if (catParam && courseCategories.some((c) => c.id === catParam.toLowerCase())) {
         setActiveCategory(catParam.toLowerCase());
+      }
+      if (lvlParam) {
+        setSelectedLevels([lvlParam]);
       }
     };
 
@@ -746,34 +772,112 @@ export default function CourseCategoryFilters() {
       url.searchParams.set("category", catId);
     } else {
       url.searchParams.delete("category");
+      url.searchParams.delete("level");
     }
 
     const newUrl = url.pathname + (url.search ? url.search : "") + url.hash;
     window.history.replaceState({}, "", newUrl);
   };
 
-  // Filter courses dynamically based on selected tab
-  const visibleCourses = useMemo(() => {
+  // When domain switches: reset level/duration filters
+  const handleCategoryChange = (categoryId) => {
+    if (categoryId === activeCategory) return;
+    setActiveCategory(categoryId);
+    setSelectedLevels([]);
+    setSelectedDurations([]);
+    setIsMobileFilterOpen(false);
+
+    if (trackRef.current) {
+      trackRef.current.scrollTo({ left: 0, behavior: "smooth" });
+    }
+    setCanScrollLeft(false);
+    updateUrl(categoryId);
+  };
+
+  // Toggle filter handlers
+  const handleToggleLevel = (lvl) => {
+    setSelectedLevels((prev) =>
+      prev.includes(lvl) ? prev.filter((item) => item !== lvl) : [...prev, lvl]
+    );
+  };
+
+  const handleToggleDuration = (dur) => {
+    setSelectedDurations((prev) =>
+      prev.includes(dur) ? prev.filter((item) => item !== dur) : [...prev, dur]
+    );
+  };
+
+  const handleClearAllFilters = () => {
+    setSelectedLevels([]);
+    setSelectedDurations([]);
+  };
+
+  // Courses of the currently active category (domain)
+  const categoryCourses = useMemo(() => {
     if (activeCategory === "all") return courses;
     return courses.filter((course) => course.category === activeCategory);
   }, [activeCategory]);
 
-  // Check scroll boundary to enable/disable arrows
+  // Dynamically compute Level options for the currently selected domain
+  const levelOptions = useMemo(() => {
+    const counts = {};
+    categoryCourses.forEach((c) => {
+      if (c.level) {
+        counts[c.level] = (counts[c.level] || 0) + 1;
+      }
+    });
+    return Object.keys(counts).map((lvl) => ({
+      value: lvl,
+      label: lvl,
+      count: counts[lvl],
+    }));
+  }, [categoryCourses]);
+
+  // Dynamically compute Duration options for the currently selected domain
+  const durationOptions = useMemo(() => {
+    const counts = {};
+    categoryCourses.forEach((c) => {
+      if (c.duration) {
+        counts[c.duration] = (counts[c.duration] || 0) + 1;
+      }
+    });
+    return Object.keys(counts).map((dur) => ({
+      value: dur,
+      label: dur,
+      count: counts[dur],
+    }));
+  }, [categoryCourses]);
+
+  // Filter courses by selected level(s) and duration(s)
+  const visibleCourses = useMemo(() => {
+    let list = categoryCourses;
+    if (selectedLevels.length > 0) {
+      list = list.filter((c) => selectedLevels.includes(c.level));
+    }
+    if (selectedDurations.length > 0) {
+      list = list.filter((c) => selectedDurations.includes(c.duration));
+    }
+    return list;
+  }, [categoryCourses, selectedLevels, selectedDurations]);
+
+  const totalActiveFilters = selectedLevels.length + selectedDurations.length;
+  const isDomainSelected = activeCategory !== "all";
+  const activeCategoryObj = courseCategories.find((c) => c.id === activeCategory);
+
+  // Check scroll boundary for carousel mode in All Courses
   const checkScrollBounds = useCallback(() => {
     const el = trackRef.current;
     if (!el) return;
     const { scrollLeft, scrollWidth, clientWidth } = el;
 
-    // Buffer of 4px for fractional pixel calculations
     const hasOverflow = scrollWidth > clientWidth + 4;
     setCanScrollLeft(scrollLeft > 6);
     setCanScrollRight(hasOverflow && scrollLeft + clientWidth < scrollWidth - 6);
   }, []);
 
-  // Scroll listener and resize observer
   useEffect(() => {
     const el = trackRef.current;
-    if (!el) return;
+    if (!el || isDomainSelected) return;
 
     checkScrollBounds();
 
@@ -784,7 +888,6 @@ export default function CourseCategoryFilters() {
     el.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", checkScrollBounds);
 
-    // Re-check after render
     const timer = setTimeout(checkScrollBounds, 120);
 
     return () => {
@@ -792,22 +895,9 @@ export default function CourseCategoryFilters() {
       window.removeEventListener("resize", checkScrollBounds);
       clearTimeout(timer);
     };
-  }, [visibleCourses, checkScrollBounds]);
+  }, [visibleCourses, checkScrollBounds, isDomainSelected]);
 
-  // Tab switch handler: filters carousel & resets scroll position to the first card
-  const handleCategoryChange = (categoryId) => {
-    if (categoryId === activeCategory) return;
-    setActiveCategory(categoryId);
-
-    // Reset carousel scroll position to the first card on every tab change
-    if (trackRef.current) {
-      trackRef.current.scrollTo({ left: 0, behavior: "smooth" });
-    }
-    setCanScrollLeft(false);
-    updateUrl(categoryId);
-  };
-
-  // Carousel arrow controls: scroll by one card width
+  // Carousel arrow controls for All Courses view
   const scrollCards = (direction) => {
     const el = trackRef.current;
     if (!el) return;
@@ -820,7 +910,7 @@ export default function CourseCategoryFilters() {
   };
 
   return (
-    <div className="da-course-showcase" role="region" aria-label="Programs & Certifications">
+    <div className={`da-course-showcase ${isDomainSelected ? "has-domain-active" : "is-all-courses"}`} role="region" aria-label="Programs & Certifications">
       {/* 1. Category Filter Tabs */}
       <div className="course-category-filters" role="tablist" aria-label="Course category filters">
         {courseCategories.map((category) => {
@@ -832,7 +922,6 @@ export default function CourseCategoryFilters() {
               role="tab"
               id={`tab-${category.id}`}
               aria-selected={isActive}
-              aria-controls="course-carousel-track"
               tabIndex={0}
               className={`da-category-tab ${isActive ? "is-active" : ""}`}
               onClick={() => handleCategoryChange(category.id)}
@@ -849,97 +938,330 @@ export default function CourseCategoryFilters() {
         })}
       </div>
 
-      {/* 2. Carousel Controls Header & Dynamic Count */}
-      <div className="da-course-carousel-controls">
-        <span className="da-course-header-text">
-          Explore all career-focused courses
-          <span className="da-course-header-count">({visibleCourses.length})</span>
-        </span>
+      {/* 2. Layout Switcher:
+             - "All Courses": Full-width horizontal carousel with controls
+             - Specific Domain Selected: 2-column layout with Left Sidebar (Level Filters) + Course Cards
+      */}
+      {!isDomainSelected ? (
+        <div className="da-all-courses-view">
+          <div className="da-course-carousel-controls">
+            <span className="da-course-header-text">
+              Explore all career-focused courses
+              <span className="da-course-header-count">({visibleCourses.length})</span>
+            </span>
 
-        {/* Carousel Arrow Buttons with Accessibility and Disabling at bounds */}
-        <div className="da-carousel-nav-btns" role="group" aria-label="Carousel navigation">
-          <button
-            type="button"
-            aria-label="Previous courses"
-            onClick={() => scrollCards(-1)}
-            disabled={!canScrollLeft}
-            className={`da-carousel-btn ${!canScrollLeft ? "is-disabled" : ""}`}
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                scrollCards(-1);
-              }
-            }}
-          >
-            <svg
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
-          </button>
+            <div className="da-carousel-nav-btns" role="group" aria-label="Carousel navigation">
+              <button
+                type="button"
+                aria-label="Previous courses"
+                onClick={() => scrollCards(-1)}
+                disabled={!canScrollLeft}
+                className={`da-carousel-btn ${!canScrollLeft ? "is-disabled" : ""}`}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    scrollCards(-1);
+                  }
+                }}
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
 
-          <button
-            type="button"
-            aria-label="Next courses"
-            onClick={() => scrollCards(1)}
-            disabled={!canScrollRight}
-            className={`da-carousel-btn ${!canScrollRight ? "is-disabled" : ""}`}
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                scrollCards(1);
-              }
-            }}
-          >
-            <svg
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {/* 3. Horizontal Course Carousel Track (Smooth slide/fade animation on card change) */}
-      <div
-        id="course-carousel-track"
-        className="da-course-track"
-        ref={trackRef}
-        role="region"
-        aria-live="polite"
-        aria-label={`${activeCategory} courses carousel`}
-        tabIndex={0}
-      >
-        {visibleCourses.map((course, index) => (
-          <div
-            className="da-course-slide"
-            key={`${activeCategory}-${course.id}`}
-            style={{
-              animationDelay: `${Math.min(index * 50, 300)}ms`,
-            }}
-          >
-            <CourseCard course={course} />
+              <button
+                type="button"
+                aria-label="Next courses"
+                onClick={() => scrollCards(1)}
+                disabled={!canScrollRight}
+                className={`da-carousel-btn ${!canScrollRight ? "is-disabled" : ""}`}
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    scrollCards(1);
+                  }
+                }}
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+            </div>
           </div>
-        ))}
-      </div>
+
+          <div
+            id="course-carousel-track"
+            className="da-course-track"
+            ref={trackRef}
+            role="region"
+            aria-live="polite"
+            aria-label="All courses carousel"
+            tabIndex={0}
+          >
+            {visibleCourses.map((course, index) => (
+              <div
+                className="da-course-slide"
+                key={course.id}
+                style={{
+                  animationDelay: `${Math.min(index * 50, 300)}ms`,
+                }}
+              >
+                <CourseCard course={course} />
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        /* When a specific domain is active: Left Sidebar with Level/Program Filters + Right Grid */
+        <div className="da-domain-view-layout">
+          {/* Desktop Left-Side Filter Sidebar */}
+          <aside className="da-filter-sidebar" aria-label="Course Filters">
+            <div className="da-filter-sidebar-header">
+              <div className="da-filter-sidebar-title">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                </svg>
+                <span>Filters</span>
+                {totalActiveFilters > 0 && (
+                  <span className="da-filter-active-count-badge">{totalActiveFilters}</span>
+                )}
+              </div>
+              {totalActiveFilters > 0 && (
+                <button
+                  type="button"
+                  className="da-filter-clear-all-btn"
+                  onClick={handleClearAllFilters}
+                >
+                  Clear all
+                </button>
+              )}
+            </div>
+
+            <div className="da-filter-sidebar-body">
+              {/* Dynamic Level / Program Filter for selected domain */}
+              <FilterGroup
+                title="Level / Program"
+                options={levelOptions}
+                selectedValues={selectedLevels}
+                onToggle={handleToggleLevel}
+                idPrefix="dsk"
+              />
+
+              {/* Dynamic Duration Filter */}
+              <FilterGroup
+                title="Duration"
+                options={durationOptions}
+                selectedValues={selectedDurations}
+                onToggle={handleToggleDuration}
+                idPrefix="dsk"
+              />
+            </div>
+          </aside>
+
+          {/* Right Main Content Area */}
+          <main className="da-course-main-content">
+            {/* Mobile Filter Bar & Quick Level Chips */}
+            <div className="da-mobile-filter-bar">
+              <button
+                type="button"
+                className="da-mobile-filter-trigger-btn"
+                onClick={() => setIsMobileFilterOpen(true)}
+                aria-label="Open filter drawer"
+              >
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                </svg>
+                <span>Filter</span>
+                {totalActiveFilters > 0 && (
+                  <span className="da-filter-active-count-badge">{totalActiveFilters}</span>
+                )}
+              </button>
+
+              <div className="da-mobile-level-chips" role="group" aria-label="Quick level filters">
+                <button
+                  type="button"
+                  className={`da-level-chip ${selectedLevels.length === 0 ? "is-active" : ""}`}
+                  onClick={handleClearAllFilters}
+                >
+                  All ({categoryCourses.length})
+                </button>
+                {levelOptions.map((opt) => {
+                  const isChecked = selectedLevels.includes(opt.value);
+                  return (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      className={`da-level-chip ${isChecked ? "is-active" : ""}`}
+                      onClick={() => handleToggleLevel(opt.value)}
+                    >
+                      {opt.label} ({opt.count})
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Results bar */}
+            <div className="da-course-results-bar">
+              <div className="da-course-results-count">
+                Showing <strong>{visibleCourses.length}</strong> {activeCategoryObj?.label} courses
+              </div>
+
+              {totalActiveFilters > 0 && (
+                <div className="da-active-filter-tags">
+                  {selectedLevels.map((lvl) => (
+                    <span key={lvl} className="da-filter-tag">
+                      {lvl}
+                      <button
+                        type="button"
+                        onClick={() => handleToggleLevel(lvl)}
+                        aria-label={`Remove ${lvl} filter`}
+                      >
+                        &times;
+                      </button>
+                    </span>
+                  ))}
+                  {selectedDurations.map((dur) => (
+                    <span key={dur} className="da-filter-tag">
+                      {dur}
+                      <button
+                        type="button"
+                        onClick={() => handleToggleDuration(dur)}
+                        aria-label={`Remove ${dur} filter`}
+                      >
+                        &times;
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Course Cards Grid or Friendly Empty State */}
+            {visibleCourses.length === 0 ? (
+              <div className="da-course-empty">
+                <h4>No courses found</h4>
+                <p>No courses match your selected level filter. Please reset or choose another level.</p>
+                <button type="button" onClick={handleClearAllFilters}>
+                  Reset Filters
+                </button>
+              </div>
+            ) : (
+              <div className="da-course-grid" aria-label="Course listings">
+                {visibleCourses.map((course) => (
+                  <div className="da-course-grid-item" key={course.id}>
+                    <CourseCard course={course} />
+                  </div>
+                ))}
+              </div>
+            )}
+          </main>
+        </div>
+      )}
+
+      {/* Mobile Filter Drawer / Modal */}
+      {isMobileFilterOpen && isDomainSelected && (
+        <div
+          className="da-mobile-filter-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Filter courses by level"
+        >
+          <div
+            className="da-mobile-filter-backdrop"
+            onClick={() => setIsMobileFilterOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="da-mobile-filter-drawer">
+            <div className="da-mobile-drawer-header">
+              <div className="da-mobile-drawer-title">
+                <span>Filter Courses</span>
+                {totalActiveFilters > 0 && (
+                  <span className="da-filter-active-count-badge">{totalActiveFilters}</span>
+                )}
+              </div>
+              <button
+                type="button"
+                className="da-mobile-drawer-close"
+                onClick={() => setIsMobileFilterOpen(false)}
+                aria-label="Close filters"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="da-mobile-drawer-body">
+              <FilterGroup
+                title="Level / Program"
+                options={levelOptions}
+                selectedValues={selectedLevels}
+                onToggle={handleToggleLevel}
+                idPrefix="mob"
+              />
+              <FilterGroup
+                title="Duration"
+                options={durationOptions}
+                selectedValues={selectedDurations}
+                onToggle={handleToggleDuration}
+                idPrefix="mob"
+              />
+            </div>
+
+            <div className="da-mobile-drawer-footer">
+              <button
+                type="button"
+                className="da-mobile-drawer-clear"
+                onClick={handleClearAllFilters}
+                disabled={totalActiveFilters === 0}
+              >
+                Clear all
+              </button>
+              <button
+                type="button"
+                className="da-mobile-drawer-apply"
+                onClick={() => setIsMobileFilterOpen(false)}
+              >
+                Apply ({visibleCourses.length})
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
