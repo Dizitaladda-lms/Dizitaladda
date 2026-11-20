@@ -1008,37 +1008,6 @@ export default function CourseCategoryFilters() {
         <div className="da-domain-view-layout">
           {/* Desktop Left-Side Filter Sidebar */}
           <aside className="da-filter-sidebar" aria-label="Course Filters">
-            <div className="da-filter-sidebar-header">
-              <div className="da-filter-sidebar-title">
-                <svg
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
-                </svg>
-                <span>Filters</span>
-                {totalActiveFilters > 0 && (
-                  <span className="da-filter-active-count-badge">{totalActiveFilters}</span>
-                )}
-              </div>
-              {totalActiveFilters > 0 && (
-                <button
-                  type="button"
-                  className="da-filter-clear-all-btn"
-                  onClick={handleClearAllFilters}
-                >
-                  Clear all
-                </button>
-              )}
-            </div>
-
             <div className="da-filter-sidebar-body">
               {/* Dynamic Level / Program Filter for selected domain */}
               <FilterGroup

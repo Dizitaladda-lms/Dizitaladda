@@ -72,6 +72,7 @@ export default function PaidInternshipSection({
         <SectionHeader
           align="center"
           id="paid-internship-heading"
+          dark
           label="Earn While You Learn"
           title={
             <>

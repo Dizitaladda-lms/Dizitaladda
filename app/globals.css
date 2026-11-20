@@ -493,26 +493,26 @@ h6 {
 .da-domain-view-layout{display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start;width:100%;box-sizing:border-box}
 
 /* Sticky Left Desktop Sidebar */
-.da-filter-sidebar{position:sticky;top:96px;background:#ffffff;border:1px solid rgba(124,58,237,.14);border-radius:20px;padding:22px 20px;box-shadow:0 4px 20px rgba(31,21,58,.05);box-sizing:border-box}
-.da-filter-sidebar-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;margin-bottom:18px;border-bottom:1px solid #f1ecf9}
-.da-filter-sidebar-title{display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:750;color:#1a1530}
+.da-filter-sidebar{position:sticky;top:96px;width:280px;background:#ffffff;border:1px solid #ebe6f3;border-radius:16px;padding:18px 16px;box-shadow:0 10px 28px rgba(31,21,58,.06);box-sizing:border-box}
+.da-filter-sidebar-header{display:flex;align-items:center;justify-content:space-between;padding:0 0 14px;margin:0 0 12px;border-bottom:1px solid #f1ecf9}
+.da-filter-sidebar-title{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:750;color:#1a1530}
 .da-filter-sidebar-title svg{color:#7c3aed}
 .da-filter-active-count-badge{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:#7c3aed;color:#fff;font-size:11px;font-weight:700}
 .da-filter-clear-all-btn{background:none;border:none;padding:0;color:#7c3aed;font-size:13px;font-weight:650;cursor:pointer;text-decoration:underline;transition:color .18s ease}
 .da-filter-clear-all-btn:hover{color:#5b21b6}
 
 /* Filter Groups & Checkboxes */
-.da-filter-sidebar-body{display:flex;flex-direction:column;gap:18px}
-.da-filter-group{padding-bottom:16px;border-bottom:1px solid #f6f3fb}
+.da-filter-sidebar-body{display:flex;flex-direction:column;gap:0}
+.da-filter-group{padding:0;border-bottom:none}
 .da-filter-group:last-child{border-bottom:none;padding-bottom:0}
-.da-filter-group-title{font-size:12px;font-weight:750;text-transform:uppercase;letter-spacing:.06em;color:#7c3aed;margin-bottom:12px}
-.da-filter-options{display:flex;flex-direction:column;gap:8px}
-.da-filter-option{display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;padding:6px 8px;border-radius:10px;font-size:13.5px;color:#352d48;user-select:none;transition:background-color .15s ease,color .15s ease}
-.da-filter-option:hover{background-color:#faf7ff;color:#7c3aed}
-.da-filter-option.is-checked{color:#1a1530;font-weight:600;background-color:#f7f3ff}
+.da-filter-group-title{display:none}
+.da-filter-options{display:flex;flex-direction:column;gap:2px}
+.da-filter-option{display:flex;align-items:center;justify-content:flex-start;gap:10px;min-height:48px;cursor:pointer;padding:10px 14px;border-radius:0;border:1.5px solid transparent;font-size:14.5px;line-height:1.25;font-weight:650;color:#1a1530;user-select:none;transition:background-color .15s ease,color .15s ease,border-color .15s ease}
+.da-filter-option:hover{background-color:#f8f6ff;color:#312e81}
+.da-filter-option.is-checked{color:#ffffff;font-weight:750;background:#1e3a8a;border-color:#1e3a8a;border-radius:10px}
 .da-filter-checkbox-wrap{display:inline-flex;align-items:center;gap:10px;min-width:0;flex:1}
 .da-filter-checkbox-native{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
-.da-filter-checkbox-custom{width:18px;height:18px;min-width:18px;border:1.5px solid #d4cde6;border-radius:5px;background:#fff;display:inline-flex;align-items:center;justify-content:center;transition:all .18s ease}
+.da-filter-checkbox-custom{display:none}
 .da-filter-checkbox-custom svg{display:none;color:#fff}
 .da-filter-option.is-checked .da-filter-checkbox-custom{background:#7c3aed;border-color:#7c3aed}
 .da-filter-option.is-checked .da-filter-checkbox-custom svg{display:block}
@@ -549,6 +549,10 @@ h6 {
 .da-mobile-drawer-title{display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:750;color:#1a1530}
 .da-mobile-drawer-close{background:none;border:none;cursor:pointer;color:#6b7280;padding:4px}
 .da-mobile-drawer-body{padding:16px 20px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:16px}
+.da-mobile-drawer-body .da-filter-group-title{display:block}
+.da-mobile-drawer-body .da-filter-options{gap:4px}
+.da-mobile-drawer-body .da-filter-option{min-height:44px;border-radius:10px}
+.da-mobile-drawer-body .da-filter-option.is-checked{background:#1e3a8a;border-color:#1e3a8a}
 .da-mobile-drawer-footer{display:flex;align-items:center;gap:12px;padding:14px 20px 20px;border-top:1px solid #f1ecf9}
 .da-mobile-drawer-clear{flex:1;padding:12px;border:1px solid #e5e7eb;background:#ffffff;border-radius:12px;font-size:14px;font-weight:650;color:#4b5563;cursor:pointer}
 .da-mobile-drawer-apply{flex:1.5;padding:12px;border:none;background:#7c3aed;border-radius:12px;font-size:14px;font-weight:700;color:#ffffff;cursor:pointer}
