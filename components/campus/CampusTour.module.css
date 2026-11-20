@@ -62,11 +62,10 @@
   box-sizing: border-box;
 }
 
-/* Desktop: 3 columns x 3 rows bento grid
-   Col 1: 2.05fr, Col 2: 1fr, Col 3: 1fr */
+/* Desktop: 4 columns x 3 rows bento grid */
 .grid {
   display: grid;
-  grid-template-columns: 2.05fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: 1fr 1fr 1fr;
   gap: clamp(8px, 0.75vw, 12px);
   width: 100%;
@@ -147,12 +146,12 @@
 }
 
 /* ==========================================================================
-   DESKTOP BENTO POSITIONS (3x3 grid)
+   DESKTOP BENTO POSITIONS (4x3 grid)
    ========================================================================== */
 
-/* Smart classroom: col 1, rows 1-2 (Prominent Hero) */
+/* Smart classroom: cols 1-2, rows 1-2 (Prominent Hero) */
 .tileSmartClassroom {
-  grid-column: 1;
+  grid-column: 1 / 3;
   grid-row: 1 / 3;
 }
 .tileSmartClassroom .tileCaption {
@@ -160,39 +159,39 @@
   font-weight: 800;
 }
 
-/* Workspace: col 2, row 1 */
+/* Workspace: col 3, row 1 */
 .tileWorkspace {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1;
 }
 
-/* Discussion zone: col 2, row 2 */
+/* Discussion zone: col 3, row 2 */
 .tileDiscussionZone {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 2;
 }
 
-/* Learning lab: col 3, rows 1-2 (Tall) */
+/* Learning lab: col 4, rows 1-2 (Tall) */
 .tileLearningLab {
-  grid-column: 3;
+  grid-column: 4;
   grid-row: 1 / 3;
 }
 
-/* Student lounge: col 1, row 3 */
+/* Student lounge: cols 3-4, row 3 */
 .tileStudentLounge {
+  grid-column: 3 / 5;
+  grid-row: 3;
+}
+
+/* Library corner: col 1, row 3 */
+.tileLibraryCorner {
   grid-column: 1;
   grid-row: 3;
 }
 
-/* Library corner: col 2, row 3 */
-.tileLibraryCorner {
-  grid-column: 2;
-  grid-row: 3;
-}
-
-/* Reception: col 3, row 3 */
+/* Reception: col 2, row 3 */
 .tileReception {
-  grid-column: 3;
+  grid-column: 2;
   grid-row: 3;
 }
 

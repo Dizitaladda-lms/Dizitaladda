@@ -153,7 +153,7 @@ export const campusData: CampusSectionData = {
       span: "normal",
     },
     {
-      id: "Doubt session cabin",
+      id: "student-lounge",
       caption: "Doubt session cabin",
       image:
         "/images/campus/DOUBT.jpeg",

@@ -24,7 +24,7 @@ const courses = [
     months: 12,
     durationPercent: 100,
     mode: "Live + Recorded",
-    image: "/coursecard/expert in Digital Marketing Course.webp",
+    image: "/courses/images/expert-digital-marketing-classroom.png",
     title: "Expert in Digital Marketing",
     description: "Master advanced SEO, high-budget paid ads, and full-funnel digital marketing strategies on live campaigns.",
     eligibility: [
@@ -49,7 +49,7 @@ const courses = [
     months: 6,
     durationPercent: 50,
     mode: "Live + Recorded",
-    image: "/coursecard/advanced Digital Marketing Course.webp",
+    image: "/courses/images/advanced-digital-marketing-live-class.png",
     title: "Advanced Digital Marketing",
     description: "Advance your performance marketing, SEO audits, and conversion optimization skill set.",
     eligibility: [

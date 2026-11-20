@@ -379,15 +379,15 @@ h6 {
 /* Keep the hero headline readable against legacy page-wide heading rules. */
 #dizitaladda-home-hero .da-hero-content > h1{color:#fff!important;-webkit-text-fill-color:#fff!important}
 #dizitaladda-home-hero .da-hero-gradient-text{color:transparent!important;-webkit-text-fill-color:transparent!important}
-.hero-trust-strip{width:100%;padding:28px clamp(18px,5vw,70px);border-bottom:1px solid #e5e7eb;background:#f3f4f6;color:#1f1b2e}
+.hero-trust-strip{width:100%;padding:28px clamp(18px,5vw,70px);border-bottom:1px solid #414348;background:#292a2e;color:#f3f4f6}
 .hero-trust-inner{width:min(100%,1360px);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:28px}
-.hero-trust-label{flex:0 0 auto;margin:0;color:#4b465a;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hero-trust-label{flex:0 0 auto;margin:0;color:#f3f4f6;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .hero-trust-logos{display:grid;flex:1;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:clamp(16px,2.5vw,36px)}
-.hero-trust-logo{display:flex;height:112px;align-items:center;justify-content:center;min-width:0}
-.hero-trust-logo img{display:block;width:100%;max-width:280px;height:auto;max-height:100px;object-fit:contain}
+.hero-trust-logo{display:flex;height:124px;align-items:center;justify-content:center;min-width:0;padding:10px 14px;border-radius:14px;background:#ffffff;box-sizing:border-box}
+.hero-trust-logo img{display:block;width:100%;max-width:320px;height:auto;max-height:108px;object-fit:contain}
 .hero-trust-logo:focus-visible{outline:2px solid #6d28d9;outline-offset:5px;border-radius:5px}
-@media(max-width:760px){.hero-trust-inner{flex-direction:column;gap:14px}.hero-trust-logos{width:100%;flex:none;gap:14px}.hero-trust-logo{height:90px}.hero-trust-logo img{max-width:210px;max-height:82px}}
-@media(max-width:440px){.hero-trust-strip{padding:20px 16px}.hero-trust-label{font-size:13px;text-align:center}.hero-trust-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 22px}.hero-trust-logo{height:78px}.hero-trust-logo img{max-width:180px;max-height:72px}}
+@media(max-width:760px){.hero-trust-inner{flex-direction:column;gap:14px}.hero-trust-logos{width:100%;flex:none;gap:14px}.hero-trust-logo{height:96px;padding:8px 10px}.hero-trust-logo img{max-width:230px;max-height:80px}}
+@media(max-width:440px){.hero-trust-strip{padding:20px 16px}.hero-trust-label{font-size:13px;text-align:center}.hero-trust-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 22px}.hero-trust-logo{height:86px;padding:8px}.hero-trust-logo img{max-width:190px;max-height:68px}}
 /* DizitalAdda course cards and three-at-a-time carousel */
 .courses{width:100%!important;background:#f4f2fa!important}
 .courses .containerCource{width:100%;max-width:none;margin:0;padding:clamp(30px,5vw,68px) 0}
