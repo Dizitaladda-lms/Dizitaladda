@@ -129,9 +129,8 @@ export const campusData: CampusSectionData = {
     {
       id: "workspace",
       caption: "Workspace",
-      image:
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80",
-      alt: "Open-plan workspace with shared desks and natural light",
+      image: "/images/campus/working-area.jpeg",
+      alt: "DizitalAdda students working together on computers in the campus workspace",
       span: "normal",
     },
     {
