@@ -3071,7 +3071,7 @@ export default function LegacyPage_courses_expert_digital_marketing_course() {
 
           <div className="mentor-card">
             <div className="mentor-avatar-wrap">
-              <img loading="lazy" decoding="async" src="images/trainer/Ram.png" alt="Mr. Ram kumar" className="mentor-avatar mentor-img" />
+              <img loading="lazy" decoding="async" src="/courses/images/trainer/ram-trainer-2026.png" alt="Mr. Ram kumar" className="mentor-avatar mentor-img" />
               <div className="mentor-avatar-ring" style={{"borderColor":"#06b6d4"}}></div>
             </div>
             <div className="mentor-role">Lead Trainer – WordPress Website • Affiliate Marketing • E-commerce Marketing</div>
@@ -3085,7 +3085,7 @@ export default function LegacyPage_courses_expert_digital_marketing_course() {
 
           <div className="mentor-card">
             <div className="mentor-avatar-wrap">
-              <img loading="lazy" decoding="async" src="images/trainer/Saurabh.png" alt="Mr. Saurabh kumar" className="mentor-avatar mentor-img" />
+              <img loading="lazy" decoding="async" src="/courses/images/trainer/saurabh-trainer-2026.png" alt="Mr. Saurabh kumar" className="mentor-avatar mentor-img" />
               <div className="mentor-avatar-ring" style={{"borderColor":"#10b981"}}></div>
             </div>
             <div className="mentor-role">Trainer – Performance Marketing • Paid Ads • Media Buying</div>
@@ -3099,7 +3099,7 @@ export default function LegacyPage_courses_expert_digital_marketing_course() {
 
           <div className="mentor-card">
             <div className="mentor-avatar-wrap">
-              <img loading="lazy" decoding="async" src="images/trainer/shagun.png" alt="Miss. Shagun Srivastav" className="mentor-avatar mentor-img" />
+              <img loading="lazy" decoding="async" src="/courses/images/trainer/shagun-trainer-2026.png" alt="Miss. Shagun Srivastav" className="mentor-avatar mentor-img" />
               <div className="mentor-avatar-ring" style={{"borderColor":"#f59e0b"}}></div>
             </div>
             <div className="mentor-role">Trainer – Data Science • AI • Automation</div>
@@ -3141,7 +3141,7 @@ export default function LegacyPage_courses_expert_digital_marketing_course() {
 
           <div className="mentor-card">
             <div className="mentor-avatar-wrap">
-              <img loading="lazy" decoding="async" src="images/trainer/deepanshu.jpeg" alt="Mr. Deepanshu soni" className="mentor-avatar mentor-img" />
+              <img loading="lazy" decoding="async" src="/courses/images/trainer/deepanshu-trainer-2026.png" alt="Mr. Deepanshu soni" className="mentor-avatar mentor-img" />
               <div className="mentor-avatar-ring" style={{"borderColor":"#14b8a6"}}></div>
             </div>
             <div className="mentor-role">Trainer – Data Analytics • Web Development</div>
