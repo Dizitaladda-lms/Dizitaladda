@@ -121,9 +121,8 @@ export const campusData: CampusSectionData = {
     {
       id: "classroom",
       caption: "Smart classroom",
-      image:
-        "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=80",
-      alt: "Bright classroom with desks arranged for an instructor-led lesson",
+      image: "/images/campus/classromm photo.jpeg",
+      alt: "DizitalAdda smart classroom with students and learning equipment",
       span: "hero", // 2x2 grid cell on desktop
     },
     {
