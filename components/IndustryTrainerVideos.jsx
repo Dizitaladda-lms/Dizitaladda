@@ -3,19 +3,80 @@
 import { useEffect, useRef, useState } from "react";
 import SectionHeader from "./SectionHeader";
 
-const trainers = [
-  { name: "Dr. Gulshan Kumar", role: "Digital marketing", tags: ["Data science", "Strategy"], experience: "10+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Gulshan.png" },
-  { name: "Mr. Ram Kumar", role: "Web development", tags: ["WordPress", "E-commerce"], experience: "12+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Ram.png" },
-  { name: "Mr. Saurabh Kumar", role: "Performance marketing", tags: ["Paid ads", "Analytics"], experience: "15+ yrs experience", videoSrc: "", poster: "/public/TRANIER 2.JPG" },
-  { name: "Miss Shagun Srivastava", role: "Data science", tags: ["Generative AI", "Automation"], experience: "7+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/shagun.png" },
-  { name: "Mr. Ravi Kumar", role: "SEO specialist", tags: ["Keyword research", "Analytics"], experience: "7+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Ravi.png" },
-  { name: "Mr. Kaushal", role: "Local SEO", tags: ["Paid ads", "Google Business"], experience: "5+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Kaushal.png" },
-  { name: "Mr. Deepanshu Soni", role: "Data analytics", tags: ["Web development", "Python"], experience: "5+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/deepanshu.jpeg" },
-  { name: "Mr. Govind Bisht", role: "Search AI", tags: ["SEO", "AI Overviews"], experience: "3+ yrs experience", videoSrc: "", poster: "/courses/images/trainer/Govind.png" },
+export const trainers = [
+  {
+    name: "Dr. Gulshan Kumar",
+    role: "Digital marketing",
+    tags: ["Data science", "Strategy"],
+    experience: "10+ yrs experience",
+    videoSrc: "",
+    poster: "/courses/images/trainer/Gulshan.png",
+  },
+  {
+    name: "Mr. Ram Kumar",
+    role: "Web development",
+    tags: ["WordPress", "E-commerce"],
+    experience: "12+ yrs experience",
+    videoSrc: "",
+    poster: "/courses/images/trainer/Ram.png",
+  },
+  {
+    name: "Mr. Saurabh Kumar",
+    role: "Performance marketing",
+    tags: ["Paid ads", "Analytics"],
+    experience: "15+ yrs experience",
+    videoSrc: "",
+    poster: "/courses/images/trainer/Saurabh.png",
+  },
+  {
+    name: "Miss Shagun Srivastava",
+    role: "Data science",
+    tags: ["Generative AI", "Automation"],
+    experience: "7+ yrs experience",
+    videoSrc: "",
+    poster: "/courses/images/trainer/shagun.png",
+  },
+  {
+    name: "Mr. Ravi Kumar",
+    role: "SEO specialist",
+    tags: ["Keyword research", "Analytics"],
+    experience: "7+ yrs experience",
+    videoSrc: "",
+    poster: "/courses/images/trainer/Ravi.png",
+  },
+  {
+    name: "Mr. Kaushal",
+    role: "Local SEO",
+    tags: ["Paid ads", "Google Business"],
+    experience: "5+ yrs experience",
+    videoSrc: "",
+    poster: "/courses/images/trainer/Kaushal.png",
+  },
+  {
+    name: "Mr. Deepanshu Soni",
+    role: "Data analytics",
+    tags: ["Web development", "Python"],
+    experience: "5+ yrs experience",
+    videoSrc: "",
+    poster: "/courses/images/trainer/deepanshu.jpeg",
+  },
+  {
+    name: "Mr. Govind Bisht",
+    role: "Search AI",
+    tags: ["SEO", "AI Overviews"],
+    experience: "3+ yrs experience",
+    videoSrc: "",
+    poster: "/courses/images/trainer/Govind.png",
+  },
 ];
 
 function ClockIcon() {
-  return <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg>;
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7v5l3 2" />
+    </svg>
+  );
 }
 
 export default function IndustryTrainerVideos() {
@@ -32,7 +93,10 @@ export default function IndustryTrainerVideos() {
 
     const gap = Number.parseFloat(window.getComputedStyle(track).columnGap) || 20;
     const visibleCards = window.innerWidth > 900 ? 4 : window.innerWidth > 560 ? 2 : 1;
-    track.scrollBy({ left: (card.getBoundingClientRect().width + gap) * visibleCards * direction, behavior: "smooth" });
+    track.scrollBy({
+      left: (card.getBoundingClientRect().width + gap) * visibleCards * direction,
+      behavior: "smooth",
+    });
   };
 
   const openVideo = (trainer, button) => {
@@ -97,27 +161,37 @@ export default function IndustryTrainerVideos() {
         />
         <div className="industry-trainer-videos-controls" aria-label="Trainer carousel controls">
           <button type="button" aria-label="Previous trainers" onClick={() => scrollTrainers(-1)}>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
           </button>
           <button type="button" aria-label="Next trainers" onClick={() => scrollTrainers(1)}>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
           </button>
         </div>
         <div className="industry-trainer-videos-viewport">
-          <div className="industry-trainer-videos-track" ref={carouselRef} tabIndex={0} aria-label="Industry expert trainers">
+          <div
+            className="industry-trainer-videos-track"
+            ref={carouselRef}
+            tabIndex={0}
+            aria-label="Industry expert trainers"
+          >
             {trainers.map((trainer) => (
               <article
                 className={`industry-trainer-video-card${trainer.videoSrc ? " has-video" : ""}`}
                 key={trainer.name}
-                onClick={(event) => openVideo(trainer, event.currentTarget.querySelector(".industry-trainer-video-action"))}
+                onClick={(event) =>
+                  openVideo(trainer, event.currentTarget.querySelector(".industry-trainer-video-action"))
+                }
               >
                 <div className="industry-trainer-video-media">
-                  <video
+                  <img
                     className="industry-trainer-video-poster"
-                    preload="none"
-                    poster={trainer.poster}
-                    aria-label={`${trainer.name} trainer video poster`}
-                    tabIndex={-1}
+                    src={trainer.poster}
+                    alt={`${trainer.name} - ${trainer.role}`}
+                    loading="lazy"
                   />
                   <span className="industry-trainer-video-badge">
                     {trainer.videoSrc ? trainer.experience : "Video coming soon"}
@@ -132,17 +206,23 @@ export default function IndustryTrainerVideos() {
                         openVideo(trainer, event.currentTarget);
                       }}
                     >
-                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 10 6-10 6z" /></svg>
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m9 6 10 6-10 6z" />
+                      </svg>
                     </button>
                   ) : (
-                    <span className="industry-trainer-video-action is-unavailable" aria-hidden="true"><ClockIcon /></span>
+                    <span className="industry-trainer-video-action is-unavailable" aria-hidden="true">
+                      <ClockIcon />
+                    </span>
                   )}
                 </div>
                 <div className="industry-trainer-video-copy">
                   <h3>{trainer.name}</h3>
                   <p className="industry-trainer-video-role">{trainer.role}</p>
                   <div className="industry-trainer-video-tags">
-                    {trainer.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                    {trainer.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
                   </div>
                 </div>
               </article>
@@ -152,7 +232,10 @@ export default function IndustryTrainerVideos() {
       </div>
 
       {activeTrainer && (
-        <div className="industry-trainer-video-modal-overlay" onClick={(event) => event.target === event.currentTarget && closeVideo()}>
+        <div
+          className="industry-trainer-video-modal-overlay"
+          onClick={(event) => event.target === event.currentTarget && closeVideo()}
+        >
           <div
             className="industry-trainer-video-dialog"
             role="dialog"
@@ -161,8 +244,22 @@ export default function IndustryTrainerVideos() {
             tabIndex={-1}
             ref={dialogRef}
           >
-            <button className="industry-trainer-video-close" type="button" onClick={closeVideo} aria-label="Close video">×</button>
-            <video ref={videoRef} src={activeTrainer.videoSrc} poster={activeTrainer.poster} controls autoPlay preload="none" />
+            <button
+              className="industry-trainer-video-close"
+              type="button"
+              onClick={closeVideo}
+              aria-label="Close video"
+            >
+              ×
+            </button>
+            <video
+              ref={videoRef}
+              src={activeTrainer.videoSrc}
+              poster={activeTrainer.poster}
+              controls
+              autoPlay
+              preload="none"
+            />
             <h2>{activeTrainer.name}</h2>
           </div>
         </div>
