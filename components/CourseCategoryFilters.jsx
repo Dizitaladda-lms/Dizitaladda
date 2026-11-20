@@ -874,7 +874,7 @@ export default function CourseCategoryFilters() {
     <div className={`da-course-showcase ${isDomainSelected ? "has-domain-active" : "is-all-courses"}`} role="region" aria-label="Programs & Certifications">
       {/* 1. Category Filter Tabs */}
       <div className="course-category-filters" role="tablist" aria-label="Course category filters">
-        {courseCategories.map((category) => {
+        {courseCategories.filter((category) => category.id !== "all").map((category) => {
           const isActive = activeCategory === category.id;
           return (
             <button

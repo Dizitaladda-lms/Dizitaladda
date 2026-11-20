@@ -158,6 +158,15 @@ export default function CertificatesMarquee() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!isInView) return;
+
+    CERTS.forEach(({ pair }) => {
+      const image = new window.Image();
+      image.src = pair;
+    });
+  }, [isInView, CERTS]);
+
   /**
    * Smooth 3D Page Turn Transition Handler
    * Simulates real page flipping like turning leaves in a book.
@@ -192,6 +201,11 @@ export default function CertificatesMarquee() {
     if (!isOpen || !isInView || isHovered || isZoomed || isFlipping) return;
 
     const timer = setTimeout(() => {
+      if (activeIndex === CERTS.length - 1) {
+        setIsOpen(false);
+        return;
+      }
+
       turnPage("next");
     }, HOLD_MS);
 
@@ -228,6 +242,9 @@ export default function CertificatesMarquee() {
 
   // Toggle open / closed leather file
   const toggleFolder = () => {
+    if (!isOpen && activeIndex === CERTS.length - 1) {
+      setActiveIndex(0);
+    }
     setIsOpen((prev) => !prev);
   };
 
