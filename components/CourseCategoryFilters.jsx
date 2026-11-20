@@ -649,16 +649,6 @@ function CourseCard({ course }) {
         {/* Who is this course for? */}
         <EligibilityList items={course.eligibility} />
 
-        {/* Key skills & tools */}
-        <ul className="da-course-skills" aria-label="Skills covered">
-          {course.skills.map((skill) => (
-            <li key={skill.label}>
-              <SkillIcon type={skill.icon} />
-              <span>{skill.label}</span>
-            </li>
-          ))}
-        </ul>
-
         {/* CTA Buttons */}
         <div className="da-course-actions">
           <a className="da-course-details" href={course.detailsLink}>
