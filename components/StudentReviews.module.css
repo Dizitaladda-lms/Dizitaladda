@@ -70,8 +70,7 @@
   animation: daMarqueeScroll 55s linear infinite;
 }
 
-/* Pause animation on hover, focus, and touch/active */
-.marqueeWrapper:hover .marqueeTrack,
+/* Pause animation on focus and touch/active */
 .marqueeWrapper:focus-within .marqueeTrack,
 .marqueeWrapper:active .marqueeTrack {
   animation-play-state: paused;
