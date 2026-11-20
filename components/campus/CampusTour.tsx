@@ -31,6 +31,10 @@ export const CAMPUS_PLACES: CampusPlace[] = campusData.photos.map((photo) => ({
   gridClass: GRID_CLASS_BY_ID[photo.id] || styles.tileWorkspace,
 }));
 
+function isVideoSource(src: string) {
+  return /\.(mp4|webm|mov|m4v)(?:$|\?)/i.test(src);
+}
+
 export default function CampusTour({ places = CAMPUS_PLACES }: { places?: CampusPlace[] }) {
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
 
@@ -74,18 +78,37 @@ export default function CampusTour({ places = CAMPUS_PLACES }: { places?: Campus
                     <span className={styles.placeholderText}>{place.name}</span>
                   </div>
                 ) : (
-                  <img
-                    src={place.src}
-                    alt={place.alt}
-                    className={styles.tileImage}
-                    loading="lazy"
-                    onError={() =>
-                      setBrokenImages((prev) => ({
-                        ...prev,
-                        [place.id]: true,
-                      }))
-                    }
-                  />
+                  isVideoSource(place.src) ? (
+                    <video
+                      src={place.src}
+                      className={styles.tileImage}
+                      muted
+                      loop
+                      autoPlay
+                      playsInline
+                      preload="metadata"
+                      aria-label={place.alt}
+                      onError={() =>
+                        setBrokenImages((prev) => ({
+                          ...prev,
+                          [place.id]: true,
+                        }))
+                      }
+                    />
+                  ) : (
+                    <img
+                      src={place.src}
+                      alt={place.alt}
+                      className={styles.tileImage}
+                      loading="lazy"
+                      onError={() =>
+                        setBrokenImages((prev) => ({
+                          ...prev,
+                          [place.id]: true,
+                        }))
+                      }
+                    />
+                  )
                 )}
 
                 {/* Dark Gradient Overlay */}

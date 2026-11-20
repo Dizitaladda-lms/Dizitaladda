@@ -14,6 +14,10 @@ export interface CampusFact {
 export interface CampusPhoto {
   id: string;
   caption: string;
+  /**
+   * Public-folder path for an image or video.
+   * Examples: '/images/campus/classroom.jpg', '/images/campus/tour.mp4'
+   */
   image: string;
   alt: string;
   span: "hero" | "tall" | "wide" | "normal";
