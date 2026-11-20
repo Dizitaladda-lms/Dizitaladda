@@ -72,7 +72,7 @@ const courses = [
     months: 4,
     durationPercent: 33,
     mode: "Live + Recorded",
-    image: "/coursecard/digital Marketing For Professionals.webp",
+    image: "./public/proffesional digital marketing.jpeg",
     title: "Digital Marketing for Professionals",
     description: "Scale business performance and campaign ROI across Google Ads, Meta Ads, and LinkedIn.",
     eligibility: [

@@ -389,11 +389,13 @@ h6 {
 @media(max-width:760px){.hero-trust-inner{flex-direction:column;gap:14px}.hero-trust-logos{width:100%;flex:none;gap:14px}.hero-trust-logo{height:52px}.hero-trust-logo img{max-width:140px;max-height:48px}}
 @media(max-width:440px){.hero-trust-strip{padding:20px 16px}.hero-trust-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 22px}.hero-trust-logo{height:48px}.hero-trust-logo img{max-width:130px;max-height:44px}}
 /* DizitalAdda course cards and three-at-a-time carousel */
-.courses{background:#f4f2fa!important}
-.courses .containerCource{width:min(100%,1480px);margin:0 auto;padding:clamp(30px,5vw,68px) clamp(16px,4vw,48px)}
+.courses{width:100%!important;background:#f4f2fa!important}
+.courses .containerCource{width:100%;max-width:none;margin:0;padding:clamp(30px,5vw,68px) 0}
 .courses .da-course-showcase{--course-purple:#7c3aed;--course-purple-hover:#6d28d9;--course-ink:#1a1530;--course-muted:#5b5670;--course-lavender:#f4f2fa;--course-line:#ece9f5;color:var(--course-ink);font-family:Inter,var(--font-plus-jakarta-sans),system-ui,sans-serif}
 
 /* 1. Category Filter Tabs */
+.courses .containerCource>.section-header,
+.courses .containerCource>.da-course-showcase{width:min(calc(100% - 32px),1480px);margin-left:auto;margin-right:auto}
 .da-course-showcase .course-category-filters{display:flex;align-items:center;justify-content:flex-start;gap:12px;margin:0 0 24px;flex-wrap:wrap}
 .da-course-showcase .course-category-filters button,
 .da-course-showcase .da-category-tab{min-height:42px;padding:9px 22px;border:1.5px solid #e5e7eb;border-radius:999px;background:#ffffff;color:#374151;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 2px rgba(0,0,0,.04)}
@@ -575,7 +577,7 @@ h6 {
 }
 
 @media(max-width:640px){
-  .courses .containerCource{padding:34px 16px}
+  .courses .containerCource{width:100%;padding:34px 0}
   .da-course-showcase .course-category-filters{gap:8px;overflow-x:auto;flex-wrap:nowrap;padding:2px 2px 6px;scrollbar-width:none}
   .da-course-showcase .course-category-filters::-webkit-scrollbar{display:none}
   .da-course-showcase .course-category-filters button,
