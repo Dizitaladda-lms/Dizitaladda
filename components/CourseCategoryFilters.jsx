@@ -10,6 +10,8 @@ import { useEffect, useMemo, useRef, useState, useCallback } from "react";
  * - Cyber Security (5 courses)
  * ============================================================================
  */
+// Course card images live in `public`; use their URL path without the `public` prefix.
+// Example: `public/coursecard/my-image.jpg` -> `/coursecard/my-image.jpg`.
 const courses = [
   // --------------------------------------------------------------------------
   // 1. Digital Marketing (4 courses)
@@ -72,7 +74,7 @@ const courses = [
     months: 4,
     durationPercent: 33,
     mode: "Live + Recorded",
-    image: "/public/proffesional digital marketing.jpeg",
+    image: "/proffesional digital marketing.jpeg",
     title: "Digital Marketing for Professionals",
     description: "Scale business performance and campaign ROI across Google Ads, Meta Ads, and LinkedIn.",
     eligibility: [
