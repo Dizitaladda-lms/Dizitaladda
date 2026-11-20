@@ -322,22 +322,6 @@ export default function CertificatesMarquee() {
             </div>
           </div>
 
-          {/* Active Live Student Tracker Card */}
-          <div className={styles.activeCertCard}>
-            <div className={styles.activeCertIcon}>
-              <svg viewBox="0 0 24 24">
-                <path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z" />
-                <path d="M8.5 12l2.5 2.5 4.5-5" />
-              </svg>
-            </div>
-            <div className={styles.activeCertMeta}>
-              <span className={styles.activeCertLabel}>
-                Now Displaying ({activeIndex + 1} of {CERTS.length}):
-              </span>
-              <span className={styles.activeCertCourse}>{currentCert.course}</span>
-            </div>
-          </div>
-
           {/* CTA Action Button */}
           <div className={styles.actionRow}>
             <a href="#bookDemo" className={styles.primaryCtaBtn}>

@@ -6,6 +6,7 @@ import WhyTrustSequence from "../components/WhyTrustSequence.jsx";
 import WhatPeopleSaySection from "../components/WhatPeopleSaySection.jsx";
 import PlacementShowcase from "../components/PlacementShowcase.jsx";
 import IndustryTrainerVideos from "../components/IndustryTrainerVideos.jsx";
+import SalaryComparison from "../components/SalaryComparison.jsx";
 import HeroTrustStrip from "../components/HeroTrustStrip.jsx";
 import PaidInternshipSection from "../components/PaidInternshipSection.jsx";
 import CampusSection from "../components/campus/CampusSection";
@@ -615,25 +616,7 @@ export default function LegacyPage_index() {
 </section>
 
 
-<section className="career-outcome dark-theme">
-<SectionHeader
-  align="center"
-  dark={true}
-  label="Industry Hiring Network"
-  title="Build Skills That Companies Are Looking For"
-  description="DizitalAdda's career-focused courses are aligned with the skill requirements of leading technology, marketing, analytics, and cybersecurity employers. Graduates from Digital Marketing, Generative AI, Data Science, Machine Learning, Data Analytics, and Cyber Security programs receive placement support through a network of 250+ hiring partners, including companies such as Flipkart, Myntra, Nykaa, HiveMinds, Coursera, Zouk, and Sleepy Owl."
-/>
-<div className="company-logo-grid">
-<img src="./images/TCS-logo-white.svg" alt="TCS" loading="lazy" decoding="async" />
-<img src="./images/wipro-svgrepo-com.svg" alt="Wipro" loading="lazy" decoding="async" />
-<img src="./images/google-2015-logo-svgrepo-com.svg" alt="Google" loading="lazy" decoding="async" />
-<img src="./images/microsoft-logo-svgrepo-com.svg" alt="Microsoft" loading="lazy" decoding="async" />
-<img src="./images/infosys-svgrepo-com.svg" alt="Infosys" loading="lazy" decoding="async" />
-</div>
-<p className="disclaimer">
-*Companies mentioned are examples of industry relevance. Logos shown for aspirational and educational purposes only.
-</p>
-</section>
+<SalaryComparison />
 
 
 
