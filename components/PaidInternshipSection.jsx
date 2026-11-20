@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SectionHeader from "./SectionHeader";
 import PortraitVideoCard from "./PortraitVideoCard";
 import styles from "./PaidInternshipSection.module.css";
@@ -47,6 +47,20 @@ export default function PaidInternshipSection({
   videos = internshipVideosData,
 }) {
   const [activeVideoId, setActiveVideoId] = useState(null);
+  const videoTrackRef = useRef(null);
+
+  const scrollVideos = (direction) => {
+    const track = videoTrackRef.current;
+    if (!track) return;
+    const card = track.querySelector('[role="listitem"]');
+    if (!card) return;
+    const gap = Number.parseFloat(window.getComputedStyle(track).gap) || 24;
+    const visibleCards = window.innerWidth > 900 ? 4 : window.innerWidth > 580 ? 2 : 1;
+    track.scrollBy({
+      left: (card.getBoundingClientRect().width + gap) * visibleCards * direction,
+      behavior: "smooth",
+    });
+  };
 
   const handleTogglePlay = (id) => {
     if (activeVideoId === id) {
@@ -85,7 +99,7 @@ export default function PaidInternshipSection({
           align="center"
           id="paid-internship-heading"
           dark
-          label="Earn While You Learn"
+          label="Earn With Learn"
           title={
             <>
               Final 2 Months Guaranteed{" "}
@@ -96,18 +110,40 @@ export default function PaidInternshipSection({
         />
 
         {/* ================= STUDENT INTERNSHIP VIDEOS GRID ================= */}
-        <div className={styles.videoGrid} role="list">
-          {videos.map((item) => {
-            const cardId = item.id || item.videoId || item.name;
-            return (
-              <PortraitVideoCard
-                key={cardId}
-                item={item}
-                isPlaying={activeVideoId === cardId}
-                onTogglePlay={() => handleTogglePlay(cardId)}
-              />
-            );
-          })}
+        <div className={styles.videoCarousel}>
+          <button
+            type="button"
+            className={`${styles.carouselButton} ${styles.carouselButtonPrev}`}
+            aria-label="Previous internship videos"
+            onClick={() => scrollVideos(-1)}
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <div className={styles.videoGrid} role="list" ref={videoTrackRef}>
+            {videos.map((item) => {
+              const cardId = item.id || item.videoId || item.name;
+              return (
+                <PortraitVideoCard
+                  key={cardId}
+                  item={item}
+                  isPlaying={activeVideoId === cardId}
+                  onTogglePlay={() => handleTogglePlay(cardId)}
+                />
+              );
+            })}
+          </div>
+          <button
+            type="button"
+            className={`${styles.carouselButton} ${styles.carouselButtonNext}`}
+            aria-label="Next internship videos"
+            onClick={() => scrollVideos(1)}
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
         </div>
 
         {/* ================= 2-MONTH INTERNSHIP ROADMAP ================= */}

@@ -91,33 +91,111 @@
 }
 
 /* ── Internship Videos Grid (Portrait Video Cards) ── */
-.videoGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
-  gap: 24px;
-  justify-content: center;
-  margin-bottom: 48px;
+.videoCarousel {
+  position: relative;
   width: 100%;
+  margin-bottom: 48px;
+}
+
+.videoGrid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 0 12px;
+}
+
+.videoGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.videoGrid > article {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 42%;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #6d28d9;
+  box-shadow: 0 8px 24px rgba(18, 8, 48, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.carouselButton:hover {
+  background: #f5f3ff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carouselButton svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.carouselButtonPrev {
+  left: -18px;
+}
+
+.carouselButtonNext {
+  right: -18px;
 }
 
 @media (max-width: 900px) {
   .videoGrid {
-    grid-template-columns: repeat(2, minmax(0, 300px));
     gap: 20px;
+  }
+
+  .videoGrid > article {
+    flex-basis: calc((100% - 20px) / 2);
   }
 }
 
 @media (max-width: 580px) {
   .videoGrid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
+  }
+
+  .videoGrid > article {
+    flex-basis: min(82%, 300px);
+  }
+
+  .carouselButtonPrev {
+    left: 4px;
+  }
+
+  .carouselButtonNext {
+    right: 4px;
   }
 }
 
 @media (max-width: 380px) {
   .videoGrid {
-    grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .videoGrid > article {
+    flex-basis: 100%;
   }
 }
 
