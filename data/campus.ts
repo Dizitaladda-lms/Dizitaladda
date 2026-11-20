@@ -148,7 +148,7 @@ export const campusData: CampusSectionData = {
       id: "discussion-zone",
       caption: "Discussion zone",
       image:
-        "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=80",
+        "/images/campus/disscusion.jpeg",
       alt: "Team collaborating around a table during a discussion",
       span: "normal",
     },
