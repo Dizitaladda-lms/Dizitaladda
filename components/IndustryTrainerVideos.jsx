@@ -18,7 +18,7 @@ export const trainers = [
     tags: ["WordPress", "E-commerce"],
     experience: "12+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/Ram 2.webp",
+    poster: "/courses/images/trainer/ram3.png",
   },
   {
     name: "Mr. Saurabh Kumar",
@@ -26,7 +26,7 @@ export const trainers = [
     tags: ["Paid ads", "Analytics"],
     experience: "15+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/saurab.webp",
+    poster: "/courses/images/trainer/saurabh2.png",
   },
   {
     name: "Miss Shagun Srivastava",
@@ -34,7 +34,7 @@ export const trainers = [
     tags: ["Generative AI", "Automation"],
     experience: "7+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/shagun.webp",
+    poster: "/courses/images/trainer/shagun2.png",
   },
 
   {
@@ -43,7 +43,7 @@ export const trainers = [
     tags: ["Web development", "Python"],
     experience: "5+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/deepanshu 2.webp",
+    poster: "/courses/images/trainer/deepanshu3.png",
   },
   {
     name: "Mr. Ravi Kumar",
