@@ -1,24 +1,11 @@
 import styles from "./SalaryComparison.module.css";
 
-const salaryRoles = [
-  {
-    label: "General marketing role",
-    title: "Marketing Executive",
-    salary: "₹2.51 LPA",
-    annualSalary: "₹2,50,697/year",
-    sampleSize: "174 salary profiles",
-    href: "https://www.payscale.com/research/IN/Job=Marketing_Executive/Salary",
-    barWidth: "89%",
-  },
-  {
-    label: "Digital marketing role",
-    title: "Digital Marketing Specialist",
-    salary: "₹2.83 LPA",
-    annualSalary: "₹2,82,531/year",
-    sampleSize: "29 salary profiles",
-    href: "https://www.payscale.com/research/IN/Job=Digital_Marketing_Specialist/Salary",
-    barWidth: "100%",
-  },
+const jobRoles = [
+  "Digital Marketing Executive",
+  "SEO Executive",
+  "Social Media Executive",
+  "PPC / Performance Marketing Executive",
+  "Content Marketing Executive",
 ];
 
 export default function SalaryComparison() {
@@ -33,49 +20,69 @@ export default function SalaryComparison() {
           See How Digital Skills Can Expand Your Career Options
         </h2>
         <p className={styles.description}>
-          Compare reported entry-level pay for general marketing and digital
-          marketing roles in India.
+          Compare entry-level market averages for a general marketing role and
+          a digital marketing role.
         </p>
 
-        <div className={styles.comparison}>
-          {salaryRoles.map((role) => (
-            <article className={styles.roleCard} key={role.title}>
-              <p className={styles.roleLabel}>{role.label}</p>
-              <h3 className={styles.roleTitle}>{role.title}</h3>
-              <p className={styles.salary}>{role.salary}</p>
-              <p className={styles.salaryDetail}>
-                {role.annualSalary} average total compensation
-              </p>
-              <div
-                className={styles.barTrack}
-                role="img"
-                aria-label={`${role.title} average pay comparison`}
-              >
-                <span
-                  className={styles.bar}
-                  style={{ width: role.barWidth }}
-                />
-              </div>
-              <p className={styles.sampleSize}>
-                Entry-level, under 1 year experience · {role.sampleSize}
-              </p>
-              <a
-                className={styles.source}
-                href={role.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View PayScale source
-              </a>
-            </article>
-          ))}
+        <div className={styles.tableScroll}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Before digital specialization</th>
+                <th scope="col">After building digital marketing skills</th>
+                <th scope="col">Reported average difference</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Digital Marketing Course</th>
+                <td>
+                  <strong>Marketing Executive</strong>
+                  <span>₹2.51 LPA</span>
+                  <small>₹2,50,697/year · under 1 year experience · 174 profiles</small>
+                  <a
+                    href="https://www.payscale.com/research/IN/Job=Marketing_Executive/Salary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    PayScale source
+                  </a>
+                </td>
+                <td>
+                  <strong>Digital Marketing Specialist</strong>
+                  <span>₹2.83 LPA</span>
+                  <small>₹2,82,531/year · under 1 year experience · 29 profiles</small>
+                  <a
+                    href="https://www.payscale.com/research/IN/Job=Digital_Marketing_Specialist/Salary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    PayScale source
+                  </a>
+                </td>
+                <td className={styles.difference}>
+                  <strong>+₹31,834/year</strong>
+                  <span>about 13%</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className={styles.jobs}>
+          <h3>Roles you can target with relevant skills and a portfolio</h3>
+          <ul>
+            {jobRoles.map((role) => <li key={role}>{role}</li>)}
+          </ul>
         </div>
 
         <p className={styles.disclaimer}>
-          These are market-reported role averages, not a guaranteed salary hike
-          or a direct before-and-after comparison. Pay varies by experience,
-          skills, location, and employer; the source profiles have different
-          sample sizes.
+          These are reported role averages, not a guaranteed course outcome or
+          an individual before-and-after salary comparison. Pay varies by
+          experience, skills, location, and employer; source profiles have
+          different sample sizes. Job titles are examples, not placement
+          guarantees.
         </p>
       </div>
     </section>
