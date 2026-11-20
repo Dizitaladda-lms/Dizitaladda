@@ -625,18 +625,7 @@ function DurationProgressBar({ durationPercent, durationText }) {
 function CourseCard({ course }) {
   return (
     <article className="da-course-card" aria-label={course.title}>
-      {/* 1. Reserved Top Badge Strip: Keeps badges outside and above image thumbnail */}
-      <div className="da-course-top-strip">
-        <span className="da-badge da-badge-level" title={`Level: ${course.level}`}>
-          {course.level}
-        </span>
-        <span className="da-badge da-badge-mode" title="Delivery mode">
-          <span className="da-badge-dot" aria-hidden="true" />
-          {course.mode || "Live + Recorded"}
-        </span>
-      </div>
-
-      {/* 2. Course Thumbnail Image (clean and fully unobstructed) */}
+      {/* Course thumbnail */}
       <div className="da-course-image-wrap">
         <img src={course.image} alt={`${course.title} thumbnail`} loading="lazy" />
       </div>

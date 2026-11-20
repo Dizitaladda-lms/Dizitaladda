@@ -56,8 +56,8 @@
 }
 
 .campusBannerImage img {
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
+  object-position: right center;
 }
 
 .campusBannerOverlay {

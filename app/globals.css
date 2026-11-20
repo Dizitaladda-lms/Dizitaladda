@@ -435,17 +435,9 @@ h6 {
 .da-course-card{display:flex;flex:1;flex-direction:column;height:100%;max-width:100%;padding:0;overflow:hidden;border:1px solid rgba(35,22,67,.08);border-radius:20px;background:#ffffff;box-shadow:0 4px 20px rgba(31,21,58,.06);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 .da-course-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(124,58,237,.14);border-color:rgba(124,58,237,.22)}
 
-/* Reserved top badge strip: eliminates thumbnail collision bug completely */
-.da-course-top-strip{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#ffffff;border-bottom:1px solid #f3effc;z-index:2;position:relative;min-height:44px}
-.da-badge{display:inline-flex;align-items:center;font-size:12px;font-weight:600;line-height:1;border-radius:999px;padding:6px 12px;letter-spacing:.01em;white-space:nowrap}
-.da-badge-level{background:#FAF5FF;color:#7C3AED;border:1px solid #DDD6FE;box-shadow:0 1px 3px rgba(124,58,237,.08)}
-.da-badge-mode{background:#F3F4F6;color:#4B5563;border:1px solid #E5E7EB;font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;gap:5px}
-.da-badge-dot{width:6px;height:6px;border-radius:50%;background:#10B981}
-
 /* Image container */
-.da-course-image-wrap{position:relative;height:190px;overflow:hidden;background:#f4f2fa}
-.da-course-image-wrap>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
-.da-course-card:hover .da-course-image-wrap>img{transform:scale(1.04)}
+.da-course-image-wrap{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#ffffff}
+.da-course-image-wrap>img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
 
 /* Card Body Content */
 .da-course-content{display:flex;flex:1;flex-direction:column;padding:18px 18px 16px}
@@ -585,7 +577,7 @@ h6 {
   .da-course-track{gap:14px;padding-right:12px}
   .da-course-slide{flex-basis:100%}
   .da-course-grid{grid-template-columns:1fr;gap:18px}
-  .da-course-image-wrap{height:185px}
+  .da-course-image-wrap{aspect-ratio:16/9}
   .da-course-content{padding:16px 14px 14px}
 }
 
