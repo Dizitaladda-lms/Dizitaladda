@@ -133,14 +133,11 @@ export default function WhatPeopleSaySection() {
 
         <div className={styles.stripGrid} role="list" aria-label="Platform ratings">
           {PLATFORM_RATINGS.map((platform) => (
-            <a
+            <div
               key={platform.id}
-              href={platform.url}
-              target="_blank"
-              rel="noopener noreferrer"
               className={styles.ratingCard}
               role="listitem"
-              aria-label={`View DizitalAdda on ${platform.name}: ${platform.rating} out of 5 stars`}
+              aria-label={`${platform.name}: ${platform.rating} out of 5 stars`}
             >
               <div className={styles.platformLogo} style={{ background: platform.logoBg || "#ffffff" }}>
                 {PLATFORM_ICONS[platform.id]}
@@ -152,7 +149,7 @@ export default function WhatPeopleSaySection() {
               </div>
               <StarRating rating={platform.rating} />
               <span className={styles.reviewsCountText}>{platform.reviewsCount}</span>
-            </a>
+            </div>
           ))}
         </div>
       </div>

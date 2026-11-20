@@ -1,6 +1,6 @@
 /**
  * Data Configuration for "What People Say About Us" Section
- * - Platform ratings with official links & ratings
+ * - Platform ratings
  * - Social media testimonials with text & video reel variants
  */
 
@@ -9,40 +9,35 @@ export const PLATFORM_RATINGS = [
     id: "google",
     name: "Google",
     rating: 4.8,
-    reviewsCount: "1,450+ reviews",
-    url: "https://maps.app.goo.gl/yaZeHLJBfKYHdMPJ7",
+    reviewsCount: "Reviews",
     color: "#4285F4",
   },
   {
     id: "mouthshut",
     name: "Mouthshut",
     rating: 4.6,
-    reviewsCount: "380+ reviews",
-    url: "https://www.mouthshut.com",
+    reviewsCount: "Reviews",
     color: "#0f8e3d",
   },
   {
     id: "shiksha",
     name: "Shiksha",
     rating: 4.7,
-    reviewsCount: "520+ reviews",
-    url: "https://www.shiksha.com",
+    reviewsCount: "Reviews",
     color: "#f37023",
   },
   {
     id: "trustpilot",
     name: "Trustpilot",
     rating: 4.6,
-    reviewsCount: "310+ reviews",
-    url: "https://www.trustpilot.com",
+    reviewsCount: "Reviews",
     color: "#00b67a",
   },
   {
     id: "collegeduniya",
     name: "Collegeduniya",
     rating: 4.8,
-    reviewsCount: "440+ reviews",
-    url: "https://collegeduniya.com",
+    reviewsCount: "Reviews",
     color: "#0ea5e9",
   },
 ];

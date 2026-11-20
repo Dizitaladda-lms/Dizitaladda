@@ -94,7 +94,7 @@
 }
 
 .demoIntro::before {
-  background: url("/images/campus/one.jpeg") center 42% / cover no-repeat;
+  background: url("/images/campus/dizitaladda-sign.webp") center 42% / cover no-repeat;
   transition: transform 0.45s ease;
 }
 
