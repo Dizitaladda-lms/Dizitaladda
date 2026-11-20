@@ -1,6 +1,9 @@
 /* ==========================================================================
-   INTERACTIVE 3D CERTIFICATE LEATHER FILE EXPERIENCE
-   Brand Theme: Royal Black Leather, Metallic Gold Foil (#D4AF37), Purple Accent
+   INTERACTIVE 3D CERTIFICATE FILE EXPERIENCE (SPLIT 2-COLUMN LAYOUT)
+   Left Column: Content, Headings, Subtext, Badges, Live Student Tracker, CTA
+   Right Column: 3D Open Certificate Book + Side Navigation Arrows
+   Timing: 1-second auto-scroll
+   Brand Theme: Royal Black Leather, Metallic Gold Foil (#D4AF37), Purple Accent (#6d28d9)
    ========================================================================== */
 
 .sec {
@@ -9,70 +12,338 @@
   padding: 80px 24px;
   background: linear-gradient(180deg, #ffffff 0%, #faf8fd 50%, #ffffff 100%);
   overflow: hidden;
-  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   box-sizing: border-box;
 }
 
+/* 2-Column Split Grid on Desktop */
 .wrap {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1320px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: clamp(32px, 4vw, 64px);
   align-items: center;
+  box-sizing: border-box;
 }
 
-/* ── Trust Chips / Pills below Section Header ── */
+/* ==========================================================================
+   LEFT COLUMN: CONTENT & FEATURES
+   ========================================================================== */
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: #f5f3ff;
+  border: 1px solid #ede9fe;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 750;
+  color: #6d28d9;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
+}
+
+.title {
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 850;
+  color: #111827;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #6d28d9 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  font-size: clamp(15px, 1.15vw, 17px);
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0 0 22px;
+}
+
+/* Trust Chips / Pills */
 .chips {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
+  gap: 10px;
+  margin-bottom: 26px;
 }
 
 .chipItem {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 6px 14px;
   background: #ffffff;
-  border: 1px solid rgba(124, 58, 237, 0.16);
+  border: 1px solid rgba(124, 58, 237, 0.18);
   border-radius: 9999px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12.5px;
+  font-weight: 650;
   color: #374151;
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.04);
 }
 
 .chipDot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: var(--color-primary, #7c3aed);
-  box-shadow: 0 0 6px rgba(124, 58, 237, 0.6);
+  background: #6d28d9;
+}
+
+/* Value Props / Highlights */
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 26px;
+  width: 100%;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.featureIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ede9fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6d28d9;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.featureIcon svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.featureText h4 {
+  font-size: 14.5px;
+  font-weight: 750;
+  color: #1f2937;
+  margin: 0 0 2px;
+}
+
+.featureText p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Active Live Student Tracker Card */
+.activeCertCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #ffffff;
+  border: 1.5px solid #ede9fe;
+  border-left: 4px solid #6d28d9;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(109, 40, 217, 0.05);
+  margin-bottom: 26px;
+  box-sizing: border-box;
+}
+
+.activeCertIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #f5f3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6d28d9;
+  flex-shrink: 0;
+}
+
+.activeCertIcon svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.activeCertMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.activeCertLabel {
+  font-size: 11px;
+  font-weight: 750;
+  color: #6d28d9;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.activeCertName {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.activeCertCourse {
+  font-size: 12.5px;
+  color: #6b7280;
+  font-weight: 550;
+}
+
+/* CTA Action Row */
+.actionRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.primaryCtaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 100%);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(109, 40, 217, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.primaryCtaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(109, 40, 217, 0.45);
+}
+
+.primaryCtaBtn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
 }
 
 /* ==========================================================================
-   3D BOOK STAGE & WRAPPER
+   RIGHT COLUMN: 3D BOOK STAGE WITH SIDE NAVIGATION ARROWS
    ========================================================================== */
-
-.stage {
-  position: relative;
-  width: 100%;
+.rightCol {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.bookStageContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Floating Navigation Arrows on Left and Right of Book */
+.sideNavBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  color: #6d28d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(109, 40, 217, 0.16);
+  z-index: 35;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  padding: 0;
+}
+
+.sideNavBtn:hover {
+  background: #6d28d9;
+  color: #ffffff;
+  border-color: #6d28d9;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 10px 26px rgba(109, 40, 217, 0.35);
+}
+
+.sideNavBtn svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.sideNavPrev {
+  left: 0;
+}
+
+.sideNavNext {
+  right: 0;
+}
+
+/* 3D Stage & Viewport */
+.stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   perspective: 2000px;
-  min-height: 560px;
+  min-height: 460px;
+  padding: 20px 0;
+  box-sizing: border-box;
 }
 
 /* CSS Variables for Folder Dimensions */
 .bookViewport {
-  --W: min(370px, 86vw);
+  --W: min(280px, 34vw);
   --H: calc(var(--W) / 0.77);
   position: relative;
   width: var(--W);
@@ -81,15 +352,14 @@
   transform-style: preserve-3d;
 }
 
-/* When open on desktop, shift folder right by 50% of width so the 2-page spread is centered */
+/* When open, shift folder right by 50% of width so the 2-page spread is centered */
 .bookViewportOpen {
   transform: translateX(calc(var(--W) * 0.5));
 }
 
 /* ==========================================================================
-   BASE RIGHT PAGE (STATIONARY INSIDE PAGE)
+   BASE RIGHT PAGE (STATIONARY INSIDE PAGE: COMMENDATION LETTER)
    ========================================================================== */
-
 .baseRightPage {
   position: absolute;
   top: 0;
@@ -109,7 +379,6 @@
   z-index: 1;
 }
 
-/* Paper Content Area */
 .pageContent {
   position: relative;
   width: 100%;
@@ -118,14 +387,13 @@
   background: #ffffff;
 }
 
-/* Right Page Image (Half of 2-page spread) */
 .pageHalfRight {
   width: 100%;
   height: 100%;
   background-position: 100% 50%;
   background-size: 200% 100%;
   background-repeat: no-repeat;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .pageFullImage {
@@ -135,7 +403,6 @@
   display: block;
 }
 
-/* Spine Shadow on inner fold */
 .spineCreaseRight {
   position: absolute;
   top: 0;
@@ -158,13 +425,13 @@
   z-index: 10;
 }
 
-/* Progress Bar at the bottom of the right page */
+/* 1-Second Progress Indicator at bottom of right page */
 .pageProgressTrack {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 3.5px;
   background: rgba(0, 0, 0, 0.08);
   z-index: 15;
 }
@@ -178,7 +445,6 @@
 /* ==========================================================================
    FLIPPING COVER (3D LEATHER DOOR)
    ========================================================================== */
-
 .flippingCover {
   position: absolute;
   top: 0;
@@ -201,78 +467,66 @@
   inset: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(135deg, #181414 0%, #0d0a0b 50%, #1a1617 100%);
   border-radius: 4px 18px 18px 4px;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.07) 0%, transparent 50%),
-    linear-gradient(145deg, #222226 0%, #151518 45%, #0b0b0d 100%);
   box-shadow: 
-    0 22px 55px rgba(0, 0, 0, 0.65),
-    inset 24px 0 35px -12px rgba(0, 0, 0, 0.95),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    0 22px 50px rgba(0, 0, 0, 0.45),
+    inset -1px 0 2px rgba(255, 255, 255, 0.12),
+    inset 10px 0 16px -6px rgba(0, 0, 0, 0.85);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   overflow: hidden;
   cursor: pointer;
-  user-select: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: calc(var(--W) * 0.07) calc(var(--W) * 0.08);
+  padding: calc(var(--W) * 0.07) calc(var(--W) * 0.06);
   box-sizing: border-box;
 }
 
-/* Leather Surface Texture Overlay */
 .leatherGrain {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 4px 4px;
+  opacity: 0.18;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08) 1px, transparent 1px),
+    radial-gradient(circle at 0% 0%, rgba(0,0,0,0.5) 2px, transparent 2px);
+  background-size: 8px 8px, 6px 6px;
   pointer-events: none;
-  opacity: 0.6;
 }
 
-/* Perimeter Stitching Line */
 .stitchingLine {
   position: absolute;
-  inset: 10px;
-  border: 1.5px dashed rgba(212, 175, 55, 0.38);
+  inset: calc(var(--W) * 0.025);
+  border: 1.5px dashed rgba(212, 175, 55, 0.45);
   border-radius: 2px 14px 14px 2px;
   pointer-events: none;
-  box-sizing: border-box;
 }
 
-/* Top-Left Static Glossy Highlight */
 .coverHighlight {
   position: absolute;
   top: 0;
   left: 0;
-  width: 65%;
-  height: 55%;
-  background: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  bottom: 0;
+  width: 25px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, transparent 100%);
   pointer-events: none;
 }
 
-/* Animated 6s Light-Sweep Effect */
 .lightSweep {
   position: absolute;
-  top: -50%;
+  top: 0;
+  bottom: 0;
   left: -100%;
   width: 60%;
-  height: 200%;
-  background: linear-gradient(
-    105deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.22) 50%,
-    transparent 70%
-  );
-  transform: rotate(25deg);
+  background: linear-gradient(90deg, transparent, rgba(247, 230, 166, 0.14), transparent);
+  transform: skewX(-25deg);
+  animation: sweepAnimation 7s ease-in-out infinite;
   pointer-events: none;
-  mix-blend-mode: screen;
-  animation: sweepAnim 6s infinite ease-in-out;
 }
 
-@keyframes sweepAnim {
-  0%, 65% {
+@keyframes sweepAnimation {
+  0%, 75% {
     left: -100%;
   }
   100% {
@@ -280,211 +534,181 @@
   }
 }
 
-/* Gold Corner Metal Guards (L-shape) */
-.goldCornerTop,
+/* Gold Metal Corners */
+.goldCornerTop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(var(--W) * 0.16);
+  height: calc(var(--W) * 0.16);
+  background: linear-gradient(135deg, #f7e6a6 0%, #c9a24a 50%, #8c6a21 100%);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  border-top-right-radius: 18px;
+  box-shadow: -1px 1px 4px rgba(0,0,0,0.4);
+  pointer-events: none;
+}
+
 .goldCornerBottom {
   position: absolute;
-  right: 0;
-  width: calc(var(--W) * 0.13);
-  height: calc(var(--W) * 0.13);
-  background: linear-gradient(135deg, #f7e6a6 0%, #d4af37 40%, #aa8022 75%, #fef3c7 100%);
-  background-size: 200% 200%;
-  animation: goldShimmer 5s infinite linear;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 0 2px rgba(255, 255, 255, 0.7);
-  pointer-events: none;
-  z-index: 5;
-}
-
-.goldCornerTop {
-  top: 0;
-  border-top-right-radius: 18px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 72% 100%, 72% 28%, 0 28%);
-}
-
-.goldCornerBottom {
   bottom: 0;
+  right: 0;
+  width: calc(var(--W) * 0.16);
+  height: calc(var(--W) * 0.16);
+  background: linear-gradient(45deg, #8c6a21 0%, #c9a24a 50%, #f7e6a6 100%);
+  clip-path: polygon(100% 100%, 0 100%, 100% 0);
   border-bottom-right-radius: 18px;
-  clip-path: polygon(0 72%, 72% 72%, 72% 0, 100% 0, 100% 100%, 0 100%);
+  box-shadow: -1px -1px 4px rgba(0,0,0,0.4);
+  pointer-events: none;
 }
 
-/* ==========================================================================
-   GOLD FOIL TEXT & EMBLEM ON LEATHER COVER
-   ========================================================================== */
-
+/* Gold Foil Text Elements */
 .foilText {
-  color: #e5c158;
-  background: linear-gradient(
-    90deg,
-    #b8902f 0%,
-    #f7e6a6 25%,
-    #c9a24a 50%,
-    #fbefbd 75%,
-    #b8902f 100%
-  );
-  background-size: 200% auto;
+  color: #d4af37;
+  background: linear-gradient(135deg, #f7e6a6 0%, #d4af37 50%, #aa8022 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: goldShimmer 7s infinite linear;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   text-align: center;
-}
-
-@keyframes goldShimmer {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
+  margin: 0;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.6);
 }
 
 .coverHeaderGroup {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: calc(var(--W) * 0.012);
-  margin-top: calc(var(--W) * 0.02);
+  position: relative;
+  z-index: 5;
 }
 
-/* Arch text SVG wrapper */
 .archSvg {
   width: 100%;
-  max-width: calc(var(--W) * 0.9);
   height: calc(var(--W) * 0.22);
-  overflow: visible;
+  display: block;
 }
 
 .archSvg text {
   fill: url(#goldFoilGradient);
-  font-family: inherit;
   font-size: 15px;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .foilItalic {
-  font-size: calc(var(--W) * 0.034);
+  font-size: calc(var(--W) * 0.038);
   font-style: italic;
   font-weight: 500;
+  margin-top: calc(var(--W) * -0.01);
   letter-spacing: 0.02em;
-  margin: 0;
 }
 
 .foilProgram {
-  font-size: calc(var(--W) * 0.033);
+  font-size: calc(var(--W) * 0.042);
   font-weight: 800;
-  letter-spacing: 0.03em;
-  margin: 0;
+  letter-spacing: 0.04em;
+  margin-top: calc(var(--W) * 0.015);
   text-transform: uppercase;
 }
 
-/* Middle Interactive Pill Button */
+/* Center Interactive Pill */
 .openPillBtn {
+  align-self: center;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-  margin: calc(var(--W) * 0.04) auto;
-  padding: calc(var(--W) * 0.024) calc(var(--W) * 0.06);
+  padding: 8px 18px;
   border-radius: 9999px;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1.5px solid rgba(247, 230, 166, 0.5);
-  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.2);
-  font-size: calc(var(--W) * 0.035);
-  font-weight: 750;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(247, 230, 166, 0.4);
   color: #f7e6a6;
+  font-size: calc(var(--W) * 0.04);
+  font-weight: 700;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-  user-select: none;
-}
-
-.openPillBtn:hover {
-  background: rgba(212, 175, 55, 0.25);
-  transform: scale(1.05);
-  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.25s ease;
+  z-index: 5;
 }
 
 .openPillBtn svg {
-  width: calc(var(--W) * 0.038);
-  height: calc(var(--W) * 0.038);
-  fill: currentColor;
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
 }
 
-/* Lower Half: Logo & Credential Ecosystem */
+.coverFront:hover .openPillBtn {
+  background: rgba(212, 175, 55, 0.3);
+  border-color: #f7e6a6;
+  transform: scale(1.05);
+}
+
+/* Cover Footer Group */
 .coverFooterGroup {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: calc(var(--W) * 0.015);
-  margin-bottom: calc(var(--W) * 0.02);
+  position: relative;
+  z-index: 5;
 }
 
 .logoRow {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: calc(var(--W) * 0.025);
+  gap: 8px;
 }
 
 .logoIcon {
-  width: calc(var(--W) * 0.095);
-  height: calc(var(--W) * 0.095);
-  fill: #d4af37;
+  width: calc(var(--W) * 0.09);
+  height: calc(var(--W) * 0.09);
+  fill: url(#goldFoilGradient);
 }
 
 .logoTitle {
   font-size: calc(var(--W) * 0.068);
   font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  margin: 0;
-}
-
-.logoSubtitle {
-  font-size: calc(var(--W) * 0.027);
-  font-weight: 600;
-  color: #f5df9e;
-  margin: calc(var(--W) * 0.005) 0 0 0;
-  text-align: center;
   letter-spacing: 0.02em;
 }
 
+.logoSubtitle {
+  color: #eedca4;
+  font-size: calc(var(--W) * 0.033);
+  font-weight: 600;
+  margin: 0;
+  opacity: 0.9;
+}
+
 .collabText {
-  font-size: calc(var(--W) * 0.031);
-  font-weight: 750;
-  letter-spacing: 0.06em;
+  font-size: calc(var(--W) * 0.035);
+  font-weight: 700;
   text-transform: uppercase;
-  margin: calc(var(--W) * 0.008) 0 0 0;
+  letter-spacing: 0.08em;
+  margin-top: calc(var(--W) * 0.015);
 }
 
 .statsText {
-  font-size: calc(var(--W) * 0.026);
-  font-weight: 600;
-  color: #ecd79c;
+  color: #d1b87a;
+  font-size: calc(var(--W) * 0.029);
+  font-weight: 550;
   margin: 0;
-  text-align: center;
-  line-height: 1.4;
+  line-height: 1.35;
+  opacity: 0.85;
 }
 
 .contactRow {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: calc(var(--W) * 0.03);
+  gap: 8px;
+  color: #f7e6a6;
   font-size: calc(var(--W) * 0.028);
   font-weight: 600;
-  color: #ecd79c;
-  margin-top: calc(var(--W) * 0.008);
+  margin-top: calc(var(--W) * 0.01);
+  opacity: 0.9;
 }
 
-/* ==========================================================================
-   BACK FACE OF COVER: LEFT INSIDE PAGE (PHOTO CERTIFICATE)
-   ========================================================================== */
-
+/* Back Face: Left Inside Page (Photo Certificate) */
 .coverBack {
   position: absolute;
   inset: 0;
@@ -494,267 +718,149 @@
   border-radius: 16px 4px 4px 16px;
   box-shadow: 
     0 20px 45px rgba(0, 0, 0, 0.28),
-    inset -12px 0 20px -8px rgba(0, 0, 0, 0.35);
-  transform: rotateY(180deg);
+    inset -12px 0 20px -8px rgba(0, 0, 0, 0.35),
+    inset 1px 0 2px rgba(0, 0, 0, 0.1);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
   overflow: hidden;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
-/* Left Page Image (Left half of 2-page spread) */
 .pageHalfLeft {
   width: 100%;
   height: 100%;
   background-position: 0% 50%;
   background-size: 200% 100%;
   background-repeat: no-repeat;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* ==========================================================================
-   CONTROLS ROW (BELOW OPEN FILE)
+   FULLSCREEN ZOOM MODAL
    ========================================================================== */
-
-.controlsRow {
-  width: 100%;
-  max-width: calc(var(--W) * 2 + 40px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 28px;
-  padding: 10px 16px;
-  border-radius: 9999px;
-  background: #ffffff;
-  border: 1px solid #ede9fe;
-  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.08);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition: opacity 0.4s ease 0.6s, transform 0.4s ease 0.6s;
-  box-sizing: border-box;
-}
-
-.controlsVisible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-.controlsLeft {
-  font-size: 14px;
-  font-weight: 700;
-  color: #1f2937;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.studentCounter {
-  color: var(--color-primary, #7c3aed);
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.controlsRight {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.navBtn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #f5f3ff;
-  border: 1px solid #ddd6fe;
-  color: var(--color-primary, #7c3aed);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.navBtn:hover {
-  background: var(--color-primary, #7c3aed);
-  color: #ffffff;
-  transform: scale(1.08);
-}
-
-.navBtn:focus-visible {
-  outline: 2px solid #7c3aed;
-  outline-offset: 2px;
-}
-
-.closeLink {
-  background: transparent;
-  border: none;
-  color: #6b7280;
-  font-size: 13.5px;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 4px 10px;
-  border-radius: 6px;
-  transition: color 0.2s ease;
-}
-
-.closeLink:hover {
-  color: #dc2626;
-  text-decoration: underline;
-}
-
-/* ==========================================================================
-   ZOOM FULLSCREEN MODAL
-   ========================================================================== */
-
-.zoomBackdrop {
+.zoomModal {
   position: fixed;
   inset: 0;
   z-index: 999999;
-  background: rgba(10, 8, 24, 0.92);
-  backdrop-filter: blur(12px);
+  background: rgba(10, 8, 20, 0.88);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  animation: fadeIn 0.25s ease forwards;
+  padding: 24px;
 }
 
-.zoomModal {
+.zoomDialog {
   position: relative;
+  max-width: 960px;
   width: 100%;
-  max-width: 1100px;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  background: #120e24;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.zoomHeader {
-  padding: 16px 24px;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: #18132e;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-}
-
-.zoomTitle h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 750;
-}
-
-.zoomTitle p {
-  margin: 2px 0 0 0;
-  font-size: 13px;
-  color: #cbd5e1;
 }
 
 .zoomCloseBtn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: -44px;
+  right: 0;
+  background: transparent;
+  border: none;
   color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 32px;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  line-height: 1;
 }
 
-.zoomCloseBtn:hover {
-  background: #ef4444;
-  transform: scale(1.1);
-}
-
-.zoomBody {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  overflow: auto;
-  max-height: calc(90vh - 75px);
-}
-
-.zoomImageSpread {
+.zoomImage {
   max-width: 100%;
-  max-height: 75vh;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
   object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.zoomCaption {
+  color: #ffffff;
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
 }
 
 /* ==========================================================================
-   MOBILE RESPONSIVENESS (<= 720px)
+   RESPONSIVE BREAKPOINTS
    ========================================================================== */
-
-@media (max-width: 720px) {
-  .sec {
-    padding: 48px 16px;
+@media (max-width: 1024px) {
+  .wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .stage {
-    min-height: 480px;
-    margin-top: 24px;
+  .contentCol {
+    text-align: center;
+    align-items: center;
   }
 
-  /* When open on mobile, scale down so both pages fit comfortably without cutoff */
-  .bookViewportOpen {
-    transform: scale(0.52) translateX(calc(var(--W) * 0.5));
-    margin-top: -60px;
-    margin-bottom: -60px;
+  .chips {
+    justify-content: center;
   }
 
-  .controlsRow {
-    width: 100%;
-    max-width: 100%;
-    margin-top: 14px;
+  .featureList {
+    max-width: 520px;
+    margin: 0 auto 24px;
   }
 
-  .controlsLeft {
-    font-size: 12.5px;
+  .activeCertCard {
+    max-width: 480px;
+    margin: 0 auto 24px;
+    text-align: left;
   }
 
-  .navBtn {
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
+  .actionRow {
+    justify-content: center;
+  }
+
+  .bookViewport {
+    --W: min(240px, 40vw);
   }
 }
 
-/* Reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .foilText,
-  .goldCornerTop,
-  .goldCornerBottom,
-  .lightSweep,
-  .openPillBtn,
-  .flippingCover,
-  .bookViewport,
-  .controlsRow {
-    animation: none !important;
-    transition: none !important;
+@media (max-width: 640px) {
+  .sec {
+    padding: 60px 16px;
+  }
+
+  .bookStageContainer {
+    padding: 0 10px;
+  }
+
+  .sideNavBtn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .sideNavBtn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .sideNavPrev {
+    left: -4px;
+  }
+
+  .sideNavNext {
+    right: -4px;
+  }
+
+  .bookViewport {
+    --W: min(160px, 42vw);
+  }
+
+  .stage {
+    min-height: 380px;
   }
 }

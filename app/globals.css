@@ -391,105 +391,105 @@ h6 {
 /* DizitalAdda course cards and three-at-a-time carousel */
 .courses{background:#f4f2fa!important}
 .courses .containerCource{width:min(100%,1480px);margin:0 auto;padding:clamp(30px,5vw,68px) clamp(16px,4vw,48px)}
-.courses .da-course-showcase{--course-purple:#6d28d9;--course-purple-hover:#5b21b6;--course-ink:#1a1530;--course-muted:#5b5670;--course-lavender:#f4f2fa;--course-line:#ece9f5;color:var(--course-ink);font-family:Inter,var(--font-plus-jakarta-sans),system-ui,sans-serif}
-.da-course-showcase .course-category-filters{display:flex;align-items:center;justify-content:flex-start;gap:10px;margin:0 0 24px;flex-wrap:wrap}
-.da-course-showcase .course-category-filters button{min-height:42px;padding:9px 20px;border:1px solid #e6e1f0;border-radius:999px;background:#fff;color:#352d48;font-size:14px;font-weight:600;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease}
-.da-course-showcase .course-category-filters button:hover,.da-course-showcase .course-category-filters button.is-active{border-color:var(--course-purple);background:var(--course-purple);color:#fff;box-shadow:0 3px 12px rgba(109,40,217,.22)}
+.courses .da-course-showcase{--course-purple:#7c3aed;--course-purple-hover:#6d28d9;--course-ink:#1a1530;--course-muted:#5b5670;--course-lavender:#f4f2fa;--course-line:#ece9f5;color:var(--course-ink);font-family:Inter,var(--font-plus-jakarta-sans),system-ui,sans-serif}
 
-/* ==========================================================================
-   DOMAIN VIEW & COURSE GRID LAYOUT (FULL WIDTH)
-   ========================================================================== */
-.da-domain-view-layout{display:block;width:100%;box-sizing:border-box}
+/* 1. Category Filter Tabs */
+.da-course-showcase .course-category-filters{display:flex;align-items:center;justify-content:flex-start;gap:12px;margin:0 0 24px;flex-wrap:wrap}
+.da-course-showcase .course-category-filters button,
+.da-course-showcase .da-category-tab{min-height:42px;padding:9px 22px;border:1.5px solid #e5e7eb;border-radius:999px;background:#ffffff;color:#374151;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.da-course-showcase .course-category-filters button:hover,
+.da-course-showcase .da-category-tab:hover{border-color:#7c3aed;color:#7c3aed;background:#faf5ff}
+.da-course-showcase .course-category-filters button.is-active,
+.da-course-showcase .course-category-filters button[aria-selected="true"],
+.da-course-showcase .da-category-tab.is-active,
+.da-course-showcase .da-category-tab[aria-selected="true"]{border-color:#7c3aed;background:#7c3aed;color:#ffffff;font-weight:600;box-shadow:0 4px 14px rgba(124,58,237,.28)}
+.da-course-showcase .course-category-filters button:focus-visible,
+.da-course-showcase .da-category-tab:focus-visible{outline:3px solid #c4b5fd;outline-offset:2px}
 
-/* Main Area (Results Bar + Grid) */
-.da-course-main-content{min-width:0;width:100%}
-.da-course-results-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;flex-wrap:wrap}
-.da-course-results-count{font-size:14.5px;color:#4b5563;font-weight:500}
-.da-course-results-count strong{color:#111827;font-weight:700}
+/* 2. Carousel Controls Header & Dynamic Count */
+.da-course-carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;color:#4b5563;font-size:15px;font-weight:600}
+.da-course-carousel-controls .da-course-header-text{display:inline-flex;align-items:center;gap:6px}
+.da-course-header-count{color:#7c3aed;font-weight:700}
+.da-course-carousel-controls .da-carousel-nav-btns{display:flex;gap:10px}
+.da-carousel-btn{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1.5px solid #e5e7eb;border-radius:12px;background:#ffffff;color:#7c3aed;cursor:pointer;transition:all .2s ease;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.da-carousel-btn:hover:not(:disabled){border-color:#7c3aed;background:#7c3aed;color:#ffffff;transform:translateY(-1px);box-shadow:0 4px 12px rgba(124,58,237,.25)}
+.da-carousel-btn:disabled,
+.da-carousel-btn.is-disabled{opacity:.35;cursor:not-allowed;pointer-events:none;border-color:#e5e7eb;background:#f9fafb;color:#9ca3af;box-shadow:none;transform:none}
+.da-carousel-btn:focus-visible{outline:3px solid #c4b5fd;outline-offset:2px}
 
-/* Course Grid for Domain View - Full Width */
-.da-course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px;width:100%}
-.da-course-grid-item{display:flex;min-width:0}
-
-/* All Courses View (Full width carousel track) */
-.da-all-courses-view{width:100%}
-.da-course-header-count{opacity:.75;font-weight:500;margin-left:6px}
-
-/* Carousel controls */
-.da-course-showcase .course-category-filters button:focus-visible,.da-course-carousel-controls button:focus-visible,.da-course-actions a:focus-visible{outline:3px solid #9b75e8;outline-offset:3px}
-.da-course-carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px;color:var(--course-muted);font-size:14px;font-weight:600}
-.da-course-carousel-controls>div{display:flex;gap:8px}
-.da-course-carousel-controls button{display:grid;width:40px;height:40px;place-items:center;border:1px solid #e4def0;border-radius:12px;background:#fff;color:var(--course-purple);font-size:27px;line-height:1;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease}
-.da-course-carousel-controls button:hover{border-color:var(--course-purple);background:var(--course-purple);color:#fff}
-.da-course-track{display:flex;gap:24px;overflow-x:auto;padding:2px 2px 16px;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+/* 3. Horizontal Course Carousel Track & Smooth Animation */
+.da-course-track{display:flex;gap:24px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px 4px 18px 4px}
 .da-course-track::-webkit-scrollbar{display:none}
-.da-course-slide{flex:0 0 calc((100% - 48px)/3);min-width:0;scroll-snap-align:start;display:flex}
+.da-course-slide{flex:0 0 calc((100% - 48px)/3);min-width:0;scroll-snap-align:start;display:flex;animation:daSlideFadeIn .38s cubic-bezier(.16,1,.3,1) both}
+
+@keyframes daSlideFadeIn{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
 
 /* ==========================================================================
-   COURSE CARD ARCHITECTURE
+   4. COURSE CARD ARCHITECTURE (EQUAL HEIGHT & ALIGNED)
    ========================================================================== */
-.da-course-card{display:flex;flex:1;flex-direction:column;height:100%;max-width:100%;padding:0;overflow:hidden;border:1px solid rgba(35,22,67,.06);border-radius:20px;background:#fff;box-shadow:0 8px 28px rgba(31,21,58,.07);transition:transform .22s ease,box-shadow .22s ease}
-.da-course-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(109,40,217,.12)}
-.da-course-image-wrap{position:relative;height:190px;overflow:hidden;border-radius:19px 19px 12px 12px;background:var(--course-lavender)}
-.da-course-image-wrap>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.da-course-card{display:flex;flex:1;flex-direction:column;height:100%;max-width:100%;padding:0;overflow:hidden;border:1px solid rgba(35,22,67,.08);border-radius:20px;background:#ffffff;box-shadow:0 4px 20px rgba(31,21,58,.06);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.da-course-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(124,58,237,.14);border-color:rgba(124,58,237,.22)}
+
+/* Reserved top badge strip: eliminates thumbnail collision bug completely */
+.da-course-top-strip{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#ffffff;border-bottom:1px solid #f3effc;z-index:2;position:relative;min-height:44px}
+.da-badge{display:inline-flex;align-items:center;font-size:12px;font-weight:600;line-height:1;border-radius:999px;padding:6px 12px;letter-spacing:.01em;white-space:nowrap}
+.da-badge-level{background:#FAF5FF;color:#7C3AED;border:1px solid #DDD6FE;box-shadow:0 1px 3px rgba(124,58,237,.08)}
+.da-badge-mode{background:#F3F4F6;color:#4B5563;border:1px solid #E5E7EB;font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;gap:5px}
+.da-badge-dot{width:6px;height:6px;border-radius:50%;background:#10B981}
+
+/* Image container */
+.da-course-image-wrap{position:relative;height:190px;overflow:hidden;background:#f4f2fa}
+.da-course-image-wrap>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
 .da-course-card:hover .da-course-image-wrap>img{transform:scale(1.04)}
 
-/* Pills on card artwork */
-.da-course-pill{position:absolute;top:12px;padding:5px 11px;border-radius:999px;background:#fff;color:var(--course-purple);font-size:11.5px;font-weight:700;line-height:1.2;box-shadow:0 2px 8px rgba(28,17,55,.12);letter-spacing:.02em}
-.da-course-level-tag{left:12px}
-.da-course-mode{right:12px}
+/* Card Body Content */
+.da-course-content{display:flex;flex:1;flex-direction:column;padding:18px 18px 16px}
 
-.da-course-content{display:flex;flex:1;flex-direction:column;padding:20px 18px 18px}
-.da-course-content h3{margin:0 0 10px;color:var(--course-ink);font-size:clamp(19px,1.6vw+10px,22px);font-weight:750;letter-spacing:-.3px;line-height:1.3}
-.da-course-description{margin:0 0 14px;color:var(--course-muted);font-size:14px;line-height:1.55}
+/* Title container - ensures equal height so duration boxes align perfectly */
+.da-course-title-wrap{min-height:54px;display:flex;align-items:flex-start;margin-bottom:12px}
+.da-course-content h3{margin:0;color:#1a1530;font-size:19px;font-weight:750;letter-spacing:-.3px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 
-/* ==========================================================================
-   CHANGE 2: DURATION PROGRESS BAR
-   ========================================================================== */
+/* Duration Progress Bar */
 .da-duration-box{margin:0 0 14px;padding:9px 12px;background:#faf8ff;border:1px solid #f1ecf9;border-radius:12px;box-sizing:border-box}
 .da-duration-label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .da-duration-title{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:650;color:#4b5563}
-.da-duration-clock-icon{color:var(--course-purple)}
-.da-duration-value{font-size:12px;font-weight:750;color:var(--course-purple)}
+.da-duration-clock-icon{color:#7c3aed}
+.da-duration-value{font-size:12px;font-weight:750;color:#7c3aed}
 .da-duration-track{width:100%;height:7px;background:#e9e4f5;border-radius:999px;overflow:hidden;box-sizing:border-box}
 .da-duration-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#7c3aed 0%,#a855f7 100%);transition:width .8s cubic-bezier(.16,1,.3,1)}
 
-/* ==========================================================================
-   CHANGE 3: "KAUN KAR SAKTA HAI?" (3 SHORT BULLET POINTS)
-   ========================================================================== */
-.da-course-eligibility{margin:0 0 14px;padding:11px 12px;background:#fbfaff;border:1px dashed rgba(109,40,217,.22);border-radius:12px;box-sizing:border-box}
-.da-course-eligibility-title{font-size:13px;font-weight:750;color:#1a1530;margin-bottom:8px;display:flex;align-items:center;gap:6px}
-.da-course-eligibility-title svg{color:var(--course-purple)}
-.da-course-eligibility-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
-.da-course-eligibility-list li{display:flex;align-items:flex-start;gap:7px;font-size:12.5px;line-height:1.4;color:#433b54;font-weight:500}
-.da-eligibility-check-icon{flex-shrink:0;color:var(--course-purple);margin-top:2px}
+/* 2-line Description */
+.da-course-description{margin:0 0 14px;color:#5b5670;font-size:13.5px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;min-height:40px}
+
+/* "Who Is This Course For?" (3 bullets) */
+.da-course-eligibility{margin:0 0 14px;padding:10px 12px;background:#fbfaff;border:1px dashed rgba(124,58,237,.22);border-radius:12px;box-sizing:border-box}
+.da-course-eligibility-title{font-size:12.5px;font-weight:750;color:#1a1530;margin-bottom:7px;display:flex;align-items:center;gap:6px}
+.da-course-eligibility-title svg{color:#7c3aed}
+.da-course-eligibility-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px}
+.da-course-eligibility-list li{display:flex;align-items:flex-start;gap:7px;font-size:12px;line-height:1.35;color:#433b54;font-weight:500}
+.da-eligibility-check-icon{flex-shrink:0;color:#7c3aed;margin-top:2px}
 
 /* Skills Grid */
 .da-course-skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:0 0 16px;padding:0;list-style:none}
-.da-course-skills li{display:flex;min-width:0;min-height:36px;align-items:center;gap:7px;padding:6px 9px;border-radius:10px;background:var(--course-lavender);color:#34294b;font-size:12px;font-weight:550}
-.da-course-skills svg{flex:0 0 auto;color:var(--course-purple)}
+.da-course-skills li{display:flex;min-width:0;min-height:34px;align-items:center;gap:7px;padding:5px 8px;border-radius:9px;background:#f4f2fa;color:#34294b;font-size:11.5px;font-weight:550}
+.da-course-skills svg{flex:0 0 auto;color:#7c3aed}
 .da-course-skills li span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* Card CTA Action Buttons */
-.da-course-actions{display:flex;gap:10px;padding-top:14px;border-top:1px solid var(--course-line);margin-top:auto}
-.da-course-actions a{display:flex;min-height:44px;align-items:center;justify-content:center;border:1px solid #d9d2f0;border-radius:12px;color:var(--course-purple);font-size:14px;font-weight:650;text-decoration:none;transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}
+.da-course-actions{display:flex;gap:10px;padding-top:14px;border-top:1px solid #ece9f5;margin-top:auto}
+.da-course-actions a{display:flex;min-height:42px;align-items:center;justify-content:center;border:1px solid #d9d2f0;border-radius:12px;color:#7c3aed;font-size:13.5px;font-weight:650;text-decoration:none;transition:all .2s ease}
 .da-course-actions a:hover{transform:translateY(-1px)}
-.da-course-details{flex:1;background:#fff}
-.da-course-details:hover{border-color:var(--course-purple)!important;background:#f7f3ff!important;color:var(--course-purple)!important}
-.da-course-enroll{flex:1.4;border-color:var(--course-purple)!important;background:var(--course-purple);color:#fff!important}
-.da-course-enroll:hover{border-color:#5520ac!important;background:#5520ac;color:#fff!important}
-
-/* Animation entrance */
-.da-course-slide{opacity:0;transform:translate3d(0,18px,0);transition:opacity .52s ease,transform .58s cubic-bezier(.2,.7,.2,1);transition-delay:var(--course-reveal-delay,0ms)}
-.da-course-slide.is-visible{opacity:1;transform:translate3d(0,0,0)}
+.da-course-details{flex:1;background:#ffffff}
+.da-course-details:hover{border-color:#7c3aed!important;background:#f7f3ff!important;color:#7c3aed!important}
+.da-course-enroll{flex:1.4;border-color:#7c3aed!important;background:#7c3aed;color:#ffffff!important;box-shadow:0 4px 12px rgba(124,58,237,.25)}
+.da-course-enroll:hover{border-color:#6d28d9!important;background:#6d28d9!important;color:#ffffff!important;box-shadow:0 6px 16px rgba(109,40,217,.35)}
 
 /* ==========================================================================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE BREAKPOINTS: 3 Desktop, 2 Tablet, 1 Mobile
    ========================================================================== */
-@media(max-width:1180px){
-  .da-course-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
-}
-
 @media(max-width:991px){
   .da-course-slide{flex-basis:calc((100% - 24px)/2)}
 }
@@ -498,12 +498,12 @@ h6 {
   .courses .containerCource{padding:34px 16px}
   .da-course-showcase .course-category-filters{gap:8px;overflow-x:auto;flex-wrap:nowrap;padding:2px 2px 6px;scrollbar-width:none}
   .da-course-showcase .course-category-filters::-webkit-scrollbar{display:none}
-  .da-course-showcase .course-category-filters button{flex:0 0 auto;padding:8px 14px;font-size:13px}
+  .da-course-showcase .course-category-filters button,
+  .da-course-showcase .da-category-tab{flex:0 0 auto;padding:8px 16px;font-size:13px}
   .da-course-track{gap:14px;padding-right:12px}
   .da-course-slide{flex-basis:100%}
-  .da-course-grid{grid-template-columns:1fr;gap:18px}
-  .da-course-image-wrap{height:190px}
-  .da-course-content{padding:18px 14px 14px}
+  .da-course-image-wrap{height:185px}
+  .da-course-content{padding:16px 14px 14px}
 }
 
 .da-hero-chips{min-width:230px}

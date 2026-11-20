@@ -3,13 +3,13 @@ import LegacyPageContent from "../components/LegacyPageContent.jsx";
 import CourseCategoryFilters from "../components/CourseCategoryFilters.jsx";
 import HeroHighlights from "../components/HeroHighlights.jsx";
 import WhyTrustSequence from "../components/WhyTrustSequence.jsx";
+import WhatPeopleSaySection from "../components/WhatPeopleSaySection.jsx";
 import PlacementShowcase from "../components/PlacementShowcase.jsx";
 import IndustryTrainerVideos from "../components/IndustryTrainerVideos.jsx";
 import HeroTrustStrip from "../components/HeroTrustStrip.jsx";
 import PaidInternshipSection from "../components/PaidInternshipSection.jsx";
 import CampusSection from "../components/campus/CampusSection";
 import StudentReviews from "../components/StudentReviews.jsx";
-import StudentVideoReviews from "../components/StudentVideoReviews.jsx";
 import CertificatesMarquee from "../components/CertificatesMarquee.jsx";
 import AwardsShowcase from "../components/AwardsShowcase.jsx";
 import FeaturedInPR from "../components/FeaturedInPR.jsx";
@@ -577,13 +577,13 @@ export default function LegacyPage_index() {
 </div>
 </div>
 <WhyTrustSequence />
+<WhatPeopleSaySection />
 
 <PlacementShowcase />
 <IndustryTrainerVideos />
 <PaidInternshipSection />
 <CampusSection />
 <StudentReviews />
-<StudentVideoReviews />
 <CertificatesMarquee />
 <AwardsShowcase />
 <FeaturedInPR />

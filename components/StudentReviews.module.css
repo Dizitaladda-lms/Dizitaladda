@@ -1,0 +1,256 @@
+/* ==========================================================================
+   STUDENT REVIEWS SECTION - UNIFIED MODULE
+   1. Section Heading + Subtext + Rating Line
+   2. Student VIDEO Reviews (Moved UP, single-video playback, inside container)
+   3. Comment Cards Marquee (Moved DOWN, full viewport 100vw, infinite auto-scroll)
+   Brand: Purple (#6d28d9), Accent (#7c3aed), Lavender (#faf8ff)
+   ========================================================================== */
+
+.reviewsSection {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8ff 45%, #f4f0fd 100%);
+  padding: clamp(64px, 7vw, 96px) 0;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  color: #1d1538;
+}
+
+/* Page container for header and video reviews block */
+.container {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 32px);
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   1. HEADER BLOCK
+   ========================================================================== */
+.headerWrapper {
+  margin-bottom: clamp(32px, 4vw, 44px);
+}
+
+/* ==========================================================================
+   2. VIDEO REVIEWS BLOCK (48px spacing between this block and comments)
+   ========================================================================== */
+.videoBlock {
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ==========================================================================
+   3. COMMENT CARDS FULL-WIDTH (100vw) AUTO-SCROLLING MARQUEE
+   ========================================================================== */
+.marqueeWrapper {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+  position: relative;
+  padding: 8px 0 20px;
+  box-sizing: border-box;
+  /* Subtle edge fade mask to ensure seamless entry/exit */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  will-change: transform;
+  animation: daMarqueeScroll 55s linear infinite;
+}
+
+/* Pause animation on hover, focus, and touch/active */
+.marqueeWrapper:hover .marqueeTrack,
+.marqueeWrapper:focus-within .marqueeTrack,
+.marqueeWrapper:active .marqueeTrack {
+  animation-play-state: paused;
+}
+
+@keyframes daMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrack {
+    animation: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 12px;
+  }
+}
+
+/* ==========================================================================
+   4. REVIEW CARD STYLING (EQUAL HEIGHT, 16px GAP, PURPLE THEME)
+   ========================================================================== */
+.reviewCard {
+  width: 360px;
+  min-width: 360px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  border-radius: 20px;
+  padding: 24px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(31, 21, 58, 0.05);
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: default;
+}
+
+.reviewCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.14);
+  border-color: rgba(124, 58, 237, 0.32);
+}
+
+.reviewStars {
+  color: #f59e0b;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.reviewText {
+  color: #374151;
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin: 0 0 18px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.reviewAuthor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid #f3effc;
+}
+
+.reviewAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  overflow: hidden;
+  border: 2px solid #ede9fe;
+}
+
+.reviewAvatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviewAuthorInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.reviewAuthorName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e1b4b;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reviewAuthorCourse {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #6d28d9;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   5. RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 900px) {
+  .videoGrid {
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .videoBlock {
+    margin-bottom: 36px;
+  }
+
+  .videoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .reviewCard {
+    width: 280px;
+    min-width: 280px;
+    padding: 18px 16px 16px;
+  }
+
+  .reviewText {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+    -webkit-line-clamp: 5;
+  }
+
+  .reviewAvatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .reviewAuthorName {
+    font-size: 14px;
+  }
+
+  .reviewAuthorCourse {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 440px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

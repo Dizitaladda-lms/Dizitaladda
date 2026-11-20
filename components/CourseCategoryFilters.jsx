@@ -1,16 +1,30 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 
-// 18 Courses across 3 domains with dynamic levels, durations, skills, and eligibility
+/**
+ * ============================================================================
+ * 18 CAREER-FOCUSED COURSES ACROSS 3 DOMAINS
+ * - Digital Marketing (4 courses)
+ * - AI & Data Science (9 courses)
+ * - Cyber Security (5 courses)
+ *
+ * Each course contains:
+ * - id, title, category, level, duration, months, durationPercent, mode
+ * - description, image, eligibility, skills, bullets, detailsLink
+ * ============================================================================
+ */
 const courses = [
+  // --------------------------------------------------------------------------
   // 1. Digital Marketing (4 courses)
+  // --------------------------------------------------------------------------
   {
     id: 1,
     category: "digital-marketing",
     level: "Expert",
     duration: "12 Months",
     months: 12,
+    durationPercent: 100,
     mode: "Live + Recorded",
     image: "/coursecard/expert in Digital Marketing Course.webp",
     title: "Expert in Digital Marketing",
@@ -35,6 +49,7 @@ const courses = [
     level: "Advanced",
     duration: "6 Months",
     months: 6,
+    durationPercent: 50,
     mode: "Live + Recorded",
     image: "/coursecard/advanced Digital Marketing Course.webp",
     title: "Advanced Digital Marketing",
@@ -59,6 +74,7 @@ const courses = [
     level: "Professionals",
     duration: "4 Months",
     months: 4,
+    durationPercent: 33,
     mode: "Live + Recorded",
     image: "/coursecard/digital Marketing For Professionals.webp",
     title: "Digital Marketing for Professionals",
@@ -83,6 +99,7 @@ const courses = [
     level: "Beginners",
     duration: "3 Months",
     months: 3,
+    durationPercent: 25,
     mode: "Live + Recorded",
     image: "/coursecard/digital Marketing for Beginners.webp",
     title: "Digital Marketing for Beginners",
@@ -102,13 +119,16 @@ const courses = [
     detailsLink: "https://dizitaladda.com/courses/digital-marketing-for-beginners",
   },
 
+  // --------------------------------------------------------------------------
   // 2. AI & Data Science (9 courses)
+  // --------------------------------------------------------------------------
   {
     id: 5,
     category: "ai-data-science",
     level: "Diploma",
     duration: "12 Months",
     months: 12,
+    durationPercent: 100,
     mode: "Live + Recorded",
     image: "/imagesCards/diploma_in_generative_Ai_and_prompt_engineering.webp",
     title: "Diploma in GenAI & Prompt Engineering",
@@ -133,6 +153,7 @@ const courses = [
     level: "Diploma",
     duration: "12 Months",
     months: 12,
+    durationPercent: 100,
     mode: "Live + Recorded",
     image: "/imagesCards/diploma_in_data_analytics.webp",
     title: "Diploma in Data Analytics",
@@ -157,6 +178,7 @@ const courses = [
     level: "Diploma",
     duration: "12 Months",
     months: 12,
+    durationPercent: 100,
     mode: "Live + Recorded",
     image: "/imagesCards/Diploma_machine_learing.webp",
     title: "Diploma in Machine Learning & AI",
@@ -181,6 +203,7 @@ const courses = [
     level: "Diploma",
     duration: "12 Months",
     months: 12,
+    durationPercent: 100,
     mode: "Live + Recorded",
     image: "/imagesCards/diploma_in_data_science_Ai.webp",
     title: "Diploma in Data Science & AI",
@@ -205,6 +228,7 @@ const courses = [
     level: "Advanced",
     duration: "6 Months",
     months: 6,
+    durationPercent: 50,
     mode: "Live + Recorded",
     image: "/imagesCards/Advance_Certification_in_Gen_ai_and_prompt_engineering.webp",
     title: "Advanced Certification in GenAI",
@@ -229,6 +253,7 @@ const courses = [
     level: "Advanced",
     duration: "6 Months",
     months: 6,
+    durationPercent: 50,
     mode: "Live + Recorded",
     image: "/imagesCards/Advance_certification_in_Data_Analystics_andAi.webp",
     title: "Advanced Certification in Data Analytics",
@@ -253,6 +278,7 @@ const courses = [
     level: "Advanced",
     duration: "6 Months",
     months: 6,
+    durationPercent: 50,
     mode: "Live + Recorded",
     image: "/imagesCards/Advance_certification_in_machine_learning_and_Ai.webp",
     title: "Advanced Certification in Machine Learning",
@@ -277,6 +303,7 @@ const courses = [
     level: "Advanced",
     duration: "6 Months",
     months: 6,
+    durationPercent: 50,
     mode: "Live + Recorded",
     image: "/imagesCards/Advance_cerfication_in_data_science_and_ai.webp",
     title: "Advanced Certification in Data Science",
@@ -301,6 +328,7 @@ const courses = [
     level: "Certification",
     duration: "3 Months",
     months: 3,
+    durationPercent: 25,
     mode: "Live + Recorded",
     image: "/imagesCards/Certification_in_data_analytics_and_ai.webp",
     title: "Certification in Data Analytics",
@@ -320,13 +348,16 @@ const courses = [
     detailsLink: "https://dizitaladda.com/courses/certification-in-data-analytics-and-ai",
   },
 
+  // --------------------------------------------------------------------------
   // 3. Cyber Security (5 courses)
+  // --------------------------------------------------------------------------
   {
     id: 14,
     category: "cyber-security",
     level: "Foundation",
     duration: "4 Months",
     months: 4,
+    durationPercent: 33,
     mode: "Live + Recorded",
     image: "/imagesCards/Foundation in Cyber Security and Ethical Hacking.webp",
     title: "Foundation in Cyber Security",
@@ -351,6 +382,7 @@ const courses = [
     level: "Advanced",
     duration: "6 Months",
     months: 6,
+    durationPercent: 50,
     mode: "Live + Recorded",
     image: "/imagesCards/Advanced Certification in Cyber Security and Ethical Hacking.webp",
     title: "Advanced Cyber Security & Ethical Hacking",
@@ -375,6 +407,7 @@ const courses = [
     level: "Expert",
     duration: "12 Months",
     months: 12,
+    durationPercent: 100,
     mode: "Live + Recorded",
     image: "/imagesCards/Expert Training in Cyber Security and Ethical Hacking.webp",
     title: "Expert Cyber Security Training",
@@ -399,6 +432,7 @@ const courses = [
     level: "Investigation",
     duration: "4 Months",
     months: 4,
+    durationPercent: 33,
     mode: "Live + Recorded",
     image: "/imagesCards/Certiication in Digital Forensic and Cyber Investigation.webp",
     title: "Digital Forensics & Cyber Investigation",
@@ -423,6 +457,7 @@ const courses = [
     level: "Bug Bounty",
     duration: "4 Months",
     months: 4,
+    durationPercent: 33,
     mode: "Live + Recorded",
     image: "/imagesCards/Expert Training in Bug Bounty.webp",
     title: "Bug Bounty Training",
@@ -443,6 +478,9 @@ const courses = [
   },
 ];
 
+/**
+ * Filter Categories definition
+ */
 const courseCategories = [
   { id: "all", label: "All Courses" },
   { id: "digital-marketing", label: "Digital Marketing" },
@@ -450,10 +488,13 @@ const courseCategories = [
   { id: "cyber-security", label: "Cyber Security" },
 ];
 
+/**
+ * Helper SVG Icons for skills
+ */
 function SkillIcon({ type }) {
   const common = {
-    width: 15,
-    height: 15,
+    width: 14,
+    height: 14,
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
@@ -496,16 +537,18 @@ function SkillIcon({ type }) {
   );
 }
 
-// CHANGE 2: Animated Duration Progress Bar
-function DurationProgressBar({ months, durationText }) {
-  const safeMonths = typeof months === "number" ? months : parseInt(durationText, 10) || 6;
-  const percentage = Math.min(100, Math.max(10, Math.round((safeMonths / 12) * 100)));
+/**
+ * Animated Duration Progress Bar
+ * Progress bar width = durationPercent of the longest course (12 months = 100%)
+ */
+function DurationProgressBar({ durationPercent, durationText }) {
+  const percentage = typeof durationPercent === "number" ? durationPercent : 100;
   const [animatedWidth, setAnimatedWidth] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimatedWidth(percentage);
-    }, 70);
+    }, 60);
     return () => clearTimeout(timer);
   }, [percentage]);
 
@@ -546,7 +589,9 @@ function DurationProgressBar({ months, durationText }) {
   );
 }
 
-// CHANGE 3: "Who Is This Course For?" 3 Short Bullet Points
+/**
+ * "Who Is This Course For?" (3 bullet items)
+ */
 function EligibilityList({ items = [] }) {
   if (!items || items.length === 0) return null;
   return (
@@ -594,27 +639,54 @@ function EligibilityList({ items = [] }) {
   );
 }
 
-// Individual Course Card
+/**
+ * Individual Course Card
+ * - Dedicated reserved top strip for level and mode badges:
+ *   (Completely eliminates overlap / cutting off thumbnail heading text)
+ * - Level badge derived dynamically from course.level
+ * - Bold 2-line title, Duration box with purple progress bar, 2-line description
+ * - Equal height cards with vertically aligned duration boxes
+ */
 function CourseCard({ course }) {
   return (
-    <article className="da-course-card">
-      <div className="da-course-image-wrap">
-        <img src={course.image} alt={`${course.title} course`} loading="lazy" />
-        <span className="da-course-pill da-course-level-tag">{course.level}</span>
-        <span className="da-course-pill da-course-mode">{course.mode}</span>
+    <article className="da-course-card" aria-label={course.title}>
+      {/* 1. Reserved Top Badge Strip: Keeps badges outside and above image thumbnail */}
+      <div className="da-course-top-strip">
+        <span className="da-badge da-badge-level" title={`Level: ${course.level}`}>
+          {course.level}
+        </span>
+        <span className="da-badge da-badge-mode" title="Delivery mode">
+          <span className="da-badge-dot" aria-hidden="true" />
+          {course.mode || "Live + Recorded"}
+        </span>
       </div>
+
+      {/* 2. Course Thumbnail Image (clean and fully unobstructed) */}
+      <div className="da-course-image-wrap">
+        <img src={course.image} alt={`${course.title} thumbnail`} loading="lazy" />
+      </div>
+
+      {/* 3. Card Content */}
       <div className="da-course-content">
-        <h3>{course.title}</h3>
+        <div className="da-course-title-wrap">
+          <h3 title={course.title}>{course.title}</h3>
+        </div>
 
-        {/* CHANGE 2: Duration Progress Bar */}
-        <DurationProgressBar months={course.months} durationText={course.duration} />
+        {/* Duration box with animated purple progress bar */}
+        <DurationProgressBar
+          durationPercent={course.durationPercent}
+          durationText={course.duration}
+        />
 
-        <p className="da-course-description">{course.description}</p>
+        {/* 2-line max description */}
+        <p className="da-course-description" title={course.description}>
+          {course.description}
+        </p>
 
-        {/* CHANGE 3: Who Is This Course For? */}
+        {/* Who is this course for? */}
         <EligibilityList items={course.eligibility} />
 
-        {/* Skills & Tools covered */}
+        {/* Key skills & tools */}
         <ul className="da-course-skills" aria-label="Skills covered">
           {course.skills.map((skill) => (
             <li key={skill.label}>
@@ -624,6 +696,7 @@ function CourseCard({ course }) {
           ))}
         </ul>
 
+        {/* CTA Buttons */}
         <div className="da-course-actions">
           <a className="da-course-details" href={course.detailsLink}>
             Details
@@ -637,10 +710,14 @@ function CourseCard({ course }) {
   );
 }
 
+/**
+ * Main Course Category Filters & Horizontal Carousel Component
+ */
 export default function CourseCategoryFilters() {
   const [activeCategory, setActiveCategory] = useState("all");
   const trackRef = useRef(null);
-  const [hasEntered, setHasEntered] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   // Sync state with URL query parameters on mount & on popstate
   useEffect(() => {
@@ -675,120 +752,194 @@ export default function CourseCategoryFilters() {
     window.history.replaceState({}, "", newUrl);
   };
 
-  const handleCategoryChange = (categoryId) => {
-    setActiveCategory(categoryId);
-    trackRef.current?.scrollTo({ left: 0, behavior: "smooth" });
-    updateUrl(categoryId);
-  };
-
-  // All courses for active category (or all 18 courses when activeCategory is "all")
+  // Filter courses dynamically based on selected tab
   const visibleCourses = useMemo(() => {
     if (activeCategory === "all") return courses;
     return courses.filter((course) => course.category === activeCategory);
   }, [activeCategory]);
 
-  // Entrance observer for animation
+  // Check scroll boundary to enable/disable arrows
+  const checkScrollBounds = useCallback(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+
+    // Buffer of 4px for fractional pixel calculations
+    const hasOverflow = scrollWidth > clientWidth + 4;
+    setCanScrollLeft(scrollLeft > 6);
+    setCanScrollRight(hasOverflow && scrollLeft + clientWidth < scrollWidth - 6);
+  }, []);
+
+  // Scroll listener and resize observer
   useEffect(() => {
-    const track = trackRef.current;
-    if (!track || hasEntered) return;
+    const el = trackRef.current;
+    if (!el) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHasEntered(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.12 }
-    );
+    checkScrollBounds();
 
-    observer.observe(track);
-    return () => observer.disconnect();
-  }, [hasEntered]);
+    const handleScroll = () => {
+      checkScrollBounds();
+    };
 
-  const scrollCards = (direction) => {
-    if (!trackRef.current) return;
-    const card = trackRef.current.querySelector(".da-course-slide");
-    const distance = card ? card.getBoundingClientRect().width + 24 : trackRef.current.clientWidth;
-    trackRef.current.scrollBy({ left: distance * direction, behavior: "smooth" });
+    el.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", checkScrollBounds);
+
+    // Re-check after render
+    const timer = setTimeout(checkScrollBounds, 120);
+
+    return () => {
+      el.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", checkScrollBounds);
+      clearTimeout(timer);
+    };
+  }, [visibleCourses, checkScrollBounds]);
+
+  // Tab switch handler: filters carousel & resets scroll position to the first card
+  const handleCategoryChange = (categoryId) => {
+    if (categoryId === activeCategory) return;
+    setActiveCategory(categoryId);
+
+    // Reset carousel scroll position to the first card on every tab change
+    if (trackRef.current) {
+      trackRef.current.scrollTo({ left: 0, behavior: "smooth" });
+    }
+    setCanScrollLeft(false);
+    updateUrl(categoryId);
   };
 
-  const isDomainSelected = activeCategory !== "all";
-  const activeCategoryObj = courseCategories.find((c) => c.id === activeCategory);
+  // Carousel arrow controls: scroll by one card width
+  const scrollCards = (direction) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const card = el.querySelector(".da-course-slide");
+    const gap = 24;
+    const cardWidth = card ? card.getBoundingClientRect().width : 340;
+    const distance = (cardWidth + gap) * direction;
+
+    el.scrollBy({ left: distance, behavior: "smooth" });
+  };
 
   return (
-    <div className={`da-course-showcase ${isDomainSelected ? "has-domain-active" : "is-all-courses"}`}>
-      {/* 1. Top Domain Tabs */}
-      <div className="course-category-filters" role="group" aria-label="Filter courses by domain">
-        {courseCategories.map((category) => (
-          <button
-            key={category.id}
-            type="button"
-            aria-pressed={activeCategory === category.id}
-            className={activeCategory === category.id ? "is-active" : ""}
-            onClick={() => handleCategoryChange(category.id)}
-          >
-            {category.label}
-          </button>
-        ))}
+    <div className="da-course-showcase" role="region" aria-label="Programs & Certifications">
+      {/* 1. Category Filter Tabs */}
+      <div className="course-category-filters" role="tablist" aria-label="Course category filters">
+        {courseCategories.map((category) => {
+          const isActive = activeCategory === category.id;
+          return (
+            <button
+              key={category.id}
+              type="button"
+              role="tab"
+              id={`tab-${category.id}`}
+              aria-selected={isActive}
+              aria-controls="course-carousel-track"
+              tabIndex={0}
+              className={`da-category-tab ${isActive ? "is-active" : ""}`}
+              onClick={() => handleCategoryChange(category.id)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handleCategoryChange(category.id);
+                }
+              }}
+            >
+              {category.label}
+            </button>
+          );
+        })}
       </div>
 
-      {/* When "All Courses" is selected: full-width carousel track */}
-      {!isDomainSelected ? (
-        <div className="da-all-courses-view">
-          <div className="da-course-carousel-controls">
-            <span>
-              Explore all career-focused courses
-              <span className="da-course-header-count">({visibleCourses.length})</span>
-            </span>
-            {visibleCourses.length > 3 && (
-              <div>
-                <button type="button" aria-label="Previous courses" onClick={() => scrollCards(-1)}>
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="m15 18-6-6 6-6" />
-                  </svg>
-                </button>
-                <button type="button" aria-label="Next courses" onClick={() => scrollCards(1)}>
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="m9 18 6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-            )}
-          </div>
+      {/* 2. Carousel Controls Header & Dynamic Count */}
+      <div className="da-course-carousel-controls">
+        <span className="da-course-header-text">
+          Explore all career-focused courses
+          <span className="da-course-header-count">({visibleCourses.length})</span>
+        </span>
 
-          <div className="da-course-track" ref={trackRef} aria-label="All courses">
-            {visibleCourses.map((course, index) => (
-              <div
-                className={`da-course-slide ${hasEntered ? "is-visible" : ""}`}
-                key={course.id}
-                style={{ "--course-reveal-delay": `${index * 80}ms` }}
-              >
-                <CourseCard course={course} />
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : (
-        /* When a particular domain is selected: Full Width Grid (No filters sidebar, zero left gap) */
-        <div className="da-domain-view-layout">
-          <main className="da-course-main-content">
-            <div className="da-course-results-bar">
-              <div className="da-course-results-count">
-                Showing <strong>{visibleCourses.length}</strong> {activeCategoryObj?.label} courses
-              </div>
-            </div>
+        {/* Carousel Arrow Buttons with Accessibility and Disabling at bounds */}
+        <div className="da-carousel-nav-btns" role="group" aria-label="Carousel navigation">
+          <button
+            type="button"
+            aria-label="Previous courses"
+            onClick={() => scrollCards(-1)}
+            disabled={!canScrollLeft}
+            className={`da-carousel-btn ${!canScrollLeft ? "is-disabled" : ""}`}
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                scrollCards(-1);
+              }
+            }}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
 
-            <div className="da-course-grid" aria-label="Course listings">
-              {visibleCourses.map((course) => (
-                <div className="da-course-grid-item" key={course.id}>
-                  <CourseCard course={course} />
-                </div>
-              ))}
-            </div>
-          </main>
+          <button
+            type="button"
+            aria-label="Next courses"
+            onClick={() => scrollCards(1)}
+            disabled={!canScrollRight}
+            className={`da-carousel-btn ${!canScrollRight ? "is-disabled" : ""}`}
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                scrollCards(1);
+              }
+            }}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
         </div>
-      )}
+      </div>
+
+      {/* 3. Horizontal Course Carousel Track (Smooth slide/fade animation on card change) */}
+      <div
+        id="course-carousel-track"
+        className="da-course-track"
+        ref={trackRef}
+        role="region"
+        aria-live="polite"
+        aria-label={`${activeCategory} courses carousel`}
+        tabIndex={0}
+      >
+        {visibleCourses.map((course, index) => (
+          <div
+            className="da-course-slide"
+            key={`${activeCategory}-${course.id}`}
+            style={{
+              animationDelay: `${Math.min(index * 50, 300)}ms`,
+            }}
+          >
+            <CourseCard course={course} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
