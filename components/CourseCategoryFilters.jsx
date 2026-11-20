@@ -527,54 +527,6 @@ function SkillIcon({ type }) {
   );
 }
 
-function DurationProgressBar({ durationPercent, durationText }) {
-  const percentage = typeof durationPercent === "number" ? durationPercent : 100;
-  const [animatedWidth, setAnimatedWidth] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimatedWidth(percentage);
-    }, 60);
-    return () => clearTimeout(timer);
-  }, [percentage]);
-
-  return (
-    <div className="da-duration-box" aria-label={`Course duration: ${durationText}`}>
-      <div className="da-duration-label-row">
-        <span className="da-duration-title">
-          <svg
-            className="da-duration-clock-icon"
-            viewBox="0 0 24 24"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-          </svg>
-          Duration
-        </span>
-        <span className="da-duration-value">{durationText}</span>
-      </div>
-      <div className="da-duration-track">
-        <div
-          className="da-duration-fill"
-          style={{ width: `${animatedWidth}%` }}
-          role="progressbar"
-          aria-valuenow={percentage}
-          aria-valuemin={0}
-          aria-valuemax={100}
-        />
-      </div>
-    </div>
-  );
-}
-
 function EligibilityList({ items = [] }) {
   if (!items || items.length === 0) return null;
   return (
@@ -622,6 +574,52 @@ function EligibilityList({ items = [] }) {
   );
 }
 
+function DurationProgressBar({ durationPercent, durationText }) {
+  const percentage = typeof durationPercent === "number" ? durationPercent : 100;
+  const [animatedWidth, setAnimatedWidth] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimatedWidth(percentage), 60);
+    return () => clearTimeout(timer);
+  }, [percentage]);
+
+  return (
+    <div className="da-duration-box" aria-label={`Course duration: ${durationText}`}>
+      <div className="da-duration-label-row">
+        <span className="da-duration-title">
+          <svg
+            className="da-duration-clock-icon"
+            viewBox="0 0 24 24"
+            width="13"
+            height="13"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          Duration
+        </span>
+        <span className="da-duration-value">{durationText}</span>
+      </div>
+      <div className="da-duration-track">
+        <div
+          className="da-duration-fill"
+          style={{ width: `${animatedWidth}%` }}
+          role="progressbar"
+          aria-valuenow={percentage}
+          aria-valuemin={0}
+          aria-valuemax={100}
+        />
+      </div>
+    </div>
+  );
+}
+
 function CourseCard({ course }) {
   return (
     <article className="da-course-card" aria-label={course.title}>
@@ -647,7 +645,6 @@ function CourseCard({ course }) {
           <h3 title={course.title}>{course.title}</h3>
         </div>
 
-        {/* Duration box with animated purple progress bar */}
         <DurationProgressBar
           durationPercent={course.durationPercent}
           durationText={course.duration}
@@ -734,7 +731,6 @@ function FilterGroup({ title, options, selectedValues, onToggle, idPrefix = "flt
 export default function CourseCategoryFilters() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedLevels, setSelectedLevels] = useState([]);
-  const [selectedDurations, setSelectedDurations] = useState([]);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   const trackRef = useRef(null);
@@ -784,7 +780,6 @@ export default function CourseCategoryFilters() {
     if (categoryId === activeCategory) return;
     setActiveCategory(categoryId);
     setSelectedLevels([]);
-    setSelectedDurations([]);
     setIsMobileFilterOpen(false);
 
     if (trackRef.current) {
@@ -801,15 +796,8 @@ export default function CourseCategoryFilters() {
     );
   };
 
-  const handleToggleDuration = (dur) => {
-    setSelectedDurations((prev) =>
-      prev.includes(dur) ? prev.filter((item) => item !== dur) : [...prev, dur]
-    );
-  };
-
   const handleClearAllFilters = () => {
     setSelectedLevels([]);
-    setSelectedDurations([]);
   };
 
   // Courses of the currently active category (domain)
@@ -833,34 +821,16 @@ export default function CourseCategoryFilters() {
     }));
   }, [categoryCourses]);
 
-  // Dynamically compute Duration options for the currently selected domain
-  const durationOptions = useMemo(() => {
-    const counts = {};
-    categoryCourses.forEach((c) => {
-      if (c.duration) {
-        counts[c.duration] = (counts[c.duration] || 0) + 1;
-      }
-    });
-    return Object.keys(counts).map((dur) => ({
-      value: dur,
-      label: dur,
-      count: counts[dur],
-    }));
-  }, [categoryCourses]);
-
   // Filter courses by selected level(s) and duration(s)
   const visibleCourses = useMemo(() => {
     let list = categoryCourses;
     if (selectedLevels.length > 0) {
       list = list.filter((c) => selectedLevels.includes(c.level));
     }
-    if (selectedDurations.length > 0) {
-      list = list.filter((c) => selectedDurations.includes(c.duration));
-    }
     return list;
-  }, [categoryCourses, selectedLevels, selectedDurations]);
+  }, [categoryCourses, selectedLevels]);
 
-  const totalActiveFilters = selectedLevels.length + selectedDurations.length;
+  const totalActiveFilters = selectedLevels.length;
   const isDomainSelected = activeCategory !== "all";
   const activeCategoryObj = courseCategories.find((c) => c.id === activeCategory);
 
@@ -1079,14 +1049,6 @@ export default function CourseCategoryFilters() {
                 idPrefix="dsk"
               />
 
-              {/* Dynamic Duration Filter */}
-              <FilterGroup
-                title="Duration"
-                options={durationOptions}
-                selectedValues={selectedDurations}
-                onToggle={handleToggleDuration}
-                idPrefix="dsk"
-              />
             </div>
           </aside>
 
@@ -1148,18 +1110,6 @@ export default function CourseCategoryFilters() {
                         type="button"
                         onClick={() => handleToggleLevel(lvl)}
                         aria-label={`Remove ${lvl} filter`}
-                      >
-                        &times;
-                      </button>
-                    </span>
-                  ))}
-                  {selectedDurations.map((dur) => (
-                    <span key={dur} className="da-filter-tag">
-                      {dur}
-                      <button
-                        type="button"
-                        onClick={() => handleToggleDuration(dur)}
-                        aria-label={`Remove ${dur} filter`}
                       >
                         &times;
                       </button>
@@ -1231,13 +1181,6 @@ export default function CourseCategoryFilters() {
                 options={levelOptions}
                 selectedValues={selectedLevels}
                 onToggle={handleToggleLevel}
-                idPrefix="mob"
-              />
-              <FilterGroup
-                title="Duration"
-                options={durationOptions}
-                selectedValues={selectedDurations}
-                onToggle={handleToggleDuration}
                 idPrefix="mob"
               />
             </div>
