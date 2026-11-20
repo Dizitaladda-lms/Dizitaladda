@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
@@ -23,6 +24,15 @@ export default function CampusCTA({ cta }: CampusCTAProps) {
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] as const }}
     >
+      <div className={styles.campusBannerImage}>
+        <Image
+          src={cta.campusImage.src}
+          alt={cta.campusImage.alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 58vw"
+          priority={false}
+        />
+      </div>
       <div className={styles.campusBannerOverlay} />
       <div className={styles.campusBannerContent}>
         <h2 className={styles.campusBannerTitle}>

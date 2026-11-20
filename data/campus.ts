@@ -213,7 +213,7 @@ export const campusData: CampusSectionData = {
         "Hi DizitalAdda, I would like to schedule a free in-person campus visit and career counselling session.",
     },
     campusImage: {
-      src: "/images/campus/tour-poster.jpg",
+      src: "/images/campus/one.jpeg",
       alt: "DizitalAdda Delhi-NCR Campus Modern Infrastructure",
       badge: "Delhi-NCR Campus",
     },
