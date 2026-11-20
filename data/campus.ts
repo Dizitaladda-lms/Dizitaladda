@@ -153,10 +153,10 @@ export const campusData: CampusSectionData = {
       span: "normal",
     },
     {
-      id: "student-lounge",
-      caption: "Student lounge",
+      id: "Doubt session cabin",
+      caption: "Doubt session cabin",
       image:
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+        "/images/campus/DOUBT.jpeg",
       alt: "Comfortable lounge seating for students to relax between classes",
       span: "wide",
     },

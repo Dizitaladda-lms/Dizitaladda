@@ -72,6 +72,52 @@
   border-right: 1px solid #f1eafc;
 }
 
+.demoIntro {
+  position: relative;
+  min-height: 190px;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  margin-bottom: 26px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #311d79;
+  isolation: isolate;
+}
+
+.demoIntro::before,
+.demoIntro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.demoIntro::before {
+  background: url("/images/campus/one.jpeg") center 42% / cover no-repeat;
+  transition: transform 0.45s ease;
+}
+
+.demoIntro:hover::before {
+  transform: scale(1.06);
+}
+
+.demoIntro::after {
+  background: linear-gradient(90deg, rgba(35, 16, 79, 0.78), rgba(35, 16, 79, 0.12));
+}
+
+.demoIntro h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(26px, 2.2vw + 12px, 34px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+}
+
 /* ==========================================================================
    COLUMN 1: SESSION OVERVIEW & MODE SWITCHER
    ========================================================================== */
@@ -848,6 +894,11 @@
   }
   .heading {
     font-size: 22px;
+  }
+  .demoIntro {
+    min-height: 160px;
+    padding: 20px;
+    margin-bottom: 22px;
   }
   .daysGrid {
     gap: 2px;

@@ -99,7 +99,7 @@ const courses = [
     months: 3,
     durationPercent: 25,
     mode: "Live + Recorded",
-    image: "/coursecard/digital Marketing for Beginners.webp",
+    image: "/coursecard/begginer",
     title: "Digital Marketing for Beginners",
     description: "Build a strong foundation across core marketing channels, search engines, and modern content tools.",
     eligibility: [
