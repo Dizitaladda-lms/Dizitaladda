@@ -26,7 +26,7 @@ export const trainers = [
     tags: ["Paid ads", "Analytics"],
     experience: "15+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/Saurabh.png",
+    poster: "/public/TRANIER",
   },
   {
     name: "Miss Shagun Srivastava",
@@ -42,7 +42,7 @@ export const trainers = [
     tags: ["Keyword research", "Analytics"],
     experience: "7+ yrs experience",
     videoSrc: "",
-    poster: "/public/TRANIER 2.jpg",
+    poster: "/TRANIER 2.jpg",
   },
   {
     name: "Mr. Kaushal",

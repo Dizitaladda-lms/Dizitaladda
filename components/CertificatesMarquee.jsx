@@ -98,17 +98,16 @@ function FallbackCertificateSvg({ name, course, isLeft }) {
       <text x="40" y="78" fill="#6b7280" fontSize="10">Corporate Training &amp; Placement Network</text>
       <line x1="40" y1="92" x2="310" y2="92" stroke="#e5e7eb" strokeWidth="1.5" />
       <text x="40" y="130" fill="#7c3aed" fontSize="14" fontWeight="700">Congratulations!</text>
-      <text x="40" y="155" fill="#111827" fontSize="13" fontWeight="600">Dear {name},</text>
-      <text x="40" y="185" fill="#374151" fontSize="11">We commend your dedicated efforts throughout the</text>
-      <text x="40" y="202" fill="#7c3aed" fontSize="11" fontWeight="600">{course}</text>
-      <text x="40" y="222" fill="#374151" fontSize="11">program. Your mastery over 60+ industry tools and</text>
-      <text x="40" y="239" fill="#374151" fontSize="11">successful execution of real client campaigns is recognized.</text>
-      <text x="40" y="275" fill="#374151" fontSize="11">Issued: March-2026</text>
-      <text x="40" y="292" fill="#374151" fontSize="11">Credentials ID: DA-2026-VERIFIED</text>
-      <rect x="40" y="340" width="110" height="45" fill="#f3f4f6" rx="4" />
-      <text x="95" y="367" textAnchor="middle" fill="#4b5563" fontSize="10" fontWeight="700">Skill India Partner</text>
-      <line x1="200" y1="410" x2="295" y2="410" stroke="#111827" strokeWidth="1" />
-      <text x="248" y="426" textAnchor="middle" fill="#6b7280" fontSize="10">Managing Director</text>
+      <text x="40" y="165" fill="#374151" fontSize="12" fontStyle="italic">Dear {name},</text>
+      <text x="40" y="200" fill="#4b5563" fontSize="11">Your outstanding performance and hands-on</text>
+      <text x="40" y="220" fill="#4b5563" fontSize="11">mastery in real-world brand campaigns have</text>
+      <text x="40" y="240" fill="#4b5563" fontSize="11">earned you this prestigious professional credential.</text>
+      <text x="40" y="280" fill="#1f2937" fontSize="12" fontWeight="700">Course Specialization:</text>
+      <text x="40" y="300" fill="#7c3aed" fontSize="13" fontWeight="700">{course}</text>
+      <line x1="40" y1="410" x2="160" y2="410" stroke="#9ca3af" strokeWidth="1" />
+      <text x="40" y="426" fill="#6b7280" fontSize="10">Program Director</text>
+      <circle cx="270" cy="405" r="24" fill="#ede9fe" />
+      <text x="270" y="410" textAnchor="middle" fill="#6d28d9" fontSize="9" fontWeight="700">SEAL</text>
     </svg>
   );
 }
@@ -116,29 +115,34 @@ function FallbackCertificateSvg({ name, course, isLeft }) {
 export default function CertificatesMarquee() {
   const { HOLD_MS, CERTS } = CERTIFICATE_FILE_CONFIG;
 
-  // Folder open/closed state (open by default for immediate viewing)
-  const [isOpen, setIsOpen] = useState(true);
+  // Folder open/closed state: Closed by default so clicking opens the file!
+  const [isOpen, setIsOpen] = useState(false);
 
   // Active student certificate index
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Page turn flip animation states
+  const [isFlipping, setIsFlipping] = useState(false);
+  const [flipDirection, setFlipDirection] = useState("next"); // "next" | "prev"
+  const [targetIndex, setTargetIndex] = useState(0);
+
   // Fullscreen Zoom Modal state
   const [isZoomed, setIsZoomed] = useState(false);
 
-  // Viewport / Visibility State
-  const [isInView, setIsInView] = useState(false);
+  // Hover state (pauses auto-scroll on hover)
   const [isHovered, setIsHovered] = useState(false);
 
   // Image error tracker
   const [brokenImages, setBrokenImages] = useState({});
 
+  // Section reference for viewport observation
   const sectionRef = useRef(null);
-  const currentCert = CERTS[activeIndex] || CERTS[0];
+  const [isInView, setIsInView] = useState(false);
 
-  /**
-   * IntersectionObserver & Tab Visibility:
-   * Pause auto-advance timer when section leaves screen or browser tab is hidden
-   */
+  const currentCert = CERTS[activeIndex] || CERTS[0];
+  const targetCert = CERTS[targetIndex] || CERTS[0];
+
+  // IntersectionObserver: Only auto-scroll when section is in viewport
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
@@ -151,38 +155,48 @@ export default function CertificatesMarquee() {
     );
 
     observer.observe(section);
-
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        setIsInView(false);
-      } else if (section) {
-        const rect = section.getBoundingClientRect();
-        setIsInView(rect.top < window.innerHeight && rect.bottom > 0);
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
-    return () => {
-      observer.disconnect();
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
+    return () => observer.disconnect();
   }, []);
 
   /**
+   * Smooth 3D Page Turn Transition Handler
+   * Simulates real page flipping like turning leaves in a book.
+   */
+  const turnPage = useCallback((dir = "next") => {
+    if (isFlipping) return;
+
+    const nextIdx =
+      dir === "next"
+        ? (activeIndex + 1) % CERTS.length
+        : activeIndex === 0
+        ? CERTS.length - 1
+        : activeIndex - 1;
+
+    setFlipDirection(dir);
+    setTargetIndex(nextIdx);
+    setIsFlipping(true);
+
+    // 480ms matches the 3D page flip transition curve
+    setTimeout(() => {
+      setActiveIndex(nextIdx);
+      setIsFlipping(false);
+    }, 480);
+  }, [activeIndex, isFlipping, CERTS.length]);
+
+  /**
    * 1-Second Auto-Advance Timer:
-   * Flips to the next student certificate every 1000ms.
+   * Flips like a real book page every 1000ms when folder is OPEN.
    * Pauses when hovered so user can inspect, resumes on leave.
    */
   useEffect(() => {
-    if (!isOpen || !isInView || isHovered || isZoomed) return;
+    if (!isOpen || !isInView || isHovered || isZoomed || isFlipping) return;
 
-    const timer = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % CERTS.length);
+    const timer = setTimeout(() => {
+      turnPage("next");
     }, HOLD_MS);
 
-    return () => clearInterval(timer);
-  }, [isOpen, isInView, isHovered, isZoomed, HOLD_MS, CERTS.length]);
+    return () => clearTimeout(timer);
+  }, [isOpen, isInView, isHovered, isZoomed, isFlipping, turnPage, activeIndex, HOLD_MS]);
 
   /**
    * Keyboard accessibility for Escape key
@@ -192,23 +206,25 @@ export default function CertificatesMarquee() {
       if (e.key === "Escape") {
         if (isZoomed) {
           setIsZoomed(false);
+        } else if (isOpen) {
+          setIsOpen(false);
         }
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isZoomed]);
+  }, [isZoomed, isOpen]);
 
-  // Navigate to previous student
+  // Navigate to previous student with 3D page turn
   const handlePrev = useCallback(() => {
-    setActiveIndex((prev) => (prev === 0 ? CERTS.length - 1 : prev - 1));
-  }, [CERTS.length]);
+    turnPage("prev");
+  }, [turnPage]);
 
-  // Navigate to next student
+  // Navigate to next student with 3D page turn
   const handleNext = useCallback(() => {
-    setActiveIndex((prev) => (prev + 1) % CERTS.length);
-  }, [CERTS.length]);
+    turnPage("next");
+  }, [turnPage]);
 
   // Toggle open / closed leather file
   const toggleFolder = () => {
@@ -301,7 +317,6 @@ export default function CertificatesMarquee() {
               <span className={styles.activeCertLabel}>
                 Now Displaying ({activeIndex + 1} of {CERTS.length}):
               </span>
-              <span className={styles.activeCertName}>{currentCert.name}</span>
               <span className={styles.activeCertCourse}>{currentCert.course}</span>
             </div>
           </div>
@@ -317,24 +332,41 @@ export default function CertificatesMarquee() {
           </div>
         </div>
 
-        {/* ================= RIGHT COLUMN: 3D BOOK STAGE WITH SIDE ARROWS ================= */}
+        {/* ================= RIGHT COLUMN: 3D LEATHER FILE & BOOK STAGE ================= */}
         <div className={styles.rightCol}>
           <div
             className={styles.bookStageContainer}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            {/* ── LEFT SIDE ARROW ON BOOK ── */}
-            <button
-              type="button"
-              className={`${styles.sideNavBtn} ${styles.sideNavPrev}`}
-              onClick={handlePrev}
-              aria-label="Previous student certificate"
-            >
-              <svg viewBox="0 0 24 24">
-                <path d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
+            {/* ── SIDE NAVIGATION ARROWS: ONLY APPEAR WHEN FILE IS OPEN ── */}
+            {isOpen && (
+              <>
+                <button
+                  type="button"
+                  className={`${styles.sideNavBtn} ${styles.sideNavPrev}`}
+                  onClick={handlePrev}
+                  aria-label="Previous student certificate"
+                  disabled={isFlipping}
+                >
+                  <svg viewBox="0 0 24 24">
+                    <path d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+
+                <button
+                  type="button"
+                  className={`${styles.sideNavBtn} ${styles.sideNavNext}`}
+                  onClick={handleNext}
+                  aria-label="Next student certificate"
+                  disabled={isFlipping}
+                >
+                  <svg viewBox="0 0 24 24">
+                    <path d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </>
+            )}
 
             {/* ── 3D BOOK STAGE ── */}
             <div className={styles.stage}>
@@ -362,7 +394,13 @@ export default function CertificatesMarquee() {
                   }}
                 >
                   <div className={styles.pageContent}>
-                    {currentCert.pair ? (
+                    {/* If flipping next, show targetCert on base right; else currentCert */}
+                    {isFlipping && flipDirection === "next" ? (
+                      <div
+                        className={styles.pageHalfRight}
+                        style={{ backgroundImage: `url(${targetCert.pair})` }}
+                      />
+                    ) : currentCert.pair ? (
                       <div
                         className={styles.pageHalfRight}
                         style={{ backgroundImage: `url(${currentCert.pair})` }}
@@ -392,13 +430,56 @@ export default function CertificatesMarquee() {
                   </div>
                 </div>
 
+                {/* ── 3D FLIPPING PAGE LEAF (REAL PAGE TURN ANIMATION) ── */}
+                {isOpen && isFlipping && (
+                  <div
+                    className={`${styles.turningLeaf} ${
+                      flipDirection === "next"
+                        ? styles.turningLeafNext
+                        : styles.turningLeafPrev
+                    }`}
+                  >
+                    {/* Front Face of Turning Leaf */}
+                    <div className={styles.leafFront}>
+                      {flipDirection === "next" ? (
+                        <div
+                          className={styles.pageHalfRight}
+                          style={{ backgroundImage: `url(${currentCert.pair})` }}
+                        />
+                      ) : (
+                        <div
+                          className={styles.pageHalfLeft}
+                          style={{ backgroundImage: `url(${currentCert.pair})` }}
+                        />
+                      )}
+                      <div className={styles.leafShadow} aria-hidden="true" />
+                    </div>
+
+                    {/* Back Face of Turning Leaf */}
+                    <div className={styles.leafBack}>
+                      {flipDirection === "next" ? (
+                        <div
+                          className={styles.pageHalfLeft}
+                          style={{ backgroundImage: `url(${targetCert.pair})` }}
+                        />
+                      ) : (
+                        <div
+                          className={styles.pageHalfRight}
+                          style={{ backgroundImage: `url(${targetCert.pair})` }}
+                        />
+                      )}
+                      <div className={styles.leafShadow} aria-hidden="true" />
+                    </div>
+                  </div>
+                )}
+
                 {/* ── FLIPPING COVER: LEATHER FRONT & INSIDE LEFT PAGE ── */}
                 <div
                   className={`${styles.flippingCover} ${
                     isOpen ? styles.flippingCoverOpen : ""
                   }`}
                 >
-                  {/* 1. FRONT FACE: ASLI BLACK LEATHER COVER WITH GOLD FOIL */}
+                  {/* 1. FRONT FACE: ROYAL BLACK LEATHER COVER WITH GOLD FOIL & CLICK TO OPEN */}
                   <div
                     className={styles.coverFront}
                     onClick={toggleFolder}
@@ -476,7 +557,7 @@ export default function CertificatesMarquee() {
                       </p>
                     </div>
 
-                    {/* Center Interactive Pill */}
+                    {/* Interactive "Click to open file" button */}
                     <div className={styles.openPillBtn}>
                       <span>Click to open file</span>
                       <svg viewBox="0 0 24 24">
@@ -499,39 +580,27 @@ export default function CertificatesMarquee() {
                           DizitalAdda
                         </h4>
                       </div>
-
-                      <p className={styles.logoSubtitle}>
-                        India&apos;s Most Recommended Digital Marketing Institute
+                      <p className={`${styles.foilText} ${styles.logoTagline}`}>
+                        Transforming Careers Through Practical Excellence
                       </p>
 
-                      <p className={`${styles.foilText} ${styles.collabText}`}>
-                        In Collaboration With
-                      </p>
-
-                      <p className={styles.statsText}>
-                        4000 Schools | 400 Colleges | 80 Universities
-                      </p>
-                      <p className={styles.statsText}>
-                        200+ Trainers | 600+ Placement Partners | 25,000 Students
-                      </p>
-
-                      <div className={styles.contactRow}>
-                        <span>🌐 dizitaladda.com</span>
-                        <span>•</span>
-                        <span>📞 +91 8810606010</span>
+                      <div className={styles.partnersStrip}>
+                        <span className={styles.foilPill}>Google Partner</span>
+                        <span className={styles.foilPill}>Meta Certified</span>
+                        <span className={styles.foilPill}>Skill India</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* 2. BACK FACE: LEFT INSIDE PAGE (PHOTO CERTIFICATE) */}
+                  {/* 2. BACK FACE: INSIDE LEFT PAGE (Official Certificate) */}
                   <div
-                    className={styles.coverBack}
+                    className={styles.coverInsideLeft}
                     onClick={() => isOpen && setIsZoomed(true)}
                     role={isOpen ? "button" : undefined}
                     tabIndex={isOpen ? 0 : -1}
                     aria-label={
                       isOpen
-                        ? `Zoom photo certificate for ${currentCert.name}`
+                        ? `Zoom official certificate for ${currentCert.name}`
                         : undefined
                     }
                     onKeyDown={(e) => {
@@ -542,13 +611,18 @@ export default function CertificatesMarquee() {
                     }}
                   >
                     <div className={styles.pageContent}>
-                      {currentCert.pair ? (
+                      {/* If flipping prev, show targetCert on left; else currentCert */}
+                      {isFlipping && flipDirection === "prev" ? (
+                        <div
+                          className={styles.pageHalfLeft}
+                          style={{ backgroundImage: `url(${targetCert.pair})` }}
+                        />
+                      ) : currentCert.pair ? (
                         <div
                           className={styles.pageHalfLeft}
                           style={{ backgroundImage: `url(${currentCert.pair})` }}
                         />
-                      ) : currentCert.front &&
-                        !brokenImages[currentCert.id + "_front"] ? (
+                      ) : currentCert.front && !brokenImages[currentCert.id + "_front"] ? (
                         <img
                           src={currentCert.front}
                           alt={`Certificate for ${currentCert.name}`}
@@ -568,7 +642,7 @@ export default function CertificatesMarquee() {
                         />
                       )}
 
-                      {/* Right Inner Crease / Spine Shadow */}
+                      {/* Right Spine Crease / Shadow */}
                       <div className={styles.spineCreaseLeft} aria-hidden="true" />
                     </div>
                   </div>
@@ -576,17 +650,27 @@ export default function CertificatesMarquee() {
               </div>
             </div>
 
-            {/* ── RIGHT SIDE ARROW ON BOOK ── */}
-            <button
-              type="button"
-              className={`${styles.sideNavBtn} ${styles.sideNavNext}`}
-              onClick={handleNext}
-              aria-label="Next student certificate"
-            >
-              <svg viewBox="0 0 24 24">
-                <path d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+            {/* ── FILE CONTROLS BAR: STUDENT INFO & CLOSE FILE BUTTON (VISIBLE WHEN OPEN) ── */}
+            {isOpen && (
+              <div className={styles.fileControlsBar}>
+                <div className={styles.fileStudentInfo}>
+                  <strong>{currentCert.name}</strong>
+                  <span>• {activeIndex + 1} of {CERTS.length}</span>
+                </div>
+                <button
+                  type="button"
+                  className={styles.fileCloseBtn}
+                  onClick={toggleFolder}
+                  aria-label="Close certificate file"
+                >
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                  Close file
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -594,32 +678,53 @@ export default function CertificatesMarquee() {
       {/* ================= FULLSCREEN ZOOM MODAL ================= */}
       {isZoomed && (
         <div
-          className={styles.zoomModal}
+          className={styles.zoomBackdrop}
           onClick={() => setIsZoomed(false)}
           role="dialog"
           aria-modal="true"
-          aria-label={`Expanded preview of certificate for ${currentCert.name}`}
+          aria-label={`Full view of certificate for ${currentCert.name}`}
         >
           <div
-            className={styles.zoomDialog}
+            className={styles.zoomModal}
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              type="button"
-              className={styles.zoomCloseBtn}
-              onClick={() => setIsZoomed(false)}
-              aria-label="Close zoomed certificate"
-            >
-              ×
-            </button>
-            <img
-              src={currentCert.pair || currentCert.front}
-              alt={`Certificate portfolio for ${currentCert.name}`}
-              className={styles.zoomImage}
-            />
-            <p className={styles.zoomCaption}>
-              {currentCert.name} · {currentCert.course}
-            </p>
+            <div className={styles.zoomHeader}>
+              <div className={styles.zoomTitle}>
+                <h3>{currentCert.name}</h3>
+                <p>{currentCert.course} • Official Verified Credentials</p>
+              </div>
+              <button
+                type="button"
+                className={styles.zoomCloseBtn}
+                onClick={() => setIsZoomed(false)}
+                aria-label="Close fullscreen zoom"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className={styles.zoomBody}>
+              {currentCert.pair ? (
+                <img
+                  src={currentCert.pair}
+                  alt={`${currentCert.name} certificate spread`}
+                  className={styles.zoomImageSpread}
+                />
+              ) : (
+                <div style={{ display: "flex", gap: "16px", maxWidth: "100%" }}>
+                  <img
+                    src={currentCert.front}
+                    alt="Certificate"
+                    className={styles.zoomImageSpread}
+                  />
+                  <img
+                    src={currentCert.back}
+                    alt="Letter"
+                    className={styles.zoomImageSpread}
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}

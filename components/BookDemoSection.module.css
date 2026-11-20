@@ -478,11 +478,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
   background: linear-gradient(135deg, rgba(124, 58, 237, 0.07) 0%, rgba(204, 34, 224, 0.08) 100%);
   border: 1px solid rgba(124, 58, 237, 0.18);
   border-radius: 12px;
-  padding: 10px 14px;
-  margin-bottom: 20px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
   font-size: 12.5px;
   font-weight: 600;
   color: #6d28d9;
@@ -500,22 +502,26 @@
 .bookingForm {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  width: 100%;
+  gap: 14px;
 }
 
 .formField {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  width: 100%;
+  gap: 7px;
 }
 
 .fieldLabel {
-  font-size: 12px;
+  width: 100%;
+  min-height: 18px;
+  font-size: 12.5px;
   font-weight: 700;
   color: #334155;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 4px;
 }
 
 .fieldRequired {
@@ -531,7 +537,8 @@
 .textInput,
 .selectInput {
   width: 100%;
-  padding: 11px 14px;
+  height: 48px;
+  padding: 12px 14px;
   font-family: inherit;
   font-size: 14px;
   color: #1e293b;
@@ -557,11 +564,14 @@
 .phoneGroup {
   display: flex;
   align-items: center;
+  width: 100%;
+  height: 48px;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
   background: #ffffff;
   transition: all 0.2s ease;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .phoneGroup:focus-within {
@@ -570,7 +580,10 @@
 }
 
 .phonePrefix {
-  padding: 11px 13px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
   background: #f8fafc;
   color: #475569;
   font-size: 13.5px;
@@ -608,12 +621,13 @@
 /* Submit CTA */
 .submitBtn {
   width: 100%;
+  height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px 20px;
-  margin-top: 4px;
+  padding: 12px 20px;
+  margin-top: 2px;
   font-family: inherit;
   font-size: 14.5px;
   font-weight: 700;
@@ -818,6 +832,10 @@
   }
   .column {
     padding: 30px 24px;
+  }
+  .bookingForm,
+  .summaryBar {
+    max-width: 100%;
   }
 }
 
