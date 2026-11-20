@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import SectionHeader from "../SectionHeader";
+import { campusData } from "../../data/campus";
 import styles from "./CampusTour.module.css";
 
 export interface CampusPlace {
@@ -12,57 +13,23 @@ export interface CampusPlace {
   gridClass: string;
 }
 
-export const CAMPUS_PLACES: CampusPlace[] = [
-  {
-    id: "smart-classroom",
-    name: "Smart classroom",
-    src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1400&q=80",
-    alt: "Smart classroom with interactive smart screens and ergonomic desks",
-    gridClass: styles.tileSmartClassroom,
-  },
-  {
-    id: "workspace",
-    name: "Workspace",
-    src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
-    alt: "Open-plan corporate workstation pods for live client projects",
-    gridClass: styles.tileWorkspace,
-  },
-  {
-    id: "discussion-zone",
-    name: "Discussion zone",
-    src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80",
-    alt: "Collaborative breakout hubs for peer brainstorming and mentor reviews",
-    gridClass: styles.tileDiscussionZone,
-  },
-  {
-    id: "learning-lab",
-    name: "Learning lab",
-    src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
-    alt: "Students learning together in a bright training room",
-    gridClass: styles.tileLearningLab,
-  },
-  {
-    id: "student-lounge",
-    name: "Student lounge",
-    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-    alt: "Comfortable breakout lounge to recharge and unwind between sessions",
-    gridClass: styles.tileStudentLounge,
-  },
-  {
-    id: "library-corner",
-    name: "Library corner",
-    src: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80",
-    alt: "Quiet research corner stocked with curated marketing and tech books",
-    gridClass: styles.tileLibraryCorner,
-  },
-  {
-    id: "reception",
-    name: "Reception",
-    src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
-    alt: "Welcoming reception desk, counselor advisory lounge and support center",
-    gridClass: styles.tileReception,
-  },
-];
+const GRID_CLASS_BY_ID: Record<string, string> = {
+  classroom: styles.tileSmartClassroom,
+  workspace: styles.tileWorkspace,
+  "discussion-zone": styles.tileDiscussionZone,
+  "learning-lab": styles.tileLearningLab,
+  "student-lounge": styles.tileStudentLounge,
+  "library-corner": styles.tileLibraryCorner,
+  reception: styles.tileReception,
+};
+
+export const CAMPUS_PLACES: CampusPlace[] = campusData.photos.map((photo) => ({
+  id: photo.id,
+  name: photo.caption,
+  src: photo.image,
+  alt: photo.alt,
+  gridClass: GRID_CLASS_BY_ID[photo.id] || styles.tileWorkspace,
+}));
 
 export default function CampusTour({ places = CAMPUS_PLACES }: { places?: CampusPlace[] }) {
   const [brokenImages, setBrokenImages] = useState<Record<string, boolean>>({});
