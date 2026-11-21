@@ -18,8 +18,8 @@ const GRID_CLASS_BY_ID: Record<string, string> = {
   workspace: styles.tileWorkspace,
   "discussion-zone": styles.tileDiscussionZone,
   "learning-lab": styles.tileLearningLab,
-  "student-lounge": styles.tileStudentLounge,
-  "library-corner": styles.tileLibraryCorner,
+  Cafateria: styles.tileCafeteria,
+  "Doubt sessions": styles.tileDoubtSessions,
   reception: styles.tileReception,
 };
 

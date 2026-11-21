@@ -379,9 +379,9 @@ h6 {
 /* Keep the hero headline readable against legacy page-wide heading rules. */
 #dizitaladda-home-hero .da-hero-content > h1{color:#fff!important;-webkit-text-fill-color:#fff!important}
 #dizitaladda-home-hero .da-hero-gradient-text{color:transparent!important;-webkit-text-fill-color:transparent!important}
-.hero-trust-strip{width:100%;padding:14px clamp(18px,5vw,70px);border-bottom:1px solid #414348;background:#292a2e;color:#f3f4f6}
+.hero-trust-strip{width:100%;padding:14px clamp(18px,5vw,70px);border-bottom:1px solid #d7d7da;background:#eaeaeb;color:#24213a}
 .hero-trust-inner{width:min(100%,1360px);margin:0 auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:28px}
-.hero-trust-label{margin:0;color:#f3f4f6;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.hero-trust-label{margin:0;color:#24213a;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .hero-trust-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:clamp(16px,2.5vw,36px)}
 .hero-trust-logo{display:flex;width:100%;height:76px;align-items:center;justify-content:center;min-width:0}
 .hero-trust-logo img{display:block;width:100%;max-width:150px;height:100%;max-height:68px;object-fit:contain;filter:drop-shadow(0 1px 5px rgba(255,255,255,.28))}
