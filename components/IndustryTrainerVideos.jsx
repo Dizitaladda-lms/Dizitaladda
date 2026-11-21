@@ -10,7 +10,7 @@ export const trainers = [
     tags: ["Data science", "Strategy"],
     experience: "10+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/Gulshan.png",
+    poster: "/courses/images/trainer/gulshan.jpg",
   },
   {
     name: "Mr. Ram Kumar",
