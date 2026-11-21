@@ -153,18 +153,18 @@ export const campusData: CampusSectionData = {
       span: "normal",
     },
     {
-      id: "student-lounge",
-      caption: "Doubt session cabin",
+      id: "Cafateria",
+      caption: "Cafateria Area",
       image:
-        "/images/campus/DOUBT.jpeg",
+        "/images/campus/cafeataria.jpeg",
       alt: "Comfortable lounge seating for students to relax between classes",
       span: "wide",
     },
     {
-      id: "library-corner",
-      caption: "Library corner",
+      id: "Doubt sessions",
+      caption: "Doubt sessions cabin",
       image:
-        "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1000&q=80",
+        "/images/campus/DOUBT.jpeg",
       alt: "Quiet library shelves and a study table",
       span: "normal",
     },

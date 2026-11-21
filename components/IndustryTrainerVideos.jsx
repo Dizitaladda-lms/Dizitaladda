@@ -11,6 +11,7 @@ export const trainers = [
     experience: "10+ yrs experience",
     videoSrc: "",
     poster: "/courses/images/trainer/gulshan.jpg",
+    imagePosition: "center 35%",
   },
   {
     name: "Mr. Ram Kumar",
@@ -19,6 +20,7 @@ export const trainers = [
     experience: "12+ yrs experience",
     videoSrc: "",
     poster: "/courses/images/trainer/ram3.png",
+    imagePosition: "center 52%",
   },
   {
     name: "Mr. Saurabh Kumar",
@@ -27,6 +29,7 @@ export const trainers = [
     experience: "15+ yrs experience",
     videoSrc: "",
     poster: "/courses/images/trainer/saurabh2.png",
+    imagePosition: "center 35%",
   },
   {
     name: "Miss Shagun Srivastava",
@@ -35,6 +38,7 @@ export const trainers = [
     experience: "7+ yrs experience",
     videoSrc: "",
     poster: "/courses/images/trainer/shagun2.png",
+    imagePosition: "center 38%",
   },
 
   {
@@ -51,7 +55,7 @@ export const trainers = [
     tags: ["Keyword research", "Analytics"],
     experience: "7+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/",
+    poster: "/courses/images/trainer/ravi2.jpg",
   },
   {
     name: "Mr. Kaushal",
@@ -194,6 +198,7 @@ export default function IndustryTrainerVideos() {
                     src={trainer.poster}
                     alt={`${trainer.name} - ${trainer.role}`}
                     loading="lazy"
+                    style={{ objectPosition: trainer.imagePosition || "center 35%" }}
                   />
                   <span className="industry-trainer-video-badge">
                     {trainer.videoSrc ? trainer.experience : "Video coming soon"}
