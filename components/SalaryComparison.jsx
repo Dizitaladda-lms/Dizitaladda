@@ -77,13 +77,6 @@ export default function SalaryComparison() {
           </ul>
         </div>
 
-        <p className={styles.disclaimer}>
-          These are reported role averages, not a guaranteed course outcome or
-          an individual before-and-after salary comparison. Pay varies by
-          experience, skills, location, and employer; source profiles have
-          different sample sizes. Job titles are examples, not placement
-          guarantees.
-        </p>
       </div>
     </section>
   );

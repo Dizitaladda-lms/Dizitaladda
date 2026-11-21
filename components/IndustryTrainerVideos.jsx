@@ -63,7 +63,7 @@ export const trainers = [
     tags: ["Paid ads", "Google Business"],
     experience: "5+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/Kaushal.png",
+    poster: "/courses/images/trainer/Bona.jpeg",
   },
   
   {
@@ -72,7 +72,7 @@ export const trainers = [
     tags: ["SEO", "AI Overviews"],
     experience: "3+ yrs experience",
     videoSrc: "",
-    poster: "/courses/images/trainer/Govind.png",
+    poster: "/courses/images/trainer/govind.jpeg",
   },
 ];
 
@@ -98,12 +98,55 @@ export default function IndustryTrainerVideos() {
     if (!track || !card) return;
 
     const gap = Number.parseFloat(window.getComputedStyle(track).columnGap) || 20;
-    const visibleCards = window.innerWidth > 900 ? 4 : window.innerWidth > 560 ? 2 : 1;
     track.scrollBy({
-      left: (card.getBoundingClientRect().width + gap) * visibleCards * direction,
+      left: (card.getBoundingClientRect().width + gap) * direction,
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    const track = carouselRef.current;
+    if (!track) return undefined;
+
+    let paused = false;
+
+    const pauseCarousel = () => {
+      paused = true;
+    };
+    const resumeCarousel = () => {
+      paused = false;
+    };
+    const moveCarousel = () => {
+      if (paused || document.hidden) return;
+
+      const card = track.querySelector(".industry-trainer-video-card");
+      if (!card) return;
+
+      const gap = Number.parseFloat(window.getComputedStyle(track).columnGap) || 20;
+      const step = card.getBoundingClientRect().width + gap;
+      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+
+      track.scrollTo({
+        left: atEnd ? 0 : track.scrollLeft + step,
+        behavior: "smooth",
+      });
+    };
+
+    track.addEventListener("mouseenter", pauseCarousel);
+    track.addEventListener("mouseleave", resumeCarousel);
+    track.addEventListener("focusin", pauseCarousel);
+    track.addEventListener("focusout", resumeCarousel);
+
+    const intervalId = window.setInterval(moveCarousel, 3000);
+
+    return () => {
+      window.clearInterval(intervalId);
+      track.removeEventListener("mouseenter", pauseCarousel);
+      track.removeEventListener("mouseleave", resumeCarousel);
+      track.removeEventListener("focusin", pauseCarousel);
+      track.removeEventListener("focusout", resumeCarousel);
+    };
+  }, []);
 
   const openVideo = (trainer, button) => {
     if (!trainer.videoSrc) return;
