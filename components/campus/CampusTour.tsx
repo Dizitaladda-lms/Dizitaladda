@@ -113,9 +113,6 @@ export default function CampusTour({ places = CAMPUS_PLACES }: { places?: Campus
 
                 {/* Dark Gradient Overlay */}
                 <div className={styles.tileOverlay} aria-hidden="true" />
-
-                {/* Caption at Bottom-Left */}
-                <h3 className={styles.tileCaption}>{place.name}</h3>
               </div>
             );
           })}

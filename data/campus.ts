@@ -139,7 +139,7 @@ export const campusData: CampusSectionData = {
     {
       id: "learning-lab",
       caption: "Learning lab",
-      image: "/images/campus/campus3.jpg",
+      image: "/images/campus/WORKING.jpeg",
       alt: "Students learning together in the campus training lab",
       span: "tall",
     },
@@ -147,7 +147,7 @@ export const campusData: CampusSectionData = {
       id: "discussion-zone",
       caption: "Discussion zone",
       image:
-        "/images/campus/disscusion.jpeg",
+        "/images/campus/CHIILL.jpeg",
       alt: "Team collaborating around a table during a discussion",
       span: "normal",
     },
@@ -170,7 +170,7 @@ export const campusData: CampusSectionData = {
     {
       id: "reception",
       caption: "Reception",
-      image: "/images/campus/reception.jpg",
+      image: "/images/campus/ROOM.jpeg",
       alt: "Welcoming reception area with a modern desk and seating",
       span: "normal",
     },
