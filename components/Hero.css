@@ -222,10 +222,6 @@
   background: #ffffff;
 }
 
-.dz-carousel-arrow {
-  display: none;
-}
-
 
 .dz-hero-desktop-image {
   position: absolute;
@@ -251,6 +247,12 @@
 }
 
 @media (min-width: 1024px) {
+  .dz-hero {
+    --dz-header-h: 224px;
+    height: calc(100vh - var(--dz-header-h));
+    min-height: 520px;
+  }
+
   .dz-hero-mobile-carousel {
     display: none;
   }
@@ -345,34 +347,6 @@
   .dz-stat-label {
     color: #68636c;
     font-size: 14px;
-  }
-
-  .dz-carousel-arrow {
-    position: absolute;
-    z-index: 20;
-    top: 50%;
-    display: grid;
-    width: 48px;
-    height: 48px;
-    place-items: center;
-    margin: 0;
-    padding: 0;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.35);
-    color: #ffffff;
-    font-size: 32px;
-    line-height: 1;
-    cursor: pointer;
-    transform: translateY(-50%);
-  }
-
-  .dz-carousel-arrow-left {
-    left: 56%;
-  }
-
-  .dz-carousel-arrow-right {
-    right: 16px;
   }
 
   .dz-carousel-dots {

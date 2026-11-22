@@ -1,0 +1,1450 @@
+/* ==========================================================================
+   DIZITALADDA COURSE DETAIL PAGE - PLAIN CSS (MOBILE-FIRST)
+   Rules:
+   - Every class is prefixed with "dz-"
+   - Explicit padding, margin, line-height, gap, and font-size on all elements
+   - Mobile-first base styles (< 640px), then 640px (tablet), 1024px (desktop)
+   - Brand Colors: #4c1d95 (dark purple), #7c3aed (purple), #c026d3 (fuchsia),
+     #9333ea (accent), #faf5ff (light lavender), #111827 (heading), #4b5563 (body)
+   ========================================================================== */
+
+/* Universal box-sizing reset for dz- classes */
+[class^="dz-"],
+[class*=" dz-"],
+[class^="dz-"] *,
+[class*=" dz-"] * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Course Page Wrapper */
+.dz-course-page {
+  font-family: inherit;
+  color: #4b5563;
+  background-color: #ffffff;
+  line-height: 1.6;
+  font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Common Container */
+.dz-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Common Section Wrapper */
+.dz-section {
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  position: relative;
+}
+
+.dz-section-white {
+  background-color: #ffffff;
+}
+
+.dz-section-lavender {
+  background-color: #faf5ff;
+}
+
+/* Section Header & Title */
+.dz-section-header {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.dz-section-header.dz-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dz-section-title {
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.dz-title-bar {
+  width: 64px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7c3aed 0%, #c026d3 100%);
+  margin-bottom: 16px;
+}
+
+.dz-section-subtitle {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+/* Gradient Text Helper */
+.dz-gradient-text {
+  background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #7c3aed;
+}
+
+/* ==========================================================================
+   1. HERO SECTION & LEAD FORM
+   ========================================================================== */
+.dz-hero-section {
+  width: 100%;
+  padding-top: 36px;
+  padding-bottom: 48px;
+  background-color: #ffffff;
+}
+
+.dz-hero-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.dz-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 16px;
+}
+
+.dz-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #faf5ff;
+  border: 1px solid #ede9fe;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.dz-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+.dz-hero-title {
+  font-size: clamp(30px, 4.5vw, 48px);
+  font-weight: 850;
+  color: #111827;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.dz-hero-tagline {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.dz-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.dz-hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: #faf5ff;
+  border: 1px solid #ede9fe;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #4c1d95;
+  line-height: 1.4;
+}
+
+.dz-chip-icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #7c3aed;
+  stroke-width: 2.2;
+  flex-shrink: 0;
+}
+
+.dz-hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.dz-hero-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(76, 29, 149, 0.12);
+  background-color: #f3e8ff;
+}
+
+.dz-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Lead Form Card */
+.dz-lead-card {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ede9fe;
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: 0 12px 35px rgba(124, 58, 237, 0.09);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dz-lead-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.dz-lead-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.3;
+}
+
+.dz-lead-card-sub {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.dz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.dz-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  text-align: left;
+}
+
+.dz-form-label {
+  font-size: 14px;
+  font-weight: 650;
+  color: #374151;
+  line-height: 1.3;
+}
+
+.dz-required {
+  color: #dc2626;
+  margin-left: 2px;
+}
+
+.dz-input,
+.dz-select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  font-size: 16px; /* Stops iOS automatic zoom */
+  font-family: inherit;
+  color: #111827;
+  background-color: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  line-height: 48px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.dz-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px 18px;
+  padding-right: 40px;
+}
+
+.dz-input:focus,
+.dz-select:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.dz-input.dz-input-error {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.dz-form-error {
+  font-size: 12.5px;
+  color: #dc2626;
+  line-height: 1.4;
+}
+
+/* Consent Checkbox */
+.dz-consent-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.45;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.dz-checkbox {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  accent-color: #7c3aed;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.dz-submit-btn {
+  width: 100%;
+  height: 52px;
+  min-height: 44px;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 750;
+  font-family: inherit;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  line-height: 52px;
+}
+
+.dz-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.45);
+}
+
+.dz-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.dz-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.dz-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: dz-spin 0.8s linear infinite;
+}
+
+@keyframes dz-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success / Error Message Banners */
+.dz-msg-banner {
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.dz-msg-success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.dz-msg-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+/* ==========================================================================
+   STICKY BOTTOM CTA BAR (MOBILE ONLY)
+   ========================================================================== */
+.dz-sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #ffffff;
+  border-top: 1px solid #ede9fe;
+  box-shadow: 0 -4px 18px rgba(76, 29, 149, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 16px;
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
+  height: auto;
+  min-height: 56px;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.dz-sticky-hidden {
+  transform: translateY(110%);
+  pointer-events: none;
+}
+
+.dz-sticky-call-btn {
+  flex: 1;
+  min-height: 44px;
+  padding: 0 14px;
+  background-color: #faf5ff;
+  border: 1.5px solid #7c3aed;
+  border-radius: 10px;
+  color: #7c3aed;
+  font-size: 14px;
+  font-weight: 750;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  line-height: 44px;
+}
+
+.dz-sticky-counsel-btn {
+  flex: 1.4;
+  min-height: 44px;
+  padding: 0 14px;
+  background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 750;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  line-height: 44px;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
+}
+
+/* ==========================================================================
+   2. ROADMAP & MODULES SECTION (SIGNATURE INTERACTIVE ROAD)
+   ========================================================================== */
+.dz-roadmap-container {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+/* Scenery Canvas */
+.dz-roadmap-stage {
+  position: relative;
+  width: 100%;
+  min-height: 820px;
+  background: linear-gradient(180deg, #f5f3ff 0%, #faf5ff 50%, #f3e8ff 100%);
+  border-radius: 24px;
+  border: 1px solid #ede9fe;
+  padding: 24px 12px;
+  overflow: hidden;
+}
+
+.dz-roadmap-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Character Walking Sprite (SVG) */
+.dz-kid-character {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  z-index: 15;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition: opacity 0.3s ease;
+}
+
+/* Flag Markers along the road */
+.dz-flag-node {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.dz-flag-node:hover {
+  transform: scale(1.08);
+}
+
+.dz-flag-active .dz-flag-pennant {
+  animation: dz-flag-wave 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes dz-flag-wave {
+  0% { transform: rotate(0deg) skewY(0deg); }
+  100% { transform: rotate(8deg) skewY(-6deg); }
+}
+
+/* Module Cards */
+.dz-module-cards-grid {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.dz-module-card {
+  width: 100%;
+  max-width: 100%;
+  background-color: #ffffff;
+  border: 1.5px solid #ede9fe;
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 14px rgba(76, 29, 149, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  position: relative;
+}
+
+.dz-module-card:hover {
+  border-color: #c026d3;
+}
+
+.dz-module-card.dz-card-highlighted {
+  border-color: #7c3aed;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.18);
+}
+
+.dz-module-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dz-module-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 750;
+  color: #7c3aed;
+  text-transform: uppercase;
+}
+
+.dz-module-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.35;
+}
+
+.dz-topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+}
+
+.dz-topic-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.45;
+}
+
+.dz-topic-dot {
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  border-radius: 50%;
+  background-color: #7c3aed;
+  margin-top: 6px;
+}
+
+/* Finish Trophy Banner */
+.dz-finish-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.3);
+  margin-top: 8px;
+  align-self: center;
+}
+
+/* ==========================================================================
+   3. TRAINER SECTION
+   ========================================================================== */
+.dz-trainers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.dz-trainer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  background: #ffffff;
+  border: 1px solid #ede9fe;
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: 0 8px 24px rgba(76, 29, 149, 0.05);
+}
+
+.dz-trainer-photo-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  max-width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.15);
+  background-color: #f3e8ff;
+  flex-shrink: 0;
+}
+
+.dz-trainer-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dz-trainer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.dz-trainer-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.25;
+}
+
+.dz-trainer-desig {
+  font-size: 15px;
+  font-weight: 650;
+  color: #7c3aed;
+  line-height: 1.4;
+}
+
+.dz-exp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background-color: #faf5ff;
+  border: 1px solid #ede9fe;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 750;
+  color: #4c1d95;
+  line-height: 1.4;
+}
+
+.dz-trainer-bio {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 650px;
+  margin-top: 4px;
+}
+
+.dz-teaches-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.dz-teaches-label {
+  font-size: 13px;
+  font-weight: 750;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dz-teaches-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dz-teaches-chip {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #7c3aed;
+  line-height: 1.4;
+}
+
+.dz-linkedin-link {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #0077b5;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: opacity 0.2s ease;
+  line-height: 1.4;
+}
+
+.dz-linkedin-link:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   4. TOOLS YOU WILL MASTER
+   ========================================================================== */
+.dz-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 359px) {
+  .dz-tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.dz-tool-card {
+  background-color: #ffffff;
+  border: 1px solid #ede9fe;
+  border-radius: 16px;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(76, 29, 149, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dz-tool-logo-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dz-tool-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ==========================================================================
+   5. STUDENT VIDEO REVIEWS
+   ========================================================================== */
+.dz-reviews-slider-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.dz-reviews-slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 12px;
+  scrollbar-width: none;
+}
+
+.dz-reviews-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.dz-review-card {
+  flex: 0 0 82%;
+  max-width: 82%;
+  scroll-snap-align: start;
+  background-color: #ffffff;
+  border: 1px solid #ede9fe;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(76, 29, 149, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.dz-review-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #111827;
+  cursor: pointer;
+}
+
+.dz-review-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dz-review-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.55) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dz-play-btn {
+  width: 52px;
+  height: 52px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.dz-play-btn:hover {
+  transform: scale(1.1);
+}
+
+.dz-play-icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  margin-left: 2px;
+}
+
+.dz-review-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dz-review-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.3;
+}
+
+.dz-review-company {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #059669;
+  line-height: 1.4;
+}
+
+.dz-review-quote {
+  font-size: 14px;
+  font-style: italic;
+  color: #4b5563;
+  line-height: 1.55;
+}
+
+/* Modal Popup for YouTube Iframe */
+.dz-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: rgba(10, 8, 20, 0.88);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.dz-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 820px;
+  background-color: #000000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  aspect-ratio: 16 / 9;
+}
+
+.dz-modal-close {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.dz-video-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ==========================================================================
+   6. PLACED STUDENTS (PHOTOS ONLY MARQUEE)
+   ========================================================================== */
+.dz-placed-marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 12px 0;
+}
+
+.dz-placed-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: dz-marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.dz-placed-track:hover,
+.dz-placed-track:active {
+  animation-play-state: paused;
+}
+
+.dz-placed-track-reverse {
+  animation: dz-marquee-reverse 36s linear infinite;
+}
+
+.dz-placed-track-reverse:hover,
+.dz-placed-track-reverse:active {
+  animation-play-state: paused;
+}
+
+@keyframes dz-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes dz-marquee-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.dz-placed-card {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex: 0 0 120px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(76, 29, 149, 0.08);
+  background-color: #ede9fe;
+}
+
+.dz-placed-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dz-placed-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(17, 24, 39, 0.92) 100%);
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.dz-placed-name {
+  font-size: 11px;
+  font-weight: 750;
+  color: #ffffff;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.dz-placed-company {
+  font-size: 10px;
+  font-weight: 650;
+  color: #e9d5ff;
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   7. FAQ SECTION
+   ========================================================================== */
+.dz-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.dz-faq-item {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1.5px solid #ede9fe;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dz-faq-item.dz-faq-open {
+  border-color: #7c3aed;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.08);
+}
+
+.dz-faq-btn {
+  width: 100%;
+  min-height: 56px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.dz-faq-question {
+  font-size: 16px;
+  font-weight: 750;
+  color: #111827;
+  line-height: 1.45;
+}
+
+.dz-faq-icon-box {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #faf5ff;
+  color: #7c3aed;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background-color 0.2s ease;
+}
+
+.dz-faq-open .dz-faq-icon-box {
+  background-color: #7c3aed;
+  color: #ffffff;
+  transform: rotate(45deg);
+}
+
+.dz-faq-answer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dz-faq-open .dz-faq-answer-wrap {
+  grid-template-rows: 1fr;
+}
+
+.dz-faq-answer-inner {
+  overflow: hidden;
+}
+
+.dz-faq-answer-text {
+  padding: 0 16px 18px 16px;
+  font-size: 15.5px;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   404 NOT FOUND STATE
+   ========================================================================== */
+.dz-404-wrap {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  gap: 16px;
+}
+
+.dz-404-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 850;
+  color: #111827;
+}
+
+.dz-404-text {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 520px;
+}
+
+.dz-404-btn {
+  margin-top: 12px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 750;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 48px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES: TABLET (min-width: 640px)
+   ========================================================================== */
+@media (min-width: 640px) {
+  .dz-hero-grid {
+    gap: 36px;
+  }
+
+  .dz-hero-image-wrap {
+    max-height: 320px;
+  }
+
+  .dz-sticky-bar {
+    display: none; /* Mobile only */
+  }
+
+  .dz-tools-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .dz-tool-card {
+    padding: 18px 12px;
+  }
+
+  .dz-tool-logo-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .dz-review-card {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+
+  .dz-placed-card {
+    width: 135px;
+    height: 135px;
+    flex: 0 0 135px;
+  }
+
+  .dz-placed-name {
+    font-size: 12px;
+  }
+
+  .dz-placed-company {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================================================
+   MEDIA QUERIES: DESKTOP (min-width: 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .dz-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .dz-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* 2-Column Hero on Desktop */
+  .dz-hero-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .dz-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .dz-hero-left {
+    gap: 20px;
+  }
+
+  .dz-hero-right {
+    gap: 24px;
+  }
+
+  .dz-hero-image-wrap {
+    max-height: 260px;
+    border-radius: 20px;
+  }
+
+  .dz-lead-card {
+    padding: 28px 24px;
+  }
+
+  /* Roadmap Desktop S-Curve */
+  .dz-roadmap-stage {
+    min-height: 460px;
+    padding: 40px 24px;
+  }
+
+  .dz-module-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .dz-kid-character {
+    width: 56px;
+    height: 56px;
+  }
+
+  /* Trainer 2-Column Desktop */
+  .dz-trainer-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 36px 32px;
+    gap: 40px;
+  }
+
+  .dz-trainer-photo-wrap {
+    width: 260px;
+    height: 260px;
+  }
+
+  .dz-trainer-info {
+    align-items: flex-start;
+  }
+
+  .dz-teaches-wrapper {
+    align-items: flex-start;
+  }
+
+  .dz-teaches-chips {
+    justify-content: flex-start;
+  }
+
+  /* Tools 6-Column Desktop */
+  .dz-tools-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
+
+  .dz-tool-logo-box {
+    width: 48px;
+    height: 48px;
+  }
+
+  .dz-tool-name {
+    font-size: 14px;
+  }
+
+  /* Desktop hover lift on tools (no touch hover) */
+  @media (hover: hover) {
+    .dz-tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(124, 58, 237, 0.14);
+      border-color: #c026d3;
+    }
+  }
+
+  /* Video Reviews Desktop Grid */
+  .dz-reviews-slider {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    overflow-x: visible;
+  }
+
+  .dz-review-card {
+    flex: unset;
+    max-width: unset;
+  }
+
+  /* Placed Students 2 Marquee Rows */
+  .dz-placed-card {
+    width: 150px;
+    height: 150px;
+    flex: 0 0 150px;
+  }
+}
+
+/* ==========================================================================
+   PREFERS-REDUCED-MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .dz-placed-track,
+  .dz-placed-track-reverse {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dz-flag-active .dz-flag-pennant {
+    animation: none;
+  }
+
+  .dz-spinner {
+    animation: none;
+  }
+
+  .dz-sticky-bar {
+    transition: none;
+  }
+
+  .dz-faq-answer-wrap {
+    transition: none;
+  }
+
+  .dz-kid-character {
+    transition: none;
+  }
+}

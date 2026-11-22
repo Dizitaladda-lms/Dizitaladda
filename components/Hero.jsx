@@ -25,14 +25,6 @@ export default function Hero() {
     return () => window.clearInterval(interval);
   }, [isPaused]);
 
-  const previousSlide = () => {
-    setActiveSlide((current) => (current - 1 + slides.length) % slides.length);
-  };
-
-  const nextSlide = () => {
-    setActiveSlide((current) => (current + 1) % slides.length);
-  };
-
   return (
     <section
       id="dizitaladda-home-hero"
@@ -70,12 +62,6 @@ export default function Hero() {
           />
         ))}
         <div className="dz-hero-bottom-gradient" />
-        <button type="button" className="dz-carousel-arrow dz-carousel-arrow-left" onClick={previousSlide} aria-label="Previous slide">
-          <span aria-hidden="true">&#8249;</span>
-        </button>
-        <button type="button" className="dz-carousel-arrow dz-carousel-arrow-right" onClick={nextSlide} aria-label="Next slide">
-          <span aria-hidden="true">&#8250;</span>
-        </button>
       </div>
 
       <div className="dz-panel-wrapper">
