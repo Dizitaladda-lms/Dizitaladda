@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, useCallback } from "react";
+import Link from "next/link";
 
 /**
  * ============================================================================
@@ -39,7 +40,7 @@ const courses = [
       { label: "GA4", icon: "chart" },
     ],
     bullets: ["Live brand campaigns & client budgets", "Recognized certificates & placement assistance", "Lifetime LMS & resource access"],
-    detailsLink: "https://dizitaladda.com/courses/expert-digital-marketing-course",
+    detailsLink: "/courses/expert-digital-marketing-course",
   },
   {
     id: 2,
@@ -64,7 +65,7 @@ const courses = [
       { label: "Google Tag Manager", icon: "search" },
     ],
     bullets: ["Real-world projects & live campaigns", "Certification & corporate placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/advanced-digital-marketing-course",
+    detailsLink: "/courses/advanced-digital-marketing-course",
   },
   {
     id: 3,
@@ -89,7 +90,7 @@ const courses = [
       { label: "GA4", icon: "chart" },
     ],
     bullets: ["Live corporate case studies & campaigns", "Certification & executive placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/digital-marketing-for-professional",
+    detailsLink: "/courses/digital-marketing-for-professional",
   },
   {
     id: 4,
@@ -114,7 +115,7 @@ const courses = [
       { label: "Google Ads", icon: "megaphone" },
     ],
     bullets: ["Hands-on practical assignments", "Industry certification & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/digital-marketing-for-beginners",
+    detailsLink: "/courses/digital-marketing-for-beginners",
   },
 
   // --------------------------------------------------------------------------
@@ -143,7 +144,7 @@ const courses = [
       { label: "Projects", icon: "chart" },
     ],
     bullets: ["Production-level AI agent projects", "Accredited diploma & placement assistance", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/diploma-in-genai-and-prompt-engineering",
+    detailsLink: "/courses/diploma-in-genai-and-prompt-engineering",
   },
   {
     id: 6,
@@ -168,7 +169,7 @@ const courses = [
       { label: "Analytics", icon: "chart" },
     ],
     bullets: ["Live enterprise analytics datasets", "Accredited diploma & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/diploma-in-data-analytics-and-ai",
+    detailsLink: "/courses/diploma-in-data-analytics-and-ai",
   },
   {
     id: 7,
@@ -193,7 +194,7 @@ const courses = [
       { label: "Analytics", icon: "chart" },
     ],
     bullets: ["End-to-end model deployment projects", "Accredited diploma & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/diploma-in-machine-learning-and-ai",
+    detailsLink: "/courses/diploma-in-machine-learning-and-ai",
   },
   {
     id: 8,
@@ -218,7 +219,7 @@ const courses = [
       { label: "Analytics", icon: "chart" },
     ],
     bullets: ["Live predictive modeling case studies", "Accredited diploma & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/diploma-in-data-science-and-ai",
+    detailsLink: "/courses/diploma-in-data-science-and-ai",
   },
   {
     id: 9,
@@ -243,7 +244,7 @@ const courses = [
       { label: "Projects", icon: "chart" },
     ],
     bullets: ["Enterprise generative AI applications", "Certification & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/advanced-certification-in-genai-and-prompt-engineering",
+    detailsLink: "/courses/advanced-certification-in-genai-and-prompt-engineering",
   },
   {
     id: 10,
@@ -268,7 +269,7 @@ const courses = [
       { label: "Analytics", icon: "chart" },
     ],
     bullets: ["Hands-on enterprise dashboards", "Certification & placement assistance", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/advanced-certification-in-data-analytics-and-ai",
+    detailsLink: "/courses/advanced-certification-in-data-analytics-and-ai",
   },
   {
     id: 11,
@@ -293,7 +294,7 @@ const courses = [
       { label: "Projects", icon: "chart" },
     ],
     bullets: ["Real-world machine learning labs", "Certification & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/advanced-certification-in-machine-learning-and-ai",
+    detailsLink: "/courses/advanced-certification-in-machine-learning-and-ai",
   },
   {
     id: 12,
@@ -318,7 +319,7 @@ const courses = [
       { label: "Analytics", icon: "chart" },
     ],
     bullets: ["Predictive analytics & ML case studies", "Certification & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/advanced-certification-in-data-science-and-ai",
+    detailsLink: "/courses/advanced-certification-in-data-science-and-ai",
   },
   {
     id: 13,
@@ -343,7 +344,7 @@ const courses = [
       { label: "Analytics", icon: "chart" },
     ],
     bullets: ["Practical dashboard assignments", "Certification & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/certification-in-data-analytics-and-ai",
+    detailsLink: "/courses/certification-in-data-analytics-and-ai",
   },
 
   // --------------------------------------------------------------------------
@@ -372,7 +373,7 @@ const courses = [
       { label: "Security", icon: "chart" },
     ],
     bullets: ["Virtual cybersecurity lab exercises", "Certification & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/foundation-in-cyber-security-and-ethical-hacking",
+    detailsLink: "/courses/foundation-in-cyber-security-and-ethical-hacking",
   },
   {
     id: 15,
@@ -397,7 +398,7 @@ const courses = [
       { label: "Security", icon: "chart" },
     ],
     bullets: ["Enterprise penetration testing labs", "Certification & placement assistance", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/advanced-certification-in-cyber-security-and-ethical-hacking",
+    detailsLink: "/courses/advanced-certification-in-cyber-security-and-ethical-hacking",
   },
   {
     id: 16,
@@ -422,7 +423,7 @@ const courses = [
       { label: "Security", icon: "chart" },
     ],
     bullets: ["Simulated real-world cyber attack labs", "Certification & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/expert-training-in-cyber-security-and-ethical-hacking",
+    detailsLink: "/courses/expert-training-in-cyber-security-and-ethical-hacking",
   },
   {
     id: 17,
@@ -447,7 +448,7 @@ const courses = [
       { label: "Security", icon: "chart" },
     ],
     bullets: ["Hands-on forensic case investigations", "Certification & placement support", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/certification-in-digital-forensic-and-cyber-investigation",
+    detailsLink: "/courses/certification-in-digital-forensic-and-cyber-investigation",
   },
   {
     id: 18,
@@ -472,7 +473,7 @@ const courses = [
       { label: "Security", icon: "chart" },
     ],
     bullets: ["Live target practice & legal bounty labs", "Certification & placement assistance", "Lifetime LMS access"],
-    detailsLink: "https://dizitaladda.com/courses/expert-traning-in-bug-bounty",
+    detailsLink: "/courses/expert-training-in-bug-bounty",
   },
 ];
 
@@ -651,9 +652,9 @@ function CourseCard({ course }) {
 
         {/* CTA Buttons */}
         <div className="da-course-actions">
-          <a className="da-course-details" href={course.detailsLink}>
+          <Link className="da-course-details" href={course.detailsLink}>
             Details
-          </a>
+          </Link>
           <a className="da-course-enroll" href="#bookDemo">
             Enroll now
           </a>

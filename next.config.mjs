@@ -25,11 +25,6 @@ const nextConfig = {
       ["best-course-after-12-arts", "digital-marketing-vs-ba-after-12th-arts"],
     ].flatMap(([from, to]) => [from, `${from}.php`].map((source) => ({ source: `/blogs/${source}`, destination: `/blogs/${to}`, permanent: true })));
     return [
-      { source: "/courses/diploma-in-genai-and-prompt-engineering-course", destination: "/courses/diploma-in-genai-and-prompt-engineering", permanent: true },
-      { source: "/courses/diploma-in-machine-learning-and-ai-course", destination: "/courses/diploma-in-machine-learning-and-ai", permanent: true },
-      { source: "/courses/diploma-in-data-science-and-ai-course", destination: "/courses/diploma-in-data-science-and-ai", permanent: true },
-      { source: "/courses/diploma-in-data-analytics-course", destination: "/courses/diploma-in-data-analytics-and-ai", permanent: true },
-      { source: "/courses/advance-digital-marketing-course", destination: "/courses/advanced-digital-marketing-course", permanent: true },
       { source: "/:path*", destination: "https://dizitaladda.com/:path*", permanent: true, has: [{ type: "host", value: "www.dizitaladda.com" }] },
       { source: "/:path*", destination: "https://dizitaladda.com/:path*", permanent: true, has: [{ type: "header", key: "x-forwarded-proto", value: "http" }] },
       ...blogRedirects,

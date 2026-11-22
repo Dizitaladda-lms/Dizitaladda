@@ -3,17 +3,48 @@
 import { useEffect, useState } from "react";
 import "./Hero.css";
 
-// Slide sources can be replaced here. Desktop and mobile use the same carousel.
+// Slide sources: primary high-res hero images with existing campus fallbacks
 const slides = [
-  { src: "/images/hero/slide-1.jpg", alt: "DizitalAdda students learning digital marketing" },
-  { src: "/images/hero/slide-2.jpg", alt: "DizitalAdda AI and data science classroom" },
-  { src: "/images/hero/slide-3.jpg", alt: "DizitalAdda cyber security practical session" },
-  { src: "/images/hero/slide-4.jpg", alt: "DizitalAdda expert trainer conducting a live project" },
+  {
+    src: "/images/hero/slide-1.jpg",
+    fallback: "/images/campus/campus1.jpg",
+    alt: "DizitalAdda students learning digital marketing",
+  },
+  {
+    src: "/images/hero/slide-2.jpg",
+    fallback: "/images/campus/campus3.jpg",
+    alt: "DizitalAdda AI and data science classroom",
+  },
+  {
+    src: "/images/hero/slide-3.jpg",
+    fallback: "/images/campus/reception.jpg",
+    alt: "DizitalAdda cyber security practical session",
+  },
+  {
+    src: "/images/hero/slide-4.jpg",
+    fallback: "/images/campus/campus2.jpg",
+    alt: "DizitalAdda expert trainer conducting a live project",
+  },
 ];
 
 export default function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const updateNavHeight = () => {
+      const nav = document.querySelector(".site-nav");
+      if (nav) {
+        const rect = nav.getBoundingClientRect();
+        if (rect.height > 0) {
+          document.documentElement.style.setProperty("--site-nav-h", `${Math.round(rect.height)}px`);
+        }
+      }
+    };
+    updateNavHeight();
+    window.addEventListener("resize", updateNavHeight);
+    return () => window.removeEventListener("resize", updateNavHeight);
+  }, []);
 
   useEffect(() => {
     if (isPaused) return undefined;
@@ -24,6 +55,15 @@ export default function Hero() {
 
     return () => window.clearInterval(interval);
   }, [isPaused]);
+
+  const handleImageError = (event, fallbackSrc) => {
+    if (fallbackSrc && !event.currentTarget.dataset.triedFallback) {
+      event.currentTarget.dataset.triedFallback = "true";
+      event.currentTarget.src = fallbackSrc;
+    } else {
+      event.currentTarget.style.display = "none";
+    }
+  };
 
   return (
     <section
@@ -40,9 +80,7 @@ export default function Hero() {
             src={slide.src}
             alt={slide.alt}
             className={`dz-hero-mobile-image${index === activeSlide ? " dz-active" : ""}`}
-            onError={(event) => {
-              event.currentTarget.style.display = "none";
-            }}
+            onError={(event) => handleImageError(event, slide.fallback)}
           />
         ))}
         <div className="dz-hero-mobile-overlay" />
@@ -56,9 +94,7 @@ export default function Hero() {
             src={slide.src}
             alt={slide.alt}
             className={`dz-hero-desktop-image${index === activeSlide ? " dz-active" : ""}`}
-            onError={(event) => {
-              event.currentTarget.style.display = "none";
-            }}
+            onError={(event) => handleImageError(event, slide.fallback)}
           />
         ))}
         <div className="dz-hero-bottom-gradient" />

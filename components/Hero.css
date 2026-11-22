@@ -1,4 +1,13 @@
 /* Add the class prefix dz- to avoid clashes with the site-wide CSS reset. */
+:root {
+  --site-nav-h: 176px;
+}
+@media (max-width: 1023px) {
+  :root {
+    --site-nav-h: 70px;
+  }
+}
+
 .dz-hero,
 .dz-hero * {
   box-sizing: border-box;
@@ -7,12 +16,14 @@
 }
 
 .dz-hero {
-  --dz-header-h: 120px;
+  --dz-header-h: var(--site-nav-h, 176px);
   position: relative;
   isolation: isolate;
   width: 100%;
   height: calc(100vh - var(--dz-header-h));
-  min-height: 620px;
+  height: calc(100dvh - var(--dz-header-h));
+  min-height: calc(100vh - var(--dz-header-h));
+  min-height: calc(100dvh - var(--dz-header-h));
   overflow: hidden;
   background: #ffffff;
   color: #17131d;
@@ -248,9 +259,11 @@
 
 @media (min-width: 1024px) {
   .dz-hero {
-    --dz-header-h: 224px;
+    --dz-header-h: var(--site-nav-h, 176px);
     height: calc(100vh - var(--dz-header-h));
-    min-height: 520px;
+    height: calc(100dvh - var(--dz-header-h));
+    min-height: calc(100vh - var(--dz-header-h));
+    min-height: calc(100dvh - var(--dz-header-h));
   }
 
   .dz-hero-mobile-carousel {
@@ -273,7 +286,7 @@
   .dz-panel-wrapper {
     position: absolute;
     inset: 0 auto 0 0;
-    width: 55%;
+    width: 58%;
     height: 100%;
     z-index: 10;
     filter: drop-shadow(8px 0 14px rgba(0, 0, 0, 0.25));
@@ -284,8 +297,8 @@
     height: 100%;
     align-items: center;
     background: #ffffff;
-    clip-path: polygon(0 0, 100% 0, calc(100% - 140px) 100%, 0 100%);
-    padding: 0 190px 0 64px;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 130px) 100%, 0 100%);
+    padding: 0 clamp(90px, 11vw, 170px) 0 clamp(40px, 5vw, 64px);
   }
 
   .dz-hero-content {
@@ -299,7 +312,7 @@
   .dz-title {
     color: #17131d;
     margin-top: 0;
-    font-size: 44px;
+    font-size: clamp(30px, 2.7vw, 44px);
     line-height: 1.15;
   }
 
@@ -310,24 +323,24 @@
   }
 
   .dz-description {
-    margin-top: 20px;
+    margin-top: clamp(12px, 1.8vh, 20px);
     color: #5f5a65;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: clamp(14px, 1.05vw, 16px);
+    line-height: 1.65;
   }
 
   .dz-hero-actions {
-    margin-top: 28px;
+    margin-top: clamp(16px, 2.5vh, 28px);
   }
 
   .dz-button {
-    min-height: 50px;
-    padding: 12px 24px;
-    font-size: 16px;
+    min-height: clamp(44px, 4.8vh, 50px);
+    padding: 10px clamp(18px, 1.8vw, 24px);
+    font-size: clamp(14px, 1.05vw, 16px);
   }
 
   .dz-hero-stats {
-    margin-top: 36px;
+    margin-top: clamp(20px, 3vh, 36px);
   }
 
   .dz-button-secondary {
@@ -337,38 +350,40 @@
 
   .dz-hero-stats {
     border-top: 0;
+    gap: clamp(16px, 2.5vw, 36px);
   }
 
   .dz-stat-number {
     color: #17131d;
-    font-size: 30px;
+    font-size: clamp(22px, 2vw, 30px);
   }
 
   .dz-stat-label {
     color: #68636c;
-    font-size: 14px;
+    font-size: clamp(12px, 0.95vw, 14px);
   }
 
   .dz-carousel-dots {
-    left: 76%;
+    left: 78%;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1400px) {
+@media (min-width: 1024px) and (max-width: 1366px) {
   .dz-panel-wrapper {
-    width: 60%;
+    width: 62%;
   }
 
   .dz-panel {
-    padding: 0 170px 0 64px;
-  }
-
-  .dz-title {
-    font-size: 40px;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
+    padding: 0 clamp(80px, 8vw, 120px) 0 44px;
   }
 
   .dz-hero-stats {
-    gap: 32px;
+    gap: 18px;
+  }
+
+  .dz-carousel-dots {
+    left: 80%;
   }
 }
 

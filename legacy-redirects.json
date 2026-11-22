@@ -460,16 +460,6 @@
     "permanent": true
   },
   {
-    "source": "/courses/expert-in-digital-marketing",
-    "destination": "/courses/expert-digital-marketing-course",
-    "permanent": true
-  },
-  {
-    "source": "/courses/expert-in-digital-marketing.php",
-    "destination": "/courses/expert-digital-marketing-course",
-    "permanent": true
-  },
-  {
     "source": "/digital-marketing-course-in-Mukherjee-nagar",
     "destination": "https://dizitaladda.com/digital-marketing-course-in-mukherjee-nagar",
     "permanent": true
@@ -480,16 +470,6 @@
     "permanent": true
   },
   {
-    "source": "/courses/web-development-course",
-    "destination": "https://dizitaladda.com/web-development-courses",
-    "permanent": true
-  },
-  {
-    "source": "/courses/web-development-course.php",
-    "destination": "https://dizitaladda.com/web-development-courses",
-    "permanent": true
-  },
-  {
     "source": "/mayur-vihar",
     "destination": "https://dizitaladda.com/digital-marketing-course-in-mayur-vihar",
     "permanent": true
@@ -497,16 +477,6 @@
   {
     "source": "/mayur-vihar.php",
     "destination": "https://dizitaladda.com/digital-marketing-course-in-mayur-vihar",
-    "permanent": true
-  },
-  {
-    "source": "/course-section",
-    "destination": "https://dizitaladda.com/courses",
-    "permanent": true
-  },
-  {
-    "source": "/course-section.php",
-    "destination": "https://dizitaladda.com/courses",
     "permanent": true
   },
   {
