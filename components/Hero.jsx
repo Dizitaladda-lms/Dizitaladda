@@ -98,7 +98,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Desktop: clipped right-side carousel. Change 120px and -60px in Hero.css to adjust the tilt. */}
+        {/* Desktop: clipped right-side carousel. Change 240px and -120px in Hero.css to adjust the tilt. */}
         <div className="dz-hero-desktop-carousel">
           <div className="dz-hero-carousel">
             {slides.map((slide, index) => (
