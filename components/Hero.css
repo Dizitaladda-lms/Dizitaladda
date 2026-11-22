@@ -7,11 +7,12 @@
 }
 
 .dz-hero {
+  --dz-header-h: 200px;
   position: relative;
   isolation: isolate;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: calc(100vh - var(--dz-header-h));
+  min-height: 520px;
   overflow: hidden;
   background: #ffffff;
   color: #17131d;
@@ -25,8 +26,7 @@
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100%;
   gap: 0;
   margin: 0;
   padding: 0;
@@ -36,49 +36,13 @@
   position: relative;
   z-index: 10;
   display: flex;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   gap: 0;
   padding: 48px 20px 88px;
   margin: 0;
-}
-
-.dz-hero-badges {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  margin: 0 0 24px;
-  padding: 0;
-  line-height: 1.2;
-  font-size: 13px;
-}
-
-.dz-badge {
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  margin: 0;
-  padding: 8px 20px;
-  border: 0;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
-.dz-badge-trusted {
-  border-radius: 0 999px 999px 0;
-  background: #4c1d95;
-}
-
-.dz-badge-placement {
-  border-radius: 999px;
-  background: #9333ea;
 }
 
 .dz-title {
@@ -102,7 +66,7 @@
 
 .dz-description {
   max-width: 620px;
-  margin: 22px 0 0;
+  margin: 16px 0 0;
   padding: 0;
   color: #e5e5e5;
   font-size: 16px;
@@ -114,21 +78,21 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin: 28px 0 0;
+  margin: 24px 0 0;
   padding: 0;
   line-height: 1.2;
 }
 
 .dz-button {
   display: inline-flex;
-  min-height: 50px;
+  min-height: 46px;
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 12px 24px;
+  padding: 10px 22px;
   border: 2px solid transparent;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
@@ -151,9 +115,9 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
-  margin: 34px 0 0;
-  padding: 22px 0 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  margin: 28px 0 0;
+  padding: 0;
+  border-top: 0;
   line-height: 1.2;
 }
 
@@ -171,7 +135,7 @@
   margin: 0;
   padding: 0;
   color: #ffffff;
-  font-size: clamp(20px, 5vw, 26px);
+  font-size: 26px;
   font-weight: 800;
   line-height: 1.1;
 }
@@ -180,7 +144,7 @@
   margin: 0;
   padding: 0;
   color: #d1d1d1;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -262,6 +226,10 @@
   height: 100%;
 }
 
+.dz-tilted-stripe {
+  display: none;
+}
+
 .dz-hero-desktop-image {
   position: absolute;
   inset: 0;
@@ -291,14 +259,16 @@
   }
 
   .dz-hero-content {
-    min-height: 100vh;
+    height: 100%;
     padding: 64px;
     background: #ffffff;
   }
 
   .dz-title {
     color: #17131d;
-    font-size: clamp(44px, 4vw, 62px);
+    margin-top: 0;
+    font-size: 40px;
+    line-height: 1.15;
   }
 
   .dz-highlight {
@@ -308,7 +278,17 @@
   }
 
   .dz-description {
+    margin-top: 16px;
     color: #5f5a65;
+    font-size: 15px;
+  }
+
+  .dz-hero-actions {
+    margin-top: 24px;
+  }
+
+  .dz-hero-stats {
+    margin-top: 28px;
   }
 
   .dz-button-secondary {
@@ -317,7 +297,7 @@
   }
 
   .dz-hero-stats {
-    border-top-color: #ece7ef;
+    border-top: 0;
   }
 
   .dz-stat-number {
@@ -332,14 +312,13 @@
     display: none;
   }
 
-  /* Desktop: change clip-path 128px and margin-left -64px together to change the tilt. */
+  /* Desktop: change clip-path 120px and margin-left -60px together to change the tilt. */
   .dz-hero-desktop-carousel {
     position: relative;
     display: block;
     width: calc(100% + 64px);
-    height: 100vh;
-    height: 100svh;
-    margin: 0 0 0 -64px;
+    height: 100%;
+    margin: 0 0 0 -60px;
     padding: 0;
     overflow: hidden;
     background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
@@ -348,7 +327,23 @@
   .dz-hero-carousel {
     position: relative;
     overflow: hidden;
-    clip-path: polygon(128px 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(120px 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  /* Separate from the clipped carousel so the parallel purple line is not cut off. */
+  .dz-tilted-stripe {
+    position: absolute;
+    z-index: 30;
+    left: calc(50% - 84px);
+    top: 0;
+    display: block;
+    width: 126px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #9333ea;
+    clip-path: polygon(120px 0, 126px 0, 6px 100%, 0 100%);
+    pointer-events: none;
   }
 
   .dz-carousel-arrow {
@@ -393,8 +388,4 @@
     width: 100%;
   }
 
-  .dz-badge {
-    max-width: calc(100vw - 40px);
-    white-space: normal;
-  }
 }

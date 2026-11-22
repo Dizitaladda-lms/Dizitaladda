@@ -58,11 +58,6 @@ export default function Hero() {
 
       <div className="dz-hero-grid">
         <div className="dz-hero-content">
-          <div className="dz-hero-badges">
-            <div className="dz-badge dz-badge-trusted">Trusted By 25000+ Students Since 2009.</div>
-            <div className="dz-badge dz-badge-placement">100% Placement Assistance</div>
-          </div>
-
           <h1 className="dz-title">
             India&apos;s Best{" "}
             <span className="dz-highlight">Digital Marketing Institute</span>{" "}
@@ -103,7 +98,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Desktop: clipped right-side carousel. Change 128px and -64px in Hero.css to adjust the tilt. */}
+        {/* Desktop: clipped right-side carousel. Change 120px and -60px in Hero.css to adjust the tilt. */}
         <div className="dz-hero-desktop-carousel">
           <div className="dz-hero-carousel">
             {slides.map((slide, index) => (
@@ -128,6 +123,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <div className="dz-tilted-stripe" aria-hidden="true" />
 
       <div className="dz-carousel-dots" aria-label="Choose hero slide">
         {slides.map((slide, index) => (
