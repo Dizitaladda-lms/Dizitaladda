@@ -56,74 +56,72 @@ export default function Hero() {
         <div className="dz-hero-mobile-overlay" />
       </div>
 
-      <div className="dz-hero-grid">
-        <div className="dz-hero-content">
-          <h1 className="dz-title">
-            India&apos;s Best{" "}
-            <span className="dz-highlight">Digital Marketing Institute</span>{" "}
-            |{" "}
-            <span className="dz-highlight">AI, Data Science &amp; Cyber Security</span>{" "}
-            Courses
-          </h1>
+      {/* Desktop: full-width media, then a separate diagonally cut white text panel. */}
+      <div className="dz-media" aria-label="DizitalAdda desktop campus carousel">
+        {slides.map((slide, index) => (
+          <img
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            className={`dz-hero-desktop-image${index === activeSlide ? " dz-active" : ""}`}
+            onError={(event) => {
+              event.currentTarget.style.display = "none";
+            }}
+          />
+        ))}
+        <div className="dz-hero-bottom-gradient" />
+        <button type="button" className="dz-carousel-arrow dz-carousel-arrow-left" onClick={previousSlide} aria-label="Previous slide">
+          <span aria-hidden="true">&#8249;</span>
+        </button>
+        <button type="button" className="dz-carousel-arrow dz-carousel-arrow-right" onClick={nextSlide} aria-label="Next slide">
+          <span aria-hidden="true">&#8250;</span>
+        </button>
+      </div>
 
-          <p className="dz-description">
-            Live projects, real campaigns and expert mentors at DizitalAdda. Build career-focused, job-ready skills that get you hired or help you grow your own business.
-          </p>
+      <div className="dz-panel-wrapper">
+        <div className="dz-panel">
+          <div className="dz-hero-content">
+            <h1 className="dz-title">
+              India&apos;s Best{" "}
+              <span className="dz-highlight">Digital Marketing Institute</span>{" "}
+              |{" "}
+              <span className="dz-highlight">AI, Data Science &amp; Cyber Security</span>{" "}
+              Courses
+            </h1>
 
-          <div className="dz-hero-actions">
-            <a className="dz-button dz-button-primary" href="#bookDemo">Book Free Demo Class</a>
-            <a
-              className="dz-button dz-button-secondary"
-              href="/assets/pdfs/Digital-Marketing-Course-for-Professionals.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Download Brochure
-            </a>
-          </div>
+            <p className="dz-description">
+              Live projects, real campaigns and expert mentors at DizitalAdda. Build career-focused, job-ready skills that get you hired or help you grow your own business.
+            </p>
 
-          <div className="dz-hero-stats" aria-label="DizitalAdda at a glance">
-            <div className="dz-stat">
-              <strong className="dz-stat-number">25000+</strong>
-              <span className="dz-stat-label">Students trained</span>
+            <div className="dz-hero-actions">
+              <a className="dz-button dz-button-primary" href="#bookDemo">Book Free Demo Class</a>
+              <a
+                className="dz-button dz-button-secondary"
+                href="/assets/pdfs/Digital-Marketing-Course-for-Professionals.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download Brochure
+              </a>
             </div>
-            <div className="dz-stat">
-              <strong className="dz-stat-number">20+</strong>
-              <span className="dz-stat-label">Courses</span>
-            </div>
-            <div className="dz-stat">
-              <strong className="dz-stat-number">100%</strong>
-              <span className="dz-stat-label">Practical learning</span>
-            </div>
-          </div>
-        </div>
 
-        {/* Desktop: clipped right-side carousel. Change 240px and -120px in Hero.css to adjust the tilt. */}
-        <div className="dz-hero-desktop-carousel">
-          <div className="dz-hero-carousel">
-            {slides.map((slide, index) => (
-              <img
-                key={slide.src}
-                src={slide.src}
-                alt={slide.alt}
-                className={`dz-hero-desktop-image${index === activeSlide ? " dz-active" : ""}`}
-                onError={(event) => {
-                  event.currentTarget.style.display = "none";
-                }}
-              />
-            ))}
-            <div className="dz-hero-bottom-gradient" />
-
-            <button type="button" className="dz-carousel-arrow dz-carousel-arrow-left" onClick={previousSlide} aria-label="Previous slide">
-              <span aria-hidden="true">&#8249;</span>
-            </button>
-            <button type="button" className="dz-carousel-arrow dz-carousel-arrow-right" onClick={nextSlide} aria-label="Next slide">
-              <span aria-hidden="true">&#8250;</span>
-            </button>
+            <div className="dz-hero-stats" aria-label="DizitalAdda at a glance">
+              <div className="dz-stat">
+                <strong className="dz-stat-number">25000+</strong>
+                <span className="dz-stat-label">Students trained</span>
+              </div>
+              <div className="dz-stat">
+                <strong className="dz-stat-number">20+</strong>
+                <span className="dz-stat-label">Courses</span>
+              </div>
+              <div className="dz-stat">
+                <strong className="dz-stat-number">100%</strong>
+                <span className="dz-stat-label">Practical learning</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="dz-tilted-stripe" aria-hidden="true" />
 
       <div className="dz-carousel-dots" aria-label="Choose hero slide">
         {slides.map((slide, index) => (

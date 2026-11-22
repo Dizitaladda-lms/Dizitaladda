@@ -20,16 +20,21 @@
   line-height: 1.5;
 }
 
-.dz-hero-grid {
+.dz-panel-wrapper,
+.dz-panel {
   position: relative;
-  z-index: 10;
-  display: grid;
-  grid-template-columns: 1fr;
   width: 100%;
   height: 100%;
-  gap: 0;
   margin: 0;
   padding: 0;
+}
+
+.dz-panel-wrapper {
+  z-index: 10;
+}
+
+.dz-panel {
+  display: block;
 }
 
 .dz-hero-content {
@@ -181,7 +186,7 @@
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
 }
 
-.dz-hero-desktop-carousel {
+.dz-media {
   display: none;
 }
 
@@ -221,14 +226,6 @@
   display: none;
 }
 
-.dz-hero-carousel {
-  width: 100%;
-  height: 100%;
-}
-
-.dz-tilted-stripe {
-  display: none;
-}
 
 .dz-hero-desktop-image {
   position: absolute;
@@ -254,14 +251,47 @@
 }
 
 @media (min-width: 1024px) {
-  .dz-hero-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .dz-hero-mobile-carousel {
+    display: none;
+  }
+
+  .dz-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
+  }
+
+  .dz-panel-wrapper {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 55%;
+    height: 100%;
+    z-index: 10;
+    filter: drop-shadow(8px 0 14px rgba(0, 0, 0, 0.25));
+  }
+
+  .dz-panel {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background: #ffffff;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 140px) 100%, 0 100%);
+    padding: 0 190px 0 64px;
   }
 
   .dz-hero-content {
-    height: 100%;
-    padding: 64px;
-    background: #ffffff;
+    height: auto;
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+    background: transparent;
   }
 
   .dz-title {
@@ -317,45 +347,6 @@
     font-size: 14px;
   }
 
-  .dz-hero-mobile-carousel {
-    display: none;
-  }
-
-  /* Desktop: change clip-path 240px and margin-left -120px together to change the tilt. */
-  .dz-hero-desktop-carousel {
-    position: relative;
-    display: block;
-    width: calc(100% + 120px);
-    height: 100%;
-    margin: 0 0 0 -120px;
-    padding: 0;
-    overflow: hidden;
-    background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
-  }
-
-  .dz-hero-carousel {
-    position: relative;
-    overflow: hidden;
-    clip-path: polygon(240px 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  /* Separate from the clipped carousel so the parallel purple line is not cut off. */
-  .dz-tilted-stripe {
-    position: absolute;
-    z-index: 30;
-    left: calc(50% - 120px);
-    top: 0;
-    display: block;
-    width: 240px;
-    bottom: 0;
-    margin: 0;
-    padding: 0;
-    background: #9333ea;
-    clip-path: polygon(230px 0, 240px 0, 10px 100%, 0 100%);
-    transform: translateX(-24px);
-    pointer-events: none;
-  }
-
   .dz-carousel-arrow {
     position: absolute;
     z-index: 20;
@@ -377,21 +368,29 @@
   }
 
   .dz-carousel-arrow-left {
-    left: 150px;
+    left: 56%;
   }
 
   .dz-carousel-arrow-right {
-    right: 24px;
+    right: 16px;
   }
 
   .dz-carousel-dots {
-    left: 75%;
+    left: 76%;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1400px) {
-  .dz-hero-content {
-    padding: 0 140px 0 64px;
+  .dz-panel-wrapper {
+    width: 60%;
+  }
+
+  .dz-panel {
+    padding: 0 170px 0 64px;
+  }
+
+  .dz-title {
+    font-size: 40px;
   }
 
   .dz-hero-stats {
