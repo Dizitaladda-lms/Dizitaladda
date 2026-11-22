@@ -32,10 +32,10 @@
   min-height: 100dvh;
 }
 
-/* Common Container */
+/* Common Container - Spans up to site navbar width (1560px) to prevent empty side gutters */
 .dz-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1560px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 16px;
@@ -109,7 +109,7 @@
    ========================================================================== */
 .dz-hero-section {
   width: 100%;
-  padding-top: 36px;
+  padding-top: 20px;
   padding-bottom: 48px;
   background-color: #ffffff;
 }
@@ -481,24 +481,23 @@
 }
 
 /* ==========================================================================
-   2. ROADMAP & MODULES SECTION (SIGNATURE INTERACTIVE ROAD)
+   2. ROADMAP & MODULES SECTION (SIGNATURE INTERACTIVE FULL-SCREEN ROAD)
    ========================================================================== */
-.dz-roadmap-container {
-  position: relative;
+.dz-roadmap-section {
   width: 100%;
-  overflow: visible;
+  overflow-x: clip; /* Ensures zero horizontal page scroll */
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* Scenery Canvas */
-.dz-roadmap-stage {
+/* Full Screen Edge-to-Edge Stage (Spans 100% of viewport width) */
+.dz-roadmap-fullscreen-stage {
   position: relative;
   width: 100%;
-  min-height: 820px;
-  background: linear-gradient(180deg, #f5f3ff 0%, #faf5ff 50%, #f3e8ff 100%);
-  border-radius: 24px;
-  border: 1px solid #ede9fe;
-  padding: 24px 12px;
+  min-height: 560px;
+  background: linear-gradient(180deg, #faf5ff 0%, #f5f3ff 45%, #ffffff 100%);
   overflow: hidden;
+  margin-top: 24px;
 }
 
 .dz-roadmap-svg {
@@ -507,150 +506,312 @@
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
+  pointer-events: auto;
   z-index: 1;
 }
 
-/* Character Walking Sprite (SVG) */
-.dz-kid-character {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 44px;
-  height: 44px;
-  z-index: 15;
-  pointer-events: none;
-  will-change: transform, opacity;
-  transition: opacity 0.3s ease;
-}
-
-/* Flag Markers along the road */
-.dz-flag-node {
-  position: absolute;
-  z-index: 10;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Milestone Flags */
+.dz-road-flag {
   transition: transform 0.2s ease;
 }
 
-.dz-flag-node:hover {
-  transform: scale(1.08);
+.dz-road-flag:hover {
+  filter: brightness(1.1);
 }
 
-.dz-flag-active .dz-flag-pennant {
-  animation: dz-flag-wave 0.5s ease-in-out infinite alternate;
+.dz-flag-pulse-ring {
+  animation: dz-flag-ripple 1.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  transform-origin: center;
 }
 
-@keyframes dz-flag-wave {
+@keyframes dz-flag-ripple {
+  0% {
+    r: 10px;
+    opacity: 0.9;
+  }
+  100% {
+    r: 32px;
+    opacity: 0;
+  }
+}
+
+.dz-flag-pennant-wave {
+  animation: dz-pennant-flutter 0.6s ease-in-out infinite alternate;
+  transform-origin: 0 0;
+}
+
+@keyframes dz-pennant-flutter {
   0% { transform: rotate(0deg) skewY(0deg); }
-  100% { transform: rotate(8deg) skewY(-6deg); }
+  100% { transform: rotate(7deg) skewY(-5deg); }
 }
 
-/* Module Cards */
-.dz-module-cards-grid {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-.dz-module-card {
-  width: 100%;
-  max-width: 100%;
+/* ==========================================================================
+   Dynamic Active Milestone Card Popup
+   (Shown ONLY when kid reaches a flag; disappears when leaving!)
+   ========================================================================== */
+.dz-roadmap-popup-card {
+  position: absolute;
+  z-index: 25;
+  width: min(390px, calc(100vw - 32px));
   background-color: #ffffff;
-  border: 1.5px solid #ede9fe;
-  border-radius: 16px;
-  padding: 16px 18px;
-  box-shadow: 0 4px 14px rgba(76, 29, 149, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  cursor: pointer;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-  position: relative;
+  border: 1.5px solid #ddd6fe;
+  border-radius: 20px;
+  padding: 20px 22px;
+  box-shadow: 0 20px 40px -8px rgba(124, 58, 237, 0.22), 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
 }
 
-.dz-module-card:hover {
-  border-color: #c026d3;
+.dz-card-enter {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
-.dz-module-card.dz-card-highlighted {
-  border-color: #7c3aed;
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.18);
+.dz-card-leave {
+  opacity: 0;
+  transform: translateY(14px) scale(0.96);
+  pointer-events: none;
 }
 
-.dz-module-header {
+/* Pointer notch pointing down towards the flag */
+.dz-popup-pointer {
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-right: 1.5px solid #ddd6fe;
+  border-bottom: 1.5px solid #ddd6fe;
+  border-bottom-right-radius: 3px;
+}
+
+.dz-popup-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
 }
 
-.dz-module-pill {
+.dz-popup-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dz-popup-month-pill {
   display: inline-block;
-  padding: 4px 10px;
-  background: #f5f3ff;
-  border: 1px solid #ddd6fe;
+  padding: 4px 11px;
+  background-color: #f5f3ff;
+  border: 1px solid #c4b5fd;
   border-radius: 9999px;
   font-size: 12px;
-  font-weight: 750;
+  font-weight: 800;
   color: #7c3aed;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
-.dz-module-title {
-  font-size: 16px;
+.dz-popup-milestone-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #c026d3;
+}
+
+.dz-status-beacon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #c026d3;
+  animation: dz-beacon-pulse 1.2s infinite;
+}
+
+@keyframes dz-beacon-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.dz-popup-close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.dz-popup-close-btn:hover {
+  color: #111827;
+  background-color: #f3f4f6;
+}
+
+.dz-popup-title {
+  font-size: 17px;
   font-weight: 800;
   color: #111827;
   line-height: 1.35;
+  margin-top: 10px;
+  margin-bottom: 12px;
 }
 
-.dz-topics-list {
+.dz-popup-topics-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.dz-topic-item {
+.dz-popup-topic-item {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 9px;
   font-size: 14px;
   color: #4b5563;
   line-height: 1.45;
 }
 
-.dz-topic-dot {
-  width: 6px;
-  height: 6px;
-  min-width: 6px;
-  border-radius: 50%;
-  background-color: #7c3aed;
-  margin-top: 6px;
+.dz-popup-topic-check {
+  color: #7c3aed;
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
-/* Finish Trophy Banner */
-.dz-finish-badge {
+/* Finish Line Celebration Banner */
+.dz-roadmap-finish-celebration {
+  position: absolute;
+  top: 40px;
+  right: clamp(20px, 4vw, 60px);
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
+  border: 2px solid #fcd34d;
+  border-radius: 20px;
+  padding: 16px 24px;
+  box-shadow: 0 16px 36px rgba(245, 158, 11, 0.25);
+  animation: dz-card-pop 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dz-card-pop {
+  0% { opacity: 0; transform: scale(0.9) translateY(10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.dz-finish-trophy-icon {
+  font-size: 32px;
+}
+
+.dz-finish-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #92400e;
+  margin: 0 0 2px 0;
+}
+
+.dz-finish-sub {
+  font-size: 13px;
+  font-weight: 600;
+  color: #b45309;
+  margin: 0;
+}
+
+/* Bottom Interactive Milestone Navigation Bar */
+.dz-roadmap-bottom-bar {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 8px 14px;
+  border-radius: 9999px;
+  border: 1px solid #e9d5ff;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.12);
+  z-index: 20;
+  max-width: 95vw;
+  overflow-x: auto;
+}
+
+.dz-milestones-track {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dz-milestone-pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dz-milestone-pill-btn:hover {
+  background: #f3e8ff;
+  border-color: #c4b5fd;
+  color: #7c3aed;
+}
+
+.dz-milestone-pill-btn.dz-milestone-active {
+  background: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
+  border-color: #7c3aed;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.dz-pill-num {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  color: #ffffff;
-  border-radius: 9999px;
-  font-size: 14px;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 10px;
   font-weight: 800;
-  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.3);
-  margin-top: 8px;
-  align-self: center;
+}
+
+.dz-walk-toggle-btn {
+  background: #ffffff;
+  border: 1px solid #ddd6fe;
+  border-radius: 9999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c3aed;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dz-walk-toggle-btn:hover {
+  background: #7c3aed;
+  color: #ffffff;
 }
 
 /* ==========================================================================
@@ -1289,30 +1450,31 @@
    ========================================================================== */
 @media (min-width: 1024px) {
   .dz-container {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .dz-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
-  /* 2-Column Hero on Desktop */
+  /* 2-Column Hero on Desktop: Aligns course title to the top without empty space */
   .dz-hero-section {
-    padding-top: 60px;
-    padding-bottom: 80px;
+    padding-top: 16px;
+    padding-bottom: 60px;
   }
 
   .dz-hero-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 56px;
-    align-items: center;
+    grid-template-columns: minmax(0, 1.25fr) minmax(380px, 460px);
+    gap: clamp(24px, 3.5vw, 48px);
+    align-items: flex-start;
   }
 
   .dz-hero-left {
-    gap: 20px;
+    gap: 16px;
+    padding-top: 0;
   }
 
   .dz-hero-right {
@@ -1328,22 +1490,9 @@
     padding: 28px 24px;
   }
 
-  /* Roadmap Desktop S-Curve */
-  .dz-roadmap-stage {
-    min-height: 460px;
-    padding: 40px 24px;
-  }
-
-  .dz-module-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding: 24px 0;
-  }
-
-  .dz-kid-character {
-    width: 56px;
-    height: 56px;
+  /* Roadmap Fullscreen Stage Desktop */
+  .dz-roadmap-fullscreen-stage {
+    min-height: 580px;
   }
 
   /* Trainer 2-Column Desktop */
@@ -1444,7 +1593,10 @@
     transition: none;
   }
 
-  .dz-kid-character {
+  .dz-roadmap-popup-card,
+  .dz-flag-pulse-ring,
+  .dz-flag-pennant-wave {
+    animation: none;
     transition: none;
   }
 }

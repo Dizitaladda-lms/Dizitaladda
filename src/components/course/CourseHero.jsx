@@ -161,8 +161,8 @@ export default function CourseHero({ course }) {
     }
   };
 
-  // Fallback vector hero illustration if image is missing
-  const fallbackHero = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375' width='600' height='375'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%234c1d95'/%3E%3Cstop offset='100%25' stop-color='%23c026d3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='375' fill='url(%23g)'/%3E%3Ccircle cx='300' cy='187' r='90' fill='%23ffffff' opacity='0.12'/%3E%3Ctext x='300' y='180' fill='%23ffffff' font-family='system-ui' font-size='26' font-weight='800' text-anchor='middle'%3E${encodeURIComponent(course.name)}%3C/text%3E%3Ctext x='300' y='215' fill='%23e9d5ff' font-family='system-ui' font-size='16' font-weight='600' text-anchor='middle'%3E100%25 Practical Training%3C/text%3E%3C/svg%3E`;
+  // Fallback hero illustration if image is missing
+  const fallbackHero = "/images/campus/campus1.jpg";
 
   return (
     <section className="dz-hero-section" id="hero" aria-labelledby="dz-hero-heading">
@@ -177,7 +177,7 @@ export default function CourseHero({ course }) {
             </div>
 
             <h1 className="dz-hero-title" id="dz-hero-heading">
-              Master <span className="dz-gradient-text">{course.name}</span>
+              {course.name}
             </h1>
 
             <p className="dz-hero-tagline">{course.tagline}</p>
