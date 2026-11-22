@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 // Keep course names and routes together here so the mega menu stays easy to update.
 const courseGroups = [
   {
-    title: "Digital Marketing & Design",
-    description: "Build creative and digital marketing skills.",
+    title: "Marketing",
+    description: "Marketing courses",
     icon: "marketing",
     courses: [
       { title: "Digital Marketing for Beginners", href: "/courses/digital-marketing-for-beginners", terms: ["short"] },
@@ -22,8 +22,8 @@ const courseGroups = [
     ],
   },
   {
-    title: "Cyber Security",
-    description: "Learn to protect systems, networks and data.",
+    title: "CS & EH",
+    description: "Cyber security",
     icon: "security",
     courses: [
       { title: "Foundation in Cyber Security & Ethical Hacking", href: "/courses/foundation-in-cyber-security-and-ethical-hacking", terms: ["short"] },
@@ -34,8 +34,18 @@ const courseGroups = [
     ],
   },
   {
-    title: "Artificial Intelligence & Data",
-    description: "Turn data and AI tools into practical skills.",
+    title: "Analytics",
+    description: "Data analytics",
+    icon: "analytics",
+    courses: [
+      { title: "Diploma in Data Analytics & AI", href: "/courses/diploma-in-data-analytics-and-ai", terms: ["long"] },
+      { title: "Advanced Data Analytics & AI", href: "/courses/advanced-certification-in-data-analytics-and-ai", terms: ["short"] },
+      { title: "Certification in Data Analytics & AI", href: "/courses/certification-in-data-analytics-and-ai", terms: ["short"] },
+    ],
+  },
+  {
+    title: "AI ML",
+    description: "AI & machine learning",
     icon: "data",
     courses: [
       { title: "Advanced Gen AI & Prompt Engineering", href: "/courses/advanced-certification-in-genai-and-prompt-engineering", terms: ["short"] },
@@ -44,9 +54,6 @@ const courseGroups = [
       { title: "Advanced Machine Learning & AI", href: "/courses/advanced-certification-in-machine-learning-and-ai", terms: ["short"] },
       { title: "Diploma in Data Science & AI", href: "/courses/diploma-in-data-science-and-ai", terms: ["long"] },
       { title: "Advanced Data Science & AI", href: "/courses/advanced-certification-in-data-science-and-ai", terms: ["short"] },
-      { title: "Diploma in Data Analytics & AI", href: "/courses/diploma-in-data-analytics-and-ai", terms: ["long"] },
-      { title: "Advanced Data Analytics & AI", href: "/courses/advanced-certification-in-data-analytics-and-ai", terms: ["short"] },
-      { title: "Certification in Data Analytics & AI", href: "/courses/certification-in-data-analytics-and-ai", terms: ["short"] },
     ],
   },
 ];
@@ -188,12 +195,18 @@ export default function PublicNavbar() {
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                           {group.icon === "marketing" && <><path d="M4 14.5 19 5l-5.5 15-2.3-6.2L4 14.5Z" /><path d="m11.2 13.8 4.3-4.3" /></>}
                           {group.icon === "security" && <><path d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z" /><path d="m9 12 2 2 4-4" /></>}
-                          {group.icon === "data" && <><path d="M4 19V5M4 19h16" /><path d="m7 15 4-4 3 2 5-6" /><circle cx="7" cy="15" r="1" /><circle cx="11" cy="11" r="1" /><circle cx="14" cy="13" r="1" /><circle cx="19" cy="7" r="1" /></>}
+                          {group.icon === "analytics" && <><path d="M4 19V5M4 19h16" /><path d="m7 15 3-3 3 2 5-7" /><circle cx="7" cy="15" r="1" /><circle cx="10" cy="12" r="1" /><circle cx="13" cy="14" r="1" /><circle cx="18" cy="7" r="1" /></>}
+                          {group.icon === "data" && <><path d="M5 4h14v16H5z" /><path d="M8 8h8M8 12h3M14 12h2M8 16h8" /><circle cx="12" cy="12" r="4" /></>}
                         </svg>
                       </span>
                       <span className="site-domain-copy"><strong>{group.title}</strong><small>{group.description}</small></span>
                     </button>
                   ))}
+                  <a className="site-course-shortcut" href="/success-stories"><span className="site-domain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z" /><path d="M7 6H4v1a4 4 0 0 0 4 4M17 6h3v1a4 4 0 0 1-4 4" /></svg></span><strong>Success</strong></a>
+                  <a className="site-course-shortcut" href="/about-us"><span className="site-domain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 11v6M12 7.5h.01" /></svg></span><strong>About Us</strong></a>
+                  <a className="site-course-shortcut" href="/gallery"><span className="site-domain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 5h16v14H4zM8 3v4M16 3v4M4 10h16" /><path d="M8 14h3M14 14h2M8 17h8" /></svg></span><strong>Others</strong></a>
+                  <a className="site-course-shortcut" href="/contact-us"><span className="site-domain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg></span><strong>Contact Us</strong></a>
+                  <a className="site-course-shortcut" href="/blogs"><span className="site-domain-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5" /></svg></span><strong>Blogs</strong></a>
                 </div>
                 <section className="site-course-panel" id="course-domain-panel" role="tabpanel" aria-labelledby={`course-domain-tab-${selectedDomain}`} key={selectedDomain}>
                   <div className="site-course-panel-heading">
