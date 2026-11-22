@@ -2,24 +2,24 @@
 
 import React, { useMemo } from "react";
 import { useParams, usePathname } from "next/navigation";
-import { getCourseBySlug } from "../data/courses.js";
+import { getCourseBySlug } from "../../data/courses.js";
 
 // Section Components
-import CourseHero from "../components/course/CourseHero.jsx";
-import RoadmapSection from "../components/course/RoadmapSection.jsx";
-import TrainerSection from "../components/course/TrainerSection.jsx";
-import ToolsSection from "../components/course/ToolsSection.jsx";
-import VideoReviews from "../components/course/VideoReviews.jsx";
-import PlacedStudents from "../components/course/PlacedStudents.jsx";
-import CourseFaq from "../components/course/CourseFaq.jsx";
-import StickyCtaBar from "../components/course/StickyCtaBar.jsx";
+import CourseHero from "./CourseHero.jsx";
+import RoadmapSection from "./RoadmapSection.jsx";
+import TrainerSection from "./TrainerSection.jsx";
+import ToolsSection from "./ToolsSection.jsx";
+import VideoReviews from "./VideoReviews.jsx";
+import PlacedStudents from "./PlacedStudents.jsx";
+import CourseFaq from "./CourseFaq.jsx";
+import StickyCtaBar from "./StickyCtaBar.jsx";
 
 // Plain CSS (all dz- prefixed, mobile-first)
-import "../components/course/course.css";
+import "./course.css";
 
 // Existing Site Header & Footer
-import PublicNavbar from "../../components/PublicNavbar.jsx";
-import Footer from "../../components/Footer.jsx";
+import PublicNavbar from "../../../components/PublicNavbar.jsx";
+import Footer from "../../../components/Footer.jsx";
 
 /**
  * Universal CourseDetailPage Template

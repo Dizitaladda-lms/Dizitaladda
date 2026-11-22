@@ -1,5 +1,5 @@
 import React from "react";
-import CoursePage from "../../../src/pages/CoursePage.jsx";
+import CoursePage from "../../../src/course-pages/CoursePage.jsx";
 import { getCourseBySlug, getAllCourseSlugs } from "../../../src/data/courses.js";
 
 export const dynamic = "force-static";
