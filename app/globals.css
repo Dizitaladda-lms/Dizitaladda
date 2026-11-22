@@ -329,133 +329,70 @@ h6 {
 .site-nav .site-course-term-column .site-course-link{color:#25232a!important;font-weight:650!important}
 .site-nav .site-course-term-column .site-course-link:hover{color:#6a1b9a!important}
 
-/* Course dropdown: horizontal icon tiles, like the course launcher strip. */
-.site-nav .site-course-menu{
-  grid-template-columns:minmax(0,1fr);
-  grid-template-rows:auto minmax(0,1fr) auto;
-  width:min(1440px,calc(100vw - 32px));
-  max-height:calc(100vh - 104px);
+/* Secondary category navbar below the main navigation */
+.site-category-nav{
+  position:fixed;
+  z-index:99999;
+  left:0;
+  right:0;
+  top:90px;
+  height:86px;
+  background:#fff;
+  border-bottom:1px solid #e9e7ee;
+  box-shadow:0 6px 16px #1720330d;
 }
-.site-nav .site-course-menu:before{display:none}
-.site-nav .site-course-tabs{
-  grid-column:1;
-  grid-row:1;
+.site-category-nav-inner{
+  max-width:1560px;
+  height:100%;
+  margin:auto;
+  padding:8px 30px;
   display:grid;
   grid-template-columns:repeat(9,minmax(0,1fr));
+  align-items:center;
   gap:8px;
-  padding:12px 14px 10px;
-  border-bottom:1px solid #eceaf1;
-  background:#fff;
 }
-.site-nav .site-domain-tab,
-.site-nav .site-course-shortcut{
+.site-category-nav button,
+.site-category-nav a{
   display:flex;
+  min-width:0;
+  height:68px;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:7px;
-  min-width:0;
-  min-height:78px;
-  padding:8px 4px;
+  gap:5px;
   border:0;
-  border-bottom:3px solid transparent;
-  border-left:0;
-  border-radius:7px 7px 4px 4px;
+  border-radius:8px;
   background:transparent;
   color:#57206f;
-  text-align:center;
+  font-family:inherit;
+  font-size:12.5px;
+  font-weight:600;
+  line-height:1.2;
   text-decoration:none;
+  cursor:pointer;
 }
-.site-nav .site-domain-tab:hover,
-.site-nav .site-course-shortcut:hover{
-  background:#f8f5fb;
-}
-.site-nav .site-domain-tab.is-selected{
-  border-bottom-color:#7624a4;
-  background:#f8f5fb;
-  box-shadow:none;
-}
-.site-nav .site-domain-icon{
-  flex:0 0 34px;
-  width:34px;
-  height:34px;
-  margin:0;
-  color:#57206f;
-}
-.site-nav .site-domain-tab.is-selected .site-domain-icon,
-.site-nav .site-course-shortcut:hover .site-domain-icon{
-  background:transparent;
+.site-category-nav button:hover,
+.site-category-nav a:hover{
+  background:#f7f3fa;
   color:#7624a4;
 }
-.site-nav .site-domain-icon svg{
-  width:27px;
-  height:27px;
+.site-category-nav svg{
+  width:31px;
+  height:31px;
+  color:inherit;
 }
-.site-nav .site-domain-copy{
-  display:block;
+.site-category-nav span{
   max-width:100%;
-  text-align:center;
-}
-.site-nav .site-domain-copy strong,
-.site-nav .site-course-shortcut strong{
-  display:block;
   overflow:hidden;
-  max-width:100%;
-  color:#57206f;
-  font-size:12.5px;
-  font-weight:650;
-  line-height:1.25;
   text-overflow:ellipsis;
   white-space:nowrap;
 }
-.site-nav .site-domain-copy small{display:none}
-.site-nav .site-course-panel{
-  grid-column:1;
-  grid-row:2;
-  padding:20px 26px 18px;
-}
-.site-nav .site-course-footer{
-  grid-column:1;
-  grid-row:3;
-}
-
+.site-nav-spacer{height:176px}
+.site-nav .site-course-menu{top:176px;max-height:calc(100vh - 190px)}
 @media(max-width:1023px){
-  .site-nav .site-course-menu{
-    display:none;
-    grid-template-columns:minmax(0,1fr);
-    grid-template-rows:auto auto auto;
-  }
-  .site-nav .site-dropdown.is-open .site-course-menu{display:grid}
-  .site-nav .site-course-tabs{
-    display:flex;
-    grid-column:1;
-    grid-row:1;
-    gap:7px;
-    overflow-x:auto;
-    padding:8px 0 12px;
-  }
-  .site-nav .site-domain-tab,
-  .site-nav .site-course-shortcut{
-    flex:0 0 112px;
-    min-height:74px;
-    border:1px solid #e8e5ee;
-    border-bottom:3px solid transparent;
-    border-radius:8px;
-  }
-  .site-nav .site-domain-tab.is-selected{
-    border:1px solid #7624a4;
-    border-bottom:3px solid #7624a4;
-  }
-  .site-nav .site-domain-copy strong,
-  .site-nav .site-course-shortcut strong{font-size:12px}
-  .site-nav .site-course-panel{
-    grid-column:1;
-    grid-row:2;
-  }
-  .site-nav .site-course-footer{
-    grid-column:1;
-    grid-row:3;
-  }
+  .site-category-nav{display:none}
+  .site-nav-spacer{height:70px}
+  .site-nav .site-course-menu{top:auto;max-height:none}
 }
 .courses .containerCource .courseHeader{width:100%;margin:0 0 12px;text-align:center!important;font-size:clamp(28px,3vw,40px);line-height:1.2}
 .courses .coursesSectionDetails{display:block;width:100%;margin:0 auto 24px;text-align:center!important}
