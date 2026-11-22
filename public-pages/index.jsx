@@ -1,4 +1,5 @@
 import PublicNavbar from "../components/PublicNavbar.jsx";
+import Hero from "../components/Hero.jsx";
 import LegacyPageContent from "../components/LegacyPageContent.jsx";
 import CourseCategoryFilters from "../components/CourseCategoryFilters.jsx";
 import HeroHighlights from "../components/HeroHighlights.jsx";
@@ -539,30 +540,7 @@ export default function LegacyPage_index() {
 </div>
 
 
-<main className="da-hero" id="dizitaladda-home-hero">
-<div className="da-hero-grid" aria-hidden="true"></div>
-<div className="da-hero-content">
-<SectionHeader
-  as="h1"
-  align="left"
-  dark={true}
-  label={<><span className="da-hero-pulse" aria-hidden="true"></span>Admissions open</>}
-  title={<>Learn Digital Marketing <span className="highlight">by Doing</span>, Not Just Watching</>}
-  description="Live projects, real campaigns and expert mentors at DizitalAdda, build skills that get you hired or help you grow your own business."
-  className="da-hero-section-header"
-/>
-<div className="da-hero-actions">
-<a className="da-hero-button da-hero-button-primary" href="#bookDemo">Book Free Demo Class</a>
-<a className="da-hero-button da-hero-button-secondary" href="/assets/pdfs/Digital-Marketing-Course-for-Professionals.pdf" target="_blank" rel="noreferrer">Download Brochure</a>
-</div>
-<div className="da-hero-stats" aria-label="DizitalAdda at a glance">
-<div><strong>5000+</strong><span>Students trained</span></div>
-<div><strong>20+</strong><span>Courses</span></div>
-<div><strong>100%</strong><span>Practical learning</span></div>
-</div>
-</div>
-<HeroHighlights />
-</main>
+<Hero />
 
 <HeroTrustStrip />
 
