@@ -121,20 +121,18 @@ export default function RoadmapSection({ modules }) {
     }
   }, [isMobile, numModules, modules]);
 
-  // Main Walking Animation Loop
+  // Main Walking Animation Loop Refs
   const currentDistRef = useRef(0);
   const animFrameRef = useRef(null);
-  const pauseTimerRef = useRef(null);
-  const fadeOutTimerRef = useRef(null);
+  const pauseUntilRef = useRef(0);
+  const hideCardUntilRef = useRef(0);
+  const celebratingRef = useRef(false);
   const visitedFlagsRef = useRef(new Set());
 
   // Function to jump to a specific module
   const jumpToModule = useCallback(
     (idx) => {
       if (!flagPoints[idx]) return;
-
-      if (pauseTimerRef.current) clearTimeout(pauseTimerRef.current);
-      if (fadeOutTimerRef.current) clearTimeout(fadeOutTimerRef.current);
 
       const target = flagPoints[idx];
       currentDistRef.current = target.dist;
@@ -153,6 +151,8 @@ export default function RoadmapSection({ modules }) {
       setActiveModule(idx);
       setIsCardVisible(true);
       setIsFinishCelebration(false);
+      pauseUntilRef.current = performance.now() + 4000;
+      hideCardUntilRef.current = performance.now() + 3600;
     },
     [flagPoints]
   );
@@ -175,102 +175,120 @@ export default function RoadmapSection({ modules }) {
     const totalLength = activePath.getTotalLength();
     if (!totalLength) return;
 
-    // Calm, steady walking speed (~36px/sec at 60fps)
-    const speed = isMobile ? 0.6 : 0.65;
-    let isPaused = isPausedAtFlag;
+    // Calm, steady walking speed (~40px/sec at 60fps)
+    const speed = isMobile ? 0.65 : 0.7;
 
     const animate = () => {
-      if (!isPaused) {
-        currentDistRef.current += speed;
+      const now = performance.now();
 
-        // 1. Check if kid has arrived at any module flag
-        for (let i = 0; i < flagPoints.length; i++) {
-          const flag = flagPoints[i];
-          if (!visitedFlagsRef.current.has(i) && Math.abs(currentDistRef.current - flag.dist) <= speed * 1.6) {
-            isPaused = true;
-            setIsPausedAtFlag(true);
-            visitedFlagsRef.current.add(i);
-
-            // Snap kid directly to flag
-            currentDistRef.current = flag.dist;
-            setKidPos((prev) => ({
-              ...prev,
-              x: flag.x,
-              y: flag.y,
-              bob: 0,
-              legSwing: 0,
-            }));
-
-            // SHOW the milestone card
-            setActiveModule(i);
-            setIsCardVisible(true);
-
-            // Hide card 350ms before resuming walk
-            fadeOutTimerRef.current = setTimeout(() => {
-              setIsCardVisible(false);
-            }, 3650);
-
-            // Resume walking after 4000ms pause (calm reading time)
-            pauseTimerRef.current = setTimeout(() => {
-              isPaused = false;
-              setIsPausedAtFlag(false);
-            }, 4000);
-
-            break;
-          }
-        }
-
-        // 2. Check if kid reached Finish Line
-        if (currentDistRef.current >= totalLength) {
-          isPaused = true;
-          setIsPausedAtFlag(true);
-          setIsFinishCelebration(true);
+      // 1. If currently paused at a flag or finish
+      if (now < pauseUntilRef.current) {
+        // Hide card 400ms before walking resumes
+        if (now >= hideCardUntilRef.current) {
           setIsCardVisible(false);
+        }
+        animFrameRef.current = requestAnimationFrame(animate);
+        return;
+      }
 
-          pauseTimerRef.current = setTimeout(() => {
-            // Smoothly reset back to start
-            currentDistRef.current = 0;
-            visitedFlagsRef.current.clear();
-            setIsFinishCelebration(false);
-            setActiveModule(null);
-            setIsCardVisible(false);
+      // If pause just ended, clear the pause state for character animation
+      setIsPausedAtFlag(false);
 
-            const startPt = activePath.getPointAtLength(0);
-            setKidPos({
-              x: startPt.x,
-              y: startPt.y,
-              angle: 0,
-              bob: 0,
-              legSwing: 0,
-              opacity: 1,
-            });
+      // If finish line celebration just completed, reset to start smoothly
+      if (celebratingRef.current) {
+        celebratingRef.current = false;
+        setIsFinishCelebration(false);
+        currentDistRef.current = 0;
+        visitedFlagsRef.current.clear();
+        setActiveModule(null);
+        setIsCardVisible(false);
 
-            isPaused = false;
-            setIsPausedAtFlag(false);
-          }, 3500);
-        } else if (!isPaused) {
-          // Calculate kid coordinates along curve
-          const p1 = activePath.getPointAtLength(currentDistRef.current);
-          const p2 = activePath.getPointAtLength(Math.min(currentDistRef.current + 2, totalLength));
-          const dx = p2.x - p1.x;
-          const dy = p2.y - p1.y;
-          const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+        const startPt = activePath.getPointAtLength(0);
+        setKidPos({
+          x: startPt.x,
+          y: startPt.y,
+          angle: 0,
+          bob: 0,
+          legSwing: 0,
+          opacity: 1,
+        });
 
-          // Calm walking bob and sneaker swing
-          const walkCycle = currentDistRef.current * 0.14;
-          const bob = Math.sin(walkCycle) * 2.5;
-          const legSwing = Math.sin(walkCycle) * 12;
+        animFrameRef.current = requestAnimationFrame(animate);
+        return;
+      }
 
-          setKidPos({
-            x: p1.x,
-            y: p1.y,
-            angle: isMobile ? angle - 90 : angle,
-            bob,
-            legSwing,
+      // Advance kid position
+      currentDistRef.current += speed;
+
+      // 2. Check if kid has arrived at any unvisited milestone flag
+      let arrivedAtFlag = false;
+      for (let i = 0; i < flagPoints.length; i++) {
+        const flag = flagPoints[i];
+        if (!visitedFlagsRef.current.has(i) && Math.abs(currentDistRef.current - flag.dist) <= speed * 2) {
+          visitedFlagsRef.current.add(i);
+          currentDistRef.current = flag.dist;
+          arrivedAtFlag = true;
+
+          // Pause at this flag for 3.5 seconds
+          pauseUntilRef.current = now + 3500;
+          // Hide card 400ms before resuming walk
+          hideCardUntilRef.current = now + 3100;
+
+          setIsPausedAtFlag(true);
+
+          // Snap kid directly to flag
+          setKidPos((prev) => ({
+            ...prev,
+            x: flag.x,
+            y: flag.y,
+            bob: 0,
+            legSwing: 0,
             opacity: 1,
-          });
+          }));
+
+          // SHOW the milestone card
+          setActiveModule(i);
+          setIsCardVisible(true);
+          break;
         }
       }
+
+      if (arrivedAtFlag) {
+        animFrameRef.current = requestAnimationFrame(animate);
+        return;
+      }
+
+      // 3. Check if kid reached Finish Line
+      if (currentDistRef.current >= totalLength) {
+        celebratingRef.current = true;
+        pauseUntilRef.current = now + 3000;
+        setIsPausedAtFlag(true);
+        setIsFinishCelebration(true);
+        setIsCardVisible(false);
+        animFrameRef.current = requestAnimationFrame(animate);
+        return;
+      }
+
+      // 4. Regular walking coordinates & bob along road path
+      const p1 = activePath.getPointAtLength(currentDistRef.current);
+      const p2 = activePath.getPointAtLength(Math.min(currentDistRef.current + 2, totalLength));
+      const dx = p2.x - p1.x;
+      const dy = p2.y - p1.y;
+      const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+
+      // Calm walking bob and sneaker swing
+      const walkCycle = currentDistRef.current * 0.14;
+      const bob = Math.sin(walkCycle) * 2.5;
+      const legSwing = Math.sin(walkCycle) * 12;
+
+      setKidPos({
+        x: p1.x,
+        y: p1.y,
+        angle: isMobile ? angle - 90 : angle,
+        bob,
+        legSwing,
+        opacity: 1,
+      });
 
       animFrameRef.current = requestAnimationFrame(animate);
     };
@@ -279,10 +297,8 @@ export default function RoadmapSection({ modules }) {
 
     return () => {
       if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
-      if (pauseTimerRef.current) clearTimeout(pauseTimerRef.current);
-      if (fadeOutTimerRef.current) clearTimeout(fadeOutTimerRef.current);
     };
-  }, [isInView, isAutoWalking, isMobile, flagPoints, isPausedAtFlag]);
+  }, [isInView, isAutoWalking, isMobile, flagPoints]);
 
   // Current active flag data
   const currentFlag = activeModule !== null ? flagPoints[activeModule] : null;
