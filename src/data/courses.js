@@ -79,9 +79,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Gaurav Kumar",
+                "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/assets/img/trainers/gaurav.webp",
+                "photo": "/courses/images/trainer/Gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -93,9 +93,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Rohit Verma",
+                "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/assets/img/trainers/rohit.webp",
+                "photo": "/courses/images/trainer/saurabh2.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -334,9 +334,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Gaurav Kumar",
+                "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/assets/img/trainers/gaurav.webp",
+                "photo": "/courses/images/trainer/Gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -348,9 +348,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Rohit Verma",
+                "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/assets/img/trainers/rohit.webp",
+                "photo": "/courses/images/trainer/saurabh2.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -553,9 +553,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Gaurav Kumar",
+                "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/assets/img/trainers/gaurav.webp",
+                "photo": "/courses/images/trainer/Gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -567,9 +567,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Rohit Verma",
+                "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/assets/img/trainers/rohit.webp",
+                "photo": "/courses/images/trainer/saurabh2.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -754,9 +754,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Gaurav Kumar",
+                "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/assets/img/trainers/gaurav.webp",
+                "photo": "/courses/images/trainer/Gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -768,9 +768,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Rohit Verma",
+                "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/assets/img/trainers/rohit.webp",
+                "photo": "/courses/images/trainer/saurabh2.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -981,9 +981,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Gaurav Kumar",
+                "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/assets/img/trainers/gaurav.webp",
+                "photo": "/courses/images/trainer/Gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -995,9 +995,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Rohit Verma",
+                "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/assets/img/trainers/rohit.webp",
+                "photo": "/courses/images/trainer/saurabh2.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -1212,9 +1212,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Gaurav Kumar",
+                "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/assets/img/trainers/gaurav.webp",
+                "photo": "/courses/images/trainer/Gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -1226,9 +1226,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Rohit Verma",
+                "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/assets/img/trainers/rohit.webp",
+                "photo": "/courses/images/trainer/saurabh2.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -1439,9 +1439,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Gaurav Kumar",
+                "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/assets/img/trainers/gaurav.webp",
+                "photo": "/courses/images/trainer/Gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -1453,9 +1453,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Rohit Verma",
+                "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/assets/img/trainers/rohit.webp",
+                "photo": "/courses/images/trainer/saurabh2.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -1666,9 +1666,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Gaurav Kumar",
+                "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/assets/img/trainers/gaurav.webp",
+                "photo": "/courses/images/trainer/Gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -1680,9 +1680,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Rohit Verma",
+                "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/assets/img/trainers/rohit.webp",
+                "photo": "/courses/images/trainer/saurabh2.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -1965,9 +1965,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Gaurav Kumar",
+                "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/assets/img/trainers/gaurav.webp",
+                "photo": "/courses/images/trainer/Gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -1979,9 +1979,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Rohit Verma",
+                "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/assets/img/trainers/rohit.webp",
+                "photo": "/courses/images/trainer/saurabh2.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -2196,9 +2196,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -2210,9 +2210,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -2499,9 +2499,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -2513,9 +2513,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -2738,9 +2738,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -2752,9 +2752,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3029,9 +3029,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3043,9 +3043,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3264,9 +3264,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3278,9 +3278,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3461,9 +3461,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3475,9 +3475,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3740,9 +3740,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3754,9 +3754,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3975,9 +3975,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3989,9 +3989,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -4262,9 +4262,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -4276,9 +4276,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -4493,9 +4493,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Dr. Vikramaditya Sen",
+                "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/trainers/vikramaditya.jpg",
+                "photo": "/courses/images/trainer/shagun2.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -4507,9 +4507,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Pooja Malhotra",
+                "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/trainers/pooja.jpg",
+                "photo": "/courses/images/trainer/deepanshu3.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -4780,9 +4780,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Rishi Kant Sharma",
+                "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/assets/img/trainers/rishi.webp",
+                "photo": "/courses/images/trainer/Govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -4794,9 +4794,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Sameer Alam",
+                "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/assets/img/trainers/sameer.webp",
+                "photo": "/courses/images/trainer/Kaushal.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5019,9 +5019,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Rishi Kant Sharma",
+                "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/assets/img/trainers/rishi.webp",
+                "photo": "/courses/images/trainer/Govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5033,9 +5033,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Sameer Alam",
+                "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/assets/img/trainers/sameer.webp",
+                "photo": "/courses/images/trainer/Kaushal.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5220,9 +5220,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Rishi Kant Sharma",
+                "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/assets/img/trainers/rishi.webp",
+                "photo": "/courses/images/trainer/Govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5234,9 +5234,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Sameer Alam",
+                "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/assets/img/trainers/sameer.webp",
+                "photo": "/courses/images/trainer/Kaushal.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5419,9 +5419,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Rishi Kant Sharma",
+                "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/assets/img/trainers/rishi.webp",
+                "photo": "/courses/images/trainer/Govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5433,9 +5433,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Sameer Alam",
+                "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/assets/img/trainers/sameer.webp",
+                "photo": "/courses/images/trainer/Kaushal.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5626,9 +5626,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Rishi Kant Sharma",
+                "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/assets/img/trainers/rishi.webp",
+                "photo": "/courses/images/trainer/Govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5640,9 +5640,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Sameer Alam",
+                "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/assets/img/trainers/sameer.webp",
+                "photo": "/courses/images/trainer/Kaushal.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5857,9 +5857,9 @@ export const courses = [
     ],
     trainers: [
           {
-                "name": "Rishi Kant Sharma",
+                "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/assets/img/trainers/rishi.webp",
+                "photo": "/courses/images/trainer/Govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5871,9 +5871,9 @@ export const courses = [
                 "linkedin": "https://www.linkedin.com/school/dizitaladda"
           },
           {
-                "name": "Sameer Alam",
+                "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/assets/img/trainers/sameer.webp",
+                "photo": "/courses/images/trainer/Kaushal.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",

@@ -347,9 +347,9 @@ h6 {
   margin:auto;
   padding:8px 30px;
   display:grid;
-  grid-template-columns:repeat(9,minmax(0,1fr));
+  grid-template-columns:repeat(7,minmax(0,1fr));
   align-items:center;
-  gap:8px;
+  gap:12px;
 }
 .site-category-nav button,
 .site-category-nav a{

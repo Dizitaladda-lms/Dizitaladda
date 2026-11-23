@@ -815,148 +815,488 @@
 }
 
 /* ==========================================================================
-   3. TRAINER SECTION
+   3. TRAINER SECTION (SIGNATURE EDGE-TO-EDGE 3D MENTOR SHOWCASE)
    ========================================================================== */
-.dz-trainers-list {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+.dz-trainer-section {
   width: 100%;
+  overflow-x: clip;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
-.dz-trainer-card {
+/* Multi-Trainer Tabs */
+.dz-trainer-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.dz-trainer-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 750;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1.5px solid #ede9fe;
+  background-color: #ffffff;
+  color: #4b5563;
+  box-shadow: 0 4px 12px rgba(76, 29, 149, 0.04);
+  transition: all 0.25s ease;
+}
+
+.dz-trainer-tab-btn:hover {
+  border-color: #c4b5fd;
+  color: #7c3aed;
+  background-color: #f5f3ff;
+}
+
+.dz-trainer-tab-btn.dz-trainer-tab-active {
+  background: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
+  color: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
+}
+
+.dz-tab-avatar-mini {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #e9d5ff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  flex-shrink: 0;
+}
+
+.dz-tab-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Full Screen Edge-to-Edge Stage (Spans 100% of viewport width) */
+.dz-trainer-fullscreen-stage {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #faf5ff 0%, #ffffff 45%, #faf5ff 100%);
+  overflow: hidden;
+  padding: 48px 0 64px;
+  border-top: 1px solid #ede9fe;
+  border-bottom: 1px solid #ede9fe;
+}
+
+.dz-trainer-stage-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.dz-trainer-glow-orb-left {
+  position: absolute;
+  top: 15%;
+  left: -8%;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+  filter: blur(48px);
+}
+
+.dz-trainer-glow-orb-right {
+  position: absolute;
+  bottom: 10%;
+  right: -8%;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192, 38, 211, 0.1) 0%, transparent 70%);
+  filter: blur(48px);
+}
+
+.dz-trainer-stage-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3.5vw, 48px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   LEFT SIDE: 3D Trainer Image & Identity Block Directly Below
+   ========================================================================== */
+.dz-trainer-left-col {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 24px;
-  background: #ffffff;
-  border: 1px solid #ede9fe;
-  border-radius: 20px;
-  padding: 24px 20px;
-  box-shadow: 0 8px 24px rgba(76, 29, 149, 0.05);
-}
-
-.dz-trainer-photo-wrap {
-  position: relative;
-  width: 220px;
-  height: 220px;
-  max-width: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.15);
-  background-color: #f3e8ff;
-  flex-shrink: 0;
-}
-
-.dz-trainer-photo {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
-.dz-trainer-info {
+.dz-trainer-3d-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  min-height: 380px;
+}
+
+.dz-trainer-pedestal-glow {
+  position: absolute;
+  bottom: -4px;
+  width: 90%;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(147, 51, 234, 0.28) 0%, transparent 70%);
+  filter: blur(16px);
+  z-index: 0;
+}
+
+.dz-trainer-pedestal-disc {
+  position: absolute;
+  bottom: 12px;
+  width: 78%;
+  height: 38px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(124, 58, 237, 0.35) 0%, rgba(192, 38, 211, 0.15) 55%, transparent 75%);
+  filter: blur(6px);
+  z-index: 1;
+}
+
+.dz-trainer-3d-image {
+  position: relative;
+  z-index: 2;
+  width: auto;
+  max-width: 100%;
+  height: clamp(340px, 34vw, 500px);
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 24px 32px rgba(76, 29, 149, 0.24));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.dz-trainer-3d-image:hover {
+  transform: scale(1.02) translateY(-4px);
+}
+
+.dz-trainer-float-badge {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #ddd6fe;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.18);
+  font-size: 13px;
+  font-weight: 800;
+  color: #6d28d9;
+}
+
+.dz-float-star {
+  color: #f59e0b;
+  font-size: 15px;
+}
+
+/* Trainer Name & Role Directly Below 3D Image */
+.dz-trainer-identity-block {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.dz-trainer-name-title {
+  font-size: clamp(24px, 2.8vw, 32px);
+  font-weight: 850;
+  color: #111827;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.dz-trainer-role-sub {
+  font-size: 16px;
+  font-weight: 700;
+  color: #7c3aed;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.dz-trainer-verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  background-color: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 750;
+  color: #4c1d95;
+  margin-top: 4px;
+}
+
+.dz-verified-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #7c3aed;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+/* ==========================================================================
+   RIGHT SIDE: Stats, Bio, What They Teach & LinkedIn
+   ========================================================================== */
+.dz-trainer-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+/* 1. Kitne Saal Se Padhate Hain - Metric Cards */
+.dz-trainer-stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.dz-stat-metric-card {
+  background: #ffffff;
+  border: 1.5px solid #ede9fe;
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 14px rgba(76, 29, 149, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dz-stat-metric-card:hover {
+  transform: translateY(-2px);
+  border-color: #c4b5fd;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.1);
+}
+
+.dz-stat-icon-wrap {
+  font-size: 24px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.dz-stat-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dz-stat-number {
+  font-size: 17px;
+  font-weight: 850;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.dz-stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  line-height: 1.3;
+}
+
+/* 2. Trainer Bio Box */
+.dz-trainer-bio-box {
+  background: #ffffff;
+  border: 1.5px solid #ede9fe;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 4px 16px rgba(76, 29, 149, 0.03);
+}
+
+.dz-bio-heading {
+  font-size: 15px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.dz-trainer-bio-text {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* 3. Kya Padhate Hain - What They Teach Block */
+.dz-teaches-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.dz-teaches-heading-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dz-teaches-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #faf5ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 750;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dz-teaches-main-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+.dz-teaches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 10px;
   width: 100%;
 }
 
-.dz-trainer-name {
-  font-size: 24px;
-  font-weight: 800;
-  color: #111827;
-  line-height: 1.25;
+.dz-teach-item-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1.5px solid #e9d5ff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.04);
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.dz-trainer-desig {
-  font-size: 15px;
-  font-weight: 650;
-  color: #7c3aed;
-  line-height: 1.4;
+.dz-teach-item-card:hover {
+  border-color: #7c3aed;
+  transform: translateY(-2px);
 }
 
-.dz-exp-badge {
+.dz-teach-check-bullet {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  background-color: #faf5ff;
-  border: 1px solid #ede9fe;
-  border-radius: 9999px;
-  font-size: 13px;
-  font-weight: 750;
-  color: #4c1d95;
-  line-height: 1.4;
-}
-
-.dz-trainer-bio {
-  font-size: 16px;
-  color: #4b5563;
-  line-height: 1.6;
-  max-width: 650px;
-  margin-top: 4px;
-}
-
-.dz-teaches-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-  width: 100%;
-}
-
-.dz-teaches-label {
-  font-size: 13px;
-  font-weight: 750;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.dz-teaches-chips {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
-}
-
-.dz-teaches-chip {
-  display: inline-block;
-  padding: 5px 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   background-color: #f5f3ff;
-  border: 1px solid #ddd6fe;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 650;
   color: #7c3aed;
-  line-height: 1.4;
+  font-weight: 900;
+  font-size: 11px;
+  border: 1px solid #ddd6fe;
+  flex-shrink: 0;
 }
 
-.dz-linkedin-link {
-  min-width: 44px;
-  min-height: 44px;
+.dz-teach-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* 4. LinkedIn Profile & Mentorship Guarantee */
+.dz-trainer-connect-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border: 1.5px solid #ddd6fe;
+  border-radius: 18px;
+  padding: 18px 22px;
+  margin-top: 6px;
+}
+
+.dz-trainer-linkedin-btn {
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 10px;
-  background-color: #0077b5;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  background: #0077b5;
   color: #ffffff;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 750;
   text-decoration: none;
-  margin-top: 8px;
-  transition: opacity 0.2s ease;
-  line-height: 1.4;
+  box-shadow: 0 6px 18px rgba(0, 119, 181, 0.28);
+  transition: all 0.25s ease;
 }
 
-.dz-linkedin-link:hover {
-  opacity: 0.9;
+.dz-trainer-linkedin-btn:hover {
+  background: #006097;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 119, 181, 0.38);
+}
+
+.dz-external-arrow {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.dz-mentorship-promise {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #5b21b6;
+}
+
+.dz-promise-icon {
+  font-size: 18px;
+  line-height: 1;
 }
 
 /* ==========================================================================
@@ -1495,30 +1835,15 @@
     min-height: 580px;
   }
 
-  /* Trainer 2-Column Desktop */
-  .dz-trainer-card {
-    flex-direction: row;
+  /* Trainer Fullscreen Stage Desktop */
+  .dz-trainer-stage-inner {
+    grid-template-columns: minmax(360px, 460px) 1fr;
+    gap: clamp(36px, 5vw, 64px);
     align-items: center;
-    text-align: left;
-    padding: 36px 32px;
-    gap: 40px;
   }
 
-  .dz-trainer-photo-wrap {
-    width: 260px;
-    height: 260px;
-  }
-
-  .dz-trainer-info {
-    align-items: flex-start;
-  }
-
-  .dz-teaches-wrapper {
-    align-items: flex-start;
-  }
-
-  .dz-teaches-chips {
-    justify-content: flex-start;
+  .dz-trainer-stats-row {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   /* Tools 6-Column Desktop */

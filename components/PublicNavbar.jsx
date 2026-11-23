@@ -22,8 +22,30 @@ const courseGroups = [
     ],
   },
   {
-    title: "Cyber Security",
-    description: "Learn to protect systems, networks and data.",
+    title: "Data Analytics",
+    description: "Explore business intelligence, SQL, Power BI and data pipelines.",
+    icon: "analytics",
+    courses: [
+      { title: "Diploma in Data Analytics & AI", href: "/courses/diploma-in-data-analytics-and-ai", terms: ["long"] },
+      { title: "Advanced Data Analytics & AI", href: "/courses/advanced-certification-in-data-analytics-and-ai", terms: ["short"] },
+      { title: "Certification in Data Analytics & AI", href: "/courses/certification-in-data-analytics-and-ai", terms: ["short"] },
+      { title: "Data Science & Analytics", href: "/courses/data-science-analytics", terms: ["short"] },
+    ],
+  },
+  {
+    title: "Data Science",
+    description: "Master Python, predictive modeling, machine learning and big data.",
+    icon: "science",
+    courses: [
+      { title: "Diploma in Data Science & AI", href: "/courses/diploma-in-data-science-and-ai", terms: ["long"] },
+      { title: "Advanced Data Science & AI", href: "/courses/advanced-certification-in-data-science-and-ai", terms: ["short"] },
+      { title: "Data Science & Analytics", href: "/courses/data-science-analytics", terms: ["short"] },
+      { title: "Diploma in Machine Learning & AI", href: "/courses/diploma-in-machine-learning-and-ai", terms: ["long"] },
+    ],
+  },
+  {
+    title: "Cyber Security & Ethical Hacking",
+    description: "Learn to protect systems, networks, investigate breaches and forensic defense.",
     icon: "security",
     courses: [
       { title: "Foundation in Cyber Security & Ethical Hacking", href: "/courses/foundation-in-cyber-security-and-ethical-hacking", terms: ["short"] },
@@ -31,32 +53,18 @@ const courseGroups = [
       { title: "Expert Cyber Security & Ethical Hacking", href: "/courses/expert-training-in-cyber-security-and-ethical-hacking", terms: ["long"] },
       { title: "Digital Forensics & Cyber Investigation", href: "/courses/certification-in-digital-forensic-and-cyber-investigation", terms: ["short"] },
       { title: "Bug Bounty", href: "/courses/expert-training-in-bug-bounty", terms: ["short"] },
+      { title: "Ethical Hacking & Digital Forensics", href: "/courses/ethical-hacking-and-digital-forensics-course", terms: ["long"] },
     ],
   },
   {
-    title: "Data Analytics",
-    description: "Explore data and analytics skills.",
-    icon: "analytics",
-    courses: [
-      { title: "Diploma in Data Analytics & AI", href: "/courses/diploma-in-data-analytics-and-ai", terms: ["long"] },
-      { title: "Advanced Data Analytics & AI", href: "/courses/advanced-certification-in-data-analytics-and-ai", terms: ["short"] },
-      { title: "Certification in Data Analytics & AI", href: "/courses/certification-in-data-analytics-and-ai", terms: ["short"] },
-    ],
-  },
-  {
-    title: "Artificial Intelligence & Data",
-    description: "Turn data and AI tools into practical skills.",
+    title: "Artificial Intelligence & ML",
+    description: "Turn deep learning, LLMs and GenAI tools into practical skills.",
     icon: "data",
     courses: [
       { title: "Advanced Gen AI & Prompt Engineering", href: "/courses/advanced-certification-in-genai-and-prompt-engineering", terms: ["short"] },
       { title: "Diploma in Gen AI & Prompt Engineering", href: "/courses/diploma-in-genai-and-prompt-engineering", terms: ["long"] },
       { title: "Diploma in Machine Learning & AI", href: "/courses/diploma-in-machine-learning-and-ai", terms: ["long"] },
       { title: "Advanced Machine Learning & AI", href: "/courses/advanced-certification-in-machine-learning-and-ai", terms: ["short"] },
-      { title: "Diploma in Data Science & AI", href: "/courses/diploma-in-data-science-and-ai", terms: ["long"] },
-      { title: "Advanced Data Science & AI", href: "/courses/advanced-certification-in-data-science-and-ai", terms: ["short"] },
-      { title: "Diploma in Data Analytics & AI", href: "/courses/diploma-in-data-analytics-and-ai", terms: ["long"] },
-      { title: "Advanced Data Analytics & AI", href: "/courses/advanced-certification-in-data-analytics-and-ai", terms: ["short"] },
-      { title: "Certification in Data Analytics & AI", href: "/courses/certification-in-data-analytics-and-ai", terms: ["short"] },
     ],
   },
 ];
@@ -199,7 +207,8 @@ export default function PublicNavbar() {
                           {group.icon === "marketing" && <><path d="M4 14.5 19 5l-5.5 15-2.3-6.2L4 14.5Z" /><path d="m11.2 13.8 4.3-4.3" /></>}
                           {group.icon === "security" && <><path d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z" /><path d="m9 12 2 2 4-4" /></>}
                           {group.icon === "analytics" && <><path d="M4 19V5M4 19h16" /><path d="m7 15 3-3 3 2 5-7" /><circle cx="7" cy="15" r="1" /><circle cx="10" cy="12" r="1" /><circle cx="13" cy="14" r="1" /><circle cx="18" cy="7" r="1" /></>}
-                          {group.icon === "data" && <><path d="M4 19V5M4 19h16" /><path d="m7 15 4-4 3 2 5-6" /><circle cx="7" cy="15" r="1" /><circle cx="11" cy="11" r="1" /><circle cx="14" cy="13" r="1" /><circle cx="19" cy="7" r="1" /></>}
+                          {group.icon === "science" && <><path d="M9 3v5l-4.5 9A2 2 0 0 0 6.3 20h11.4a2 2 0 0 0 1.8-3L15 8V3H9Z" /><path d="M8 14h8" /></>}
+                          {group.icon === "data" && <><path d="M5 4h14v16H5z" /><path d="M8 8h8M8 12h3M14 12h2M8 16h8" /><circle cx="12" cy="12" r="4" /></>}
                         </svg>
                       </span>
                       <span className="site-domain-copy"><strong>{group.title}</strong><small>{group.description}</small></span>
@@ -272,22 +281,23 @@ export default function PublicNavbar() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 14.5 19 5l-5.5 15-2.3-6.2L4 14.5Z" /><path d="m11.2 13.8 4.3-4.3" /></svg>
             <span>Marketing</span>
           </button>
-          <button type="button" onClick={() => { setSelectedDomain(2); setOpenMenu("courses"); }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16" /><path d="m7 15 3-3 3 2 5-7" /><circle cx="7" cy="15" r="1" /><circle cx="10" cy="12" r="1" /><circle cx="13" cy="14" r="1" /><circle cx="18" cy="7" r="1" /></svg>
-            <span>Analytics</span>
-          </button>
           <button type="button" onClick={() => { setSelectedDomain(1); setOpenMenu("courses"); }}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16" /><path d="m7 15 3-3 3 2 5-7" /><circle cx="7" cy="15" r="1" /><circle cx="10" cy="12" r="1" /><circle cx="13" cy="14" r="1" /><circle cx="18" cy="7" r="1" /></svg>
+            <span>Data Analytics</span>
+          </button>
+          <button type="button" onClick={() => { setSelectedDomain(2); setOpenMenu("courses"); }}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 3v5l-4.5 9A2 2 0 0 0 6.3 20h11.4a2 2 0 0 0 1.8-3L15 8V3H9Z" /><path d="M8 14h8" /></svg>
+            <span>Data Science</span>
+          </button>
+          <button type="button" onClick={() => { setSelectedDomain(3); setOpenMenu("courses"); }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z" /><path d="m9 12 2 2 4-4" /></svg>
             <span>CS &amp; EH</span>
           </button>
-          <button type="button" onClick={() => { setSelectedDomain(3); setOpenMenu("courses"); }}>
+          <button type="button" onClick={() => { setSelectedDomain(4); setOpenMenu("courses"); }}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 4h14v16H5z" /><path d="M8 8h8M8 12h3M14 12h2M8 16h8" /><circle cx="12" cy="12" r="4" /></svg>
             <span>AI ML</span>
           </button>
           <a href="/success-stories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z" /><path d="M7 6H4v1a4 4 0 0 0 4 4M17 6h3v1a4 4 0 0 1-4 4" /></svg><span>Success</span></a>
-          <a href="/about-us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 11v6M12 7.5h.01" /></svg><span>About Us</span></a>
-          <a href="/gallery"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 5h16v14H4zM8 3v4M16 3v4M4 10h16" /><path d="M8 14h3M14 14h2M8 17h8" /></svg><span>Others</span></a>
-          <a href="/contact-us"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg><span>Contact Us</span></a>
           <a href="/blogs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5" /></svg><span>Blogs</span></a>
         </div>
       </div>
