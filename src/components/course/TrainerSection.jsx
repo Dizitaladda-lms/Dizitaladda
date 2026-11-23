@@ -36,23 +36,20 @@ export default function TrainerSection({ trainers }) {
 
   // Helper to ensure every trainer has their transparent 3D cutout image
   const getTrainer3DImage = (t) => {
-    if (
-      t.photo &&
-      t.photo.includes("/courses/images/trainer/") &&
-      (t.photo.endsWith(".png") || t.photo.endsWith(".webp") || t.photo.endsWith(".jpg") || t.photo.endsWith(".jpeg"))
-    ) {
+    if (!t) return "/courses/images/trainer/cutouts/gulshan.png";
+    if (t.photo && t.photo.includes("/courses/images/trainer/cutouts/")) {
       return t.photo;
     }
     const name = (t.name || "").toLowerCase();
-    if (name.includes("gulshan") || name.includes("gaurav")) return "/courses/images/trainer/Gulshan.png";
-    if (name.includes("saurabh") || name.includes("rohit")) return "/courses/images/trainer/saurabh2.png";
-    if (name.includes("ram")) return "/courses/images/trainer/ram3.png";
-    if (name.includes("shagun") || name.includes("pooja")) return "/courses/images/trainer/shagun2.png";
-    if (name.includes("deepanshu") || name.includes("vikramaditya")) return "/courses/images/trainer/deepanshu3.png";
-    if (name.includes("govind") || name.includes("rishi")) return "/courses/images/trainer/Govind.png";
-    if (name.includes("kaushal") || name.includes("sameer")) return "/courses/images/trainer/Kaushal.png";
-    if (name.includes("ravi")) return "/courses/images/trainer/Ravi.png";
-    return "/courses/images/trainer/Gulshan.png";
+    if (name.includes("gulshan") || name.includes("gaurav")) return "/courses/images/trainer/cutouts/gulshan.png";
+    if (name.includes("saurabh") || name.includes("rohit")) return "/courses/images/trainer/cutouts/saurabh.png";
+    if (name.includes("ram")) return "/courses/images/trainer/cutouts/ram.png";
+    if (name.includes("shagun") || name.includes("pooja")) return "/courses/images/trainer/cutouts/shagun.png";
+    if (name.includes("deepanshu") || name.includes("vikramaditya")) return "/courses/images/trainer/cutouts/deepanshu.png";
+    if (name.includes("govind") || name.includes("rishi")) return "/courses/images/trainer/cutouts/govind.png";
+    if (name.includes("kaushal") || name.includes("sameer")) return "/courses/images/trainer/cutouts/govind.png";
+    if (name.includes("ravi")) return "/courses/images/trainer/cutouts/govind.png";
+    return "/courses/images/trainer/cutouts/gulshan.png";
   };
 
   const trainerPhoto = getTrainer3DImage(currentTrainer);

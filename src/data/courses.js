@@ -81,7 +81,7 @@ export const courses = [
           {
                 "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/courses/images/trainer/Gulshan.png",
+                "photo": "/courses/images/trainer/cutouts/gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -95,7 +95,7 @@ export const courses = [
           {
                 "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/courses/images/trainer/saurabh2.png",
+                "photo": "/courses/images/trainer/cutouts/saurabh.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -336,7 +336,7 @@ export const courses = [
           {
                 "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/courses/images/trainer/Gulshan.png",
+                "photo": "/courses/images/trainer/cutouts/gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -350,7 +350,7 @@ export const courses = [
           {
                 "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/courses/images/trainer/saurabh2.png",
+                "photo": "/courses/images/trainer/cutouts/saurabh.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -555,7 +555,7 @@ export const courses = [
           {
                 "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/courses/images/trainer/Gulshan.png",
+                "photo": "/courses/images/trainer/cutouts/gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -569,7 +569,7 @@ export const courses = [
           {
                 "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/courses/images/trainer/saurabh2.png",
+                "photo": "/courses/images/trainer/cutouts/saurabh.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -756,7 +756,7 @@ export const courses = [
           {
                 "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/courses/images/trainer/Gulshan.png",
+                "photo": "/courses/images/trainer/cutouts/gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -770,7 +770,7 @@ export const courses = [
           {
                 "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/courses/images/trainer/saurabh2.png",
+                "photo": "/courses/images/trainer/cutouts/saurabh.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -983,7 +983,7 @@ export const courses = [
           {
                 "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/courses/images/trainer/Gulshan.png",
+                "photo": "/courses/images/trainer/cutouts/gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -997,7 +997,7 @@ export const courses = [
           {
                 "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/courses/images/trainer/saurabh2.png",
+                "photo": "/courses/images/trainer/cutouts/saurabh.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -1214,7 +1214,7 @@ export const courses = [
           {
                 "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/courses/images/trainer/Gulshan.png",
+                "photo": "/courses/images/trainer/cutouts/gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -1228,7 +1228,7 @@ export const courses = [
           {
                 "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/courses/images/trainer/saurabh2.png",
+                "photo": "/courses/images/trainer/cutouts/saurabh.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -1441,7 +1441,7 @@ export const courses = [
           {
                 "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/courses/images/trainer/Gulshan.png",
+                "photo": "/courses/images/trainer/cutouts/gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -1455,7 +1455,7 @@ export const courses = [
           {
                 "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/courses/images/trainer/saurabh2.png",
+                "photo": "/courses/images/trainer/cutouts/saurabh.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -1668,7 +1668,7 @@ export const courses = [
           {
                 "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/courses/images/trainer/Gulshan.png",
+                "photo": "/courses/images/trainer/cutouts/gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -1682,7 +1682,7 @@ export const courses = [
           {
                 "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/courses/images/trainer/saurabh2.png",
+                "photo": "/courses/images/trainer/cutouts/saurabh.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -1967,7 +1967,7 @@ export const courses = [
           {
                 "name": "Dr. Gulshan Kumar",
                 "designation": "Founder & Chief Marketing Strategist",
-                "photo": "/courses/images/trainer/Gulshan.png",
+                "photo": "/courses/images/trainer/cutouts/gulshan.png",
                 "experienceYears": 10,
                 "teaches": [
                       "Performance Marketing",
@@ -1981,7 +1981,7 @@ export const courses = [
           {
                 "name": "Mr. Saurabh Kumar",
                 "designation": "Senior SEO & Web Analytics Specialist",
-                "photo": "/courses/images/trainer/saurabh2.png",
+                "photo": "/courses/images/trainer/cutouts/saurabh.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Technical SEO",
@@ -2198,7 +2198,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -2212,7 +2212,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -2501,7 +2501,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -2515,7 +2515,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -2740,7 +2740,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -2754,7 +2754,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3031,7 +3031,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3045,7 +3045,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3266,7 +3266,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3280,7 +3280,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3463,7 +3463,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3477,7 +3477,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3742,7 +3742,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3756,7 +3756,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -3977,7 +3977,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -3991,7 +3991,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -4264,7 +4264,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -4278,7 +4278,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -4495,7 +4495,7 @@ export const courses = [
           {
                 "name": "Miss Shagun Srivastava",
                 "designation": "Lead AI & Data Science Architect (Ex-Amazon)",
-                "photo": "/courses/images/trainer/shagun2.png",
+                "photo": "/courses/images/trainer/cutouts/shagun.png",
                 "experienceYears": 12,
                 "teaches": [
                       "Python",
@@ -4509,7 +4509,7 @@ export const courses = [
           {
                 "name": "Mr. Deepanshu Soni",
                 "designation": "Principal BI & Analytics Consultant",
-                "photo": "/courses/images/trainer/deepanshu3.png",
+                "photo": "/courses/images/trainer/cutouts/deepanshu.png",
                 "experienceYears": 8,
                 "teaches": [
                       "Power BI",
@@ -4782,7 +4782,7 @@ export const courses = [
           {
                 "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/courses/images/trainer/Govind.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -4796,7 +4796,7 @@ export const courses = [
           {
                 "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/courses/images/trainer/Kaushal.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5021,7 +5021,7 @@ export const courses = [
           {
                 "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/courses/images/trainer/Govind.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5035,7 +5035,7 @@ export const courses = [
           {
                 "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/courses/images/trainer/Kaushal.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5222,7 +5222,7 @@ export const courses = [
           {
                 "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/courses/images/trainer/Govind.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5236,7 +5236,7 @@ export const courses = [
           {
                 "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/courses/images/trainer/Kaushal.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5421,7 +5421,7 @@ export const courses = [
           {
                 "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/courses/images/trainer/Govind.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5435,7 +5435,7 @@ export const courses = [
           {
                 "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/courses/images/trainer/Kaushal.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5628,7 +5628,7 @@ export const courses = [
           {
                 "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/courses/images/trainer/Govind.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5642,7 +5642,7 @@ export const courses = [
           {
                 "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/courses/images/trainer/Kaushal.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
@@ -5859,7 +5859,7 @@ export const courses = [
           {
                 "name": "Mr. Govind Bisht",
                 "designation": "Chief Information Security Consultant (CEH, OSCP)",
-                "photo": "/courses/images/trainer/Govind.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 11,
                 "teaches": [
                       "Ethical Hacking",
@@ -5873,7 +5873,7 @@ export const courses = [
           {
                 "name": "Mr. Kaushal",
                 "designation": "Digital Forensics & Incident Response Lead",
-                "photo": "/courses/images/trainer/Kaushal.png",
+                "photo": "/courses/images/trainer/cutouts/govind.png",
                 "experienceYears": 7,
                 "teaches": [
                       "Digital Forensics",
