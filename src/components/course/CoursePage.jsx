@@ -50,23 +50,25 @@ export default function CoursePage({ slug: propSlug, params: propParams }) {
   // 404 Not Found State
   if (!course) {
     return (
-      <div className="dz-course-page">
+      <>
         <PublicNavbar />
-        <main className="dz-404-wrap" role="main">
-          <div className="dz-section-header dz-center">
-            <h1 className="dz-404-title">Course Not Found</h1>
-            <div className="dz-title-bar" aria-hidden="true" />
-            <p className="dz-404-text">
-              We couldn&apos;t find a course matching &ldquo;{resolvedSlug}&rdquo;. Please check the URL or
-              explore our complete course catalog below.
-            </p>
-            <a href="/#courses" className="dz-404-btn">
-              Explore All Courses
-            </a>
-          </div>
-        </main>
+        <div className="dz-course-page">
+          <main className="dz-404-wrap" role="main">
+            <div className="dz-section-header dz-center">
+              <h1 className="dz-404-title">Course Not Found</h1>
+              <div className="dz-title-bar" aria-hidden="true" />
+              <p className="dz-404-text">
+                We couldn&apos;t find a course matching &ldquo;{resolvedSlug}&rdquo;. Please check the URL or
+                explore our complete course catalog below.
+              </p>
+              <a href="/#courses" className="dz-404-btn">
+                Explore All Courses
+              </a>
+            </div>
+          </main>
+        </div>
         <Footer />
-      </div>
+      </>
     );
   }
 
@@ -91,7 +93,7 @@ export default function CoursePage({ slug: propSlug, params: propParams }) {
   };
 
   return (
-    <div className="dz-course-page">
+    <>
       {/* 1. Page Meta & Schema.org JSON-LD */}
       <title>{`${course.name} Course Training & Certification | DizitalAdda`}</title>
       <meta name="description" content={course.tagline} />
@@ -104,34 +106,36 @@ export default function CoursePage({ slug: propSlug, params: propParams }) {
       {/* 2. Site Header */}
       <PublicNavbar />
 
-      <main role="main">
-        {/* 1) HERO SECTION */}
-        <CourseHero course={course} />
+      <div className="dz-course-page">
+        <main role="main">
+          {/* 1) HERO SECTION */}
+          <CourseHero course={course} />
 
-        {/* 2) MODULES & ROADMAP (Signature Section) */}
-        <RoadmapSection modules={course.modules} />
+          {/* 2) MODULES & ROADMAP (Signature Section) */}
+          <RoadmapSection modules={course.modules} />
 
-        {/* 3) TRAINER SECTION */}
-        <TrainerSection trainers={course.trainers} />
+          {/* 3) TRAINER SECTION */}
+          <TrainerSection trainers={course.trainers} />
 
-        {/* 4) TOOLS YOU WILL MASTER */}
-        <ToolsSection tools={course.tools} />
+          {/* 4) TOOLS YOU WILL MASTER */}
+          <ToolsSection tools={course.tools} />
 
-        {/* 5) STUDENT VIDEO REVIEWS */}
-        <VideoReviews reviews={course.reviews} />
+          {/* 5) STUDENT VIDEO REVIEWS */}
+          <VideoReviews reviews={course.reviews} />
 
-        {/* 6) PLACED STUDENTS (Photos Only) */}
-        <PlacedStudents placed={course.placed} />
+          {/* 6) PLACED STUDENTS (Photos Only) */}
+          <PlacedStudents placed={course.placed} />
 
-        {/* 7) FAQ ACCORDION */}
-        <CourseFaq faqs={course.faqs} />
-      </main>
+          {/* 7) FAQ ACCORDION */}
+          <CourseFaq faqs={course.faqs} />
+        </main>
 
-      {/* Mobile Sticky CTA Bar */}
-      <StickyCtaBar />
+        {/* Mobile Sticky CTA Bar */}
+        <StickyCtaBar />
+      </div>
 
       {/* 8) Site Footer */}
       <Footer />
-    </div>
+    </>
   );
 }

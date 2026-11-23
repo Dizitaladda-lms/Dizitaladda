@@ -215,6 +215,101 @@ export default function CourseHero({ course }) {
                 </div>
               )}
             </div>
+
+            {/* Program Value Highlights (Option 1 Mix: 4 Key Value Cards) */}
+            <div className="dz-hero-features-grid">
+              <div className="dz-hero-feature-card">
+                <div className="dz-feature-icon-bubble">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="6" />
+                    <circle cx="12" cy="12" r="2" />
+                  </svg>
+                </div>
+                <div className="dz-feature-text">
+                  <h4 className="dz-feature-title">100% Placement Support</h4>
+                  <p className="dz-feature-desc">Dedicated recruitment drives, mock interviews &amp; resume building</p>
+                </div>
+              </div>
+
+              <div className="dz-hero-feature-card">
+                <div className="dz-feature-icon-bubble">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  </svg>
+                </div>
+                <div className="dz-feature-text">
+                  <h4 className="dz-feature-title">Live Client Projects</h4>
+                  <p className="dz-feature-desc">Hands-on agency budget execution on live campaigns &amp; capstone</p>
+                </div>
+              </div>
+
+              <div className="dz-hero-feature-card">
+                <div className="dz-feature-icon-bubble">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="8" r="7" />
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                  </svg>
+                </div>
+                <div className="dz-feature-text">
+                  <h4 className="dz-feature-title">Dual Certification</h4>
+                  <p className="dz-feature-desc">Skill India (Govt. of India) + DizitalAdda Global Master Certificate</p>
+                </div>
+              </div>
+
+              <div className="dz-hero-feature-card">
+                <div className="dz-feature-icon-bubble">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <div className="dz-feature-text">
+                  <h4 className="dz-feature-title">1-on-1 Mentorship</h4>
+                  <p className="dz-feature-desc">Daily live doubts &amp; career guidance with senior industry leads</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Career Metrics & Hiring Partners (Option 3 Mix: Stats & Partner Badges) */}
+            <div className="dz-hero-trust-box">
+              <div className="dz-hero-stats-bar">
+                <div className="dz-hero-stat-item">
+                  <span className="dz-stat-val">65%</span>
+                  <span className="dz-stat-lbl">Avg Salary Hike</span>
+                </div>
+                <div className="dz-hero-stat-sep" aria-hidden="true" />
+                <div className="dz-hero-stat-item">
+                  <span className="dz-stat-val">₹12 LPA</span>
+                  <span className="dz-stat-lbl">Highest Package</span>
+                </div>
+                <div className="dz-hero-stat-sep" aria-hidden="true" />
+                <div className="dz-hero-stat-item">
+                  <span className="dz-stat-val">350+</span>
+                  <span className="dz-stat-lbl">Hiring Partners</span>
+                </div>
+                <div className="dz-hero-stat-sep" aria-hidden="true" />
+                <div className="dz-hero-stat-item">
+                  <span className="dz-stat-val dz-rating-val">⭐ 4.9/5</span>
+                  <span className="dz-stat-lbl">2,500+ Reviews</span>
+                </div>
+              </div>
+
+              <div className="dz-hero-companies-strip">
+                <span className="dz-companies-label">Top Hiring Partners:</span>
+                <div className="dz-companies-pills">
+                  <span className="dz-company-badge">Google</span>
+                  <span className="dz-company-badge">Amazon</span>
+                  <span className="dz-company-badge">Flipkart</span>
+                  <span className="dz-company-badge">Zomato</span>
+                  <span className="dz-company-badge">Accenture</span>
+                  <span className="dz-company-badge">Swiggy</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right Column: Course Image & Lead Form Card */}

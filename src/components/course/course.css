@@ -10,10 +10,27 @@
 
 /* Universal box-sizing reset for dz- classes */
 [class^="dz-"],
-[class*=" dz-"],
-[class^="dz-"] *,
-[class*=" dz-"] * {
+[class*=" dz-"] {
   box-sizing: border-box;
+}
+
+.dz-course-page,
+.dz-course-page *,
+.dz-course-page *::before,
+.dz-course-page *::after {
+  box-sizing: border-box;
+}
+
+.dz-course-page h1,
+.dz-course-page h2,
+.dz-course-page h3,
+.dz-course-page h4,
+.dz-course-page h5,
+.dz-course-page h6,
+.dz-course-page p,
+.dz-course-page ul,
+.dz-course-page ol,
+.dz-course-page figure {
   margin: 0;
   padding: 0;
 }
@@ -194,6 +211,170 @@
   stroke: #7c3aed;
   stroke-width: 2.2;
   flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Hero Features Grid & Career Trust Box (Option 1 & 3 Mix)
+   ========================================================================== */
+.dz-hero-features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+@media (min-width: 540px) {
+  .dz-hero-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.dz-hero-feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ffffff;
+  border: 1.5px solid #ede9fe;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 12px rgba(76, 29, 149, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dz-hero-feature-card:hover {
+  transform: translateY(-2px);
+  border-color: #c4b5fd;
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.1);
+}
+
+.dz-feature-icon-bubble {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  color: #7c3aed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #ddd6fe;
+}
+
+.dz-feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+
+.dz-feature-title {
+  font-size: 14px;
+  font-weight: 750;
+  color: #111827;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.dz-feature-desc {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Career Trust Box */
+.dz-hero-trust-box {
+  width: 100%;
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border: 1.5px solid #ddd6fe;
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.dz-hero-stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dz-hero-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.dz-stat-val {
+  font-size: 17px;
+  font-weight: 850;
+  color: #4c1d95;
+  line-height: 1.2;
+}
+
+.dz-rating-val {
+  color: #c026d3;
+}
+
+.dz-stat-lbl {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #6b7280;
+  line-height: 1.3;
+}
+
+.dz-hero-stat-sep {
+  width: 1px;
+  height: 28px;
+  background-color: #ddd6fe;
+}
+
+@media (max-width: 480px) {
+  .dz-hero-stat-sep {
+    display: none;
+  }
+}
+
+.dz-hero-companies-strip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-top: 1px dashed #d8b4fe;
+  padding-top: 10px;
+}
+
+.dz-companies-label {
+  font-size: 12px;
+  font-weight: 750;
+  color: #5b21b6;
+  white-space: nowrap;
+}
+
+.dz-companies-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.dz-company-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #ffffff;
+  border: 1px solid #e9d5ff;
+  border-radius: 9999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #374151;
+  box-shadow: 0 1px 4px rgba(76, 29, 149, 0.04);
 }
 
 .dz-hero-right {
@@ -1341,16 +1522,17 @@
 }
 
 .dz-review-card {
-  flex: 0 0 82%;
-  max-width: 82%;
+  flex: 0 0 72%;
+  max-width: 270px;
   scroll-snap-align: start;
   background-color: #ffffff;
   border: 1px solid #ede9fe;
-  border-radius: 18px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(76, 29, 149, 0.06);
+  box-shadow: 0 4px 16px rgba(76, 29, 149, 0.05);
   display: flex;
   flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .dz-review-thumb-wrap {
@@ -1378,8 +1560,8 @@
 }
 
 .dz-play-btn {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   min-width: 44px;
   min-height: 44px;
   border-radius: 50%;
@@ -1390,7 +1572,7 @@
   justify-content: center;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease;
 }
 
@@ -1399,39 +1581,44 @@
 }
 
 .dz-play-icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   fill: #ffffff;
   margin-left: 2px;
 }
 
 .dz-review-content {
-  padding: 16px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
 }
 
 .dz-review-name {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 800;
   color: #111827;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .dz-review-company {
   display: inline-block;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   color: #059669;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .dz-review-quote {
-  font-size: 14px;
+  font-size: 13px;
   font-style: italic;
   color: #4b5563;
-  line-height: 1.55;
+  line-height: 1.5;
+  margin-top: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Modal Popup for YouTube Iframe */
@@ -1739,8 +1926,8 @@
   }
 
   .dz-review-card {
-    flex: 0 0 48%;
-    max-width: 48%;
+    flex: 0 0 280px;
+    max-width: 280px;
   }
 
   .dz-placed-card {
@@ -1847,17 +2034,26 @@
     }
   }
 
-  /* Video Reviews Desktop Grid */
+  /* Video Reviews Desktop: Compact, Sleek, Centered Grid */
   .dz-reviews-slider {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
     overflow-x: visible;
   }
 
   .dz-review-card {
-    flex: unset;
-    max-width: unset;
+    flex: 0 0 290px;
+    max-width: 300px;
+    width: 290px;
+  }
+
+  .dz-review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(124, 58, 237, 0.12);
+    border-color: #c4b5fd;
   }
 
   /* Placed Students 2 Marquee Rows */
