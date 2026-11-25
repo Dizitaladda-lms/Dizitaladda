@@ -1,7 +1,11 @@
-/* Add the class prefix dz- to avoid clashes with the site-wide CSS reset. */
+/* ==========================================================================
+   DIZITALADDA HOME HERO - SEAMLESS DUAL-GRADIENT MELT REDESIGN
+   ========================================================================== */
+
 :root {
   --site-nav-h: 176px;
 }
+
 @media (max-width: 1023px) {
   :root {
     --site-nav-h: 70px;
@@ -11,416 +15,419 @@
 .dz-hero,
 .dz-hero * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
+/* 1. SECTION WRAPPER: Full width, solid white, overflow hidden, min-height ~680px */
 .dz-hero {
-  --dz-header-h: var(--site-nav-h, 176px);
   position: relative;
-  isolation: isolate;
   width: 100%;
-  height: calc(100vh - var(--dz-header-h));
-  height: calc(100dvh - var(--dz-header-h));
-  min-height: calc(100vh - var(--dz-header-h));
-  min-height: calc(100dvh - var(--dz-header-h));
+  min-height: 680px;
+  height: calc(100vh - var(--site-nav-h, 176px));
+  height: calc(100dvh - var(--site-nav-h, 176px));
+  background-color: #ffffff;
   overflow: hidden;
-  background: #ffffff;
-  color: #17131d;
-  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111827;
   line-height: 1.5;
 }
 
-.dz-panel-wrapper,
-.dz-panel {
+/* 2. LEFT COLUMN: Text content (~52% width, padding-left 72px, vertically centered) */
+/* text width: yahan badlo */
+.dz-hero-text-col {
   position: relative;
-  width: 100%;
+  z-index: 10; /* Text content gradient ke upar rahe aur clearly readable ho */
+  width: 52%;
+  min-width: 52%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.dz-panel-wrapper {
-  z-index: 10;
-}
-
-.dz-panel {
-  display: block;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(40px, 5vw, 72px);
+  padding-right: 24px;
 }
 
 .dz-hero-content {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
-  gap: 0;
-  padding: 48px 20px 88px;
-  margin: 0;
+  max-width: 640px;
 }
 
+/* Heading: "India's Best" & "Courses" in black, middle in purple gradient */
 .dz-title {
-  max-width: 680px;
-  margin: 0;
-  padding: 0;
-  color: #ffffff;
-  font-size: clamp(34px, 8vw, 48px);
+  color: #111827;
+  font-size: clamp(32px, 2.75vw, 46px);
   font-weight: 800;
-  line-height: 1.12;
-  letter-spacing: -0.035em;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0;
 }
 
 .dz-highlight {
-  color: transparent;
-  background: linear-gradient(90deg, #f0abfc 0%, #c4b5fd 100%);
+  background: linear-gradient(90deg, #7c3aed 0%, #9333ea 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #7c3aed;
 }
 
+/* Paragraph: Clean readable grey text */
 .dz-description {
-  max-width: 620px;
-  margin: 16px 0 0;
-  padding: 0;
-  color: #e5e5e5;
-  font-size: 16px;
+  color: #4b5563;
+  font-size: clamp(14px, 1.05vw, 16px);
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.65;
+  margin-top: 18px;
+  max-width: 580px;
 }
 
+/* Two Buttons: Demo (filled purple glow) + Brochure (white, purple border) */
 .dz-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin: 24px 0 0;
-  padding: 0;
-  line-height: 1.2;
+  margin-top: 26px;
+  align-items: center;
 }
 
 .dz-button {
   display: inline-flex;
-  min-height: 46px;
+  min-height: 48px;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 10px 22px;
-  border: 2px solid transparent;
-  border-radius: 10px;
+  padding: 12px clamp(20px, 1.8vw, 26px);
+  border-radius: 8px; /* rounded corners ~8px */
   font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
-  text-align: center;
   text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.dz-button:hover {
+  transform: translateY(-2px);
 }
 
 .dz-button-primary {
-  background: linear-gradient(90deg, #7c3aed 0%, #c026d3 100%);
-  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.28);
+  background: linear-gradient(90deg, #7c3aed 0%, #9333ea 100%);
   color: #ffffff;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35); /* soft purple glow shadow */
+}
+
+.dz-button-primary:hover {
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.45);
 }
 
 .dz-button-secondary {
-  border-color: #ffffff;
-  background: transparent;
-  color: #ffffff;
+  background: #ffffff;
+  color: #7c3aed;
+  border: 2px solid #7c3aed; /* purple border */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
+.dz-button-secondary:hover {
+  background: #faf5ff;
+}
+
+/* Stats Row: 3 columns, big bold number, small grey label */
 .dz-hero-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 28px 0 0;
-  padding: 0;
+  gap: clamp(16px, 2.5vw, 36px);
+  margin-top: 36px;
   border-top: 0;
-  line-height: 1.2;
 }
 
 .dz-stat {
   display: flex;
-  min-width: 0;
   flex-direction: column;
-  gap: 5px;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+  gap: 4px;
 }
 
 .dz-stat-number {
-  margin: 0;
-  padding: 0;
-  color: #ffffff;
-  font-size: 26px;
+  color: #111827;
+  font-size: clamp(24px, 2vw, 32px);
   font-weight: 800;
   line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .dz-stat-label {
-  margin: 0;
-  padding: 0;
-  color: #d1d1d1;
+  color: #6b7280;
   font-size: 13px;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
-.dz-hero-mobile-carousel,
-.dz-hero-mobile-image,
-.dz-hero-mobile-overlay {
+/* 3. RIGHT COLUMN: Image container (~62% width, right-aligned, full height) */
+/* image width: yahan badlo */
+.dz-hero-image-col {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 62%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dz-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+/* Base Image */
+.dz-hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.dz-hero-mobile-carousel {
-  z-index: 0;
-  background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
-  overflow: hidden;
-}
-
-.dz-hero-mobile-image {
-  display: block;
-  opacity: 0;
   object-fit: cover;
-  transition: opacity 0.7s ease;
+  object-position: 55% center;
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out;
+  z-index: 1;
 }
 
-.dz-hero-mobile-image.dz-active {
+.dz-hero-image.dz-active {
   opacity: 1;
 }
 
-.dz-hero-mobile-overlay {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+/* 4. GRADIENT BLEND (MAIN KAAM) */
+/* Horizontal gradient overlay: left side melts into solid white, right edge softly melts */
+/* fade length: yahan % badlo */
+.dz-image-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.95) 10%,
+    rgba(255, 255, 255, 0.75) 22%,
+    rgba(255, 255, 255, 0.40) 35%,
+    rgba(255, 255, 255, 0.00) 50%,
+    rgba(255, 255, 255, 0.00) 78%,
+    rgba(255, 255, 255, 0.40) 90%,
+    rgba(255, 255, 255, 0.85) 97%,
+    #ffffff 100%
+  );
 }
 
-.dz-media {
-  display: none;
+/* 5. Vertical fade: top 0% white -> 15% transparent, bottom 85% transparent -> 100% white */
+.dz-image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 15%,
+    rgba(255, 255, 255, 0) 85%,
+    #ffffff 100%
+  );
 }
 
+/* 6. Carousel Dots: 4 dots, 3rd active and white pill shape */
 .dz-carousel-dots {
   position: absolute;
-  z-index: 20;
+  bottom: 30px;
   left: 50%;
-  bottom: 28px;
+  transform: translateX(-50%);
+  z-index: 5;
   display: flex;
   gap: 8px;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
-  transform: translateX(-50%);
-  line-height: 1;
 }
 
 .dz-carousel-dot {
-  width: 10px;
-  height: 10px;
-  margin: 0;
-  padding: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
   border: 0;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: width 0.2s ease, background 0.2s ease;
+  transition: all 0.25s ease;
+  padding: 0;
 }
 
 .dz-carousel-dot.dz-active {
   width: 28px;
+  border-radius: 999px; /* lamba pill shape */
   background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
-
-.dz-hero-desktop-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  object-fit: cover;
-  object-position: 65% center;
-  transition: opacity 0.7s ease;
+/* 7. Floating Quick Contact Stack on Right Edge */
+.dz-floating-stack {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
 }
 
-.dz-hero-desktop-image.dz-active {
-  opacity: 1;
+.dz-floating-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.dz-hero-bottom-gradient {
-  position: absolute;
-  inset: auto 0 0;
-  height: 128px;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+.dz-floating-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 }
 
-@media (min-width: 1024px) {
-  .dz-hero {
-    --dz-header-h: var(--site-nav-h, 176px);
-    height: calc(100vh - var(--dz-header-h));
-    height: calc(100dvh - var(--dz-header-h));
-    min-height: calc(100vh - var(--dz-header-h));
-    min-height: calc(100dvh - var(--dz-header-h));
+.dz-floating-whatsapp {
+  background-color: #25D366; /* WhatsApp green circle */
+  color: #ffffff;
+}
+
+.dz-floating-call {
+  background-color: #16a34a; /* Call green circle */
+  color: #ffffff;
+}
+
+.dz-floating-form {
+  background-color: #ffffff; /* White circle, purple icon */
+  color: #7c3aed;
+  border: 2px solid #7c3aed;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLETS & MOBILE)
+   ========================================================================== */
+
+/* Laptops / Smaller Desktops */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .dz-hero-text-col {
+    width: 55%;
+    min-width: 55%;
+    padding-left: 36px;
+    padding-right: 16px;
   }
 
-  .dz-hero-mobile-carousel {
-    display: none;
-  }
-
-  .dz-media {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #7c3aed 0%, #c026d3 100%);
-  }
-
-  .dz-panel-wrapper {
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 62%;
-    height: 100%;
-    z-index: 10;
-    pointer-events: none;
-  }
-
-  .dz-panel {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    background: linear-gradient(
-      105deg,
-      #ffffff 0%,
-      #ffffff calc(100% - 220px),
-      rgba(255, 255, 255, 0.98) calc(100% - 170px),
-      rgba(250, 245, 255, 0.88) calc(100% - 120px),
-      rgba(243, 232, 255, 0.5) calc(100% - 70px),
-      rgba(255, 255, 255, 0.18) calc(100% - 25px),
-      rgba(255, 255, 255, 0) 100%
-    );
-    padding: 0 clamp(60px, 6vw, 120px) 0 clamp(40px, 5vw, 64px);
-  }
-
-  .dz-hero-content {
-    height: auto;
-    width: 100%;
-    min-height: 0;
-    padding: 0;
-    background: transparent;
-    pointer-events: auto;
+  .dz-hero-image-col {
+    width: 58%;
   }
 
   .dz-title {
-    color: #17131d;
-    margin-top: 0;
-    font-size: clamp(30px, 2.7vw, 44px);
-    line-height: 1.15;
+    font-size: 32px;
+  }
+}
+
+/* Mobile (max-width: 768px): Column layout, text on top, image below */
+@media (max-width: 768px) {
+  .dz-hero {
+    flex-direction: column;
+    min-height: auto;
+    height: auto;
+    padding: 0;
+    align-items: stretch;
   }
 
-  .dz-highlight {
-    background: linear-gradient(90deg, #7c3aed 0%, #c026d3 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
+  /* Text on top: full width, padding 40px 24px */
+  .dz-hero-text-col {
+    width: 100%;
+    min-width: 100%;
+    padding: 40px 24px 28px;
+    height: auto;
+  }
+
+  .dz-title {
+    font-size: clamp(26px, 7vw, 34px);
   }
 
   .dz-description {
-    margin-top: clamp(12px, 1.8vh, 20px);
-    color: #5f5a65;
-    font-size: clamp(14px, 1.05vw, 16px);
-    line-height: 1.65;
+    font-size: 15px;
+    margin-top: 14px;
   }
 
+  /* Buttons stack/wrap on mobile */
   .dz-hero-actions {
-    margin-top: clamp(16px, 2.5vh, 28px);
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: 22px;
   }
 
   .dz-button {
-    min-height: clamp(44px, 4.8vh, 50px);
-    padding: 10px clamp(18px, 1.8vw, 24px);
-    font-size: clamp(14px, 1.05vw, 16px);
+    width: 100%;
   }
 
+  /* Stats row wrap on mobile */
   .dz-hero-stats {
-    margin-top: clamp(20px, 3vh, 36px);
-  }
-
-  .dz-button-secondary {
-    border-color: #9333ea;
-    color: #9333ea;
-  }
-
-  .dz-hero-stats {
-    border-top: 0;
-    gap: clamp(16px, 2.5vw, 36px);
+    gap: 12px;
+    margin-top: 28px;
   }
 
   .dz-stat-number {
-    color: #17131d;
-    font-size: clamp(22px, 2vw, 30px);
+    font-size: 24px;
   }
 
   .dz-stat-label {
-    color: #68636c;
-    font-size: clamp(12px, 0.95vw, 14px);
+    font-size: 12px;
   }
 
-  .dz-carousel-dots {
-    left: 78%;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1366px) {
-  .dz-panel-wrapper {
-    width: 68%;
-  }
-
-  .dz-panel {
-    background: linear-gradient(
-      105deg,
-      #ffffff 0%,
-      #ffffff calc(100% - 180px),
-      rgba(255, 255, 255, 0.98) calc(100% - 140px),
-      rgba(250, 245, 255, 0.88) calc(100% - 100px),
-      rgba(243, 232, 255, 0.5) calc(100% - 60px),
-      rgba(255, 255, 255, 0.18) calc(100% - 20px),
-      rgba(255, 255, 255, 0) 100%
-    );
-    padding: 0 clamp(40px, 4vw, 80px) 0 44px;
-  }
-
-  .dz-title {
-    max-width: 580px;
-  }
-
-  .dz-description {
-    max-width: 540px;
-  }
-
-  .dz-hero-stats {
-    gap: 18px;
-  }
-
-  .dz-carousel-dots {
-    left: 80%;
-  }
-}
-
-@media (max-width: 520px) {
-  .dz-hero-actions {
-    flex-direction: column;
-  }
-
-  .dz-button {
+  /* Image below: height 300px, top-to-bottom gradient melt */
+  .dz-hero-image-col {
+    position: relative;
+    right: auto;
+    top: auto;
+    bottom: auto;
     width: 100%;
+    height: 300px;
   }
 
+  /* Mobile gradient: top-to-bottom white to transparent to white */
+  .dz-image-container::before {
+    background: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.85) 12%,
+      rgba(255, 255, 255, 0.00) 40%,
+      rgba(255, 255, 255, 0.00) 80%,
+      #ffffff 100%
+    );
+  }
+
+  .dz-image-container::after {
+    display: none; /* redundant on mobile */
+  }
+
+  .dz-carousel-dots {
+    bottom: 20px;
+  }
+
+  .dz-floating-stack {
+    right: 14px;
+    bottom: 60px;
+    gap: 10px;
+  }
+
+  .dz-floating-btn {
+    width: 42px;
+    height: 42px;
+  }
 }
