@@ -199,8 +199,8 @@
   opacity: 1;
 }
 
-/* 4. GRADIENT BLEND (MAIN KAAM) */
-/* Horizontal gradient overlay: left side melts into solid white, right edge softly melts */
+/* 4. GRADIENT BLEND: Left-side melt into white text area */
+/* Right side and bottom are 100% CLEAR - no white fog */
 /* fade length: yahan % badlo */
 .dz-image-container::before {
   content: "";
@@ -211,31 +211,18 @@
   background: linear-gradient(
     to right,
     #ffffff 0%,
-    rgba(255, 255, 255, 0.95) 10%,
-    rgba(255, 255, 255, 0.75) 22%,
-    rgba(255, 255, 255, 0.40) 35%,
-    rgba(255, 255, 255, 0.00) 50%,
-    rgba(255, 255, 255, 0.00) 78%,
-    rgba(255, 255, 255, 0.40) 90%,
-    rgba(255, 255, 255, 0.85) 97%,
-    #ffffff 100%
+    rgba(255, 255, 255, 0.96) 10%,
+    rgba(255, 255, 255, 0.78) 22%,
+    rgba(255, 255, 255, 0.42) 35%,
+    rgba(255, 255, 255, 0.12) 48%,
+    rgba(255, 255, 255, 0.00) 58%,
+    rgba(255, 255, 255, 0.00) 100%
   );
 }
 
-/* 5. Vertical fade: top 0% white -> 15% transparent, bottom 85% transparent -> 100% white */
+/* 5. Vertical fade disabled so bottom/floor of image is 100% crisp and clear */
 .dz-image-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0) 15%,
-    rgba(255, 255, 255, 0) 85%,
-    #ffffff 100%
-  );
+  display: none;
 }
 
 /* 6. Carousel Dots: 4 dots, 3rd active and white pill shape */
@@ -268,51 +255,6 @@
   border-radius: 999px; /* lamba pill shape */
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-}
-
-/* 7. Floating Quick Contact Stack on Right Edge */
-.dz-floating-stack {
-  position: fixed;
-  right: 20px;
-  bottom: 80px;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
-
-.dz-floating-btn {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.dz-floating-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
-}
-
-.dz-floating-whatsapp {
-  background-color: #25D366; /* WhatsApp green circle */
-  color: #ffffff;
-}
-
-.dz-floating-call {
-  background-color: #16a34a; /* Call green circle */
-  color: #ffffff;
-}
-
-.dz-floating-form {
-  background-color: #ffffff; /* White circle, purple icon */
-  color: #7c3aed;
-  border: 2px solid #7c3aed;
 }
 
 /* ==========================================================================
@@ -400,34 +342,22 @@
     height: 300px;
   }
 
-  /* Mobile gradient: top-to-bottom white to transparent to white */
+  /* Mobile gradient: top white to transparent, bottom 100% clear */
   .dz-image-container::before {
     background: linear-gradient(
       to bottom,
       #ffffff 0%,
       rgba(255, 255, 255, 0.85) 12%,
-      rgba(255, 255, 255, 0.00) 40%,
-      rgba(255, 255, 255, 0.00) 80%,
-      #ffffff 100%
+      rgba(255, 255, 255, 0.00) 45%,
+      rgba(255, 255, 255, 0.00) 100%
     );
   }
 
   .dz-image-container::after {
-    display: none; /* redundant on mobile */
+    display: none;
   }
 
   .dz-carousel-dots {
     bottom: 20px;
-  }
-
-  .dz-floating-stack {
-    right: 14px;
-    bottom: 60px;
-    gap: 10px;
-  }
-
-  .dz-floating-btn {
-    width: 42px;
-    height: 42px;
   }
 }
