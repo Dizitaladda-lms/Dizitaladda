@@ -241,6 +241,7 @@
   height: 100%;
   opacity: 0;
   object-fit: cover;
+  object-position: 65% center;
   transition: opacity 0.7s ease;
 }
 
@@ -286,19 +287,27 @@
   .dz-panel-wrapper {
     position: absolute;
     inset: 0 auto 0 0;
-    width: 58%;
+    width: 62%;
     height: 100%;
     z-index: 10;
-    filter: drop-shadow(8px 0 14px rgba(0, 0, 0, 0.25));
+    pointer-events: none;
   }
 
   .dz-panel {
     display: flex;
     height: 100%;
     align-items: center;
-    background: #ffffff;
-    clip-path: polygon(0 0, 100% 0, calc(100% - 130px) 100%, 0 100%);
-    padding: 0 clamp(90px, 11vw, 170px) 0 clamp(40px, 5vw, 64px);
+    background: linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff calc(100% - 220px),
+      rgba(255, 255, 255, 0.98) calc(100% - 170px),
+      rgba(250, 245, 255, 0.88) calc(100% - 120px),
+      rgba(243, 232, 255, 0.5) calc(100% - 70px),
+      rgba(255, 255, 255, 0.18) calc(100% - 25px),
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding: 0 clamp(60px, 6vw, 120px) 0 clamp(40px, 5vw, 64px);
   }
 
   .dz-hero-content {
@@ -307,6 +316,7 @@
     min-height: 0;
     padding: 0;
     background: transparent;
+    pointer-events: auto;
   }
 
   .dz-title {
@@ -370,12 +380,29 @@
 
 @media (min-width: 1024px) and (max-width: 1366px) {
   .dz-panel-wrapper {
-    width: 62%;
+    width: 68%;
   }
 
   .dz-panel {
-    clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
-    padding: 0 clamp(80px, 8vw, 120px) 0 44px;
+    background: linear-gradient(
+      105deg,
+      #ffffff 0%,
+      #ffffff calc(100% - 180px),
+      rgba(255, 255, 255, 0.98) calc(100% - 140px),
+      rgba(250, 245, 255, 0.88) calc(100% - 100px),
+      rgba(243, 232, 255, 0.5) calc(100% - 60px),
+      rgba(255, 255, 255, 0.18) calc(100% - 20px),
+      rgba(255, 255, 255, 0) 100%
+    );
+    padding: 0 clamp(40px, 4vw, 80px) 0 44px;
+  }
+
+  .dz-title {
+    max-width: 580px;
+  }
+
+  .dz-description {
+    max-width: 540px;
   }
 
   .dz-hero-stats {
