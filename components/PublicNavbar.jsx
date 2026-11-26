@@ -174,6 +174,89 @@ export default function PublicNavbar() {
   return (
     <>
       <nav className="site-nav" aria-label="Main navigation" ref={navRef}>
+        {/* Continuous Announcement & Offers Marquee Bar */}
+        <div className="site-announcement-bar" aria-label="Latest course announcements and special offers">
+          <div className="site-announcement-inner">
+            <div className="site-announcement-track">
+              {/* Group 1 */}
+              <div className="site-announcement-group">
+                <a href="#bookDemo" className="site-announcement-item">
+                  <span className="site-announcement-badge badge-offer">🔥 Special Offer</span>
+                  <span className="site-announcement-text">Flat <strong>20% OFF</strong> on Long-Term Professional Diplomas</span>
+                  <span className="site-announcement-link">Claim Offer &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/#courses" className="site-announcement-item">
+                  <span className="site-announcement-badge badge-new">⚡ New Batches</span>
+                  <span className="site-announcement-text">Weekday &amp; Weekend Batches Starting This Monday</span>
+                  <span className="site-announcement-link">Reserve Seat &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/courses/diploma-in-data-analytics-and-ai" className="site-announcement-item">
+                  <span className="site-announcement-badge badge-hot">🎓 In-Demand Courses</span>
+                  <span className="site-announcement-text">Data Science, GenAI, Cyber Security &amp; Digital Marketing</span>
+                  <span className="site-announcement-link">Explore &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="#bookDemo" className="site-announcement-item">
+                  <span className="site-announcement-badge badge-offer">🎁 Free Demo</span>
+                  <span className="site-announcement-text">1-on-1 Career Counselling &amp; Live Class Access</span>
+                  <span className="site-announcement-link">Book Free &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/success-stories" className="site-announcement-item">
+                  <span className="site-announcement-badge badge-hot">💼 100% Placement</span>
+                  <span className="site-announcement-text">Live Client Projects &amp; 350+ Top Hiring Partners</span>
+                  <span className="site-announcement-link">View Stories &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+              </div>
+
+              {/* Group 2 (Exact Duplicate for Seamless Infinite Loop) */}
+              <div className="site-announcement-group" aria-hidden="true">
+                <a href="#bookDemo" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge badge-offer">🔥 Special Offer</span>
+                  <span className="site-announcement-text">Flat <strong>20% OFF</strong> on Long-Term Professional Diplomas</span>
+                  <span className="site-announcement-link">Claim Offer &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/#courses" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge badge-new">⚡ New Batches</span>
+                  <span className="site-announcement-text">Weekday &amp; Weekend Batches Starting This Monday</span>
+                  <span className="site-announcement-link">Reserve Seat &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/courses/diploma-in-data-analytics-and-ai" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge badge-hot">🎓 In-Demand Courses</span>
+                  <span className="site-announcement-text">Data Science, GenAI, Cyber Security &amp; Digital Marketing</span>
+                  <span className="site-announcement-link">Explore &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="#bookDemo" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge badge-offer">🎁 Free Demo</span>
+                  <span className="site-announcement-text">1-on-1 Career Counselling &amp; Live Class Access</span>
+                  <span className="site-announcement-link">Book Free &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/success-stories" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge badge-hot">💼 100% Placement</span>
+                  <span className="site-announcement-text">Live Client Projects &amp; 350+ Top Hiring Partners</span>
+                  <span className="site-announcement-link">View Stories &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="site-nav-inner">
           <a className="site-brand" href="/" aria-label="DizitalAdda home">
             <img src="/logo.png" alt="DizitalAdda" />
@@ -298,7 +381,6 @@ export default function PublicNavbar() {
             <span>AI ML</span>
           </button>
           <a href="/success-stories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z" /><path d="M7 6H4v1a4 4 0 0 0 4 4M17 6h3v1a4 4 0 0 1-4 4" /></svg><span>Success</span></a>
-          <a href="/blogs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5" /></svg><span>Blogs</span></a>
         </div>
       </div>
       <div className="site-nav-spacer" aria-hidden="true" />

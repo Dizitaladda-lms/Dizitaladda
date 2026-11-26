@@ -1,14 +1,14 @@
 /* ==========================================================================
-   DIZITALADDA HOME HERO - SEAMLESS DUAL-GRADIENT MELT REDESIGN
+   DIZITALADDA HOME HERO - SEAMLESS MASK-BASED MELT & BALANCED LAYOUT
    ========================================================================== */
 
 :root {
-  --site-nav-h: 176px;
+  --site-nav-h: 214px;
 }
 
 @media (max-width: 1023px) {
   :root {
-    --site-nav-h: 70px;
+    --site-nav-h: 104px;
   }
 }
 
@@ -19,13 +19,14 @@
   padding: 0;
 }
 
-/* 1. SECTION WRAPPER: Full width, solid white, overflow hidden, min-height ~680px */
+/* 1. SECTION WRAPPER: Full width, solid white, overflow hidden */
 .dz-hero {
   position: relative;
   width: 100%;
-  min-height: 680px;
+  min-height: 640px;
   height: calc(100vh - var(--site-nav-h, 176px));
   height: calc(100dvh - var(--site-nav-h, 176px));
+  max-height: 840px;
   background-color: #ffffff;
   overflow: hidden;
   display: flex;
@@ -35,23 +36,24 @@
   line-height: 1.5;
 }
 
-/* 2. LEFT COLUMN: Text content (~52% width, padding-left 72px, vertically centered) */
-/* text width: yahan badlo */
+/* 2. LEFT COLUMN: Centered horizontally and vertically in its half */
 .dz-hero-text-col {
   position: relative;
-  z-index: 10; /* Text content gradient ke upar rahe aur clearly readable ho */
+  z-index: 10; /* Text content sits cleanly above any visuals */
   width: 52%;
   min-width: 52%;
   height: 100%;
   display: flex;
-  align-items: center;
-  padding-left: clamp(40px, 5vw, 72px);
-  padding-right: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Horizontally centers dz-hero-content */
+  padding: 40px clamp(28px, 4.5vw, 68px);
 }
 
 .dz-hero-content {
   width: 100%;
-  max-width: 640px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Heading: "India's Best" & "Courses" in black, middle in purple gradient */
@@ -87,7 +89,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 26px;
+  margin-top: 28px;
   align-items: center;
 }
 
@@ -132,13 +134,14 @@
   background: #faf5ff;
 }
 
-/* Stats Row: 3 columns, big bold number, small grey label */
+/* Stats Row: 3 columns, big bold number, small grey label, anchored top border */
 .dz-hero-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(16px, 2.5vw, 36px);
-  margin-top: 36px;
-  border-top: 0;
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid #f1f0f5;
 }
 
 .dz-stat {
@@ -162,99 +165,71 @@
   line-height: 1.35;
 }
 
-/* 3. RIGHT COLUMN: Image container (~62% width, right-aligned, full height) */
-/* image width: yahan badlo */
+/* 3. RIGHT COLUMN: Image container (~60% width, right-aligned, full height) */
 .dz-hero-image-col {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
-  width: 62%;
+  width: 60%;
   height: 100%;
   overflow: hidden;
   z-index: 1;
 }
 
+/* 4. SEAMLESS DUAL-MELT: True alpha mask dissolve (ZERO chalky white fog) */
 .dz-image-container {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: transparent;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 3%,
+    rgba(0, 0, 0, 0.04) 10%,
+    rgba(0, 0, 0, 0.12) 18%,
+    rgba(0, 0, 0, 0.28) 28%,
+    rgba(0, 0, 0, 0.52) 38%,
+    rgba(0, 0, 0, 0.78) 50%,
+    rgba(0, 0, 0, 0.94) 62%,
+    #000000 72%,
+    #000000 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 3%,
+    rgba(0, 0, 0, 0.04) 10%,
+    rgba(0, 0, 0, 0.12) 18%,
+    rgba(0, 0, 0, 0.28) 28%,
+    rgba(0, 0, 0, 0.52) 38%,
+    rgba(0, 0, 0, 0.78) 50%,
+    rgba(0, 0, 0, 0.94) 62%,
+    #000000 72%,
+    #000000 100%
+  );
 }
 
-/* Base Image */
+/* Disable harsh linear paint overlay to prevent milky clouds */
+.dz-image-container::before {
+  display: none;
+}
+
+.dz-image-container::after {
+  display: none;
+}
+
+/* Base Image: Permanent full opacity, crisp object-position */
 .dz-hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 55% center;
-  opacity: 0;
-  transition: opacity 0.75s ease-in-out;
-  z-index: 1;
-}
-
-.dz-hero-image.dz-active {
+  object-position: 62% center;
   opacity: 1;
-}
-
-/* 4. GRADIENT BLEND: Left-side melt into white text area */
-/* Right side and bottom are 100% CLEAR - no white fog */
-/* fade length: yahan % badlo */
-.dz-image-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background: linear-gradient(
-    to right,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0.95) 8%,
-    rgba(255, 255, 255, 0.72) 16%,
-    rgba(255, 255, 255, 0.35) 24%,
-    rgba(255, 255, 255, 0.08) 30%,
-    rgba(255, 255, 255, 0.00) 35%,
-    rgba(255, 255, 255, 0.00) 100%
-  );
-}
-
-/* 5. Vertical fade disabled so bottom/floor of image is 100% crisp and clear */
-.dz-image-container::after {
-  display: none;
-}
-
-/* 6. Carousel Dots: 4 dots, 3rd active and white pill shape */
-.dz-carousel-dots {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-}
-
-.dz-carousel-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 0;
-  background: rgba(255, 255, 255, 0.65);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 0.25s ease;
-  padding: 0;
-}
-
-.dz-carousel-dot.dz-active {
-  width: 28px;
-  border-radius: 999px; /* lamba pill shape */
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
 /* ==========================================================================
@@ -266,12 +241,11 @@
   .dz-hero-text-col {
     width: 55%;
     min-width: 55%;
-    padding-left: 36px;
-    padding-right: 16px;
+    padding: 30px clamp(20px, 3vw, 40px);
   }
 
   .dz-hero-image-col {
-    width: 58%;
+    width: 56%;
   }
 
   .dz-title {
@@ -285,16 +259,21 @@
     flex-direction: column;
     min-height: auto;
     height: auto;
+    max-height: none;
     padding: 0;
     align-items: stretch;
   }
 
-  /* Text on top: full width, padding 40px 24px */
+  /* Text on top: full width, padding 36px 20px 24px */
   .dz-hero-text-col {
     width: 100%;
     min-width: 100%;
-    padding: 40px 24px 28px;
+    padding: 36px 20px 24px;
     height: auto;
+  }
+
+  .dz-hero-content {
+    max-width: 100%;
   }
 
   .dz-title {
@@ -321,7 +300,8 @@
   /* Stats row wrap on mobile */
   .dz-hero-stats {
     gap: 12px;
-    margin-top: 28px;
+    margin-top: 24px;
+    padding-top: 20px;
   }
 
   .dz-stat-number {
@@ -332,7 +312,7 @@
     font-size: 12px;
   }
 
-  /* Image below: height 300px, top-to-bottom gradient melt */
+  /* Image below: height 300px, top-to-bottom mask melt */
   .dz-hero-image-col {
     position: relative;
     right: auto;
@@ -342,22 +322,22 @@
     height: 300px;
   }
 
-  /* Mobile gradient: top white to transparent, bottom 100% clear */
-  .dz-image-container::before {
-    background: linear-gradient(
+  .dz-image-container {
+    -webkit-mask-image: linear-gradient(
       to bottom,
-      #ffffff 0%,
-      rgba(255, 255, 255, 0.85) 12%,
-      rgba(255, 255, 255, 0.00) 45%,
-      rgba(255, 255, 255, 0.00) 100%
+      transparent 0%,
+      rgba(0, 0, 0, 0.15) 12%,
+      rgba(0, 0, 0, 0.6) 28%,
+      #000000 48%,
+      #000000 100%
     );
-  }
-
-  .dz-image-container::after {
-    display: none;
-  }
-
-  .dz-carousel-dots {
-    bottom: 20px;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.15) 12%,
+      rgba(0, 0, 0, 0.6) 28%,
+      #000000 48%,
+      #000000 100%
+    );
   }
 }

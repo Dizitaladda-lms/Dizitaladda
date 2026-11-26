@@ -25,7 +25,6 @@ export default function HeroTrustStrip() {
   return (
     <section className="hero-trust-strip" aria-label="Authorised training and learning partners">
       <div className="hero-trust-inner">
-        <p className="hero-trust-label">Authorised Training &amp; Learning Partners</p>
         <div className="hero-trust-logos">
           {trustMarks.map((mark) => (
             <a className="hero-trust-logo" href={mark.href} key={mark.name} target="_blank" rel="noreferrer" aria-label={mark.name}>
