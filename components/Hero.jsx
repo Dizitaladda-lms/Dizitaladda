@@ -27,7 +27,7 @@ export default function Hero() {
   const handleImageError = (event) => {
     if (!event.currentTarget.dataset.triedFallback) {
       event.currentTarget.dataset.triedFallback = "true";
-      event.currentTarget.src = "/images/campus/hero2.webp";
+      event.currentTarget.src = "/images/hero2.webp";
     }
   };
 
@@ -79,12 +79,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 2. Right Side: Single Static Hero Image with Seamless Dual-Melt Mask */}
+      {/* 2. Right Side: Single Static Hero Image with Seamless Gradient Melt (~62% width) */}
       <div className="dz-hero-image-col" aria-label="DizitalAdda learning campus">
         <div className="dz-image-container">
           <img
-            src="/images/hero/slide-3.jpg"
-            alt="DizitalAdda students and learning campus"
+            src="/images/hero2.webp"
+            alt="DizitalAdda campus learning environment"
             className="dz-hero-image"
             onError={handleImageError}
           />
