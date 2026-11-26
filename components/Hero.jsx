@@ -27,7 +27,7 @@ export default function Hero() {
   const handleImageError = (event) => {
     if (!event.currentTarget.dataset.triedFallback) {
       event.currentTarget.dataset.triedFallback = "true";
-      event.currentTarget.src = "/images/campus/reception.jpg";
+      event.currentTarget.src = "/images/campus/hero2.webp";
     }
   };
 

@@ -1,9 +1,9 @@
 /* ==========================================================================
-   DIZITALADDA HOME HERO - SEAMLESS MASK-BASED MELT & BALANCED LAYOUT
+   DIZITALADDA HOME HERO - FULL SCREEN & SPACIOUS BALANCED LAYOUT
    ========================================================================== */
 
 :root {
-  --site-nav-h: 214px;
+  --site-nav-h: 154px;
 }
 
 @media (max-width: 1023px) {
@@ -19,14 +19,14 @@
   padding: 0;
 }
 
-/* 1. SECTION WRAPPER: Full width, solid white, overflow hidden */
+/* 1. SECTION WRAPPER: Full viewport height, solid white, spacious */
 .dz-hero {
   position: relative;
   width: 100%;
-  min-height: 640px;
-  height: calc(100vh - var(--site-nav-h, 176px));
-  height: calc(100dvh - var(--site-nav-h, 176px));
-  max-height: 840px;
+  min-height: calc(100vh - var(--site-nav-h, 154px));
+  min-height: calc(100dvh - var(--site-nav-h, 154px));
+  height: calc(100vh - var(--site-nav-h, 154px));
+  height: calc(100dvh - var(--site-nav-h, 154px));
   background-color: #ffffff;
   overflow: hidden;
   display: flex;
@@ -36,32 +36,31 @@
   line-height: 1.5;
 }
 
-/* 2. LEFT COLUMN: Centered horizontally and vertically in its half */
+/* 2. LEFT COLUMN: Generous width & padding, no cramped or congested feeling */
 .dz-hero-text-col {
   position: relative;
-  z-index: 10; /* Text content sits cleanly above any visuals */
+  z-index: 10;
   width: 52%;
   min-width: 52%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Horizontally centers dz-hero-content */
-  padding: 40px clamp(28px, 4.5vw, 68px);
+  align-items: flex-start;
+  padding: 40px clamp(32px, 5.5vw, 92px);
 }
 
 .dz-hero-content {
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 660px;
 }
 
 /* Heading: "India's Best" & "Courses" in black, middle in purple gradient */
 .dz-title {
   color: #111827;
-  font-size: clamp(32px, 2.75vw, 46px);
+  font-size: clamp(34px, 2.95vw, 50px);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.18;
   letter-spacing: -0.03em;
   margin: 0;
 }
@@ -74,14 +73,14 @@
   color: #7c3aed;
 }
 
-/* Paragraph: Clean readable grey text */
+/* Paragraph: Clean readable grey text with comfortable width */
 .dz-description {
   color: #4b5563;
-  font-size: clamp(14px, 1.05vw, 16px);
+  font-size: clamp(15px, 1.1vw, 17px);
   font-weight: 400;
   line-height: 1.65;
-  margin-top: 18px;
-  max-width: 580px;
+  margin-top: 20px;
+  max-width: 600px;
 }
 
 /* Two Buttons: Demo (filled purple glow) + Brochure (white, purple border) */
@@ -89,18 +88,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 28px;
+  margin-top: 30px;
   align-items: center;
 }
 
 .dz-button {
   display: inline-flex;
-  min-height: 48px;
+  min-height: 50px;
   align-items: center;
   justify-content: center;
-  padding: 12px clamp(20px, 1.8vw, 26px);
-  border-radius: 8px; /* rounded corners ~8px */
-  font-size: 15px;
+  padding: 13px clamp(22px, 2vw, 30px);
+  border-radius: 8px;
+  font-size: 15.5px;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
@@ -116,7 +115,7 @@
   background: linear-gradient(90deg, #7c3aed 0%, #9333ea 100%);
   color: #ffffff;
   border: 2px solid transparent;
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35); /* soft purple glow shadow */
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
 }
 
 .dz-button-primary:hover {
@@ -126,7 +125,7 @@
 .dz-button-secondary {
   background: #ffffff;
   color: #7c3aed;
-  border: 2px solid #7c3aed; /* purple border */
+  border: 2px solid #7c3aed;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
@@ -134,13 +133,13 @@
   background: #faf5ff;
 }
 
-/* Stats Row: 3 columns, big bold number, small grey label, anchored top border */
+/* Stats Row: 3 columns, big bold numbers, small grey labels, anchored top border */
 .dz-hero-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2.5vw, 36px);
-  margin-top: 34px;
-  padding-top: 24px;
+  gap: clamp(18px, 3vw, 44px);
+  margin-top: 36px;
+  padding-top: 26px;
   border-top: 1px solid #f1f0f5;
 }
 
@@ -152,7 +151,7 @@
 
 .dz-stat-number {
   color: #111827;
-  font-size: clamp(24px, 2vw, 32px);
+  font-size: clamp(26px, 2.2vw, 34px);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -160,12 +159,12 @@
 
 .dz-stat-label {
   color: #6b7280;
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 500;
   line-height: 1.35;
 }
 
-/* 3. RIGHT COLUMN: Image container (~60% width, right-aligned, full height) */
+/* 3. RIGHT COLUMN: Cinematic Image container (~60% width, right-aligned, full height) */
 .dz-hero-image-col {
   position: absolute;
   right: 0;
@@ -186,32 +185,31 @@
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    transparent 3%,
+    transparent 4%,
     rgba(0, 0, 0, 0.04) 10%,
-    rgba(0, 0, 0, 0.12) 18%,
-    rgba(0, 0, 0, 0.28) 28%,
-    rgba(0, 0, 0, 0.52) 38%,
-    rgba(0, 0, 0, 0.78) 50%,
-    rgba(0, 0, 0, 0.94) 62%,
+    rgba(0, 0, 0, 0.15) 18%,
+    rgba(0, 0, 0, 0.35) 28%,
+    rgba(0, 0, 0, 0.60) 38%,
+    rgba(0, 0, 0, 0.85) 50%,
+    rgba(0, 0, 0, 0.96) 62%,
     #000000 72%,
     #000000 100%
   );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    transparent 3%,
+    transparent 4%,
     rgba(0, 0, 0, 0.04) 10%,
-    rgba(0, 0, 0, 0.12) 18%,
-    rgba(0, 0, 0, 0.28) 28%,
-    rgba(0, 0, 0, 0.52) 38%,
-    rgba(0, 0, 0, 0.78) 50%,
-    rgba(0, 0, 0, 0.94) 62%,
+    rgba(0, 0, 0, 0.15) 18%,
+    rgba(0, 0, 0, 0.35) 28%,
+    rgba(0, 0, 0, 0.60) 38%,
+    rgba(0, 0, 0, 0.85) 50%,
+    rgba(0, 0, 0, 0.96) 62%,
     #000000 72%,
     #000000 100%
   );
 }
 
-/* Disable harsh linear paint overlay to prevent milky clouds */
 .dz-image-container::before {
   display: none;
 }
@@ -220,14 +218,14 @@
   display: none;
 }
 
-/* Base Image: Permanent full opacity, crisp object-position */
+/* Base Image: Permanent full opacity, crisp right and bottom */
 .dz-hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 62% center;
+  object-position: 60% center;
   opacity: 1;
   z-index: 1;
 }
@@ -239,9 +237,9 @@
 /* Laptops / Smaller Desktops */
 @media (min-width: 769px) and (max-width: 1200px) {
   .dz-hero-text-col {
-    width: 55%;
-    min-width: 55%;
-    padding: 30px clamp(20px, 3vw, 40px);
+    width: 54%;
+    min-width: 54%;
+    padding: 36px clamp(24px, 3.5vw, 48px);
   }
 
   .dz-hero-image-col {
@@ -249,7 +247,7 @@
   }
 
   .dz-title {
-    font-size: 32px;
+    font-size: 34px;
   }
 }
 
@@ -259,16 +257,15 @@
     flex-direction: column;
     min-height: auto;
     height: auto;
-    max-height: none;
     padding: 0;
     align-items: stretch;
   }
 
-  /* Text on top: full width, padding 36px 20px 24px */
+  /* Text on top: full width, generous padding */
   .dz-hero-text-col {
     width: 100%;
     min-width: 100%;
-    padding: 36px 20px 24px;
+    padding: 40px 24px 28px;
     height: auto;
   }
 
@@ -277,20 +274,20 @@
   }
 
   .dz-title {
-    font-size: clamp(26px, 7vw, 34px);
+    font-size: clamp(28px, 7.5vw, 36px);
   }
 
   .dz-description {
     font-size: 15px;
-    margin-top: 14px;
+    margin-top: 16px;
   }
 
-  /* Buttons stack/wrap on mobile */
+  /* Buttons stack on mobile */
   .dz-hero-actions {
     flex-direction: column;
     width: 100%;
     gap: 12px;
-    margin-top: 22px;
+    margin-top: 24px;
   }
 
   .dz-button {
@@ -299,9 +296,9 @@
 
   /* Stats row wrap on mobile */
   .dz-hero-stats {
-    gap: 12px;
-    margin-top: 24px;
-    padding-top: 20px;
+    gap: 16px;
+    margin-top: 28px;
+    padding-top: 22px;
   }
 
   .dz-stat-number {
@@ -312,14 +309,14 @@
     font-size: 12px;
   }
 
-  /* Image below: height 300px, top-to-bottom mask melt */
+  /* Image below: height 320px, top-to-bottom mask melt */
   .dz-hero-image-col {
     position: relative;
     right: auto;
     top: auto;
     bottom: auto;
     width: 100%;
-    height: 300px;
+    height: 320px;
   }
 
   .dz-image-container {

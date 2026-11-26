@@ -181,35 +181,35 @@ export default function PublicNavbar() {
               {/* Group 1 */}
               <div className="site-announcement-group">
                 <a href="#bookDemo" className="site-announcement-item">
-                  <span className="site-announcement-badge badge-offer">🔥 Special Offer</span>
+                  <span className="site-announcement-badge">Special Offer</span>
                   <span className="site-announcement-text">Flat <strong>20% OFF</strong> on Long-Term Professional Diplomas</span>
                   <span className="site-announcement-link">Claim Offer &rarr;</span>
                 </a>
                 <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
 
                 <a href="/#courses" className="site-announcement-item">
-                  <span className="site-announcement-badge badge-new">⚡ New Batches</span>
+                  <span className="site-announcement-badge">New Batches</span>
                   <span className="site-announcement-text">Weekday &amp; Weekend Batches Starting This Monday</span>
                   <span className="site-announcement-link">Reserve Seat &rarr;</span>
                 </a>
                 <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
 
                 <a href="/courses/diploma-in-data-analytics-and-ai" className="site-announcement-item">
-                  <span className="site-announcement-badge badge-hot">🎓 In-Demand Courses</span>
+                  <span className="site-announcement-badge">In-Demand Courses</span>
                   <span className="site-announcement-text">Data Science, GenAI, Cyber Security &amp; Digital Marketing</span>
                   <span className="site-announcement-link">Explore &rarr;</span>
                 </a>
                 <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
 
                 <a href="#bookDemo" className="site-announcement-item">
-                  <span className="site-announcement-badge badge-offer">🎁 Free Demo</span>
+                  <span className="site-announcement-badge">Free Demo</span>
                   <span className="site-announcement-text">1-on-1 Career Counselling &amp; Live Class Access</span>
                   <span className="site-announcement-link">Book Free &rarr;</span>
                 </a>
                 <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
 
                 <a href="/success-stories" className="site-announcement-item">
-                  <span className="site-announcement-badge badge-hot">💼 100% Placement</span>
+                  <span className="site-announcement-badge">100% Placement</span>
                   <span className="site-announcement-text">Live Client Projects &amp; 350+ Top Hiring Partners</span>
                   <span className="site-announcement-link">View Stories &rarr;</span>
                 </a>
@@ -219,35 +219,35 @@ export default function PublicNavbar() {
               {/* Group 2 (Exact Duplicate for Seamless Infinite Loop) */}
               <div className="site-announcement-group" aria-hidden="true">
                 <a href="#bookDemo" className="site-announcement-item" tabIndex="-1">
-                  <span className="site-announcement-badge badge-offer">🔥 Special Offer</span>
+                  <span className="site-announcement-badge">Special Offer</span>
                   <span className="site-announcement-text">Flat <strong>20% OFF</strong> on Long-Term Professional Diplomas</span>
                   <span className="site-announcement-link">Claim Offer &rarr;</span>
                 </a>
                 <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
 
                 <a href="/#courses" className="site-announcement-item" tabIndex="-1">
-                  <span className="site-announcement-badge badge-new">⚡ New Batches</span>
+                  <span className="site-announcement-badge">New Batches</span>
                   <span className="site-announcement-text">Weekday &amp; Weekend Batches Starting This Monday</span>
                   <span className="site-announcement-link">Reserve Seat &rarr;</span>
                 </a>
                 <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
 
                 <a href="/courses/diploma-in-data-analytics-and-ai" className="site-announcement-item" tabIndex="-1">
-                  <span className="site-announcement-badge badge-hot">🎓 In-Demand Courses</span>
+                  <span className="site-announcement-badge">In-Demand Courses</span>
                   <span className="site-announcement-text">Data Science, GenAI, Cyber Security &amp; Digital Marketing</span>
                   <span className="site-announcement-link">Explore &rarr;</span>
                 </a>
                 <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
 
                 <a href="#bookDemo" className="site-announcement-item" tabIndex="-1">
-                  <span className="site-announcement-badge badge-offer">🎁 Free Demo</span>
+                  <span className="site-announcement-badge">Free Demo</span>
                   <span className="site-announcement-text">1-on-1 Career Counselling &amp; Live Class Access</span>
                   <span className="site-announcement-link">Book Free &rarr;</span>
                 </a>
                 <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
 
                 <a href="/success-stories" className="site-announcement-item" tabIndex="-1">
-                  <span className="site-announcement-badge badge-hot">💼 100% Placement</span>
+                  <span className="site-announcement-badge">100% Placement</span>
                   <span className="site-announcement-text">Live Client Projects &amp; 350+ Top Hiring Partners</span>
                   <span className="site-announcement-link">View Stories &rarr;</span>
                 </a>
@@ -361,26 +361,23 @@ export default function PublicNavbar() {
       <div className="site-category-nav" aria-label="Course categories">
         <div className="site-category-nav-inner">
           <button type="button" onClick={() => { setSelectedDomain(0); setOpenMenu("courses"); }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 14.5 19 5l-5.5 15-2.3-6.2L4 14.5Z" /><path d="m11.2 13.8 4.3-4.3" /></svg>
             <span>Marketing</span>
           </button>
           <button type="button" onClick={() => { setSelectedDomain(1); setOpenMenu("courses"); }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16" /><path d="m7 15 3-3 3 2 5-7" /><circle cx="7" cy="15" r="1" /><circle cx="10" cy="12" r="1" /><circle cx="13" cy="14" r="1" /><circle cx="18" cy="7" r="1" /></svg>
             <span>Data Analytics</span>
           </button>
           <button type="button" onClick={() => { setSelectedDomain(2); setOpenMenu("courses"); }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 3v5l-4.5 9A2 2 0 0 0 6.3 20h11.4a2 2 0 0 0 1.8-3L15 8V3H9Z" /><path d="M8 14h8" /></svg>
             <span>Data Science</span>
           </button>
           <button type="button" onClick={() => { setSelectedDomain(3); setOpenMenu("courses"); }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z" /><path d="m9 12 2 2 4-4" /></svg>
             <span>CS &amp; EH</span>
           </button>
           <button type="button" onClick={() => { setSelectedDomain(4); setOpenMenu("courses"); }}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 4h14v16H5z" /><path d="M8 8h8M8 12h3M14 12h2M8 16h8" /><circle cx="12" cy="12" r="4" /></svg>
             <span>AI ML</span>
           </button>
-          <a href="/success-stories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z" /><path d="M7 6H4v1a4 4 0 0 0 4 4M17 6h3v1a4 4 0 0 1-4 4" /></svg><span>Success</span></a>
+          <a href="/success-stories">
+            <span>Success Stories</span>
+          </a>
         </div>
       </div>
       <div className="site-nav-spacer" aria-hidden="true" />
