@@ -1,9 +1,9 @@
 /* ==========================================================================
-   DIZITALADDA HOME HERO - CENTERED LAYOUT WITH BACKGROUND & CATEGORY PILLS
+   DIZITALADDA HOME HERO - POLISHED CENTERED LAYOUT
    ========================================================================== */
 
 :root {
-  --site-nav-h: 212px;
+  --site-nav-h: 174px;
 }
 
 @media (max-width: 1023px) {
@@ -22,12 +22,15 @@
 .dz-upgrad-hero {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - var(--site-nav-h, 212px));
-  min-height: calc(100dvh - var(--site-nav-h, 212px));
+  margin-top: -78px;
+  min-height: calc(100vh - 34px);
+  min-height: calc(100dvh - 34px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 116px 20px 28px;
+  gap: 24px;
   overflow: hidden;
   font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #111827;
@@ -49,19 +52,17 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: contrast(1.03) brightness(0.98);
 }
 
 .dz-upgrad-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.78) 0%,
-    rgba(255, 255, 255, 0.72) 45%,
-    rgba(255, 255, 255, 0.85) 100%
-  );
-  backdrop-filter: blur(2px);
+  background: radial-gradient(
+      circle at 50% 42%,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.82) 52%,
+      rgba(248, 250, 252, 0.68) 100%
+    );
 }
 
 /* 2. Centered Content */
@@ -69,9 +70,8 @@
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 900px;
-  margin: auto;
-  padding: 36px 20px 20px;
+  max-width: 860px;
+  margin: auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,8 +79,8 @@
 }
 
 .dz-upgrad-title {
-  color: #111827;
-  font-size: clamp(28px, 3.2vw, 46px);
+  color: #0f172a;
+  font-size: clamp(26px, 2.85vw, 42px);
   font-weight: 800;
   line-height: 1.18;
   letter-spacing: -0.025em;
@@ -88,7 +88,7 @@
 }
 
 .dz-upgrad-highlight {
-  background: linear-gradient(90deg, #7c3aed 0%, #9333ea 100%);
+  background: linear-gradient(90deg, #6d28d9 0%, #9333ea 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -96,18 +96,18 @@
 }
 
 .dz-upgrad-description {
-  color: #374151;
-  font-size: clamp(14px, 1.1vw, 16.5px);
+  color: #475569;
+  font-size: clamp(14px, 1.05vw, 16px);
   font-weight: 500;
   line-height: 1.6;
-  margin-top: 14px;
-  max-width: 680px;
+  margin-top: 12px;
+  max-width: 640px;
 }
 
 /* Search Bar Pill */
 .dz-upgrad-search-form {
   width: 100%;
-  max-width: 600px;
+  max-width: 580px;
   margin-top: 22px;
 }
 
@@ -120,13 +120,13 @@
   gap: 12px;
   background: #ffffff;
   border-radius: 9999px;
-  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.12), 0 2px 6px rgba(17, 24, 39, 0.06);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1), 0 2px 6px rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(109, 40, 217, 0.18);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .dz-upgrad-search-pill:focus-within {
-  box-shadow: 0 12px 36px rgba(124, 58, 237, 0.22), 0 0 0 2px rgba(124, 58, 237, 0.22);
+  box-shadow: 0 14px 36px rgba(109, 40, 217, 0.18), 0 0 0 3px rgba(124, 58, 237, 0.14);
   border-color: #7c3aed;
 }
 
@@ -151,14 +151,14 @@
   border: none;
   outline: none;
   background: transparent;
-  font-size: clamp(14px, 1.05vw, 15.5px);
-  color: #1f2937;
+  font-size: clamp(14px, 1vw, 15px);
+  color: #0f172a;
   font-family: inherit;
   font-weight: 500;
 }
 
 .dz-upgrad-search-input::placeholder {
-  color: #6b7280;
+  color: #64748b;
   font-weight: 400;
 }
 
@@ -174,12 +174,12 @@
   border: none;
   cursor: pointer;
   flex-shrink: 0;
-  transition: transform 0.18s ease, opacity 0.18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .dz-upgrad-search-btn:hover {
-  opacity: 0.92;
   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
 }
 
 .dz-upgrad-search-btn:active {
@@ -196,8 +196,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
-  margin-top: 22px;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .dz-upgrad-btn {
@@ -206,8 +206,8 @@
   align-items: center;
   justify-content: center;
   padding: 10px 24px;
-  border-radius: 8px;
-  font-size: 14.5px;
+  border-radius: 10px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
@@ -216,34 +216,40 @@
 .dz-upgrad-btn-primary {
   background: linear-gradient(90deg, #7c3aed 0%, #9333ea 100%);
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.28);
 }
 
 .dz-upgrad-btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.38);
 }
 
 .dz-upgrad-btn-secondary {
   background: #ffffff;
   color: #6d28d9;
-  border: 1.5px solid #7c3aed;
+  border: 1.5px solid rgba(124, 58, 237, 0.45);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
 }
 
 .dz-upgrad-btn-secondary:hover {
   background: #f5f3ff;
+  border-color: #7c3aed;
   transform: translateY(-1px);
 }
 
 /* Stats Row */
 .dz-upgrad-stats {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 24px;
   margin-top: 22px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(17, 24, 39, 0.1);
+  padding: 12px 28px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
 }
 
 .dz-upgrad-stat {
@@ -252,17 +258,23 @@
   align-items: center;
 }
 
+.dz-upgrad-stat-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(15, 23, 42, 0.12);
+}
+
 .dz-upgrad-stat-number {
-  font-size: clamp(20px, 1.8vw, 26px);
+  font-size: clamp(18px, 1.5vw, 22px);
   font-weight: 800;
-  color: #111827;
+  color: #0f172a;
   line-height: 1.2;
 }
 
 .dz-upgrad-stat-label {
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 500;
-  color: #4b5563;
+  color: #475569;
   margin-top: 2px;
 }
 
@@ -271,13 +283,12 @@
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 1480px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 12px 20px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -285,15 +296,15 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 9px 18px;
   border-radius: 9999px;
   background: #ffffff;
-  color: #1f2937;
-  font-size: 13px;
+  color: #1e293b;
+  font-size: 13.5px;
   font-weight: 600;
   text-decoration: none;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.07);
   white-space: nowrap;
   transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
@@ -301,8 +312,8 @@
 
 .dz-upgrad-pill:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.16);
-  color: #7c3aed;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.16);
+  color: #6d28d9;
   border-color: rgba(124, 58, 237, 0.35);
 }
 
@@ -310,9 +321,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 17px;
-  height: 17px;
-  color: #7c3aed;
+  width: 18px;
+  height: 18px;
+  color: #6d28d9;
   flex-shrink: 0;
 }
 
@@ -328,19 +339,23 @@
 /* Mobile & Tablet responsiveness */
 @media (max-width: 1023px) {
   .dz-upgrad-hero {
-    min-height: calc(100vh - var(--site-nav-h, 102px));
-  }
-  .dz-upgrad-hero-center {
-    padding: 24px 16px 16px;
+    margin-top: -68px;
+    min-height: calc(100vh - 32px);
+    padding: 94px 16px 20px;
+    gap: 20px;
   }
   .dz-upgrad-stats {
-    gap: 20px;
+    gap: 16px;
+    padding: 10px 18px;
+  }
+  .dz-upgrad-stat-divider {
+    display: none;
   }
   .dz-upgrad-pills-row {
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
-    padding: 10px 16px 18px;
+    padding: 4px 4px 8px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -348,7 +363,7 @@
     display: none;
   }
   .dz-upgrad-pill {
-    padding: 7px 14px;
+    padding: 8px 15px;
     font-size: 12.5px;
   }
 }

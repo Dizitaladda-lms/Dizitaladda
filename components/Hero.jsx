@@ -5,52 +5,26 @@ import "./Hero.css";
 
 const heroCategoryPills = [
   {
-    label: "Agentic AI",
-    href: "/courses/advanced-certification-in-genai-and-prompt-engineering",
+    label: "Marketing",
+    href: "/courses/digital-marketing-for-professional",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="3" />
-        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 14.5 19 5l-5.5 15-2.3-6.2L4 14.5Z" />
+        <path d="m11.2 13.8 4.3-4.3" />
       </svg>
     ),
   },
   {
-    label: "Artificial Intelligence",
-    href: "/courses/diploma-in-machine-learning-and-ai",
+    label: "Data Analytics",
+    href: "/courses/diploma-in-data-analytics-and-ai",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="11" width="18" height="10" rx="2" />
-        <circle cx="12" cy="5" r="2" />
-        <path d="M12 7v4M8 16h.01M16 16h.01" />
-      </svg>
-    ),
-  },
-  {
-    label: "Doctorate",
-    href: "#courses",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-        <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-      </svg>
-    ),
-  },
-  {
-    label: "Machine Learning",
-    href: "/courses/advanced-certification-in-machine-learning-and-ai",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-5.04z" />
-        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-5.04z" />
-      </svg>
-    ),
-  },
-  {
-    label: "IIT/IIM Courses",
-    href: "#courses",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2 2 7h20z" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 19V5M4 19h16" />
+        <path d="m7 15 3-3 3 2 5-7" />
+        <circle cx="7" cy="15" r="1" />
+        <circle cx="10" cy="12" r="1" />
+        <circle cx="13" cy="14" r="1" />
+        <circle cx="18" cy="7" r="1" />
       </svg>
     ),
   },
@@ -58,40 +32,40 @@ const heroCategoryPills = [
     label: "Data Science",
     href: "/courses/diploma-in-data-science-and-ai",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M10 2v7.31L4.1 19.33A2 2 0 0 0 5.8 22h12.4a2 2 0 0 0 1.7-2.67L14 9.31V2z" />
-        <path d="M8.5 2h7M7 16h10" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 3v5l-4.5 9A2 2 0 0 0 6.3 20h11.4a2 2 0 0 0 1.8-3L15 8V3H9Z" />
+        <path d="M8 14h8" />
       </svg>
     ),
   },
   {
-    label: "MBA",
-    href: "#courses",
+    label: "CS & EH",
+    href: "/courses/foundation-in-cyber-security-and-ethical-hacking",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3 19 6v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3Z" />
+        <path d="m9 12 2 2 4-4" />
       </svg>
     ),
   },
   {
-    label: "Marketing",
-    href: "/courses/digital-marketing-for-professional",
+    label: "AI ML",
+    href: "/courses/diploma-in-machine-learning-and-ai",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m3 11 18-5v12L3 13v-2z" />
-        <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 4h14v16H5z" />
+        <path d="M8 8h8M8 12h3M14 12h2M8 16h8" />
+        <circle cx="12" cy="12" r="4" />
       </svg>
     ),
   },
   {
-    label: "Management",
-    href: "#courses",
+    label: "Success",
+    href: "/success-stories",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z" />
+        <path d="M7 6H4v1a4 4 0 0 0 4 4M17 6h3v1a4 4 0 0 1-4 4" />
       </svg>
     ),
   },
@@ -104,15 +78,21 @@ export default function Hero() {
     const updateNavHeight = () => {
       const nav = document.querySelector(".site-nav");
       const categoryNav = document.querySelector(".site-category-nav");
+      const spacer = document.querySelector(".site-nav-spacer");
       if (nav) {
         const navH = nav.getBoundingClientRect().height || 0;
-        const catH =
-          categoryNav && window.getComputedStyle(categoryNav).display !== "none"
-            ? categoryNav.getBoundingClientRect().height
-            : 0;
+        const catVisible =
+          categoryNav && window.getComputedStyle(categoryNav).display !== "none";
+        const catH = catVisible ? categoryNav.getBoundingClientRect().height : 0;
+        if (categoryNav && catVisible) {
+          categoryNav.style.top = `${Math.round(navH)}px`;
+        }
         const total = Math.round(navH + catH);
         if (total > 0) {
           document.documentElement.style.setProperty("--site-nav-h", `${total}px`);
+          if (spacer) {
+            spacer.style.height = `${total}px`;
+          }
         }
       }
     };
@@ -145,7 +125,7 @@ export default function Hero() {
         <div className="dz-upgrad-overlay" />
       </div>
 
-      {/* 2. Centered Content from Reference */}
+      {/* 2. Centered Content */}
       <div className="dz-upgrad-hero-center">
         <h1 className="dz-upgrad-title">
           India&apos;s Best{" "}
@@ -162,7 +142,7 @@ export default function Hero() {
         <form className="dz-upgrad-search-form" onSubmit={handleSearchSubmit}>
           <div className="dz-upgrad-search-pill">
             <span className="dz-upgrad-search-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
@@ -203,10 +183,12 @@ export default function Hero() {
             <strong className="dz-upgrad-stat-number">25000+</strong>
             <span className="dz-upgrad-stat-label">Students trained</span>
           </div>
+          <div className="dz-upgrad-stat-divider" aria-hidden="true" />
           <div className="dz-upgrad-stat">
             <strong className="dz-upgrad-stat-number">20+</strong>
             <span className="dz-upgrad-stat-label">Courses</span>
           </div>
+          <div className="dz-upgrad-stat-divider" aria-hidden="true" />
           <div className="dz-upgrad-stat">
             <strong className="dz-upgrad-stat-number">100%</strong>
             <span className="dz-upgrad-stat-label">Practical learning</span>
@@ -214,7 +196,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 3. Bottom Category Pills Row */}
+      {/* 3. Bottom Course Category Pills (matching Navbar second row) */}
       <div className="dz-upgrad-pills-row" aria-label="Course categories">
         {heroCategoryPills.map((pill) => (
           <a key={pill.label} href={pill.href} className="dz-upgrad-pill">
