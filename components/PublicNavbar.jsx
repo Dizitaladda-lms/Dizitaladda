@@ -74,6 +74,235 @@ const courseTerms = [
   { id: "long", label: "Long Term Course", duration: "1 Year" },
 ];
 
+const indianUniversityStates = [
+  {
+    state: "Delhi NCR",
+    code: "DL",
+    subtitle: "10+ Partner Universities",
+    universities: [
+      { name: "Delhi University (DU SOL)", courses: "BBA, B.Com, BA & MBA Open Learning" },
+      { name: "Amity University Noida", courses: "BBA, BCA, MBA, MCA & Digital Marketing" },
+      { name: "Jamia Hamdard University", courses: "BBA, BCA, MBA & Healthcare IT" },
+      { name: "Guru Gobind Singh Indraprastha Univ.", courses: "BBA, BCA, B.Com (Hons), MBA" },
+      { name: "Galgotias University", courses: "B.Tech AI, BCA, BBA & MBA" },
+    ],
+  },
+  {
+    state: "Maharashtra",
+    code: "MH",
+    subtitle: "10+ Partner Universities",
+    universities: [
+      { name: "NMIMS Global (Mumbai)", courses: "MBA, BBA & PG Diploma in Management" },
+      { name: "DY Patil University (Pune / Navi Mumbai)", courses: "BBA, BCA, MBA & Digital Business" },
+      { name: "Symbiosis Centre for Distance Learning", courses: "PGDBA, MBA & Data Science Tracks" },
+      { name: "MIT-WPU Pune", courses: "BBA, BCA, MCA & M.Sc Data Science" },
+      { name: "Bharati Vidyapeeth University", courses: "BBA, BCA, MBA & Cyber Security" },
+    ],
+  },
+  {
+    state: "Karnataka",
+    code: "KA",
+    subtitle: "10+ Partner Universities",
+    universities: [
+      { name: "Jain University (Bengaluru)", courses: "BBA, B.Com, MBA & MCA Degrees" },
+      { name: "Manipal Academy of Higher Education", courses: "BBA, BCA, MBA & M.Sc Data Science" },
+      { name: "Christ University (Bengaluru)", courses: "BBA, BCA, MBA & Analytics" },
+      { name: "REVA University", courses: "B.Tech AI/ML, BCA, BBA & MBA" },
+      { name: "Yenepoya University", courses: "BCA, BBA, MBA & Cloud Computing" },
+    ],
+  },
+  {
+    state: "Uttar Pradesh",
+    code: "UP",
+    subtitle: "10+ Partner Universities",
+    universities: [
+      { name: "Amity University Lucknow", courses: "BBA, BCA, B.Com & MBA" },
+      { name: "Mangalayatan University (Aligarh)", courses: "UG & PG Online / Regular Degrees" },
+      { name: "Swami Vivekanand Subharti Univ.", courses: "BBA, BCA, MBA & MCA" },
+      { name: "Sharda University (Greater Noida)", courses: "BBA, B.Tech CSE, MBA & AI" },
+      { name: "Integral University (Lucknow)", courses: "BBA, BCA, MBA & Data Analytics" },
+    ],
+  },
+  {
+    state: "Haryana",
+    code: "HR",
+    subtitle: "8+ Partner Universities",
+    universities: [
+      { name: "Manav Rachna University", courses: "BBA, BCA, MBA & Digital Marketing" },
+      { name: "SGT University (Gurugram)", courses: "BBA, BCA, MBA & Mass Comm" },
+      { name: "GD Goenka University", courses: "BBA, B.Design, MBA & AI" },
+      { name: "K.R. Mangalam University", courses: "BCA, BBA, MBA & Cyber Security" },
+      { name: "Kurukshetra University (DDE)", courses: "BA, B.Com, MBA & MCA" },
+    ],
+  },
+  {
+    state: "Punjab",
+    code: "PB",
+    subtitle: "8+ Partner Universities",
+    universities: [
+      { name: "Lovely Professional University (LPU)", courses: "BBA, BCA, MBA, MCA & Data Science" },
+      { name: "Chandigarh University", courses: "NAAC A+ BBA, BCA, MBA & AI" },
+      { name: "Chitkara University", courses: "BBA, B.Tech AI, MBA & Marketing" },
+      { name: "CT University (Ludhiana)", courses: "BBA, BCA, MBA & Cyber Security" },
+      { name: "Rayat Bahra University", courses: "UG & PG Management & IT Degrees" },
+    ],
+  },
+  {
+    state: "Rajasthan",
+    code: "RJ",
+    subtitle: "8+ Partner Universities",
+    universities: [
+      { name: "Manipal University Jaipur", courses: "UGC-Entitled BBA, BCA, MBA & MCA" },
+      { name: "Amity University Jaipur", courses: "BBA, BCA, MBA & Data Analytics" },
+      { name: "JECRC University", courses: "B.Tech AI, BBA, BCA & MBA" },
+      { name: "Poornima University", courses: "BBA, BCA, MBA & Digital Marketing" },
+      { name: "Vivekananda Global University (VGU)", courses: "Online & Regular UG / PG Degrees" },
+    ],
+  },
+  {
+    state: "Himachal & Uttarakhand",
+    code: "UK",
+    subtitle: "8+ Partner Universities",
+    universities: [
+      { name: "Shoolini University (Solan)", courses: "BBA, BCA, MBA & AI / Data Science" },
+      { name: "UPES (Dehradun)", courses: "BBA, BCA, MBA & Cloud / Cyber Security" },
+      { name: "Uttaranchal University", courses: "Online & Regular BBA, BCA, MBA" },
+      { name: "Graphic Era University", courses: "B.Tech CSE, BCA, BBA & MBA" },
+      { name: "DIT University (Dehradun)", courses: "BCA, BBA, MBA & Data Analytics" },
+    ],
+  },
+  {
+    state: "Gujarat",
+    code: "GJ",
+    subtitle: "6+ Partner Universities",
+    universities: [
+      { name: "Parul University (Vadodara)", courses: "BBA, BCA, MBA & MCA" },
+      { name: "Marwadi University (Rajkot)", courses: "BBA, BCA, MBA & AI/ML" },
+      { name: "Silver Oak University", courses: "BCA, BBA, MBA & Cyber Security" },
+      { name: "Karnavati University", courses: "BBA, Design & MBA Marketing" },
+      { name: "PP Savani University", courses: "BBA, B.Tech IT & MBA" },
+    ],
+  },
+  {
+    state: "Tamil Nadu",
+    code: "TN",
+    subtitle: "8+ Partner Universities",
+    universities: [
+      { name: "SRM Institute of Science & Tech", courses: "BBA, BCA, MBA & Data Science" },
+      { name: "Vellore Institute of Tech (VIT)", courses: "MBA, MCA & Data Analytics" },
+      { name: "Vels University (Chennai)", courses: "BBA, BCA, MBA & Digital Media" },
+      { name: "Hindustan Institute of Technology", courses: "BBA, BCA, MBA & Cyber Security" },
+      { name: "Bharathidasan University (DDE)", courses: "B.Com, BBA, MBA & MCA" },
+    ],
+  },
+];
+
+function CountryFlag({ code }) {
+  switch (code) {
+    case "UK":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect width="60" height="40" fill="#012169" />
+          <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" strokeWidth="7" />
+          <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" strokeWidth="4" />
+          <path d="M30,0 V40 M0,20 H60" stroke="#fff" strokeWidth="12" />
+          <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" strokeWidth="7" />
+        </svg>
+      );
+    case "US":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect width="60" height="40" fill="#fff" />
+          {[0, 6, 12, 18, 24, 30, 36].map((y) => (
+            <rect key={y} y={y} width="60" height="3.2" fill="#B22234" />
+          ))}
+          <rect width="26" height="21" fill="#3C3B6E" />
+        </svg>
+      );
+    case "CA":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect width="15" height="40" fill="#FF0000" />
+          <rect x="15" width="30" height="40" fill="#fff" />
+          <rect x="45" width="15" height="40" fill="#FF0000" />
+          <path d="M30 9 L33 17 L40 16 L35 21 L37 26 L30 23 L23 26 L25 21 L20 16 L27 17 Z" fill="#FF0000" />
+        </svg>
+      );
+    case "AU":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect width="60" height="40" fill="#00008B" />
+          <rect width="28" height="19" fill="#012169" />
+          <path d="M0,0 L28,19 M28,0 L0,19" stroke="#fff" strokeWidth="3" />
+          <path d="M14,0 V19 M0,9.5 H28" stroke="#fff" strokeWidth="5" />
+          <path d="M14,0 V19 M0,9.5 H28" stroke="#C8102E" strokeWidth="3" />
+          <circle cx="45" cy="14" r="2" fill="#fff" />
+          <circle cx="40" cy="24" r="2" fill="#fff" />
+          <circle cx="48" cy="28" r="2" fill="#fff" />
+          <circle cx="14" cy="30" r="3" fill="#fff" />
+        </svg>
+      );
+    case "DE":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect width="60" height="13.4" fill="#000" />
+          <rect y="13.3" width="60" height="13.4" fill="#DD0000" />
+          <rect y="26.6" width="60" height="13.4" fill="#FFCE00" />
+        </svg>
+      );
+    case "IE":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect width="20" height="40" fill="#169B62" />
+          <rect x="20" width="20" height="40" fill="#fff" />
+          <rect x="40" width="20" height="40" fill="#FF883E" />
+        </svg>
+      );
+    case "NZ":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect width="60" height="40" fill="#00247D" />
+          <rect width="28" height="19" fill="#012169" />
+          <path d="M0,0 L28,19 M28,0 L0,19" stroke="#fff" strokeWidth="3" />
+          <path d="M14,0 V19 M0,9.5 H28" stroke="#fff" strokeWidth="5" />
+          <path d="M14,0 V19 M0,9.5 H28" stroke="#C8102E" strokeWidth="3" />
+          <circle cx="45" cy="12" r="2.2" fill="#CC142B" stroke="#fff" strokeWidth="0.8" />
+          <circle cx="40" cy="22" r="2.2" fill="#CC142B" stroke="#fff" strokeWidth="0.8" />
+          <circle cx="50" cy="22" r="2.2" fill="#CC142B" stroke="#fff" strokeWidth="0.8" />
+          <circle cx="45" cy="31" r="2.4" fill="#CC142B" stroke="#fff" strokeWidth="0.8" />
+        </svg>
+      );
+    case "FR":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect width="20" height="40" fill="#0055A4" />
+          <rect x="20" width="20" height="40" fill="#fff" />
+          <rect x="40" width="20" height="40" fill="#EF4135" />
+        </svg>
+      );
+    case "AE":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect x="16" width="44" height="13.4" fill="#00732F" />
+          <rect x="16" y="13.3" width="44" height="13.4" fill="#fff" />
+          <rect x="16" y="26.6" width="44" height="13.4" fill="#000" />
+          <rect width="16" height="40" fill="#FF0000" />
+        </svg>
+      );
+    case "SG":
+      return (
+        <svg viewBox="0 0 60 40" className="site-flag-svg" aria-hidden="true">
+          <rect width="60" height="20" fill="#EF3340" />
+          <rect y="20" width="60" height="20" fill="#fff" />
+          <circle cx="15" cy="10" r="6" fill="#fff" />
+          <circle cx="17.5" cy="10" r="5" fill="#EF3340" />
+        </svg>
+      );
+    default:
+      return <span className="site-abroad-code">{code}</span>;
+  }
+}
+
 const studyAbroadCountries = [
   {
     country: "United Kingdom (UK)",
@@ -203,6 +432,7 @@ export default function PublicNavbar() {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedDomain, setSelectedDomain] = useState(0);
+  const [selectedState, setSelectedState] = useState(0);
   const [selectedCountry, setSelectedCountry] = useState(0);
   const [isMobileViewport, setIsMobileViewport] = useState(false);
   const navRef = useRef(null);
@@ -464,27 +694,55 @@ export default function PublicNavbar() {
                 <a href="/courses/digital-marketing-for-professional" role="menuitem"><strong>Working Professionals</strong><small>Upskill for faster growth and high-paying roles</small></a>
                 <a href="/courses/expert-digital-marketing-course" role="menuitem"><strong>Business Owners &amp; Entrepreneurs</strong><small>Scale your business with digital marketing &amp; AI</small></a>
                 <a href="/courses/advanced-digital-marketing-course" role="menuitem"><strong>Freelancers &amp; Creators</strong><small>Work independently on live international projects</small></a>
+                <a href="/courses/digital-marketing-for-beginners" role="menuitem"><strong>Housewives &amp; Homemakers</strong><small>Restart your career or earn from home with flexible skills</small></a>
               </div>
             </div>
-            <div className={`site-dropdown site-student-dropdown${openMenu === "indian-universities" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("indian-universities")} onMouseLeave={() => setOpenMenu(null)}>
-              <button className="site-more-trigger" type="button" aria-haspopup="menu" aria-expanded={openMenu === "indian-universities"} onClick={() => toggleMenu("indian-universities")}>
+            <div className={`site-dropdown site-abroad-dropdown${openMenu === "indian-universities" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("indian-universities")} onMouseLeave={() => setOpenMenu(null)}>
+              <button className="site-more-trigger" type="button" aria-haspopup="dialog" aria-expanded={openMenu === "indian-universities"} onClick={() => { setSelectedState(0); toggleMenu("indian-universities"); }}>
                 Indian Universities <span className="site-chevron" aria-hidden="true" />
               </button>
-              <div className="site-more-menu site-student-menu site-universities-menu" role="menu">
-                <a href="/degree-digital-marketing" role="menuitem"><strong>Delhi University (DU SOL)</strong><small>UG &amp; PG Open Learning Degrees</small></a>
-                <a href="/degree-digital-marketing" role="menuitem"><strong>Amity University</strong><small>BBA, BCA, MBA &amp; MCA Programs</small></a>
-                <a href="/degree-digital-marketing" role="menuitem"><strong>Manipal University</strong><small>UGC-Entitled UG &amp; PG Degrees</small></a>
-                <a href="/degree-digital-marketing" role="menuitem"><strong>Shoolini University</strong><small>Graduation &amp; Post Graduation Tracks</small></a>
-                <a href="/degree-digital-marketing" role="menuitem"><strong>Lovely Professional University (LPU)</strong><small>Online &amp; Regular UG / PG Degrees</small></a>
-                <a href="/degree-digital-marketing" role="menuitem"><strong>Chandigarh University</strong><small>NAAC A+ UG &amp; PG Programs</small></a>
-                <a href="/degree-digital-marketing" role="menuitem"><strong>Jain University</strong><small>BBA, B.Com, MBA &amp; MCA Degrees</small></a>
-                <a href="/degree-digital-marketing" role="menuitem"><strong>NMIMS Global</strong><small>Management &amp; PG Diploma Programs</small></a>
-                <a href="/degree-digital-marketing" role="menuitem"><strong>DY Patil University</strong><small>Graduation &amp; MBA Programs</small></a>
-                <a href="/degree-digital-marketing" role="menuitem"><strong>UPES</strong><small>Industry-Aligned UG &amp; PG Degrees</small></a>
-                <a href="/degree-digital-marketing" className="site-universities-all" role="menuitem">
-                  <strong>100+ Tie-Up Indian Universities &amp; Colleges</strong>
-                  <small>Explore all Graduation &amp; Post Graduation partners &rarr;</small>
-                </a>
+              <div className="site-abroad-menu" role="dialog" aria-label="Indian Universities by State">
+                <div className="site-abroad-tabs" role="tablist" aria-label="Indian States">
+                  {indianUniversityStates.map((item, idx) => (
+                    <button
+                      key={item.state}
+                      type="button"
+                      role="tab"
+                      aria-selected={selectedState === idx}
+                      className={`site-abroad-tab${selectedState === idx ? " is-selected" : ""}`}
+                      onClick={() => setSelectedState(idx)}
+                      onMouseEnter={() => {
+                        if (window.matchMedia("(min-width: 1024px)").matches) {
+                          setSelectedState(idx);
+                        }
+                      }}
+                    >
+                      <span className="site-abroad-code">{item.code}</span>
+                      <span className="site-abroad-copy">
+                        <strong>{item.state}</strong>
+                        <small>{item.subtitle}</small>
+                      </span>
+                    </button>
+                  ))}
+                </div>
+                <div className="site-abroad-panel" role="tabpanel">
+                  <div className="site-abroad-panel-head">
+                    <h3>{indianUniversityStates[selectedState].state} — Partner Universities</h3>
+                    <p>Top tie-up colleges offering Graduation &amp; Post Graduation</p>
+                  </div>
+                  <div className="site-abroad-uni-list">
+                    {indianUniversityStates[selectedState].universities.map((uni) => (
+                      <a key={uni.name} href="/degree-digital-marketing" className="site-abroad-uni-card">
+                        <strong>{uni.name}</strong>
+                        <small>{uni.courses}</small>
+                      </a>
+                    ))}
+                  </div>
+                  <div className="site-abroad-footer">
+                    <span>100+ Tie-Up Indian Universities &amp; Colleges</span>
+                    <a href="/degree-digital-marketing">Explore All Indian Universities &rarr;</a>
+                  </div>
+                </div>
               </div>
             </div>
             <div className={`site-dropdown site-abroad-dropdown${openMenu === "study-abroad" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("study-abroad")} onMouseLeave={() => setOpenMenu(null)}>
@@ -507,7 +765,7 @@ export default function PublicNavbar() {
                         }
                       }}
                     >
-                      <span className="site-abroad-code">{item.code}</span>
+                      <CountryFlag code={item.code} />
                       <span className="site-abroad-copy">
                         <strong>{item.country}</strong>
                         <small>{item.subtitle}</small>
@@ -516,9 +774,12 @@ export default function PublicNavbar() {
                   ))}
                 </div>
                 <div className="site-abroad-panel" role="tabpanel">
-                  <div className="site-abroad-panel-head">
-                    <h3>{studyAbroadCountries[selectedCountry].country} — Partner Universities</h3>
-                    <p>Top 5 tie-up universities &amp; courses offered</p>
+                  <div className="site-abroad-panel-head site-abroad-head-with-flag">
+                    <CountryFlag code={studyAbroadCountries[selectedCountry].code} />
+                    <div>
+                      <h3>{studyAbroadCountries[selectedCountry].country} — Partner Universities</h3>
+                      <p>Top 5 tie-up universities &amp; courses offered</p>
+                    </div>
                   </div>
                   <div className="site-abroad-uni-list">
                     {studyAbroadCountries[selectedCountry].universities.map((uni) => (
