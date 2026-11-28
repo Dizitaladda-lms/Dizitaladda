@@ -355,9 +355,6 @@ export default function PublicNavbar() {
                 <a href="/affiliate-program/affiliate-system/affiliate/register" role="menuitem"><strong>Refer &amp; Earn</strong><small>Join our affiliate program and earn through referrals</small></a>
               </div>
             </div>
-            <a href="#bookDemo" className="site-nav-signup-btn">
-              SIGN UP
-            </a>
           </div>
         </div>
       </nav>

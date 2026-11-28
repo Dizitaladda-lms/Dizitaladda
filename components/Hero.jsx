@@ -103,10 +103,16 @@ export default function Hero() {
   useEffect(() => {
     const updateNavHeight = () => {
       const nav = document.querySelector(".site-nav");
+      const categoryNav = document.querySelector(".site-category-nav");
       if (nav) {
-        const navH = Math.round(nav.getBoundingClientRect().height || 0);
-        if (navH > 0) {
-          document.documentElement.style.setProperty("--site-nav-h", `${navH}px`);
+        const navH = nav.getBoundingClientRect().height || 0;
+        const catH =
+          categoryNav && window.getComputedStyle(categoryNav).display !== "none"
+            ? categoryNav.getBoundingClientRect().height
+            : 0;
+        const total = Math.round(navH + catH);
+        if (total > 0) {
+          document.documentElement.style.setProperty("--site-nav-h", `${total}px`);
         }
       }
     };
@@ -129,22 +135,29 @@ export default function Hero() {
 
   return (
     <section id="dizitaladda-home-hero" className="dz-upgrad-hero">
-      {/* 1. Full-bleed campus background */}
+      {/* 1. Full-bleed background */}
       <div className="dz-upgrad-hero-bg">
         <img
-          src="/images/hero-campus.jpeg"
-          alt="University Campus Architecture"
+          src="/images/campus-architecture.jpg"
+          alt="DizitalAdda Learning Campus"
           className="dz-upgrad-bg-img"
         />
         <div className="dz-upgrad-overlay" />
       </div>
 
-      {/* 2. Centered Two-Line Headline & Search Pill */}
+      {/* 2. Centered Content from Reference */}
       <div className="dz-upgrad-hero-center">
         <h1 className="dz-upgrad-title">
-          <span className="dz-upgrad-title-serif">For Your Every Next</span>
-          <span className="dz-upgrad-title-bold">Ambition</span>
+          India&apos;s Best{" "}
+          <span className="dz-upgrad-highlight">Digital Marketing Institute</span>{" "}
+          |{" "}
+          <span className="dz-upgrad-highlight">AI, Data Science &amp; Cyber Security</span>{" "}
+          Courses
         </h1>
+
+        <p className="dz-upgrad-description">
+          Live projects, real campaigns and expert mentors at DizitalAdda. Build career-focused, job-ready skills that get you hired or help you grow your own business.
+        </p>
 
         <form className="dz-upgrad-search-form" onSubmit={handleSearchSubmit}>
           <div className="dz-upgrad-search-pill">
@@ -170,6 +183,35 @@ export default function Hero() {
             </button>
           </div>
         </form>
+
+        <div className="dz-upgrad-actions">
+          <a className="dz-upgrad-btn dz-upgrad-btn-primary" href="#bookDemo">
+            Book Free Demo Class
+          </a>
+          <a
+            className="dz-upgrad-btn dz-upgrad-btn-secondary"
+            href="/assets/pdfs/Digital-Marketing-Course-for-Professionals.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Download Brochure
+          </a>
+        </div>
+
+        <div className="dz-upgrad-stats" aria-label="DizitalAdda at a glance">
+          <div className="dz-upgrad-stat">
+            <strong className="dz-upgrad-stat-number">25000+</strong>
+            <span className="dz-upgrad-stat-label">Students trained</span>
+          </div>
+          <div className="dz-upgrad-stat">
+            <strong className="dz-upgrad-stat-number">20+</strong>
+            <span className="dz-upgrad-stat-label">Courses</span>
+          </div>
+          <div className="dz-upgrad-stat">
+            <strong className="dz-upgrad-stat-number">100%</strong>
+            <span className="dz-upgrad-stat-label">Practical learning</span>
+          </div>
+        </div>
       </div>
 
       {/* 3. Bottom Category Pills Row */}
