@@ -118,7 +118,7 @@ export default function Hero() {
       {/* 1. Full-bleed background */}
       <div className="dz-upgrad-hero-bg">
         <img
-          src="/images/hero2.webp"
+          src="/images/classroom.jpeg"
           alt="DizitalAdda Learning Campus"
           className="dz-upgrad-bg-img"
         />
