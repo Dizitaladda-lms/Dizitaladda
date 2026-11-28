@@ -1012,24 +1012,33 @@ button.student-project-video-action{cursor:pointer}
 }
 
 .site-nav-inner {
-  width: min(1380px, calc(100% - 32px));
+  width: min(1420px, calc(100% - 28px));
   min-height: 62px !important;
   margin: 12px auto 0 !important;
-  padding: 8px 10px 8px 26px !important;
+  padding: 8px 10px 8px 24px !important;
   background: #ffffff;
   border-radius: 9999px;
   border: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12), 0 1px 4px rgba(15, 23, 42, 0.06);
-  gap: 20px !important;
+  gap: 16px !important;
 }
 
 .site-brand img {
-  width: 175px !important;
+  width: 155px !important;
 }
 
 .site-links {
-  justify-content: center;
-  gap: 26px !important;
+  justify-content: flex-start;
+  gap: 18px !important;
+}
+
+.site-links > .site-dropdown:first-child {
+  margin-left: auto;
+}
+
+.site-nav-link,
+.site-more-trigger {
+  font-size: 13.5px !important;
 }
 
 .site-nav-link:first-of-type {
@@ -1040,7 +1049,8 @@ button.student-project-video-action{cursor:pointer}
   background: transparent !important;
   color: #1f2937 !important;
   box-shadow: none !important;
-  padding: 8px 6px !important;
+  padding: 8px 4px !important;
+  font-size: 13.5px !important;
   font-weight: 500 !important;
 }
 
@@ -1053,8 +1063,9 @@ button.student-project-video-action{cursor:pointer}
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   margin-left: auto;
-  padding: 10px 24px;
+  padding: 10px 22px;
   border-radius: 9999px;
   background: linear-gradient(90deg, #7c3aed 0%, #9333ea 100%);
   color: #ffffff !important;

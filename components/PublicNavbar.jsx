@@ -330,16 +330,37 @@ export default function PublicNavbar() {
                 </div>
               </div>
             </div>
-            <div className={`site-dropdown site-student-dropdown${openMenu === "student-centric" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("student-centric")} onMouseLeave={() => setOpenMenu(null)}>
-              <button ref={studentTriggerRef} className="site-more-trigger" type="button" aria-haspopup="menu" aria-expanded={openMenu === "student-centric"} onClick={() => toggleMenu("student-centric")}>
-                Student Centric <span className="site-chevron" aria-hidden="true" />
+            <div className={`site-dropdown site-student-dropdown${openMenu === "who-can-join" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("who-can-join")} onMouseLeave={() => setOpenMenu(null)}>
+              <button ref={studentTriggerRef} className="site-more-trigger" type="button" aria-haspopup="menu" aria-expanded={openMenu === "who-can-join"} onClick={() => toggleMenu("who-can-join")}>
+                Who Can Join <span className="site-chevron" aria-hidden="true" />
               </button>
               <div className="site-more-menu site-student-menu" role="menu">
-                <a href="/review" role="menuitem"><strong>Student Review</strong><small>Real stories and feedback from our learners</small></a>
-                <a href="/about-us#mentorsTrack" role="menuitem"><strong>Trainer</strong><small>Learn from experienced industry professionals</small></a>
-                <a href="/digital-marketing-course-in-delhi#campus-tour" role="menuitem"><strong>Campus Tour</strong><small>Explore our classrooms and learning spaces</small></a>
-                <a href="/success-stories" role="menuitem"><strong>Placement Review</strong><small>See student outcomes and career journeys</small></a>
-                <a href="/gallery" role="menuitem"><strong>Our Events</strong><small>Workshops, celebrations and campus activities</small></a>
+                <a href="/#courses" role="menuitem"><strong>Students &amp; Freshers</strong><small>Start your career right after 12th or graduation</small></a>
+                <a href="/#courses" role="menuitem"><strong>Job Seekers</strong><small>Build job-ready skills with 100% placement support</small></a>
+                <a href="/courses/digital-marketing-for-professional" role="menuitem"><strong>Working Professionals</strong><small>Upskill for faster growth and high-paying roles</small></a>
+                <a href="/courses/expert-digital-marketing-course" role="menuitem"><strong>Business Owners &amp; Entrepreneurs</strong><small>Scale your business with digital marketing &amp; AI</small></a>
+                <a href="/courses/advanced-digital-marketing-course" role="menuitem"><strong>Freelancers &amp; Creators</strong><small>Work independently on live international projects</small></a>
+              </div>
+            </div>
+            <div className={`site-dropdown site-student-dropdown${openMenu === "indian-universities" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("indian-universities")} onMouseLeave={() => setOpenMenu(null)}>
+              <button className="site-more-trigger" type="button" aria-haspopup="menu" aria-expanded={openMenu === "indian-universities"} onClick={() => toggleMenu("indian-universities")}>
+                Indian Universities <span className="site-chevron" aria-hidden="true" />
+              </button>
+              <div className="site-more-menu site-student-menu" role="menu">
+                <a href="/degree-digital-marketing" role="menuitem"><strong>Degree &amp; Diploma Programs</strong><small>University-backed career programs in Digital &amp; AI</small></a>
+                <a href="/#courses" role="menuitem"><strong>Skill India &amp; Digital India</strong><small>Authorised training aligned with national skill frameworks</small></a>
+                <a href="/#courses" role="menuitem"><strong>AICTE &amp; SWAYAM Aligned</strong><small>Recognized learning tracks and certification support</small></a>
+                <a href="/about-us" role="menuitem"><strong>Academic &amp; Hiring Partners</strong><small>350+ university and corporate hiring partnerships</small></a>
+              </div>
+            </div>
+            <div className={`site-dropdown site-student-dropdown${openMenu === "study-abroad" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("study-abroad")} onMouseLeave={() => setOpenMenu(null)}>
+              <button className="site-more-trigger" type="button" aria-haspopup="menu" aria-expanded={openMenu === "study-abroad"} onClick={() => toggleMenu("study-abroad")}>
+                Study Abroad <span className="site-chevron" aria-hidden="true" />
+              </button>
+              <div className="site-more-menu site-student-menu" role="menu">
+                <a href="/courses" role="menuitem"><strong>Global Career Pathways</strong><small>Internationally recognized AI, Data &amp; Marketing tracks</small></a>
+                <a href="/contact-us" role="menuitem"><strong>Overseas University Counselling</strong><small>1-on-1 guidance for international study programs</small></a>
+                <a href="/success-stories" role="menuitem"><strong>Global Portfolio Prep</strong><small>Build real-world projects for abroad opportunities</small></a>
               </div>
             </div>
             <a className="site-nav-link" href="/about-us">About Us</a>
@@ -349,13 +370,17 @@ export default function PublicNavbar() {
                 More <span className="site-chevron" aria-hidden="true" />
               </button>
               <div className="site-more-menu" role="menu">
+                <a href="/review" role="menuitem"><strong>Student Review</strong><small>Real stories and feedback from our learners</small></a>
+                <a href="/about-us#mentorsTrack" role="menuitem"><strong>Trainers</strong><small>Learn from experienced industry professionals</small></a>
+                <a href="/digital-marketing-course-in-delhi#campus-tour" role="menuitem"><strong>Campus Tour</strong><small>Explore our classrooms and learning spaces</small></a>
+                <a href="/gallery" role="menuitem"><strong>Our Events</strong><small>Workshops, celebrations and campus activities</small></a>
                 <a href="/blogs" role="menuitem"><strong>Blogs</strong><small>Read practical insights on marketing, AI and technology</small></a>
                 <a href="/success-stories" role="menuitem"><strong>Success Stories</strong><small>Explore learner achievements and career journeys</small></a>
                 <a href="/terms-of-use" role="menuitem"><strong>Terms &amp; Conditions</strong><small>Review the terms for using our website and services</small></a>
                 <a href="/affiliate-program/affiliate-system/affiliate/register" role="menuitem"><strong>Refer &amp; Earn</strong><small>Join our affiliate program and earn through referrals</small></a>
               </div>
             </div>
-            <a href="#bookDemo" className="site-nav-cta-pill">Book Demo</a>
+            <a href="/enroll-upay" className="site-nav-cta-pill">Pay Now</a>
           </div>
         </div>
       </nav>
