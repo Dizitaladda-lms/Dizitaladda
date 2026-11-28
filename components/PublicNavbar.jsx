@@ -74,12 +74,136 @@ const courseTerms = [
   { id: "long", label: "Long Term Course", duration: "1 Year" },
 ];
 
+const studyAbroadCountries = [
+  {
+    country: "United Kingdom (UK)",
+    code: "UK",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "University of Birmingham", courses: "MSc Digital Marketing, MBA, Data Science" },
+      { name: "University of Leeds", courses: "BSc Computer Science, MSc AI & Analytics" },
+      { name: "University of Greenwich", courses: "BBA, MBA, Cyber Security & Forensics" },
+      { name: "Coventry University", courses: "BSc Data Science, MSc Digital Business" },
+      { name: "University of East London", courses: "MBA, MSc FinTech & Artificial Intelligence" },
+    ],
+  },
+  {
+    country: "United States (USA)",
+    code: "US",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "Arizona State University", courses: "MS Business Analytics, BS Digital Marketing" },
+      { name: "Northeastern University", courses: "MS Data Science, MS Cyber Security" },
+      { name: "University of Texas at Dallas", courses: "MS Information Tech, MBA Marketing" },
+      { name: "Pace University (New York)", courses: "BBA Marketing, MS Computer Science" },
+      { name: "California State University", courses: "MBA, BS Data Analytics & AI" },
+    ],
+  },
+  {
+    country: "Canada",
+    code: "CA",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "University of Toronto (SCS)", courses: "Data Science, Digital Marketing, Cyber Security" },
+      { name: "York University", courses: "BBA, MBA, Post-Grad Digital & AI" },
+      { name: "Seneca Polytechnic", courses: "PG Diploma Marketing, Data Analytics" },
+      { name: "Humber College", courses: "BCom Digital Business, Cloud & Cyber Security" },
+      { name: "University Canada West", courses: "MBA, BCom Business & Technology" },
+    ],
+  },
+  {
+    country: "Australia",
+    code: "AU",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "University of Melbourne", courses: "Master of Digital Marketing, MS Data Science" },
+      { name: "Monash University", courses: "Bachelor of IT, Master of Cybersecurity" },
+      { name: "Deakin University", courses: "MBA, Master of Business Analytics" },
+      { name: "RMIT University", courses: "Bachelor of Design (UI/UX), Master of AI" },
+      { name: "Macquarie University", courses: "Master of Marketing, BS Cyber Security" },
+    ],
+  },
+  {
+    country: "Germany",
+    code: "DE",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "GISMA University of Applied Sciences", courses: "MSc Data Science, AI & Digital Business" },
+      { name: "SRH Berlin University", courses: "MA Digital Marketing, MSc Cyber Security" },
+      { name: "BSBI (Berlin)", courses: "MBA, MSc Digital Marketing & Analytics" },
+      { name: "IU International University", courses: "BSc Data Science, MBA Tech Management" },
+      { name: "EU Business School Munich", courses: "BBA, MBA Digital Business" },
+    ],
+  },
+  {
+    country: "Ireland",
+    code: "IE",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "Trinity College Dublin", courses: "MSc Digital Marketing Strategy, MSc Data Science" },
+      { name: "University College Dublin (UCD)", courses: "MSc Business Analytics, MBA" },
+      { name: "Dublin Business School (DBS)", courses: "MBA, MSc Cyber Security & FinTech" },
+      { name: "National College of Ireland", courses: "MSc AI, MSc Data Analytics" },
+      { name: "University of Galway", courses: "MSc Digital Marketing, BSc Computer Science" },
+    ],
+  },
+  {
+    country: "New Zealand",
+    code: "NZ",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "University of Auckland", courses: "Master of Marketing, MSc Data Science" },
+      { name: "Auckland University of Technology (AUT)", courses: "Bachelor of Digital Design, MSc Cyber Security" },
+      { name: "Victoria University of Wellington", courses: "Master of Business Analysis, AI" },
+      { name: "University of Waikato", courses: "Master of Digital Business, Cyber Security" },
+      { name: "Massey University", courses: "Master of Analytics, MBA" },
+    ],
+  },
+  {
+    country: "France",
+    code: "FR",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "SKEMA Business School", courses: "MSc Digital Marketing, Global MBA" },
+      { name: "EDHEC Business School", courses: "MSc Data Analytics & Artificial Intelligence" },
+      { name: "NEOMA Business School", courses: "MSc Digital & Innovative Marketing" },
+      { name: "EMLyon Business School", courses: "MSc Cybersecurity & Digital Leadership" },
+      { name: "KEDGE Business School", courses: "MBA, MSc Digital Marketing & Sales" },
+    ],
+  },
+  {
+    country: "UAE (Dubai)",
+    code: "AE",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "Heriot-Watt University Dubai", courses: "MSc Digital Marketing, BSc Data Science" },
+      { name: "Middlesex University Dubai", courses: "MBA, MSc Cyber Security & Pen Testing" },
+      { name: "University of Wollongong Dubai", courses: "BBA, Master of Applied AI" },
+      { name: "Murdoch University Dubai", courses: "BSc Cyber Security, MBA Digital" },
+      { name: "SP Jain School of Global Management", courses: "BBA, Global MBA, Big Data" },
+    ],
+  },
+  {
+    country: "Singapore",
+    code: "SG",
+    subtitle: "5+ Partner Universities",
+    universities: [
+      { name: "PSB Academy Singapore", courses: "Bachelor of Digital Marketing, Cyber Security" },
+      { name: "SIM Global Education", courses: "BSc Data Science, Business Analytics" },
+      { name: "Kaplan Higher Education Singapore", courses: "BBA, MBA, FinTech & AI" },
+      { name: "James Cook University Singapore", courses: "BTech IT, MBA Analytics" },
+      { name: "MDIS Singapore", courses: "BSc Digital Media, MSc Technology Management" },
+    ],
+  },
+];
+
 
 
 export default function PublicNavbar() {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedDomain, setSelectedDomain] = useState(0);
+  const [selectedCountry, setSelectedCountry] = useState(0);
   const [isMobileViewport, setIsMobileViewport] = useState(false);
   const navRef = useRef(null);
   const mobileTriggerRef = useRef(null);
@@ -346,21 +470,69 @@ export default function PublicNavbar() {
               <button className="site-more-trigger" type="button" aria-haspopup="menu" aria-expanded={openMenu === "indian-universities"} onClick={() => toggleMenu("indian-universities")}>
                 Indian Universities <span className="site-chevron" aria-hidden="true" />
               </button>
-              <div className="site-more-menu site-student-menu" role="menu">
-                <a href="/degree-digital-marketing" role="menuitem"><strong>Degree &amp; Diploma Programs</strong><small>University-backed career programs in Digital &amp; AI</small></a>
-                <a href="/#courses" role="menuitem"><strong>Skill India &amp; Digital India</strong><small>Authorised training aligned with national skill frameworks</small></a>
-                <a href="/#courses" role="menuitem"><strong>AICTE &amp; SWAYAM Aligned</strong><small>Recognized learning tracks and certification support</small></a>
-                <a href="/about-us" role="menuitem"><strong>Academic &amp; Hiring Partners</strong><small>350+ university and corporate hiring partnerships</small></a>
+              <div className="site-more-menu site-student-menu site-universities-menu" role="menu">
+                <a href="/degree-digital-marketing" role="menuitem"><strong>Delhi University (DU SOL)</strong><small>UG &amp; PG Open Learning Degrees</small></a>
+                <a href="/degree-digital-marketing" role="menuitem"><strong>Amity University</strong><small>BBA, BCA, MBA &amp; MCA Programs</small></a>
+                <a href="/degree-digital-marketing" role="menuitem"><strong>Manipal University</strong><small>UGC-Entitled UG &amp; PG Degrees</small></a>
+                <a href="/degree-digital-marketing" role="menuitem"><strong>Shoolini University</strong><small>Graduation &amp; Post Graduation Tracks</small></a>
+                <a href="/degree-digital-marketing" role="menuitem"><strong>Lovely Professional University (LPU)</strong><small>Online &amp; Regular UG / PG Degrees</small></a>
+                <a href="/degree-digital-marketing" role="menuitem"><strong>Chandigarh University</strong><small>NAAC A+ UG &amp; PG Programs</small></a>
+                <a href="/degree-digital-marketing" role="menuitem"><strong>Jain University</strong><small>BBA, B.Com, MBA &amp; MCA Degrees</small></a>
+                <a href="/degree-digital-marketing" role="menuitem"><strong>NMIMS Global</strong><small>Management &amp; PG Diploma Programs</small></a>
+                <a href="/degree-digital-marketing" role="menuitem"><strong>DY Patil University</strong><small>Graduation &amp; MBA Programs</small></a>
+                <a href="/degree-digital-marketing" role="menuitem"><strong>UPES</strong><small>Industry-Aligned UG &amp; PG Degrees</small></a>
+                <a href="/degree-digital-marketing" className="site-universities-all" role="menuitem">
+                  <strong>100+ Tie-Up Indian Universities &amp; Colleges</strong>
+                  <small>Explore all Graduation &amp; Post Graduation partners &rarr;</small>
+                </a>
               </div>
             </div>
-            <div className={`site-dropdown site-student-dropdown${openMenu === "study-abroad" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("study-abroad")} onMouseLeave={() => setOpenMenu(null)}>
-              <button className="site-more-trigger" type="button" aria-haspopup="menu" aria-expanded={openMenu === "study-abroad"} onClick={() => toggleMenu("study-abroad")}>
+            <div className={`site-dropdown site-abroad-dropdown${openMenu === "study-abroad" ? " is-open" : ""}`} onMouseEnter={() => openOnDesktopHover("study-abroad")} onMouseLeave={() => setOpenMenu(null)}>
+              <button className="site-more-trigger" type="button" aria-haspopup="dialog" aria-expanded={openMenu === "study-abroad"} onClick={() => { setSelectedCountry(0); toggleMenu("study-abroad"); }}>
                 Study Abroad <span className="site-chevron" aria-hidden="true" />
               </button>
-              <div className="site-more-menu site-student-menu" role="menu">
-                <a href="/courses" role="menuitem"><strong>Global Career Pathways</strong><small>Internationally recognized AI, Data &amp; Marketing tracks</small></a>
-                <a href="/contact-us" role="menuitem"><strong>Overseas University Counselling</strong><small>1-on-1 guidance for international study programs</small></a>
-                <a href="/success-stories" role="menuitem"><strong>Global Portfolio Prep</strong><small>Build real-world projects for abroad opportunities</small></a>
+              <div className="site-abroad-menu" role="dialog" aria-label="Study Abroad Partner Universities">
+                <div className="site-abroad-tabs" role="tablist" aria-label="Study Abroad Countries">
+                  {studyAbroadCountries.map((item, idx) => (
+                    <button
+                      key={item.country}
+                      type="button"
+                      role="tab"
+                      aria-selected={selectedCountry === idx}
+                      className={`site-abroad-tab${selectedCountry === idx ? " is-selected" : ""}`}
+                      onClick={() => setSelectedCountry(idx)}
+                      onMouseEnter={() => {
+                        if (window.matchMedia("(min-width: 1024px)").matches) {
+                          setSelectedCountry(idx);
+                        }
+                      }}
+                    >
+                      <span className="site-abroad-code">{item.code}</span>
+                      <span className="site-abroad-copy">
+                        <strong>{item.country}</strong>
+                        <small>{item.subtitle}</small>
+                      </span>
+                    </button>
+                  ))}
+                </div>
+                <div className="site-abroad-panel" role="tabpanel">
+                  <div className="site-abroad-panel-head">
+                    <h3>{studyAbroadCountries[selectedCountry].country} — Partner Universities</h3>
+                    <p>Top 5 tie-up universities &amp; courses offered</p>
+                  </div>
+                  <div className="site-abroad-uni-list">
+                    {studyAbroadCountries[selectedCountry].universities.map((uni) => (
+                      <a key={uni.name} href="/contact-us" className="site-abroad-uni-card">
+                        <strong>{uni.name}</strong>
+                        <small>{uni.courses}</small>
+                      </a>
+                    ))}
+                  </div>
+                  <div className="site-abroad-footer">
+                    <span>50+ Global Partner Universities Across 10+ Countries</span>
+                    <a href="/contact-us">Explore All Study Abroad Partners &rarr;</a>
+                  </div>
+                </div>
               </div>
             </div>
             <a className="site-nav-link" href="/about-us">About Us</a>
