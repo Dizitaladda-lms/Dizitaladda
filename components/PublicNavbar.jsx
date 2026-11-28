@@ -174,6 +174,89 @@ export default function PublicNavbar() {
   return (
     <>
       <nav className="site-nav" aria-label="Main navigation" ref={navRef}>
+        {/* Continuous Announcement & Offers Marquee Bar */}
+        <div className="site-announcement-bar" aria-label="Latest course announcements and special offers">
+          <div className="site-announcement-inner">
+            <div className="site-announcement-track">
+              {/* Group 1 */}
+              <div className="site-announcement-group">
+                <a href="#bookDemo" className="site-announcement-item">
+                  <span className="site-announcement-badge">Special Offer</span>
+                  <span className="site-announcement-text">Flat <strong>20% OFF</strong> on Long-Term Professional Diplomas</span>
+                  <span className="site-announcement-link">Claim Offer &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/#courses" className="site-announcement-item">
+                  <span className="site-announcement-badge">New Batches</span>
+                  <span className="site-announcement-text">Weekday &amp; Weekend Batches Starting This Monday</span>
+                  <span className="site-announcement-link">Reserve Seat &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/courses/diploma-in-data-analytics-and-ai" className="site-announcement-item">
+                  <span className="site-announcement-badge">In-Demand Courses</span>
+                  <span className="site-announcement-text">Data Science, GenAI, Cyber Security &amp; Digital Marketing</span>
+                  <span className="site-announcement-link">Explore &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="#bookDemo" className="site-announcement-item">
+                  <span className="site-announcement-badge">Free Demo</span>
+                  <span className="site-announcement-text">1-on-1 Career Counselling &amp; Live Class Access</span>
+                  <span className="site-announcement-link">Book Free &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/success-stories" className="site-announcement-item">
+                  <span className="site-announcement-badge">100% Placement</span>
+                  <span className="site-announcement-text">Live Client Projects &amp; 350+ Top Hiring Partners</span>
+                  <span className="site-announcement-link">View Stories &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+              </div>
+
+              {/* Group 2 (Exact Duplicate for Seamless Infinite Loop) */}
+              <div className="site-announcement-group" aria-hidden="true">
+                <a href="#bookDemo" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge">Special Offer</span>
+                  <span className="site-announcement-text">Flat <strong>20% OFF</strong> on Long-Term Professional Diplomas</span>
+                  <span className="site-announcement-link">Claim Offer &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/#courses" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge">New Batches</span>
+                  <span className="site-announcement-text">Weekday &amp; Weekend Batches Starting This Monday</span>
+                  <span className="site-announcement-link">Reserve Seat &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/courses/diploma-in-data-analytics-and-ai" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge">In-Demand Courses</span>
+                  <span className="site-announcement-text">Data Science, GenAI, Cyber Security &amp; Digital Marketing</span>
+                  <span className="site-announcement-link">Explore &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="#bookDemo" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge">Free Demo</span>
+                  <span className="site-announcement-text">1-on-1 Career Counselling &amp; Live Class Access</span>
+                  <span className="site-announcement-link">Book Free &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+
+                <a href="/success-stories" className="site-announcement-item" tabIndex="-1">
+                  <span className="site-announcement-badge">100% Placement</span>
+                  <span className="site-announcement-text">Live Client Projects &amp; 350+ Top Hiring Partners</span>
+                  <span className="site-announcement-link">View Stories &rarr;</span>
+                </a>
+                <span className="site-announcement-sep" aria-hidden="true">&#9670;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="site-nav-inner">
           <a className="site-brand" href="/" aria-label="DizitalAdda home">
             <img src="/logo.png" alt="DizitalAdda" />
@@ -272,6 +355,9 @@ export default function PublicNavbar() {
                 <a href="/affiliate-program/affiliate-system/affiliate/register" role="menuitem"><strong>Refer &amp; Earn</strong><small>Join our affiliate program and earn through referrals</small></a>
               </div>
             </div>
+            <a href="#bookDemo" className="site-nav-signup-btn">
+              SIGN UP
+            </a>
           </div>
         </div>
       </nav>

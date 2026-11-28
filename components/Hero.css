@@ -1,358 +1,281 @@
 /* ==========================================================================
-   DIZITALADDA HOME HERO - SEAMLESS DUAL-GRADIENT MELT REDESIGN
+   DIZITALADDA HOME HERO - UPGRAD-STYLE LAYOUT
    ========================================================================== */
 
 :root {
-  --site-nav-h: 176px;
+  --site-nav-h: 126px;
 }
 
 @media (max-width: 1023px) {
   :root {
-    --site-nav-h: 70px;
+    --site-nav-h: 102px;
   }
 }
 
-.dz-hero,
-.dz-hero * {
+.dz-upgrad-hero,
+.dz-upgrad-hero * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* 1. SECTION WRAPPER: Full width, solid white, overflow hidden, min-height ~680px */
-.dz-hero {
+.dz-upgrad-hero {
   position: relative;
   width: 100%;
-  min-height: 680px;
-  height: calc(100vh - var(--site-nav-h, 176px));
-  height: calc(100dvh - var(--site-nav-h, 176px));
-  background-color: #ffffff;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  font-family: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  color: #111827;
-  line-height: 1.5;
-}
-
-/* 2. LEFT COLUMN: Text content (~52% width, padding-left 72px, vertically centered) */
-/* text width: yahan badlo */
-.dz-hero-text-col {
-  position: relative;
-  z-index: 10; /* Text content gradient ke upar rahe aur clearly readable ho */
-  width: 52%;
-  min-width: 52%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: clamp(40px, 5vw, 72px);
-  padding-right: 24px;
-}
-
-.dz-hero-content {
-  width: 100%;
-  max-width: 640px;
-}
-
-/* Heading: "India's Best" & "Courses" in black, middle in purple gradient */
-.dz-title {
-  color: #111827;
-  font-size: clamp(32px, 2.75vw, 46px);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin: 0;
-}
-
-.dz-highlight {
-  background: linear-gradient(90deg, #7c3aed 0%, #9333ea 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #7c3aed;
-}
-
-/* Paragraph: Clean readable grey text */
-.dz-description {
-  color: #4b5563;
-  font-size: clamp(14px, 1.05vw, 16px);
-  font-weight: 400;
-  line-height: 1.65;
-  margin-top: 18px;
-  max-width: 580px;
-}
-
-/* Two Buttons: Demo (filled purple glow) + Brochure (white, purple border) */
-.dz-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 26px;
-  align-items: center;
-}
-
-.dz-button {
-  display: inline-flex;
-  min-height: 48px;
-  align-items: center;
-  justify-content: center;
-  padding: 12px clamp(20px, 1.8vw, 26px);
-  border-radius: 8px; /* rounded corners ~8px */
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.dz-button:hover {
-  transform: translateY(-2px);
-}
-
-.dz-button-primary {
-  background: linear-gradient(90deg, #7c3aed 0%, #9333ea 100%);
-  color: #ffffff;
-  border: 2px solid transparent;
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35); /* soft purple glow shadow */
-}
-
-.dz-button-primary:hover {
-  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.45);
-}
-
-.dz-button-secondary {
-  background: #ffffff;
-  color: #7c3aed;
-  border: 2px solid #7c3aed; /* purple border */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-.dz-button-secondary:hover {
-  background: #faf5ff;
-}
-
-/* Stats Row: 3 columns, big bold number, small grey label */
-.dz-hero-stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2.5vw, 36px);
-  margin-top: 36px;
-  border-top: 0;
-}
-
-.dz-stat {
+  min-height: calc(100vh - var(--site-nav-h, 126px));
+  min-height: calc(100dvh - var(--site-nav-h, 126px));
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
-
-.dz-stat-number {
-  color: #111827;
-  font-size: clamp(24px, 2vw, 32px);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.dz-stat-label {
-  color: #6b7280;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-/* 3. RIGHT COLUMN: Image container (~62% width, right-aligned, full height) */
-/* image width: yahan badlo */
-.dz-hero-image-col {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 62%;
-  height: 100%;
+  justify-content: space-between;
+  align-items: center;
   overflow: hidden;
-  z-index: 1;
+  font-family: var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111827;
+  background-color: #0c0a09;
 }
 
-.dz-image-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-}
-
-/* Base Image */
-.dz-hero-image {
+/* 1. Full-bleed campus background */
+.dz-upgrad-hero-bg {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dz-upgrad-bg-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 55% center;
-  opacity: 1;
-  z-index: 1;
+  object-position: center 36%;
+  filter: contrast(1.04) brightness(0.96);
 }
 
-/* 4. GRADIENT BLEND: Left-side melt into white text area */
-/* Right side and bottom are 100% CLEAR - no white fog */
-/* fade length: yahan % badlo */
-.dz-image-container::before {
-  content: "";
+.dz-upgrad-overlay {
   position: absolute;
   inset: 0;
-  z-index: 2;
-  pointer-events: none;
+  /* Subtle contrast wash matching the aesthetic of reference upGrad banner */
   background: linear-gradient(
-    to right,
-    #ffffff 0%,
-    rgba(255, 255, 255, 0.95) 8%,
-    rgba(255, 255, 255, 0.72) 16%,
-    rgba(255, 255, 255, 0.35) 24%,
-    rgba(255, 255, 255, 0.08) 30%,
-    rgba(255, 255, 255, 0.00) 35%,
-    rgba(255, 255, 255, 0.00) 100%
+    180deg,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.18) 35%,
+    rgba(255, 255, 255, 0.28) 70%,
+    rgba(255, 255, 255, 0.6) 100%
   );
 }
 
-/* 5. Vertical fade disabled so bottom/floor of image is 100% crisp and clear */
-.dz-image-container::after {
-  display: none;
+/* 2. Centered Content: Two-Line Headline & Search Pill */
+.dz-upgrad-hero-center {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 860px;
+  margin: auto auto 28px;
+  padding: 44px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* 6. Carousel Dots: 4 dots, 3rd active and white pill shape */
-.dz-carousel-dots {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
+/* Headline: Serif italic red on top, bold dark below */
+.dz-upgrad-title {
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 28px;
+}
+
+.dz-upgrad-title-serif {
+  font-family: "Georgia", "Playfair Display", "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(38px, 4.8vw, 64px);
+  font-weight: 700;
+  color: #e53935; /* Coral red from upGrad */
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
+}
+
+.dz-upgrad-title-bold {
+  font-family: var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(34px, 4.2vw, 56px);
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
+}
+
+/* Search Bar Pill */
+.dz-upgrad-search-form {
+  width: 100%;
+  max-width: 620px;
+}
+
+.dz-upgrad-search-pill {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  padding: 6px 8px 6px 20px;
+  gap: 14px;
+  background: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.dz-upgrad-search-pill:focus-within {
+  box-shadow: 0 14px 44px rgba(229, 57, 53, 0.22), 0 0 0 2px rgba(229, 57, 53, 0.28);
+  border-color: #e53935;
+}
+
+.dz-upgrad-search-icon {
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: #e53935;
+  flex-shrink: 0;
 }
 
-.dz-carousel-dot {
-  width: 8px;
-  height: 8px;
+.dz-upgrad-search-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dz-upgrad-search-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: #1f2937;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.dz-upgrad-search-input::placeholder {
+  color: #7b7b7b;
+  font-weight: 400;
+}
+
+.dz-upgrad-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  border: 0;
-  background: rgba(255, 255, 255, 0.65);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  background: #e53935;
+  color: #ffffff;
+  border: none;
   cursor: pointer;
-  transition: all 0.25s ease;
-  padding: 0;
+  flex-shrink: 0;
+  transition: transform 0.18s ease, background 0.18s ease;
 }
 
-.dz-carousel-dot.dz-active {
-  width: 28px;
-  border-radius: 999px; /* lamba pill shape */
+.dz-upgrad-search-btn:hover {
+  background: #d32f2f;
+  transform: scale(1.05);
+}
+
+.dz-upgrad-search-btn:active {
+  transform: scale(0.96);
+}
+
+.dz-upgrad-search-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* 3. Bottom Category Pills Row */
+.dz-upgrad-pills-row {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 16px 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dz-upgrad-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 9999px;
   background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  color: #1f2937;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (TABLETS & MOBILE)
-   ========================================================================== */
-
-/* Laptops / Smaller Desktops */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .dz-hero-text-col {
-    width: 55%;
-    min-width: 55%;
-    padding-left: 36px;
-    padding-right: 16px;
-  }
-
-  .dz-hero-image-col {
-    width: 58%;
-  }
-
-  .dz-title {
-    font-size: 32px;
-  }
+.dz-upgrad-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+  color: #e53935;
+  border-color: rgba(229, 57, 53, 0.3);
 }
 
-/* Mobile (max-width: 768px): Column layout, text on top, image below */
-@media (max-width: 768px) {
-  .dz-hero {
-    flex-direction: column;
-    min-height: auto;
-    height: auto;
-    padding: 0;
-    align-items: stretch;
-  }
+.dz-upgrad-pill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: #e53935;
+  flex-shrink: 0;
+}
 
-  /* Text on top: full width, padding 40px 24px */
-  .dz-hero-text-col {
-    width: 100%;
-    min-width: 100%;
-    padding: 40px 24px 28px;
-    height: auto;
-  }
+.dz-upgrad-pill-icon svg {
+  width: 100%;
+  height: 100%;
+}
 
-  .dz-title {
-    font-size: clamp(26px, 7vw, 34px);
-  }
+.dz-upgrad-pill-label {
+  letter-spacing: -0.01em;
+}
 
-  .dz-description {
-    font-size: 15px;
-    margin-top: 14px;
+/* Mobile & Tablet responsiveness */
+@media (max-width: 1023px) {
+  .dz-upgrad-hero {
+    min-height: calc(100vh - var(--site-nav-h, 102px));
   }
-
-  /* Buttons stack/wrap on mobile */
-  .dz-hero-actions {
-    flex-direction: column;
-    width: 100%;
-    gap: 12px;
-    margin-top: 22px;
+  .dz-upgrad-hero-center {
+    padding-top: 24px;
+    margin-bottom: 20px;
   }
-
-  .dz-button {
-    width: 100%;
+  .dz-upgrad-pills-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 12px 16px 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-
-  /* Stats row wrap on mobile */
-  .dz-hero-stats {
-    gap: 12px;
-    margin-top: 28px;
-  }
-
-  .dz-stat-number {
-    font-size: 24px;
-  }
-
-  .dz-stat-label {
-    font-size: 12px;
-  }
-
-  /* Image below: height 300px, top-to-bottom gradient melt */
-  .dz-hero-image-col {
-    position: relative;
-    right: auto;
-    top: auto;
-    bottom: auto;
-    width: 100%;
-    height: 300px;
-  }
-
-  /* Mobile gradient: top white to transparent, bottom 100% clear */
-  .dz-image-container::before {
-    background: linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      rgba(255, 255, 255, 0.85) 12%,
-      rgba(255, 255, 255, 0.00) 45%,
-      rgba(255, 255, 255, 0.00) 100%
-    );
-  }
-
-  .dz-image-container::after {
+  .dz-upgrad-pills-row::-webkit-scrollbar {
     display: none;
   }
-
-  .dz-carousel-dots {
-    bottom: 20px;
+  .dz-upgrad-pill {
+    padding: 7px 15px;
+    font-size: 12.5px;
   }
 }
